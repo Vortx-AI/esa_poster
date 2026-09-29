@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#0b0d12"/>
+<style>
+.t{font-family:Arial,Helvetica,sans-serif;fill:#f2f2ee}.m{font-family:monospace;fill:#f2f2ee}
+.h{font-size:56px;font-weight:700}.s{font-size:24px}.k{font-size:22px;font-weight:700}
+.b{fill:#141821;stroke:#6d7480;stroke-width:2}.a{stroke:#54a3ff;stroke-width:5;fill:none}
+.blue{fill:#54a3ff}.muted{fill:#aab0ba}
+</style>
+<text x="70" y="90" class="t h">CONTEXT CAN DIE. THE INVESTIGATION DOESN'T.</text>
+<text x="70" y="140" class="t s muted">Long-horizon memory + cross-agent handoff over checkable world-state</text>
+
+<rect x="70" y="235" width="410" height="320" rx="10" class="b"/>
+<text x="100" y="280" class="t k">SESSION 01 — AGENT A</text>
+<text x="100" y="330" class="t s">research</text>
+<text x="100" y="370" class="t s">tool calls</text>
+<text x="100" y="410" class="t s">private context</text>
+<text x="100" y="450" class="t s">model-specific reasoning</text>
+<text x="100" y="500" class="t s muted">context fills / compaction / reset</text>
+
+<rect x="595" y="290" width="410" height="210" rx="10" fill="#f2f2ee"/>
+<text x="800" y="345" text-anchor="middle" style="font-family:Arial;font-size:22px;font-weight:700;fill:#111">PERSISTENT EXTERNAL STATE</text>
+<text x="800" y="395" text-anchor="middle" style="font-family:monospace;font-size:23px;fill:#111">emem:fact:...</text>
+<text x="800" y="435" text-anchor="middle" style="font-family:monospace;font-size:23px;fill:#111">emem:raster:...  emem:cube:...</text>
+<text x="800" y="475" text-anchor="middle" style="font-family:monospace;font-size:20px;fill:#111">signed notes + file_cids</text>
+
+<rect x="1120" y="235" width="410" height="320" rx="10" class="b"/>
+<text x="1150" y="280" class="t k">SESSION 02 — AGENT B</text>
+<text x="1150" y="330" class="t s">different model</text>
+<text x="1150" y="370" class="t s">different vendor</text>
+<text x="1150" y="410" class="t s">no shared hidden context</text>
+<text x="1150" y="450" class="t s">no reason to trust Agent A</text>
+<text x="1150" y="500" class="t s muted">resolve + re-hash + verify + continue</text>
+
+<path d="M480 395 H595" class="a"/><polygon points="595,395 575,382 575,408" class="blue"/>
+<path d="M1005 395 H1120" class="a"/><polygon points="1120,395 1100,382 1100,408" class="blue"/>
+
+<text x="800" y="650" text-anchor="middle" class="t h">SHARE THE EVIDENCE. NOT THE CONTEXT.</text>
+
+<g transform="translate(120,745)">
+<text x="0" y="0" class="t k">WHAT SURVIVES</text>
+<text x="0" y="45" class="t s">content addresses · exact signed observations · provenance · versions · inbox/history</text>
+<text x="0" y="95" class="t k">WHAT DOES NOT NEED TO SURVIVE</text>
+<text x="0" y="140" class="t s">the previous model's chain of thought · prose summary · session transcript · vendor state</text>
+</g>
+
+<line x1="70" y1="930" x2="1530" y2="930" stroke="#6d7480"/>
+<text x="70" y="975" class="t s muted">The agent is transient compute. The world-state is the durable object.</text>
+</svg>
