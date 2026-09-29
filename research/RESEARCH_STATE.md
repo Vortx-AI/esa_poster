@@ -1,5 +1,7 @@
 # Research state
 
+> **v3 (2026-09-29, later):** four audits produced [`should_do/09_INVENTION_REGISTER.md`](should_do/09_INVENTION_REGISTER.md), which supersedes the "poster spine" below. The poster is rebuilt on its eight contributions (A1–A8) and three findings (B1–B3). Correction: geo.qa is run by Vortx AI, so it is not an independent witness.
+
 Snapshot: 2026-09-29 (v2). This supersedes the 2026-09-30-dated v1 snapshot.
 
 ## What changed in v2

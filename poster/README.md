@@ -12,29 +12,29 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
-## Structure (v2: stand out, then prove, then adopt)
+## Structure (v3: methods-paper layout built on the invention register)
 
-1. **Title band.** The accepted title, both authors, the DOI, the pinned commit, and "Open source · Apache-2.0" in the top-right corner.
-2. **Hero (left).** A real Sentinel-2A L2A field over Keylong, Lahaul (25 Sep 2026): 443 × 453 px at 10 m, printed with its `emem:raster:` token.
-   - All four band artifacts re-hash as MATCH, and the raster resolves with its spot-check passing.
-   - One 9.55 m cell is marked with its signed NDVI fact; that receipt was verified offline with `ememdev`.
-   - Provenance: `research/repro/hero_field.json`.
-3. **Pitch (right).**
-   - Headline: *Hand over the address, not the sentence.*
-   - What emem is: Earth memory for AI agents.
-   - What an agent gets today.
-   - What changes inside the agent loop (the shipped skills).
-   - Where emem sits in a GeoAI stack.
-   - The open-source strip.
-4. **Row A.** The invariant (real 509-byte fact → name; 409 on the wrong cell) · the receiver (resolve, re-hash, bind, verify, log) · the drift exhibit (918.0 → 915.07).
-5. **Row B.**
-   - The finding: the paraphrase trap, and the pre-registered 0/72 result at p = 0.035.
-   - Handoff: 2/20 · 8/20 · 20/20 · 20/20, and the long-run citability result.
-   - The boundary of the claim, plus the authors' own scorecard.
-6. **Use it tonight.**
-   - MCP · Python (`ememdev` 2.4.2) · Docker (`ghcr.io/vortx-ai/emem`) · stock-BLAKE3 check.
-   - Each command was run from a clean install on 29 Sep.
-   - QR codes: repro · source · paper.
+The source for every panel is `research/should_do/09_INVENTION_REGISTER.md`.
+
+1. **Title band.** The accepted title, both authors, the DOI, the pinned emem commit, and the date of the live checks.
+2. **Lead.**
+   - The problem, in the authors' words: agents cannot know they mean the same observation.
+   - emem's answer, and the one verification rule.
+   - The token family, with the strength of each member ("openly unequal").
+3. **Eight contribution panels, A1–A8.** Each panel has a mechanism line, a *live* box with values we obtained on 29 Sep, the closest **prior art**, what is **new** (to our knowledge), and its **limit**.
+   - A1: self-certifying fact, with NDVI rebuilt bit-for-bit from signed DNs.
+   - A2: two clocks (bitemporal replay 918.0 → 915.07).
+   - A3: signed absence vs an unsigned skip.
+   - A4: disagreement kept and returned.
+   - A5: server recompute with a ULP gap.
+   - A6: signed fields and cubes, with date distances (Keylong image).
+   - A7: the guard checks the values in an agent's prose.
+   - A8: the RFC 6962 log, and receipt tamper checks.
+4. **Findings and reproduction.**
+   - B1: agreement ≠ correctness (0/72, p = 0.035; paraphrase trap), positioned against the 2025–26 literature.
+   - B2: the signed record of agents correcting each other, and the 19 withdrawals.
+   - Reproduce: the scripts, MCP/pip/docker, three QR codes, and a "Not claimed" list.
+5. **Footer.** Scale numbers, and a pointer to the audit's open issues.
 
 ## Before printing
 
