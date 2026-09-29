@@ -1,90 +1,110 @@
 # Research state
 
-Snapshot: 2026-09-30
+Snapshot: 2026-09-29 (v2). This supersedes the 2026-09-30-dated v1 snapshot.
 
-Purpose: shared research memory for the Agentic AI for Earth Observation poster. Update this file when a new comparison materially changes the poster thesis.
+## What changed in v2
 
-## Current conclusion
+- Every mechanism claim was checked against the emem source at HEAD `64cfae5`.
+  Results: [`should_do/04_VERIFIED_CLAIMS_LEDGER.md`](should_do/04_VERIFIED_CLAIMS_LEDGER.md).
+- **16 errors in the earlier concept** were found and corrected:
+  [`do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md`](do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md).
+- The core invariant was **reproduced independently** against production with stock `blake3`,
+  using no emem code: [`repro/`](repro/README.md).
+- The measured results were mined, with their caveats:
+  [`should_do/05_EVIDENCE_AND_NUMBERS.md`](should_do/05_EVIDENCE_AND_NUMBERS.md).
+- The device/agent story was separated into shipped vs simulated vs roadmap:
+  [`should_do/06_HOW_DEVICES_AND_AGENTS_CONNECT.md`](should_do/06_HOW_DEVICES_AND_AGENTS_CONNECT.md).
+- The event facts are confirmed: no official format; the people in the room; the hackathon.
+  See [`should_do/07_EVENT_FORMAT_PEOPLE_AND_ACTIONS.md`](should_do/07_EVENT_FORMAT_PEOPLE_AND_ACTIONS.md).
+- Related work from 2025–26: [`should_do/08_RELATED_WORK_2025_2026.md`](should_do/08_RELATED_WORK_2025_2026.md).
 
-The strongest defensible positioning is **not** that emem invented content addressing, provenance, agent memory, EO data access, or multi-agent orchestration individually.
+## What the invention is, in its sharpest defensible form
 
-The distinctive systems thesis is their composition around a new unit of shared state:
+> **Agents hand each other the *address* of a signed physical observation instead of a
+> sentence about it. Any receiver can fetch the exact bytes, re-hash them to the address,
+> and check the signature offline, without trusting the sender, the server's honesty,
+> or the model that wrote the sentence.**
 
-> **A physical-world observation becomes an externally addressable, typed, signed object that can survive the agent, context window, model, vendor and session that first used it.**
+The content address is the mechanism. The invention is **the unit being exchanged between
+agents**: a typed, place- and time-keyed, signed observation, with a family of token types
+that extends it to fields (`raster`), fields through time (`cube`) and sets of fields
+(`rasterset`).
 
-This is what the poster should make experimentally and mechanically obvious.
+## Why this is more than a mechanism: the scientific finding
 
-## Why this matters at this event
+emem's own experiments produced a result that matters beyond emem:
 
-The published poster programme contains 43 posters. Many titles cluster around:
-- multi-agent frameworks and orchestration;
-- RAG / assistants / semantic search;
-- EO datacubes and data dissemination;
-- end-to-end analysis agents;
-- guardrails, validation and trust;
-- provenance-first workflows;
-- foundation models and embeddings;
-- onboard / space-ground-cloud agent systems.
+> **When agents pass paraphrases, they can agree *more* and be *more wrong*.**
+> Under compaction: accuracy 0/72, with the inversion supported at Fisher p = 0.035
+> (pre-registered). In the paraphrase trap, "NDVI ≈ 0.49" raised agreement between Gemma
+> and Qwen, and both took the wrong irrigation action. The token arm got it right.
+> In handoff, prose was correct 2/20 times; the bundle 20/20.
 
-Source: https://agentic-eo.berlin/programme/posters/
+That makes cross-agent agreement an unsafe signal of correctness. It is a failure-mode result
+(the Manling Li keynote) and a collective-intelligence result (the James Zou keynote). **emem
+is the fix we measured.**
 
-Therefore, a generic "agents + EO + provenance" poster will disappear into the room.
+## The real-world exhibit (re-verified today)
 
-## Neighbouring systems we must acknowledge mentally
+One Bengaluru cell, one band, and two answers, **both still verifiable**:
 
-| System / standard | What it already does | Why emem must not claim this alone |
-|---|---|---|
-| STAC | standard language to describe and discover spatiotemporal assets | discovery/cataloguing of EO assets is established |
-| COG | efficient cloud-native partial access to GeoTIFF imagery | moving fewer bytes / range access is established |
-| Google Earth Engine | deferred execution over a computation DAG at massive scale | lazy EO computation graphs are established |
-| W3C PROV | interoperable model for entities, activities, derivation and provenance | provenance vocabularies and derivation models are established |
-| IPFS | generic content-addressed data with CIDs | content-derived names are established |
-| Nix | content-addressed store/build artefacts and reproducible derivations | content-addressed build systems are established |
-| Mem0 / agent-memory systems | persistence across agent sessions and contexts | long-term agent memory is established as a category |
+- `emem:fact:defi.zb493.xuqA.zcb5f:yqbolgeo…` resolves to **918.0 m**. Signed 2026-05-28;
+  source: Copernicus DEM 90 m via Open-Meteo.
+- `emem:fact:defi.zb493.xuqA.zcb5f:jzxzmvom…` resolves to **915.07 m**. Signed 2026-09-28;
+  source: a Copernicus DEM 30 m COG.
 
-Sources:
-- https://stacspec.org/en/
-- https://cogeo.org/
-- https://developers.google.com/earth-engine/guides/deferred_execution
-- https://www.w3.org/TR/prov-overview/
-- https://docs.ipfs.tech/concepts/content-addressing/
-- https://releases.nixos.org/nix/nix-2.34.1/manual/store/store-object/content-address.html
-- https://mem0.ai/
+The upstream changed. An agent holding the May token still knows exactly what it cited and
+where that value came from. **Nobody staged this.** An external auditor found it in production.
 
-## emem's credible whitespace
+## Honesty that is part of the pitch
 
-emem can credibly show a different object boundary:
+- The authors' published scorecard **refutes two headline claims**: "beats plain context" and
+  "beats BM25".
+- A single token costs 9.5× the LLM tokens of the value it names. Only the bundle handle is flat.
+- Hardware attestation and anything in orbit are **not shipped**.
+- The comparison against peer memory products is **untested**.
 
-1. **The atom is a physical observation**, not a chat memory or a file.
-2. **Its identity is content-derived** from canonical bytes.
-3. **Its spatial/temporal semantics are explicit**, not merely metadata around a blob.
-4. **Its receipt is independently verifiable**, including by a downstream agent.
-5. **Its address is designed to cross model/session/agent boundaries.**
-6. **Fields and fields-through-time are first-class addressable derivations**, not only scalar facts.
-7. **The same mechanism underpins long-horizon state, multi-agent handoff, drift checking and publish-time verification.**
+Printing a compact "what holds / what doesn't" panel will earn more trust from this audience
+than any adjective.
 
-The poster should demonstrate these as one architecture, not as a feature list.
+## Recommended poster spine (A0 portrait; confirm with the organisers)
 
-## Event-level opportunity
+1. **Title band.** The exact accepted title; both authors; Vortx AI; DOI; the emem commit hash.
+2. **The claim.** One sentence: "Hand over the address of the evidence, not a sentence about it."
+3. **Mechanism, with real bytes.**
+   - The 541-byte fact → BLAKE3 → the 52-character CID → the token.
+   - Resolve, re-hash, 409 on a wrong cell, receipt verified offline.
+   - Stock `blake3`, 3 lines.
+4. **Hero exhibit.** One place, two answers: the 918.0 / 915.07 drift.
+5. **The experiment.**
+   - Agreement ≠ correctness (0/72, p = 0.035).
+   - The paraphrase trap.
+   - Handoff: prose 2/20, BM25 20/20, bundle 20/20.
+   - Long run: citable 100% vs 0%.
+6. **From point facts to fields.**
+   - The ladder `fact → raster → cube → rasterset`, with strength labels.
+   - Embeddings (Tessera, 128-D) signed as `model_output` facts.
+7. **What holds / what does not / open work.** Include the edge story here, labelled
+   *simulated*: 0.167% of a frame; the forged fact refused.
+8. **Reproduce this.**
+   - A QR code to `research/repro`.
+   - The `curl` + `blake3` recipe.
+   - `claude mcp add … emem.dev/mcp`.
 
-Several keynote titles sharpen the relevance:
-- "Why Mature Agents Require a Paradigm Shift in Tooling" — Google DeepMind
-- "FAME - Traditional and Agentic AI in Space" — NASA JPL
-- "Failure Mode in Agentic Reasoning" — Northwestern / Amazon
-- "Harnessing the Collective Intelligence of AI Agents for Discoveries" — Stanford
+## Decisions pending from the authors
 
-Source: https://agentic-eo.berlin/programme/keynote-speakers/
+- Headline wording: "Hand over the address, not the sentence" vs "The satellite observation
+  can outlive the agent". v2 recommends the first: it is the one the data supports directly.
+- Whether to mint Zenodo v0.2 aligned with whitepaper v3 before 19 Oct.
+- Which live field token to print (the raster endpoints returned 504 on 2026-09-29).
+- Whether to join the 22 Oct EVE MCP hackathon.
 
-emem can sit underneath all four conversations: persistent world-state, agent handoff, failure containment, and collective reuse of verified evidence.
+## The test for every poster element (unchanged)
 
-## Working test for every poster element
+Keep an element only if a scientist can answer one of these after seeing it:
 
-Keep it only if a scientist can answer at least one of these after seeing it:
-
-1. **What object did emem introduce?**
-2. **What invariant does it enforce?**
-3. **What mechanism makes that invariant checkable?**
-4. **What can a second agent do that it could not safely do with prose alone?**
-5. **What does the protocol explicitly not prove?**
-
-If an element answers none of these, remove it.
+1. What object did emem introduce?
+2. What invariant does it enforce?
+3. What mechanism makes the invariant checkable?
+4. What can a second agent do that it could not safely do with prose alone?
+5. What does the protocol explicitly not prove?

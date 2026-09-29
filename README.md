@@ -22,12 +22,12 @@ Content addressing is the mechanism, not the headline.
 ## Core scientific story
 
 1. A physical-world observation is represented as a typed object:
-   `O = (a, b, t, v, u, p, s)`
-2. Canonical bytes give the observation a deterministic identity:
-   `CID(O) = Base32(BLAKE3(CanonicalCBOR(O)))`
+   `O = (cell, band, tslot, value, uncertainty, provenance, signer, signed_at)`; the ed25519 signature sits on the enclosing attestation
+2. Canonical bytes give the signed observation a deterministic identity:
+   `fact_cid = base32(BLAKE3(emem-CBOR(O)))` (deterministic, declaration-ordered, float-canonical CBOR; not RFC 8949 key-sorted)
 3. An agent carries a compact token rather than a paraphrased value:
    `emem:fact:<cell64>:<fact_cid>`
-4. A second agent resolves the token, gets the byte-identical signed observation, re-hashes it, and verifies the receipt independently.
+4. A second agent resolves the token, gets the byte-identical signed observation, re-hashes it itself, and verifies the receipt offline. A token cited under the wrong cell fails with HTTP 409.
 5. Context can be compacted, a session can end, or the model can change; the observation remains addressable.
 6. Spatial fields and time-varying fields extend the same idea through `emem:raster:`, `emem:cube:` and `emem:rasterset:`.
 7. The result is a content-addressed build graph over physical-world state that multiple agents can reuse instead of re-deriving.
@@ -46,6 +46,8 @@ Content addressing is the mechanism, not the headline.
 - [Long-horizon / multi-agent continuity](assets/agent-continuity.svg)
 
 See [POSTER_CONCEPT.md](POSTER_CONCEPT.md) for the full narrative and exact copy direction.
+
+**Before using any claim, check [research/](research/README.md)** — especially the [verified claims ledger](research/should_do/04_VERIFIED_CLAIMS_LEDGER.md) and the [corrections to this concept](research/do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md). The mechanism was independently reproduced against production in [research/repro](research/repro/README.md).
 
 ## Source of truth
 
