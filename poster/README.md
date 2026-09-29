@@ -12,30 +12,29 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
-## Structure
+## Structure (v2: stand out, then prove, then adopt)
 
-The poster reads top to bottom. Each block answers one of the five questions in
-`research/RESEARCH_STATE.md`.
-
-0. The accepted programme title, both authors, the DOI, and the emem commit the claims are pinned to.
-1. **Claim:** *Hand over the address, not the sentence.*
-2. **The object and its invariant.** The real 918.0 m fact, its 509 emem-CBOR bytes,
-   BLAKE3 → the 52-character name, and the token. Three rules: same bytes give the same
-   name; a changed value gives a different name; a wrong place gives a 409.
-3. **The receiver.** Resolve, re-hash, bind the place, verify the receipt offline, check the
-   log. What crosses the trust boundary and what does not.
-4. **Exhibit.** One place, two answers (918.0 → 915.07 after a real provider change), both
-   still verifiable.
-5. **The finding.** The paraphrase trap (a number line against the irrigation threshold),
-   plus the pre-registered agreement ≠ correctness test (0/72, p = 0.035).
-6. **Handoff.** prose 2/20 · dense 8/20 · BM25 20/20 · bundle 20/20; long run citable
-   100% vs 0%.
-7. **Fields and embeddings.** The token ladder with each family's strength; embeddings signed
-   as `model_output`.
-8. **Boundary of the claim.** What is checkable, what is not proved, and our own scorecard,
-   refutations included.
-9. **Reproduce this.** Seven lines of Python with stock `blake3`, the MCP install line, and
-   three QR codes.
+1. **Title band.** The accepted title, both authors, the DOI, the pinned commit, and "Open source · Apache-2.0" in the top-right corner.
+2. **Hero (left).** A real Sentinel-2A L2A field over Keylong, Lahaul (25 Sep 2026): 443 × 453 px at 10 m, printed with its `emem:raster:` token.
+   - All four band artifacts re-hash as MATCH, and the raster resolves with its spot-check passing.
+   - One 9.55 m cell is marked with its signed NDVI fact; that receipt was verified offline with `ememdev`.
+   - Provenance: `research/repro/hero_field.json`.
+3. **Pitch (right).**
+   - Headline: *Hand over the address, not the sentence.*
+   - What emem is: Earth memory for AI agents.
+   - What an agent gets today.
+   - What changes inside the agent loop (the shipped skills).
+   - Where emem sits in a GeoAI stack.
+   - The open-source strip.
+4. **Row A.** The invariant (real 509-byte fact → name; 409 on the wrong cell) · the receiver (resolve, re-hash, bind, verify, log) · the drift exhibit (918.0 → 915.07).
+5. **Row B.**
+   - The finding: the paraphrase trap, and the pre-registered 0/72 result at p = 0.035.
+   - Handoff: 2/20 · 8/20 · 20/20 · 20/20, and the long-run citability result.
+   - The boundary of the claim, plus the authors' own scorecard.
+6. **Use it tonight.**
+   - MCP · Python (`ememdev` 2.4.2) · Docker (`ghcr.io/vortx-ai/emem`) · stock-BLAKE3 check.
+   - Each command was run from a clean install on 29 Sep.
+   - QR codes: repro · source · paper.
 
 ## Before printing
 

@@ -1,0 +1,72 @@
+{
+  "s2.B04": {
+    "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B04:20721:4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq",
+    "artifact_cid": "p7eertl6qkbotpzxj6tn4uifzjxe3vbf3b6pxjdzpzqh66sz7flq",
+    "grid": {
+      "epsg": 32643,
+      "height": 453,
+      "native_m": 10.0,
+      "width": 443
+    },
+    "scene": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+    "cloud_cover": 10.840102
+  },
+  "s2.B03": {
+    "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B03:20721:uo2jtxpwod4vp5m4zrclrulrytjzyk2epu6ad4aupagixf4qnrjq",
+    "artifact_cid": "rgybf4zbwu4wwvi35cmauywexfhzmwuwpgtsjhayohkfvp6ddtrq",
+    "grid": {
+      "epsg": 32643,
+      "height": 453,
+      "native_m": 10.0,
+      "width": 443
+    },
+    "scene": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+    "cloud_cover": 10.840102
+  },
+  "s2.B02": {
+    "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B02:20721:b6okbgw5bdf6bb3q3hosw2sejhhx2swoqce4eqzjaugw2whxfrba",
+    "artifact_cid": "oe5vff37gix57pjicnaza7az6jj7rmyopq3e72r5rrh5p6cisn3a",
+    "grid": {
+      "epsg": 32643,
+      "height": 453,
+      "native_m": 10.0,
+      "width": 443
+    },
+    "scene": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+    "cloud_cover": 10.840102
+  },
+  "s2.B08": {
+    "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20721:pg66gwsijsbnzzzcz3pvwqy5b4usk2qxljwtx4tzzl3ccz5pge5a",
+    "artifact_cid": "krb5zrnbvis3qdcdqnxcxfux5fbdysd6l4tzlccrscb5hdzywk3a",
+    "grid": {
+      "epsg": 32643,
+      "height": 453,
+      "native_m": 10.0,
+      "width": 443
+    },
+    "scene": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+    "cloud_cover": 10.840102
+  },
+  "_request": {
+    "bbox": {
+      "min_lat": 32.55,
+      "min_lng": 77.01,
+      "max_lat": 32.59,
+      "max_lng": 77.058
+    },
+    "observed_on": "2026-09-25",
+    "fetched": "2026-09-29",
+    "rehash": "MATCH for all four artifacts (stock blake3)",
+    "raster_resolve_spot_check": "passed (B04)"
+  },
+  "_keylong_cell": {
+    "cell": "defi.zb572.xAnI.zb1a2",
+    "centre": [
+      32.57177475537051,
+      77.0281260080638
+    ],
+    "indices.ndvi": 0.35029862373409504,
+    "fact_cid": "lyd6activd62copqu3ksd6uuqkwr3j6shkejdbv5luhblxqswmqa",
+    "receipt_offline_verify": "ok (ememdev 2.4.2 verify_receipt_offline)"
+  }
+}
