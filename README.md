@@ -39,7 +39,13 @@ Content addressing is the mechanism, not the headline.
 - **What it enables:** long-horizon agents, cross-agent handoff, model swaps, referential stability, reusable EO fields, research-grade citations, pre-publication checking, and append-only audit history.
 - **What it does not claim:** cryptography does not make an observation true. It makes co-reference, integrity, provenance and replay checkable.
 
-## Sample visuals
+## The poster
+
+**Print-ready A0 poster: [poster/](poster/README.md)** ([PDF](poster/emem-poster-A0.pdf), [preview](poster/emem-poster-preview.png)).
+
+## Sample visuals (early exploration, superseded)
+
+These SVGs predate the code check. They still show the old `CanonicalCBOR` formula and `s = signature`, so do not reuse their text.
 
 - [Poster wireframe](assets/poster-wireframe.svg)
 - [Why the invariant works](assets/invention-mechanism.svg)

@@ -93,6 +93,8 @@ identity and signature**, so trust survives *after* it leaves the system that pr
 
 ## Checklist before 19 Oct
 
+- [x] Poster drafted: `poster/emem-poster-A0.pdf` (A0 portrait)
+- [ ] Merge to `main` before printing (the repro QR points to main)
 - [ ] Email the organisers about board size, orientation, pins and a digital copy.
 - [ ] Freeze the claims at one emem commit, and print that commit hash on the poster.
 - [ ] Zenodo: fix the doubled author surname; mint v0.2 aligned with whitepaper v3.

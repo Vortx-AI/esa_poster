@@ -100,6 +100,7 @@ bytes".
   browser JS at `/verify`. The Python test pins the same digest as the browser verifier
   (`sdks/emem-py/tests/test_verify_offline.py:48-63`).
 - **Live:** `signature_valid: true`, `merkle_proof_valid: true` on a Bengaluru recall today.
+  A real fact CID cited under another cell returned **HTTP 409** today.
 
 ## 6. cell64: 🟡
 
@@ -153,8 +154,9 @@ bytes".
   `/v1/log/witness(es)`.
 - **Live independent witness:** geo.qa co-signs every 15 min (`docs/federation.md:314-345`;
   `docs/security.md:250`).
-- 1,728,683 log entries (`docs/whitepaper-v3.md:86-126`; re-check the number the day before
-  printing).
+- 1,728,683 log entries in `docs/whitepaper-v3.md:86-126`. **Live on 2026-09-29: 2,537,510**
+  (`/v1/log/witnesses`), with 1 independent operator (geo.qa). The head was 310 entries ahead
+  of the freshest witness.
 - Traces are not yet in the log.
 
 ## 11. Foundation-model embeddings: 🟡 (the claim needs to shrink)
