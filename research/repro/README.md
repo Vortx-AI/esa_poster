@@ -25,6 +25,7 @@ python verify_fact.py <emem:fact:...>
 | `verify_absence.py` | signed absence (ocean, no Cop-DEM tile); reason hash-bound; receipt valid |
 | `verify_log.py` | RFC 9162 STH signature, inclusion proof, consistency proof |
 | `verify_receipt_tamper.py` | receipt valid as served; proof-stripped and v1-downgraded variants fail |
+| `data/` | inputs for the poster figures, fetched 2026-09-29: signed S2 grids (B02/B03/B04/B08) and 5 cube members (all re-hashed), the attestation history of the Bengaluru elevation key, 81 sampled log entries with their signed timestamps, and the agent channel (authors, recipients, tokens) |
 | `hero_field.json` | tokens/CIDs of the Keylong Sentinel-2 field on the poster |
 
 ## Exhibit A: a real upstream drift, caught by addressing

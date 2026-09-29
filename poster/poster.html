@@ -23,7 +23,7 @@ html,body{width:841mm;height:1189mm;background:var(--paper)}
 body{font-family:Plex,sans-serif;color:var(--ink);font-size:6mm;line-height:1.32;
   -webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:841mm;height:1189mm;padding:22mm 26mm 18mm}
-.inner{zoom:1.27;width:calc(789mm / 1.27);height:calc(1149mm / 1.27);display:flex;flex-direction:column;justify-content:space-between}
+.inner{zoom:1.03;width:calc(789mm / 1.03);height:calc(1149mm / 1.03);display:flex;flex-direction:column;justify-content:space-between}
 .mono{font-family:PlexMono,monospace}
 .acc{color:var(--accent)} .wr{color:var(--wrong)} .mu{color:var(--muted)} .i2{color:var(--ink2)}
 b,strong{font-weight:600}
@@ -72,6 +72,36 @@ table.t td.m{font-family:PlexMono,monospace;font-size:4.9mm;white-space:nowrap}
 .fig .img .cap{position:absolute;left:0;right:0;bottom:0;background:rgba(20,20,20,.85);color:#fff;font-size:3.9mm;line-height:1.3;padding:1.5mm 2mm}
 .fig .img .sb{position:absolute;left:3mm;top:3mm;color:#fff;font-size:3.8mm;text-shadow:0 0 1.5mm #000}
 .fig .img .sb i{display:block;width:21.7mm;height:.9mm;background:#fff;margin-top:1mm}
+
+
+/* figure 1: life of one observation */
+.life{border-top:.7mm solid var(--ink);padding-top:3mm}
+.life .ttl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3mm}
+.life .ttl h3{font-size:9mm;font-weight:600;letter-spacing:-.01em}
+.life .ttl span{font-size:4.6mm;color:var(--muted)}
+.lanes{display:grid;grid-template-columns:repeat(7,1fr);gap:0}
+.lane{font-size:4.2mm;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 1.4mm 1mm;border-bottom:.4mm solid var(--rule)}
+.stages{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:2.4mm}
+.stg{position:relative;background:#fff;border:.45mm solid var(--rule);margin-right:6mm;padding:2.6mm 3mm;display:flex;flex-direction:column;gap:1.2mm}
+.stg:last-child{margin-right:0}
+.stg:not(:last-child)::after{content:"→";position:absolute;right:-5.6mm;top:40%;font-size:6mm;color:var(--muted)}
+.stg .n{font-size:5.3mm;font-weight:600;line-height:1.15}
+.stg .v{font-family:PlexMono,monospace;font-size:4.05mm;line-height:1.38;color:var(--ink);word-break:break-all}
+.stg .d{font-size:4.2mm;line-height:1.3;color:var(--ink2)}
+.stg.key{border:.7mm solid var(--accent);background:var(--accent-soft)}
+.layers{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:3mm}
+.layer{border-left:1.2mm solid var(--ink);padding:1mm 0 1mm 3mm;font-size:4.7mm;line-height:1.3;color:var(--ink2)}
+.layer b{color:var(--ink);display:block;font-size:5mm}
+/* figure 2: EO */
+.eo{display:grid;grid-template-columns:108mm 108mm 1fr;gap:5mm;align-items:start}
+.eo figure{margin:0}
+.eo img{width:100%;display:block}
+.eo figcaption{font-size:4.4mm;color:var(--ink2);line-height:1.32;margin-top:1.6mm}
+.eo figcaption b{color:var(--ink)}
+.eo .h{font-size:4.6mm;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4mm}
+.chartimg{width:100%;height:auto;display:block}
+.duo{display:grid;grid-template-columns:1.15fr 1fr;gap:4mm;align-items:center}
+.bottom .chartimg{height:78mm;width:auto;max-width:100%;margin:0 auto}
 
 /* bottom */
 .bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12mm}
@@ -126,6 +156,33 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
   </div>
 </section>
 
+
+<section class="life">
+  <div class="ttl"><h3>Fig. 1 — The life of one observation, with its real identifiers</h3><span>fact oj5cecci… · Keylong, Lahaul · every value below read from emem.dev on 29 Sep 2026</span></div>
+  <div class="lanes"><div class="lane">upstream</div><div class="lane">materialise</div><div class="lane">address</div><div class="lane">content</div><div class="lane">sign · record</div><div class="lane">serve</div><div class="lane">agents</div></div>
+  <div class="stages">
+    <div class="stg"><span class="n">Sentinel-2A L2A scene</span><span class="v">S2A_MSIL2A_20260925T054251 _R005_T43SFS</span><span class="d">B08 and B04 COGs, found via the Planetary Computer STAC API; scene-level cloud 10.8 %</span></div>
+    <div class="stg"><span class="n">First request reads the pixel</span><span class="v">DN 3502 · 1900<br>offset −1000 (PB ≥ 04.00)<br>NDVI 0.4708994708994709</span><span class="d">range-read on demand, then stored; a definitive no-data is signed as Absence</span></div>
+    <div class="stg"><span class="n">Place and time become keys</span><span class="v">cell64 defi.zb572 .xoso.zb1ec<br>tslot 20721</span><span class="d">64-bit cell ≈ 9.55 m; tslot = days since 1970 for a fast band</span></div>
+    <div class="stg key"><span class="n">The bytes name themselves</span><span class="v">emem-CBOR 1,115 B<br>BLAKE3-256 →<br>oj5ceccile62uvm6 hedpuk67cjt2pqc7 z33mtsyuffgakxbx myaa</span><span class="d">deterministic encoding; any byte changed → another name</span></div>
+    <div class="stg"><span class="n">Signed, then logged</span><span class="v">Merkle root of the batch (here: 1 fact)<br>ed25519 attestation<br>RFC 6962 leaf · 2.54 M</span><span class="d">co-signed by a second node (same organisation)</span></div>
+    <div class="stg"><span class="n">Served with a receipt</span><span class="v">MCP · REST · A2A<br>receipt v2: request, time, cells, fact_cids, proof</span><span class="d">the receipt verifies offline in 0.13 ms</span></div>
+    <div class="stg key"><span class="n">Passed as a token, checked by the receiver</span><span class="v">emem:fact:defi.zb572 .xoso.zb1ec:oj5cecci…</span><span class="d">agent B resolves, re-hashes, verifies — no trust in agent A; the guard checks any number A wrote against it</span></div>
+  </div>
+  <div class="layers">
+    <div class="layer"><b>Address</b>one place → one string two parties compute identically (cell64)</div>
+    <div class="layer"><b>Content</b>one observation → one immutable record named by its bytes (fact, raster, cube)</div>
+    <div class="layer"><b>Object</b>one named thing → one identity minted once (entity, a shared name)</div>
+    <div class="layer"><b>Memory</b>agents’ notes and correspondence, signed, addressed by hash, served as data not instructions</div>
+  </div>
+</section>
+
+<section class="eo">
+  <figure><div class="h">Fig. 2a — true colour, from signed grids</div><img src="fig/keylong_truecolor.png" alt="Sentinel-2A true colour, Keylong"><figcaption>B04/B03/B02, each an <span class="mono">emem:raster:</span> artifact of 802,780 B re-hashed ✓ · 443 × 453 px at 10 m · 25 Sep 2026</figcaption></figure>
+  <figure><div class="h">Fig. 2b — NDVI computed by us from B08, B04</div><img src="fig/keylong_ndvi.png" alt="NDVI from signed grids"><figcaption>□ = the 9.55 m cell of fact <span class="mono">oj5cecci…</span> (NDVI 0.4709), rebuilt bit-for-bit from its own DNs (A1)</figcaption></figure>
+  <figure><div class="h">Fig. 2c — a cube is a signed manifest of scenes; each states its date gap</div><img src="fig/cube_members.png" alt="Five cube members, B08"><figcaption><b>One emem:cube: token, five members, each its own raster token and re-hashed artifact.</b> Asked for the 15th of each month; the scene actually used is 10–29 days later, and the manifest says so. The 13 Sep member is cloudy: selection uses scene-level cloud cover (≤ 40 %, relaxed in tiers), not a per-pixel mask — a limit we show rather than crop.</figcaption></figure>
+</section>
+
 <!-- CONTRIBUTIONS -->
 <section class="grid">
 
@@ -144,11 +201,12 @@ same cid under another cell → <span class="no">HTTP 409</span></div>
   <div class="panel">
     <div class="hd"><span class="no">A2</span><h3>Two clocks: when the ground was so, and when the system knew it</h3></div>
     <p class="mech"><b>tslot</b> is valid time (days since 1970 for fast bands; 0 for static). <b>signed_at</b> is transaction time. <span class="mono">as_of_signed_at</span> replays a key’s full signed history.</p>
-<div class="live"><span class="h">live · verify_bitemporal.py · Bengaluru · copdem30m.elevation_mean</span>as known on 2026-05-01   <span class="k">no fact</span>
-as known on 2026-06-15   918.0 m    open_meteo (Cop-DEM 90 m)   <span class="ok">re-hash ✓</span>
-as known on 2026-08-12   915.07 m   Cop-DEM GLO-30 COG          <span class="ok">re-hash ✓</span>
-as known on 2026-09-29   915.07 m   signed 2026-09-28           <span class="ok">re-hash ✓</span>
-<span class="k">the upstream changed provider; the May answer still resolves and verifies</span></div>
+<div class="duo"><img class="chartimg" src="fig/two_clocks.svg" alt="Elevation served for one key against transaction time: 918.0 m until 11 Aug, then 915.07 m"><div class="live"><span class="h">live · verify_bitemporal.py</span>Bengaluru · elevation_mean
+as known 01 May   <span class="k">no fact</span>
+as known 15 Jun   918.0 m   <span class="ok">✓</span>
+as known 12 Aug   915.07 m  <span class="ok">✓</span>
+as known 29 Sep   915.07 m  <span class="ok">✓</span>
+<span class="k">✓ = bytes re-hash to the cid</span></div></div>
     <div class="meta2"><span class="l pa">prior art</span><span>SQL:2011 bitemporal periods; XTDB / Datomic as-of; Zep bitemporal agent memory (arXiv 2501.13956).</span><span class="l nw">new</span><span>to our knowledge, signed transaction time on EO values served to agents: a later agent can replay what an earlier one was told.</span><span class="l li">limit</span><span>without an explicit tslot the same query timed out (504) on this 280-fact cell.</span></div>
   </div>
 
@@ -183,16 +241,11 @@ sum, +9 ULP        ulp_gap 9  (tol 4) <span class="no">refused → model_output<
 
   <div class="panel">
     <div class="hd"><span class="no">A6</span><h3>Fields and fields-through-time as signed derivations</h3></div>
-    <div class="fig">
-      <div class="img"><img src="img/keylong-s2a-20260925.jpg" alt="Sentinel-2A true colour, Keylong"><div class="sb">1 km<i></i></div><div class="cap">Keylong, Lahaul · S2A L2A 25 Sep 2026 · 443×453 px, 10 m · 4 band artifacts re-hashed ✓</div></div>
-      <div>
-        <p class="mech">A raster is a canonical f32 grid whose hash sits in a signed record (AOI, band, scene, cloud, angles, anchors). A cube is a signed manifest of rasters that states, per member, <b>how far the scene is from the date asked for</b>.</p>
-<div class="live" style="margin-top:2mm"><span class="h">live · band_cube · s2.B08</span>asked   scene used   days away
-15 May  10 Jun       26
-15 Jun  30 Jun       15
-15 Jul  03 Aug       19</div>
-      </div>
-    </div>
+    <p class="mech">A raster is a canonical f32 grid (64-byte <span class="mono">EMEMGRD1</span> header, NaN/−0 canonical) whose hash sits in a signed record: AOI, band, scene, cloud, sun/view angles, anchor cells. A cube is a signed manifest of rasters; each member records the date asked for and <b>how far its scene is from it</b> (Fig. 2c). The model receives a field, not a sentence about one; pixels can be evicted and rebuilt from the record.</p>
+<div class="live"><span class="h">live · band_cube over Fig. 2 · s2.B08</span>asked 15 May → 10 Jun (+26 d)   15 Jun → 30 Jun (+15 d)
+asked 15 Jul → 03 Aug (+19 d)   15 Aug → 13 Sep (+29 d)
+asked 15 Sep → 25 Sep (+10 d)   5 artifacts re-hashed <span class="ok">✓</span>
+raster/resolve spot_check: grid matches record at 5/5 anchors <span class="ok">✓</span></div>
     <div class="meta2"><span class="l pa">prior art</span><span>openEO / Earth Engine datacubes; STAC items.</span><span class="l nw">new</span><span>a content-addressed, signed cube manifest that records its temporal substitutions.</span><span class="l li">limit</span><span>scene choice uses scene-level cloud cover; a re-mint yields a new token for identical pixels (signed_at is hashed).</span></div>
   </div>
 
@@ -209,10 +262,13 @@ uncited “35 °C in Bengaluru on 2026-09-28”, gating on  <span class="no">den
   <div class="panel">
     <div class="hd"><span class="no">A8</span><h3>An append-only record anyone can audit offline</h3></div>
     <p class="mech">RFC 6962 Merkle log over BLAKE3 with signed tree heads, inclusion and consistency proofs. Receipt v2 signs the Merkle proof <b>or an explicit ABSENT marker</b>, so stripping a proof or downgrading the version breaks the signature.</p>
-<div class="live"><span class="h">live · verify_log.py, verify_receipt_tamper.py (written from RFC 9162)</span>STH signature <span class="ok">valid</span>   tree size 2,538,190
-inclusion of leaf 1,234,567  <span class="ok">true</span>   1-bit flipped leaf  <span class="no">false</span>
-consistency 1,000,000 → 2,538,190  <span class="ok">true</span>
-receipt as served <span class="ok">valid</span> · proof stripped <span class="no">invalid</span> · relabelled v1 <span class="no">invalid</span></div>
+<div class="duo" style="grid-template-columns:1fr 1.1fr"><div class="live"><span class="h">live · written from RFC 9162</span>STH signature  <span class="ok">valid</span>  size 2,538,190
+leaf 1,234,567 included   <span class="ok">true</span>
+  same leaf, 1 bit flipped <span class="no">false</span>
+consistency 1 M → 2.54 M  <span class="ok">true</span>
+receipt as served  <span class="ok">valid</span>
+  proof stripped   <span class="no">invalid</span>
+  relabelled v1    <span class="no">invalid</span></div><img class="chartimg" src="fig/log_growth.svg" alt="Log size over time, 0 in April to 2.54 million entries on 29 September"></div>
     <div class="meta2"><span class="l pa">prior art</span><span>Certificate Transparency, Trillian, Sigstore Rekor, Go sumdb witnesses.</span><span class="l nw">new</span><span>nothing cryptographic — a careful application to EO facts consumed by agents.</span><span class="l li">limit</span><span>the co-signing witness (geo.qa) is a second node on its own key, run by the same organisation; read federation does not exist.</span></div>
   </div>
 
@@ -246,7 +302,8 @@ receipt as served <span class="ok">valid</span> · proof stripped <span class="n
 
   <div class="blk">
     <h3>B2 · A signed record of agents correcting each other — and us</h3>
-    <p><b>69 attesters, 37,020 notes, 4,311 addressed to a peer</b>, on at least five model families. A disagreement between two agents is itself a durable, addressable object a third party can fetch and check. <b>19 claims have been withdrawn</b> — each a signed record beside the claim it retracts.</p>
+    <img class="chartimg" src="fig/agent_graph.svg" alt="Correspondence graph of agents on emem">
+    <p><b>Real correspondence on 29 Sep:</b> 46 of 54 corresponding agents form one connected group — 96 directed pairs, 6,191 notes addressed to a peer (blue = emem’s own key; size = volume). Across the channel, <b>5,425 of 5,473 cited tokens still resolve (99.1 %)</b>. 13 corrections are recorded, 10 against the corrector’s own position; 19 claims withdrawn in total.</p>
     <table class="s">
       <tr><td>per-encoder change calibration — shown impossible by an outside agent (∂²S/∂c∂x = −∂ log L/∂x vanishes on flat fields)</td><td class="rf">withdrawn</td></tr>
       <tr><td>headline 1.000 counted empty answers → 0.989</td><td class="rf">corrected</td></tr>

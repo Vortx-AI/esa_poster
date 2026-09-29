@@ -12,29 +12,26 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
-## Structure (v3: methods-paper layout built on the invention register)
+## Structure (v4: the complete system, with figures made from real emem data)
 
-The source for every panel is `research/should_do/09_INVENTION_REGISTER.md`.
-
-1. **Title band.** The accepted title, both authors, the DOI, the pinned emem commit, and the date of the live checks.
-2. **Lead.**
-   - The problem, in the authors' words: agents cannot know they mean the same observation.
+1. **Lead.**
+   - The problem: agents cannot know they mean the same observation.
    - emem's answer, and the one verification rule.
-   - The token family, with the strength of each member ("openly unequal").
-3. **Eight contribution panels, A1–A8.** Each panel has a mechanism line, a *live* box with values we obtained on 29 Sep, the closest **prior art**, what is **new** (to our knowledge), and its **limit**.
-   - A1: self-certifying fact, with NDVI rebuilt bit-for-bit from signed DNs.
-   - A2: two clocks (bitemporal replay 918.0 → 915.07).
-   - A3: signed absence vs an unsigned skip.
-   - A4: disagreement kept and returned.
-   - A5: server recompute with a ULP gap.
-   - A6: signed fields and cubes, with date distances (Keylong image).
-   - A7: the guard checks the values in an agent's prose.
-   - A8: the RFC 6962 log, and receipt tamper checks.
-4. **Findings and reproduction.**
-   - B1: agreement ≠ correctness (0/72, p = 0.035; paraphrase trap), positioned against the 2025–26 literature.
-   - B2: the signed record of agents correcting each other, and the 19 withdrawals.
-   - Reproduce: the scripts, MCP/pip/docker, three QR codes, and a "Not claimed" list.
-5. **Footer.** Scale numbers, and a pointer to the audit's open issues.
+   - The token family, with each member's strength.
+2. **Fig. 1 — the life of one observation.** One real NDVI fact (`oj5cecci…`, Keylong) followed through all seven stages:
+   upstream S2 scene → materialised DNs and offset → address (cell64, tslot) → content (1,115 B → BLAKE3)
+   → signed batch and RFC 6962 log → served with a receipt over MCP/REST/A2A → passed as a token and checked by the receiver.
+   Underneath: the four layers (address, content, object, memory).
+3. **Fig. 2 — EO figures from signed data.**
+   - 2a: true colour from the signed B04/B03/B02 grids.
+   - 2b: NDVI we computed from the signed B08/B04 grids, with the fact's cell marked.
+   - 2c: a 5-member `emem:cube:`, each member labelled with the date asked for and the scene actually used. It shows a cloudy member as a stated limit.
+4. **A1–A8 contribution panels.** Mechanism, live evidence, prior art, what is new, and the limit. A2 and A8 carry data charts: the two-clocks step chart, and log growth decoded from sampled signed entries.
+5. **B1** (agreement ≠ correctness), **B2** (the real agent correspondence graph, 99.1% of cited tokens still resolve) and **Reproduce**.
+
+## Figures
+
+`make_figures.py` rebuilds every figure in `fig/` from `research/repro/data/`. All inputs were fetched from emem.dev on 2026-09-29, and every raster artifact was re-hashed before use.
 
 ## Before printing
 
