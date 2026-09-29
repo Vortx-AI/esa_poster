@@ -15,6 +15,7 @@ This folder is the shared decision memory for the ESA / BIFOLD Agentic AI for Ea
 - [should_do/05_EVIDENCE_AND_NUMBERS.md](should_do/05_EVIDENCE_AND_NUMBERS.md) — measured results (agreement ≠ correctness, handoff, verify cost) with n and caveats.
 - [should_do/06_HOW_DEVICES_AND_AGENTS_CONNECT.md](should_do/06_HOW_DEVICES_AND_AGENTS_CONNECT.md) — how parties that share nothing agree on evidence; shipped vs simulated vs roadmap; the agent skills.
 - [should_do/07_EVENT_FORMAT_PEOPLE_AND_ACTIONS.md](should_do/07_EVENT_FORMAT_PEOPLE_AND_ACTIONS.md) — poster format facts, title/author fixes, who is in the room, pre-event checklist.
+- [should_do/09_INVENTION_REGISTER.md](should_do/09_INVENTION_REGISTER.md) — **the eight contributions (A1–A8) and three findings (B1–B3)**, each with code evidence, a live check, closest prior art, what is new, and limits. Start here.
 - [should_do/08_RELATED_WORK_2025_2026.md](should_do/08_RELATED_WORK_2025_2026.md) — AlphaEarth, TESSERA, C2PA, A2A, ERC-8004, EO MCP servers, agent memory.
 
 ## What we should not put in the presentation
@@ -22,6 +23,7 @@ This folder is the shared decision memory for the ESA / BIFOLD Agentic AI for Ea
 - [do_not_use/01_CROWDED_AND_UNSAFE_CLAIMS.md](do_not_use/01_CROWDED_AND_UNSAFE_CLAIMS.md) — crowded claims, novelty traps and overclaims.
 - [do_not_use/02_AI_TELLS.md](do_not_use/02_AI_TELLS.md) — visual and language patterns that make the poster look generated or commercial.
 - [do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md](do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md) — 16 statements in the earlier concept that the code contradicts.
+- [do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md](do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md) — 22 defects/inconsistencies for the maintainers (incl. geo.qa is Vortx-operated, not independent).
 - [do_not_use/04_REFUTED_UNMEASURED_AND_ROADMAP.md](do_not_use/04_REFUTED_UNMEASURED_AND_ROADMAP.md) — refuted, unmeasured, roadmap-only and stale claims.
 
 ## Reproduce

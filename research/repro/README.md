@@ -15,6 +15,18 @@ python verify_fact.py <emem:fact:...>
 3. Checks that the token's cell matches the cell inside the fact.
 4. Changes the value by 0.1, re-encodes, and shows that the name no longer matches.
 
+## Scripts (all independent of emem code)
+
+| script | checks |
+|---|---|
+| `verify_fact.py` | fact bytes → BLAKE3 → fact_cid; tamper changes the name |
+| `verify_ndvi.py` | NDVI rebuilt bit-for-bit from the DNs + BOA offset inside the signed fact |
+| `verify_bitemporal.py` | one key replayed at four transaction times; every answer re-hashes |
+| `verify_absence.py` | signed absence (ocean, no Cop-DEM tile); reason hash-bound; receipt valid |
+| `verify_log.py` | RFC 9162 STH signature, inclusion proof, consistency proof |
+| `verify_receipt_tamper.py` | receipt valid as served; proof-stripped and v1-downgraded variants fail |
+| `hero_field.json` | tokens/CIDs of the Keylong Sentinel-2 field on the poster |
+
 ## Exhibit A: a real upstream drift, caught by addressing
 
 The same place (Bengaluru, cell `defi.zb493.xuqA.zcb5f`), the same band
