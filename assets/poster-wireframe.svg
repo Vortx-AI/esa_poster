@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="2000" viewBox="0 0 1400 2000">
+<rect width="1400" height="2000" fill="#f6f6f0"/>
+<style>
+.t{font-family:Arial,Helvetica,sans-serif;fill:#111}.m{font-family:monospace;fill:#111}
+.h1{font-size:54px;font-weight:700}.h2{font-size:34px;font-weight:700}.s{font-size:22px}.xs{font-size:18px}.muted{fill:#555}
+.line{stroke:#111;stroke-width:2}.blue{fill:#125DFF}.abox{fill:#fff;stroke:#111;stroke-width:2}
+</style>
+
+<text x="70" y="80" class="t xs">AGENTIC AI FOR EARTH OBSERVATION — WORKSHOP 2026 · BERLIN</text>
+<line x1="70" y1="105" x2="1330" y2="105" class="line"/>
+<text x="70" y="175" class="t h1">emem: A research on Content-Addressed,</text>
+<text x="70" y="235" class="t h1">Verifiable Earth-Memory Protocol for AI Agents</text>
+<text x="70" y="295" class="t h1">over Foundation-Model Embeddings</text>
+<text x="70" y="345" class="t h2 blue">THE SATELLITE OBSERVATION CAN OUTLIVE THE AGENT.</text>
+<text x="70" y="390" class="t s">Earth observation becomes durable reasoning state. Agents become transient compute over that state.</text>
+
+<rect x="70" y="455" width="1260" height="360" rx="6" class="abox"/>
+<text x="100" y="510" class="t h2">1 · THE NEW OBJECT + THE INVARIANT</text>
+<text x="100" y="565" class="m s">O = (a, b, t, v, u, p, s)</text>
+<text x="100" y="615" class="t s">place · semantic type · time · value/embedding · uncertainty · provenance · signature</text>
+<text x="100" y="680" class="m s">CID(O) = Base32(BLAKE3(CanonicalCBOR(O)))</text>
+<text x="100" y="730" class="t s">same canonical bytes → same name · changed byte → changed name</text>
+<text x="100" y="775" class="t s muted">For emem:fact, the client can re-hash the resolved body and check the signed receipt independently.</text>
+
+<rect x="70" y="850" width="600" height="400" rx="6" class="abox"/>
+<text x="100" y="905" class="t h2">2 · PROSE HANDOFF</text>
+<text x="100" y="960" class="m s">EO → model → prose → summary</text>
+<text x="100" y="1010" class="m s">→ compaction → handoff → paraphrase</text>
+<text x="100" y="1080" class="t s">Every hop re-encodes the referent.</text>
+<text x="100" y="1130" class="t s">Fluent text can survive while the evidence drifts.</text>
+<text x="100" y="1195" class="t h2 muted">context owns the state</text>
+
+<rect x="730" y="850" width="600" height="400" rx="6" class="abox"/>
+<text x="760" y="905" class="t h2">3 · ADDRESS HANDOFF</text>
+<text x="760" y="960" class="m s">EO → observation O → CID/token</text>
+<text x="760" y="1010" class="m s">→ Agent A / Agent B / later session</text>
+<text x="760" y="1080" class="t s">Each party resolves back to the evidence object.</text>
+<text x="760" y="1130" class="t s">The reasoning may differ; the cited observation can remain the same.</text>
+<text x="760" y="1195" class="t h2 blue">world-state owns the state</text>
+
+<rect x="70" y="1290" width="1260" height="330" rx="6" class="abox"/>
+<text x="100" y="1345" class="t h2">4 · DIRECT EO REASONING OBJECTS</text>
+<text x="100" y="1400" class="m s">emem:fact:      one observation</text>
+<text x="100" y="1445" class="m s">emem:raster:    one spatial field over an AOI</text>
+<text x="100" y="1490" class="m s">emem:cube:      that field through time</text>
+<text x="100" y="1535" class="m s">emem:rasterset: a bound set of fields</text>
+<text x="100" y="1585" class="t s muted">The embedding is not the memory. The addressable observation around it is.</text>
+
+<rect x="70" y="1660" width="820" height="250" rx="6" class="abox"/>
+<text x="100" y="1715" class="t h2">A CONTENT-ADDRESSED BUILD GRAPH OVER THE PHYSICAL WORLD</text>
+<text x="100" y="1770" class="m xs">B04 ─┐</text>
+<text x="100" y="1805" class="m xs">     ├─ NDVI@1 ─→ signed observation ─→ CID</text>
+<text x="100" y="1840" class="m xs">B08 ─┘</text>
+<text x="100" y="1880" class="t xs muted">If valid deterministic state already exists, a later agent resolves it instead of re-deriving it.</text>
+
+<rect x="930" y="1660" width="400" height="250" rx="6" class="abox"/>
+<text x="960" y="1715" class="t h2">HONEST BOUNDARY</text>
+<text x="960" y="1765" class="t xs">✓ co-reference / integrity</text>
+<text x="960" y="1800" class="t xs">✓ provenance / replay</text>
+<text x="960" y="1840" class="t xs">✕ objective truth</text>
+<text x="960" y="1875" class="t xs">✕ model correctness</text>
+
+<line x1="70" y1="1945" x2="1330" y2="1945" class="line"/>
+<text x="70" y="1985" class="t xs">emem · Vortx AI · open source · github.com/Vortx-AI/emem · DOI 10.5281/zenodo.20706893</text>
+</svg>
