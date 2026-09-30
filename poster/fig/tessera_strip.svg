@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="331.2pt" height="57.6pt" viewBox="0 0 331.2 57.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-30T13:26:39.551239</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 57.6 
+L 331.2 57.6 
+L 331.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 3.312 31.68 
+L 322.92 31.68 
+L 322.92 1.152 
+L 3.312 1.152 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p4cda059667)">
+    <image xlink:href="data:image/png;base64,
+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" id="imagebdf2570259" transform="scale(1 -1) translate(0 -30.48)" x="3.36" y="-1.2" width="319.68" height="30.48"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m73b9d25364" d="M 0 0 
+L 0 3.5 
+" style="stroke: #46463f; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m73b9d25364" x="4.560469" y="31.68" style="fill: #46463f; stroke: #46463f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #46463f" x="4.560469" y="43.618477" transform="rotate(-0 4.560469 43.618477)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m73b9d25364" x="84.462469" y="31.68" style="fill: #46463f; stroke: #46463f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #46463f" x="84.462469" y="43.618477" transform="rotate(-0 84.462469 43.618477)">32</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m73b9d25364" x="164.364469" y="31.68" style="fill: #46463f; stroke: #46463f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #46463f" x="164.364469" y="43.618477" transform="rotate(-0 164.364469 43.618477)">64</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m73b9d25364" x="244.266469" y="31.68" style="fill: #46463f; stroke: #46463f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #46463f" x="244.266469" y="43.618477" transform="rotate(-0 244.266469 43.618477)">96</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m73b9d25364" x="321.671531" y="31.68" style="fill: #46463f; stroke: #46463f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #46463f" x="321.671531" y="43.618477" transform="rotate(-0 321.671531 43.618477)">127</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #46463f" x="163.116" y="54.118984" transform="rotate(-0 163.116 54.118984)">dimension (128 signed floats; the re-read matches each one exactly)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4cda059667">
+   <rect x="3.312" y="1.152" width="319.608" height="30.528"/>
+  </clipPath>
+ </defs>
+</svg>

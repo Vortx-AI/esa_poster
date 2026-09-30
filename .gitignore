@@ -1,0 +1,6 @@
+# signing keys never belong in git
+emem-key-*.json
+agent_identity.json
+identity.json
+*.seed
+__pycache__/

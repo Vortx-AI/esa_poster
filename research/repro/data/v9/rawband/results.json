@@ -1,0 +1,1717 @@
+{
+ "summary": {
+  "n": 10,
+  "ev23_counts": {
+   "a_prefix": 0,
+   "b_containing": 1,
+   "both_seen": 0,
+   "c_other_none": 9
+  },
+  "CHANGE_counts": {
+   "no material change": 6,
+   "undetermined (23 Sep scene not retrievable via emem; both dates resolved to the 25 Sep scene)": 1,
+   "undetermined (23 Sep raster not obtainable; both requests returned the 25 Sep scene)": 1,
+   "undetermined (23 Sep raw bands not retrievable; both dates resolved to the 25 Sep scene)": 1,
+   "indeterminate (23 Sep request resolved to the same 25 Sep scene; no second scene to compare, none of the three allowed values is supported)": 1
+  },
+  "methods_stated": [
+   "B04 and B08 per-pixel NDVI=(B08-B04)/(B08+B04), date A minus date B; both dates resolved to the same 25 Sep scene, so delta=0 is trivial and not a valid change test",
+   "B04 and B08 rasters for 23 Sep and 25 Sep resolve to the same 25 Sep scene (identical artifacts), so no two-date difference (B08\u2212B04)/(B08+B04) was possible; the \"no material change\" label is a default because the comparison could not be made, not a finding",
+   "Intended NDVI-style red/NIR difference (B08\u2212B04)/(B08+B04) between the two dates; not computable, because all requests returned the 25 Sep scene (B04 and B08 only, no 23 Sep bands), so this verdict is a placeholder, not a measured result",
+   "Intended NDVI=(B08\u2212B04)/(B08+B04) on s2.B04/s2.B08 DN, differenced 25 Sep minus 23 Sep. Not computed, because both dates resolved to the same 25 Sep scene and there is no 23 Sep pixel data. The \"no material change\" label is a placeholder for \"not determinable\", not a measured result.",
+   "Intended: NDVI=(B08\u2212B04)/(B08+B04) per pixel after removing the \u22121000 DN offset, then 25 Sep minus 23 Sep; not computable, only one scene was returned",
+   "Intended: per-pixel \u0394NDVI from B08 (NIR) and B04 (red), NDVI=(B08\u2212B04)/(B08+B04) after (DN\u22121000)/10000, 25 Sep minus 23 Sep; not computed because only the 25 Sep scene was returned",
+   "Raw S2 L2A surface reflectance B08 (NIR) and B04 (red) at the cell; NDVI = (B08\u2212B04)/(B08+B04), 0.486 (23 Sep) vs 0.471 (25 Sep), \u0394=\u22120.015",
+   "Red B04 and NIR B08 rasters, planned as dNDVI=(B08\u2212B04)/(B08+B04) between dates; not computed because both dates resolved to the same 25 Sep scene (dNDVI=0 by construction, so this answer is unverified)",
+   "s2.B04 and s2.B08 rasters (10 m), planned per-pixel (B08-B04)/(B08+B04) mean difference; not computable because both dates return the same 25 Sep scene",
+   "s2.B04 and s2.B08 raw DN, NDVI=(B08\u2212B04)/(B08+B04) per pixel, mean(NDVI_25Sep \u2212 NDVI_23Sep); not computable because both requests returned the 25 Sep scene"
+  ],
+  "numbers_total": 193,
+  "numbers_direct": 147,
+  "numbers_computed": 46,
+  "cost_total": 2.1153,
+  "wall_median": 31.62,
+  "token_integrity": {
+   "distinct_cited_cids": 30,
+   "verified": 30
+  },
+  "artifact_integrity": {
+   "distinct_artifacts": 2,
+   "verified": 2
+  }
+ },
+ "runs": [
+  {
+   "i": 1,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "no material change",
+   "CHANGE_in_allowed_set": true,
+   "METHOD": "Red B04 and NIR B08 rasters, planned as dNDVI=(B08\u2212B04)/(B08+B04) between dates; not computed because both dates resolved to the same 25 Sep scene (dNDVI=0 by construction, so this answer is unverified)",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:2cnwbhzytmgn3hpzc7627edi73mw7x7r2hpfgzghdelewm5x4ufa",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:ighnesu7jcxxfukqtm5ipzjuwt4lzwho7spmxsmwlb2du2zykm3a",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:zxxtgfi2vbioemfg5v76rzeif33qxubbsl7hbdf2cdtbpqzrgb4a",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:aqhlsrb7j4ry3pnm3todz5i7lzmolv5ydy6hlgegrh2efjrnndna"
+   ],
+   "tokens_cited_n": 4,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 4,
+   "numbers": [
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10",
+     "x": 10.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "20721",
+     "x": 20721.0,
+     "cls": "backed"
+    },
+    {
+     "s": "20",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "-1000",
+     "x": -1000.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.47",
+     "x": 0.47,
+     "cls": "computed"
+    },
+    {
+     "s": "0",
+     "x": 0.0,
+     "cls": "backed"
+    }
+   ],
+   "numbers_n": 17,
+   "numbers_backed_direct": 16,
+   "numbers_computed": 1,
+   "numbers_unbacked": [],
+   "frac_direct": 0.941,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": true,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": true
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_cell_scene_rgb",
+    "emem_band_raster",
+    "emem_band_raster"
+   ],
+   "tool_calls": 7,
+   "tool_errors": 0,
+   "wall_s": 35.28,
+   "cost_usd": 0.5181912,
+   "num_turns": 8,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 2,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "undetermined (23 Sep scene not retrievable via emem; both dates resolved to the 25 Sep scene)",
+   "CHANGE_in_allowed_set": false,
+   "METHOD": "s2.B04 and s2.B08 raw DN, NDVI=(B08\u2212B04)/(B08+B04) per pixel, mean(NDVI_25Sep \u2212 NDVI_23Sep); not computable because both requests returned the 25 Sep scene",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:ymh4bswaz7vjmjp6akrg4cjs2sw653nzu4vvag3w4y7rw4rjmh2q",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:bsu3ggsfflv6wqingovh7w46rlah2svvlh2xefrzqfgdydnavssq",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:sfedhlkwuxhhygcnm7fjpcg73ey6ohoicg6avqcgj4u57tana7ca"
+   ],
+   "tokens_cited_n": 3,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 3,
+   "numbers": [
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10",
+     "x": 10.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "20",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "-1000",
+     "x": -1000.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.47",
+     "x": 0.47,
+     "cls": "computed"
+    }
+   ],
+   "numbers_n": 16,
+   "numbers_backed_direct": 15,
+   "numbers_computed": 1,
+   "numbers_unbacked": [],
+   "frac_direct": 0.938,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": true,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": false
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_cell_scene_rgb",
+    "emem_band_cube"
+   ],
+   "tool_calls": 6,
+   "tool_errors": 1,
+   "wall_s": 31.3,
+   "cost_usd": 0.165857,
+   "num_turns": 7,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 3,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "undetermined (23 Sep raster not obtainable; both requests returned the 25 Sep scene)",
+   "CHANGE_in_allowed_set": false,
+   "METHOD": "Intended: per-pixel \u0394NDVI from B08 (NIR) and B04 (red), NDVI=(B08\u2212B04)/(B08+B04) after (DN\u22121000)/10000, 25 Sep minus 23 Sep; not computed because only the 25 Sep scene was returned",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:uodo3iyn6ppddai22wvaqyoa6skyyik2t4fxylykp64aun7qwddq",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:amtelgzz3gdt2fouzg6zfx24oignfg7yynaojv4ixxousa32qfla"
+   ],
+   "tokens_cited_n": 2,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 2,
+   "numbers": [
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "20",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "20721",
+     "x": 20721.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1000",
+     "x": 1000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "10000",
+     "x": 10000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10",
+     "x": 10.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.05",
+     "x": 0.05,
+     "cls": "computed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1000",
+     "x": 1000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "10000",
+     "x": 10000.0,
+     "cls": "computed"
+    }
+   ],
+   "numbers_n": 16,
+   "numbers_backed_direct": 11,
+   "numbers_computed": 5,
+   "numbers_unbacked": [],
+   "frac_direct": 0.688,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": true,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": false
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_cell_scene_rgb",
+    "emem_band_raster",
+    "emem_band_raster"
+   ],
+   "tool_calls": 7,
+   "tool_errors": 0,
+   "wall_s": 32.9,
+   "cost_usd": 0.19046459999999998,
+   "num_turns": 8,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 4,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "undetermined (23 Sep raw bands not retrievable; both dates resolved to the 25 Sep scene)",
+   "CHANGE_in_allowed_set": false,
+   "METHOD": "Intended: NDVI=(B08\u2212B04)/(B08+B04) per pixel after removing the \u22121000 DN offset, then 25 Sep minus 23 Sep; not computable, only one scene was returned",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:3smzqj5tlhqyeyg6hmy53pwzhisqhrdblywg6iqy2c5w5idweloa",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:gvayjlwslp57e7k4slqr7men52v3asy2oltfie652xahflmfpgeq"
+   ],
+   "tokens_cited_n": 2,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 2,
+   "numbers": [
+    {
+     "s": "-1000",
+     "x": -1000.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "20721",
+     "x": 20721.0,
+     "cls": "backed"
+    },
+    {
+     "s": "20",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1",
+     "x": 1.0,
+     "cls": "backed"
+    },
+    {
+     "s": "23",
+     "x": 23.0,
+     "cls": "backed"
+    },
+    {
+     "s": "25",
+     "x": 25.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.47",
+     "x": 0.47,
+     "cls": "computed"
+    },
+    {
+     "s": "-1000",
+     "x": -1000.0,
+     "cls": "backed"
+    }
+   ],
+   "numbers_n": 14,
+   "numbers_backed_direct": 13,
+   "numbers_computed": 1,
+   "numbers_unbacked": [],
+   "frac_direct": 0.929,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": true,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": false
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_cell_scene_rgb",
+    "emem_band_raster",
+    "emem_band_cube"
+   ],
+   "tool_calls": 7,
+   "tool_errors": 1,
+   "wall_s": 31.15,
+   "cost_usd": 0.1766548,
+   "num_turns": 8,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 5,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "no material change",
+   "CHANGE_in_allowed_set": true,
+   "METHOD": "B04 and B08 per-pixel NDVI=(B08-B04)/(B08+B04), date A minus date B; both dates resolved to the same 25 Sep scene, so delta=0 is trivial and not a valid change test",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:hpqd25apdahoup4rtfth6ay7b76w3wxcqvxqn44bl3myebw4vmpq",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:6rppp6543vn5r6luf4ta6pzx2ofdvq5ywcr4kyjerszlyinfzqaa",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:uiotvriakx452npu3lel62eoz5rixgbmimbapuvunyqpx255tjcq",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:jzikrumzhosooi3zeb5q5fxhqq6oicxvx5m325g7jv2dui6b2mya"
+   ],
+   "tokens_cited_n": 4,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 4,
+   "numbers": [
+    {
+     "s": "23",
+     "x": 23.0,
+     "cls": "computed"
+    },
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "05",
+     "x": 5.0,
+     "cls": "computed"
+    },
+    {
+     "s": "42",
+     "x": 42.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "5",
+     "x": 5.0,
+     "cls": "computed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10",
+     "x": 10.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32.5699",
+     "x": 32.5699,
+     "cls": "backed"
+    },
+    {
+     "s": "32.5727",
+     "x": 32.5727,
+     "cls": "backed"
+    },
+    {
+     "s": "77.0328",
+     "x": 77.0328,
+     "cls": "backed"
+    },
+    {
+     "s": "77.0362",
+     "x": 77.0362,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.471",
+     "x": 0.471,
+     "cls": "computed"
+    },
+    {
+     "s": "31",
+     "x": 31.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1",
+     "x": 1.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1023",
+     "x": 1023.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1259",
+     "x": 1259.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.10",
+     "x": 0.1,
+     "cls": "computed"
+    },
+    {
+     "s": "30",
+     "x": 30.0,
+     "cls": "backed"
+    },
+    {
+     "s": "31",
+     "x": 31.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1497",
+     "x": 1497.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1455",
+     "x": 1455.0,
+     "cls": "backed"
+    },
+    {
+     "s": "-0.01",
+     "x": -0.01,
+     "cls": "computed"
+    },
+    {
+     "s": "1",
+     "x": 1.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0",
+     "x": 0.0,
+     "cls": "backed"
+    },
+    {
+     "s": "652",
+     "x": 652.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1567",
+     "x": 1567.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.41",
+     "x": 0.41,
+     "cls": "computed"
+    },
+    {
+     "s": "0",
+     "x": 0.0,
+     "cls": "backed"
+    },
+    {
+     "s": "31",
+     "x": 31.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1439",
+     "x": 1439.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1685",
+     "x": 1685.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.08",
+     "x": 0.08,
+     "cls": "computed"
+    },
+    {
+     "s": "0",
+     "x": 0.0,
+     "cls": "backed"
+    },
+    {
+     "s": "30",
+     "x": 30.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0",
+     "x": 0.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0",
+     "x": 0.0,
+     "cls": "backed"
+    }
+   ],
+   "numbers_n": 42,
+   "numbers_backed_direct": 34,
+   "numbers_computed": 8,
+   "numbers_unbacked": [],
+   "frac_direct": 0.81,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": false,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": true
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster"
+   ],
+   "tool_calls": 4,
+   "tool_errors": 0,
+   "wall_s": 25.6,
+   "cost_usd": 0.1144078,
+   "num_turns": 5,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 6,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "no material change",
+   "CHANGE_in_allowed_set": true,
+   "METHOD": "Intended NDVI-style red/NIR difference (B08\u2212B04)/(B08+B04) between the two dates; not computable, because all requests returned the 25 Sep scene (B04 and B08 only, no 23 Sep bands), so this verdict is a placeholder, not a measured result",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:b6nvosbzletaircsc7xol7trlmc6675ygg2i7n23kxvw22nw3oea",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:scm2dhqmivhad7zkipzmpchwipbdfkfkzdwhwfdnxfqasaqbx24a"
+   ],
+   "tokens_cited_n": 2,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 2,
+   "numbers": [
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "23",
+     "x": 23.0,
+     "cls": "backed"
+    },
+    {
+     "s": "20",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10000",
+     "x": 10000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "0.47",
+     "x": 0.47,
+     "cls": "computed"
+    }
+   ],
+   "numbers_n": 9,
+   "numbers_backed_direct": 7,
+   "numbers_computed": 2,
+   "numbers_unbacked": [],
+   "frac_direct": 0.778,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": false,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": true
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_cell_scene_rgb",
+    "emem_band_cube",
+    "emem_band_raster"
+   ],
+   "tool_calls": 7,
+   "tool_errors": 1,
+   "wall_s": 31.62,
+   "cost_usd": 0.19515320000000003,
+   "num_turns": 8,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 7,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "indeterminate (23 Sep request resolved to the same 25 Sep scene; no second scene to compare, none of the three allowed values is supported)",
+   "CHANGE_in_allowed_set": false,
+   "METHOD": "s2.B04 and s2.B08 rasters (10 m), planned per-pixel (B08-B04)/(B08+B04) mean difference; not computable because both dates return the same 25 Sep scene",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:lu7o4n3ycuyo2mn6u3jcoznv4btgu4bljaoi7a64zskrmyegexia",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:svhojf4aos637s3tuet44yt5tfun4sqmxwn72rlc4ikb7sss5s4q",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:xhdj5b5yksszkbkoo5qo6pxyni7evnvoml4c2rbhpmtvwaggab6q"
+   ],
+   "tokens_cited_n": 3,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 3,
+   "numbers": [
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10",
+     "x": 10.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    },
+    {
+     "s": "23",
+     "x": 23.0,
+     "cls": "computed"
+    },
+    {
+     "s": "10",
+     "x": 10.0,
+     "cls": "backed"
+    }
+   ],
+   "numbers_n": 9,
+   "numbers_backed_direct": 8,
+   "numbers_computed": 1,
+   "numbers_unbacked": [],
+   "frac_direct": 0.889,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": false,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": false
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster"
+   ],
+   "tool_calls": 4,
+   "tool_errors": 0,
+   "wall_s": 25.19,
+   "cost_usd": 0.1107002,
+   "num_turns": 5,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 8,
+   "ev23": "b_containing",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "no material change",
+   "CHANGE_in_allowed_set": true,
+   "METHOD": "Raw S2 L2A surface reflectance B08 (NIR) and B04 (red) at the cell; NDVI = (B08\u2212B04)/(B08+B04), 0.486 (23 Sep) vs 0.471 (25 Sep), \u0394=\u22120.015",
+   "tokens_cited": [
+    "emem:fact:defi.zb572.xoso.zb1ec:aorer7jtgzrjkjospacmula5rd65tev7uyndw3taogg7trmg2a2q",
+    "emem:fact:defi.zb572.xoso.zb1ec:flf5bk4qry32c3exazagp66gs2gzdhafx7heqqsslsuvn43ad5bq",
+    "emem:fact:defi.zb572.xoso.zb1ec:wbbu4ezmlxjwqfay5mu77f3xrvldg475pdce4fe4cxqiaaa5cvcq",
+    "emem:fact:defi.zb572.xoso.zb1ec:4utkk3hyjejmufqlzvxkrbzht434j6gwhwmqo2exa4mqxepjajnq"
+   ],
+   "tokens_cited_n": 4,
+   "tokens_cited_kinds": [
+    "fact"
+   ],
+   "tokens_cited_present_in_tool_results": 4,
+   "numbers": [
+    {
+     "s": "23",
+     "x": 23.0,
+     "cls": "backed"
+    },
+    {
+     "s": "-0.015",
+     "x": -0.015,
+     "cls": "computed"
+    },
+    {
+     "s": "0.486",
+     "x": 0.486,
+     "cls": "computed"
+    },
+    {
+     "s": "0.471",
+     "x": 0.471,
+     "cls": "computed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "20.0",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.0901",
+     "x": 0.0901,
+     "cls": "backed"
+    },
+    {
+     "s": "0.0900",
+     "x": 0.09,
+     "cls": "backed"
+    },
+    {
+     "s": "-0.0001",
+     "x": -0.0001,
+     "cls": "computed"
+    },
+    {
+     "s": "0.2605",
+     "x": 0.2605,
+     "cls": "backed"
+    },
+    {
+     "s": "0.2502",
+     "x": 0.2502,
+     "cls": "backed"
+    },
+    {
+     "s": "-0.0103",
+     "x": -0.0103,
+     "cls": "computed"
+    },
+    {
+     "s": "-4",
+     "x": -4.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.2605",
+     "x": 0.2605,
+     "cls": "backed"
+    },
+    {
+     "s": "0.0901",
+     "x": 0.0901,
+     "cls": "backed"
+    },
+    {
+     "s": "0.2605",
+     "x": 0.2605,
+     "cls": "backed"
+    },
+    {
+     "s": "0.0901",
+     "x": 0.0901,
+     "cls": "backed"
+    },
+    {
+     "s": "0.1704",
+     "x": 0.1704,
+     "cls": "computed"
+    },
+    {
+     "s": "0.3506",
+     "x": 0.3506,
+     "cls": "computed"
+    },
+    {
+     "s": "0.486",
+     "x": 0.486,
+     "cls": "computed"
+    },
+    {
+     "s": "0.2502",
+     "x": 0.2502,
+     "cls": "backed"
+    },
+    {
+     "s": "0.0900",
+     "x": 0.09,
+     "cls": "backed"
+    },
+    {
+     "s": "0.2502",
+     "x": 0.2502,
+     "cls": "backed"
+    },
+    {
+     "s": "0.0900",
+     "x": 0.09,
+     "cls": "backed"
+    },
+    {
+     "s": "0.1602",
+     "x": 0.1602,
+     "cls": "computed"
+    },
+    {
+     "s": "0.3402",
+     "x": 0.3402,
+     "cls": "computed"
+    },
+    {
+     "s": "0.471",
+     "x": 0.471,
+     "cls": "computed"
+    },
+    {
+     "s": "3",
+     "x": 3.0,
+     "cls": "backed"
+    },
+    {
+     "s": "20",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "0.2502",
+     "x": 0.2502,
+     "cls": "backed"
+    },
+    {
+     "s": "0.486",
+     "x": 0.486,
+     "cls": "computed"
+    },
+    {
+     "s": "0.471",
+     "x": 0.471,
+     "cls": "computed"
+    },
+    {
+     "s": "-0.015",
+     "x": -0.015,
+     "cls": "computed"
+    }
+   ],
+   "numbers_n": 35,
+   "numbers_backed_direct": 21,
+   "numbers_computed": 14,
+   "numbers_unbacked": [],
+   "frac_direct": 0.6,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": false,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": false,
+    "posthoc_verdict_self_flagged_placeholder": false
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_cell_scene_rgb",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_recall",
+    "emem_trajectory",
+    "emem_backfill",
+    "emem_backfill",
+    "emem_memory_token_resolve",
+    "emem_memory_token_resolve",
+    "emem_memory_token_resolve",
+    "emem_trajectory"
+   ],
+   "tool_calls": 15,
+   "tool_errors": 0,
+   "wall_s": 45.84,
+   "cost_usd": 0.3430568,
+   "num_turns": 16,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 9,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "no material change",
+   "CHANGE_in_allowed_set": true,
+   "METHOD": "Intended NDVI=(B08\u2212B04)/(B08+B04) on s2.B04/s2.B08 DN, differenced 25 Sep minus 23 Sep. Not computed, because both dates resolved to the same 25 Sep scene and there is no 23 Sep pixel data. The \"no material change\" label is a placeholder for \"not determinable\", not a measured result.",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:wcn6z4rjy3vnou7bxb5xibduihsxdzw37ec7xyx4fgcnqh77ogxa",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:qnnr6gffcdjodzodzyiswiyyyjqku5nl2xh5nicw6r5amc2jmyma",
+    "emem:fact:defi.zb572.xoso.zb1ec:wbbu4ezmlxjwqfay5mu77f3xrvldg475pdce4fe4cxqiaaa5cvcq",
+    "emem:fact:defi.zb572.xoso.zb1ec:4utkk3hyjejmufqlzvxkrbzht434j6gwhwmqo2exa4mqxepjajnq"
+   ],
+   "tokens_cited_n": 4,
+   "tokens_cited_kinds": [
+    "fact",
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 4,
+   "numbers": [
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "20721",
+     "x": 20721.0,
+     "cls": "backed"
+    },
+    {
+     "s": "20.0",
+     "x": 20.0,
+     "cls": "backed"
+    },
+    {
+     "s": "22",
+     "x": 22.0,
+     "cls": "computed"
+    },
+    {
+     "s": "23",
+     "x": 23.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1000",
+     "x": 1000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "10000",
+     "x": 10000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "32",
+     "x": 32.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "900",
+     "x": 900.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2502",
+     "x": 2502.0,
+     "cls": "backed"
+    }
+   ],
+   "numbers_n": 13,
+   "numbers_backed_direct": 10,
+   "numbers_computed": 3,
+   "numbers_unbacked": [],
+   "frac_direct": 0.769,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": true,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": true
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_cell_scene_rgb",
+    "emem_band_cube"
+   ],
+   "tool_calls": 6,
+   "tool_errors": 1,
+   "wall_s": 32.67,
+   "cost_usd": 0.163803,
+   "num_turns": 7,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  },
+  {
+   "i": 10,
+   "ev23": "c_other_none",
+   "ev25": "containing pixel (B04 1900/B08 3502 raw; 900/2502 offset-corrected)",
+   "CHANGE": "no material change",
+   "CHANGE_in_allowed_set": true,
+   "METHOD": "B04 and B08 rasters for 23 Sep and 25 Sep resolve to the same 25 Sep scene (identical artifacts), so no two-date difference (B08\u2212B04)/(B08+B04) was possible; the \"no material change\" label is a default because the comparison could not be made, not a finding",
+   "tokens_cited": [
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:gjpi77dqgf5fs4x65wr3rkmedhmgm3kar6s2anffxfby3zh3y2sa",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:jkpwp2qb4b7sshlv3r3tpunyu2oc7envo7nogogpq7dnqp4x6bia",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B04:20721:4eg3rmbje4qpocpiowt6d6nuwxb76fdyi3eggfh7nadrm6dgvdqq",
+    "emem:raster:tllufj6jxg3cpuucznj4h75ng3lelg2ki3yb5whw6ggdkzt2gocq:s2.B08:20721:fpziwbrknkig5ixf2546kzd7vrh4kgpsz2hadczcpmethvoz4czq"
+   ],
+   "tokens_cited_n": 4,
+   "tokens_cited_kinds": [
+    "raster"
+   ],
+   "tokens_cited_present_in_tool_results": 4,
+   "numbers": [
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "23",
+     "x": 23.0,
+     "cls": "computed"
+    },
+    {
+     "s": "32.5699",
+     "x": 32.5699,
+     "cls": "backed"
+    },
+    {
+     "s": "32.5727",
+     "x": 32.5727,
+     "cls": "backed"
+    },
+    {
+     "s": "77.0328",
+     "x": 77.0328,
+     "cls": "backed"
+    },
+    {
+     "s": "77.0362",
+     "x": 77.0362,
+     "cls": "backed"
+    },
+    {
+     "s": "10.8",
+     "x": 10.8,
+     "cls": "backed"
+    },
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1",
+     "x": 1.0,
+     "cls": "backed"
+    },
+    {
+     "s": "2",
+     "x": 2.0,
+     "cls": "backed"
+    },
+    {
+     "s": "5",
+     "x": 5.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "16",
+     "x": 16.0,
+     "cls": "backed"
+    },
+    {
+     "s": "1000",
+     "x": 1000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "10000",
+     "x": 10000.0,
+     "cls": "computed"
+    },
+    {
+     "s": "0.090",
+     "x": 0.09,
+     "cls": "computed"
+    },
+    {
+     "s": "0.250",
+     "x": 0.25,
+     "cls": "computed"
+    },
+    {
+     "s": "0.250",
+     "x": 0.25,
+     "cls": "computed"
+    },
+    {
+     "s": "0.090",
+     "x": 0.09,
+     "cls": "computed"
+    },
+    {
+     "s": "0.250",
+     "x": 0.25,
+     "cls": "computed"
+    },
+    {
+     "s": "0.090",
+     "x": 0.09,
+     "cls": "computed"
+    },
+    {
+     "s": "0.47",
+     "x": 0.47,
+     "cls": "computed"
+    }
+   ],
+   "numbers_n": 22,
+   "numbers_backed_direct": 12,
+   "numbers_computed": 10,
+   "numbers_unbacked": [],
+   "frac_direct": 0.545,
+   "frac_backed_or_computed": 1.0,
+   "flags": {
+    "SCL": false,
+    "offset": true,
+    "pixel_issue": false,
+    "prefix_record": false,
+    "posthoc_same_scene_noticed": true,
+    "posthoc_verdict_self_flagged_placeholder": true
+   },
+   "tool_seq": [
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_raster",
+    "emem_band_cube"
+   ],
+   "tool_calls": 5,
+   "tool_errors": 1,
+   "wall_s": 23.81,
+   "cost_usd": 0.1369854,
+   "num_turns": 6,
+   "models_used": [
+    "claude-sonnet-5-5"
+   ]
+  }
+ ],
+ "token_integrity": [
+  {
+   "cid": "2cnwbhzytmgn3hpzc7627edi73mw7x7r2hpfgzghdelewm5x4ufa",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "3smzqj5tlhqyeyg6hmy53pwzhisqhrdblywg6iqy2c5w5idweloa",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "4eg3rmbje4qpocpiowt6d6nuwxb76fdyi3eggfh7nadrm6dgvdqq",
+   "http_ok": true,
+   "bytes": 1982,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "4utkk3hyjejmufqlzvxkrbzht434j6gwhwmqo2exa4mqxepjajnq",
+   "http_ok": true,
+   "bytes": 845,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "6rppp6543vn5r6luf4ta6pzx2ofdvq5ywcr4kyjerszlyinfzqaa",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "amtelgzz3gdt2fouzg6zfx24oignfg7yynaojv4ixxousa32qfla",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "aorer7jtgzrjkjospacmula5rd65tev7uyndw3taogg7trmg2a2q",
+   "http_ok": true,
+   "bytes": 839,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "aqhlsrb7j4ry3pnm3todz5i7lzmolv5ydy6hlgegrh2efjrnndna",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "b6nvosbzletaircsc7xol7trlmc6675ygg2i7n23kxvw22nw3oea",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "bsu3ggsfflv6wqingovh7w46rlah2svvlh2xefrzqfgdydnavssq",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "flf5bk4qry32c3exazagp66gs2gzdhafx7heqqsslsuvn43ad5bq",
+   "http_ok": true,
+   "bytes": 846,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "fpziwbrknkig5ixf2546kzd7vrh4kgpsz2hadczcpmethvoz4czq",
+   "http_ok": true,
+   "bytes": 1982,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "gjpi77dqgf5fs4x65wr3rkmedhmgm3kar6s2anffxfby3zh3y2sa",
+   "http_ok": true,
+   "bytes": 1982,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "gvayjlwslp57e7k4slqr7men52v3asy2oltfie652xahflmfpgeq",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "hpqd25apdahoup4rtfth6ay7b76w3wxcqvxqn44bl3myebw4vmpq",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "ighnesu7jcxxfukqtm5ipzjuwt4lzwho7spmxsmwlb2du2zykm3a",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "jkpwp2qb4b7sshlv3r3tpunyu2oc7envo7nogogpq7dnqp4x6bia",
+   "http_ok": true,
+   "bytes": 1982,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "jzikrumzhosooi3zeb5q5fxhqq6oicxvx5m325g7jv2dui6b2mya",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "lu7o4n3ycuyo2mn6u3jcoznv4btgu4bljaoi7a64zskrmyegexia",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "qnnr6gffcdjodzodzyiswiyyyjqku5nl2xh5nicw6r5amc2jmyma",
+   "http_ok": true,
+   "bytes": 1982,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "scm2dhqmivhad7zkipzmpchwipbdfkfkzdwhwfdnxfqasaqbx24a",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "sfedhlkwuxhhygcnm7fjpcg73ey6ohoicg6avqcgj4u57tana7ca",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "svhojf4aos637s3tuet44yt5tfun4sqmxwn72rlc4ikb7sss5s4q",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "uiotvriakx452npu3lel62eoz5rixgbmimbapuvunyqpx255tjcq",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "uodo3iyn6ppddai22wvaqyoa6skyyik2t4fxylykp64aun7qwddq",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "wbbu4ezmlxjwqfay5mu77f3xrvldg475pdce4fe4cxqiaaa5cvcq",
+   "http_ok": true,
+   "bytes": 840,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "wcn6z4rjy3vnou7bxb5xibduihsxdzw37ec7xyx4fgcnqh77ogxa",
+   "http_ok": true,
+   "bytes": 1982,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "xhdj5b5yksszkbkoo5qo6pxyni7evnvoml4c2rbhpmtvwaggab6q",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "ymh4bswaz7vjmjp6akrg4cjs2sw653nzu4vvag3w4y7rw4rjmh2q",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  },
+  {
+   "cid": "zxxtgfi2vbioemfg5v76rzeif33qxubbsl7hbdf2cdtbpqzrgb4a",
+   "http_ok": true,
+   "bytes": 1875,
+   "blake3_b32_matches": true
+  }
+ ],
+ "artifact_integrity": [
+  {
+   "artifact_cid": "mg463c6z6lbwdbnv5lc6lp45pkjate6qsqh3c4vtw6kswa3jpgqq",
+   "http_ok": true,
+   "bytes": 4160,
+   "blake3_b32_matches": true
+  },
+  {
+   "artifact_cid": "sipykc4ewzt72gwa7ep2ginzxuxwp5eh6ei5e4szxfspopi2f2ca",
+   "http_ok": true,
+   "bytes": 4160,
+   "blake3_b32_matches": true
+  }
+ ]
+}

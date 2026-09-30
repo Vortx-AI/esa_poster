@@ -1,0 +1,191 @@
+trace_fact.py  run 2026-09-30T09:15:45+00:00
+token: emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa
+
+[ 1] token
+     check   : emem:fact:<cell64>:<fact_cid>; fact_cid is 52 base32 chars (32-byte BLAKE3)
+     result  : VERIFIED
+     evidence: cell64=defi.zb572.xoso.zb1ec
+     evidence: fact_cid=oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa
+     evidence: cid decodes to 32 bytes
+
+[ 2] resolve bytes
+     check   : GET /v1/facts/<cid> Accept: application/cbor returns the committed bytes
+     result  : VERIFIED
+     evidence: HTTP 200, 1115 bytes, content-type=application/cbor, etag="oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa", x-emem-commit=213e2738d508a4e084cd0beef329598950f01bf0
+     residual trust: none for integrity (link 3 checks the bytes); availability depends on the responder or any mirror
+
+[ 3] content address
+     check   : base32-nopad-lower(BLAKE3-256(bytes)) == fact_cid
+     result  : VERIFIED
+     evidence: recomputed oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa
+     evidence: value with its last mantissa bit flipped (0.4708994708994708) -> mu5x2cksmneuujjb7yihfcrfdplv2eu4tmrefyxr2tckyf2q6m4a (mismatch)
+     residual trust: none
+
+[ 4] cell binding
+     check   : cell inside the hashed body == cell in the token (and a mislabelled token is refused)
+     result  : VERIFIED
+     evidence: body.cell=defi.zb572.xoso.zb1ec
+     evidence: wrong-cell token -> HTTP 409 (invalid_argument)
+     residual trust: none: the cell is inside the hashed bytes; the 409 is a convenience, the offline check is the equality
+
+[ 5] cell geometry
+     check   : cell64 decoded independently (grid rule in spec) == lat/lng the derivation used (args[0:2])
+     result  : VERIFIED
+     evidence: decoded centre lat=32.57125977099409 lng=77.03447748052537  (half-cell 4.8 m N-S x 4.0 m E-W)
+     evidence: args lat=32.57125977099409 lng=77.03447748052537
+     residual trust: none
+
+[ 6] provenance decode
+     check   : sources[] and derivation{fn_key,args} are inside the hashed bytes and decode to named inputs
+     result  : VERIFIED
+     evidence: band=indices.ndvi tslot=20721 value=0.4708994708994709 confidence=0.949999988079071 signed_at=2026-09-28T09:06:56Z
+     evidence: fn_key=sentinel2_l2a_indices_ndvi@1
+     evidence: source scheme=sentinel_s2_l2a captured_at=2026-09-25T05:42:51.024000Z
+     evidence: COG 0: https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif
+     evidence: COG 1: https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif
+     evidence: args.lat = 32.57125977099409
+     evidence: args.lng = 77.03447748052537
+     evidence: args.scene_id = 'S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015'
+     evidence: args.epsg = 32643
+     evidence: args.DN[B08,B04] = [3502.0, 1900.0]
+     evidence: args.scene_cloud_pct = 10.840102
+     evidence: args.max_cloud_pct = 40.0
+     evidence: args.lookback_days = 30
+     evidence: args.scl_class = 4
+     evidence: args.scenes_tried = 1
+     evidence: args.catalogue = 'https://planetarycomputer.microsoft.com/api/stac/v1/search'
+     evidence: args.dn_offset = -1000.0
+     residual trust: arg positions are labelled from the emitter source (crates/emem-api-rest/src/lib.rs, S2 arm), not from a published per-fn schema
+
+[ 7] recompute value
+     check   : NDVI = (rho8-rho4)/(rho8+rho4), rho=(DN+offset)*1e-4, from the signed args; compare IEEE-754 bits
+     result  : VERIFIED
+     evidence: recomputed 0.4708994708994709 0x3fde233788cde233
+     evidence: signed     0.4708994708994709 0x3fde233788cde233
+     evidence: same DNs with offset 0 would give 0.29655683080340617
+     residual trust: none for the arithmetic; the DNs themselves are checked in link 9
+
+[ 8] upstream catalogue (STAC)
+     check   : fetch the scene's STAC item from Planetary Computer; every provenance field must match
+     result  : VERIFIED
+     evidence: item.id == args.scene_id: True
+     evidence: item.datetime == sources.captured_at: True
+     evidence: floor(unix(item.datetime)/86400) == fact.tslot (fast band: days since 1970): True
+     evidence: proj:epsg == args.epsg: True
+     evidence: eo:cloud_cover == args.scene_cloud_pct: True
+     evidence: processing_baseline 05.13 >= 04.00 -> offset -1000.0 == args.dn_offset: True
+     evidence: assets.B08.href == COG 0: True
+     evidence: assets.B04.href == COG 1: True
+     evidence: args.catalogue is the PC STAC search endpoint: True
+     evidence: product_uri baseline tag in COG path: True
+     evidence: platform=Sentinel-2A product_uri=S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE granule=S2A_OPER_MSI_L2A_TL_2APS_20260925T090015_A058804_T43SFS_N05.13
+     evidence: STAC asset file:checksum present: False
+     residual trust: the STAC item is Microsoft's statement, served over TLS; it carries no checksum for the COG bytes
+
+[ 9] upstream pixel
+     check   : range-read both COGs at the cell centre (own TIFF/Deflate/Predictor-2 decoder, own projection); DN must equal args.DN
+     result  : VERIFIED
+     evidence: UTM zone 43N: E=690983.273 N=3605584.264 (pyproj cross-check dE=+2.33e-10 m dN=-5.26e-08 m)
+     evidence: B08: tiff tile 512x512 15-bit deflate(comp=8) predictor=1 raster_type=PixelIsArea origin=(600000.0,3700020.0) px=10.0 m
+     evidence: B08: col=9098 row=9443 (frac 0.327,0.574) tile#413 bytes 258936178+477314 blake3=xyzcrqucmzeoavqpdsxn...  DN=3502  signed DN=3502  match=True
+     evidence: B08: 3x3 neighbourhood [[3712, 3688, 3673], [3317, 3502, 3659], [2455, 2720, 3228]]
+     evidence: B04: tiff tile 512x512 15-bit deflate(comp=8) predictor=1 raster_type=PixelIsArea origin=(600000.0,3700020.0) px=10.0 m
+     evidence: B04: col=9098 row=9443 (frac 0.327,0.574) tile#413 bytes 255562078+468566 blake3=nw5nehrmxu553ncfx7r2...  DN=1900  signed DN=1900  match=True
+     evidence: B04: 3x3 neighbourhood [[1795, 1892, 1890], [1934, 1900, 1798], [1730, 1923, 1943]]
+     evidence: NDVI over the 3x3 neighbourhood: 0.547 0.502 0.500 | 0.425 0.471 0.538 | 0.332 0.302 0.405  (range 0.302..0.547)
+     evidence: pixel rule: floor -> (col,row)=(9098,9443) matches the signed DNs; the pre-fix rounding rule (emem reads signed before PIXEL_FIX_AT 2026-09-28T04:09:26Z, lib.rs:12650) -> (9098,9444) DN 2720/1923 NDVI 0.3016
+     evidence: reader stamp in args: False (fact signed 2026-09-28T09:06:56Z; the stamp reader=cog-pixel-floor@2 exists from lib.rs:57066, commit 128ac75)
+     residual trust: none for the DNs if matched; the pixel rule (floor, PixelIsArea) is emem's choice, and nothing binds Microsoft's COG bytes to ESA's product
+
+[9b] scene-classification input
+     check   : SCL class at the pixel (20 m) == args.scl_class; confidence 0.95 is emitted for SCL 4/5/6/11
+     result  : VERIFIED
+     evidence: SCL col=4549 row=4721 class=4 (4=vegetation); signed scl_class=4; confidence=0.949999988079071
+     residual trust: the SCL->confidence mapping is emem's rule (lib.rs S2 arm), not an ESA quantity
+
+[9c] byte-range witness
+     check   : POST /v1/range_hash on the B08 tile: emem's signed BLAKE3 of those bytes == the BLAKE3 this script computed from its own read
+     result  : VERIFIED
+     evidence: ours  blake3(tile#413 bytes 258936178+477314) = xyzcrqucmzeoavqpdsxnotrt5c2roaao34dfwhbxvr7zh3uzyu5a
+     evidence: emem  blake3_b32 = xyzcrqucmzeoavqpdsxnotrt5c2roaao34dfwhbxvr7zh3uzyu5a etag="0x8DF1B1150626008" content_total=281898500 fetched_at=2026-09-30T09:15:54Z sig_valid=True
+     evidence: the fact itself carries no such hash: sources[0] has no `hash`/`cid` field, so the NDVI fact does not commit to the COG bytes it read
+     residual trust: range_hash is a separate signed statement; it is not referenced from the fact
+
+[10] serve receipt
+     check   : ed25519 over PreimageV1('receipt') v2, verified offline with the responder key; tampered variants must fail
+     result  : VERIFIED
+     evidence: recall: preimage v2 request_id=01M3RSJPF3MTSXSWTZXB74VBYP served_at=2026-09-30T09:15:54Z fact_cids[0]==cid:True sig_valid=True; proof-stripped sig_valid=False; downgraded-to-v1 sig_valid=False
+     evidence: memory_token_resolve: preimage v2 request_id=01M3RSJPNWKEG89CK4GRYEKEYB served_at=2026-09-30T09:15:54Z fact_cids[0]==cid:True sig_valid=True; proof-stripped sig_valid=False; downgraded-to-v1 sig_valid=False
+     evidence: the receipt signs (request_id, served_at, source manifests, primitive, cells, fact_cids, merkle binding); it signs no value: the value is bound through fact_cid (link 3)
+     residual trust: the key is emem.dev's (link 15 binds it to the domain); a receipt proves what this responder served, not that the observation is true
+
+[11] batch binding
+     check   : receipt.merkle_proof: promoted fact digest folded along path == root (batch rule named by proof.version)
+     result  : VERIFIED
+     evidence: rule v1 leaf_index=0 path_len=0 root=wnljgmqgsxs4rlw6saoi43musygzzllgao3jte6uoqkwqbffq3ea
+     evidence: single-fact batch: root = blake3(0x00 || blake3(fact bytes))
+     residual trust: the proof is signed by the receipt; it covers fact_cids[0] only
+
+[12] attestation in log
+     check   : locate the attestation by bisection on attested_at (no fact_cid->leaf index exists), then check it
+     result  : VERIFIED
+     evidence: bisection: 21 single-entry probes -> leaf 2457076; linear scan 256 entries; found at leaf_index=2457078 (attested_at=2026-09-28T09:06:56Z, 1 fact(s), entry 1604 bytes); other entries carrying it: []
+     evidence: blake3(entry_cbor) == entry_hash_b32: True
+     evidence: facts[] contains the exact served bytes (raw slice hashes to fact_cid): True
+     evidence: no duplicate leaves: True
+     evidence: batch_root recomputed from facts[] == entry.batch_root: True
+     evidence: entry.batch_root == receipt.merkle_proof.root: True
+     evidence: attestation sig v1: ed25519(attester, PreimageV1('attestation'){batch_root,registry_cid,schema_cid}): True
+     evidence: attester == fact.signer: True
+     evidence: preimage_version = 1 (domain-separated v1): True
+     residual trust: finding the entry needs a scan: /v1/log/inclusion takes leaf_index or entry_hash, not fact_cid (docs/protocol.md:1462 lists that index as the next increment)
+
+[13] inclusion under signed head
+     check   : STH ed25519 valid; RFC 9162 audit path folds blake3(0x00||entry_hash) to the STH root
+     result  : VERIFIED
+     evidence: STH tree_size=2556451 root=5fyxy56wk3avtfvnv2g7f72il5hmnwf5vlw7cgfsxnuj5c5qiina signed_at=2026-09-30T09:15:54Z sig_valid=True
+     evidence: leaf 2457078: path_len=20 inclusion=True; 1-bit-flipped leaf inclusion=False
+     residual trust: a first-contact client cannot detect a split view; that needs a head pinned earlier or seen by someone else (link 14)
+
+[14] append-only history
+     check   : an earlier signed head (pinned by us, or co-signed by a witness) is a prefix of the current head (RFC 9162 consistency)
+     result  : VERIFIED
+     evidence: pinned by this script 2026-09-30T09:02:04Z: head size=2555508 sig_valid=True; consistency 2555508 -> 2556451: True (proof len 19); leaf 2457078 included under this head: True
+     evidence: witness quunzdv5qymo... (geo.qa) cosigned 2026-09-30T04:02:56Z: head size=2541495 sig_valid=True; consistency 2541495 -> 2556451: True (proof len 21); leaf 2457078 included under this head: True
+     evidence: wrote bundle.cbor: 4906 bytes (entry 1604 B incl. the fact bytes, 20+20+21 hashes, STH, witness co-signature, upstream tile refs)
+     evidence: witness key published at https://geo.qa/.well-known/emem-agents.json as ['geo.qa-witness']: True
+     evidence: log witnesses: head_is_independently_witnessed=False, independent_operator_domains=['geo.qa'], freshest witness 943 entries behind
+     residual trust: the only co-signing witness domain, geo.qa, is operated by Vortx AI; organisational independence is not established
+
+[15] signer key -> domain
+     check   : the signing key is published under emem.dev by three HTTPS documents and one DNS TXT record
+     result  : VERIFIED
+     evidence: signer b32 = 777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka
+     evidence: fact.signer == receipt.responder: True
+     evidence: did:web:emem.dev#responder Multikey (0xed01 || key) == signer: True
+     evidence: JWKS OKP/Ed25519 x == signer (kid == b32): True
+     evidence: .well-known/emem.json responder.pubkey_b32 == signer: True
+     evidence: DNS TXT _emem-node.emem.dev via dns.google names k=777er3yihgif... (AD=False): True
+     evidence: DNS TXT _emem-node.emem.dev via cloudflare-dns.com names k=777er3yihgif... (AD=False): True
+     residual trust: Web PKI (TLS for did.json/jwks/emem.json) and DNS without DNSSEC (AD=false): binds the key to whoever controls emem.dev, not to an independent party
+
+==================== CHAIN OF CUSTODY ====================
+[ 1] VERIFIED        token
+[ 2] VERIFIED        resolve bytes
+[ 3] VERIFIED        content address
+[ 4] VERIFIED        cell binding
+[ 5] VERIFIED        cell geometry
+[ 6] VERIFIED        provenance decode
+[ 7] VERIFIED        recompute value
+[ 8] VERIFIED        upstream catalogue (STAC)
+[ 9] VERIFIED        upstream pixel
+[9b] VERIFIED        scene-classification input
+[9c] VERIFIED        byte-range witness
+[10] VERIFIED        serve receipt
+[11] VERIFIED        batch binding
+[12] VERIFIED        attestation in log
+[13] VERIFIED        inclusion under signed head
+[14] VERIFIED        append-only history
+[15] VERIFIED        signer key -> domain
+
+written final_ndvi/chain.json  (17.9 s)

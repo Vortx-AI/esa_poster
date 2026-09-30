@@ -1,0 +1,66 @@
+{
+ "S2C 2026-09-23 (prev, fact kxjvfwpa, signed 2026-09-25T19:35Z = pre-fix)": {
+  "B08": {
+   "col_frac": 9098.3273,
+   "row_frac": 9443.5736,
+   "floor(r,c)": [
+    9443,
+    9098
+   ],
+   "floor_DN": 3605,
+   "round(r,c)": [
+    9444,
+    9098
+   ],
+   "round_DN": 2993
+  },
+  "B04": {
+   "col_frac": 9098.3273,
+   "row_frac": 9443.5736,
+   "floor(r,c)": [
+    9443,
+    9098
+   ],
+   "floor_DN": 1901,
+   "round(r,c)": [
+    9444,
+    9098
+   ],
+   "round_DN": 1972
+  },
+  "ndvi_floor_pixel": 0.4860239589275528,
+  "ndvi_round_pixel": 0.34435075885328836
+ },
+ "S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)": {
+  "B08": {
+   "col_frac": 9098.3273,
+   "row_frac": 9443.5736,
+   "floor(r,c)": [
+    9443,
+    9098
+   ],
+   "floor_DN": 3502,
+   "round(r,c)": [
+    9444,
+    9098
+   ],
+   "round_DN": 2720
+  },
+  "B04": {
+   "col_frac": 9098.3273,
+   "row_frac": 9443.5736,
+   "floor(r,c)": [
+    9443,
+    9098
+   ],
+   "floor_DN": 1900,
+   "round(r,c)": [
+    9444,
+    9098
+   ],
+   "round_DN": 1923
+  },
+  "ndvi_floor_pixel": 0.4708994708994709,
+  "ndvi_round_pixel": 0.3015512674990541
+ }
+}

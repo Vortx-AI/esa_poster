@@ -1,0 +1,323 @@
+{
+ "agent_a": {
+  "n": 10,
+  "models": [
+   "claude-sonnet-5-5"
+  ],
+  "token_equals_hero": 10,
+  "prose_ge4_sigdig_and_agrees": 10,
+  "prose_sig_digits_distribution": {
+   "16": 10
+  },
+  "prose_year_ok": 9,
+  "prose_tile_mentions_43SFS": 10,
+  "cost_usd_total": 1.0488,
+  "cost_usd_mean": 0.1049,
+  "wall_s_mean": 13.28,
+  "wall_s_range": [
+   11.61,
+   17.27
+  ],
+  "tool_calls_mean": 3.3,
+  "tool_sequences": [
+   [
+    "emem_locate",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_recall",
+    "emem_ask",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_locate",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_recall",
+    "emem_ask",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_recall",
+    "emem_locate",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_locate",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_locate",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_recall",
+    "emem_locate",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ],
+   [
+    "emem_locate",
+    "emem_recall",
+    "emem_memory_token_resolve"
+   ]
+  ],
+  "first_call_error_or_wrong_cell": [
+   1,
+   4,
+   5
+  ],
+  "cl100k_token": 46,
+  "cl100k_prose_mean": 64.9,
+  "prose_detail": [
+   {
+    "i": 0,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 1,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 2,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 3,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": false,
+    "tile_ok": true
+   },
+   {
+    "i": 4,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 5,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 6,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 7,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 8,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   },
+   {
+    "i": 9,
+    "stated": "0.4708994708994709",
+    "sig_digits": 16,
+    "decimals": 16,
+    "agrees": true,
+    "year_ok": true,
+    "tile_ok": true
+   }
+  ]
+ },
+ "b": {
+  "qwen2.5-3b-instruct-q4_k_m": {
+   "arms": {},
+   "tests": {},
+   "models_used": []
+  },
+  "claude-haiku-4-5": {
+   "arms": {
+    "T": {
+     "n": 10,
+     "resolve_called": 10,
+     "cid_equals_A": 10,
+     "harness_rehash_ok": 10,
+     "receipt_valid": 10,
+     "exact_quote": 10,
+     "decision_correct": 10,
+     "decline": 0,
+     "no_decision_line": 0,
+     "decision_consistent_with_own_stated_value": 10,
+     "forged_detected": null,
+     "decisions": {
+      "IRRIGATE": 0,
+      "HOLD": 10,
+      "DECLINE": 0,
+      "null": 0
+     },
+     "cl100k_handoff_mean": 46,
+     "cost_usd_mean": 0.01577,
+     "wall_s_mean": 8.85,
+     "any_emem_call": 10,
+     "tools_used": [
+      "emem_memory_token_resolve"
+     ],
+     "input_tokens_mean": 45568.0
+    },
+    "P": {
+     "n": 10,
+     "resolve_called": 0,
+     "cid_equals_A": 0,
+     "harness_rehash_ok": 0,
+     "receipt_valid": 0,
+     "exact_quote": 10,
+     "decision_correct": 10,
+     "decline": 0,
+     "no_decision_line": 0,
+     "decision_consistent_with_own_stated_value": 10,
+     "forged_detected": null,
+     "decisions": {
+      "IRRIGATE": 0,
+      "HOLD": 10,
+      "DECLINE": 0,
+      "null": 0
+     },
+     "cl100k_handoff_mean": 64.9,
+     "cost_usd_mean": 0.00849,
+     "wall_s_mean": 7.1,
+     "any_emem_call": 0,
+     "tools_used": [],
+     "input_tokens_mean": 21665.0
+    },
+    "R": {
+     "n": 5,
+     "resolve_called": 0,
+     "cid_equals_A": 0,
+     "harness_rehash_ok": 0,
+     "receipt_valid": 0,
+     "exact_quote": 0,
+     "decision_correct": 0,
+     "decline": 0,
+     "no_decision_line": 0,
+     "decision_consistent_with_own_stated_value": 5,
+     "forged_detected": null,
+     "decisions": {
+      "IRRIGATE": 5,
+      "HOLD": 0,
+      "DECLINE": 0,
+      "null": 0
+     },
+     "cl100k_handoff_mean": 58.4,
+     "cost_usd_mean": 0.00861,
+     "wall_s_mean": 6.96,
+     "any_emem_call": 0,
+     "tools_used": [],
+     "input_tokens_mean": 21658.0
+    },
+    "F": {
+     "n": 5,
+     "resolve_called": 5,
+     "cid_equals_A": 0,
+     "harness_rehash_ok": 0,
+     "receipt_valid": 0,
+     "exact_quote": 0,
+     "decision_correct": 0,
+     "decline": 5,
+     "no_decision_line": 0,
+     "decision_consistent_with_own_stated_value": 0,
+     "forged_detected": 5,
+     "decisions": {
+      "IRRIGATE": 0,
+      "HOLD": 0,
+      "DECLINE": 5,
+      "null": 0
+     },
+     "cl100k_handoff_mean": 48,
+     "cost_usd_mean": 0.01271,
+     "wall_s_mean": 8.49,
+     "any_emem_call": 5,
+     "tools_used": [
+      "emem_memory_token_resolve"
+     ],
+     "input_tokens_mean": 43964.0
+    }
+   },
+   "tests": {
+    "T_vs_P_primary": {
+     "table": [
+      [
+       10,
+       0
+      ],
+      [
+       10,
+       0
+      ]
+     ],
+     "p_one_sided": 1.0
+    },
+    "T_vs_R_exploratory": {
+     "table": [
+      [
+       10,
+       0
+      ],
+      [
+       0,
+       5
+      ]
+     ],
+     "p_one_sided": 0.000333000333000333
+    }
+   },
+   "models_used": [
+    "claude-haiku-4-5-20251001"
+   ]
+  }
+ }
+}

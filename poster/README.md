@@ -12,6 +12,89 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
+## v9: raw bands, drift taxonomy, since acceptance (30 Sep 2026)
+
+The seal now opens this track:
+
+https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fd7aoricjy4rnm4g5ykil6a4zre.md
+
+- It has 28 steps, and ememdemo checked 28 of 28 at 14:08 UTC on 30 Sep.
+- Head: `dr2tllnicvm32wvgziaw6ad57u`.
+- It is logged as entry 2,567,387, the next entry after the log size stamped on it.
+- board.jpg (seal blank) is at commit `4a516cc`; its sha256 starts `70b4e4bd…`.
+- The board pointer is `v2lbozmd…`, and the evidence pointer (§22) is `7o6t4xpu…`.
+
+What changed from v8:
+
+- **Lead.** The claim is restated: raw observations, addressable by place, band and time. The evidence survives a handoff, and agents cannot write observations.
+- **Drift taxonomy (7 real cases).** Six are located by one field of the record. The seventh, the referent (the Maasvlakte entity), is not caught.
+- **Raw-band run.** It was pre-registered (blake3 `30d8a1a1…`), with n = 10 runs of Claude Sonnet 5.5 and emem's full MCP.
+  - The result is reported as it came out. emem's raster tool served the 25 Sep scene when asked for 23 Sep (defect 27).
+  - One run reached the containing pixel and got ΔNDVI −0.015. None said "greener".
+  - Data: `research/repro/data/v9/rawband/`.
+- **Since the paper was accepted.** Clay, Prithvi, Galileo and JEPA-v2 were removed, and TESSERA is frozen. The panel explains why a recomputable raw band read differs from an `attester_only` embedding, and notes that the OS-trace device gate admits no real hardware yet.
+- **Where emem lost.** It shows the authors' scorecard (§19) and the README results table (§25), with their scope stated.
+- **New steps.** Steps 23–26 are doc rows at emem `18adb67`, and 27–28 are the 23 Sep post-fix B04/B08 facts.
+- **Traffic.** It is now one footer line.
+- **Defects.** New ones, 27–31, are in `research/do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md`. They cover:
+  - 27: the raster date substitution;
+  - 28: the README's 27.8 % / 1.4 % does not reproduce p = 0.035;
+  - 29: read tools sign new records;
+  - 30: the "independent witnesses" wording;
+  - 31: entity receipts are v1, which ememdemo rejects.
+
+## v8: the poster is itself an emem track (30 Sep 2026)
+
+Every `§n` on the board is step n of one signed emem track. Scan the seal QR, or open:
+
+https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fqw5zd3de2lyo532g66kva5t5oe.md
+
+ememdemo re-checks all 22 steps in the browser, recomputes the hash chain to its head
+`zvy3kzpm4a4nkhrnb3h5gtkf7i`, and checks the note's inclusion in the emem log
+(written after log size 2,567,013; logged as entry 2,567,020). Last checked 30 Sep 13:38 UTC: 22 of 22.
+
+| file | what it is |
+|---|---|
+| `board.jpg`, `board.pdf` | the board with the seal box **blank**: the bytes the §1 pointer note hashes (sha256 `8d4de3b3…69eb2`, commit `624c78b`) |
+| `emem-poster-A0.pdf`, `emem-poster-preview.png` | the print: the same board plus the filled seal (QR, track, head, sha256, log position) |
+| `fig/seal_qr.png`, `fig/seal_qr.txt` | the seal QR and the URL it encodes (decoded from the render and checked) |
+| `make_figures.py`, `make_figures_v8.py` | all figures, from `../research/repro/data/` |
+
+The hash cycle has three steps. First the board is rendered with the seal blank. Then the §1 pointer hashes that board. Then the track is written, and only then is the seal filled. A file cannot contain its own hash, so the seal is the only part of the print outside the hashed bytes.
+
+The §-steps are:
+
+| § | what |
+|---|---|
+| 1 | this board (`3vqnyosg…`) |
+| 2–3 | the Earth Search B08 and B04 COG pointer notes |
+| 4 | the NDVI fact |
+| 5 | the B04 raster |
+| 6 | the cube |
+| 7 | the pre-fix record |
+| 8 | CHANGELOG line 68 |
+| 9 | TESSERA |
+| 10 | Clay |
+| 11 | the derived value |
+| 12–13 | the two elevation records |
+| 14 | temperature |
+| 15 | the absence record |
+| 16 | the bundle of 8 |
+| 17–20 | rows of the emem docs at `213e273` |
+| 21 | the trap value |
+| 22 | our measurements |
+
+The notes are signed by the poster key `njedkglt…`, namespace `/memories/by_attester/njedkglt/`.
+
+- Scripts: `../research/repro/v8/`: `make_track.py`, `publish_note.py`, `trace_fact.py`, `verify_bundle.py`.
+- Publish logs: `../research/repro/v8/pub/*/publish_log.json`.
+
+Two review passes ran before the seal:
+- **Fact check.** Among the fixes, the poster now reports the pre-registered Qwen2.5-3B arm, which went against us. It also labels the rounded-prose p-value as exploratory, and corrects the scale bar, the cell size and the scope of the proof file.
+- **Expert language critique.** It removed slogans and jargon, stated the AWS and Planetary Computer file mismatch, and set type to at least about 14 pt.
+
+Any change to the board text now means: re-render → commit → republish §1 → rebuild and republish the track → re-fill the seal.
+
 ## v7 distribution + reasoning edit — 30 Sep 2026
 
 This pass moves the poster from “protocol internals” to the broader research claim that emem is already a live **distribution layer for citeable physical-world evidence across agent runtimes**.
