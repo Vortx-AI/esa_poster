@@ -1,0 +1,31 @@
+{
+ "sth": {
+  "tree_size": 2566607,
+  "root_b32": "usoa2lret3bejy7xg3rbdr7aiqlii3f6n5vh3gkjcpro7qximyoq",
+  "signed_at": "2026-09-30T13:10:23Z",
+  "sig_verified": true,
+  "ms": 205
+ },
+ "cid": "ubaylj2hnx5ho3gnelzgndncai",
+ "path": "/memories/by_attester/njedkglt/ubaylj2hnx5ho3gnelzgndncai.md",
+ "note_bytes": 1465,
+ "note_blake3": "ubaylj2hnx5ho3gnelzgndncakrjfme6ts3mtnb73zsh2xnrq4lq",
+ "unsigned_mcp": {
+  "http": 200,
+  "ms": 209,
+  "code": "memory_attestation_required",
+  "digest_hex": "6bef864dc02833e49d32914eb4e9cf5d4e6ef91d5e7bdb1d783c90648ac8d3d1"
+ },
+ "unsigned_a2a": {
+  "http": 400,
+  "ms": 220,
+  "code": "memory_attestation_required",
+  "digest_hex": "6bef864dc02833e49d32914eb4e9cf5d4e6ef91d5e7bdb1d783c90648ac8d3d1"
+ },
+ "local_digest_hex": "6bef864dc02833e49d32914eb4e9cf5d4e6ef91d5e7bdb1d783c90648ac8d3d1",
+ "digests_agree": true,
+ "signed_a2a": {
+  "http": 200,
+  "ms": 201
+ }
+}
