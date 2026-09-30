@@ -10,7 +10,7 @@ Written 30 Sep 2026 for the next agent or person who edits this board. Read this
 |---|---|---|
 | text and layout | `poster/src/poster.v11.html` | the only hand-edited board file; `poster/poster.html` is a build product |
 | figure 1 (hero) | `poster/make_hero_v11.py` | writes `fig/v11/hero.svg` in mm at print size; every string is copied from a signed record |
-| R1, R2, R4 figures | `poster/make_figures_v11.py` | matplotlib, IBM Plex from `fonts/ttf`, text as paths; each figure asserts no overlapping or clipped labels before it saves |
+| R1, R2, R4 figures (and the handout-only pixel audit) | `poster/make_figures_v11.py` | matplotlib, IBM Plex from `fonts/ttf`, text as paths; each figure asserts no overlapping or clipped labels before it saves |
 | R1 data | `research/repro/v11/mutation_suite.py` | deterministic; rerun by the build |
 | QR codes | `poster/fig/v11/qr_*.svg` with payload in `qr_*.txt` | regenerate with `qrcode` (snippet in §4) |
 | the build | `poster/build_v11.py` | figures, then SVG inlining, gates, PDF, PNG |
@@ -80,7 +80,7 @@ R1 answers "does the check stop it?" The open question is "does an agent run the
 From `16_…` §4, still open:
 1. Commit the Qwen2.5-3B arm logs (§22) and the derive response (§11), or keep their numbers off the board.
 2. Reseal v11 (the seal QR still opens the v10 track `7n7qogvn…`, which is valid for every § cited).
-3. 118 vs 116 wired measurements (agent card vs /v1/materializers).
+3. 118 vs 116 wired measurements (agent card vs /v1/materializers): no longer printed, still an upstream fix.
 4. Merge this branch into `main` so the R1 QR (`…/tree/main/research/repro/v11`) resolves; then re-scan all three QRs
    on a print proof.
 5. Mint Zenodo v0.2 so the DOI and "whitepaper v3" agree.
@@ -94,4 +94,5 @@ live band; fix the CHANGELOG 2.4.2 counts.
 - Prose: short sentences; no em or en dashes except numeric ranges; no tell words (the gate lists them).
 - emem is AI infrastructure; satellites are the input, not the identity.
 - Every printed number maps to a row in `15_V11_CLAIMS_MAP.md` with its evidence class. No row, no number.
-- Refutations stay: as answered objections and the identity table on the board, and in full in `research/`.
+- Tone: a research poster, not an audit. Limitations go in Discussion and the guarantees table as short scope
+  statements; defect counts, scorecards and withdrawn claims stay in `research/` (see `16_` §3c).

@@ -65,8 +65,8 @@ t(0, 188.5, "a 2.02 GB scene; the square marks the cell", 4.5, 400, INK2)
 t(0, 194.5, "of the NDVI record (drawn 100 m wide)", 4.5, 400, INK2)
 kicker(0, 203.5, "OTHER WRITERS")
 chips = [("Copernicus DEM", 34, 0, 210.5, False), ("Overture Maps", 32, 37, 210.5, False), ("weather", 21, 72, 210.5, False),
-         ("TESSERA (retired)", 44, 96, 210.5, False),
-         ("device gate: ships, no hardware enrolled yet", 92, 0, 219.5, True)]
+         ("Earth embeddings", 44, 96, 210.5, False),
+         ("enrolled devices (next)", 50, 0, 219.5, True)]
 for s_, wbox, x, y, dashed in chips:
     rect(x, y - 4.8, wbox, 7, fill="#FFFFFF", stroke=MUTED if dashed else RULE, sw=0.4, r=1.2, dash="1.2 0.8" if dashed else None)
     t(x + wbox / 2, y, s_, 4.0, 500, MUTED if dashed else INK2, anchor="middle")

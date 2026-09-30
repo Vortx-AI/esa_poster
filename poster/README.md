@@ -8,7 +8,7 @@
 | `poster.html` | build product (SVGs inlined); do not edit |
 | `build_v11.py` | builds figures, inlines SVG, renders PDF and PNG with WeasyPrint, runs the gates |
 | `make_hero_v11.py` | figure 1, the whole protocol around one real observation |
-| `make_figures_v11.py` | R1 (mutation matrix, from `research/repro/v11/out/mutation_matrix.json`), R2 (agreement vs correctness) and R4 (pixel audit) |
+| `make_figures_v11.py` | R1 (mutation matrix, from `research/repro/v11/out/mutation_matrix.json`), R2 (agreement vs correctness), R4 (memory through time, from `research/repro/data/contra_bengaluru.json`); also the pixel-audit grids for handouts |
 | `fig/v11/` | generated figures and the three QR codes (each with its payload in a `.txt`) |
 | `archive/v10/` | the v10 board as it was sealed (`board.jpg` and `board.pdf` here are the v10 sealed files) |
 | `render.mjs` | optional Chromium renderer for `poster.html` (needs `playwright-core`) |
@@ -27,6 +27,15 @@ Every number on the board is mapped to its source in
 [`../research/should_do/15_V11_CLAIMS_MAP.md`](../research/should_do/15_V11_CLAIMS_MAP.md).
 Why the board changed, and what is still open before printing:
 [`../research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md`](../research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md).
+
+## v11.2: a research poster, not an audit (30 Sep 2026)
+
+- **R4 is now memory through time** (Bengaluru elevation across a change of upstream DEM; as-of answers re-hash).
+  The pixel error is one sentence in R1, as the production case of mutation M15.
+- **Discussion** (six design statements) replaces "Objections we expect"; **Conclusion** added.
+- **What a verified token guarantees** replaces the scope table (guaranteed, recomputable, named, tested, out of scope).
+- The six-number strip became one line of scale; the footer points to the claims map instead of listing defects.
+- Reasons: `../research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md` §3c.
 
 ## v11: from audit log to invention (30 Sep 2026)
 

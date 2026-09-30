@@ -15,8 +15,8 @@ The critique is right on the three points that matter most, and v11 now acts on 
 1. **The central experiment should be adversarial mutation, scored by false acceptance.** Built and run
    (R1, below). It is now the first result on the board and the headline of the invention paragraph.
 2. **Integrity, measurement correctness, upstream identity, entity identity and truth must be kept apart.**
-   The Scope box became a seven-row table, "What emem establishes", with yes / checkable / partial / no.
-3. **EMEM should not compete as a guardrail, as provenance or as RAG.** An objection now names GeoGuard
+   The Scope box became a seven-row table, "What emem establishes" (renamed in v11.2 to "What a verified token guarantees": guaranteed, recomputable, named, tested, out of scope).
+3. **EMEM should not compete as a guardrail, as provenance or as RAG.** A Discussion item (an objection before v11.2) names GeoGuard
    (same session), provenance-first composition (Session 2) and STAC, C2PA and PROV, and places emem under them:
    a guardrail can take emem tokens as its evidence.
 

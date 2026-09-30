@@ -207,8 +207,69 @@ def fig_mutation():
     plt.close(fig)
 
 
+def fig_bitemporal():
+    """R4: one Bengaluru key through record time. Data: research/repro/data/contra_bengaluru.json.
+
+    The as-of answers are computed with the protocol's rule (latest signed_at <= t) and must equal the
+    live replay recorded in research/should_do/09_INVENTION_REGISTER.md (verify_bitemporal.py).
+    """
+    import json
+    from datetime import datetime, timezone
+    import matplotlib.dates as mdates
+    d = json.load(open(HERE.parent / "research/repro/data/contra_bengaluru.json"))
+    c = d["contradictions"][0]
+    at = sorted(c["attestations"], key=lambda a: a["signed_at"])
+    prov = [p["fn_key"] for p in c["providers"]]
+    ts = lambda s: datetime.fromisoformat(s.replace("Z", "+00:00"))
+
+    def as_of(t):
+        k = [a for a in at if ts(a["signed_at"]) <= t]
+        return k[-1] if k else None
+
+    queries = [("2026-05-01", None), ("2026-06-15", 918.0), ("2026-08-12", 915.0712280273438),
+               ("2026-09-29", 915.0712280273438)]
+    for q, want in queries:
+        got = as_of(datetime.fromisoformat(q + "T00:00:00+00:00"))
+        assert (got["value"] if got else None) == want, (q, got)
+    fig, ax = plt.subplots(figsize=(9.55, 4.1))
+    import matplotlib.transforms as mtrans
+    t0, t1 = datetime(2026, 4, 24, tzinfo=timezone.utc), datetime(2026, 10, 12, tzinfo=timezone.utc)
+    bt = mtrans.blended_transform_factory(ax.transData, ax.transAxes)
+    # the answer "as of t", a step function of record time
+    xs = [ts(at[0]["signed_at"])] + [ts(a["signed_at"]) for a in at[1:]] + [t1]
+    ys = [a["value"] for a in at] + [at[-1]["value"]]
+    ax.step(xs, ys, where="post", color=BLUE, lw=2.4, zorder=2)
+    for a, pk in zip(at, prov):
+        old = pk.startswith("open_meteo")
+        ax.plot(ts(a["signed_at"]), a["value"], "o", ms=9, color=GREY if old else BLUE, mec="#FFFFFF", mew=1.2, zorder=3)
+    ax.text(ts(at[0]["signed_at"]), 918.0 + 0.32, "918.0 m  Copernicus DEM 90 m, via Open-Meteo", fontsize=TICK - 1,
+            color=INK2, va="bottom")
+    ax.text(datetime(2026, 6, 1, tzinfo=timezone.utc), 915.07 - 0.3, f"915.07 m  Copernicus DEM 30 m COG, signed {len(at) - 1} times",
+            fontsize=TICK - 1, color=BLUE, va="top")
+    for q, want in queries:
+        x = datetime.fromisoformat(q + "T00:00:00+00:00")
+        ax.axvline(x, color=MUTED, lw=1.0, ls=(0, (2, 2)), zorder=1)
+        lab = "nothing yet" if want is None else (f"{want:.1f} m" if want == round(want, 1) else f"{want:.2f} m")
+        ax.text(x, 1.10, f"as of {x:%-d %b}", transform=bt, fontsize=TICK - 2, color=INK, ha="center", va="bottom", fontweight=600)
+        ax.text(x, 1.01, lab, transform=bt, fontsize=TICK - 2, color=MUTED if want is None else BLUE, ha="center", va="bottom")
+    ax.set_xlim(t0, t1)
+    ax.set_ylim(914.2, 919.2)
+    ax.set_yticks([915, 916, 917, 918, 919])
+    ax.spines["left"].set_bounds(915, 919)
+    ax.set_ylabel("elevation, m", fontsize=TICK - 1)
+    ax.xaxis.set_major_locator(mdates.MonthLocator())
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
+    ax.set_xlabel("record time (signed_at), 2026", fontsize=TICK - 1)
+    fig.subplots_adjust(left=0.085, right=0.985, top=0.83, bottom=0.17)
+    bad, out = overlaps(fig)
+    assert not bad and not out, (bad, out)
+    fig.savefig(OUT / "r4_bitemporal.svg", transparent=True)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_agreement()
     fig_pixel_audit()
     fig_mutation()
+    fig_bitemporal()
     print("wrote", sorted(p.name for p in OUT.glob("*.svg")))

@@ -12,17 +12,19 @@ Evidence classes: **code** (read in emem's source), **live** (read from emem.dev
 **measured** (our own run, data in `research/repro/`), **pre-reg** (pre-registered, hash committed),
 **README** (emem's README at `e226f8b`, not re-measured by us).
 
-## Live strip
+## Scale line (v11.2 replaced the six-number live strip)
 
-| printed | value | source | class | note |
-|---|---|---|---|---|
-| MCP tools | 114, core 18 | /v1/agent_card `.tools.count`, `.tools.core`; 114 `ToolDescriptor` entries in `crates/emem-mcp/src/lib.rs` | live + code | the claims audit saw 116 in one listing; agent card and code agree on 114 |
-| published algorithms | 168 | /v1/algorithms `pagination.total` | live | 39 of 168 need retired encoder bands and cannot produce new values |
-| wired measurements | 118 | /v1/agent_card `band_taxonomy.materializer_wired.count` | live | **provisional**: /v1/materializers reports 116; cause not isolated |
-| source schemes | 46 | /v1/manifests `covers.sources` | live | |
-| log entries | 2.57 M | /v1/log/sth tree_size 2,568,372 at 16:53Z | live | hero prints 2,568,005, the size stamped when the track was sealed |
-| REST paths | 177 | /openapi.json paths under /v1 | live | 188 paths in all, 206 operations |
-| client paths, one fact_cid | 10 | `research/repro/data/v8/crossruntime_table.json` (reps = 3) | measured | |
+Printed once, in the sub-heading of "What agents do with it": 2.57 M signed log entries, 168 versioned algorithms,
+46 source schemes (30 Sep 2026).
+
+| printed | value | source | class |
+|---|---|---|---|
+| log entries | 2.57 M | /v1/log/sth tree_size 2,568,372 at 16:53Z | live |
+| published algorithms | 168 | /v1/algorithms `pagination.total` | live; 39 of 168 need retired encoder bands |
+| source schemes | 46 | /v1/manifests `covers.sources` | live |
+
+No longer printed: 114 MCP tools, 177 REST paths (product metrics) and 118 wired measurements (provisional: the agent
+card says 118, /v1/materializers says 116).
 
 ## Hero (figure 1)
 
@@ -67,13 +69,14 @@ common decoder across three vendors (README lines 101 to 103), the geo.qa Doha d
 | R1 | 17 mutations x 9 depths; acted on corrupted evidence: prose 15/15, JSON 15/15, opaque id 13/16, hash 12/16, binding 9/16, signature 3/16, log 2/16, recompute 1/16, re-read 0/16; decision flips in 6 of 16; leave-one-out shows binding, signature, log, recompute and re-read each necessary; genuine never refused | `research/repro/v11/mutation_suite.py`, `research/repro/v11/out/mutation_matrix.json` (inputs: `v8/proof_bundle_ndvi.cbor`, `data/v8/pixel_windows.json`) | measured, deterministic | tests the verifier, not a model; T2 rows use a TEST key the verifier trusts; the source re-read uses the committed 25 Sep window, so a forged scene id (M11) is caught by the signature, not by the re-read; the hash is subsumed by the signature; units, checkpoints, embeddings not covered |
 | R2 | 72/72 and 36/36; 20/72 and 15/36; 0/72 and 3/36; one-sided Fisher p = 0.035; handoff prose 2/20, dense 8/20, BM25 20/20, bundle 20/20 | §17, §18 (emem docs rows); Fisher recomputed 0.0350 by the claims audit | pre-reg | pairs and answers share trials, so read as descriptive; two open models on one host; handoff single-token arm excluded for a window bug; emem-authored benchmark |
 | R3 | token 10/10, prose 10/10, rounded 0/5, forged 5/5 declined | §22; `research/repro/data/v8/results.json` | pre-reg (rounded arm exploratory) | re-hash and receipt were done by the harness, not by model B; the Qwen2.5-3B arm is withheld until its raw logs are committed |
-| R4 | 162/200 (81 %, Wilson 75 to 86 %); after the fix 49/49 read the containing pixel where the rules differ | §7, §8; `research/repro/data/v8/prevalence_summary.json`, `pixel_windows.json` | measured | the neighbour is east, south or south-east (both axes were rounded); the pictured case is south |
+| R4 | 918.0 m signed 2026-05-28 (open_meteo_copdem90m@1); 915.07 m signed 7 times from 2026-08-11 (copernicus_dem_30m_aws_pixel@1); as of 1 May nothing, 15 Jun 918.0, 12 Aug 915.07, 29 Sep 915.07; scope same_attester_provider_substitution | `research/repro/data/contra_bengaluru.json`; live replay table in `09_INVENTION_REGISTER.md` (from `research/repro/verify_bitemporal.py`); the figure recomputes the as-of answers with the protocol rule and asserts they equal that table | measured + live | one key, one attester; the as-of compare is a string compare in code (defect 35), which is exact for these UTC second-precision timestamps |
+| R1 caption, M15 in production | the reader error before 28 Sep; only the re-read catches it | §7, §8; 162/200 (81 %, Wilson 75 to 86 %) and 49/49 after the fix are in `prevalence_summary.json`, `pixel_windows.json` | measured | the numbers are no longer printed on the board; the pixel-audit figure `fig/v11/r2_pixel_audit.svg` is still generated for handouts |
 
 The v10 drift taxonomy (seven real drifts, six located by one field) is no longer on the board; R1 covers the same
 cases as mutations M2, M4, M5, M15 and M17, each marked "seen in production". The taxonomy stays in
 `poster/archive/v10/poster.html`.
 
-## What emem establishes (identity table)
+## What a verified token guarantees (v11.2 wording of the identity table)
 
 | row | value | source |
 |---|---|---|
@@ -101,3 +104,11 @@ cases as mutations M2, M4, M5, M15 and M17, each marked "seen in production". Th
 - "logged as entry 2,568,005" for the seal (no leaf index is recorded)
 
 Each can come back once its run is committed.
+
+## Conclusion (v11.2)
+
+| printed | source |
+|---|---|
+| checks offline in under 2 ms | `research/repro/v11/out/mutation_matrix.json` `meta.full_verification_ms` (1.2 to 1.5 ms across runs, Python, one laptop core) |
+| five of the six checks each stop a corruption the others miss; together all 16 in-scope cases | R1 leave-one-out and level I |
+| records never rewritten; as-of answers across a source change and retired encoders | R4; §23, §24 |

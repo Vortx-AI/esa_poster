@@ -16,8 +16,8 @@
   "genuine_value": 0.4708994708994709,
   "neighbour_pixel_value": 0.3015512674990541,
   "test_signer_pubkey_b32": "dxnr75xx7eqw2ptyrgmhy33o7imqqslw6mg3ckp4xbmyce3itg3a",
-  "suite_seconds": 0.0535,
-  "full_verification_ms": 1.186,
+  "suite_seconds": 0.0536,
+  "full_verification_ms": 1.207,
   "levels": [
    {
     "id": "A",

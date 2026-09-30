@@ -67,6 +67,39 @@ on the board: R1 (`research/repro/v11/`), the leave-one-out line in its caption,
 table. R1 replaced the drift taxonomy, whose real cases are now R1 rows marked "seen in production". Details and
 the points v11 declined: `17_V11_RESPONSE_TO_FIELD_MAP.md`.
 
+## 3c. Second revision: poster conventions and tone (v11.2)
+
+The authors asked whether the board was too hard on emem, whether "the records located emem's own error" belongs on
+it, and whether scientists want refutation sections and bare counts. Our answers, and what changed:
+
+- **What a research poster carries.** Problem, contribution, method, results, discussion with limitations,
+  conclusion, references. Limitations are expected and respected when they are short and stated as scope. A
+  self-audit, a defect count or a debate format ("Objections we expect", tags *agreed / reframe / rebuttal*) is not
+  a poster convention; it reads as defensive and it spends space the invention needs.
+- **The pixel error.** Not wise as one of four headline results: it led with a defect rate (162 of 200) on the
+  first board anyone sees. It is valuable as evidence, so it stays in the smallest honest form: one sentence in the
+  R1 caption. It is the production instance of mutation M15, the one corruption that passes signature, log and
+  recompute, and only the source re-read catches it, which is how it was found. The rate, the before/after grids
+  and the fix stay in the repository (`15_` claims map, `fig/v11/r2_pixel_audit.svg`).
+- **What replaced it.** R4 is now *memory through time*: one Bengaluru elevation key whose upstream DEM changed in
+  August. Nothing was overwritten; "as of 15 Jun" still answers 918.0, today's answer is 915.07, both re-hash, and
+  the contradiction detector names the change. It shows a capability no neighbouring poster has (the two clocks, C2),
+  from committed data.
+- **Objections became Discussion.** Six design statements in a scientific voice, no tags: integrity is not truth
+  (so truth is re-read); emem sits under guardrails; identity first, compression second; encoders change, the memory
+  keeps what they said; retrieval finds text, a reference names bytes; independent operation is next.
+- **Scope became guarantees.** "What emem establishes" with red *no* became "What a verified token guarantees":
+  guaranteed, recomputable, named, tested, out of scope (grey, by design).
+- **Counts.** The six-number strip (tools, REST paths, measurements) was product metrics. It is now one line of scale
+  with meaning (signed log entries, versioned algorithms, source schemes). The footer no longer lists defects and
+  withdrawn claims; it points to the claims map and the audit trail.
+- **Conclusion added.** Three statements, each backed by a result.
+- **Hero.** The dashed "device gate: ships, no hardware enrolled yet" chip became "enrolled devices (next)"; the
+  "TESSERA (retired)" chip became "Earth embeddings". The Discussion states the retirement and what still verifies.
+
+Nothing true was removed from the record: every number that left the board is in `15_V11_CLAIMS_MAP.md` with its
+source, and the full audit (`research/do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md`, `research/audit_v11/`) is unchanged.
+
 ## 4. Open before printing (owner: authors)
 
 1. **Commit the missing runs** or keep them off the board: the Qwen2.5-3B arm of §22, the derive response behind
@@ -77,7 +110,7 @@ the points v11 declined: `17_V11_RESPONSE_TO_FIELD_MAP.md`.
    seal box as is, publish a board pointer note at the v11 commit (as in `research/repro/v8/pub/b_v10/note.md`),
    append it as step 29 of a new track, re-check it in ememdemo, and regenerate `fig/v11/qr_seal.svg` from the
    new track URL. The build checks every QR file exists; re-scan all three QRs on the print proof.
-3. **118 vs 116 wired measurements.** The agent card and /v1/materializers disagree. Either fix upstream or print 116.
+3. **118 vs 116 wired measurements.** No longer printed (v11.2). Still worth fixing upstream: the agent card and /v1/materializers disagree.
 4. **Upstream doc defects found by the inventory:** the agent card still lists geotessera as a live embedding band;
    the CHANGELOG 2.4.2 entry says 113 tools and 171 paths. Listed in `research/audit_v11/emem_capability_index.md`.
 5. **Print proof.** WeasyPrint builds the board (`python poster/build_v11.py`). Before sending to print, open the PDF at
