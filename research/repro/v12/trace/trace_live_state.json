@@ -1,0 +1,1093 @@
+{
+ "schema": "vortx.poster.trace_live_state.v1",
+ "responder": "https://emem.dev",
+ "queried_by": "trace audit for ESA poster, emem code at 04b40c5",
+ "request_log_utc": {
+  "/v1/devices": {
+   "requested_at_utc": "2026-09-30T19:03:50Z",
+   "http_status": 200
+  },
+  "/v1/device_platforms": {
+   "requested_at_utc": "2026-09-30T19:03:51Z",
+   "http_status": 200
+  },
+  "/v1/trace_encodings": {
+   "requested_at_utc": "2026-09-30T19:03:53Z",
+   "http_status": 200
+  },
+  "/v1/substrates": {
+   "requested_at_utc": "2026-09-30T19:03:54Z",
+   "http_status": 200
+  },
+  "trace_resolve": {
+   "path": "/v1/trace_resolve",
+   "requested_at_utc": "2026-09-30T19:04:20Z",
+   "http_status": 200
+  },
+  "trace_verify_original": {
+   "path": "/v1/trace_verify",
+   "requested_at_utc": "2026-09-30T19:04:34Z",
+   "http_status": 200
+  },
+  "trace_verify_tamper_event_count": {
+   "path": "/v1/trace_verify",
+   "requested_at_utc": "2026-09-30T19:04:35Z",
+   "http_status": 200
+  },
+  "trace_verify_tamper_window_end": {
+   "path": "/v1/trace_verify",
+   "requested_at_utc": "2026-09-30T19:04:37Z",
+   "http_status": 200
+  },
+  "trace_verify_as_orbital_satellite": {
+   "path": "/v1/trace_verify",
+   "requested_at_utc": "2026-09-30T19:04:38Z",
+   "http_status": 200
+  },
+  "trace_verify_claimed_unbound": {
+   "path": "/v1/trace_verify",
+   "requested_at_utc": "2026-09-30T19:04:40Z",
+   "http_status": 200
+  },
+  "/v1/bands": {
+   "requested_at_utc": "2026-09-30T19:04:51Z",
+   "http_status": 200
+  },
+  "recall_nile_attested_execution": {
+   "path": "/v1/recall",
+   "requested_at_utc": "2026-09-30T19:05:03Z",
+   "http_status": 400
+  },
+  "recall_nile_ndvi_any": {
+   "path": "/v1/recall",
+   "requested_at_utc": "2026-09-30T19:05:05Z",
+   "http_status": 200
+  },
+  "recall_nile_attested_execution_allbands": {
+   "path": "/v1/recall",
+   "requested_at_utc": "2026-09-30T19:05:21Z",
+   "http_status": 200
+  }
+ },
+ "devices": {
+  "count": 1,
+  "devices": [
+   {
+    "assurance": "operator_endorsed",
+    "device_key": "r6c3xpbetvl7soyf3eani7knij74gth6bjizqjkrdfyl2ycqcdna",
+    "endorsed_by": "operator.vortx.v1",
+    "last_seen": 1588532343295000,
+    "platform_id": "generic.linux-host",
+    "profile_id": "host.counters.v1",
+    "traces": 1
+   }
+  ],
+  "listing_is_opt_in": true
+ },
+ "device_platforms": {
+  "manifest_cid": "gi6lw3ekbpd7soeperslxjgeljl6c3h7q6ngdcykfp2yucpcbsya",
+  "n_platforms": 17,
+  "platforms": [
+   {
+    "id": "nvidia.jetson-orin",
+    "family": "edge_ai",
+    "status": "candidate",
+    "root_of_trust": "tcg_dice_x509",
+    "contributor_classes": [
+     "robot",
+     "drone",
+     "industrial_machine",
+     "mobile"
+    ],
+    "recognized_encodings": [
+     "linux.ftrace.v1",
+     "linux.ebpf.raw",
+     "nvidia.nsys.v1",
+     "ros2.bag.v2"
+    ],
+    "trust_anchors": [
+     {
+      "id": "nvidia.jetson.attestation-ca.v0",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "nvidia.jetson-thor",
+    "family": "edge_ai",
+    "status": "candidate",
+    "root_of_trust": "tcg_dice_x509",
+    "contributor_classes": [
+     "robot",
+     "drone"
+    ],
+    "recognized_encodings": [
+     "linux.ftrace.v1",
+     "linux.ebpf.raw",
+     "nvidia.nsys.v1",
+     "ros2.bag.v2"
+    ],
+    "trust_anchors": [
+     {
+      "id": "nvidia.jetson.attestation-ca.v0",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "qualcomm.rb5",
+    "family": "edge_ai",
+    "status": "candidate",
+    "root_of_trust": "x509_devid",
+    "contributor_classes": [
+     "robot",
+     "drone",
+     "mobile"
+    ],
+    "recognized_encodings": [
+     "linux.ftrace.v1",
+     "ros2.bag.v2"
+    ],
+    "trust_anchors": [
+     {
+      "id": "qualcomm.attestation-root.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "rockchip.rk3588",
+    "family": "edge_ai",
+    "status": "candidate",
+    "root_of_trust": "arm_psa",
+    "contributor_classes": [
+     "robot",
+     "cctv",
+     "industrial_machine"
+    ],
+    "recognized_encodings": [
+     "linux.ftrace.v1",
+     "linux.ebpf.raw"
+    ],
+    "trust_anchors": [
+     {
+      "id": "rockchip.op-tee.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "tpm2.host",
+    "family": "trusted_host",
+    "status": "candidate",
+    "root_of_trust": "tpm2_quote",
+    "contributor_classes": [
+     "satellite",
+     "industrial_machine",
+     "fixed_sensor",
+     "cctv"
+    ],
+    "recognized_encodings": [
+     "linux.ftrace.v1",
+     "linux.ebpf.raw"
+    ],
+    "trust_anchors": [
+     {
+      "id": "tpm2.ek-ca.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "intel.tdx",
+    "family": "trusted_host",
+    "status": "candidate",
+    "root_of_trust": "intel_tdx",
+    "contributor_classes": [
+     "satellite",
+     "industrial_machine"
+    ],
+    "recognized_encodings": [
+     "linux.ebpf.raw",
+     "linux.ftrace.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "intel.dcap.pck-ca.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "amd.sev-snp",
+    "family": "trusted_host",
+    "status": "candidate",
+    "root_of_trust": "amd_sev_snp",
+    "contributor_classes": [
+     "satellite",
+     "industrial_machine"
+    ],
+    "recognized_encodings": [
+     "linux.ebpf.raw",
+     "linux.ftrace.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "amd.ark-ask.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "arm.psa-l2",
+    "family": "secure_mcu",
+    "status": "candidate",
+    "root_of_trust": "arm_psa",
+    "contributor_classes": [
+     "satellite",
+     "telescope",
+     "fixed_sensor",
+     "industrial_machine"
+    ],
+    "recognized_encodings": [
+     "zephyr.ctf.v1",
+     "linux.ftrace.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "arm.psa.trusted-firmware.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "arm.psa-l3",
+    "family": "secure_mcu",
+    "status": "candidate",
+    "root_of_trust": "arm_psa",
+    "contributor_classes": [
+     "satellite",
+     "fixed_sensor",
+     "industrial_machine"
+    ],
+    "recognized_encodings": [
+     "zephyr.ctf.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "arm.psa.l3.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "riscv.keystone",
+    "family": "secure_mcu",
+    "status": "candidate",
+    "root_of_trust": "tcg_dice_cbor",
+    "contributor_classes": [
+     "telescope",
+     "fixed_sensor",
+     "industrial_machine"
+    ],
+    "recognized_encodings": [
+     "zephyr.ctf.v1",
+     "linux.ftrace.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "riscv.keystone.sm.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "caliptra.rot",
+    "family": "silicon_rot",
+    "status": "candidate",
+    "root_of_trust": "caliptra",
+    "contributor_classes": [
+     "industrial_machine",
+     "satellite"
+    ],
+    "recognized_encodings": [
+     "linux.ebpf.raw",
+     "linux.ftrace.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "caliptra.vendor-anchor.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "google.opentitan",
+    "family": "silicon_rot",
+    "status": "candidate",
+    "root_of_trust": "tcg_dice_cbor",
+    "contributor_classes": [
+     "industrial_machine",
+     "fixed_sensor"
+    ],
+    "recognized_encodings": [
+     "zephyr.ctf.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "opentitan.provisioning.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "nvidia.drive-orin",
+    "family": "automotive",
+    "status": "candidate",
+    "root_of_trust": "tcg_dice_x509",
+    "contributor_classes": [
+     "robot",
+     "mobile"
+    ],
+    "recognized_encodings": [
+     "ros2.bag.v2",
+     "linux.ftrace.v1",
+     "nvidia.nsys.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "nvidia.drive.attestation-ca.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "qualcomm.snapdragon-ride",
+    "family": "automotive",
+    "status": "candidate",
+    "root_of_trust": "x509_devid",
+    "contributor_classes": [
+     "robot",
+     "mobile"
+    ],
+    "recognized_encodings": [
+     "ros2.bag.v2",
+     "linux.ftrace.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "qualcomm.ride.attestation-root.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "apple.secure-enclave",
+    "family": "mobile_se",
+    "status": "candidate",
+    "root_of_trust": "apple_secure_enclave",
+    "contributor_classes": [
+     "mobile"
+    ],
+    "recognized_encodings": [
+     "apple.os_signpost.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "apple.attestation-ca.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "android.strongbox",
+    "family": "mobile_se",
+    "status": "candidate",
+    "root_of_trust": "android_keystore",
+    "contributor_classes": [
+     "mobile"
+    ],
+    "recognized_encodings": [
+     "android.perfetto.v1",
+     "linux.ftrace.v1"
+    ],
+    "trust_anchors": [
+     {
+      "id": "google.hardware-attestation-root.provisional",
+      "provisional": true,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   },
+   {
+    "id": "generic.linux-host",
+    "family": "operator_vouched",
+    "status": "candidate",
+    "root_of_trust": "software_only",
+    "contributor_classes": [
+     "execution",
+     "database",
+     "codebase",
+     "model"
+    ],
+    "recognized_encodings": [
+     "linux.ftrace.v1",
+     "linux.hwmon.v1",
+     "linux.ebpf.raw"
+    ],
+    "trust_anchors": [
+     {
+      "id": "operator.vortx.v1",
+      "provisional": false,
+      "kind": "ed25519_pk_blake3"
+     }
+    ]
+   }
+  ]
+ },
+ "trace_encodings": {
+  "manifest_cid": "fmyxah55fjr2vfzmktjdghutg37g2qdt2zmu7ub2dtgtpn64otga",
+  "encodings": [
+   {
+    "id": "linux.ftrace.v1",
+    "layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "storage",
+     "network"
+    ],
+    "integrity": "in_kernel"
+   },
+   {
+    "id": "linux.ebpf.raw",
+    "layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "network",
+     "storage",
+     "inference"
+    ],
+    "integrity": "in_kernel"
+   },
+   {
+    "id": "linux.hwmon.v1",
+    "layers": [
+     "energy",
+     "thermal"
+    ],
+    "integrity": "in_kernel"
+   },
+   {
+    "id": "zephyr.ctf.v1",
+    "layers": [
+     "syscall",
+     "scheduler",
+     "memory"
+    ],
+    "integrity": "in_kernel"
+   },
+   {
+    "id": "ros2.bag.v2",
+    "layers": [
+     "sensor_bus",
+     "signal"
+    ],
+    "integrity": "open_source_userspace"
+   },
+   {
+    "id": "android.perfetto.v1",
+    "layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "storage"
+    ],
+    "integrity": "open_source_userspace"
+   },
+   {
+    "id": "nvidia.nsys.v1",
+    "layers": [
+     "inference",
+     "memory",
+     "scheduler"
+    ],
+    "integrity": "vendor_runtime"
+   },
+   {
+    "id": "apple.os_signpost.v1",
+    "layers": [
+     "syscall",
+     "scheduler"
+    ],
+    "integrity": "vendor_runtime"
+   }
+  ]
+ },
+ "substrates": {
+  "manifest_cid": "oqaxnlorhlsy72pm4wnkjupr2ul252bz3snjjzmgdof6jmse2dqa",
+  "profiles": [
+   {
+    "id": "earth.satellite.v0",
+    "status": "active",
+    "admission": "archive_recomputable",
+    "provenance_class": "direct_sensor",
+    "contributor_class": "satellite",
+    "required_trace_layers": []
+   },
+   {
+    "id": "orbital.satellite.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "satellite",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "signal",
+     "energy",
+     "thermal",
+     "storage"
+    ]
+   },
+   {
+    "id": "orbital.counters.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "direct_sensor",
+    "contributor_class": "satellite",
+    "required_trace_layers": [
+     "scheduler",
+     "memory",
+     "storage",
+     "network"
+    ]
+   },
+   {
+    "id": "observatory.telescope.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "telescope",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "signal",
+     "storage"
+    ]
+   },
+   {
+    "id": "lab.microscope.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "microscope",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "storage"
+    ]
+   },
+   {
+    "id": "urban.cctv.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "cctv",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "network"
+    ]
+   },
+   {
+    "id": "feed.retained.v1",
+    "status": "candidate",
+    "admission": "custodial_retention",
+    "provenance_class": "deterministic_index",
+    "contributor_class": "cctv",
+    "required_trace_layers": []
+   },
+   {
+    "id": "mobile.handheld.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "mobile",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "network",
+     "inference"
+    ]
+   },
+   {
+    "id": "aerial.drone.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "drone",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "energy",
+     "inference"
+    ]
+   },
+   {
+    "id": "robot.fleet.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "robot",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "energy",
+     "thermal",
+     "inference"
+    ]
+   },
+   {
+    "id": "industrial.machine.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "industrial_machine",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory",
+     "sensor_bus",
+     "energy",
+     "thermal"
+    ]
+   },
+   {
+    "id": "fixed.sensor.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "attested_execution",
+    "contributor_class": "fixed_sensor",
+    "required_trace_layers": [
+     "syscall",
+     "sensor_bus"
+    ]
+   },
+   {
+    "id": "space.deep.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "direct_sensor",
+    "contributor_class": "observatory",
+    "required_trace_layers": [
+     "signal",
+     "sensor_bus",
+     "storage"
+    ]
+   },
+   {
+    "id": "code.repository.v1",
+    "status": "candidate",
+    "admission": "archive_recomputable",
+    "provenance_class": "deterministic_index",
+    "contributor_class": "codebase",
+    "required_trace_layers": []
+   },
+   {
+    "id": "data.table.v1",
+    "status": "candidate",
+    "admission": "archive_recomputable",
+    "provenance_class": "deterministic_index",
+    "contributor_class": "database",
+    "required_trace_layers": []
+   },
+   {
+    "id": "model.checkpoint.v1",
+    "status": "candidate",
+    "admission": "archive_recomputable",
+    "provenance_class": "model_output",
+    "contributor_class": "model",
+    "required_trace_layers": []
+   },
+   {
+    "id": "exec.trace.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "direct_sensor",
+    "contributor_class": "execution",
+    "required_trace_layers": [
+     "syscall",
+     "scheduler",
+     "memory"
+    ]
+   },
+   {
+    "id": "host.counters.v1",
+    "status": "candidate",
+    "admission": "os_trace_required",
+    "provenance_class": "direct_sensor",
+    "contributor_class": "execution",
+    "required_trace_layers": [
+     "scheduler",
+     "memory",
+     "storage",
+     "network"
+    ]
+   }
+  ]
+ },
+ "bands": {
+  "bands_cid": "mesoyti3qcs22pftcq27ljwcf3ifktnkqid4euqxyskhea5rpgra",
+  "n_bands": 43,
+  "total_dims": 1792,
+  "provenance_class_counts": {
+   "model_output": 23,
+   "human_curated": 5,
+   "unclassified": 2,
+   "direct_sensor": 6,
+   "deterministic_index": 7
+  },
+  "bands_with_attested_execution": []
+ },
+ "recall_probes": {
+  "nile_delta_ndvi_provenance_attested_execution": {
+   "http_status": 400,
+   "code": "invalid_argument",
+   "message": "provenance filter [attested_execution] excludes every requested band: indices.ndvi (deterministic_index). Call /v1/bands (or emem_bands) for each band's provenance_class."
+  },
+  "nile_delta_any_band_provenance_attested_execution": {
+   "http_status": 200,
+   "n_facts": 0,
+   "provenance_filter": [
+    "attested_execution"
+   ]
+  }
+ },
+ "public_trace": {
+  "token": "emem:trace:mxyer5c2oxn4ud3xqbtnaxcxhdv4kkxiu67q32inbwxgpa7r3s6a",
+  "resolved": true,
+  "trace_cid": "mxyer5c2oxn4ud3xqbtnaxcxhdv4kkxiu67q32inbwxgpa7r3s6a",
+  "prev_trace_cid": null,
+  "profile": "host.counters.v1",
+  "platform": "generic.linux-host",
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.17.0-1017-aws",
+  "window_ns": [
+   1588530160250000,
+   1588532343295000
+  ],
+  "n_outputs": 0,
+  "segments": [
+   {
+    "seq": 0,
+    "layer": "scheduler",
+    "encoding": "linux.ftrace.v1",
+    "event_count": 4744
+   },
+   {
+    "seq": 1,
+    "layer": "memory",
+    "encoding": "linux.ftrace.v1",
+    "event_count": 8382
+   },
+   {
+    "seq": 2,
+    "layer": "storage",
+    "encoding": "linux.ftrace.v1",
+    "event_count": 77
+   },
+   {
+    "seq": 3,
+    "layer": "network",
+    "encoding": "linux.ftrace.v1",
+    "event_count": 667
+   }
+  ],
+  "record": {
+   "device": {
+    "boot_id": "9894a8d9-60c0-4041-8464-82f66602286c",
+    "device_key": [
+     143,
+     133,
+     187,
+     188,
+     36,
+     157,
+     87,
+     249,
+     59,
+     5,
+     217,
+     0,
+     212,
+     125,
+     77,
+     66,
+     127,
+     195,
+     76,
+     254,
+     10,
+     81,
+     152,
+     37,
+     81,
+     25,
+     112,
+     189,
+     96,
+     80,
+     16,
+     218
+    ],
+    "kernel": "6.17.0-1017-aws",
+    "key_epoch": 0,
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "platform": "generic.linux-host",
+    "substrate_profile": "host.counters.v1"
+   },
+   "outputs": [],
+   "schema": "emem.os_trace.v1",
+   "segments": [
+    {
+     "clock_end_ns": 1588532343295000,
+     "clock_start_ns": 1588530160250000,
+     "encoding": "linux.ftrace.v1",
+     "event_count": 4744,
+     "layer": "scheduler",
+     "log_digest": "im3jfxxp6rjrnm257rjx272z4kqpubm5oyzgu43uml3mw2ellkmq",
+     "seq": 0
+    },
+    {
+     "clock_end_ns": 1588532343225000,
+     "clock_start_ns": 1588530189117000,
+     "encoding": "linux.ftrace.v1",
+     "event_count": 8382,
+     "layer": "memory",
+     "log_digest": "pu5a6l7jppdthma2nknl3wanratwogqmu53i6pufchjtoainztuq",
+     "prev_digest": "fq7a6tbjweit5i2dhdbt5qcbmlbdqmu5l4l7mqyl4gshmpqwj4tq",
+     "seq": 1
+    },
+    {
+     "clock_end_ns": 1588531287334000,
+     "clock_start_ns": 1588530289905000,
+     "encoding": "linux.ftrace.v1",
+     "event_count": 77,
+     "layer": "storage",
+     "log_digest": "bpjwvsqo3ky6taer7ivbfyy5fgqou47l43cgyp2qcmpz3u2xc7xa",
+     "prev_digest": "qspwzhx6lnmr5g5ckgdb5pgd42vbo3wb5s3rf7c4xo36pcz73svq",
+     "seq": 2
+    },
+    {
+     "clock_end_ns": 1588532332111000,
+     "clock_start_ns": 1588530284182000,
+     "encoding": "linux.ftrace.v1",
+     "event_count": 667,
+     "layer": "network",
+     "log_digest": "vp5ks7htszc2a2q3piofw7tccx7btfmguxff4jstsocvwwdyqkla",
+     "prev_digest": "syd3hrjyxo6mypdbciadwqtea2zaexhwlot2wspgcak7zv4kwuuq",
+     "seq": 3
+    }
+   ],
+   "signature": [
+    140,
+    249,
+    110,
+    36,
+    98,
+    86,
+    219,
+    137,
+    206,
+    16,
+    22,
+    7,
+    65,
+    22,
+    104,
+    140,
+    224,
+    157,
+    15,
+    71,
+    57,
+    195,
+    25,
+    15,
+    233,
+    55,
+    228,
+    179,
+    169,
+    4,
+    255,
+    255,
+    214,
+    238,
+    118,
+    236,
+    13,
+    1,
+    193,
+    100,
+    164,
+    57,
+    60,
+    158,
+    249,
+    143,
+    119,
+    158,
+    168,
+    96,
+    254,
+    151,
+    208,
+    7,
+    33,
+    84,
+    128,
+    121,
+    168,
+    164,
+    141,
+    36,
+    167,
+    2
+   ],
+   "trace_root": "oe2qgxk6lxtgeurhrfpffql3bg2kjceas56sjewkda3iety5qzsa",
+   "window_end_ns": 1588532343295000,
+   "window_start_ns": 1588530160250000
+  }
+ },
+ "trace_verify": {
+  "original": {
+   "verdict": "admit",
+   "reasons": [],
+   "missing": [],
+   "trace_cid": "mxyer5c2oxn4ud3xqbtnaxcxhdv4kkxiu67q32inbwxgpa7r3s6a",
+   "error": null
+  },
+  "tamper_segment1_event_count_plus_1": {
+   "verdict": "reject",
+   "reasons": [
+    {
+     "code": "chain_broken",
+     "seq": 2
+    }
+   ],
+   "missing": [],
+   "trace_cid": "3a754u2u2emc3bftamlgiyin2avxgriqj5wqqouaxxatqe3c3wqa",
+   "error": null
+  },
+  "tamper_window_end_ns_plus_1": {
+   "verdict": "reject",
+   "reasons": [
+    {
+     "code": "signature_invalid"
+    }
+   ],
+   "missing": [],
+   "trace_cid": "hnacz2zkx2n7etb4dlgl7ovfyzvght7reqmkbr2j5kcqfc4ioo7a",
+   "error": null
+  },
+  "same_trace_against_orbital.satellite.v1": {
+   "verdict": "reject",
+   "reasons": [
+    {
+     "claimed": "host.counters.v1",
+     "code": "profile_mismatch",
+     "expected": "orbital.satellite.v1"
+    },
+    {
+     "code": "missing_layer",
+     "layer": "syscall"
+    },
+    {
+     "code": "missing_layer",
+     "layer": "sensor_bus"
+    },
+    {
+     "code": "missing_layer",
+     "layer": "signal"
+    },
+    {
+     "code": "missing_layer",
+     "layer": "energy"
+    },
+    {
+     "code": "missing_layer",
+     "layer": "thermal"
+    }
+   ],
+   "missing": [
+    "syscall",
+    "sensor_bus",
+    "signal",
+    "energy",
+    "thermal"
+   ],
+   "trace_cid": "mxyer5c2oxn4ud3xqbtnaxcxhdv4kkxiu67q32inbwxgpa7r3s6a",
+   "error": null
+  },
+  "claimed_payload_digest_not_in_outputs": {
+   "verdict": "reject",
+   "reasons": [
+    {
+     "code": "output_unbound",
+     "payload_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+   ],
+   "missing": [],
+   "trace_cid": "mxyer5c2oxn4ud3xqbtnaxcxhdv4kkxiu67q32inbwxgpa7r3s6a",
+   "error": null
+  }
+ },
+ "derived_checks": {
+  "satellite_serving_platforms": [
+   "tpm2.host",
+   "intel.tdx",
+   "amd.sev-snp",
+   "arm.psa-l2",
+   "arm.psa-l3",
+   "caliptra.rot"
+  ],
+  "satellite_platforms_with_non_provisional_anchor": [],
+  "encodings_that_capture_sensor_bus_or_signal": [
+   "ros2.bag.v2"
+  ],
+  "satellite_platforms_recognizing_those_encodings": [],
+  "enrolled_devices_under_orbital_profiles": []
+ }
+}

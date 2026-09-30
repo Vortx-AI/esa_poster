@@ -1,0 +1,17 @@
+{
+ "5": {
+  "title": "P0: Rebuild poster around adversarial evidence handoff, not protocol internals",
+  "body": "## Why\nThe current poster is technically rigorous but visually dominated by CBOR/Merkle/trace implementation detail. The Berlin room already contains work on EO agents, provenance, validation and guardrails.\n\n## Required change\nMake the central scientific story:\n\n**Agents should hand over evidence references, not paraphrases of evidence.**\n\nLead with:\n1. a concrete agent failure;\n2. the controlled intervention;\n3. measured false-acceptance / false-rejection results;\n4. the minimal cryptographic mechanism explaining the result.\n\n## Must remain explicit\n- cryptographic integrity is not scientific truth;\n- upstream correctness is not automatically guaranteed;\n- entity identity is not fully solved;\n- EMEM is complementary to guardrails, RAG and EO agents.\n\n## Poster edits\n- Reduce implementation detail by ~40%.\n- Keep one invariant: bytes -> BLAKE3 -> CID.\n- Keep one verification path: resolve -> re-hash -> compare.\n- Make the mutation table the visual focal point.\n- Put detailed 15-link traces behind the QR.\n\nReference: research/should_do/10_EVENT_FIELD_MAP_AND_CRITIQUE.md",
+  "comments": []
+ },
+ "6": {
+  "title": "P1: Build adversarial evidence-handoff benchmark for EMEM",
+  "body": "## Goal\nMeasure whether EMEM actually prevents agent evidence errors rather than only proving its cryptographic invariants.\n\n## Experimental conditions\nA. prose\nB. structured raw value\nC. ordinary retrieval/RAG\nD. EMEM token\n\n## Mutations\n- value \u00b11 ULP\n- rounding\n- wrong cell / adjacent cell\n- wrong date / stale value\n- swapped band\n- changed unit\n- changed source\n- changed derivation parameter\n- changed model checkpoint / embedding\n- same value, different entity\n- altered token payload\n- valid old token presented as current\n\n## Models / runtimes\nUse 4\u20136 materially different models and at least MCP plus one non-MCP/direct tool path where practical.\n\n## Metrics\n- false acceptance rate\n- false rejection rate\n- mutation detection rate\n- verification completion\n- decision accuracy\n- latency\n- LLM-token overhead\n\nReport n and confidence intervals for every headline result.\n\nThe key result should be a controlled comparison of whether an agent accepts invalid evidence.\n\nReference: research/should_do/10_EVENT_FIELD_MAP_AND_CRITIQUE.md",
+  "comments": []
+ },
+ "7": {
+  "title": "P1: Bind upstream artifact identity and provenance confidence into derived facts",
+  "body": "## Problem\nA content-addressed fact can be perfectly reproducible and still be scientifically wrong if the extraction/derivation was wrong. The current Keylong audit demonstrates this concretely: 162/200 sampled pre-fix records selected the neighbouring pixel.\n\n## Upgrade\nFor derived physical-world claims, bind as available:\n- upstream artifact hash / immutable identifier;\n- exact byte range or pixel/window;\n- coordinate transform;\n- derivation code/version;\n- parameters;\n- model/version;\n- output;\n- uncertainty;\n- attester.\n\nWhere an upstream source lacks cryptographic identity, explicitly mark the provenance edge as location-only / upstream identity unverified.\n\n## Research distinction\nSeparate:\n1. source integrity;\n2. derivation integrity;\n3. observation identity;\n4. entity identity;\n5. semantic correctness.\n\nDo not imply that signing makes a measurement true.\n\nReference: research/should_do/10_EVENT_FIELD_MAP_AND_CRITIQUE.md",
+  "comments": []
+ }
+}

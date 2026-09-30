@@ -1,0 +1,102 @@
+# emem test runs for the trace protocol, emem commit 04b40c56c97d1c2809ca05003dc2b7d6de450758
+# toolchain: rustc 1.98.1 (48a229cea 2026-09-01); aarch64-apple-darwin; CARGO_BUILD_JOBS=4; dev profile, debuginfo off
+#
+# 1) cargo test -p emem-trace --locked   (2026-09-30T19:02:08Z to 2026-09-30T19:02:42Z UTC)
+#    summary: unit 13 passed; tests/trace_round_trip.rs 8 passed, 1 ignored (timing test, release only);
+#             tests/vectors.rs 1 passed (replays spec/test_vectors/os_trace/*.json); doc-tests 0.
+#             total 22 passed, 0 failed, 1 ignored.
+# ---------------- raw output (compile lines elided) ----------------
+    Finished `test` profile [unoptimized] target(s) in 32.05s
+     Running unittests src/lib.rs (../target/debug/deps/emem_trace-2d712e23bcb01a33)
+
+running 13 tests
+test drift::tests::missing_sigma_is_strict ... ok
+test drift::tests::pinned_points ... ok
+test drift::tests::verdict_thresholds ... ok
+test schema::tests::digest_render_round_trips ... ok
+test token::tests::attestation_round_trip ... ok
+test token::tests::rejects_malformed ... ok
+test token::tests::round_trip ... ok
+test enroll::tests::a_whitelisted_endorser_admits_the_bound_key ... ok
+test enroll::tests::a_non_whitelisted_endorser_is_rejected ... ok
+test enroll::tests::evidence_for_a_different_key_is_rejected ... ok
+test enroll::tests::a_tampered_signature_is_rejected ... ok
+test enroll::tests::platform_mismatch_is_named ... ok
+test enroll::tests::shipped_platforms_admit_nothing_because_anchors_are_provisional ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/trace_round_trip.rs (../target/debug/deps/trace_round_trip-4066b1e9899c6132)
+
+running 9 tests
+test verification_cost_is_linear_in_segment_count ... ignored, timing measurement; run deliberately in release
+test unbound_payload_is_rejected_even_with_a_sound_trace ... ok
+test dropped_layer_is_missing_coverage ... ok
+test rewritten_segment_is_caught_at_every_escalation ... ok
+test sound_trace_admits_and_cid_is_stable ... ok
+test archive_substrate_never_admits_device_output ... ok
+test every_field_of_an_emitted_output_is_signed ... ok
+test wrong_key_cannot_speak_for_the_device ... ok
+test every_candidate_profile_in_the_registry_is_verifiable ... ok
+
+test result: ok. 8 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/vectors.rs (../target/debug/deps/vectors-ed762b0af8e9977e)
+
+running 1 test
+test committed_vectors_replay ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+   Doc-tests emem_trace
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+real	0m34.232s
+user	0m26.465s
+sys	0m9.459s
+# ---------------- end ----------------
+
+# 2) cargo test -p emem-storage --lib --locked -- trace_gate enroll enrolled device_trace unenrolled attested_enrollment
+#    (2026-09-30T19:15:42Z to 2026-09-30T19:17:15Z UTC). Filtered to the trace-gate, enrolment and
+#    fact-plane tests; 38 other emem-storage lib tests were filtered out (not run).
+#    summary: 23 passed, 0 failed, 0 ignored.
+# ---------------- raw output (compile lines elided) ----------------
+    Finished `test` profile [unoptimized] target(s) in 1m 30s
+     Running unittests src/lib.rs (../target/debug/deps/emem_storage-d30571142382231d)
+
+running 23 tests
+test trace_gate::enrollment_record_tests::a_legacy_enrolment_defaults_to_private ... ok
+test trace_gate::enrollment_record_tests::an_operator_vouched_platform_does_not_claim_hardware_attested_it ... ok
+test trace_gate::enrollment_record_tests::consent_for_an_unknown_device_is_refused ... ok
+test trace_gate::enrollment_record_tests::an_older_decision_cannot_overturn_a_newer_one ... ok
+test trace_gate::enrollment_record_tests::new_cbor_enrollment_round_trips_and_is_operator_asserted ... ok
+test trace_gate::enrollment_record_tests::enrolling_does_not_put_a_device_on_the_roster ... ok
+test trace_gate::enrollment_record_tests::revoke_clears_the_enrollment ... ok
+test trace_gate::enrollment_record_tests::legacy_bare_profile_id_enrollment_still_resolves ... ok
+test trace_gate::enrollment_record_tests::consent_alone_does_not_list_a_device_that_has_proved_nothing ... ok
+test trace_gate_tests::attested_enrollment_refuses_a_platform_that_does_not_serve_the_class ... ok
+test trace_gate_tests::derivative_facts_are_not_a_side_door ... ok
+test trace_gate_tests::attested_enrollment_is_refused_while_anchors_are_provisional ... ok
+test trace_gate_tests::the_plane_is_closed_by_default_and_says_so ... ok
+test trace_gate_tests::a_new_proof_lives_in_redb_and_is_found_there ... ok
+test trace_gate_tests::an_operator_listed_key_is_admitted_and_no_other ... ok
+test trace_gate_tests::a_signed_fact_can_be_keyed_to_an_object_rather_than_a_place ... ok
+test trace_gate_tests::enrolled_device_needs_a_binding_trace ... ok
+test trace_gate_tests::device_trace_stream_must_chain ... ok
+test trace_gate_tests::enrollment_refuses_the_archive_profile ... ok
+test trace_gate_tests::operator_asserted_enrollment_is_labeled_as_such ... ok
+test trace_gate_tests::unenrolled_writers_may_not_occupy_an_address ... ok
+test trace_gate_tests::trace_naming_an_unregistered_encoding_is_refused ... ok
+test trace_gate_tests::the_responder_key_is_admitted ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 38 filtered out; finished in 1.36s
+
+
+real	1m32.666s
+user	3m4.776s
+sys	0m37.414s
+# ---------------- end ----------------
