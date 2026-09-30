@@ -12,6 +12,20 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
+## v5 wall edit — 30 Sep 2026
+
+The A0 source was simplified after the research audit without deleting the underlying work.
+
+- **Drift is now the opening problem:** a real 0.487154... NDVI became “≈ 0.49”; two models agreed and crossed the action threshold incorrectly.
+- The wall narrative is verb-led: **OBSERVE → ADDRESS → HAND OFF → RESOLVE → VERIFY → CONTINUE**.
+- Eight contribution panels were reduced to four core mechanisms: **ADDRESS, HAND OFF, FIELD, VERIFY**.
+- Signed absence, disagreement, derivative checking and the transparency log remain as a compact consequences strip and in the research files.
+- The agent-correction graph was removed from the wall version; the evidence remains in the repository.
+- The token-family table was reduced to the EO ladder: **fact → raster → cube**.
+- Only **one QR** remains, pointing to **https://emem.dev**. Source, paper, verify and reproduce should be reachable from there.
+- The exact submitted paper title is restored.
+- The generated PDF/preview must be re-rendered from `poster.html` after this source change.
+
 ## Structure (v4: the complete system, with figures made from real emem data)
 
 1. **Lead.**
