@@ -1,0 +1,27 @@
+{
+ "sth": {
+  "tree_size": 2567997,
+  "root_b32": "kbwpujeoc36ndusgyqy6r2c25anwpea6lhu5j2dz4fvkulblek3q",
+  "signed_at": "2026-09-30T15:55:45Z",
+  "sig_verified": true,
+  "ms": 234
+ },
+ "cid": "icupub53ebfd5gh5pp2kgzux24",
+ "path": "/memories/by_attester/njedkglt/icupub53ebfd5gh5pp2kgzux24.md",
+ "note_bytes": 5307,
+ "note_blake3": "icupub53ebfd5gh5pp2kgzux24qbqtjyabcfyiuzqf2lyjatk3eq",
+ "unsigned_mcp": {
+  "http": 200,
+  "ms": 196,
+  "code": "memory_attestation_required",
+  "digest_hex": "a156aebe2aa4a94dbd6f28853eaff81e8b35bb9ebd1230e91b80a68fcca52b5c"
+ },
+ "unsigned_a2a": {
+  "http": 400,
+  "ms": 234,
+  "code": "memory_attestation_required",
+  "digest_hex": "a156aebe2aa4a94dbd6f28853eaff81e8b35bb9ebd1230e91b80a68fcca52b5c"
+ },
+ "local_digest_hex": "a156aebe2aa4a94dbd6f28853eaff81e8b35bb9ebd1230e91b80a68fcca52b5c",
+ "digests_agree": true
+}

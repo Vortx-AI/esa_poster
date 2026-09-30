@@ -1,0 +1,31 @@
+{
+ "sth": {
+  "tree_size": 2568005,
+  "root_b32": "62yzl5n3i2jmeoptmbjkznj6nbx5y6czqf53ug3g6wx6captzq4q",
+  "signed_at": "2026-09-30T15:56:14Z",
+  "sig_verified": true,
+  "ms": 522
+ },
+ "cid": "7n7qogvn2ib3er5nreorzmfnbu",
+ "path": "/memories/by_attester/njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md",
+ "note_bytes": 5307,
+ "note_blake3": "7n7qogvn2ib3er5nreorzmfnbvs7lii3dqa4c36737m2rw2dk5qq",
+ "unsigned_mcp": {
+  "http": 200,
+  "ms": 164,
+  "code": "memory_attestation_required",
+  "digest_hex": "753e2bf200be03bf507d3863fe64208c2621808e4f786db338b8c982cdf905c2"
+ },
+ "unsigned_a2a": {
+  "http": 400,
+  "ms": 167,
+  "code": "memory_attestation_required",
+  "digest_hex": "753e2bf200be03bf507d3863fe64208c2621808e4f786db338b8c982cdf905c2"
+ },
+ "local_digest_hex": "753e2bf200be03bf507d3863fe64208c2621808e4f786db338b8c982cdf905c2",
+ "digests_agree": true,
+ "signed_a2a": {
+  "http": 200,
+  "ms": 154
+ }
+}

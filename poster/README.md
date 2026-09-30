@@ -12,6 +12,28 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
+## v10: the algorithms on the board (30 Sep 2026)
+
+- **Seal track:** `njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md`, head `q62y7frkthtivnqrynwt6iradm`.
+- **Check:** 28 of 28 steps pass in ememdemo, and the track is logged as log entry 2,568,005.
+- **Hashed board:** board.jpg with the seal box blank, at commit `5143fac`, sha256 `96fed23a…`.
+
+What changed from v9:
+
+- **The memory, stated formally**, next to the lead:
+  - the fact tuple and its CBOR encoding;
+  - `fact_cid`;
+  - the cell64 quantisation and tslot;
+  - the as-of recall rule;
+  - the batch attestation;
+  - the RFC 6962-shaped log;
+  - the receipt preimage.
+- **One algorithm line per panel:** the floor pixel rule and NDVI with its offset, the 15-link acceptance predicate, round vs floor, the Fisher test, the scene-selection rule behind defect 27, TESSERA dequantisation, the OS-trace binding, the pointer.v1 root, the derive tolerance, the guard's precision rule and the track chain.
+- **Drift taxonomy:** its last column is now the equality test that detects each drift.
+- **Layout:** the ten client paths are now one sentence in §2, and "integrity elsewhere" moved under §2.
+- **Algorithm source:** every formula cites its line in emem's code at `18adb67`, in `research/repro/v10/algorithms.md`.
+- **Code vs docs:** where the two differ, the board follows the code. These differences are logged as defects 32–36.
+
 ## v9: raw bands, drift taxonomy, since acceptance (30 Sep 2026)
 
 The seal now opens this track:
