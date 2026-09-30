@@ -1,0 +1,86 @@
+{
+ "docs/paper-section-statistics-and-threats.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/213e2738d508a4e084cd0beef329598950f01bf0/docs/paper-section-statistics-and-threats.md",
+  "root": "rvkgh7v3rqpdjhwvdbv3rwvov4ydw4jpwcuqwoahkfqbhbx5occq",
+  "rows": [
+   {
+    "what": "lines 85\u201389 \u00b7 Fisher table: control 72/72, compaction 0/72 with 3/36 agreeing, p = 0.035",
+    "offset": 4679,
+    "length": 276,
+    "blake3": "ze4eeluzp2afweq2ayxhtdqem5cwarshwvzxtnlaeeofzinp5fma"
+   },
+   {
+    "what": "lines 163\u2013166 \u00b7 six scoring bugs across two scorers",
+    "offset": 9501,
+    "length": 312,
+    "blake3": "x6kpku7ntl5y56rzeisrjzvocslgbyfgipknrkznvgrzrwgyem5q"
+   }
+  ]
+ },
+ "docs/collaboration-log.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/213e2738d508a4e084cd0beef329598950f01bf0/docs/collaboration-log.md",
+  "root": "bjzh32rptx3xtmsk65pjx4j2zm56ix3b6du23y6xuztz524lntfq",
+  "rows": [
+   {
+    "what": "lines 9603\u20139612 \u00b7 paraphrase trap: token WATER, prose SKIP, one NDVI fact",
+    "offset": 545394,
+    "length": 841,
+    "blake3": "yymobc44qo4usok5fmpuxwpnel2gxymzxvjvislwzmfk5gincpxq"
+   },
+   {
+    "what": "lines 27329\u201327336 \u00b7 handoff n=20 per arm: bundle 20, BM25 20, dense 8, prose 2",
+    "offset": 1619403,
+    "length": 330,
+    "blake3": "ep7skf6ediwidcotw7soycqbnc4hhbye4oyr5t7njy7whkdlp5xq"
+   }
+  ]
+ },
+ "CHANGELOG.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/213e2738d508a4e084cd0beef329598950f01bf0/CHANGELOG.md",
+  "root": "zxeg52sjy4brrwrbta22kgwjb4hreeiw4xeganlfjpaqckxo3o2q",
+  "rows": [
+   {
+    "what": "line 68 \u00b7 point reads took the south-east neighbour from the first commit; fixed",
+    "offset": 15749,
+    "length": 660,
+    "blake3": "yycm4omlglprrkpo5wc6qoqv5zgopvb4tfs6x2vdpl26hft74hga"
+   }
+  ]
+ },
+ "docs/how-emem-compares.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/213e2738d508a4e084cd0beef329598950f01bf0/docs/how-emem-compares.md",
+  "root": "gc5ddjoxnyrnb3lapcloh2sqmjdb347w7bnz7g3subeto5rxvp6a",
+  "rows": [
+   {
+    "what": "lines 115\u2013120 \u00b7 token vs bundle size",
+    "offset": 6128,
+    "length": 441,
+    "blake3": "b4gpkpizhgjwbee6xe2czwe6756xgj4wzekenkukqj3zqtz7okmq"
+   },
+   {
+    "what": "lines 266\u2013278 \u00b7 scorecard: what is supported, refuted, not tested",
+    "offset": 14389,
+    "length": 1116,
+    "blake3": "hclnh3dcwhdjsgls2ixzemzmjckcokrpdckveirtdsbfxxfms5qa"
+   }
+  ]
+ },
+ "docs/whitepaper-v3.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/213e2738d508a4e084cd0beef329598950f01bf0/docs/whitepaper-v3.md",
+  "root": "2oq7h2nznfmifgdcckh3fl5yib72nk73gdvic3r4wqw66hmkcjua",
+  "rows": [
+   {
+    "what": "lines 118\u2013137 \u00b7 agents on at least five model families",
+    "offset": 5937,
+    "length": 865,
+    "blake3": "g4qibshyri5gnrx7od7cslnrp5h7soqqgc42ag3b5hq3xog2v7na"
+   },
+   {
+    "what": "lines 241\u2013246 \u00b7 nineteen withdrawals",
+    "offset": 12243,
+    "length": 304,
+    "blake3": "5vnhusu3j3354ox4z6knhcgfuxp6gngnnzpvv36xc3hc3vmyi2ja"
+   }
+  ]
+ }
+}

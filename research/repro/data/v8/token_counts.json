@@ -1,0 +1,122 @@
+{
+ "bare_value_ndvi": {
+  "chars": 18,
+  "bytes": 18,
+  "cl100k": 8,
+  "o200k": 8
+ },
+ "bare_value_ndvi_3dp": {
+  "chars": 5,
+  "bytes": 5,
+  "cl100k": 3,
+  "o200k": 3
+ },
+ "fact_token_ndvi": {
+  "chars": 84,
+  "bytes": 84,
+  "cl100k": 46,
+  "o200k": 45
+ },
+ "fact_token_temp": {
+  "chars": 84,
+  "bytes": 84,
+  "cl100k": 45,
+  "o200k": 46
+ },
+ "raster_token_B04": {
+  "chars": 130,
+  "bytes": 130,
+  "cl100k": 83,
+  "o200k": 80
+ },
+ "cube_token_B08_5members": {
+  "chars": 135,
+  "bytes": 135,
+  "cl100k": 83,
+  "o200k": 81
+ },
+ "bundle_token_5facts": {
+  "chars": 38,
+  "bytes": 38,
+  "cl100k": 22,
+  "o200k": 21
+ },
+ "fact_json_GET": {
+  "chars": 1271,
+  "bytes": 1273,
+  "cl100k": 562,
+  "o200k": 565
+ },
+ "rest_recall_ndvi_json": {
+  "chars": 8242,
+  "bytes": 8259,
+  "cl100k": 3064,
+  "o200k": 3075
+ },
+ "mcp_recall_ndvi_content_text": {
+  "chars": 3491,
+  "bytes": 3493,
+  "cl100k": 1587,
+  "o200k": 1592
+ },
+ "mcp_recall_ndvi_full_jsonrpc": {
+  "chars": 7346,
+  "bytes": 7350,
+  "cl100k": 3255,
+  "o200k": 3261
+ },
+ "mcp_recall_cell_allbands_content_text": {
+  "chars": 10730,
+  "bytes": 10730,
+  "cl100k": 5339,
+  "o200k": 5279
+ },
+ "mcp_recall_cell_allbands_full_jsonrpc": {
+  "chars": 22061,
+  "bytes": 22061,
+  "cl100k": 10770,
+  "o200k": 10643
+ },
+ "mcp_tools_list_core18": {
+  "chars": 77017,
+  "bytes": 77045,
+  "cl100k": 18659,
+  "o200k": 19058
+ },
+ "stac_item_json": {
+  "chars": 15295,
+  "bytes": 15295,
+  "cl100k": 5935,
+  "o200k": 6001
+ },
+ "stac_search_json_4items": {
+  "chars": 62185,
+  "bytes": 62185,
+  "cl100k": 24076,
+  "o200k": 24344
+ },
+ "raster_resolve_json": {
+  "chars": 4290,
+  "bytes": 4290,
+  "cl100k": 1881,
+  "o200k": 1895
+ },
+ "cube_resolve_json": {
+  "chars": 6495,
+  "bytes": 6495,
+  "cl100k": 3084,
+  "o200k": 3078
+ },
+ "bundle5_resolve_json": {
+  "chars": 3824,
+  "bytes": 3824,
+  "cl100k": 1886,
+  "o200k": 1872
+ },
+ "fact_cbor_bytes": {
+  "bytes": 1115
+ },
+ "raster_artifact_B04_bytes": {
+  "bytes": 802780
+ }
+}

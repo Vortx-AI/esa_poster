@@ -1,0 +1,228 @@
+{
+ "point": {
+  "lat": 32.57125977099409,
+  "lng": 77.03447748052537,
+  "epsg32643_E": 690983.2732190322,
+  "epsg32643_N": 3605584.264280942
+ },
+ "bands": {
+  "B04": {
+   "cog_bytes": 277897303,
+   "width": 10980,
+   "height": 10980,
+   "tile_w": 512,
+   "tile_h": 512,
+   "tiles": 484,
+   "compression": 8,
+   "predictor": 1,
+   "bits": 15,
+   "n_ifds_in_64KiB_head(1=full res + overviews)": 5,
+   "overview_sizes": [
+    [
+     5490,
+     5490
+    ],
+    [
+     2745,
+     2745
+    ],
+    [
+     1373,
+     1373
+    ],
+    [
+     687,
+     687
+    ]
+   ],
+   "pixel": [
+    9098,
+    9443
+   ],
+   "tile_idx": 413,
+   "tile_compressed_bytes": 468566,
+   "tile_bytes_fetched": 468566,
+   "tile_uncompressed_bytes": 491520,
+   "median_tile_bytes": 471117,
+   "max_tile_bytes": 488281,
+   "min_nonzero_tile_bytes": 511,
+   "head_bytes_read": 65536
+  },
+  "B08": {
+   "cog_bytes": 281898500,
+   "width": 10980,
+   "height": 10980,
+   "tile_w": 512,
+   "tile_h": 512,
+   "tiles": 484,
+   "compression": 8,
+   "predictor": 1,
+   "bits": 15,
+   "n_ifds_in_64KiB_head(1=full res + overviews)": 5,
+   "overview_sizes": [
+    [
+     5490,
+     5490
+    ],
+    [
+     2745,
+     2745
+    ],
+    [
+     1373,
+     1373
+    ],
+    [
+     687,
+     687
+    ]
+   ],
+   "pixel": [
+    9098,
+    9443
+   ],
+   "tile_idx": 413,
+   "tile_compressed_bytes": 477314,
+   "tile_bytes_fetched": 477314,
+   "tile_uncompressed_bytes": 491520,
+   "median_tile_bytes": 479553,
+   "max_tile_bytes": 488668,
+   "min_nonzero_tile_bytes": 511,
+   "head_bytes_read": 65536
+  },
+  "SCL": {
+   "cog_bytes": 3789287,
+   "width": 5490,
+   "height": 5490,
+   "tile_w": 512,
+   "tile_h": 512,
+   "tiles": 121,
+   "compression": 8,
+   "predictor": 1,
+   "bits": 8,
+   "n_ifds_in_64KiB_head(1=full res + overviews)": 5,
+   "overview_sizes": [
+    [
+     2745,
+     2745
+    ],
+    [
+     1373,
+     1373
+    ],
+    [
+     687,
+     687
+    ],
+    [
+     344,
+     344
+    ]
+   ],
+   "pixel": [
+    4549,
+    4721
+   ],
+   "tile_idx": 107,
+   "tile_compressed_bytes": 22545,
+   "tile_bytes_fetched": 22545,
+   "tile_uncompressed_bytes": 262144,
+   "median_tile_bytes": 15116,
+   "max_tile_bytes": 31405,
+   "min_nonzero_tile_bytes": 276,
+   "head_bytes_read": 65536
+  },
+  "B02": {
+   "cog_bytes": 276160716,
+   "width": 10980,
+   "height": 10980,
+   "tile_w": 512,
+   "tile_h": 512,
+   "tiles": 484,
+   "compression": 8,
+   "predictor": 1,
+   "bits": 15,
+   "n_ifds_in_64KiB_head(1=full res + overviews)": 5,
+   "overview_sizes": [
+    [
+     5490,
+     5490
+    ],
+    [
+     2745,
+     2745
+    ],
+    [
+     1373,
+     1373
+    ],
+    [
+     687,
+     687
+    ]
+   ],
+   "pixel": [
+    9098,
+    9443
+   ],
+   "tile_idx": 413,
+   "tile_compressed_bytes": 462758,
+   "tile_bytes_fetched": 462758,
+   "tile_uncompressed_bytes": 491520,
+   "median_tile_bytes": 468114,
+   "max_tile_bytes": 488253,
+   "min_nonzero_tile_bytes": 511,
+   "head_bytes_read": 65536
+  },
+  "B03": {
+   "cog_bytes": 277738743,
+   "width": 10980,
+   "height": 10980,
+   "tile_w": 512,
+   "tile_h": 512,
+   "tiles": 484,
+   "compression": 8,
+   "predictor": 1,
+   "bits": 15,
+   "n_ifds_in_64KiB_head(1=full res + overviews)": 5,
+   "overview_sizes": [
+    [
+     5490,
+     5490
+    ],
+    [
+     2745,
+     2745
+    ],
+    [
+     1373,
+     1373
+    ],
+    [
+     687,
+     687
+    ]
+   ],
+   "pixel": [
+    9098,
+    9443
+   ],
+   "tile_idx": 413,
+   "tile_compressed_bytes": 466329,
+   "tile_bytes_fetched": 466329,
+   "tile_uncompressed_bytes": 491520,
+   "median_tile_bytes": 470626,
+   "max_tile_bytes": 487943,
+   "min_nonzero_tile_bytes": 511,
+   "head_bytes_read": 65536
+  }
+ },
+ "ndvi_cold_read_bytes": {
+  "head_reads": 196608,
+  "tile_reads": 968425,
+  "total": 1165033,
+  "note": "SCL head+tile, B04 head+tile, B08 head+tile; excludes STAC search JSON + SAS token; heads & tiles cached per process (PROFILE_CACHE, TILE_CACHE cap 512) so warm reads in same tile cost 0 upstream bytes",
+  "fraction_of_B04_B08_SCL_cogs": 0.002067182082478442,
+  "fraction_of_whole_scene": 0.0005756607369568403
+ }
+}

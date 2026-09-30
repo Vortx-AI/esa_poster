@@ -1,0 +1,180 @@
+{
+ "ndvi_keylong": {
+  "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+  "bytes": 1115,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "indices.ndvi",
+  "kind": "primary",
+  "tslot": 20721,
+  "signed_at": "2026-09-28T09:06:56Z",
+  "value": 0.4708994708994709,
+  "unit": null,
+  "fn_key": "sentinel2_l2a_indices_ndvi@1",
+  "sources": [
+   "sentinel_s2_l2a"
+  ],
+  "ms": 5407
+ },
+ "ndvi_prefix_23sep": {
+  "token": "emem:fact:defi.zb572.xoso.zb1ec:kxjvfwpa7grmfhkxoxufq5xjltq2s5syer2rzdx7odbnrxhnjzkq",
+  "bytes": 1117,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "indices.ndvi",
+  "kind": "primary",
+  "tslot": 20719,
+  "signed_at": "2026-09-25T19:35:27Z",
+  "value": 0.34435075885328836,
+  "unit": null,
+  "fn_key": "sentinel2_l2a_indices_ndvi@1",
+  "sources": [
+   "sentinel_s2_l2a"
+  ],
+  "ms": 3375
+ },
+ "ndvi_trap_17jul": {
+  "token": "emem:fact:defi.zb572.xoso.zb1ec:jwkqm6ehelmzrwupfwyq2oqotiarexr5bdrt4xbl3znuynhurqxq",
+  "bytes": 787,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "indices.ndvi",
+  "kind": "primary",
+  "tslot": 20651,
+  "signed_at": "2026-07-18T07:37:57Z",
+  "value": 0.4871541501976284,
+  "unit": null,
+  "fn_key": "sentinel2_l2a_indices_ndvi@1",
+  "sources": [
+   "sentinel_s2_l2a"
+  ],
+  "ms": 4307
+ },
+ "tessera_keylong": {
+  "token": "emem:fact:defi.zb572.xoso.zb1ec:ga2o2nufuq4s4tmirplgarpj4y5axb4644y7rftpojarlkcbqdrq",
+  "bytes": 1097,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "geotessera",
+  "kind": "primary",
+  "tslot": 54,
+  "signed_at": "2026-09-30T08:33:07Z",
+  "value": "vector[128]",
+  "unit": null,
+  "fn_key": "geotessera_v1@2",
+  "sources": [
+   "geotessera"
+  ],
+  "ms": 5663
+ },
+ "clay_v15": {
+  "token": "emem:fact:defi.zb519.faci.modA:jh2kmfiy6pbkzx3hix4qfsmrgz3vnxn64itvu3cegh3pbma73omq",
+  "bytes": 9600,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "clay_v1",
+  "kind": "primary",
+  "tslot": 56,
+  "signed_at": "2026-07-22T18:49:23Z",
+  "value": "vector[1024]",
+  "unit": null,
+  "fn_key": "clay_v1_5_embed@2",
+  "sources": [
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "sentinel-2-l2a.cog",
+   "model.clay_v1_5"
+  ],
+  "ms": 4236
+ },
+ "derived_ndvi_delta": {
+  "token": "emem:fact:defi.zb572.xoso.zb1ec:jb67zixqk525p7uzjrrhwfkvixusueh7bfklzx4hpq5pfhrq3cxq",
+  "bytes": 1333,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "indices.ndvi",
+  "kind": "derivative",
+  "tslot": null,
+  "signed_at": "2026-09-30T09:25:38Z",
+  "value": -0.12976424591468844,
+  "unit": null,
+  "fn_key": "same_doy_ndvi_delta@1",
+  "sources": [],
+  "ms": 3336
+ },
+ "elev_may": {
+  "token": "emem:fact:defi.zb493.xuqA.zcb5f:yqbolgeoycqkvj3zkxukb4bjw4odhpwvfzqo3fbgwf4spk45zala",
+  "bytes": 509,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "copdem30m.elevation_mean",
+  "kind": "primary",
+  "tslot": 0,
+  "signed_at": "2026-05-28T19:54:32Z",
+  "value": 918.0,
+  "unit": "m",
+  "fn_key": "open_meteo_copdem90m@1",
+  "sources": [
+   "open_meteo"
+  ],
+  "ms": 2749
+ },
+ "elev_sep": {
+  "token": "emem:fact:defi.zb493.xuqA.zcb5f:jzxzmvomshs6di3bkgponk6p3rgfk5nyvklekj6caegx6dwcuo5q",
+  "bytes": 718,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "copdem30m.elevation_mean",
+  "kind": "primary",
+  "tslot": 0,
+  "signed_at": "2026-09-28T09:05:19Z",
+  "value": 915.0712280273438,
+  "unit": "m",
+  "fn_key": "copernicus_dem_30m_aws_pixel@1",
+  "sources": [
+   "copernicus.dem.30m.aws"
+  ],
+  "ms": 3730
+ },
+ "temp_bengaluru": {
+  "token": "emem:fact:defi.zb493.zezo.zcb35:nflpddk7zsncywguwjzk5koksseqfyx4jnngkuryrnd4aykqlpfq",
+  "bytes": 541,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "weather.temperature_2m",
+  "kind": "primary",
+  "tslot": 497386,
+  "signed_at": "2026-09-28T10:32:05Z",
+  "value": 28.0,
+  "unit": "degC",
+  "fn_key": "met_no_locationforecast_compact@1",
+  "sources": [
+   "met_no"
+  ],
+  "ms": 2885
+ },
+ "absence_ocean": {
+  "token": "emem:fact:defi.zb374.toro.dEcO:jvm4xbmbenl7pzshsojtarwbk5pvhpbq62cel7vwfculuswce6xa",
+  "bytes": 505,
+  "rehash": true,
+  "cell_ok": true,
+  "band": "copdem30m.elevation_mean",
+  "kind": "absence",
+  "tslot": 0,
+  "signed_at": "2026-09-30T12:52:11Z",
+  "value": null,
+  "unit": null,
+  "fn_key": null,
+  "sources": [
+   "copernicus.dem.30m.aws"
+  ],
+  "ms": 2544
+ }
+}

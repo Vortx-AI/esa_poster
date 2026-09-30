@@ -1,0 +1,31 @@
+{
+ "sth": {
+  "tree_size": 2566402,
+  "root_b32": "embwsgio7yrsde4hdrz36zwexwhrv4dvuu36v22prsemsn6jc4zq",
+  "signed_at": "2026-09-30T12:57:06Z",
+  "sig_verified": true,
+  "ms": 3299
+ },
+ "cid": "hyl7r2yl3ybzcegxjhxiplr4ai",
+ "path": "/memories/by_attester/njedkglt/hyl7r2yl3ybzcegxjhxiplr4ai.md",
+ "note_bytes": 2461,
+ "note_blake3": "hyl7r2yl3ybzcegxjhxiplr4all5wfwa7nq57e723tmjmytel36a",
+ "unsigned_mcp": {
+  "http": 200,
+  "ms": 3536,
+  "code": "memory_attestation_required",
+  "digest_hex": "2e5a649e4b2d3e6f0ce8c71fe2a802e73d17703c1f0a9eaa61c600f3cf60903a"
+ },
+ "unsigned_a2a": {
+  "http": 400,
+  "ms": 2780,
+  "code": "memory_attestation_required",
+  "digest_hex": "2e5a649e4b2d3e6f0ce8c71fe2a802e73d17703c1f0a9eaa61c600f3cf60903a"
+ },
+ "local_digest_hex": "2e5a649e4b2d3e6f0ce8c71fe2a802e73d17703c1f0a9eaa61c600f3cf60903a",
+ "digests_agree": true,
+ "signed_a2a": {
+  "http": 200,
+  "ms": 3745
+ }
+}
