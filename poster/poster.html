@@ -46,6 +46,19 @@ h1{font-size:15mm;line-height:1.1;font-weight:600;letter-spacing:-.01em;margin-t
 .cmp b{display:block;font-size:5.1mm;color:var(--ink)}
 .cmp .obj{font-family:PlexMono,monospace;color:var(--accent);display:block;margin:.8mm 0}
 .fulltoken{font-family:PlexMono,monospace;font-size:3.9mm;line-height:1.35;word-break:break-all;background:var(--accent-soft);padding:2mm 2.5mm;border-left:1mm solid var(--accent)}
+.lookupid{display:grid;gap:3mm}
+.liid{border-top:.6mm solid var(--ink);padding-top:2mm}
+.liid b{font-size:5.2mm;display:block;margin-bottom:.8mm}
+.liid code{font-family:PlexMono,monospace;font-size:4.45mm;color:var(--accent)}
+.liid p{font-size:4.6mm;line-height:1.25;color:var(--ink2);margin-top:.8mm}
+.runtimeband{border-top:.7mm solid var(--ink);border-bottom:.35mm solid var(--rule);padding:2.5mm 0;display:grid;grid-template-columns:150mm 1fr;gap:5mm;align-items:center}
+.runtimeband .rtlead{font-size:5.2mm;font-weight:600;line-height:1.2}
+.runtimes{display:flex;flex-wrap:wrap;gap:2mm}
+.rt{border:.4mm solid var(--rule);background:#fff;padding:1.3mm 2.2mm;font-size:4.5mm;font-weight:500}
+.rt.primary{border-color:var(--accent);background:var(--accent-soft)}
+.embedstrip{border-left:1.2mm solid var(--accent);padding:1.4mm 0 1.4mm 3mm;font-size:4.8mm;line-height:1.3;color:var(--ink2)}
+.embedstrip b{color:var(--ink)}
+
 
 /* lead */
 .lead{display:grid;grid-template-columns:1fr 330mm;gap:14mm}
@@ -144,34 +157,30 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
 <header>
   <h1>emem: A research on Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</h1>
   <div class="authors"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> — Vortx AI · doi:10.5281/zenodo.20706893 · emem <span class="mono">64cfae5</span></div>
-  <div class="rq">Can two independent agents still refer to <b>the same cited Earth observation</b> after their contexts diverge?</div>
+  <div class="rq">If Agent A cites an Earth observation, can Agent B recover <b>exactly what was cited</b> after the context is gone?</div>
 </header>
 
 <!-- LEAD -->
 <section class="lead">
   <div class="problem">
-    <div class="q">Referential drift starts when <span class="acc">evidence becomes prose.</span></div>
-    <div class="src">A real Lahaul NDVI value of 0.4871541501976284 became “≈ 0.49”. Two models agreed more — and both crossed the irrigation threshold the wrong way.</div>
-    <p class="ans">emem changes the handoff unit. <b>Carry the address of the signed observation record, not a sentence about it.</b> A later agent resolves the record, re-hashes the bytes and verifies the attestation before reasoning from it.</p>
-    <div class="rule1"><b>OBSERVE → ADDRESS → HAND OFF → RESOLVE → VERIFY → CONTINUE</b><span class="mu">The context may disappear; the signed observation record remains resolvable. Integrity is checkable; measurement truth is not implied.</span></div>
+    <div class="q"><span class="acc">0.4871541501976284</span> became “≈ 0.49”. The decision flipped.</div>
+    <div class="src"><b>REFERENTIAL DRIFT.</b> WATER if NDVI &lt; 0.488. Exact token: both models WATER. Paraphrase: both models SKIP.</div>
+    <p class="ans"><b>Keep the scene upstream. Move the address into reasoning.</b> A later agent resolves the cited record, re-hashes the bytes, checks the attestation, then reasons from the same evidence.</p>
+    <div class="rule1"><b>LOCATE → MATERIALISE → ADDRESS → RESOLVE → VERIFY → GUARD → HAND OFF</b><span class="mu">place → cell64 → observation/field → token → exact bytes → verdict → token/bundle</span></div>
   </div>
   <div class="tokens">
-    <h4>What an agent actually does</h4>
-    <div class="workflow">
-      <div class="wf"><b>ASK</b>place + question</div>
-      <div class="wf"><b>LOCATE</b>place → cell64</div>
-      <div class="wf"><b>READ</b>fact / raster / cube</div>
-      <div class="wf"><b>REASON</b>model uses resolved evidence</div>
-      <div class="wf"><b>CHECK</b>draft ↔ cited value</div>
-      <div class="wf"><b>HAND OFF</b>token / bundle / checkpoint</div>
-      <div class="wf"><b>CONTINUE</b>next session resolves again</div>
+    <h4>Two keys, two jobs</h4>
+    <div class="lookupid">
+      <div class="liid"><b>LOOK UP</b><code>cell64 × band × tslot</code><p>where · what variable · when</p></div>
+      <div class="liid"><b>IDENTIFY</b><code>fact_cid = BLAKE3(emem-CBOR(record))</code><p>exactly which signed observation record</p></div>
+      <div class="liid"><b>HAND OFF</b><code>emem:fact:&lt;cell64&gt;:&lt;fact_cid&gt;</code><p>location binding + immutable record identity</p></div>
     </div>
-    <p class="tnote">The workflow is shipped through MCP / REST / A2A and the agent skills; the handoff object is the address of evidence, not the previous model’s transcript.</p>
+    <p class="tnote">Spatial/temporal indexing finds the observation. Content addressing keeps its identity stable after it enters model reasoning.</p>
   </div>
 </section>
 
 <section class="life">
-  <div class="ttl"><h3>Fig. 1 — One real observation becomes an address another agent can resolve</h3><span>fact oj5cecci… · Keylong, Lahaul · every value below read from emem.dev on 29 Sep 2026</span></div>
+  <div class="ttl"><h3>Fig. 1 — One real observation: source → record → content id → handoff</h3><span>fact oj5cecci… · Keylong, Lahaul · every value below read from emem.dev on 29 Sep 2026</span></div>
   <div class="lanes"><div class="lane">upstream</div><div class="lane">materialise</div><div class="lane">address</div><div class="lane">content</div><div class="lane">sign · record</div><div class="lane">serve</div><div class="lane">agents</div></div>
   <div class="stages">
     <div class="stg"><span class="n">Sentinel-2A L2A scene</span><span class="v">S2A_MSIL2A_20260925T054251 _R005_T43SFS</span><span class="d">B08 and B04 COGs, found via the Planetary Computer STAC API; scene-level cloud 10.8 %</span></div>
@@ -183,10 +192,22 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
     <div class="stg key"><span class="n">Passed as a token, checked by the receiver</span><span class="v">emem:fact:defi.zb572 .xoso.zb1ec:oj5cecci…</span><span class="d">agent B resolves, re-hashes, verifies — no trust in agent A; the guard checks any number A wrote against it</span></div>
   </div>
   <div class="arch" aria-label="System architecture">
-    <div class="archbox"><b>EO SOURCES</b>Sentinel-2 · DEM · weather · documents · device traces</div>
-    <div class="archbox"><b>EMEM NODE</b>LOCATE → MATERIALISE → CANONICALISE → HASH → ATTEST → LOG<br>RESOLVE → VERIFY → GUARD</div>
+    <div class="archbox"><b>OBSERVATIONS</b>Sentinel-2 · DEM · weather · documents · <span class="mono">Tessera 128-D</span></div>
+    <div class="archbox"><b>EMEM</b>materialise → canonical record → content id → attestation → history<br>resolve → re-hash → receipt → guard</div>
     <div class="archbox"><b>INTERFACES</b>MCP · REST · A2A</div>
-    <div class="archbox"><b>REASONERS</b>Agent A · Agent B · later session · other model</div>
+    <div class="archbox"><b>REASONERS</b>ChatGPT · Claude · Dify · other MCP/A2A agents</div>
+  </div>
+  <div class="runtimeband">
+    <div class="rtlead">ONE CITED OBSERVATION.<br>MULTIPLE LIVE AGENT RUNTIMES.</div>
+    <div class="runtimes">
+      <span class="rt primary">ChatGPT · @emem</span>
+      <span class="rt primary">Claude.ai / Claude Code</span>
+      <span class="rt primary">Dify plugin</span>
+      <span class="rt">MCP clients</span>
+      <span class="rt">A2A</span>
+      <span class="rt">Python / TypeScript</span>
+      <span class="rt">LangChain · LlamaIndex · CrewAI · AutoGen</span>
+    </div>
   </div>
 </section>
 
@@ -200,41 +221,41 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
 <section class="grid">
 
   <div class="panel">
-    <div class="hd"><span class="no">01</span><h3>ADDRESS · the observation record names itself</h3></div>
-    <p class="mech">A record is <b>(cell, band, tslot, value, uncertainty, sources, derivation, signer, signed_at)</b>. emem serialises it deterministically; BLAKE3 of those exact bytes becomes its content id.</p>
+    <div class="hd"><span class="no">01</span><h3>CONTENT ID</h3></div>
+    <p class="mech">The observation record is <b>(cell, band, tslot, value, uncertainty, sources, derivation, signer, signed_at)</b>. Deterministic emem-CBOR is hashed with BLAKE3; the served bytes must re-hash to the id.</p>
 <div class="live"><span class="h">real Keylong NDVI · verify_ndvi.py</span>fact <span class="ok">oj5cecci…</span>  1,115 bytes   re-hash <span class="ok">MATCH</span>
 B08 DN 3502   B04 DN 1900   offset −1000
 signed   0.4708994708994709
 rebuilt  0.4708994708994709   <span class="ok">bit-identical</span>
 same cid under another cell → <span class="no">HTTP 409</span></div>
-    <div class="meta2"><span class="l nw">invariant</span><span>changed bytes → changed id; wrong place → fail closed.</span><span class="l li">boundary</span><span>the CID names one signed record because signer and signed_at are inside the record; it is not a universal “truth id”.</span></div>
+    <div class="meta2"><span class="l nw">check</span><span>changed bytes → changed id; wrong place → HTTP 409. The same digest is also emitted as CIDv1 for generic content-address tooling.</span><span class="l li">boundary</span><span>the id names one signed record because signer and signed_at are inside it; it is not a universal “truth id”.</span></div>
   </div>
 
   <div class="panel">
-    <div class="hd"><span class="no">02</span><h3>HAND OFF · carry the address, not the paraphrase</h3></div>
-    <p class="mech">A trust boundary does not need the previous model’s context. It needs the token. The receiving agent can <b>resolve → re-hash → verify → reason</b> from the same cited record.</p>
+    <div class="hd"><span class="no">02</span><h3>HANDOFF</h3></div>
+    <p class="mech">Agent B does not need Agent A’s transcript to recover the evidence. It needs the token. For many cited observations, <b>emem:bundle:</b> carries up to 256 fact references under one compact handle.</p>
 <div class="live"><span class="h">measured paraphrase trap · one real Lahaul fact</span>signed NDVI     0.4871541501976284
 decision rule    WATER if NDVI &lt; 0.488
 token handoff    Gemma WATER · Qwen WATER     <span class="ok">correct</span>
 prose “≈ 0.49”   Gemma SKIP  · Qwen SKIP      <span class="no">agree + wrong</span></div>
-    <div class="meta2"><span class="l nw">drift</span><span>the reference survives even when context is compacted, replaced or moved to another model.</span><span class="l li">boundary</span><span>a valid token does not make a model’s conclusion correct; it makes the evidence it cited recoverable and checkable.</span></div>
+    <div class="meta2"><span class="l nw">long run</span><span>bundle: ≤256 facts · 38 characters · ~23 LLM tokens. In the measured 599-turn run, bundle answers were 100% citable vs BM25 0%.</span><span class="l li">boundary</span><span>one fact token is ~51 LLM tokens; bundling—not a single token—is the context-saving mechanism.</span></div>
   </div>
 
   <div class="panel">
-    <div class="hd"><span class="no">03</span><h3>FIELD · give the model pixels, not prose about pixels</h3></div>
-    <p class="mech"><span class="mono">emem:raster:</span> names a spatial field through a signed derivation; <span class="mono">emem:cube:</span> binds independently resolvable fields through time. The derivation pins AOI, band, scene, recipe, date and artifact hash.</p>
+    <div class="hd"><span class="no">03</span><h3>FIELD / CUBE / EMBEDDING</h3></div>
+    <p class="mech"><span class="mono">emem:raster:</span> names a spatial field; <span class="mono">emem:cube:</span> binds fields through time. The live Tessera encoder’s 128-D output is stored as a typed <span class="mono">model_output</span> fact: the embedding is a value inside an addressable record, not the memory itself.</p>
 <div class="live"><span class="h">real Keylong B08 cube · Fig. 2</span>15 May → 10 Jun  (+26 d)
 15 Jun → 30 Jun  (+15 d)
 15 Jul → 03 Aug  (+19 d)
 15 Aug → 13 Sep  (+29 d)
 15 Sep → 25 Sep  (+10 d)
 5 artifacts re-hashed <span class="ok">✓</span></div>
-    <div class="meta2"><span class="l nw">use</span><span>satellite state enters reasoning as an addressable field, and the temporal substitution is explicit rather than hidden.</span><span class="l li">boundary</span><span>scene selection uses scene-level cloud cover; re-minting can produce a new derivation id for identical pixels.</span></div>
+    <div class="meta2"><span class="l nw">flow</span><span>Sentinel-2 → field / Tessera 128-D → signed record → token → any connected agent runtime.</span><span class="l li">boundary</span><span>scene selection uses scene-level cloud cover; re-minting can produce a new derivation id for identical pixels.</span></div>
   </div>
 
   <div class="panel">
-    <div class="hd"><span class="no">04</span><h3>VERIFY · check the sentence before it leaves the agent</h3></div>
-    <p class="mech"><span class="mono">guard/verdict</span> resolves citations in a draft and compares the written number with the signed value at the writer’s precision. A mismatch becomes a typed refusal, not a confidence score.</p>
+    <div class="hd"><span class="no">04</span><h3>CLAIM CHECK</h3></div>
+    <p class="mech"><span class="mono">guard/verdict</span> resolves citations in a draft and compares the written number with the signed value at the writer’s precision. A mismatch returns a typed reason and fix.</p>
 <div class="live"><span class="h">real Bengaluru temperature fact = 28.0 °C</span>“… was 35 °C (token)”             <span class="no">deny PROV_VALUE</span>
 “… was 28.0 °C (token)”           <span class="ok">allow</span>
 same cid under another cell       <span class="no">deny PROV_BYTES</span>
@@ -247,8 +268,8 @@ uncited measurable claim, gating  <span class="no">deny CLAIM_UNGROUNDED</span><
 <section class="compare" aria-label="What object does each system primarily move or manage?">
   <div class="cmp"><b>STAC / COG</b><span class="obj">asset / raster file</span>Discover and read EO assets.</div>
   <div class="cmp"><b>openEO / Earth Engine</b><span class="obj">process / computed object</span>Execute geospatial analysis.</div>
-  <div class="cmp"><b>Agent memory / RAG</b><span class="obj">retrieved context</span>Restore useful text/task context.</div>
-  <div class="cmp"><b>emem</b><span class="obj">signed observation / field address</span>Let another reasoner resolve and check the cited physical-world state.</div>
+  <div class="cmp"><b>RAG / agent memory</b><span class="obj">retrieved context</span>Recover useful text or task state.</div>
+  <div class="cmp"><b>emem</b><span class="obj">observation / field address</span>Resolve the cited physical-world record and check its bytes/attestation.</div>
 </section>
 
 <!-- FINDINGS + REPRO -->
@@ -278,7 +299,7 @@ uncited measurable claim, gating  <span class="no">deny CLAIM_UNGROUNDED</span><
   </div>
 
   <div class="blk">
-    <h3>RESOLVE · RE-HASH · VERIFY</h3>
+    <h3>TEST THE HYPOTHESIS LIVE</h3>
     <div class="repro">
 <pre><span class="cm"># one checkable object</span>
 TOKEN='emem:fact:...'
@@ -294,7 +315,7 @@ python verify_receipt_tamper.py   receipt_2026-09-29.json
 
 <span class="cm"># then hand the same token to another agent</span></pre>
       <div class="qrs">
-        <div class="qr"><img src="qr-code.svg" alt="QR: emem.dev"><span><b>emem.dev</b>paper · source · verify · reproduce</span></div>
+        <div class="qr"><img src="qr-code.svg" alt="QR: emem.dev"><span><b>emem.dev</b>ChatGPT · Claude · Dify · MCP · verify</span></div>
       </div>
     </div>
     <p><b>WHY HISTORY MATTERS.</b> The same Bengaluru elevation key served <b>918.0 m</b> in May and <b>915.07 m</b> after the upstream changed. Both old and new records still re-hash to their own CIDs, so a later agent can recover what an earlier agent actually cited.</p>
@@ -305,7 +326,7 @@ python verify_receipt_tamper.py   receipt_2026-09-29.json
   </div>
 </section>
 
-<div class="foot"><span>Agentic AI for Earth Observation · Berlin · 19 Oct 2026 · real production records checked 29 Sep 2026 · source, paper and reproduction at emem.dev</span><span>Vortx AI</span></div>
+<div class="foot"><span>Agentic AI for Earth Observation · Berlin · 19 Oct 2026 · poster evidence checked 29 Sep 2026 · live integrations re-checked 30 Sep 2026 · emem.dev</span><span>Vortx AI</span></div>
 
 </div></div>
 </body>
