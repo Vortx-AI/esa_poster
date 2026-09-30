@@ -12,6 +12,37 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
+## v9: raw bands, drift taxonomy, since acceptance (30 Sep 2026)
+
+The seal now opens this track:
+
+https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fd7aoricjy4rnm4g5ykil6a4zre.md
+
+- It has 28 steps, and ememdemo checked 28 of 28 at 14:08 UTC on 30 Sep.
+- Head: `dr2tllnicvm32wvgziaw6ad57u`.
+- It is logged as entry 2,567,387, the next entry after the log size stamped on it.
+- board.jpg (seal blank) is at commit `4a516cc`; its sha256 starts `70b4e4bd…`.
+- The board pointer is `v2lbozmd…`, and the evidence pointer (§22) is `7o6t4xpu…`.
+
+What changed from v8:
+
+- **Lead.** The claim is restated: raw observations, addressable by place, band and time. The evidence survives a handoff, and agents cannot write observations.
+- **Drift taxonomy (7 real cases).** Six are located by one field of the record. The seventh, the referent (the Maasvlakte entity), is not caught.
+- **Raw-band run.** It was pre-registered (blake3 `30d8a1a1…`), with n = 10 runs of Claude Sonnet 5.5 and emem's full MCP.
+  - The result is reported as it came out. emem's raster tool served the 25 Sep scene when asked for 23 Sep (defect 27).
+  - One run reached the containing pixel and got ΔNDVI −0.015. None said "greener".
+  - Data: `research/repro/data/v9/rawband/`.
+- **Since the paper was accepted.** Clay, Prithvi, Galileo and JEPA-v2 were removed, and TESSERA is frozen. The panel explains why a recomputable raw band read differs from an `attester_only` embedding, and notes that the OS-trace device gate admits no real hardware yet.
+- **Where emem lost.** It shows the authors' scorecard (§19) and the README results table (§25), with their scope stated.
+- **New steps.** Steps 23–26 are doc rows at emem `18adb67`, and 27–28 are the 23 Sep post-fix B04/B08 facts.
+- **Traffic.** It is now one footer line.
+- **Defects.** New ones, 27–31, are in `research/do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md`. They cover:
+  - 27: the raster date substitution;
+  - 28: the README's 27.8 % / 1.4 % does not reproduce p = 0.035;
+  - 29: read tools sign new records;
+  - 30: the "independent witnesses" wording;
+  - 31: entity receipts are v1, which ememdemo rejects.
+
 ## v8: the poster is itself an emem track (30 Sep 2026)
 
 Every `§n` on the board is step n of one signed emem track. Scan the seal QR, or open:

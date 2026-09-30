@@ -1,3 +1,11 @@
+> **v9 (2026-09-30):** the board track is now `njedkglt/d7aoricjy4rnm4g5ykil6a4zre.md`, with 28 of 28 steps checked. The board adds:
+> - a drift taxonomy;
+> - a pre-registered raw-band run, in which emem's raster tool substituted dates (defect 27);
+> - "since acceptance": emem retired its foundation-model encoders;
+> - "where emem lost".
+>
+> Do not claim "no memory poisoning". emem's own reader wrote 162 of 200 wrong-pixel records, and entity referents are not bound by bytes. Do not claim OS traces are live: the device gate admits no real hardware.
+
 > **v8 (2026-09-30):** the poster is an emem track (22 steps, 22/22 in ememdemo): `emem.dev/memories/by_attester/njedkglt/qw5zd3de2lyo532g66kva5t5oe.md`, head `zvy3kzpm4a4nkhrnb3h5gtkf7i`. See `poster/README.md` (v8). The v8 findings are:
 > - The pixel-rounding audit: 162 of 200 pre-fix S2 records carry a neighbouring pixel's DNs.
 > - The two-LLM pre-registered handoff. Claude Haiku as B declined 5 of 5 forged tokens. The Qwen2.5-3B arm misapplied the rule and did not decline forged tokens.
