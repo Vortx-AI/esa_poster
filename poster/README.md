@@ -12,6 +12,26 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
+## v11: the token family, one address (30 Sep 2026)
+
+- **Seal track:** `njedkglt/qfkcuqcmhvswbe5slcyoxjkwoe.md`, with 30 of 30 steps checked in ememdemo.
+- **Head:** `sxmlncauzwifezmahgyo7mpkti`. The track is log entry 2,573,960.
+- **Hashed board:** board.jpg with the seal box blank, at commit `6eb27a9` (sha256 `42690cb9…`).
+
+What changed:
+
+- **The token family.** A 14-row table next to the lead shows each data need, the token that addresses it, exactly what its id hashes, and where it appears on the board. The kinds are:
+  - place, one value, absence, embedding, derived value;
+  - raster, cube, rasterset, bundle;
+  - tree (a file, one chunk), state (a reasoning stage);
+  - entity, trace (a device run), track.
+
+  An embedding is one row of fourteen.
+- **One address, every product** (panel 3). One cell, Keylong, `emem:cell:defi.zb572.xoso.zb1ec` (§29), holds 207 signed facts from 13 products: Sentinel-2 B04, B08, SCL, NDVI, NDWI and NBR, Sentinel-1 VV, Copernicus DEM, JRC surface water, DMSP night lights, met.no temperature, and the TESSERA and Prithvi embeddings. The current fact for each product re-hashes, 13 of 13.
+- **Reasoning stages as tokens.** Every stage of an `/v1/ask` answer (located, routed, recalled, scored) carries an `emem:state:` address. All four recompute from the published fields with stock cbor2 + blake3 (`research/repro/data/v11/recompute_state.py`). The scored stage is §30.
+- **Defect 37.** `/v1/ask` read "Keylong" as the town point 597 m away and ignored the coordinates in the question.
+- **Layout.** Panels are renumbered 1–13 in reading order, "integrity elsewhere" was removed, and the zoom went from 1.0 to 0.95.
+
 ## v10: the algorithms on the board (30 Sep 2026)
 
 - **Seal track:** `njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md`, head `q62y7frkthtivnqrynwt6iradm`.
