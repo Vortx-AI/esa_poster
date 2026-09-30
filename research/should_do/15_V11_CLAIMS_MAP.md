@@ -89,7 +89,7 @@ cases as mutations M2, M4, M5, M15 and M17, each marked "seen in production". Th
 | BM25 | 16/16; dense 4/142 exact, up to 138 confidently wrong, median 252 m | §25 |
 | encoders | Clay, Prithvi-EO-2.0, Galileo, JEPA removed §23; old vectors resolve §24 | track (doc rows). Pre-retirement vector recall was not exercised end-to-end by the inventory |
 | guardrail vs provenance vs STAC | positioning, no number | GeoGuard (same session), Provenance-First Geospatial Composition (Session 2), STAC/C2PA/PROV |
-| operator | 111 witness keys; one domain-vouched, geo.qa, also Vortx AI | /v1/log/witnesses (live) |
+| operator | 111 witness keys (109 key-only, 2 organisation-vouched); one independent operator domain, geo.qa, also Vortx AI | /v1/log/witnesses `.witness_keys_by_tier`, `.independent_operator_domains` (live, 30 Sep) |
 
 ## Removed from v10 because no source is committed
 
