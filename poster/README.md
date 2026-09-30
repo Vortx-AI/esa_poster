@@ -12,6 +12,24 @@ Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS
 and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
 2026-09-29 (`../research/repro/`).
 
+## v7 distribution + reasoning edit — 30 Sep 2026
+
+This pass moves the poster from “protocol internals” to the broader research claim that emem is already a live **distribution layer for citeable physical-world evidence across agent runtimes**.
+
+- Added the precise split between **lookup identity** and **content identity**:
+  - `cell64 × band × tslot` finds where/what/when.
+  - `fact_cid = BLAKE3(emem-CBOR(record))` identifies exactly which signed record.
+  - `emem:fact:<cell>:<cid>` is the handoff reference.
+- Reframed the EO path as **keep the source scene upstream; move the address into reasoning**.
+- Added a live-runtime strip: **ChatGPT @emem, Claude.ai / Claude Code, Dify, MCP, A2A, Python/TypeScript and framework agents**.
+- Made the accepted-title phrase **“over Foundation-Model Embeddings”** visible through the live **Tessera 128-D → model_output fact → fact_cid** path.
+- Added the measured bundle mechanism to long-horizon handoff: up to 256 fact references under a compact handle; explicitly notes that individual fact tokens are not a context-compression claim.
+- Renamed the core sections to technical nouns: **CONTENT ID, HANDOFF, FIELD / CUBE / EMBEDDING, CLAIM CHECK**.
+- Turned the single QR into a conference experiment: get a token in one agent, paste it into another, resolve/re-hash/verify and compare the cited record.
+- The underlying science remains frozen to the 29 Sep evidence set; live integration availability was re-checked on 30 Sep.
+
+The HTML source changed; re-render PDF/PNG before review or print.
+
 ## v5 wall edit — 30 Sep 2026
 
 The A0 source was simplified after the research audit without deleting the underlying work.
