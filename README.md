@@ -52,7 +52,7 @@ the reasons for the redesign are in [research/should_do/16_V11_CRITIQUE_AND_DECI
 Independent audits of emem and of the v10 claims are in [research/audit_v11/](research/audit_v11/).
 The v10 board is kept in [poster/archive/v10/](poster/archive/v10/).
 
-**To edit or extend the board, start with [research/should_do/18_V11_PROCESS_AND_HANDOFF.md](research/should_do/18_V11_PROCESS_AND_HANDOFF.md).**
+**To edit or extend the board, start with [AGENTS.md](AGENTS.md), then the [session log](research/sessions/2026-09-30_v11/README.md) and [next steps](research/sessions/2026-09-30_v11/NEXT_STEPS.md).**
 
 ## Sample visuals (early exploration, superseded)
 
