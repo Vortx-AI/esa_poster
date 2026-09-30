@@ -80,7 +80,7 @@
   "rows": [
    {
     "product": "Sentinel-2C MSI L2A",
-    "reading": "NIR reflectance 0.0475",
+    "reading": "B08 NIR reflectance 0.0475",
     "fact_cid": "wtqd64payr37jhzyk624ii4gc6k4in5q7kpr7tabob5lah4yquta",
     "class": "direct_sensor",
     "kind": "primary"
@@ -94,21 +94,21 @@
    },
    {
     "product": "Sentinel-1 C-SAR GRD, RTC",
-    "reading": "VV backscatter \u22122.82 dB",
+    "reading": "VV gamma-naught \u22122.82 dB, 1 px",
     "fact_cid": "2x2enxej23rl4hpkycidwmy3brqfrhghqiucrrwzf6o76a53lyjq",
     "class": "direct_sensor",
     "kind": "primary"
    },
    {
     "product": "Copernicus DEM GLO-30",
-    "reading": "elevation 36.6 m",
+    "reading": "surface height 36.6 m (DSM)",
     "fact_cid": "sdu3gfiu4hioukhphatvgoir52dwju7eukdwosfkxt4ndopahz4a",
     "class": "direct_sensor",
     "kind": "primary"
    },
    {
     "product": "Terra MODIS MOD11A2",
-    "reading": "day surface temp. 297.4 K",
+    "reading": "daytime LST 297.4 K (1 km)",
     "fact_cid": "yqhihmuyozdm2urlpk5nxzkoozct65y6shsysttouoy27ddklhnq",
     "class": "unclassified",
     "kind": "primary"
@@ -121,7 +121,7 @@
     "kind": "primary"
    },
    {
-    "product": "ESA CCI Biomass v7",
+    "product": "ESA CCI Biomass, 100 m",
     "reading": "biomass 0 t/ha",
     "fact_cid": "keebyc7rs63obeuiprdromm5spnlokjs7zbsywmkt6vfumqrwtta",
     "class": "model_output",
@@ -142,14 +142,14 @@
     "kind": "primary"
    },
    {
-    "product": "JRC Forest Cover 2020",
-    "reading": "not forest (EUDR baseline)",
+    "product": "JRC GFC2020 V4",
+    "reading": "not forest in 2020",
     "fact_cid": "oog2b4aykebescspshijuxiwuq3dfxdjp47yd4vwxy4pqdnlmwcq",
     "class": "model_output",
     "kind": "primary"
    },
    {
-    "product": "Copernicus CAMS",
+    "product": "CAMS forecast, Open-Meteo",
     "reading": "surface NO$_2$ 12.3 \u00b5g/m\u00b3",
     "fact_cid": "jvwhwgm6gu6irtd26rsfkkeg6hw72amealfuxdepxam7fpnlf4za",
     "class": "model_output",
@@ -185,7 +185,7 @@
    },
    {
     "product": "NASA FIRMS, VIIRS + MODIS",
-    "reading": "no active fire in 24 h",
+    "reading": "no fire detected in 24 h",
     "fact_cid": "k2ykb2dshtzcfamtdrwd6peav4tct3gh4wc4pmhnhcvu27wvu6ma",
     "class": "unclassified",
     "kind": "absence"
@@ -292,6 +292,42 @@
    ],
    "spacing_deg": 0.006667,
    "note": "each grid node is one sampled cell64 (about 10 m); nodes are about 740 m apart; values are point samples, not area means"
+  },
+  "card": {
+   "cell": "defi.zb391.taza.zcc31",
+   "ndvi_date": "2026-09-28",
+   "rows": [
+    [
+     "Hansen loss year",
+     "2023",
+     "6rtcbfumrzhac2a32vkoixocgtel7ws5bxnra2omnrjv5apyfnea"
+    ],
+    [
+     "Hansen tree cover 2000",
+     "100 %",
+     "iv6mhn5veoaoglxzs6mda62gjjiiadn2cjibfidkqz565oaipqiq"
+    ],
+    [
+     "JRC GFC2020 V4",
+     "forest",
+     "ncupl5ptbfrz5kgis4swtfrvleqwcln4xvbpjxjaul3ocz3hznoq"
+    ],
+    [
+     "JRC TMF deforestation",
+     "2023",
+     "sw4zpem3spflpjnxetuxi6b63u62fghu7s6kufnludfzopd5n6sq"
+    ],
+    [
+     "CCI biomass 2022",
+     "208 t/ha",
+     "yc5qjlghl6mwy5kmqggtma64yro6gfjg4poocqsawqwd24wh5uoq"
+    ],
+    [
+     "Sentinel-2 NDVI",
+     "0.43",
+     "ojbthm4vcir7q5j3t62hcmbdnxffnvejfn5yzqiwsrbunq32dnsq"
+    ]
+   ]
   }
  },
  "r4": {
@@ -332,6 +368,28 @@
     "2026-09-29",
     915.0712280273438
    ]
+  ]
+ },
+ "m15": {
+  "window": "oj5cecci S2A 2026-09-25 (signed 2026-09-28T09:06Z, post-fix) offset -1000",
+  "genuine": 0.4708994708994709,
+  "south": 0.3015512674990541,
+  "rule": 0.4705,
+  "named_px": [
+   2,
+   2
+  ],
+  "read_px": [
+   3,
+   2
+  ],
+  "pre": [
+   162,
+   200
+  ],
+  "post": [
+   0,
+   54
   ]
  },
  "sat042": {
