@@ -23,7 +23,7 @@ This folder is the shared decision memory for the ESA / BIFOLD Agentic AI for Ea
 - [do_not_use/01_CROWDED_AND_UNSAFE_CLAIMS.md](do_not_use/01_CROWDED_AND_UNSAFE_CLAIMS.md) — crowded claims, novelty traps and overclaims.
 - [do_not_use/02_AI_TELLS.md](do_not_use/02_AI_TELLS.md) — visual and language patterns that make the poster look generated or commercial.
 - [do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md](do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md) — 16 statements in the earlier concept that the code contradicts.
-- [do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md](do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md) — 22 defects/inconsistencies for the maintainers (incl. geo.qa is Vortx-operated, not independent).
+- [do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md](do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md) — 36 defects/inconsistencies for the maintainers (incl. geo.qa is Vortx-operated, not independent).
 - [do_not_use/04_REFUTED_UNMEASURED_AND_ROADMAP.md](do_not_use/04_REFUTED_UNMEASURED_AND_ROADMAP.md) — refuted, unmeasured, roadmap-only and stale claims.
 
 ## Reproduce
@@ -44,3 +44,9 @@ This folder is the shared decision memory for the ESA / BIFOLD Agentic AI for Ea
 > **Agents hand each other the address of a signed physical observation instead of a sentence about it — and any receiver can re-hash and verify it offline.**
 
 The content address is the mechanism. The measured consequence: paraphrase handoffs can raise agreement while lowering correctness (0/72, p = 0.035); addressed handoffs stay exact and citable. See [RESEARCH_STATE.md](RESEARCH_STATE.md).
+
+## v11 (30 Sep 2026)
+
+- [`should_do/15_V11_CLAIMS_MAP.md`](should_do/15_V11_CLAIMS_MAP.md): every number on the v11 board, its source and its evidence class.
+- [`should_do/16_V11_CRITIQUE_AND_DECISIONS.md`](should_do/16_V11_CRITIQUE_AND_DECISIONS.md): what was wrong with v10, what v11 does, the refutation policy, and what is open before printing.
+- [`audit_v11/`](audit_v11/): two independent audits. `emem_capability_index.*` maps all of emem at HEAD e226f8b with code pointers and live counts; `poster_evidence_audit.*` checks the 96 claims printed on v10.

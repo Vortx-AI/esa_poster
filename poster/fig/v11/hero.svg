@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 797 224" width="797mm" height="224mm"><defs>
+<marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#141414"/></marker>
+<marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#1F4FD8"/></marker>
+<marker id="d" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#B3261E"/></marker>
+<marker id="c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#A86B00"/></marker>
+<clipPath id="imgclip"><rect x="0" y="12" width="165" height="169" rx="2"/></clipPath>
+</defs><text x="0.0" y="7.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#85857E" text-anchor="start">THE WORLD WRITES</text>
+<image href="fig/keylong_truecolor.png" x="0" y="12" width="165" height="169" preserveAspectRatio="xMidYMid slice" clip-path="url(#imgclip)"/>
+<rect x="81.15" y="88.1765" width="6" height="6" rx="0.3" fill="none" stroke="#FFFFFF" stroke-width="0.7"/>
+<rect x="0" y="169" width="165" height="12" fill="#141414" fill-opacity="0.72"/>
+<text x="3.0" y="177.0" font-family="Plex" font-size="4.5" font-weight="500" fill="#FFFFFF" text-anchor="start">Keylong, Himalaya · Sentinel-2 L2A · 25 Sep 2026</text>
+<line x1="4" y1="16" x2="41.2" y2="16" stroke="#FFFFFF" stroke-width="0.8"/>
+<text x="4.0" y="21.0" font-family="Plex" font-size="3.6" font-weight="500" fill="#FFFFFF" text-anchor="start">1 km</text>
+<text x="0.0" y="188.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">a 2.02 GB scene; the square marks the cell</text>
+<text x="0.0" y="194.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">of the NDVI record (drawn 100 m wide)</text>
+<text x="0.0" y="203.5" font-family="Plex" font-size="4.8" font-weight="600" fill="#85857E" text-anchor="start">OTHER WRITERS</text>
+<rect x="0" y="205.7" width="34" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="17.0" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">Copernicus DEM</text>
+<rect x="37" y="205.7" width="32" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="53.0" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">Overture Maps</text>
+<rect x="72" y="205.7" width="21" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="82.5" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">weather</text>
+<rect x="96" y="205.7" width="44" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="118.0" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">TESSERA (retired)</text>
+<rect x="0" y="214.7" width="92" height="7" rx="1.2" fill="#FFFFFF" stroke="#85857E" stroke-width="0.4" stroke-dasharray="1.2 0.8"/>
+<text x="46.0" y="219.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#85857E" text-anchor="middle">device gate: ships, no hardware enrolled yet</text>
+<path d="M169 70 L208 70" stroke="#141414" stroke-width="0.9" fill="none" marker-end="url(#a)"/>
+<text x="189.0" y="64.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="middle">read</text>
+<text x="189.0" y="78.0" font-family="Plex" font-size="4.3" font-weight="500" fill="#46463F" text-anchor="middle">1.17 MB</text>
+<text x="189.0" y="83.5" font-family="Plex" font-size="4.3" font-weight="500" fill="#46463F" text-anchor="middle">0.058 %</text>
+<rect x="212" y="12" width="296" height="176" rx="3" fill="#E7ECFA" stroke="#1F4FD8" stroke-width="0.8"/>
+<text x="217.0" y="20.8" font-family="Plex" font-size="6.0" font-weight="700" fill="#1F4FD8" text-anchor="start">FACT PLANE</text>
+<text x="254.0" y="20.8" font-family="Plex" font-size="4.5" font-weight="500" fill="#46463F" text-anchor="start">observations, written only by emem's own readers and listed keys</text>
+<circle cx="501" cy="19" r="4.6" fill="#1F4FD8"/>
+<text x="501.0" y="20.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C3</text>
+<rect x="217" y="26" width="286" height="75" rx="1.5" fill="#FFFFFF" stroke="#141414" stroke-width="0.45"/>
+<text x="221.0" y="33.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="start">one observation, one record</text>
+<text x="499.0" y="33.5" font-family="Plex" font-size="4.5" font-weight="500" fill="#46463F" text-anchor="end">1,115 bytes, deterministic CBOR</text>
+<text x="221.0" y="41.5" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">cell</text>
+<text x="248.0" y="41.5" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">defi.zb572.xoso.zb1ec</text>
+<text x="499.0" y="41.5" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">where: a 9.5 × 8.1 m cell</text>
+<text x="221.0" y="48.7" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">band</text>
+<text x="248.0" y="48.7" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">indices.ndvi</text>
+<text x="499.0" y="48.7" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">what</text>
+<text x="221.0" y="55.9" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">tslot</text>
+<text x="248.0" y="55.9" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">20721</text>
+<text x="499.0" y="55.9" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">valid time: 25 Sep 2026</text>
+<text x="221.0" y="63.1" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">value</text>
+<text x="248.0" y="63.1" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">0.4708994708994709</text>
+<text x="499.0" y="63.1" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">(B08 − B04)/(B08 + B04)</text>
+<text x="221.0" y="70.3" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">sources</text>
+<text x="248.0" y="70.3" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">S2A_MSIL2A_20260925T054251_R005_T43SFS</text>
+<text x="221.0" y="77.5" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start"></text>
+<text x="248.0" y="77.5" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">DN B08 3502 · B04 1900 · offset −1000</text>
+<text x="499.0" y="77.5" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">inputs, re-readable</text>
+<text x="221.0" y="84.7" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">signer</text>
+<text x="248.0" y="84.7" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">777er3yi…</text>
+<text x="221.0" y="91.9" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">signed_at</text>
+<text x="248.0" y="91.9" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">2026-09-28T09:06:56Z</text>
+<text x="499.0" y="91.9" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">record time</text>
+<circle cx="216" cy="28" r="4.6" fill="#1F4FD8"/>
+<text x="216.0" y="29.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C1</text>
+<path d="M360.0 102 L360.0 110" stroke="#141414" stroke-width="0.8" fill="none" marker-end="url(#a)"/>
+<text x="365.0" y="107.8" font-family="Plex" font-size="4.4" font-weight="600" fill="#141414" text-anchor="start">BLAKE3-256, base32: the name</text>
+<rect x="217" y="111" width="286" height="11" rx="1.5" fill="#FFFFFF" stroke="#1F4FD8" stroke-width="0.6"/>
+<text x="221.0" y="118.6" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">fact_cid</text>
+<text x="248.0" y="118.6" font-family="PlexMono" font-size="4.5" font-weight="500" fill="#141414" text-anchor="start">oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</text>
+<rect x="217.0" y="127" width="92.66666666666667" height="25" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<text x="220.5" y="134.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">signed in batches</text>
+<text x="220.5" y="140.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">Ed25519 over the Merkle</text>
+<text x="220.5" y="146.6" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">root of sorted fact_cids</text>
+<rect x="313.6666666666667" y="127" width="92.66666666666667" height="25" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<text x="317.2" y="134.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">append-only log</text>
+<text x="317.2" y="140.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">RFC 6962 shape,</text>
+<text x="317.2" y="146.6" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">2,568,005 entries on 30 Sep</text>
+<rect x="410.33333333333337" y="127" width="92.66666666666667" height="25" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<text x="413.8" y="134.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">signed absence</text>
+<text x="413.8" y="140.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">&#x27;looked, found nothing&#x27;,</text>
+<text x="413.8" y="146.6" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">with the bytes it read</text>
+<rect x="217" y="157" width="286" height="27" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<circle cx="216" cy="159" r="4.6" fill="#1F4FD8"/>
+<text x="216.0" y="160.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C2</text>
+<text x="223.0" y="164.5" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">two clocks</text>
+<text x="253.0" y="164.5" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">valid time (tslot) and record time (signed_at) are both in the bytes;</text>
+<text x="223.0" y="170.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">recall as of t returns what was signed by t. A correction is a new record; the old token still resolves.</text>
+<text x="223.0" y="177.1" font-family="Plex" font-size="4.3" font-weight="400" fill="#141414" text-anchor="start">Bengaluru elevation: 918.0 m signed in May, 915.07 m after the upstream DEM changed. Both verify.</text>
+<rect x="514" y="72" width="76" height="100" rx="2" fill="#FFFFFF" stroke="#1F4FD8" stroke-width="0.6"/>
+<line x1="552" y1="64" x2="552" y2="72" stroke="#1F4FD8" stroke-width="0.6" stroke-dasharray="1.2 0.9"/>
+<circle cx="584" cy="73" r="4.6" fill="#1F4FD8"/>
+<text x="584.0" y="74.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C4</text>
+<text x="518.0" y="80.5" font-family="Plex" font-size="4.7" font-weight="600" fill="#141414" text-anchor="start">the token: 84 characters</text>
+<text x="518.0" y="87.0" font-family="PlexMono" font-size="4.0" font-weight="500" fill="#1F4FD8" text-anchor="start">emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</text>
+<text x="518.0" y="95.5" font-family="Plex" font-size="4.5" font-weight="600" fill="#141414" text-anchor="start">one algebra, pixel to archive</text>
+<text x="518.0" y="104.0" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">fact</text>
+<text x="545.0" y="104.0" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">one value</text>
+<text x="518.0" y="113.9" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">raster</text>
+<text x="545.0" y="113.9" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">a field</text>
+<text x="518.0" y="123.8" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">cube</text>
+<text x="545.0" y="123.8" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">field × time</text>
+<text x="518.0" y="133.7" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">rasterset</text>
+<text x="545.0" y="133.7" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">fields, bound</text>
+<text x="518.0" y="143.6" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">tree</text>
+<text x="545.0" y="143.6" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">any file, in place</text>
+<text x="518.0" y="153.5" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">bundle</text>
+<text x="545.0" y="153.5" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">≤ 256 facts</text>
+<text x="518.0" y="163.4" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#46463F" text-anchor="start">entity</text>
+<text x="545.0" y="163.4" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">one thing, one name</text>
+<text x="596.0" y="7.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#85857E" text-anchor="start">AGENTS READ, CHECK AND CITE</text>
+<rect x="596.0" y="12" width="64.33333333333333" height="20" rx="2" fill="#FFFFFF" stroke="#141414" stroke-width="0.5"/>
+<text x="628.2" y="20.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="middle">agent A</text>
+<text x="628.2" y="27.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="middle">Claude</text>
+<rect x="664.3333333333334" y="12" width="64.33333333333333" height="20" rx="2" fill="#FFFFFF" stroke="#141414" stroke-width="0.5"/>
+<text x="696.5" y="20.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="middle">agent B</text>
+<text x="696.5" y="27.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="middle">Gemma</text>
+<rect x="732.6666666666666" y="12" width="64.33333333333333" height="20" rx="2" fill="#FFFFFF" stroke="#141414" stroke-width="0.5"/>
+<text x="764.8" y="20.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="middle">agent C</text>
+<text x="764.8" y="27.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="middle">Qwen · any model</text>
+<text x="596.0" y="39.5" font-family="Plex" font-size="4.4" font-weight="500" fill="#46463F" text-anchor="start">over MCP, A2A, REST or the Python and TypeScript SDKs</text>
+<rect x="596" y="45" width="201" height="76" rx="2" fill="#FFFFFF" stroke="#1F4FD8" stroke-width="0.6"/>
+<text x="600.0" y="53.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="start">each receiver checks, trusting no one</text>
+<circle cx="790" cy="46" r="4.6" fill="#1F4FD8"/>
+<text x="790.0" y="47.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C5</text>
+<circle cx="602" cy="59.5" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="60.8" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="607.0" y="61.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">bytes → name</text>
+<text x="642.0" y="61.0" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">re-hash to the fact_cid</text>
+<circle cx="602" cy="69.1" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="70.4" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="607.0" y="70.6" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">cell</text>
+<text x="642.0" y="70.6" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">record&#x27;s cell = token&#x27;s cell, else 409</text>
+<circle cx="602" cy="78.7" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="80.0" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="607.0" y="80.2" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">arithmetic</text>
+<text x="642.0" y="80.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">recompute NDVI from the DNs</text>
+<circle cx="602" cy="88.3" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="89.6" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="607.0" y="89.8" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">source</text>
+<text x="642.0" y="89.8" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">re-read the pixel in the public COG</text>
+<circle cx="602" cy="97.9" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="99.2" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="607.0" y="99.4" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">signature</text>
+<text x="642.0" y="99.4" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">Ed25519 receipt, offline</text>
+<circle cx="602" cy="107.5" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="108.8" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<text x="607.0" y="109.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">log</text>
+<text x="642.0" y="109.0" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">inclusion in the signed tree head</text>
+<path d="M508 64 L596 64" stroke="#1F4FD8" stroke-width="1.2" fill="none" marker-end="url(#b)"/>
+<text x="552.0" y="60.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#1F4FD8" text-anchor="middle">only the name crosses</text>
+<rect x="596" y="128" width="201" height="60" rx="3" fill="#FBF1DE" stroke="#A86B00" stroke-width="0.8"/>
+<text x="600.0" y="136.8" font-family="Plex" font-size="6.0" font-weight="700" fill="#A86B00" text-anchor="start">NOTE PLANE</text>
+<text x="638.0" y="136.8" font-family="Plex" font-size="4.5" font-weight="500" fill="#46463F" text-anchor="start">claims, written by agents under their own keys</text>
+<circle cx="790" cy="135" r="4.6" fill="#1F4FD8"/>
+<text x="790.0" y="136.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C6</text>
+<text x="601.0" y="145.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· signed notes, never instructions to the reader</text>
+<text x="601.0" y="153.9" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· hash-chained tracks (this board&#x27;s evidence is one)</text>
+<text x="601.0" y="162.3" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· derivations, re-run by emem before signing</text>
+<text x="601.0" y="170.7" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· a guard that refuses a wrong number</text>
+<text x="601.0" y="179.1" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· entities: one shared label for a place or thing</text>
+<path d="M610 121.5 L610 127.5" stroke="#A86B00" stroke-width="0.9" fill="none" marker-end="url(#c)"/>
+<text x="613.0" y="126.0" font-family="Plex" font-size="4.3" font-weight="600" fill="#A86B00" text-anchor="start">write</text>
+<path d="M596 180 L515 180" stroke="#B3261E" stroke-width="0.9" fill="none" stroke-dasharray="2 1.4" marker-end="url(#d)"/>
+<path d="M548 176 l8 8 M556 176 l-8 8" stroke="#B3261E" stroke-width="1.2"/>
+<text x="552.0" y="190.0" font-family="Plex" font-size="4.6" font-weight="700" fill="#B3261E" text-anchor="middle">agents cannot write observations</text>
+<text x="212.0" y="199.0" font-family="Plex" font-size="4.7" font-weight="600" fill="#141414" text-anchor="start">Keyed by where, what and when; named by the hash of its bytes.</text>
+<text x="212.0" y="205.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">Only the 84-character name travels; the bytes stay where anyone can re-read them.</text>
+<text x="596.0" y="199.0" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">Every check runs with stock libraries:</text>
+<text x="596.0" y="205.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">Python stdlib, blake3, cbor2, pynacl.</text></svg>

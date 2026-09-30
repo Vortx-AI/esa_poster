@@ -11,7 +11,9 @@ Preprint: DOI 10.5281/zenodo.20706893
 
 ## Poster thesis
 
-> **The satellite observation can outlive the agent.**
+> **One place, one address. One observation, one signed record. The record's name, not a paraphrase, is what crosses between agents.**
+
+(v11 headline. Earlier drafts used "The satellite observation can outlive the agent.")
 
 emem is not presented here as another EO tool or another retrieval layer. The poster should show the protocol invention:
 
@@ -41,7 +43,14 @@ Content addressing is the mechanism, not the headline.
 
 ## The poster
 
-**Print-ready A0 poster: [poster/](poster/README.md)** ([PDF](poster/emem-poster-A0.pdf), [preview](poster/emem-poster-preview.png)).
+**Print-ready A0 poster, v11: [poster/](poster/README.md)** ([PDF](poster/emem-poster-A0.pdf), [preview](poster/emem-poster-preview.png)).
+
+v11 presents emem as an invention: one address per place, one signed record per observation, and the record's
+name, not a paraphrase, crossing between agents. Six contributions, four results and eight answered objections.
+Every number is traced in [research/should_do/15_V11_CLAIMS_MAP.md](research/should_do/15_V11_CLAIMS_MAP.md);
+the reasons for the redesign are in [research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md](research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md).
+Independent audits of emem and of the v10 claims are in [research/audit_v11/](research/audit_v11/).
+The v10 board is kept in [poster/archive/v10/](poster/archive/v10/).
 
 ## Sample visuals (early exploration, superseded)
 
