@@ -29,6 +29,11 @@ STEPS = [
  ("the record and 19 withdrawals", N + "izycf6molcl5z53fkolqly57ze.md", "pointer.v1"),
  ("paraphrase-trap value, 17 Jul", F("ndvi_trap_17jul"), "fact"),
  ("the measurements behind the board", N + "3g76s4vrcboxicj6hrd2mztesu.md", "pointer.v1"),
+ ("CHANGELOG line 77, encoders retired", N + "jk7pfvdydjfdf5hxs3uozqaita.md", "pointer.v1"),
+ ("memory.md, TESSERA frozen", N + "f5hxjofpbmgzdialjilueeartu.md", "pointer.v1"),
+ ("results table and the safety result", N + "ay2lfw4pehm52gjzyn7rnu4szq.md", "pointer.v1"),
+ ("README, the device gate", N + "74gntpglvsg466a5vgevbvteme.md", "pointer.v1"),
+ ("entity, Maasvlakte ramp 7", "emem:entity:4itylz3kjtwy3lgr76ku52ffqa", "entity"),
 ]
 assert all(len(l) <= 40 and ":" not in l for l, _, _ in STEPS)
 link = cid(b""); rows = []

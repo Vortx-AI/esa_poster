@@ -1,14 +1,14 @@
 ---
 emem: track.v1
-steps: 22
-verified: 22 of 22
-head: zvy3kzpm4a4nkhrnb3h5gtkf7i
+steps: 27
+verified: 27 of 27
+head: 3zjc433mmusf4xjsjvw5chboz4
 chain: each link = blake3(previous link ‖ step reference), first 128 bits
 ---
 
 # EMEM poster, Agentic AI for Earth Observation, Berlin 2026
 
-> 22 steps, in order: step n is §n on the printed board. Each was re-checked where it stands; the chain's head commits to all of them and to their order.
+> 27 steps, in order: step n is §n on the printed board. Each was re-checked where it stands; the chain's head commits to all of them and to their order.
 
 | # | step | evidence | kind | checked | chain |
 |---|---|---|---|---|---|
@@ -34,3 +34,8 @@ chain: each link = blake3(previous link ‖ step reference), first 128 bits
 | 20 | the record and 19 withdrawals | https://emem.dev/memories/by_attester/njedkglt/izycf6molcl5z53fkolqly57ze.md | pointer.v1 | ✓ | w346qqzofbnumou27ppz5naydu |
 | 21 | paraphrase-trap value, 17 Jul | emem:fact:defi.zb572.xoso.zb1ec:jwkqm6ehelmzrwupfwyq2oqotiarexr5bdrt4xbl3znuynhurqxq | fact | ✓ | 7ji4wdkdwkuugxe6j6wwfs2cse |
 | 22 | the measurements behind the board | https://emem.dev/memories/by_attester/njedkglt/3g76s4vrcboxicj6hrd2mztesu.md | pointer.v1 | ✓ | zvy3kzpm4a4nkhrnb3h5gtkf7i |
+| 23 | CHANGELOG line 77, encoders retired | https://emem.dev/memories/by_attester/njedkglt/jk7pfvdydjfdf5hxs3uozqaita.md | pointer.v1 | ✓ | qmtmtqpue7f6se4mp2bcqkctwu |
+| 24 | memory.md, TESSERA frozen | https://emem.dev/memories/by_attester/njedkglt/f5hxjofpbmgzdialjilueeartu.md | pointer.v1 | ✓ | 5ntgtpvfxnrkl26y73b3hfwb3y |
+| 25 | results table and the safety result | https://emem.dev/memories/by_attester/njedkglt/ay2lfw4pehm52gjzyn7rnu4szq.md | pointer.v1 | ✓ | yscfwdjsnegedmg5z3dukyvbiq |
+| 26 | README, the device gate | https://emem.dev/memories/by_attester/njedkglt/74gntpglvsg466a5vgevbvteme.md | pointer.v1 | ✓ | mflohxrtkua6norbbc4tezdkom |
+| 27 | entity, Maasvlakte ramp 7 | emem:entity:4itylz3kjtwy3lgr76ku52ffqa | entity | ✓ | 3zjc433mmusf4xjsjvw5chboz4 |

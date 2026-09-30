@@ -49,12 +49,12 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
 .card{background:var(--box);border:.45mm solid var(--rule);padding:2.4mm 3mm;font-family:PlexMono,monospace;font-size:4.3mm;line-height:1.42;white-space:pre;overflow:hidden}
 .card .c{color:var(--muted)}
 /* hero */
-.hero{display:grid;grid-template-columns:246mm 1fr;gap:10mm}
-.sat{position:relative;background:#222;height:252mm;overflow:hidden}
+.hero{display:grid;grid-template-columns:220mm 1fr;gap:10mm}
+.sat{position:relative;background:#222;height:225mm;overflow:hidden}
 .sat img{width:100%;height:100%;object-fit:cover;display:block}
 .sat .mk{position:absolute;left:51.0%;top:46.9%;width:6mm;height:6mm;margin:-3mm 0 0 -3mm;border:.7mm solid #fff;box-shadow:0 0 0 .4mm rgba(0,0,0,.6)}
 .sat .sb{position:absolute;left:4mm;top:4mm;color:#fff;font-size:3.8mm;text-shadow:0 0 1.5mm #000}
-.sat .sb i{display:block;width:55.6mm;height:1mm;background:#fff;margin-top:1mm}
+.sat .sb i{display:block;width:49.7mm;height:1mm;background:#fff;margin-top:1mm}
 .sat .cap{position:absolute;left:0;right:0;bottom:0;background:rgba(20,20,20,.88);color:#EDEDE8;padding:3mm 4mm;font-size:4.2mm;line-height:1.36}
 .sat .cap .mono{color:#9FB7F5;font-size:4mm;word-break:break-all}
 /* trace */
@@ -81,13 +81,13 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
 <header>
   <div class="meta"><span>Agentic AI for Earth Observation · Berlin · 19 Oct 2026</span><span>Every <span class="s">§n</span> on this board is a step of one signed emem track · scan the seal, bottom right</span></div>
   <h1>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</h1>
-  <div class="by"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> — Vortx AI · paper doi:10.5281/zenodo.20706893 (v0.1.0; current method: whitepaper v3, emem <span class="mono">213e273</span>) · measurements 29–30 Sep 2026 · scripts: github.com/Vortx-AI/esa_poster</div>
+  <div class="by"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> — Vortx AI · paper doi:10.5281/zenodo.20706893 (v0.1.0; current method: whitepaper v3; emem 2.4.2 at <span class="mono">213e273</span> and <span class="mono">18adb67</span>) · measurements 29–30 Sep 2026 · scripts: github.com/Vortx-AI/esa_poster</div>
 </header>
 
 <section class="lead">
   <div class="q">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</div>
   <div>
-    <p class="ans">B receives a <b>token that names the record’s bytes</b>. emem stores each observation as a signed record named by the <b>BLAKE3 hash of its own bytes</b>. B fetches the bytes, re-hashes them, verifies the signed log entry and server receipt offline, and can walk the record back to the source pixel in the Sentinel-2 file.</p>
+    <p class="ans">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
     <p class="how">Token: <span class="mono">emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>. cell = 64-bit id of a ≈10 m lat/lng grid cell (here ≈9.5 m N–S × 8.1 m E–W); fact_cid = base32(BLAKE3-256(record bytes, deterministic CBOR)). A token cited under the wrong cell returns HTTP 409.</p>
   </div>
 </section>
@@ -162,10 +162,10 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   </div>
 </section>
 
-<!-- PLUGIN -->
+<!-- HANDOFF + COMPACTION -->
 <section class="row" style="grid-template-columns:1fr 1fr">
   <div class="sec">
-    <div class="k">5 · Two LLMs, emem as the only MCP server</div>
+    <div class="k">5 · Handoff: two LLMs, emem as the only MCP server</div>
     <h2>Pre-registered handoff: the token protects only an agent that refuses a mismatch</h2>
     <table class="d">
       <tr><th>B = Claude Haiku 4.5 receives</th><th>B correct</th><th>B checked</th></tr>
@@ -178,49 +178,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <p class="src">Pre-registration hashed before trial 1 (research/repro/data/v8/prereg.md). Claude arms: one model family for A and B.</p>
   </div>
   <div class="sec">
-    <div class="k">6 · Plugin traffic, as counted by emem.dev</div>
-    <h2>Traffic to emem.dev, by user-agent family</h2>
-    <table class="d">
-      <tr><th>counter (to 30 Sep 2026)</th><th></th></tr>
-      <tr><td>calls to the 114 MCP tools</td><td class="n">96,728</td></tr>
-      <tr><td>requests from Claude Code clients</td><td class="n">367,478</td></tr>
-      <tr><td>UA contains “claude”, other (incl. ClaudeBot)</td><td class="n">41,080</td></tr>
-      <tr><td>UA contains “openai” / “gpt” (incl. GPTBot)</td><td class="n">16,041</td></tr>
-      <tr><td>requests from Perplexity</td><td class="n">2,701</td></tr>
-      <tr><td>Smithery tool uses · uses of two Dify templates</td><td class="n">1,175 · 700</td></tr>
-      <tr><td>PyPI ememdev · npm @vortxai/emem, last month</td><td class="n">314 · 304</td></tr>
-    </table>
-    <p class="src">Lifetime counters from an undocumented start, read 30 Sep 09:12Z; request = any HTTP request, call = one MCP tool invocation; not unique users. Claude Code includes our own sessions. 96.2 % of the 56,523 signed agent notes come from 9 operator keys; 229 other keys, some of them Vortx sessions, wrote at most 2,070. Dify lists the plugin; the ChatGPT app is submitted, listing not verified.</p>
-  </div>
-</section>
-
-<!-- EO RECORDS -->
-<section class="row" style="grid-template-columns:1fr 1fr 1fr">
-  <div class="sec">
-    <div class="k">7 · Foundation-model embeddings</div>
-    <h2>A TESSERA vector, re-read bit-exact by anyone</h2>
-    <img class="fig" src="fig/tessera_strip.svg" alt="The 128 signed floats of the Tessera embedding at the Keylong cell">
-    <p class="t">At the same cell, emem signs the 128-D <b>TESSERA v1</b> (Cambridge; Sentinel-1 + Sentinel-2, 2024) embedding as a <span class="mono">model_output</span> record <span class="s">§9</span>. Two range reads of the public product on Source Cooperative (128 B int8 + 4 B scale) give all 128 floats back with max |Δ| = 0; 4 of 4 facts tested match.</p>
-    <p class="t">emem re-serves this product; it does not run the encoder, and emem’s resolve response says so (<span class="mono">tamper_evidence: attester_only</span>: only the signer vouches for the encoder step). Encoders emem did run, such as Clay v1.5 <span class="s">§10</span> (a Riyadh cell; now retired), record the BLAKE2b hash of the weights used.</p>
-  </div>
-  <div class="sec">
-    <div class="k">8 · Rasters through time</div>
-    <h2>A five-date B08 series; each member names its scene</h2>
-    <img class="fig" src="fig/cube_members.png" alt="Five B08 scenes of one cube with requested and used dates">
-    <p class="t">An <span class="mono">emem:cube:</span> token <span class="s">§6</span> signs a list of five B08 raster records; each member states the date asked for and the scene used (+10 to +29 days later). The newest scene under 40 % scene cloud in the window is used, even when a clearer, nearer one exists (3 Aug at 12.6 % over 17 Jul at 6.9 %); there is no pixel mask.</p>
-  </div>
-  <div class="sec">
-    <div class="k">9 · Observation time vs record time</div>
-    <h2>Two DEM values for one cell, both queryable by date</h2>
-    <img class="fig h" style="height:58mm" src="fig/two_clocks.svg" alt="Elevation served for one key against transaction time">
-    <p class="t">Bengaluru, Copernicus DEM, one cell: <b>918.0 m</b> from a 90 m source signed in May <span class="s">§12</span>, <b>915.07 m</b> (float32 as stored) after emem switched to the 30 m COG in August (<span class="s">§13</span>, re-signed 28 Sep). Querying “as known on 15 Jun” returns 918.0; both records still re-hash. Absence is also a record: an ocean point with no DEM tile returns a signed “no tile here” record <span class="s">§15</span>, distinct from an unsigned “could not look”.</p>
-  </div>
-</section>
-
-<!-- DRIFT + INTEGRITY -->
-<section class="row" style="grid-template-columns:1fr 1fr">
-  <div class="sec">
-    <div class="k">10 · Why a paraphrase is not a citation</div>
+    <div class="k">6 · Compaction: why a paraphrase is not a citation</div>
     <h2>After a shared summary, 0 of 72 answers were right, yet 3 of 36 pairs agreed</h2>
     <img class="fig" src="fig/drift_line.svg" alt="Number line: 0.48715 below the 0.488 threshold, the paraphrase 0.49 above it" style="max-height:44mm;width:auto;max-width:100%">
     <table class="d">
@@ -231,6 +189,57 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
       <tr><td colspan="3">wrong-but-agreeing pairs (3/36) exceed correct answers (0/72): Fisher one-sided p = 0.035 <span class="s">§17</span>; handoff n = 20 per arm: prose 2, dense retrieval 8, BM25 20, token bundle 20 <span class="s">§18</span></td></tr>
     </table>
     <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value observed 17 Jul and signed 18 Jul. It is a pre-fix read of the pixel south (section 3); the experiment tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs; the no-pressure arm is not significant (p = 0.109); six scoring bugs were found and corrected across two scorers. Related work: telephone-game drift (Perez et al., ICLR 2025), “Lost in Compaction” (arXiv 2608.11242), pointer-based compaction ARC (arXiv 2607.25066).</p>
+  </div>
+</section>
+
+<!-- DRIFT + RAW -->
+<section class="row" style="grid-template-columns:1.15fr .85fr">
+  <div class="sec">
+    <div class="k">7 · A drift taxonomy from real cases</div>
+    <h2>Seven ways cited evidence drifted, and the part of the record that shows each</h2>
+    <table class="d">
+      <tr><th>what drifted</th><th>real case</th><th>what shows it</th></tr>
+      <tr><td><b>the words</b></td><td>0.4871541501976284 retold as “≈ 0.49”; both models skipped irrigation <span class="s">§21</span></td><td>stated value ≠ signed value</td></tr>
+      <tr><td><b>the reader</b></td><td>162 of 200 pre-fix S2 records carry the pixel south <span class="s">§7</span> <span class="s">§8</span></td><td>re-reading the source pixel (links 8–9)</td></tr>
+      <tr><td><b>the source</b></td><td>Bengaluru elevation 918.0 → 915.07 m; “as known on 15 Jun” still returns 918.0 <span class="s">§12</span> <span class="s">§13</span></td><td>the derivation names a different source (Open-Meteo 90 m → Cop-DEM 30 m COG)</td></tr>
+      <tr><td><b>the date</b></td><td>a cube member asked for 15 May is the 10 Jun scene (+26 d) <span class="s">§6</span></td><td>each member states the date asked and the scene used</td></tr>
+      <tr><td><b>the place</b></td><td>a token re-labelled with another cell <span class="s">§4</span></td><td>the cell inside the bytes ≠ the token’s cell: refused</td></tr>
+      <tr><td><b>the signer</b></td><td>915.07 m signed 7 times: 7 fact_cids for one value <span class="s">§13</span></td><td>signer and signed_at are hashed; the shared key is (cell, band, tslot)</td></tr>
+      <tr><td><b>the referent</b></td><td>“Maasvlakte ramp 7” resolves to all of Maasvlakte, ≈ 12 × 10 km <span class="s">§27</span></td><td class="no">not caught: entity tokens are labels, not bytes</td></tr>
+    </table>
+    <p class="t">Six of the seven are located by one field of a recomputable record. A changed embedding shows only that the vector moved; it cannot say which input did.</p>
+  </div>
+  <div class="sec">
+    <div class="k">8 · Raw bands, the agent’s own method</div>
+    <h2>RAWBAND_H2</h2>
+    RAWBAND_BODY
+  </div>
+</section>
+
+<!-- SINCE + LOST + INTEGRITY -->
+<section class="row" style="grid-template-columns:1fr 1fr 1fr">
+  <div class="sec">
+    <div class="k">9 · Since the paper was accepted</div>
+    <h2>emem retired its foundation-model encoders</h2>
+    <p class="t">The accepted paper builds on embeddings. Since then Clay v1.5, Prithvi-EO-2.0, Galileo and the JEPA-v2 head were removed from the code <span class="s">§23</span>, and TESSERA is frozen on emem.dev; vectors signed before still resolve and verify <span class="s">§24</span>.</p>
+    <p class="t">The records show the difference. The TESSERA vector <span class="s">§9</span> re-reads bit-exact from its public product (128 B int8 + 4 B scale, max |Δ| = 0, 4 of 4), but it is <span class="mono">attester_only</span>: nobody can recompute the encoder step. The Clay vector <span class="s">§10</span> names its weights by BLAKE2b, and the code that ran them is gone. A raw band read <span class="s">§4</span> is recomputable by anyone from public bytes.</p>
+    <p class="t">A device that cannot be recomputed must bind its output inside a complete OS execution trace. That gate ships as code, with conformance vectors; it admits no real hardware yet <span class="s">§26</span>.</p>
+  </div>
+  <div class="sec">
+    <div class="k">10 · Where emem lost</div>
+    <h2>The authors’ own scorecard</h2>
+    <table class="d">
+      <tr><th>claim, as scored by the authors <span class="s">§19</span></th><th>verdict</th></tr>
+      <tr><td>survives compaction where a paraphrase does not</td><td class="ok">supported</td></tr>
+      <tr><td>beats plain context when the value fits</td><td class="no">refuted</td></tr>
+      <tr><td>beats BM25 on these corpora (BM25 16/16)</td><td class="no">refuted</td></tr>
+      <tr><td>single tokens save context (they cost 9.5× the LLM tokens)</td><td class="no">refuted</td></tr>
+      <tr><td>model agreement is evidence of correctness</td><td class="no">refuted, p = 0.035</td></tr>
+      <tr><td>a bundle saves context (38 chars for up to 256 facts)</td><td class="ok">supported</td></tr>
+      <tr><td>beats peer memory products</td><td>not tested</td></tr>
+    </table>
+    <p class="t">Dereferenced citations: <b>99.2 %</b> exact, 0 confidently wrong (84.4 % before four fixes the benchmark prompted); dense retrieval 4/142, up to 138 confidently wrong by a median 252 m. On a retrieval miss one model abstained 74/96 and the other gave a real neighbouring-cell value 93/96 <span class="s">§25</span>.</p>
+    <p class="src">Scope: 5 sites, 2 open 7–12B models, one host, no independent replication (labelled SAMPLE). The record lists nineteen withdrawn claims <span class="s">§20</span>.</p>
   </div>
   <div class="sec">
     <div class="k">11 · Integrity elsewhere</div>
@@ -268,10 +277,10 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
       <tr><td>A signature says who served a value, not that it is true.</td></tr>
       <tr><td>A fact_cid names one signed record; two signers of the same value mint different ids.</td></tr>
       <tr><td>Place and object (entity) tokens are labels; only fact, raster, cube and tree tokens hash bytes; a bundle hashes a citation list.</td></tr>
-      <tr><td>A signed “no data” is a claim; no complete tile index backs it.</td></tr>
+      <tr><td>A signed “no tile here” <span class="s">§15</span> is a claim; no complete tile index backs it.</td></tr>
       <tr><td>emem’s draft checker rejects “35 °C” citing a signed 28.0 °C <span class="s">§14</span>, but it judges at the writer’s precision and allows “≈ 0.49”; it does not check band or unit.</td></tr>
       <tr><td>Re-minting a raster yields a new token for identical pixels (signed_at is hashed).</td></tr>
-      <tr><td>One responder and one operator; the log co-signer is also Vortx AI. No read federation, no hardware attestation, nothing in orbit.</td></tr>
+      <tr><td>One responder and one operator; the only domain-vouched log co-signer, geo.qa, is also Vortx AI (109 other witness keys are unvouched). No read federation, no hardware attestation, nothing in orbit.</td></tr>
       <tr><td>The agent experiments are single-host samples without independent replication.</td></tr>
     </table>
   </div>
@@ -286,7 +295,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   </div>
 </section>
 
-<div class="foot"><span>§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements</span><span>Vortx AI</span></div>
+<div class="foot"><span>§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements · 23–26 doc rows at emem 18adb67 · 27 Maasvlakte entity. Traffic to 30 Sep: 96,728 MCP tool calls; PyPI 314 · npm 304 last month; 96.2 % of signed agent notes are from operator keys</span><span>Vortx AI</span></div>
 </div></div>
 </body>
 </html>

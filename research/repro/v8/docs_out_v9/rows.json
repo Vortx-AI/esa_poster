@@ -1,0 +1,56 @@
+{
+ "CHANGELOG.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/18adb67895d33c8b64d3b091a90af1f708315123/CHANGELOG.md",
+  "root": "srw5lhofr2nabpx3fax6sctnsywnh5qjfsvzpkhgvryfb6htehta",
+  "rows": [
+   {
+    "what": "line 77 \u00b7 Clay v1.5, Prithvi-EO-2.0, Galileo, JEPA-v2 removed; old facts still verify",
+    "offset": 17834,
+    "length": 377,
+    "blake3": "3k3lubdg43mjgxkxwhnfiqfn6srmtqimk6dvl7dhsdow3rcri7mq"
+   }
+  ]
+ },
+ "docs/memory.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/18adb67895d33c8b64d3b091a90af1f708315123/docs/memory.md",
+  "root": "xali2vdv27m3jptfttqwa6jxonkw4leaapxkd46m2yu5udgqgrnq",
+  "rows": [
+   {
+    "what": "lines 43\u201348 \u00b7 encoders removed from the code; geotessera retired on emem.dev",
+    "offset": 3866,
+    "length": 410,
+    "blake3": "rjzugg6bw74dukrgy2zgciapi7dhq6r24555pt4ptymn475cwlya"
+   }
+  ]
+ },
+ "docs/how-emem-compares.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/18adb67895d33c8b64d3b091a90af1f708315123/docs/how-emem-compares.md",
+  "root": "arbxjsuvjup7wofuxg7lxq3ysxafms2tvexe473wtajpolbx3yia",
+  "rows": [
+   {
+    "what": "lines 79\u201396 \u00b7 exact vs confidently wrong: citation 99.2 %, dense 4/142, BM25 16/16",
+    "offset": 4405,
+    "length": 1099,
+    "blake3": "aebrrax6skerfs5z2bs67wlg5er6qptyj7nhwtgznfen2xvs2p4q"
+   },
+   {
+    "what": "lines 102\u2013109 \u00b7 on retrieval failure: abstained 74/96, confident wrong 93/96",
+    "offset": 5672,
+    "length": 376,
+    "blake3": "w544or4afxpdl5alltzawb4c2o7i6ycvm736ciicf7rfv3eg7l2q"
+   }
+  ]
+ },
+ "README.md": {
+  "url": "https://raw.githubusercontent.com/Vortx-AI/emem/18adb67895d33c8b64d3b091a90af1f708315123/README.md",
+  "root": "humaqxpifyh4atdb5sydfu4nnjhsenuhntimrd46gt3g3kiwjxsq",
+  "rows": [
+   {
+    "what": "line 237 \u00b7 open archives are recomputable; the device gate admits no real hardware yet",
+    "offset": 19896,
+    "length": 449,
+    "blake3": "o5y4dmlkuxtwwcjpbbg3smqxru34cgwbxjknolpitoccydwhbgwq"
+   }
+  ]
+ }
+}
