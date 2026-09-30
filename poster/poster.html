@@ -18,7 +18,7 @@
 html,body{width:841mm;height:1189mm;background:var(--paper)}
 body{font-family:Plex,sans-serif;color:var(--ink);font-size:6mm;line-height:1.32;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:841mm;height:1189mm;padding:20mm 24mm 16mm}
-.inner{zoom:1.04;width:calc(793mm / 1.04);height:calc(1153mm / 1.04);display:flex;flex-direction:column;gap:5.5mm}
+.inner{zoom:1;width:793mm;height:1153mm;display:flex;flex-direction:column;gap:5.5mm}
 .mono{font-family:PlexMono,monospace} b{font-weight:600}
 .acc{color:var(--acc)} .bad{color:var(--bad)} .mu{color:var(--muted)} .i2{color:var(--ink2)}
 .s{font-family:PlexMono,monospace;font-weight:600;font-size:.8em;color:var(--acc);background:var(--accs);padding:0 .9mm;border-radius:.8mm;white-space:nowrap}
@@ -27,10 +27,17 @@ body{font-family:Plex,sans-serif;color:var(--ink);font-size:6mm;line-height:1.32
 h1{font-size:14.4mm;line-height:1.08;font-weight:600;letter-spacing:-.01em;margin-top:3.6mm}
 .by{font-size:6mm;margin-top:2.4mm;color:var(--ink2)} .by b{color:var(--ink)}
 /* lead */
-.lead{display:grid;grid-template-columns:1fr 1fr;gap:12mm;align-items:start}
-.q{font-size:11.2mm;line-height:1.12;font-weight:600;letter-spacing:-.012em}
+.lead{display:grid;grid-template-columns:.92fr 1.08fr;gap:10mm;align-items:start}
+.q{margin-bottom:3mm;font-size:10.4mm;line-height:1.12;font-weight:600;letter-spacing:-.012em}
 .ans{font-size:6.6mm;line-height:1.34;color:var(--ink2)} .ans b{color:var(--ink)}
 .how{margin-top:2.6mm;font-size:5.2mm;color:var(--ink2);border-left:1.3mm solid var(--acc);padding:1mm 0 1mm 3.4mm}
+/* algorithms */
+.alg{font-family:PlexMono,monospace;font-size:4.5mm;line-height:1.36;color:var(--ink);background:var(--accs);border-left:1.2mm solid var(--acc);padding:1.4mm 2.4mm;white-space:normal}
+.alg i{font-style:italic;font-family:Plex,sans-serif}
+.alg .c{color:var(--ink2);font-family:Plex,sans-serif}
+.formal{font-family:PlexMono,monospace;font-size:4.5mm;line-height:1.42;background:var(--box);border:.45mm solid var(--ink);padding:2.4mm 3mm;display:grid;grid-template-columns:17mm 1fr;gap:.6mm 3mm}
+.formal b{font-family:Plex,sans-serif;font-weight:600;color:var(--acc)}
+.formal .c{color:var(--ink2);font-family:Plex,sans-serif;grid-column:1/3;font-size:4.3mm;margin-top:.8mm}
 /* sections */
 .row{display:grid;gap:10mm}
 .sec{border-top:.7mm solid var(--ink);padding-top:2.6mm;display:flex;flex-direction:column;gap:2mm;min-width:0}
@@ -49,12 +56,12 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
 .card{background:var(--box);border:.45mm solid var(--rule);padding:2.4mm 3mm;font-family:PlexMono,monospace;font-size:4.3mm;line-height:1.42;white-space:pre;overflow:hidden}
 .card .c{color:var(--muted)}
 /* hero */
-.hero{display:grid;grid-template-columns:220mm 1fr;gap:10mm}
-.sat{position:relative;background:#222;height:225mm;overflow:hidden}
+.hero{display:grid;grid-template-columns:198mm 1fr;gap:10mm}
+.sat{position:relative;background:#222;height:203mm;overflow:hidden}
 .sat img{width:100%;height:100%;object-fit:cover;display:block}
 .sat .mk{position:absolute;left:51.0%;top:46.9%;width:6mm;height:6mm;margin:-3mm 0 0 -3mm;border:.7mm solid #fff;box-shadow:0 0 0 .4mm rgba(0,0,0,.6)}
 .sat .sb{position:absolute;left:4mm;top:4mm;color:#fff;font-size:3.8mm;text-shadow:0 0 1.5mm #000}
-.sat .sb i{display:block;width:49.7mm;height:1mm;background:#fff;margin-top:1mm}
+.sat .sb i{display:block;width:44.8mm;height:1mm;background:#fff;margin-top:1mm}
 .sat .cap{position:absolute;left:0;right:0;bottom:0;background:rgba(20,20,20,.88);color:#EDEDE8;padding:3mm 4mm;font-size:4.2mm;line-height:1.36}
 .sat .cap .mono{color:#9FB7F5;font-size:4mm;word-break:break-all}
 /* trace */
@@ -85,10 +92,19 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
 </header>
 
 <section class="lead">
-  <div class="q">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</div>
-  <div>
-    <p class="ans">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
-    <p class="how">Token: <span class="mono">emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>. cell = 64-bit id of a ≈10 m lat/lng grid cell (here ≈9.5 m N–S × 8.1 m E–W); fact_cid = base32(BLAKE3-256(record bytes, deterministic CBOR)). A token cited under the wrong cell returns HTTP 409.</p>
+  <div><div class="q">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</div>
+    <p class="ans">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p></div>
+  <div class="formal">
+    <b>fact</b><span>f = (kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key, args}, privacy, schema_cid, signer, signed_at)</span>
+    <b>bytes</b><span>b = CBOR(f), fields in declaration order; NaN → f9 7e00, −0 → +0</span>
+    <b>name</b><span>fact_cid = base32(BLAKE3-256(b)) · token emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>
+    <b>cell</b><span>lat_q = round((lat+90)/180·(2²¹−1)), lng_q = round((lng+180)/360·(2²²−1)); pitch 8.583·10⁻⁵° = 9.52 × 8.06 m here</span>
+    <b>time</b><span>tslot = ⌊unix / 86 400⌋ for Sentinel-2 (20721 = 25 Sep 2026)</span>
+    <b>recall</b><span>key k = (cell, band, tslot); as of t: argmax<sub>signed_at ≤ t</sub> (signed_at, cid)</span>
+    <b>sign</b><span>R = Merkle(sorted fact_cids); attestation = Ed25519(PreimageV1(“attestation”){R, registry, schema})</span>
+    <b>log</b><span>leaf = BLAKE3(0x00 ‖ BLAKE3(CBOR(attestation))), node = BLAKE3(0x01 ‖ l ‖ r) — RFC 6962 shape</span>
+    <b>receipt</b><span>σ = Ed25519(BLAKE3(“emem.preimage.v1\0” ‖ request_id ‖ served_at ‖ primitive ‖ cells ‖ fact_cids ‖ merkle))</span>
+    <span class="c">The memory, as coded at emem 18adb67 (fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest). A fact itself carries no signature: the attestation over its batch does, and the log holds the attestation.</span>
   </div>
 </section>
 
@@ -99,7 +115,8 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
   <div class="sec">
     <div class="k">1 · From scene to token</div>
     <h2>1.17 MB read from a 2.02 GB scene; the agent receives 84 characters</h2>
-    <img class="fig h" style="height:78mm" src="fig/byte_funnel.svg" alt="Scene 2,023,818,762 B; bytes read 1,165,033; signed fact 1,115 B; token 84 characters">
+    <div class="alg">pixel: col = ⌊i + (E − X)/s<sub>x</sub>⌋, row = ⌊j + (Y − N)/s<sub>y</sub>⌋ in UTM 43N · ρ = (DN + o)·10⁻⁴, o = −1000 if baseline ≥ 04.00 (PC) · NDVI = (ρ₈ − ρ₄)/(ρ₈ + ρ₄) · SCL ∈ {0,1,8,9,10} → next scene</div>
+    <img class="fig h" style="height:66mm" src="fig/byte_funnel.svg" alt="Scene 2,023,818,762 B; bytes read 1,165,033; signed fact 1,115 B; token 84 characters">
     <p class="t">By our reconstruction of its read path, emem range-reads <b>0.058 %</b> of the scene to sign one NDVI value: three 64 KiB COG headers and one tile each of B04, B08 and SCL. It stores the 1,115-byte record, not the tiles. The next agent receives 84 characters (46 GPT-4 tokenizer tokens).</p>
     <p class="t">We hashed the Earth Search (AWS) copies of the B08 and B04 COGs into two signed pointer notes <span class="s">§2</span> <span class="s">§3</span>: all 292 chunks of each (header + 291 tiles; 238.7 MB, 232.9 MB) under one Merkle root; the files stay on AWS. The tile holding the cell is <span class="mono">emem:tree:khiqtqrddb6jponqn4gv72if7e#row=108</span> (row = leaf index); its 1,586,895 bytes hash to that row. These are not the Planetary Computer file the NDVI was read from (281.9 MB, offset not pre-subtracted), and emem records no hash of that file.</p>
 <div class="card"><span class="c">§4 emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</span>
@@ -118,7 +135,8 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   <div class="sec">
     <div class="k">2 · Full trace</div>
     <h2>From one token to the source pixel, without emem software</h2>
-    <p class="t">A 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check.</p>
+    <div class="alg">accept ⇔ BLAKE3(b) = cid ∧ cell(b) = cell(token) ∧ NDVI(DN(b)) = value ∧ COG[row, col] = DN(b) ∧ Ed25519(σ) ∧ leaf ∈ STH ∧ STH<sub>geo.qa</sub> ⊑ STH</div>
+    <p class="t">A 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check. Ten client paths (REST, MCP, A2A, Python and TypeScript SDKs, LangChain, LlamaIndex, stock blake3) returned the same fact_cid, 3 repetitions each; a tampered mirror copy was rejected.</p>
     <div class="chain">
       <span class="i">1–3</span><span class="l">bytes → name</span><span class="r">1,115 B hash to the fact_cid; one flipped mantissa bit gives <span class="mono">mu5x2cks…</span> · <i>still trusted: nothing</i></span>
       <span class="i">4–5</span><span class="l">cell binding</span><span class="r">cell inside the hashed body = cell in the token; cell decodes to the lat/lng the derivation used · <i>nothing</i></span>
@@ -131,22 +149,23 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <p class="src">Links 1–5 and 12–14 fit in a 4,906-byte file (our format) that re-verifies 9 checks with networking disabled (unshare -rn) and lists the upstream byte ranges to re-read; a 1-bit tamper, a wrong cell or a wrong key fails it. research/repro/v8/trace_fact.py · verify_bundle.py · <span class="s">§22</span></p>
   </div>
   <div class="sec">
-    <div class="k">4 · One token, many clients</div>
-    <h2>Ten client paths, one record</h2>
+    <div class="k">11 · Integrity elsewhere</div>
+    <h2>What an agent can check today, by source</h2>
     <table class="d">
-      <tr><th>path</th><th>cid</th><th>re-hash</th><th>server sig.</th></tr>
-      <tr><td>REST · MCP (Streamable HTTP) · A2A JSON-RPC</td><td class="m">oj5cecci</td><td class="ok">3/3</td><td class="ok">3/3</td></tr>
-      <tr><td>Python SDK · TypeScript SDK</td><td class="m">oj5cecci</td><td class="ok">2/2</td><td class="ok">2/2 ‡</td></tr>
-      <tr><td>official MCP SDKs, LangChain MCP adapters, LlamaIndex tool</td><td class="m">oj5cecci</td><td class="ok">4/4</td><td>3/3 †</td></tr>
-      <tr><td>stock blake3 + cbor2 on the bytes</td><td class="m">oj5cecci</td><td class="ok">1/1</td><td>—</td></tr>
-      <tr><td>same bytes from an untrusted mirror; tampered copy</td><td class="m">j47f4xb3</td><td class="no">rejected</td><td></td></tr>
+      <tr><th>what the agent is handed</th><th>integrity it carries</th></tr>
+      <tr><td>Planetary Computer: 281,898,500 B B08 COG URL</td><td>opaque ETag, no checksum</td></tr>
+      <tr><td>Copernicus Data Space: 1,187,971,637 B SAFE</td><td>MD5 + BLAKE3 of the whole product, unsigned</td></tr>
+      <tr><td>NASA Earthdata MCP: a granule concept id (an HLS granule, Bengaluru)</td><td>catalogue revision; older revisions return 404</td></tr>
+      <tr><td>MCP tool results in general (spec 2026-07-28)</td><td>none; proposed in issue #3354</td></tr>
+      <tr><td><b>emem: one value</b></td><td><b>BLAKE3 name of the 1,115-byte record, ed25519 receipt, log inclusion</b></td></tr>
     </table>
-    <p class="src">3 repetitions each, 30 Sep 2026; value 0.4708994708994709 on every path. † the LlamaIndex tool drops the receipt. ‡ the TS SDK has no receipt verifier; ours was used. One responder (emem.dev) behind all paths: this shows client and protocol independence, not independent servers.</p>
+    <p class="t">STAC and COG locate and read data; openEO and Earth Engine compute; emem names the exact value an agent cited so another agent can check it. emem does not yet store a hash of the upstream bytes (<span class="mono">Source.hash</span> is empty), so the upstream read is checked by re-reading the pixel, as in section 2.</p>
   </div>
   </div>
   <div class="sec">
     <div class="k">3 · What the trace found</div>
     <h2>Before 28 Sep, 162 of 200 sampled records carry a neighbouring pixel</h2>
+    <div class="alg">pre-fix row = round(j + (Y − N)/s<sub>y</sub>): the south pixel whenever the fraction ≥ ½ · fixed: ⌊·⌋ · prevalence 162/200, Wilson score interval, z = 1.96</div>
     <img class="fig h" style="height:106mm" src="fig/pixel_audit.svg" alt="Two 5 by 5 NDVI windows around the cell: before the fix the signed DNs are the pixel south of the containing pixel">
     <p class="t">Re-reading the COGs named inside the signed records showed that the 23 Sep record <span class="s">§7</span> carries the DNs of the pixel <b>10 m south</b> (dashed red: 2993/1972, SCL 5 bare soil, NDVI <b>0.3444</b>). The pixel that contains the point (blue) reads 0.4860. emem had rounded the fractional pixel index; GDAL takes the floor. The fix shipped on 28 Sep <span class="s">§8</span>.</p>
     <table class="d">
@@ -163,10 +182,11 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
 </section>
 
 <!-- HANDOFF + COMPACTION -->
-<section class="row" style="grid-template-columns:1fr 1fr">
+<section class="row" style="grid-template-columns:.9fr 1.1fr">
   <div class="sec">
     <div class="k">5 · Handoff: two LLMs, emem as the only MCP server</div>
     <h2>Pre-registered handoff: the token protects only an agent that refuses a mismatch</h2>
+    <div class="alg">B acts ⇔ BLAKE3(b) = cid ∧ cell(b) = cell(token) · rule: irrigate ⇔ NDVI ≤ 0.4705 · Fisher exact, one-sided</div>
     <table class="d">
       <tr><th>B = Claude Haiku 4.5 receives</th><th>B correct</th><th>B checked</th></tr>
       <tr><td>A’s token</td><td class="n ok">10/10</td><td>resolve, re-hash, receipt 10/10</td></tr>
@@ -180,6 +200,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   <div class="sec">
     <div class="k">6 · Compaction: why a paraphrase is not a citation</div>
     <h2>After a shared summary, 0 of 72 answers were right, yet 3 of 36 pairs agreed</h2>
+    <div class="alg">H₁: P(pair agrees) &gt; P(answer correct) · Fisher exact one-sided on 3/36 vs 0/72 → p = 0.035 · rule: irrigate ⇔ NDVI &lt; 0.488</div>
     <img class="fig" src="fig/drift_line.svg" alt="Number line: 0.48715 below the 0.488 threshold, the paraphrase 0.49 above it" style="max-height:44mm;width:auto;max-width:100%">
     <table class="d">
       <tr><th>pre-registered, Gemma-4-12B + Qwen2.5-7B, one host</th><th>correct</th><th>agree</th></tr>
@@ -188,30 +209,31 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
       <tr><td>shared summary, no pressure</td><td class="n">20/72</td><td class="n">15/36</td></tr>
       <tr><td colspan="3">wrong-but-agreeing pairs (3/36) exceed correct answers (0/72): Fisher one-sided p = 0.035 <span class="s">§17</span>; handoff n = 20 per arm: prose 2, dense retrieval 8, BM25 20, token bundle 20 <span class="s">§18</span></td></tr>
     </table>
-    <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value observed 17 Jul and signed 18 Jul. It is a pre-fix read of the pixel south (section 3); the experiment tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs; the no-pressure arm is not significant (p = 0.109); six scoring bugs were found and corrected across two scorers. Related work: telephone-game drift (Perez et al., ICLR 2025), “Lost in Compaction” (arXiv 2608.11242), pointer-based compaction ARC (arXiv 2607.25066).</p>
+    <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value observed 17 Jul and signed 18 Jul. It is a pre-fix read of the pixel south (section 3); it tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs; no-pressure arm p = 0.109 (n.s.); six scoring bugs were corrected across two scorers. Related: Perez et al., ICLR 2025; arXiv 2608.11242; arXiv 2607.25066.</p>
   </div>
 </section>
 
 <!-- DRIFT + RAW -->
-<section class="row" style="grid-template-columns:1.05fr .95fr">
+<section class="row" style="grid-template-columns:.95fr 1.05fr">
   <div class="sec">
     <div class="k">7 · A drift taxonomy from real cases</div>
     <h2>Seven ways cited evidence drifted, and the part of the record that shows each</h2>
     <table class="d">
-      <tr><th>what drifted</th><th>real case</th><th>what shows it</th></tr>
-      <tr><td><b>the words</b></td><td>0.4871541501976284 retold as “≈ 0.49”; both models skipped irrigation <span class="s">§21</span></td><td>stated value ≠ signed value, if the reader compares (emem’s draft check allows “≈ 0.49”)</td></tr>
-      <tr><td><b>the reader</b></td><td>162 of 200 pre-fix S2 records carry the pixel south <span class="s">§7</span> <span class="s">§8</span></td><td>re-reading the source pixel (links 8–9)</td></tr>
-      <tr><td><b>the source</b></td><td>Bengaluru elevation 918.0 → 915.07 m; “as known on 15 Jun” still returns 918.0 <span class="s">§12</span> <span class="s">§13</span></td><td>the derivation names a different source (Open-Meteo 90 m → Cop-DEM 30 m COG)</td></tr>
-      <tr><td><b>the date</b></td><td>a raster asked for 23 Sep was the 25 Sep scene, no warning (section 8); a cube member asked for 15 May is the 10 Jun scene <span class="s">§6</span></td><td>the scene id and date inside the record</td></tr>
-      <tr><td><b>the place</b></td><td>a token re-labelled with another cell <span class="s">§4</span></td><td>the cell inside the bytes ≠ the token’s cell: refused</td></tr>
-      <tr><td><b>the signer</b></td><td>915.07 m signed 7 times: 7 fact_cids for one value <span class="s">§13</span></td><td>signer and signed_at are hashed; the shared key is (cell, band, tslot)</td></tr>
-      <tr><td><b>the referent</b></td><td>“Maasvlakte ramp 7” resolves to all of Maasvlakte, ≈ 12 × 10 km (<span class="mono">emem:entity:4itylz3k…</span>)</td><td class="no">not caught: entity tokens are labels, not bytes</td></tr>
+      <tr><th>what drifted</th><th>real case</th><th>the test that shows it</th></tr>
+      <tr><td><b>the words</b></td><td>0.4871541501976284 retold as “≈ 0.49”; both models skipped irrigation <span class="s">§21</span></td><td class="m">s ≠ v (only if the reader dereferences)</td></tr>
+      <tr><td><b>the reader</b></td><td>162 of 200 pre-fix S2 records carry the pixel south <span class="s">§7</span> <span class="s">§8</span></td><td class="m">DN(b) ≠ COG[⌊row⌋, ⌊col⌋]</td></tr>
+      <tr><td><b>the source</b></td><td>Bengaluru elevation 918.0 → 915.07 m; “as known on 15 Jun” still returns 918.0 <span class="s">§12</span> <span class="s">§13</span></td><td class="m">fn_key₁ ≠ fn_key₂ (open_meteo_copdem90m → copernicus_dem_30m_aws_pixel)</td></tr>
+      <tr><td><b>the date</b></td><td>a raster asked for 23 Sep was the 25 Sep scene, no warning (section 8); a cube member asked for 15 May is the 10 Jun scene <span class="s">§6</span></td><td class="m">date(scene) ≠ asked date</td></tr>
+      <tr><td><b>the place</b></td><td>a token re-labelled with another cell <span class="s">§4</span></td><td class="m">cell(b) ≠ cell(token) → refused</td></tr>
+      <tr><td><b>the signer</b></td><td>915.07 m signed 7 times: 7 fact_cids for one value <span class="s">§13</span></td><td class="m">k(f₁) = k(f₂), cid(f₁) ≠ cid(f₂)</td></tr>
+      <tr><td><b>the referent</b></td><td>“Maasvlakte ramp 7” resolves to all of Maasvlakte, ≈ 12 × 10 km (<span class="mono">emem:entity:4itylz3k…</span>)</td><td class="no">none: an entity token names a label, not bytes</td></tr>
     </table>
-    <p class="t">Six of the seven are located by one field of a recomputable record. A changed embedding shows only that the vector moved; it cannot say which input did.</p>
+    <p class="t">Six of the seven are one equality test on a field of a recomputable record. For an embedding the only test is e₁ ≠ e₂: it shows the vector moved, not which input did.</p>
   </div>
   <div class="sec">
     <div class="k">8 · Raw bands, the agent’s own method</div>
     <h2>Asked for 23 Sep raw bands, emem’s raster tool served the 25 Sep scene</h2>
+    <div class="alg">scene(t) = newest S2 item with cloud &lt; c in [t − D, min(t + D, now)], (c, D) ∈ (40 %, 30 d), (60 %, 60 d), (80 %, 90 d) · t = 23 Sep → window 24 Aug – 30 Sep → 25 Sep (10.8 %); the 23 Sep scene (20 %) cannot win</div>
     <table class="d">
       <tr><th>10 pre-registered runs, Claude Sonnet 5.5, emem as the only MCP server</th><th></th></tr>
       <tr><td>chose their own bands and formula: B04, B08, (B08−B04)/(B08+B04)</td><td class="n">10</td></tr>
@@ -223,16 +245,17 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
       <tr><td>wrongly said no 23 Sep scene exists</td><td class="n no">3</td></tr>
       <tr><td>cited ids that re-hash · data values traced to tool results</td><td class="n">30/30 · all</td></tr>
     </table>
-    <p class="t">The failure was emem’s, and the record exposed it: <span class="mono">emem_band_raster</span> with <span class="mono">observed_on</span> 23 Sep returned the byte-identical 25 Sep raster, with no warning, and the scene named inside that record is how nine agents saw it. Only one agent reached the containing pixel; no run said SCL.</p>
-    <p class="src">Pre-registration blake3 30d8a1a1… hashed 13:49Z, 30 Sep, before trial 1; write tools denied. The primary test (does the pre-fix record mislead?) could not run. emem’s read tools signed new records during the runs, so trials 9–10 were not independent. $2.12 in all. research/repro/data/v9/rawband · <span class="s">§22</span></p>
+    <p class="t">The failure was emem’s: <span class="mono">emem_band_raster</span> returned the byte-identical 25 Sep raster with no warning. The scene named inside the record is how nine agents saw it. No run used SCL.</p>
+    <p class="src">Pre-registration blake3 30d8a1a1… hashed 13:49Z, 30 Sep, before trial 1; write tools denied. The primary test (does the pre-fix record mislead?) could not run; emem’s read tools signed new records mid-run, so trials 9–10 were not independent. research/repro/data/v9/rawband · <span class="s">§22</span></p>
   </div>
 </section>
 
-<!-- SINCE + LOST + INTEGRITY -->
-<section class="row" style="grid-template-columns:1fr 1fr 1fr">
+<!-- SINCE + LOST -->
+<section class="row" style="grid-template-columns:.88fr 1.12fr">
   <div class="sec">
     <div class="k">9 · Since the paper was accepted</div>
     <h2>emem retired its foundation-model encoders</h2>
+    <div class="alg">TESSERA: e = f32(q<sub>int8</sub>) × f32(scale), 128 dims, recomputable only as a re-read · device: trace_root = Merkle(segment digests); a fact binds ⇔ BLAKE3(CBOR(value)) ∈ outputs; admit ⇔ no reject reason of 17</div>
     <p class="t">The accepted paper builds on embeddings. Since then Clay v1.5, Prithvi-EO-2.0, Galileo and the JEPA-v2 head were removed from the code <span class="s">§23</span>, and TESSERA is frozen on emem.dev; vectors signed before still resolve and verify <span class="s">§24</span>.</p>
     <p class="t">The records show the difference. The TESSERA vector <span class="s">§9</span> re-reads bit-exact from its public product (128 B int8 + 4 B scale, max |Δ| = 0, 4 of 4), but it is <span class="mono">attester_only</span>: nobody can recompute the encoder step. The Clay vector <span class="s">§10</span> names its weights by BLAKE2b, and the code that ran them is gone. A raw band read <span class="s">§4</span> is recomputable by anyone from public bytes.</p>
     <p class="t">A device that cannot be recomputed must bind its output inside a complete OS execution trace. That gate ships as code, with conformance vectors; it admits no real hardware yet <span class="s">§26</span>.</p>
@@ -240,6 +263,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   <div class="sec">
     <div class="k">10 · Where emem lost</div>
     <h2>The authors’ own scorecard</h2>
+    <div class="alg">exact ⇔ answer = signed value · confidently wrong ⇔ answered ∧ answer ≠ signed value · BM25 and dense retrieval top-5 over the same corpora</div>
     <table class="d">
       <tr><th>claim, as scored by the authors <span class="s">§19</span></th><th>verdict</th></tr>
       <tr><td>survives compaction where a paraphrase does not</td><td class="ok">supported</td></tr>
@@ -250,29 +274,17 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
       <tr><td>a bundle saves context (38 chars for up to 256 facts)</td><td class="ok">supported</td></tr>
       <tr><td>beats peer memory products</td><td>not tested</td></tr>
     </table>
-    <p class="t">Dereferenced citations: <b>99.2 %</b> exact, 0 confidently wrong (84.4 % before four fixes the benchmark prompted); dense retrieval 4/142, up to 138 confidently wrong by a median 252 m. On a retrieval miss one model abstained 74/96 and the other gave a real neighbouring-cell value 93/96 <span class="s">§25</span>.</p>
+    <p class="t">Dereferenced citations: <b>99.2 %</b> exact, 0 confidently wrong (84.4 % before four fixes); dense retrieval 4/142, up to 138 confidently wrong by a median 252 m. On a retrieval miss one model abstained 74/96 and the other gave a real neighbouring-cell value 93/96 <span class="s">§25</span>.</p>
     <p class="src">Scope: 5 sites, 2 open 7–12B models, one host, no independent replication (labelled SAMPLE). The record lists nineteen withdrawn claims <span class="s">§20</span>.</p>
-  </div>
-  <div class="sec">
-    <div class="k">11 · Integrity elsewhere</div>
-    <h2>What an agent can check today, by source</h2>
-    <table class="d">
-      <tr><th>what the agent is handed</th><th>integrity it carries</th></tr>
-      <tr><td>Planetary Computer: 281,898,500 B B08 COG URL</td><td>opaque ETag, no checksum</td></tr>
-      <tr><td>Copernicus Data Space: 1,187,971,637 B SAFE</td><td>MD5 + BLAKE3 of the whole product, unsigned</td></tr>
-      <tr><td>NASA Earthdata MCP: a granule concept id (an HLS granule, Bengaluru)</td><td>catalogue revision; older revisions return 404</td></tr>
-      <tr><td>MCP tool results in general (spec 2026-07-28)</td><td>none; proposed in issue #3354</td></tr>
-      <tr><td><b>emem: one value</b></td><td><b>BLAKE3 name of the 1,115-byte record, ed25519 receipt, log inclusion</b></td></tr>
-    </table>
-    <p class="t">STAC and COG locate and read data; openEO and Earth Engine compute; emem names the exact value an agent cited so another agent can check it. emem does not yet store a hash of the upstream bytes (<span class="mono">Source.hash</span> is empty), so the upstream read is checked by re-reading the pixel, as in section 2.</p>
   </div>
 </section>
 
 <!-- EMEMIFY + LIMITS + SEAL -->
-<section class="row" style="grid-template-columns:1.05fr .95fr 1.1fr">
+<section class="row" style="grid-template-columns:1fr 1.05fr 1.05fr">
   <div class="sec">
     <div class="k">12 · Ememify your work</div>
     <h2>Five steps to sign and cite your own values, each run on 29–30 Sep</h2>
+    <div class="alg">pointer.v1: leaf = BLAKE3(url ‖ u64 offset ‖ u64 length ‖ h), node = BLAKE3(l ‖ r), odd node promoted · derive accepted ⇔ ulp_gap(v<sub>caller</sub>, v<sub>emem</sub>) = 0 (≤ 4 for sum, mean, n &gt; 2)</div>
     <div class="ladder">
       <span class="t">1 min</span><span>Give your agent the MCP server: <span class="mono">claude mcp add --transport http emem https://emem.dev/mcp</span> (18 core tools, 114 in all).</span>
       <span class="t">10 min</span><span>Cite a value in a paper by its token and receipt; a Claude skill (research-grade-citation) drafts the methods text.</span>
@@ -285,6 +297,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   <div class="sec">
     <div class="k">13 · What is not established</div>
     <h2>What a signature does not show</h2>
+    <div class="alg">draft check allows ⇔ ∃ number a: round(a·10<sup>d</sup>)/10<sup>d</sup> = s, d = decimals written, s = signed value → “≈ 0.49” passes for 0.4871</div>
     <table class="d">
       <tr><td>A signature says who served a value, not that it is true.</td></tr>
       <tr><td>A fact_cid names one signed record; two signers of the same value mint different ids.</td></tr>
@@ -299,11 +312,12 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   <div class="sec">
     <div class="k">14 · Seal</div>
     <h2>Check this board</h2>
+    <div class="alg">link₀ = cid(“”), link<sub>i</sub> = base32(BLAKE3(link<sub>i−1</sub> ‖ ref<sub>i</sub>)[:16]); head = link<sub>n</sub></div>
     <div class="seal">
-      <div class="qr" id="qr"><img src="fig/seal_qr.png" alt="QR: vortx-ai.github.io/ememdemo/?s=emem.dev/memories/by_attester/njedkglt/d7aoricjy4rnm4g5ykil6a4zre.md"></div>
-      <div class="v" id="sealtext"><span style="font-family:Plex,sans-serif;word-break:normal"><b>Opens in ememdemo</b>, which re-hashes every §-step in your browser and recomputes the track’s hash chain.</span><br><br>track: emem.dev/memories/by_attester/njedkglt/d7aoricjy4rnm4g5ykil6a4zre.md<br>head: dr2tllnicvm32wvgziaw6ad57u (28 of 28 steps)<br>board.jpg sha256: 70b4e4bd7eb0477617c171f58b678dd6f1eff2dae1d531ae70ed878b10ecf91f<br>written after log size 2,567,387 (30 Sep 2026 14:08 UTC)<br>logged as entry 2,567,387</div>
+      <div class="qr" id="qr">QR to the track<br>(filled after the board’s bytes are published)</div>
+      <div class="v" id="sealtext"><span style="font-family:Plex,sans-serif;word-break:normal"><b>Opens in ememdemo</b>, which re-hashes every §-step in your browser and recomputes the track’s hash chain.</span><br><br>track: —<br>head: —<br>board.jpg sha256: —<br>written after log size: —</div>
     </div>
-    <p class="src">A file cannot contain its own hash, so this box is the only part of the board not inside the published bytes <span class="s">§1</span>. Signed by the poster key njedkglt…; scripts to re-check everything without the viewer: research/repro/v8/.</p>
+    <p class="src">A file cannot contain its own hash, so this box is the only part of the board not inside the published bytes <span class="s">§1</span>. Signed by the poster key njedkglt…; scripts to re-check everything without the viewer: research/repro/v8/; every formula on this board with its line in emem’s code: research/repro/v10/algorithms.md.</p>
   </div>
 </section>
 
