@@ -64,11 +64,22 @@ common decoder across three vendors (README lines 101 to 103), the geo.qa Doha d
 
 | result | printed | source | class | caveat that must travel |
 |---|---|---|---|---|
-| R1a | 72/72 and 36/36; 20/72 and 15/36; 0/72 and 3/36; one-sided Fisher p = 0.035 | §17 (emem docs row); recomputed 0.0350 by the claims audit | pre-reg | pairs and answers share trials, so the test is read as descriptive; two open models on one host |
-| R1b | prose 2/20, dense 8/20, BM25 20/20, bundle 20/20 | §18 | measured | single-token arm (16/20) excluded for a window bug; emem-authored benchmark |
-| R2 | 162/200 (81 %, Wilson 75 to 86 %); after the fix 49/49 read the containing pixel where rules differ | §7, §8; `research/repro/data/v8/prevalence_summary.json`, `pixel_windows.json` | measured | the neighbour is east, south or south-east (both axes were rounded); the pictured case is south |
-| R3 | token 10/10, prose 10/10, rounded 0/5, forged 5/5 declined | §22; `research/repro/data/v8/results.json` | pre-reg (rounded arm exploratory) | the re-hash and receipt were done by the harness, not by model B. The Qwen2.5-3B arm is withheld until its raw logs are committed |
-| R4 | seven drifts, six located by one field | v10 drift taxonomy; §4, §6, §7, §13, §21 | measured + track | the referent drift (Maasvlakte) is not caught; entity tokens are labels |
+| R1 | 17 mutations x 9 depths; acted on corrupted evidence: prose 15/15, JSON 15/15, opaque id 13/16, hash 12/16, binding 9/16, signature 3/16, log 2/16, recompute 1/16, re-read 0/16; decision flips in 6 of 16; leave-one-out shows binding, signature, log, recompute and re-read each necessary; genuine never refused | `research/repro/v11/mutation_suite.py`, `research/repro/v11/out/mutation_matrix.json` (inputs: `v8/proof_bundle_ndvi.cbor`, `data/v8/pixel_windows.json`) | measured, deterministic | tests the verifier, not a model; T2 rows use a TEST key the verifier trusts; the source re-read uses the committed 25 Sep window, so a forged scene id (M11) is caught by the signature, not by the re-read; the hash is subsumed by the signature; units, checkpoints, embeddings not covered |
+| R2 | 72/72 and 36/36; 20/72 and 15/36; 0/72 and 3/36; one-sided Fisher p = 0.035; handoff prose 2/20, dense 8/20, BM25 20/20, bundle 20/20 | §17, §18 (emem docs rows); Fisher recomputed 0.0350 by the claims audit | pre-reg | pairs and answers share trials, so read as descriptive; two open models on one host; handoff single-token arm excluded for a window bug; emem-authored benchmark |
+| R3 | token 10/10, prose 10/10, rounded 0/5, forged 5/5 declined | §22; `research/repro/data/v8/results.json` | pre-reg (rounded arm exploratory) | re-hash and receipt were done by the harness, not by model B; the Qwen2.5-3B arm is withheld until its raw logs are committed |
+| R4 | 162/200 (81 %, Wilson 75 to 86 %); after the fix 49/49 read the containing pixel where the rules differ | §7, §8; `research/repro/data/v8/prevalence_summary.json`, `pixel_windows.json` | measured | the neighbour is east, south or south-east (both axes were rounded); the pictured case is south |
+
+The v10 drift taxonomy (seven real drifts, six located by one field) is no longer on the board; R1 covers the same
+cases as mutations M2, M4, M5, M15 and M17, each marked "seen in production". The taxonomy stays in
+`poster/archive/v10/poster.html`.
+
+## What emem establishes (identity table)
+
+| row | value | source |
+|---|---|---|
+| exact bytes; place and time; derivation | yes, yes, checkable | R1 checks D to I |
+| upstream file | partial, printed as "upstream identity unverified" | the record names the COG URL and pixel, but no provider-issued identity (checksum, signed STAC item) is bound; field-map critique `10_EVENT_FIELD_MAP_AND_CRITIQUE.md` |
+| physical entity; truth; decision | no | R1 M17; mechanism |
 
 ## Objections
 
@@ -77,6 +88,7 @@ common decoder across three vendors (README lines 101 to 103), the geo.qa Doha d
 | token cost | 46 vs 8 tokenizer tokens (about 6×) | token_counts.json (cl100k). The 9.5× in emem's docs is a different measurement and is no longer printed |
 | BM25 | 16/16; dense 4/142 exact, up to 138 confidently wrong, median 252 m | §25 |
 | encoders | Clay, Prithvi-EO-2.0, Galileo, JEPA removed §23; old vectors resolve §24 | track (doc rows). Pre-retirement vector recall was not exercised end-to-end by the inventory |
+| guardrail vs provenance vs STAC | positioning, no number | GeoGuard (same session), Provenance-First Geospatial Composition (Session 2), STAC/C2PA/PROV |
 | operator | 111 witness keys; one domain-vouched, geo.qa, also Vortx AI | /v1/log/witnesses (live) |
 
 ## Removed from v10 because no source is committed

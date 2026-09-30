@@ -49,4 +49,7 @@ The content address is the mechanism. The measured consequence: paraphrase hando
 
 - [`should_do/15_V11_CLAIMS_MAP.md`](should_do/15_V11_CLAIMS_MAP.md): every number on the v11 board, its source and its evidence class.
 - [`should_do/16_V11_CRITIQUE_AND_DECISIONS.md`](should_do/16_V11_CRITIQUE_AND_DECISIONS.md): what was wrong with v10, what v11 does, the refutation policy, and what is open before printing.
+- [`should_do/17_V11_RESPONSE_TO_FIELD_MAP.md`](should_do/17_V11_RESPONSE_TO_FIELD_MAP.md): point-by-point response to the field map (`10_EVENT_FIELD_MAP_AND_CRITIQUE.md`) and the source-of-truth brief (`11_BROAD_SOURCE_OF_TRUTH_FOR_CODING_AGENT.md`).
+- [`should_do/18_V11_PROCESS_AND_HANDOFF.md`](should_do/18_V11_PROCESS_AND_HANDOFF.md): **start here to edit the board**: files, build, gates, process, pitfalls, the next experiment, open items.
+- [`repro/v11/`](repro/v11/README.md): R1, the mutation test (17 cases × 9 verification depths, offline, deterministic).
 - [`audit_v11/`](audit_v11/): two independent audits. `emem_capability_index.*` maps all of emem at HEAD e226f8b with code pointers and live counts; `poster_evidence_audit.*` checks the 96 claims printed on v10.

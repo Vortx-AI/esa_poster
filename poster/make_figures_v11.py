@@ -58,43 +58,23 @@ def overlaps(fig):
 
 
 def fig_agreement():
-    fig, (a, b) = plt.subplots(1, 2, figsize=(10.2, 4.0), gridspec_kw={"width_ratios": [1.0, 1.0], "wspace": 0.74})
-    # panel a: per condition, share of answers correct vs share of pairs agreeing
-    y = range(len(COMPACTION))
-    h = 0.36
+    """R2: after a shared summary, agreement rises while correctness falls (pre-registered, §17)."""
+    fig, a = plt.subplots(figsize=(10.2, 2.4))
+    h = 0.4
     for i, (lab, c, n, ag, npair) in enumerate(COMPACTION):
         pc, pa = c / n, ag / npair
         a.barh(i + h / 2, pa, h, color=AMBER)
         a.barh(i - h / 2, max(pc, 0.004), h, color=INK)
-        a.text(pa + 0.02, i + h / 2, f"{ag}/{npair} pairs agree", va="center", fontsize=TICK, color=AMBER)
-        a.text(max(pc, 0.004) + 0.02, i - h / 2, f"{c}/{n} correct", va="center", fontsize=TICK,
+        a.text(pa + 0.012, i + h / 2, f"{ag}/{npair} pairs agree", va="center", fontsize=TICK - 2, color=AMBER)
+        a.text(max(pc, 0.004) + 0.012, i - h / 2, f"{c}/{n} answers correct", va="center", fontsize=TICK - 2,
                color=INK, fontweight=600 if c == 0 else 400)
-    a.set_yticks(list(y), [r[0] for r in COMPACTION])
-    a.set_xlim(0, 1.62)
+    a.set_yticks(range(len(COMPACTION)), [r[0] for r in COMPACTION])
+    a.set_xlim(0, 1.42)
     a.set_xticks([0, .5, 1], ["0", "50 %", "100 %"])
+    a.spines["bottom"].set_bounds(0, 1)
     a.invert_yaxis()
-    a.set_title("a  After a shared summary", loc="left", fontweight=600)
     a.tick_params(axis="y", length=0)
-    # panel b: exact values after a handoff
-    for i, (lab, k, n, ver) in enumerate(HANDOFF):
-        col = BLUE if ver else GREY
-        b.barh(i, k / n, 0.62, color=col)
-        note = {0: "", 1: "", 2: "  as text", 3: "  verified bytes"}[i]
-        b.text(k / n + 0.02, i, f"{k}/{n}{note}", va="center", fontsize=TICK, color=BLUE if ver else INK2,
-               fontweight=600 if ver else 400)
-    b.set_yticks(range(len(HANDOFF)), [r[0] for r in HANDOFF])
-    for t, r in zip(b.get_yticklabels(), HANDOFF):
-        t.set_color(BLUE if r[3] else INK2)
-        if r[3]:
-            t.set_fontweight(600)
-    b.set_xlim(0, 2.3)
-    b.set_xticks([0, .5, 1], ["0", "50 %", "100 %"])
-    b.invert_yaxis()
-    b.tick_params(axis="y", length=0)
-    b.set_title("b  Exact value after handoff", loc="left", fontweight=600)
-    for ax in (a, b):
-        ax.spines["bottom"].set_bounds(0, 1)
-    fig.subplots_adjust(left=0.19, right=0.975, top=0.88, bottom=0.14)
+    fig.subplots_adjust(left=0.2, right=0.985, top=0.985, bottom=0.155)
     bad, out = overlaps(fig)
     assert not bad and not out, (bad, out)
     fig.savefig(OUT / "r1_agreement.svg", transparent=True)
@@ -109,7 +89,7 @@ def fig_pixel_audit():
     pw = json.load(open(HERE.parent / "research/repro/data/v8/pixel_windows.json"))
     pre = next(v for k, v in pw.items() if k.startswith("kxjvfwpa"))
     post = next(v for k, v in pw.items() if k.startswith("oj5cecci"))
-    fig, axs = plt.subplots(1, 2, figsize=(10.2, 5.25))
+    fig, axs = plt.subplots(1, 2, figsize=(10.2, 4.75))
     for ax, w, title, sig in ((axs[0], pre, "record signed before the fix (23 Sep scene)", True),
                               (axs[1], post, "record signed after the fix (25 Sep scene)", False)):
         a = np.array(w["ndvi_5x5"])
@@ -143,7 +123,92 @@ def fig_pixel_audit():
     plt.close(fig)
 
 
+def fig_mutation():
+    """R1: 17 mutations x 9 verification depths, from research/repro/v11/out/mutation_matrix.json."""
+    import json
+    from matplotlib.patches import Rectangle, Circle
+    d = json.load(open(HERE.parent / "research/repro/v11/out/mutation_matrix.json"))
+    muts = d["meta"]["mutations"]
+    by = {(r["mutation"], r["level"]): r for r in d["rows"]}
+    cols = [("A", "prose"), ("B", "JSON"), ("C", "opaque id"), ("D", "hash"), ("E", "binding"),
+            ("F", "signature"), ("G", "log"), ("H", "recompute"), ("I", "re-read")]
+    short = {
+        "G0": "control: nothing altered", "M1": "stated value +1 ULP", "M2": "stated value rounded to 0.47",
+        "M3": "1 ULP changed in served bytes", "M4": "record cited for another cell",
+        "M5": "older record passed as current", "M6": "record for another band", "M7": "token miscopied by 1 char",
+        "M8": "value forged to 0.45, re-hashed", "M9": "cell forged, re-hashed", "M10": "date forged, re-hashed",
+        "M11": "source scene forged, re-hashed", "M12": "offset forged, value recomputed",
+        "M13": "forged and signed by own key", "M14": "signer: value disagrees with DNs",
+        "M15": "signer: DNs of the pixel 10 m south", "M16": "signer: second version, not logged",
+        "M17": "same bytes, a different entity"}
+    groups = [("G0",), ("M1", "M2", "M3"), ("M4", "M5", "M6", "M7"), ("M8", "M9", "M10", "M11", "M12", "M13"),
+              ("M14", "M15", "M16"), ("M17",)]
+    gnames = ["", "paraphrase, relay", "misbinding", "forgery, no key", "the trusted signer errs", "out of scope"]
+    order = [m for g in groups for m in g]
+    real = {m["id"] for m in muts if m["real_case"]}
+    RED, PALE, GREY = "#B3261E", "#CFDBF6", "#E4E4DE"
+    rowh, gap = 1.0, 1.05
+    ys, y, gy = {}, 0.0, []
+    for gi, g in enumerate(groups):
+        if gi:
+            y += gap
+        gy.append(y)
+        for m in g:
+            ys[m] = y
+            y += rowh
+    ymax = y
+    fig, ax = plt.subplots(figsize=(10.83, 5.6))
+    LX = -0.3
+    for m in order:
+        for j, (lv, _) in enumerate(cols):
+            r = by[(m, lv)]
+            o = r["outcome"]
+            fc = {"acted on corrupted evidence": RED, "refused": BLUE, "unaffected": PALE,
+                  "acted correctly": GREY, "n/a": "#FFFFFF"}[o]
+            ax.add_patch(Rectangle((j + 0.05, ys[m] + 0.07), 0.9, rowh - 0.14, fc=fc, ec="none"))
+            if o == "refused":
+                ax.text(j + 0.5, ys[m] + rowh / 2, r["failed_check"], ha="center", va="center",
+                        fontsize=TICK - 3, color="#FFFFFF", fontweight=600)
+            if o == "n/a":
+                ax.text(j + 0.5, ys[m] + rowh / 2, "n/a", ha="center", va="center", fontsize=TICK - 5, color=MUTED)
+        ax.text(LX, ys[m] + rowh / 2, short[m], ha="right", va="center", fontsize=TICK - 2,
+                color=INK if m != "G0" else INK2)
+        ax.text(-6.05, ys[m] + rowh / 2, m, ha="left", va="center", fontsize=TICK - 2, fontweight=600,
+                color=AMBER if m in real else MUTED)
+    for gi, name in enumerate(gnames):
+        if name:
+            ax.text(-6.05, gy[gi] - 0.06, name.upper(), ha="left", va="bottom", fontsize=TICK - 5, color=MUTED,
+                    fontweight=600)
+    for j, (lv, name) in enumerate(cols):
+        ax.text(j + 0.5, -0.45, lv, ha="center", va="bottom", fontsize=TICK, fontweight=600,
+                color=BLUE if lv == "I" else INK)
+        ax.text(j + 0.5, -1.35, name, ha="center", va="bottom", fontsize=TICK - 5, color=INK2)
+    sm = d["summary"]
+    ax.text(LX, ymax + 0.8, "acted on corrupted evidence", ha="right", va="center", fontsize=TICK - 2,
+            color=RED, fontweight=600)
+    for j, (lv, _) in enumerate(cols):
+        ax.text(j + 0.5, ymax + 0.8, f"{sm[lv]['false_accepts']}/{sm[lv]['applicable']}", ha="center",
+                va="center", fontsize=TICK - 3, color=RED if sm[lv]["false_accepts"] else BLUE, fontweight=600)
+    ax.annotate("", xy=(9.0, -2.55), xytext=(3.05, -2.55), arrowprops=dict(arrowstyle="->", color=INK2, lw=1.0),
+                annotation_clip=False)
+    ax.text(3.05, -2.75, "emem's checks, one more per column", ha="left", va="bottom", fontsize=TICK - 5, color=INK2)
+    ax.set_xlim(-6.1, 9.05)
+    ax.set_ylim(ymax + 1.35, -3.75)
+    ax.axis("off")
+    from matplotlib.patches import Patch
+    hs = [Patch(fc=RED, label="B acts on corrupted evidence"), Patch(fc=BLUE, label="refused; letter = the check"),
+          Patch(fc=PALE, label="unaffected"), Patch(fc=AMBER, label="amber id: seen in production")]
+    fig.legend(handles=hs, loc="lower left", ncol=4, frameon=False, fontsize=TICK - 4, bbox_to_anchor=(0.0, -0.005),
+               handlelength=1.0, columnspacing=1.1)
+    fig.subplots_adjust(left=0.0, right=1.0, top=1.0, bottom=0.07)
+    bad, out = overlaps(fig)
+    assert not out, out
+    fig.savefig(OUT / "r1_mutation.svg", transparent=True)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     fig_agreement()
     fig_pixel_audit()
+    fig_mutation()
     print("wrote", sorted(p.name for p in OUT.glob("*.svg")))

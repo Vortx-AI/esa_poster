@@ -23,6 +23,8 @@ PNG = HERE / "emem-poster-preview.png"
 
 
 def run_figures():
+    subprocess.run([sys.executable, str(HERE.parent / "research" / "repro" / "v11" / "mutation_suite.py")], check=True,
+                   stdout=subprocess.DEVNULL)
     for script in ("make_figures_v11.py", "make_hero_v11.py"):
         subprocess.run([sys.executable, str(HERE / script)], check=True)
 

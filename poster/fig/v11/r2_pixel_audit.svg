@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="734.4pt" height="378pt" viewBox="0 0 734.4 378" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="734.4pt" height="342pt" viewBox="0 0 734.4 342" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-30T22:57:11.345282</dc:date>
+    <dc:date>2026-09-30T23:32:32.276119</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,53 +21,53 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 378 
-L 734.4 378 
+   <path d="M 0 342 
+L 734.4 342 
 L 734.4 0 
 L 0 0 
-L 0 378 
+L 0 342 
 z
 " style="fill: none"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 21.591692 347.76 
-L 339.111692 347.76 
-L 339.111692 30.24 
-L 21.591692 30.24 
-L 21.591692 347.76 
+    <path d="M 36.711692 314.64 
+L 323.991692 314.64 
+L 323.991692 27.36 
+L 36.711692 27.36 
+L 36.711692 314.64 
 z
 " style="fill: none"/>
    </g>
-   <g clip-path="url(#ped0bab22be)">
+   <g clip-path="url(#pedfd168648)">
     <image xlink:href="data:image/png;base64,
-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" id="imagec1484b6469" transform="scale(1 -1) translate(0 -317.52)" x="21.6" y="-30.24" width="317.52" height="317.52"/>
+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" id="image942ff76986" transform="scale(1 -1) translate(0 -287.28)" x="36.72" y="-27.36" width="287.28" height="287.28"/>
    </g>
    <g id="patch_3">
-    <path d="M 148.599692 157.248 
-L 212.103692 157.248 
-L 212.103692 220.752 
-L 148.599692 220.752 
-L 148.599692 157.248 
+    <path d="M 151.623692 142.272 
+L 209.079692 142.272 
+L 209.079692 199.728 
+L 151.623692 199.728 
+L 151.623692 142.272 
 z
-" clip-path="url(#ped0bab22be)" style="fill: none; stroke: #1f4fd8; stroke-width: 3.2; stroke-linejoin: miter"/>
+" clip-path="url(#pedfd168648)" style="fill: none; stroke: #1f4fd8; stroke-width: 3.2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 148.599692 220.752 
-L 212.103692 220.752 
-L 212.103692 284.256 
-L 148.599692 284.256 
-L 148.599692 220.752 
+    <path d="M 151.623692 199.728 
+L 209.079692 199.728 
+L 209.079692 257.184 
+L 151.623692 257.184 
+L 151.623692 199.728 
 z
-" clip-path="url(#ped0bab22be)" style="fill: none; stroke-dasharray: 11.84,5.12; stroke-dashoffset: 0; stroke: #b3261e; stroke-width: 3.2; stroke-linejoin: miter"/>
+" clip-path="url(#pedfd168648)" style="fill: none; stroke-dasharray: 11.84,5.12; stroke-dashoffset: 0; stroke: #b3261e; stroke-width: 3.2; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_1"/>
    <g id="matplotlib.axis_2"/>
    <g id="line2d_1">
-    <path d="M 169.385942 193.67211 
-" clip-path="url(#ped0bab22be)" style="fill: none; stroke: #141414; stroke-width: 1.5; stroke-linecap: square"/>
+    <path d="M 170.4303 175.227147 
+" clip-path="url(#pedfd168648)" style="fill: none; stroke: #141414; stroke-width: 1.5; stroke-linecap: square"/>
     <defs>
-     <path id="mf6c462d567" d="M 0 3.5 
+     <path id="m4c6692756f" d="M 0 3.5 
 C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874 
 C 3.131218 1.81853 3.5 0.928211 3.5 0 
 C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874 
@@ -79,13 +79,13 @@ C -1.81853 3.131218 -0.928211 3.5 0 3.5
 z
 " style="stroke: #ffffff"/>
     </defs>
-    <g clip-path="url(#ped0bab22be)">
-     <use xlink:href="#mf6c462d567" x="169.385942" y="193.67211" style="fill: #141414; stroke: #ffffff"/>
+    <g clip-path="url(#pedfd168648)">
+     <use xlink:href="#m4c6692756f" x="170.4303" y="175.227147" style="fill: #141414; stroke: #ffffff"/>
     </g>
    </g>
    <g id="text_1">
     <!-- 0.637 -->
-    <g style="fill: #141414" transform="translate(34.639474 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(46.735474 75.12744) scale(0.14 -0.14)">
      <defs>
       <path id="IBMPlexSans-Regular-37" d="M 1920 -77 
 Q 1389 -77 1046 198 
@@ -233,7 +233,7 @@ z
    </g>
    <g id="text_2">
     <!-- 0.619 -->
-    <g style="fill: #141414" transform="translate(98.143474 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(104.191474 75.12744) scale(0.14 -0.14)">
      <defs>
       <path id="IBMPlexSans-Regular-38" d="M 3501 0 
 L 563 0 
@@ -300,7 +300,7 @@ z
    </g>
    <g id="text_3">
     <!-- 0.518 -->
-    <g style="fill: #141414" transform="translate(161.647474 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(161.647474 75.12744) scale(0.14 -0.14)">
      <defs>
       <path id="IBMPlexSans-Regular-3c" d="M 3187 4467 
 L 3187 3994 
@@ -391,7 +391,7 @@ z
    </g>
    <g id="text_4">
     <!-- 0.420 -->
-    <g style="fill: #141414" transform="translate(225.151474 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(219.103474 75.12744) scale(0.14 -0.14)">
      <defs>
       <path id="IBMPlexSans-Regular-3b" d="M 2912 0 
 L 2400 0 
@@ -449,7 +449,7 @@ z
    </g>
    <g id="text_5">
     <!-- 0.359 -->
-    <g style="fill: #141414" transform="translate(288.655474 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(276.559474 75.12744) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -459,7 +459,7 @@ z
    </g>
    <g id="text_6">
     <!-- 0.576 -->
-    <g style="fill: #141414" transform="translate(34.639474 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(46.735474 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -469,7 +469,7 @@ z
    </g>
    <g id="text_7">
     <!-- 0.542 -->
-    <g style="fill: #141414" transform="translate(98.143474 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(104.191474 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -479,7 +479,7 @@ z
    </g>
    <g id="text_8">
     <!-- 0.554 -->
-    <g style="fill: #141414" transform="translate(161.647474 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(161.647474 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -489,7 +489,7 @@ z
    </g>
    <g id="text_9">
     <!-- 0.476 -->
-    <g style="fill: #141414" transform="translate(225.151474 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(219.103474 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -499,7 +499,7 @@ z
    </g>
    <g id="text_10">
     <!-- 0.392 -->
-    <g style="fill: #141414" transform="translate(288.655474 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(276.559474 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -509,7 +509,7 @@ z
    </g>
    <g id="text_11">
     <!-- 0.427 -->
-    <g style="fill: #141414" transform="translate(34.639474 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(46.735474 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -519,7 +519,7 @@ z
    </g>
    <g id="text_12">
     <!-- 0.437 -->
-    <g style="fill: #141414" transform="translate(98.143474 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(104.191474 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -529,7 +529,7 @@ z
    </g>
    <g id="text_13">
     <!-- 0.486 -->
-    <g style="fill: #141414" transform="translate(161.647474 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(161.647474 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -539,7 +539,7 @@ z
    </g>
    <g id="text_14">
     <!-- 0.539 -->
-    <g style="fill: #141414" transform="translate(225.151474 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(219.103474 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -549,7 +549,7 @@ z
    </g>
    <g id="text_15">
     <!-- 0.475 -->
-    <g style="fill: #141414" transform="translate(288.655474 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(276.559474 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -559,7 +559,7 @@ z
    </g>
    <g id="text_16">
     <!-- 0.319 -->
-    <g style="fill: #141414" transform="translate(34.639474 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(46.735474 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -569,7 +569,7 @@ z
    </g>
    <g id="text_17">
     <!-- 0.327 -->
-    <g style="fill: #141414" transform="translate(98.143474 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(104.191474 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -579,7 +579,7 @@ z
    </g>
    <g id="text_18">
     <!-- 0.344 -->
-    <g style="fill: #141414" transform="translate(161.647474 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(161.647474 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -589,7 +589,7 @@ z
    </g>
    <g id="text_19">
     <!-- 0.421 -->
-    <g style="fill: #141414" transform="translate(225.151474 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(219.103474 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -599,7 +599,7 @@ z
    </g>
    <g id="text_20">
     <!-- 0.478 -->
-    <g style="fill: #141414" transform="translate(288.655474 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(276.559474 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -609,7 +609,7 @@ z
    </g>
    <g id="text_21">
     <!-- 0.114 -->
-    <g style="fill: #141414" transform="translate(34.639474 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(46.735474 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-38" transform="translate(87.203125 0)"/>
@@ -619,7 +619,7 @@ z
    </g>
    <g id="text_22">
     <!-- 0.078 -->
-    <g style="fill: #141414" transform="translate(98.143474 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(104.191474 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-37" transform="translate(87.203125 0)"/>
@@ -629,7 +629,7 @@ z
    </g>
    <g id="text_23">
     <!-- 0.107 -->
-    <g style="fill: #141414" transform="translate(161.647474 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(161.647474 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-38" transform="translate(87.203125 0)"/>
@@ -639,7 +639,7 @@ z
    </g>
    <g id="text_24">
     <!-- 0.217 -->
-    <g style="fill: #141414" transform="translate(225.151474 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(219.103474 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-39" transform="translate(87.203125 0)"/>
@@ -649,7 +649,7 @@ z
    </g>
    <g id="text_25">
     <!-- 0.419 -->
-    <g style="fill: #141414" transform="translate(288.655474 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(276.559474 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -659,7 +659,7 @@ z
    </g>
    <g id="text_26">
     <!-- record signed before the fix (23 Sep scene) -->
-    <g style="fill: #141414" transform="translate(21.591692 24.24) scale(0.15 -0.15)">
+    <g style="fill: #141414" transform="translate(36.711692 21.36) scale(0.15 -0.15)">
      <defs>
       <path id="IBMPlexSans-Regular-14" d="M 1056 0 
 L 544 0 
@@ -1239,39 +1239,39 @@ z
   </g>
   <g id="axes_2">
    <g id="patch_5">
-    <path d="M 395.288308 347.76 
-L 712.808308 347.76 
-L 712.808308 30.24 
-L 395.288308 30.24 
-L 395.288308 347.76 
+    <path d="M 410.408308 314.64 
+L 697.688308 314.64 
+L 697.688308 27.36 
+L 410.408308 27.36 
+L 410.408308 314.64 
 z
 " style="fill: none"/>
    </g>
-   <g clip-path="url(#p858c5c87f4)">
+   <g clip-path="url(#p6a10630f99)">
     <image xlink:href="data:image/png;base64,
-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" id="imagef00460471b" transform="scale(1 -1) translate(0 -317.52)" x="395.28" y="-30.24" width="317.52" height="317.52"/>
+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" id="image771be48413" transform="scale(1 -1) translate(0 -287.28)" x="410.4" y="-27.36" width="287.28" height="287.28"/>
    </g>
    <g id="patch_6">
-    <path d="M 522.296308 157.248 
-L 585.800308 157.248 
-L 585.800308 220.752 
-L 522.296308 220.752 
-L 522.296308 157.248 
+    <path d="M 525.320308 142.272 
+L 582.776308 142.272 
+L 582.776308 199.728 
+L 525.320308 199.728 
+L 525.320308 142.272 
 z
-" clip-path="url(#p858c5c87f4)" style="fill: none; stroke: #1f4fd8; stroke-width: 3.2; stroke-linejoin: miter"/>
+" clip-path="url(#p6a10630f99)" style="fill: none; stroke: #1f4fd8; stroke-width: 3.2; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_3"/>
    <g id="matplotlib.axis_4"/>
    <g id="line2d_2">
-    <path d="M 543.082558 193.67211 
-" clip-path="url(#p858c5c87f4)" style="fill: none; stroke: #141414; stroke-width: 1.5; stroke-linecap: square"/>
-    <g clip-path="url(#p858c5c87f4)">
-     <use xlink:href="#mf6c462d567" x="543.082558" y="193.67211" style="fill: #141414; stroke: #ffffff"/>
+    <path d="M 544.126915 175.227147 
+" clip-path="url(#p6a10630f99)" style="fill: none; stroke: #141414; stroke-width: 1.5; stroke-linecap: square"/>
+    <g clip-path="url(#p6a10630f99)">
+     <use xlink:href="#m4c6692756f" x="544.126915" y="175.227147" style="fill: #141414; stroke: #ffffff"/>
     </g>
    </g>
    <g id="text_27">
     <!-- 0.591 -->
-    <g style="fill: #141414" transform="translate(408.336089 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(420.432089 75.12744) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -1281,7 +1281,7 @@ z
    </g>
    <g id="text_28">
     <!-- 0.651 -->
-    <g style="fill: #141414" transform="translate(471.840089 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(477.888089 75.12744) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3d" transform="translate(87.203125 0)"/>
@@ -1291,7 +1291,7 @@ z
    </g>
    <g id="text_29">
     <!-- 0.491 -->
-    <g style="fill: #141414" transform="translate(535.344089 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(535.344089 75.12744) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1301,7 +1301,7 @@ z
    </g>
    <g id="text_30">
     <!-- 0.414 -->
-    <g style="fill: #141414" transform="translate(598.848089 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(592.800089 75.12744) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1311,7 +1311,7 @@ z
    </g>
    <g id="text_31">
     <!-- 0.369 -->
-    <g style="fill: #141414" transform="translate(662.352089 82.48296) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(650.256089 75.12744) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -1321,7 +1321,7 @@ z
    </g>
    <g id="text_32">
     <!-- 0.527 -->
-    <g style="fill: #141414" transform="translate(408.336089 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(420.432089 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -1331,7 +1331,7 @@ z
    </g>
    <g id="text_33">
     <!-- 0.547 -->
-    <g style="fill: #141414" transform="translate(471.840089 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(477.888089 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -1341,7 +1341,7 @@ z
    </g>
    <g id="text_34">
     <!-- 0.502 -->
-    <g style="fill: #141414" transform="translate(535.344089 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(535.344089 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -1351,7 +1351,7 @@ z
    </g>
    <g id="text_35">
     <!-- 0.500 -->
-    <g style="fill: #141414" transform="translate(598.848089 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(592.800089 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -1361,7 +1361,7 @@ z
    </g>
    <g id="text_36">
     <!-- 0.386 -->
-    <g style="fill: #141414" transform="translate(662.352089 145.98696) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(650.256089 132.58344) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -1371,7 +1371,7 @@ z
    </g>
    <g id="text_37">
     <!-- 0.395 -->
-    <g style="fill: #141414" transform="translate(408.336089 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(420.432089 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -1381,7 +1381,7 @@ z
    </g>
    <g id="text_38">
     <!-- 0.425 -->
-    <g style="fill: #141414" transform="translate(471.840089 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(477.888089 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1391,7 +1391,7 @@ z
    </g>
    <g id="text_39">
     <!-- 0.471 -->
-    <g style="fill: #141414" transform="translate(535.344089 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(535.344089 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1401,7 +1401,7 @@ z
    </g>
    <g id="text_40">
     <!-- 0.538 -->
-    <g style="fill: #141414" transform="translate(598.848089 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(592.800089 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3c" transform="translate(87.203125 0)"/>
@@ -1411,7 +1411,7 @@ z
    </g>
    <g id="text_41">
     <!-- 0.444 -->
-    <g style="fill: #141414" transform="translate(662.352089 209.49096) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(650.256089 190.03944) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1421,7 +1421,7 @@ z
    </g>
    <g id="text_42">
     <!-- 0.300 -->
-    <g style="fill: #141414" transform="translate(408.336089 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(420.432089 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -1431,7 +1431,7 @@ z
    </g>
    <g id="text_43">
     <!-- 0.332 -->
-    <g style="fill: #141414" transform="translate(471.840089 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(477.888089 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -1441,7 +1441,7 @@ z
    </g>
    <g id="text_44">
     <!-- 0.302 -->
-    <g style="fill: #141414" transform="translate(535.344089 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(535.344089 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3a" transform="translate(87.203125 0)"/>
@@ -1451,7 +1451,7 @@ z
    </g>
    <g id="text_45">
     <!-- 0.405 -->
-    <g style="fill: #141414" transform="translate(598.848089 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(592.800089 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1461,7 +1461,7 @@ z
    </g>
    <g id="text_46">
     <!-- 0.477 -->
-    <g style="fill: #141414" transform="translate(662.352089 272.99496) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(650.256089 247.49544) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1471,7 +1471,7 @@ z
    </g>
    <g id="text_47">
     <!-- 0.095 -->
-    <g style="fill: #141414" transform="translate(408.336089 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(420.432089 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-37" transform="translate(87.203125 0)"/>
@@ -1481,7 +1481,7 @@ z
    </g>
    <g id="text_48">
     <!-- 0.062 -->
-    <g style="fill: #141414" transform="translate(471.840089 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(477.888089 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-37" transform="translate(87.203125 0)"/>
@@ -1491,7 +1491,7 @@ z
    </g>
    <g id="text_49">
     <!-- 0.074 -->
-    <g style="fill: #141414" transform="translate(535.344089 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(535.344089 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-37" transform="translate(87.203125 0)"/>
@@ -1501,7 +1501,7 @@ z
    </g>
    <g id="text_50">
     <!-- 0.209 -->
-    <g style="fill: #141414" transform="translate(598.848089 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(592.800089 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-39" transform="translate(87.203125 0)"/>
@@ -1511,7 +1511,7 @@ z
    </g>
    <g id="text_51">
     <!-- 0.428 -->
-    <g style="fill: #141414" transform="translate(662.352089 336.49896) scale(0.14 -0.14)">
+    <g style="fill: #141414" transform="translate(650.256089 304.95144) scale(0.14 -0.14)">
      <use xlink:href="#IBMPlexSans-Regular-37"/>
      <use xlink:href="#IBMPlexSans-Regular-47" transform="translate(60 0)"/>
      <use xlink:href="#IBMPlexSans-Regular-3b" transform="translate(87.203125 0)"/>
@@ -1521,7 +1521,7 @@ z
    </g>
    <g id="text_52">
     <!-- record signed after the fix (25 Sep scene) -->
-    <g style="fill: #141414" transform="translate(395.288308 24.24) scale(0.15 -0.15)">
+    <g style="fill: #141414" transform="translate(410.408308 21.36) scale(0.15 -0.15)">
      <defs>
       <path id="IBMPlexSans-Regular-1" d="M 3232 0 
 L 2944 0 
@@ -1614,12 +1614,12 @@ z
   <g id="legend_1">
    <g id="line2d_3">
     <g>
-     <use xlink:href="#mf6c462d567" x="22.4" y="360.43" style="fill: #141414; stroke: #ffffff"/>
+     <use xlink:href="#m4c6692756f" x="22.4" y="324.07" style="fill: #141414; stroke: #ffffff"/>
     </g>
    </g>
    <g id="text_53">
     <!-- query point -->
-    <g transform="translate(43.4 365.33) scale(0.14 -0.14)">
+    <g transform="translate(43.4 328.97) scale(0.14 -0.14)">
      <defs>
       <path id="IBMPlexSans-Regular-13" d="M 2656 -1280 
 L 2656 538 
@@ -1710,17 +1710,17 @@ z
     </g>
    </g>
    <g id="patch_7">
-    <path d="M 137.451563 365.33 
-L 157.051563 365.33 
-L 157.051563 355.53 
-L 137.451563 355.53 
-L 137.451563 365.33 
+    <path d="M 137.451563 328.97 
+L 157.051563 328.97 
+L 157.051563 319.17 
+L 137.451563 319.17 
+L 137.451563 328.97 
 z
 " style="fill: none; stroke: #1f4fd8; stroke-width: 3.2; stroke-linejoin: miter"/>
    </g>
    <g id="text_54">
     <!-- the pixel that contains it -->
-    <g transform="translate(168.251563 365.33) scale(0.14 -0.14)">
+    <g transform="translate(168.251563 328.97) scale(0.14 -0.14)">
      <defs>
       <path id="IBMPlexSans-Regular-e" d="M 1542 0 
 L 1088 0 
@@ -1763,17 +1763,17 @@ z
     </g>
    </g>
    <g id="patch_8">
-    <path d="M 341.53875 365.33 
-L 361.13875 365.33 
-L 361.13875 355.53 
-L 341.53875 355.53 
-L 341.53875 365.33 
+    <path d="M 341.53875 328.97 
+L 361.13875 328.97 
+L 361.13875 319.17 
+L 341.53875 319.17 
+L 341.53875 328.97 
 z
 " style="fill: none; stroke-dasharray: 11.84,5.12; stroke-dashoffset: 0; stroke: #b3261e; stroke-width: 3.2; stroke-linejoin: miter"/>
    </g>
    <g id="text_55">
     <!-- the pixel whose DNs emem signed -->
-    <g transform="translate(372.33875 365.33) scale(0.14 -0.14)">
+    <g transform="translate(372.33875 328.97) scale(0.14 -0.14)">
      <defs>
       <path id="IBMPlexSans-Regular-19" d="M 1082 0 
 L 198 3302 
@@ -1914,11 +1914,11 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="ped0bab22be">
-   <rect x="21.591692" y="30.24" width="317.52" height="317.52"/>
+  <clipPath id="pedfd168648">
+   <rect x="36.711692" y="27.36" width="287.28" height="287.28"/>
   </clipPath>
-  <clipPath id="p858c5c87f4">
-   <rect x="395.288308" y="30.24" width="317.52" height="317.52"/>
+  <clipPath id="p6a10630f99">
+   <rect x="410.408308" y="27.36" width="287.28" height="287.28"/>
   </clipPath>
  </defs>
 </svg>

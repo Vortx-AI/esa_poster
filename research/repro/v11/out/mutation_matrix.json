@@ -1,0 +1,1954 @@
+{
+ "meta": {
+  "generated_by": "research/repro/v11/mutation_suite.py",
+  "inputs": {
+   "bundle": "research/repro/v8/proof_bundle_ndvi.cbor",
+   "bundle_blake3": "ji7qpo4pmasgz77ofujieu4j2aanbqwxobmpab3hlasxmicruyjq",
+   "pixel_windows": "research/repro/data/v8/pixel_windows.json"
+  },
+  "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+  "question": {
+   "cell": "defi.zb572.xoso.zb1ec",
+   "band": "indices.ndvi",
+   "tslot": 20721
+  },
+  "rule": "irrigate iff NDVI <= 0.4705",
+  "genuine_value": 0.4708994708994709,
+  "neighbour_pixel_value": 0.3015512674990541,
+  "test_signer_pubkey_b32": "dxnr75xx7eqw2ptyrgmhy33o7imqqslw6mg3ckp4xbmyce3itg3a",
+  "suite_seconds": 0.0535,
+  "full_verification_ms": 1.186,
+  "levels": [
+   {
+    "id": "A",
+    "name": "prose",
+    "adds": "the value as text"
+   },
+   {
+    "id": "B",
+    "name": "structured",
+    "adds": "the value in a JSON record"
+   },
+   {
+    "id": "C",
+    "name": "opaque id",
+    "adds": "an id that B resolves itself"
+   },
+   {
+    "id": "D",
+    "name": "content hash",
+    "adds": "re-hash the bytes to the cid"
+   },
+   {
+    "id": "E",
+    "name": "+ binding",
+    "adds": "cell, band and tslot match the question"
+   },
+   {
+    "id": "F",
+    "name": "+ signature",
+    "adds": "Ed25519 under the pinned key"
+   },
+   {
+    "id": "G",
+    "name": "+ log",
+    "adds": "inclusion under the signed tree head"
+   },
+   {
+    "id": "H",
+    "name": "+ recompute",
+    "adds": "NDVI recomputed from the signed DNs"
+   },
+   {
+    "id": "I",
+    "name": "+ source re-read",
+    "adds": "DNs equal the COG pixel that holds the point"
+   }
+  ],
+  "mutations": [
+   {
+    "id": "G0",
+    "family": "control",
+    "threat": "none",
+    "desc": "genuine handoff, nothing altered",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": null
+   },
+   {
+    "id": "M1",
+    "family": "paraphrase",
+    "threat": "T1",
+    "desc": "stated value moved by 1 ULP",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "C"
+   },
+   {
+    "id": "M2",
+    "family": "paraphrase",
+    "threat": "T1",
+    "desc": "stated value rounded to \"0.47\"",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": "\u00a721 trap; R3 rounded arm",
+    "first_protected_level": "C"
+   },
+   {
+    "id": "M3",
+    "family": "relay",
+    "threat": "T1",
+    "desc": "1 ULP changed inside the served bytes; token kept",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "D"
+   },
+   {
+    "id": "M4",
+    "family": "misbinding",
+    "threat": "T1",
+    "desc": "record cited for another cell",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": "\u00a74 relabelled token",
+    "first_protected_level": "E"
+   },
+   {
+    "id": "M5",
+    "family": "misbinding",
+    "threat": "T1",
+    "desc": "an older record handed over as the current answer",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": "\u00a76 cube member date",
+    "first_protected_level": "E"
+   },
+   {
+    "id": "M6",
+    "family": "misbinding",
+    "threat": "T1",
+    "desc": "a record for another band handed over",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "E"
+   },
+   {
+    "id": "M7",
+    "family": "reference",
+    "threat": "T1",
+    "desc": "token miscopied by one character",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "C"
+   },
+   {
+    "id": "M8",
+    "family": "forgery",
+    "threat": "T1",
+    "desc": "value changed to 0.45, re-encoded and re-hashed",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "F"
+   },
+   {
+    "id": "M9",
+    "family": "forgery",
+    "threat": "T1",
+    "desc": "cell changed inside the record, re-hashed",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "F"
+   },
+   {
+    "id": "M10",
+    "family": "forgery",
+    "threat": "T1",
+    "desc": "tslot changed to look current, re-hashed",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "F"
+   },
+   {
+    "id": "M11",
+    "family": "forgery",
+    "threat": "T1",
+    "desc": "source scene id changed, re-hashed",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "F"
+   },
+   {
+    "id": "M12",
+    "family": "forgery",
+    "threat": "T1",
+    "desc": "derivation offset changed, value recomputed, re-hashed",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "F"
+   },
+   {
+    "id": "M13",
+    "family": "forgery",
+    "threat": "T1",
+    "desc": "value 0.45, signed and logged under the forger's own key",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "F"
+   },
+   {
+    "id": "M14",
+    "family": "signer error",
+    "threat": "T2",
+    "desc": "value (0.46) disagrees with the signed DNs; signed and logged",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "H"
+   },
+   {
+    "id": "M15",
+    "family": "signer error",
+    "threat": "T2",
+    "desc": "DNs read from the pixel 10 m south; signed and logged",
+    "harmful_even_if_value_genuine": false,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": "\u00a77: 162 of 200 pre-fix records",
+    "first_protected_level": "I"
+   },
+   {
+    "id": "M16",
+    "family": "signer error",
+    "threat": "T2",
+    "desc": "a second signed version shown only to B (not in the log)",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": null,
+    "first_protected_level": "G"
+   },
+   {
+    "id": "M17",
+    "family": "referent",
+    "threat": "T1",
+    "desc": "same record; A meant a different physical entity",
+    "harmful_even_if_value_genuine": true,
+    "applies": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I"
+    ],
+    "real_case": "R4 Maasvlakte entity",
+    "first_protected_level": null
+   }
+  ]
+ },
+ "summary": {
+  "A": {
+   "representation": "prose",
+   "adds": "the value as text",
+   "applicable": 15,
+   "false_accepts": 15,
+   "false_accept_ids": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16"
+   ],
+   "decision_flips": [
+    "M2",
+    "M8",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "B": {
+   "representation": "structured",
+   "adds": "the value in a JSON record",
+   "applicable": 15,
+   "false_accepts": 15,
+   "false_accept_ids": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16"
+   ],
+   "decision_flips": [
+    "M2",
+    "M8",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "C": {
+   "representation": "opaque id",
+   "adds": "an id that B resolves itself",
+   "applicable": 16,
+   "false_accepts": 13,
+   "false_accept_ids": [
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16"
+   ],
+   "decision_flips": [
+    "M8",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "D": {
+   "representation": "content hash",
+   "adds": "re-hash the bytes to the cid",
+   "applicable": 16,
+   "false_accepts": 12,
+   "false_accept_ids": [
+    "M4",
+    "M5",
+    "M6",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16"
+   ],
+   "decision_flips": [
+    "M8",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "E": {
+   "representation": "+ binding",
+   "adds": "cell, band and tslot match the question",
+   "applicable": 16,
+   "false_accepts": 9,
+   "false_accept_ids": [
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16"
+   ],
+   "decision_flips": [
+    "M8",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "F": {
+   "representation": "+ signature",
+   "adds": "Ed25519 under the pinned key",
+   "applicable": 16,
+   "false_accepts": 3,
+   "false_accept_ids": [
+    "M14",
+    "M15",
+    "M16"
+   ],
+   "decision_flips": [
+    "M14",
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "G": {
+   "representation": "+ log",
+   "adds": "inclusion under the signed tree head",
+   "applicable": 16,
+   "false_accepts": 2,
+   "false_accept_ids": [
+    "M14",
+    "M15"
+   ],
+   "decision_flips": [
+    "M14",
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "H": {
+   "representation": "+ recompute",
+   "adds": "NDVI recomputed from the signed DNs",
+   "applicable": 16,
+   "false_accepts": 1,
+   "false_accept_ids": [
+    "M15"
+   ],
+   "decision_flips": [
+    "M15"
+   ],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  },
+  "I": {
+   "representation": "+ source re-read",
+   "adds": "DNs equal the COG pixel that holds the point",
+   "applicable": 16,
+   "false_accepts": 0,
+   "false_accept_ids": [],
+   "decision_flips": [],
+   "genuine_refused": false,
+   "entity_case_accepted": true
+  }
+ },
+ "leave_one_out": {
+  "D": [],
+  "E": [
+   "M4",
+   "M5",
+   "M6"
+  ],
+  "F": [
+   "M9",
+   "M10",
+   "M11",
+   "M12"
+  ],
+  "G": [
+   "M16"
+  ],
+  "H": [
+   "M14"
+  ],
+  "I": [
+   "M15"
+  ]
+ },
+ "rows": [
+  {
+   "mutation": "G0",
+   "level": "A",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "B",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "C",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "D",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "E",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "F",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "G",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "H",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "G0",
+   "level": "I",
+   "outcome": "acted correctly",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.47089947089947093,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.47089947089947093,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "C",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "D",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "E",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "F",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "G",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "H",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M1",
+   "level": "I",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M2",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.47,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M2",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.47,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M2",
+   "level": "C",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M2",
+   "level": "D",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M2",
+   "level": "E",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M2",
+   "level": "F",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M2",
+   "level": "G",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M2",
+   "level": "H",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M2",
+   "level": "I",
+   "outcome": "unaffected",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.47089947089947093,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.47089947089947093,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.47089947089947093,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "D",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "E",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M3",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "E",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M4",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "E",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M5",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "E",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M6",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "E",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M7",
+   "level": "A",
+   "outcome": "n/a"
+  },
+  {
+   "mutation": "M7",
+   "level": "B",
+   "outcome": "n/a"
+  },
+  {
+   "mutation": "M7",
+   "level": "C",
+   "outcome": "refused",
+   "failed_check": "C",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M7",
+   "level": "D",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M7",
+   "level": "E",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M7",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M7",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M7",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M7",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "D",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M8",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M8",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M8",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M8",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M8",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M8",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M8",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M8",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M8",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M9",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M10",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M11",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M12",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.29655683080340617,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M12",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.29655683080340617,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M12",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.29655683080340617,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M12",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.29655683080340617,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M12",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.29655683080340617,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M12",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M12",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M12",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M12",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M13",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M13",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M13",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M13",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M13",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.45,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M13",
+   "level": "F",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M13",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M13",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M13",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "F",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M14",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.46,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M14",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.46,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M14",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.46,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M14",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.46,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M14",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.46,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M14",
+   "level": "F",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.46,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M14",
+   "level": "G",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.46,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M14",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "H",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M14",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "H",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M15",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "F",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "G",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "H",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.3015512674990541,
+   "decision_flipped": true
+  },
+  {
+   "mutation": "M15",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "I",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "F",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "G",
+   "outcome": "refused",
+   "failed_check": "G",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "H",
+   "outcome": "refused",
+   "failed_check": "G",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M16",
+   "level": "I",
+   "outcome": "refused",
+   "failed_check": "G",
+   "value_acted_on": null,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "A",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "B",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "C",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "D",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "E",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "F",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "G",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "H",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  },
+  {
+   "mutation": "M17",
+   "level": "I",
+   "outcome": "acted on corrupted evidence",
+   "failed_check": null,
+   "value_acted_on": 0.4708994708994709,
+   "decision_flipped": false
+  }
+ ]
+}

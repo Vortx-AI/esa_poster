@@ -46,11 +46,13 @@ Content addressing is the mechanism, not the headline.
 **Print-ready A0 poster, v11: [poster/](poster/README.md)** ([PDF](poster/emem-poster-A0.pdf), [preview](poster/emem-poster-preview.png)).
 
 v11 presents emem as an invention: one address per place, one signed record per observation, and the record's
-name, not a paraphrase, crossing between agents. Six contributions, four results and eight answered objections.
+name, not a paraphrase, crossing between agents. Six contributions, four results (led by a 17-case mutation test of the verifier), eight answered objections and a table of what emem does and does not establish.
 Every number is traced in [research/should_do/15_V11_CLAIMS_MAP.md](research/should_do/15_V11_CLAIMS_MAP.md);
 the reasons for the redesign are in [research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md](research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md).
 Independent audits of emem and of the v10 claims are in [research/audit_v11/](research/audit_v11/).
 The v10 board is kept in [poster/archive/v10/](poster/archive/v10/).
+
+**To edit or extend the board, start with [research/should_do/18_V11_PROCESS_AND_HANDOFF.md](research/should_do/18_V11_PROCESS_AND_HANDOFF.md).**
 
 ## Sample visuals (early exploration, superseded)
 

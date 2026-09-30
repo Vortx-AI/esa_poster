@@ -27,7 +27,7 @@ v11 is fixed; the unsourced ones were removed (see `15_V11_CLAIMS_MAP.md`, last 
 
 ## 2. What v11 is
 
-One claim, one figure, six contributions, four results, then the objections.
+One claim, one figure, six contributions, four results, then the objections and what emem establishes.
 
 | band | content | job |
 |---|---|---|
@@ -37,9 +37,9 @@ One claim, one figure, six contributions, four results, then the objections.
 | live strip | six live counts | scale, not a demo |
 | C1 to C6 | address, two clocks, the two planes, the token algebra, trustless verification, recomputable computation; each with its formula and a measurement | the invention register |
 | agents | eight jobs and four uses in the wild | "much more than a hash" |
-| R1 to R4 | agreement is not evidence; the records located emem's own error; the check belongs in the tool; seven real drifts | science |
+| R1 to R4 | the mutation test (17 cases × 9 depths); agreement is not evidence; a token helps only when checked; the records located emem's own error | science |
 | objections | eight, tagged agreed / reframe / rebuttal | peer review in advance |
-| scope, try, evidence | what a signature does not show; one-line install; the signed track | honesty and a next step |
+| identities, try, evidence | what emem establishes and what it does not; one-line install and a QR to R1; the signed track | honesty and a next step |
 
 The prose follows the emem convention: no em or en dashes in running text, no tell words, short sentences.
 The build fails if either rule is broken, if the board is not exactly one A0 page, or if content reaches
@@ -53,16 +53,25 @@ hides them loses it. But a poster is an argument, not a lab notebook.
 
 - **Keep on the board, reframed:** each refutation that a visitor would raise becomes an objection with an answer.
   "Where emem lost" became three objections (BM25, token cost, small n). "emem retired its encoders" became the
-  reframe "the memory outlived its encoders". "What is not established" became the Scope box.
+  reframe "the memory outlived its encoders". "What is not established" became the Scope box, and later the table "What emem establishes".
 - **Promote to a result:** the pixel error. It is the strongest evidence that the design works: the records
   themselves located and dated emem's own bug. v10 filed it as a defect; v11 prints it as R2.
 - **Move to the repository:** the 36-defect list, the authors' scorecard and the nineteen withdrawn claims. The
   footer points there by name, so nothing is hidden.
 
+## 3b. Revision after the field-map critique (same day)
+
+The field map (`10_EVENT_FIELD_MAP_AND_CRITIQUE.md`) asked for an adversarial mutation test scored by false
+acceptance, an ablation, and a clear separation of what a signature does and does not establish. All three are now
+on the board: R1 (`research/repro/v11/`), the leave-one-out line in its caption, and the "What emem establishes"
+table. R1 replaced the drift taxonomy, whose real cases are now R1 rows marked "seen in production". Details and
+the points v11 declined: `17_V11_RESPONSE_TO_FIELD_MAP.md`.
+
 ## 4. Open before printing (owner: authors)
 
 1. **Commit the missing runs** or keep them off the board: the Qwen2.5-3B arm of §22, the derive response behind
    §11, the tampered-mirror and local-node runs, the Earthdata and Copernicus observations.
+2. **Merge and re-scan.** The R1 QR opens `github.com/Vortx-AI/esa_poster/tree/main/research/repro/v11`, which resolves only after this branch is merged into `main`.
 2. **Reseal.** The seal QR on v11 still opens the v10 evidence track `7n7qogvn…` (28/28). All § steps cited on v11
    are steps of that track, so the QR is valid. To seal v11 itself: render `board.jpg` from the v11 PDF with the
    seal box as is, publish a board pointer note at the v11 commit (as in `research/repro/v8/pub/b_v10/note.md`),

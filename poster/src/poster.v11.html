@@ -38,7 +38,7 @@ h1{font-size:18.2mm;line-height:1.06;font-weight:600;letter-spacing:-.012em}
 .qrbox .cap{font-size:4.5mm;font-weight:600;margin-top:1.6mm;line-height:1.2}
 
 /* body */
-.body{padding:7.5mm 22mm 0;display:flex;flex-direction:column;gap:6.0mm}
+.body{padding:6.5mm 22mm 0;display:flex;flex-direction:column;gap:4.6mm}
 .k{font-size:4.9mm;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
 h2{font-size:9.4mm;line-height:1.1;font-weight:600;letter-spacing:-.01em}
 h3{font-size:7.7mm;line-height:1.12;font-weight:600;letter-spacing:-.005em}
@@ -82,7 +82,7 @@ p{font-size:6.2mm;line-height:1.32;color:var(--ink2)} p b{color:var(--ink)}
 .res img{width:100%;display:block}
 .res .take{font-size:6.4mm;font-weight:600;color:var(--ink);border-left:1.2mm solid var(--acc);padding-left:3mm;line-height:1.25}
 table{border-collapse:collapse;width:100%;font-size:5.2mm}
-td,th{padding:1.3mm 1.6mm 1.3mm 0;border-bottom:.3mm solid var(--rule);vertical-align:top;text-align:left}
+td,th{padding:.9mm 1.6mm .9mm 0;border-bottom:.3mm solid var(--rule);vertical-align:top;text-align:left}
 th{font-size:4.5mm;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:.45mm solid var(--ink)}
 td.n{text-align:right;font-weight:600;white-space:nowrap}
 td.ok{color:var(--acc)} td.no{color:var(--bad)}
@@ -101,6 +101,12 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
 .tag{font-size:3.9mm;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2mm 1.2mm;border-radius:.8mm;margin-right:1.4mm;vertical-align:.4mm}
 .tag.r{background:var(--accs);color:var(--acc)} .tag.f{background:#ECECE6;color:var(--ink2)} .tag.c{background:var(--ambs);color:var(--amb)}
 .side{display:flex;flex-direction:column;gap:4mm}
+table.idt{font-size:5.0mm}
+table.idt td{padding:.55mm 1.6mm .55mm 0}
+table.idt td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+table.idt td.y{color:var(--acc);font-weight:700;white-space:nowrap}
+table.idt td.pt{color:var(--amb);font-weight:700;white-space:nowrap}
+table.idt td.n{color:var(--bad);font-weight:700;white-space:nowrap}
 .scope li{font-size:5.45mm;line-height:1.3;color:var(--ink2);margin:0 0 1.3mm 5mm}
 .try{background:var(--box);border:.5mm solid var(--ink);padding:2.4mm 3.2mm;display:flex;gap:4mm;align-items:center}
 .try>div{flex:none;width:255mm}
@@ -140,24 +146,24 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
   <div class="problem">
     <div class="k">The problem</div>
     <h2>Agents that work together drift apart.</h2>
-    <p>Each agent reads the world through its own searches and summaries. After a few handoffs two agents no longer agree on where a place is, what was measured or when, and neither can show the other which number is right. Agreement does not rescue them: after a shared summary, two models agreed only on wrong answers (R1).</p>
+    <p>Each agent reads the world through its own searches and summaries. After a few handoffs two agents no longer agree on where a place is, what was measured or when, and neither can show the other which number is right. Agreement does not rescue them (R2).</p>
   </div>
   <div class="inv">
     <div class="k">The invention</div>
     <div class="big">One place, one address. One observation, one signed record. <em>The record's name, not a paraphrase, is what crosses between agents.</em></div>
-    <p>emem is a memory of the physical world that agents share and no agent controls. It is <b>written by machines</b> from public archives, <b>named by the hash</b> of its bytes and <b>kept on two clocks</b>. Anyone can check it: bytes, signature and log offline, and the source pixel with one public read.</p>
+    <p>A memory of the physical world that agents share and no agent controls: <b>written by machines</b>, <b>named by the hash</b> of its bytes, <b>kept on two clocks</b>. In a 17-case mutation test on real bytes, prose passed all 15 corruptions it can carry; the full check chain passed none (R1).</p>
   </div>
 </section>
 
 <section class="hero"><!--inline:fig/v11/hero.svg--></section>
 
 <section class="live">
-  <div><div class="n acc">114</div><div class="l">MCP tools, with an 18-tool core loop at emem.dev/mcp; no key</div></div>
-  <div><div class="n">168</div><div class="l">published algorithms: flood, heat, crop, solar and more</div></div>
-  <div><div class="n">118</div><div class="l">wired measurements from 46 declared source schemes</div></div>
-  <div><div class="n">2.57 M</div><div class="l">signed entries in the append-only log, 30 Sep 2026</div></div>
-  <div><div class="n">177</div><div class="l">REST paths under /v1, all in the live OpenAPI document</div></div>
-  <div><div class="n acc">10</div><div class="l">client paths return one fact_cid: REST, MCP, A2A, SDKs, LangChain, LlamaIndex, stock blake3</div></div>
+  <div><div class="n acc">114</div><div class="l">MCP tools; 18 in the core loop; no key</div></div>
+  <div><div class="n">168</div><div class="l">published algorithms: flood, heat, crop, solar</div></div>
+  <div><div class="n">118</div><div class="l">wired measurements, 46 source schemes</div></div>
+  <div><div class="n">2.57 M</div><div class="l">signed log entries, 30 Sep 2026</div></div>
+  <div><div class="n">177</div><div class="l">REST paths in the live OpenAPI</div></div>
+  <div><div class="n acc">10</div><div class="l">client paths, one fact_cid, three runs each</div></div>
 </section>
 
 <section class="sechead"><span class="h">Six contributions</span><span class="sub">each a mechanism in emem's code at 18adb67, each with a measurement on the live system</span></section>
@@ -167,19 +173,19 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
     <div class="t"><span class="badge">C1</span><h3>An address for every observation</h3></div>
     <p>A value is keyed by where, what and when, and named by the hash of its exact bytes. The key finds a record; the name proves which one.</p>
     <div class="f">k = (cell64, band, tslot)<br>fact_cid = base32(BLAKE3-256(CBOR(f)))<br>token = emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</div>
-    <div class="ev">A <span class="num">1,115-byte</span> record read from a <span class="num">2.02 GB</span> scene travels as <span class="num">84</span> characters <span class="s">§4</span>. Ten client paths, three runs each, re-derive one fact_cid from the served bytes.</div>
+    <div class="ev">A <span class="num">1,115-byte</span> record read from a <span class="num">2.02 GB</span> scene travels as <span class="num">84</span> characters <span class="s">§4</span>; ten client paths re-derive the same fact_cid.</div>
   </div>
   <div class="card">
     <div class="t"><span class="badge">C2</span><h3>A memory on two clocks</h3></div>
     <p>Valid time (when the Earth was seen) and record time (when it was signed) are both in the hashed bytes. New evidence appends; nothing is rewritten.</p>
-    <div class="f">as of t: argmax<sub>signed_at ≤ t</sub> (signed_at, cid)<br>receipt binds (as_of_tslot, as_of_signed_at)<br>leaf = BLAKE3(0x00 ‖ BLAKE3(CBOR(attestation)))<br>RFC 6962-shaped log over every attestation</div>
-    <div class="ev">Bengaluru elevation moved <span class="num">918.0 → 915.07 m</span> when the upstream DEM changed <span class="s">§12</span> <span class="s">§13</span>. The May token still verifies; "as known on 15 Jun" still returns 918.0; the contradiction detector flags the pair as a provider substitution.</div>
+    <div class="f">as of t: argmax<sub>signed_at ≤ t</sub> (signed_at, cid)<br>receipt binds (as_of_tslot, as_of_signed_at)<br>log leaf = BLAKE3(0x00 ‖ BLAKE3(CBOR(attestation)))</div>
+    <div class="ev">Bengaluru elevation moved <span class="num">918.0 → 915.07 m</span> when the upstream DEM changed <span class="s">§12</span> <span class="s">§13</span>. The May token still verifies, "as of 15 Jun" still returns 918.0, and the pair is flagged as a provider change.</div>
   </div>
   <div class="card">
     <div class="t"><span class="badge">C3</span><h3>Machines write facts; agents write claims</h3></div>
     <p>Only emem's readers of registered archives, enrolled devices and operator-listed keys write the fact plane. Agents sign notes under their own keys: data, never facts, never instructions to the reader. When nothing qualifies, emem signs an absence.</p>
     <div class="f">cell(bytes) ≠ cell(token) → refused (HTTP 409)<br>absence = (cell, band, tslot, reason_cid, sources)</div>
-    <div class="ev">Venice: <i>no carriageway within 50 m</i> in Overture 2026-09-23.1, naming the public Parquet row groups it read (<span class="mono">exhq6lps…</span>). <span class="mono">/v1/plane/conformance</span> tests live that no tool accepts a caller's value.</div>
+    <div class="ev">Venice: <i>no carriageway within 50 m</i> in Overture 2026-09-23.1, with the row groups it read (<span class="mono">exhq6lps…</span>). <span class="mono">/v1/plane/conformance</span> tests that no tool takes a caller's value.</div>
   </div>
 </div>
 <div class="crow">
@@ -193,7 +199,7 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
     <div class="t"><span class="badge">C5</span><h3>Verification that needs no trust</h3></div>
     <p>A receiver checks bytes, place, arithmetic, source pixel, signature and log with stock libraries. Each record shows how deep it can be checked.</p>
     <div class="f">accept ⇔ BLAKE3(b) = cid ∧ cell(b) = cell(token) ∧ NDVI(DN(b)) = value ∧ COG[row, col] = DN(b) ∧ Ed25519(σ) ∧ leaf ∈ STH<br>depth: recomputable › rerunnable › trace-verified › checkpoint-signed › attester-only</div>
-    <div class="ev">Our script: <span class="num">15 links, 17 checks, 17.9 s</span>, no emem code <span class="s">§22</span>. An agent with no tie to us wrote a clean-room verifier from <span class="mono">/v1/verifier_spec</span>: <span class="num">725</span> requests, zero errors, five tampered receipts rejected, eight real defects found and since fixed.</div>
+    <div class="ev">Our script: <span class="num">15 links, 17 checks, 17.9 s</span>, no emem code <span class="s">§22</span>. An unaffiliated agent's clean-room verifier from <span class="mono">/v1/verifier_spec</span>: <span class="num">725</span> requests, zero errors, five tampered receipts rejected, eight defects found and fixed.</div>
   </div>
   <div class="card">
     <div class="t"><span class="badge amb">C6</span><h3>Computation others can recompute</h3></div>
@@ -206,14 +212,14 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
 
 <section class="sechead"><span class="h">What agents do with it</span><span class="sub">eight jobs served today by the same tools; one memory for every model</span></section>
 <section class="jobs">
-  <div class="job"><div class="jt">Research a place without the web</div><div class="tool">ask · 168 recipes</div><div class="jd">Flood, heat, crop or solar scores from signed readings; each recipe cited by id.</div></div>
+  <div class="job"><div class="jt">Research a place, no web</div><div class="tool">ask · 168 recipes</div><div class="jd">Flood, heat, crop or solar scores from signed readings; each recipe cited by id.</div></div>
   <div class="job"><div class="jt">Hand work to another agent</div><div class="tool">emem:bundle</div><div class="jd">Exact signed bytes behind one line, on any model or vendor.</div></div>
-  <div class="job"><div class="jt">Keep a long investigation alive</div><div class="tool">emem_memory_create</div><div class="jd">Signed notes outlast sessions, compaction and restarts. Notes are public.</div></div>
+  <div class="job"><div class="jt">Keep long work alive</div><div class="tool">emem_memory_create</div><div class="jd">Signed notes outlast sessions, compaction and restarts. Notes are public.</div></div>
   <div class="job"><div class="jt">Agree on what a thing is</div><div class="tool">emem_entity_resolve</div><div class="jd">A farm or a building gets one identity; different phrasings converge on it.</div></div>
   <div class="job"><div class="jt">Explain why a number moved</div><div class="tool">emem_change_attribution</div><div class="jd">Names the terms behind a change, each with its fact ids.</div></div>
   <div class="job"><div class="jt">Catch a contradiction</div><div class="tool">emem_memory_contradictions</div><div class="jd">Finds records that disagree; the guard refuses a wrong number.</div></div>
   <div class="job"><div class="jt">Turn documents into evidence</div><div class="tool">emem:tree</div><div class="jd">Lab reports and land records become signed units under one token.</div></div>
-  <div class="job"><div class="jt">Compute so others can recompute</div><div class="tool">emem_derive</div><div class="jd">Pure operations are re-run by emem before the result is recorded.</div></div>
+  <div class="job"><div class="jt">Compute for recomputation</div><div class="tool">emem_derive</div><div class="jd">Pure operations are re-run by emem before the result is recorded.</div></div>
 </section>
 <section class="wild">
   <div><div class="wt">One token, three vendors</div><div class="wd">Claude (through MCP), Gemma 3 on Amazon Bedrock and Qwen 2.5 running locally all end with the same fact_cid and value. The decoding is emem's, not the model's: two of the three were handed the same resolved response.</div></div>
@@ -222,25 +228,23 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
   <div><div class="wt">Any node, the same receipts</div><div class="wd">The hosted node runs the Apache-2.0 binary, and a receipt minted on one node verifies on another. geo.qa runs a second node; an air-gapped build runs with no network at all.</div></div>
 </section>
 
-<section class="sechead"><span class="h">Four results</span><span class="sub">pre-registration hashes, data and scripts: github.com/Vortx-AI/esa_poster/research/repro</span></section>
+<section class="sechead"><span class="h">Four results</span><span class="sub">scripts, data and pre-registration hashes: github.com/Vortx-AI/esa_poster/research/repro</span></section>
 <section class="results">
   <div class="res">
-    <div class="k">R1 · Compaction and handoff</div>
-    <h3>Agreement is not evidence; bytes are</h3>
-    <img src="fig/v11/r1_agreement.svg" alt="Bar charts: correct answers and agreeing pairs by condition; exact values after handoff by method.">
-    <p class="small">(a) Pre-registered; Gemma-4-12B and Qwen2.5-7B on one host <span class="s">§17</span>. Under pressure 0 of 72 answers were right, yet 3 of 36 pairs agreed, every time on a wrong answer (registered one-sided Fisher test, p = 0.035; pairs and answers share trials, so read it as descriptive). (b) n = 20 per arm <span class="s">§18</span>; a single-token arm was excluded for a window bug. BM25 ties on exactness; only the bundle hands over bytes the receiver can re-hash.</p>
-    <div class="take">Agreement between agents cannot certify a value. A content address can.</div>
+    <div class="k">R1 · The mutation test: 17 cases × 9 depths, on real bytes</div>
+    <h3>Each check stops a failure that the others let through</h3>
+    <img src="fig/v11/r1_mutation.svg" alt="Matrix of 17 mutations by 9 verification depths.">
+    <p class="small">B receives the Keylong record <span class="s">§4</span> after one corruption; a deterministic verifier, no model in the loop, decides whether B acts on it. The rule "irrigate iff NDVI ≤ 0.4705" flips in 6 of 16 cases. T2 rows use a test key the verifier trusts. Leave-one-out: dropping binding, signature, log, recompute or re-read each lets a case through; the signature subsumes the hash. Units, checkpoints and embeddings are not covered.</p>
+    <div class="take">Prose and JSON pass all 15 applicable corruptions. Full emem passes none, and still cannot tell which entity A meant.</div>
   </div>
   <div class="res">
-    <div class="k">R2 · Falsifiable by construction</div>
-    <h3>The records located emem's own error</h3>
-    <img src="fig/v11/r2_pixel_audit.svg" alt="Two 5 by 5 NDVI grids around the query point, before and after the fix.">
-    <p class="small">Re-reading the scenes named inside the records showed that before 28 Sep, <b>162 of 200</b> sampled Sentinel-2 records (81 %, Wilson 95 % CI 75–86 %) carried the DNs of a neighbouring pixel; here, 10 m south <span class="s">§7</span>. emem rounded a fractional pixel index where GDAL takes the floor. After the fix <span class="s">§8</span>, 49 of 49 records where the two rules differ read the containing pixel. No signed byte was rewritten, so every affected record stays resolvable and datable.</p>
-    <div class="take">Any memory will hold errors. In emem each one can be found, dated and bounded.</div>
-  </div>
-  <div class="res">
-    <div class="k">R3 · Two LLMs, emem the only tool</div>
-    <h3>The check belongs in the tool, not the model</h3>
+    <div class="k">R2 · Compaction and handoff</div>
+    <h3>Agreement is not evidence</h3>
+    <img src="fig/v11/r1_agreement.svg" alt="Correct answers and agreeing pairs by condition.">
+    <p class="small">Pre-registered; Gemma-4-12B and Qwen2.5-7B on one host <span class="s">§17</span>. Under pressure, 3 of 36 pairs agreed while 0 of 72 answers were right (Fisher p = 0.035; pairs share trials, so descriptive). In a separate handoff study, n = 20 per arm <span class="s">§18</span>, the exact value survived prose 2/20, dense retrieval 8/20, BM25 20/20, the emem bundle 20/20.</p>
+    <div class="take">Agreement between agents cannot certify a value.</div>
+    <div class="k" style="margin-top:2.4mm">R3 · Two LLMs, emem the only tool</div>
+    <h3>A token helps only when checked</h3>
     <table>
       <tr><th>B receives</th><th style="text-align:right">B right</th><th class="p">B checked</th></tr>
       <tr><td>A's token</td><td class="n ok">10/10</td><td class="p">resolved; harness re-hash, receipt 10/10</td></tr>
@@ -248,21 +252,15 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
       <tr><td>prose rounded to "0.47"</td><td class="n no">0/5</td><td class="p">nothing to check</td></tr>
       <tr><td>token with a forged cell</td><td class="n ok">5/5 declined</td><td class="p">MCP error; REST 409</td></tr>
     </table>
-    <p class="small">A = Claude Sonnet 5.5, B = Claude Haiku 4.5, pre-registered <span class="s">§22</span>. Token vs full prose tied (p = 1); the rounded arm is exploratory, its threshold set 0.0004 below the value. A registered small-model arm (Qwen2.5-3B as B) did worse; its raw logs are not yet committed, so its numbers are not printed.</p>
-    <div class="take">A token protects an agent only when something checks it. The check belongs in the resolver, not in the model's goodwill.</div>
-
-    <div class="k" style="margin-top:1.6mm">R4 · Seven real drifts</div>
-    <h3>Six are caught by one test on the record</h3>
-    <table class="drift">
-      <tr><th>what drifted, real case</th><th>test that shows it</th></tr>
-      <tr><td>words: 0.48715… retold as "≈ 0.49" <span class="s">§21</span></td><td class="t">s ≠ v</td></tr>
-      <tr><td>reader: a neighbouring pixel <span class="s">§7</span></td><td class="t">DN(b) ≠ COG[⌊row⌋,⌊col⌋]</td></tr>
-      <tr><td>source: DEM 918.0 → 915.07 m <span class="s">§13</span></td><td class="t">fn_key₁ ≠ fn_key₂</td></tr>
-      <tr><td>date: cube member for 15 May is 10 Jun <span class="s">§6</span></td><td class="t">date(scene) ≠ asked</td></tr>
-      <tr><td>place: token relabelled to a cell <span class="s">§4</span></td><td class="t">cell(b) ≠ cell(token)</td></tr>
-      <tr><td>signer: one value, 7 fact_cids <span class="s">§13</span></td><td class="t">k₁ = k₂, cid₁ ≠ cid₂</td></tr>
-      <tr><td>referent: "Maasvlakte ramp 7"</td><td class="t no">none: a label</td></tr>
-    </table>
+    <p class="small">A = Claude Sonnet 5.5, B = Claude Haiku 4.5, pre-registered <span class="s">§22</span>; token vs full prose tied (p = 1); rounded arm exploratory. A Qwen2.5-3B arm did worse; its logs are not yet committed.</p>
+    <div class="take">The check belongs in the resolver, not in the model's goodwill.</div>
+  </div>
+  <div class="res">
+    <div class="k">R4 · Falsifiable by construction</div>
+    <h3>The records located emem's own error</h3>
+    <img src="fig/v11/r2_pixel_audit.svg" alt="Two 5 by 5 NDVI grids around the query point, before and after the fix.">
+    <p class="small">Re-reading the scenes named inside the records showed that before 28 Sep, <b>162 of 200</b> sampled Sentinel-2 records (81 %, Wilson 95 % CI 75–86 %) carried the DNs of a neighbouring pixel; here, 10 m south <span class="s">§7</span>. emem rounded a fractional pixel index where GDAL takes the floor. After the fix <span class="s">§8</span>, 49 of 49 records where the two rules differ read the containing pixel. No signed byte was rewritten, so every affected record stays resolvable and datable.</p>
+    <div class="take">Errors stay findable, datable and bounded.</div>
   </div>
 </section>
 
@@ -271,36 +269,40 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
     <div class="sechead" style="margin-bottom:3.4mm"><span class="h">Objections we expect</span><span class="sub">and our answers</span></div>
     <div class="qa">
       <div class="col">
-      <div><div class="q">A signature does not make a value true.</div><div class="a"><span class="tag c">agreed</span>It proves who served which bytes, and when. Truth is checked by re-reading the public source each record names. That is how R2 was found.</div></div>
+      <div><div class="q">A signature does not make a value true.</div><div class="a"><span class="tag c">agreed</span>It proves who served which bytes, and when. Truth is checked by re-reading the public source each record names. That is how R4 was found.</div></div>
       <div><div class="q">A token costs more LLM tokens than the number it names.</div><div class="a"><span class="tag c">agreed</span>About 6× for one value in our count (46 vs 8 tokenizer tokens). A single token buys identity, not compression. The bundle compresses: up to 256 facts behind one 38-character line.</div></div>
-      <div><div class="q">Why not STAC with checksums, C2PA, W3C PROV or IPFS?</div><div class="a"><span class="tag r">rebuttal</span>They locate files, sign media, describe lineage or address blobs. None names one value at a place and time, binds it to its cell and answers "as of t". emem works at the grain agents cite.</div></div>
+      <div><div class="q">Is this a guardrail, provenance-first composition, or STAC with checksums?</div><div class="a"><span class="tag r">reframe</span>Different layers. A guardrail such as GeoGuard decides whether a claim should stand; provenance-first composition traces a pipeline; STAC, C2PA and PROV locate files, sign media or describe lineage. emem names the exact observation one agent cites, so another can verify it. A guardrail can take emem tokens as its evidence.</div></div>
       <div><div class="q">One operator runs the responder and the log.</div><div class="a"><span class="tag c">agreed</span>111 keys co-sign the log, but the only domain-vouched one, geo.qa, is also Vortx AI. Every check above runs without us, and an unaffiliated clean-room verifier reproduced them (C5). Independent operators are the next step.</div></div>
       </div>
       <div class="col">
       <div><div class="q">The title says foundation-model embeddings, yet the encoders were retired.</div><div class="a"><span class="tag r">reframe</span>Clay, Prithvi-EO-2.0, Galileo and a JEPA head left the code after acceptance <span class="s">§23</span>, and emem.dev now mints no new TESSERA vectors. Vectors signed before still resolve and verify <span class="s">§24</span>: the memory outlived its encoders.</div></div>
       <div><div class="q">BM25 retrieval matched you.</div><div class="a"><span class="tag r">rebuttal</span>On exactness, when the string is in the corpus (16/16). Retrieval returns text nobody can check; dense retrieval gave 4/142 exact and up to 138 confidently wrong, by a median 252 m <span class="s">§25</span>.</div></div>
       <div><div class="q">Your own reader signed wrong-pixel records.</div><div class="a"><span class="tag c">agreed</span>162 of 200 before 28 Sep. The records made the error locatable by re-reading the scene they name, and datable by their signed_at. A store of bare vectors could show only that a value moved.</div></div>
-      <div><div class="q">Small n, one host.</div><div class="a"><span class="tag c">agreed</span>The agent studies are samples: pre-registered, hashed before trial 1, not yet replicated. The mechanism claims (hashing, cell binding, signatures) are deterministic and need no sample.</div></div>
+      <div><div class="q">Small n, one host.</div><div class="a"><span class="tag c">agreed</span>The agent studies are samples: pre-registered, hashed before trial 1, not yet replicated across models. The mutation test (R1) is deterministic and runs in a second from the repository.</div></div>
       </div>
     </div>
   </div>
   <div class="side">
     <div>
-      <div class="sechead" style="margin-bottom:2.6mm"><span class="h">Scope</span><span class="sub">what a signature does not show</span></div>
-      <ul class="scope">
-        <li>that a value is true; only who served which bytes, and when;</li>
-        <li>which input moved an embedding: a vector can be re-read, not recomputed <span class="s">§9</span>;</li>
-        <li>what a place or entity name refers to: those tokens are labels, not bytes;</li>
-        <li>hardware provenance: the device gate ships as code with conformance vectors and admits no real device yet <span class="s">§26</span>.</li>
-      </ul>
+      <div class="sechead" style="margin-bottom:2mm"><span class="h">What emem establishes</span><span class="sub">seven identities, kept apart</span></div>
+      <table class="idt">
+        <tr><td>these exact bytes</td><td class="y">yes</td><td>hash, signature, log (R1 D, F, G)</td></tr>
+        <tr><td>this place and time</td><td class="y">yes</td><td>cell and tslot in the bytes (R1 E)</td></tr>
+        <tr><td>this derivation</td><td class="y">checkable</td><td>recompute; re-read the pixel (R1 H, I)</td></tr>
+        <tr><td>this upstream file</td><td class="pt">partial</td><td>COG and pixel named; <i>upstream identity unverified</i></td></tr>
+        <tr><td>this physical entity</td><td class="n">no</td><td>entity tokens are labels (R1 M17)</td></tr>
+        <tr><td>a true value</td><td class="n">no</td><td>only who served which bytes</td></tr>
+        <tr><td>a right decision</td><td class="n">no</td><td>the agent's, or a guardrail's</td></tr>
+      </table>
+      <div class="small" style="margin-top:1.2mm">Also open: the device gate admits no real device yet <span class="s">§26</span>.</div>
     </div>
     <div class="try">
       <div>
         <div class="k" style="color:var(--ink)">Try it in one minute</div>
         <div class="cmd">claude mcp add --transport http emem https://emem.dev/mcp</div>
-        <div class="small">Also in ChatGPT, VS Code, Dify and the GitHub MCP Registry · pip install ememdev · npm i @vortxai/emem · self-host: docker run ghcr.io/vortx-ai/emem</div>
+        <div class="small">Also in ChatGPT, VS Code, Dify and the GitHub MCP Registry · pip install ememdev · npm i @vortxai/emem · self-host: docker run ghcr.io/vortx-ai/emem. Scan to run R1 yourself: <span class="mono">python research/repro/v11/mutation_suite.py</span>, offline, under a second.</div>
       </div>
-      <!--inline:fig/v11/qr_try.svg-->
+      <!--inline:fig/v11/qr_repro.svg-->
     </div>
     <div class="try">
       <div>
@@ -316,7 +318,7 @@ table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
 <footer class="foot">
   <div><b>References.</b> BLAKE3 (O'Connor, Aumasson, Neves, Wilcox-O'Hearn 2020) · RFC 6962 Certificate Transparency · RFC 8032 Ed25519 · RFC 8949 CBOR · STAC 1.0; OGC Cloud-Optimized GeoTIFF · openEO · W3C PROV-O · C2PA 2 · Model Context Protocol · Agent2Agent · TESSERA, arXiv:2506.20380 · Earth Embeddings as Products, arXiv:2601.13134 · openEO provenance, arXiv:2506.08597 · Perez et al., ICLR 2025.
   <b>Track steps.</b> §2 COG pointer · §4 NDVI record · §5 raster · §6 cube · §7 pre-fix record · §8 CHANGELOG line 68 · §9 TESSERA · §11 our derivation · §12–13 elevation · §14 guard · §16 bundle · §17–18, §23–26 emem doc rows · §22 our measurements.</div>
-  <div><b>Where this stands.</b> Mechanisms read from emem's code at 18adb67; measurements 29–30 Sep 2026 on emem.dev. Our full self-audit (36 defects found and reported upstream, the authors' own scorecard, 19 withdrawn claims, the drift taxonomy) lives in the repository rather than on this board: github.com/Vortx-AI/esa_poster/research. Paper v0.1.0; this board describes whitepaper v3.</div>
+  <div><b>Where this stands.</b> Mechanisms read from emem's code at 18adb67; measurements 29–30 Sep 2026 on emem.dev; R1 is research/repro/v11/mutation_suite.py. Our full self-audit (36 defects found and reported upstream, the authors' own scorecard, 19 withdrawn claims, the drift taxonomy) lives in the repository rather than on this board: github.com/Vortx-AI/esa_poster/research. Paper v0.1.0; this board describes whitepaper v3.</div>
 </footer>
 </div></body>
 </html>
