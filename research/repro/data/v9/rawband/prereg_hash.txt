@@ -1,0 +1,2 @@
+prereg_blake3=30d8a1a1a8cf9646ada5e49b303b9c9c6f0c4ed6d076e797aa1a5fad6e35d50c
+utc=2026-09-30T13:49:13Z

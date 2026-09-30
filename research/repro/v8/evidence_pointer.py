@@ -7,7 +7,11 @@ FILES = [("15-link trace output, 30 Sep", "research/repro/v8/trace_fact_output.t
          ("two-LLM handoff pre-registration", "research/repro/data/v8/prereg.md"),
          ("two-LLM handoff results", "research/repro/data/v8/results.json"),
          ("pixel-rounding audit, 200 records", "research/repro/data/v8/prevalence_summary.json"),
-         ("pixel windows before and after the fix", "research/repro/data/v8/pixel_windows.json")]
+         ("pixel windows before and after the fix", "research/repro/data/v8/pixel_windows.json"),
+         ("raw-band run pre-registration", "research/repro/data/v9/rawband/prereg.md"),
+         ("raw-band run results", "research/repro/data/v9/rawband/results.json"),
+         ("raw-band run, per-trial records", "research/repro/data/v9/rawband/trials.jsonl"),
+         ("defects found in the audit", "research/do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md")]
 b32 = lambda b: base64.b32encode(b).decode().lower().rstrip("=")
 H = lambda b: blake3.blake3(b).digest()
 rows, leaves = [], []

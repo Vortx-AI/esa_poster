@@ -34,6 +34,8 @@ STEPS = [
  ("results table and the safety result", N + "ay2lfw4pehm52gjzyn7rnu4szq.md", "pointer.v1"),
  ("README, the device gate", N + "74gntpglvsg466a5vgevbvteme.md", "pointer.v1"),
  ("entity, Maasvlakte ramp 7", "emem:entity:4itylz3kjtwy3lgr76ku52ffqa", "entity"),
+ ("B04, 23 Sep, containing pixel", "emem:fact:defi.zb572.xoso.zb1ec:aorer7jtgzrjkjospacmula5rd65tev7uyndw3taogg7trmg2a2q", "fact"),
+ ("B08, 23 Sep, containing pixel", "emem:fact:defi.zb572.xoso.zb1ec:flf5bk4qry32c3exazagp66gs2gzdhafx7heqqsslsuvn43ad5bq", "fact"),
 ]
 assert all(len(l) <= 40 and ":" not in l for l, _, _ in STEPS)
 link = cid(b""); rows = []

@@ -18,7 +18,7 @@
 html,body{width:841mm;height:1189mm;background:var(--paper)}
 body{font-family:Plex,sans-serif;color:var(--ink);font-size:6mm;line-height:1.32;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:841mm;height:1189mm;padding:20mm 24mm 16mm}
-.inner{zoom:1.04;width:calc(793mm / 1.04);height:calc(1153mm / 1.04);display:flex;flex-direction:column;gap:7mm}
+.inner{zoom:1.04;width:calc(793mm / 1.04);height:calc(1153mm / 1.04);display:flex;flex-direction:column;gap:5.5mm}
 .mono{font-family:PlexMono,monospace} b{font-weight:600}
 .acc{color:var(--acc)} .bad{color:var(--bad)} .mu{color:var(--muted)} .i2{color:var(--ink2)}
 .s{font-family:PlexMono,monospace;font-weight:600;font-size:.8em;color:var(--acc);background:var(--accs);padding:0 .9mm;border-radius:.8mm;white-space:nowrap}
@@ -193,16 +193,16 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
 </section>
 
 <!-- DRIFT + RAW -->
-<section class="row" style="grid-template-columns:1.15fr .85fr">
+<section class="row" style="grid-template-columns:1.05fr .95fr">
   <div class="sec">
     <div class="k">7 · A drift taxonomy from real cases</div>
     <h2>Seven ways cited evidence drifted, and the part of the record that shows each</h2>
     <table class="d">
       <tr><th>what drifted</th><th>real case</th><th>what shows it</th></tr>
-      <tr><td><b>the words</b></td><td>0.4871541501976284 retold as “≈ 0.49”; both models skipped irrigation <span class="s">§21</span></td><td>stated value ≠ signed value</td></tr>
+      <tr><td><b>the words</b></td><td>0.4871541501976284 retold as “≈ 0.49”; both models skipped irrigation <span class="s">§21</span></td><td>stated value ≠ signed value, if the reader compares (emem’s draft check allows “≈ 0.49”)</td></tr>
       <tr><td><b>the reader</b></td><td>162 of 200 pre-fix S2 records carry the pixel south <span class="s">§7</span> <span class="s">§8</span></td><td>re-reading the source pixel (links 8–9)</td></tr>
       <tr><td><b>the source</b></td><td>Bengaluru elevation 918.0 → 915.07 m; “as known on 15 Jun” still returns 918.0 <span class="s">§12</span> <span class="s">§13</span></td><td>the derivation names a different source (Open-Meteo 90 m → Cop-DEM 30 m COG)</td></tr>
-      <tr><td><b>the date</b></td><td>a cube member asked for 15 May is the 10 Jun scene (+26 d) <span class="s">§6</span></td><td>each member states the date asked and the scene used</td></tr>
+      <tr><td><b>the date</b></td><td>a raster asked for 23 Sep was the 25 Sep scene, no warning (section 8); a cube member asked for 15 May is the 10 Jun scene <span class="s">§6</span></td><td>the scene id and date inside the record</td></tr>
       <tr><td><b>the place</b></td><td>a token re-labelled with another cell <span class="s">§4</span></td><td>the cell inside the bytes ≠ the token’s cell: refused</td></tr>
       <tr><td><b>the signer</b></td><td>915.07 m signed 7 times: 7 fact_cids for one value <span class="s">§13</span></td><td>signer and signed_at are hashed; the shared key is (cell, band, tslot)</td></tr>
       <tr><td><b>the referent</b></td><td>“Maasvlakte ramp 7” resolves to all of Maasvlakte, ≈ 12 × 10 km <span class="s">§27</span></td><td class="no">not caught: entity tokens are labels, not bytes</td></tr>
@@ -211,8 +211,20 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
   </div>
   <div class="sec">
     <div class="k">8 · Raw bands, the agent’s own method</div>
-    <h2>RAWBAND_H2</h2>
-    RAWBAND_BODY
+    <h2>Asked for 23 Sep raw bands, emem’s raster tool served the 25 Sep scene</h2>
+    <table class="d">
+      <tr><th>10 pre-registered runs, Claude Sonnet 5.5, emem as the only MCP server</th><th></th></tr>
+      <tr><td>chose their own bands and formula: B04, B08, (B08−B04)/(B08+B04)</td><td class="n">10</td></tr>
+      <tr><td>noticed that both dates had returned one scene</td><td class="n">9</td></tr>
+      <tr><td>got 23 Sep values (via recall and backfill): ΔNDVI 0.486 → 0.471 = −0.015, “no material change” <span class="s">§28</span> <span class="s">§29</span></td><td class="n ok">1</td></tr>
+      <tr><td>wrote “no material change” as a placeholder, saying it was not measured</td><td class="n">5</td></tr>
+      <tr><td>answered “undetermined”, outside the allowed answers</td><td class="n">4</td></tr>
+      <tr><td>said “greener”, the answer the pre-fix record gives (+0.127)</td><td class="n">0</td></tr>
+      <tr><td>wrongly said no 23 Sep scene exists</td><td class="n no">3</td></tr>
+      <tr><td>cited ids that re-hash · data values traced to tool results</td><td class="n">30/30 · all</td></tr>
+    </table>
+    <p class="t">The failure was emem’s, and the record exposed it: <span class="mono">emem_band_raster</span> with <span class="mono">observed_on</span> 23 Sep returned the byte-identical 25 Sep raster, with no warning, and the scene named inside that record is how nine agents saw it. Only one agent reached the containing pixel; no run said SCL.</p>
+    <p class="src">Pre-registration blake3 30d8a1a1… hashed 13:49Z, 30 Sep, before trial 1; write tools denied. The primary test (does the pre-fix record mislead?) could not run. emem’s read tools signed new records during the runs, so trials 9–10 were not independent. $2.12 in all. research/repro/data/v9/rawband · <span class="s">§22</span></p>
   </div>
 </section>
 
@@ -288,14 +300,14 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <div class="k">14 · Seal</div>
     <h2>Check this board</h2>
     <div class="seal">
-      <div class="qr" id="qr"><img src="fig/seal_qr.png" alt="QR: vortx-ai.github.io/ememdemo/?s=emem.dev/memories/by_attester/njedkglt/qw5zd3de2lyo532g66kva5t5oe.md"></div>
-      <div class="v" id="sealtext"><span style="font-family:Plex,sans-serif;word-break:normal"><b>Opens in ememdemo</b>, which re-hashes every §-step in your browser and recomputes the track’s hash chain.</span><br><br>track: emem.dev/memories/by_attester/njedkglt/qw5zd3de2lyo532g66kva5t5oe.md<br>head: zvy3kzpm4a4nkhrnb3h5gtkf7i (22 of 22 steps)<br>board.jpg sha256: 8d4de3b3e5c38fe4262a171d3a275bfd325ec195ce234890cabc5e74c5a69eb2<br>written after log size 2,567,013 (30 Sep 2026 13:38 UTC)<br>logged as entry 2,567,020</div>
+      <div class="qr" id="qr">QR to the track<br>(filled after the board’s bytes are published)</div>
+      <div class="v" id="sealtext"><span style="font-family:Plex,sans-serif;word-break:normal"><b>Opens in ememdemo</b>, which re-hashes every §-step in your browser and recomputes the track’s hash chain.</span><br><br>track: —<br>head: —<br>board.jpg sha256: —<br>written after log size: —</div>
     </div>
     <p class="src">A file cannot contain its own hash, so this box is the only part of the board not inside the published bytes <span class="s">§1</span>. Signed by the poster key njedkglt…; scripts to re-check everything without the viewer: research/repro/v8/.</p>
   </div>
 </section>
 
-<div class="foot"><span>§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements · 23–26 doc rows at emem 18adb67 · 27 Maasvlakte entity. Traffic to 30 Sep: 96,728 MCP tool calls; PyPI 314 · npm 304 last month; 96.2 % of signed agent notes are from operator keys</span><span>Vortx AI</span></div>
+<div class="foot"><span>§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements · 23–26 doc rows at emem 18adb67 · 27 Maasvlakte entity · 28–29 23 Sep B04, B08 (post-fix). Traffic to 30 Sep: 96,728 MCP tool calls; PyPI 314 · npm 304 last month; 96.2 % of signed agent notes are from operator keys</span><span>Vortx AI</span></div>
 </div></div>
 </body>
 </html>
