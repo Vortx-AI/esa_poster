@@ -1,3 +1,9 @@
+> **v8 (2026-09-30):** the poster is an emem track (22 steps, 22/22 in ememdemo): `emem.dev/memories/by_attester/njedkglt/qw5zd3de2lyo532g66kva5t5oe.md`, head `zvy3kzpm4a4nkhrnb3h5gtkf7i`. See `poster/README.md` (v8). The v8 findings are:
+> - The pixel-rounding audit: 162 of 200 pre-fix S2 records carry a neighbouring pixel's DNs.
+> - The two-LLM pre-registered handoff. Claude Haiku as B declined 5 of 5 forged tokens. The Qwen2.5-3B arm misapplied the rule and did not decline forged tokens.
+> - A 15-link trace, 17 checks, run with no emem code.
+> - New emem defects 23–26 are in `do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md`. The one that matters for the demo: rasterset resolve returns no receipt.
+
 # Research state
 
 > **v3 (2026-09-29, later):** four audits produced [`should_do/09_INVENTION_REGISTER.md`](should_do/09_INVENTION_REGISTER.md), which supersedes the "poster spine" below. The poster is rebuilt on its eight contributions (A1–A8) and three findings (B1–B3). Correction: geo.qa is run by Vortx AI, so it is not an independent witness.

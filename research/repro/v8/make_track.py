@@ -7,11 +7,11 @@ cube = json.load(open("../data/cubeK_members.json"))["cube_token"]
 rs = json.load(open("rasterset_mint.json"))["tokens"]["raster_bundle"]
 bundle = json.load(open("bundle_mint.json"))["bundle_token"]
 STEPS = [
- ("the board, seal box blank", N + "ubaylj2hnx5ho3gnelzgndncai.md", "pointer.v1"),
+ ("the board, seal box blank", N + "3vqnyosg5ggpuoflvtsbqtbj7m.md", "pointer.v1"),
  ("Sentinel-2 B08 COG, 292 tiles", N + "khiqtqrddb6jponqn4gv72if7e.md", "pointer.v1"),
  ("Sentinel-2 B04 COG, 292 tiles", N + "h6d7xdoc5b2uzood22lowblbc4.md", "pointer.v1"),
  ("NDVI record, Keylong, 25 Sep 2026", F("ndvi_keylong"), "fact"),
- ("B04 field, Keylong, 443 x 453 px", json.load(open("../hero_field.json"))["s2.B04"]["token"], "raster"),
+ ("B04 raster, Keylong, 443 x 453 px", json.load(open("../hero_field.json"))["s2.B04"]["token"], "raster"),
  ("B08 cube, five scenes", cube, "cube"),
  ("pre-fix record, 23 Sep, pixel south", F("ndvi_prefix_23sep"), "fact"),
  ("CHANGELOG line 68, the pixel fix", N + "7zmocvinsgzdayubripuzruy7q.md", "pointer.v1"),
