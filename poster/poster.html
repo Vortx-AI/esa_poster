@@ -32,6 +32,20 @@ b,strong{font-weight:600}
 .meta{display:flex;justify-content:space-between;font-size:5.4mm;color:var(--ink2);border-bottom:.6mm solid var(--ink);padding-bottom:3mm}
 h1{font-size:15mm;line-height:1.1;font-weight:600;letter-spacing:-.01em;margin-top:4.5mm}
 .authors{font-size:6.6mm;margin-top:3mm;color:var(--ink2)} .authors b{color:var(--ink)}
+.rq{margin-top:4mm;padding:3mm 0;border-top:.45mm solid var(--rule);border-bottom:.45mm solid var(--rule);font-size:8.2mm;font-weight:500;line-height:1.25}
+.rq b{color:var(--accent)}
+.workflow{display:grid;grid-template-columns:repeat(7,1fr);gap:2mm;margin-top:1mm}
+.wf{position:relative;border-top:.7mm solid var(--ink);padding:2mm 1mm 0;font-size:4.5mm;line-height:1.25;color:var(--ink2)}
+.wf b{display:block;color:var(--ink);font-size:5.2mm}
+.wf:not(:last-child)::after{content:"→";position:absolute;right:-2mm;top:8mm;color:var(--muted);font-size:5mm}
+.arch{display:grid;grid-template-columns:1fr 1.45fr .8fr 1fr;gap:4mm;margin-top:3mm}
+.archbox{border-left:1.2mm solid var(--ink);padding:1mm 0 1mm 3mm;font-size:4.45mm;line-height:1.3;color:var(--ink2)}
+.archbox b{display:block;font-size:5mm;color:var(--ink);margin-bottom:.5mm}
+.compare{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:3mm}
+.cmp{border-top:.6mm solid var(--ink);padding-top:2mm;font-size:4.55mm;line-height:1.28;color:var(--ink2)}
+.cmp b{display:block;font-size:5.1mm;color:var(--ink)}
+.cmp .obj{font-family:PlexMono,monospace;color:var(--accent);display:block;margin:.8mm 0}
+.fulltoken{font-family:PlexMono,monospace;font-size:3.9mm;line-height:1.35;word-break:break-all;background:var(--accent-soft);padding:2mm 2.5mm;border-left:1mm solid var(--accent)}
 
 /* lead */
 .lead{display:grid;grid-template-columns:1fr 330mm;gap:14mm}
@@ -128,9 +142,9 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
 <div class="page"><div class="inner">
 
 <header>
-  <div class="meta"><span>Agentic AI for Earth Observation · Berlin · Poster Session 1 · 19 Oct 2026</span><span>Apache-2.0 · github.com/Vortx-AI/emem</span></div>
   <h1>emem: A research on Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</h1>
-  <div class="authors"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> — Vortx AI · doi:10.5281/zenodo.20706893 · claims pinned to emem <span class="mono">64cfae5</span>; every live value below obtained from emem.dev on 29 Sep 2026 — integrity checks (A1–A3, A8) re-run with independent code</div>
+  <div class="authors"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> — Vortx AI · doi:10.5281/zenodo.20706893 · emem <span class="mono">64cfae5</span></div>
+  <div class="rq">Can two independent agents still refer to <b>the same cited Earth observation</b> after their contexts diverge?</div>
 </header>
 
 <!-- LEAD -->
@@ -139,22 +153,25 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
     <div class="q">Referential drift starts when <span class="acc">evidence becomes prose.</span></div>
     <div class="src">A real Lahaul NDVI value of 0.4871541501976284 became “≈ 0.49”. Two models agreed more — and both crossed the irrigation threshold the wrong way.</div>
     <p class="ans">emem changes the handoff unit. <b>Carry the address of the signed observation record, not a sentence about it.</b> A later agent resolves the record, re-hashes the bytes and verifies the attestation before reasoning from it.</p>
-    <div class="rule1"><b>OBSERVE → ADDRESS → HAND OFF → RESOLVE → VERIFY → CONTINUE</b><span class="mu">The agent is temporary. The cited world-state is not. Integrity is checkable; measurement truth is not implied.</span></div>
+    <div class="rule1"><b>OBSERVE → ADDRESS → HAND OFF → RESOLVE → VERIFY → CONTINUE</b><span class="mu">The context may disappear; the signed observation record remains resolvable. Integrity is checkable; measurement truth is not implied.</span></div>
   </div>
   <div class="tokens">
-    <h4>Three EO objects</h4>
-    <table class="t">
-      <tr><th>carry</th><th>world-state</th><th>receiver can</th></tr>
-      <tr><td class="m">emem:fact:</td><td>one signed observation record</td><td><span class="str b">resolve + re-hash</span></td></tr>
-      <tr><td class="m">emem:raster:</td><td>one spatial field + signed derivation</td><td><span class="str b">re-hash field</span></td></tr>
-      <tr><td class="m">emem:cube:</td><td>that field through time</td><td><span class="str b">resolve members</span></td></tr>
-    </table>
-    <p class="tnote"><span class="mono">bundle</span>, <span class="mono">entity</span> and <span class="mono">cell</span> intentionally have different strengths. The protocol does not pretend every token means “same bytes”.</p>
+    <h4>What an agent actually does</h4>
+    <div class="workflow">
+      <div class="wf"><b>ASK</b>place + question</div>
+      <div class="wf"><b>LOCATE</b>place → cell64</div>
+      <div class="wf"><b>READ</b>fact / raster / cube</div>
+      <div class="wf"><b>REASON</b>model uses resolved evidence</div>
+      <div class="wf"><b>CHECK</b>draft ↔ cited value</div>
+      <div class="wf"><b>HAND OFF</b>token / bundle / checkpoint</div>
+      <div class="wf"><b>CONTINUE</b>next session resolves again</div>
+    </div>
+    <p class="tnote">The workflow is shipped through MCP / REST / A2A and the agent skills; the handoff object is the address of evidence, not the previous model’s transcript.</p>
   </div>
 </section>
 
 <section class="life">
-  <div class="ttl"><h3>Fig. 1 — One real observation becomes portable world-state</h3><span>fact oj5cecci… · Keylong, Lahaul · every value below read from emem.dev on 29 Sep 2026</span></div>
+  <div class="ttl"><h3>Fig. 1 — One real observation becomes an address another agent can resolve</h3><span>fact oj5cecci… · Keylong, Lahaul · every value below read from emem.dev on 29 Sep 2026</span></div>
   <div class="lanes"><div class="lane">upstream</div><div class="lane">materialise</div><div class="lane">address</div><div class="lane">content</div><div class="lane">sign · record</div><div class="lane">serve</div><div class="lane">agents</div></div>
   <div class="stages">
     <div class="stg"><span class="n">Sentinel-2A L2A scene</span><span class="v">S2A_MSIL2A_20260925T054251 _R005_T43SFS</span><span class="d">B08 and B04 COGs, found via the Planetary Computer STAC API; scene-level cloud 10.8 %</span></div>
@@ -165,11 +182,11 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
     <div class="stg"><span class="n">Served with a receipt</span><span class="v">MCP · REST · A2A<br>receipt v2: request, time, cells, fact_cids, proof</span><span class="d">the receipt verifies offline in 0.13 ms</span></div>
     <div class="stg key"><span class="n">Passed as a token, checked by the receiver</span><span class="v">emem:fact:defi.zb572 .xoso.zb1ec:oj5cecci…</span><span class="d">agent B resolves, re-hashes, verifies — no trust in agent A; the guard checks any number A wrote against it</span></div>
   </div>
-  <div class="layers">
-    <div class="layer"><b>Address</b>one place → one string two parties compute identically (cell64)</div>
-    <div class="layer"><b>Content</b>one observation → one immutable record named by its bytes (fact, raster, cube)</div>
-    <div class="layer"><b>Object</b>one named thing → one identity minted once (entity, a shared name)</div>
-    <div class="layer"><b>Memory</b>agents’ notes and correspondence, signed, addressed by hash, served as data not instructions</div>
+  <div class="arch" aria-label="System architecture">
+    <div class="archbox"><b>EO SOURCES</b>Sentinel-2 · DEM · weather · documents · device traces</div>
+    <div class="archbox"><b>EMEM NODE</b>LOCATE → MATERIALISE → CANONICALISE → HASH → ATTEST → LOG<br>RESOLVE → VERIFY → GUARD</div>
+    <div class="archbox"><b>INTERFACES</b>MCP · REST · A2A</div>
+    <div class="archbox"><b>REASONERS</b>Agent A · Agent B · later session · other model</div>
   </div>
 </section>
 
@@ -227,11 +244,11 @@ uncited measurable claim, gating  <span class="no">deny CLAIM_UNGROUNDED</span><
 
 </section>
 
-<section class="layers" aria-label="Other consequences of the same protocol">
-  <div class="layer"><b>SIGN ABSENCE</b>“looked, nothing there” stays distinct from “could not look”.</div>
-  <div class="layer"><b>KEEP DISAGREEMENT</b>conflicting attestations remain separate; they are not silently averaged.</div>
-  <div class="layer"><b>RE-DERIVE</b>deterministic derivatives are recomputed and their numerical gap is reported.</div>
-  <div class="layer"><b>AUDIT HISTORY</b>attestations enter an append-only Merkle log with offline-checkable proofs.</div>
+<section class="compare" aria-label="What object does each system primarily move or manage?">
+  <div class="cmp"><b>STAC / COG</b><span class="obj">asset / raster file</span>Discover and read EO assets.</div>
+  <div class="cmp"><b>openEO / Earth Engine</b><span class="obj">process / computed object</span>Execute geospatial analysis.</div>
+  <div class="cmp"><b>Agent memory / RAG</b><span class="obj">retrieved context</span>Restore useful text/task context.</div>
+  <div class="cmp"><b>emem</b><span class="obj">signed observation / field address</span>Let another reasoner resolve and check the cited physical-world state.</div>
 </section>
 
 <!-- FINDINGS + REPRO -->
@@ -280,13 +297,15 @@ python verify_receipt_tamper.py   receipt_2026-09-29.json
         <div class="qr"><img src="qr-code.svg" alt="QR: emem.dev"><span><b>emem.dev</b>paper · source · verify · reproduce</span></div>
       </div>
     </div>
+    <p><b>WHY HISTORY MATTERS.</b> The same Bengaluru elevation key served <b>918.0 m</b> in May and <b>915.07 m</b> after the upstream changed. Both old and new records still re-hash to their own CIDs, so a later agent can recover what an earlier agent actually cited.</p>
+    <div class="fulltoken">emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</div>
     <p><b>What holds:</b> byte identity, spatial binding, signer/receipt integrity, replayable cited state.</p>
     <p><b>What does not:</b> objective truth, sensor accuracy, model correctness or a guarantee that the prose conclusion follows from the cited band.</p>
     <p class="ref">The poster uses real tokens, real Sentinel-2 grids and independently re-run checks. Detailed prior art, audit defects, withdrawn claims and all reproduction scripts stay in the repository rather than competing for wall space.</p>
   </div>
 </section>
 
-<div class="foot"><span>All examples: real production records checked 29 Sep 2026 · emem commit <span class="mono">64cfae5</span> · source, paper and reproduction at emem.dev</span><span>Vortx AI</span></div>
+<div class="foot"><span>Agentic AI for Earth Observation · Berlin · 19 Oct 2026 · real production records checked 29 Sep 2026 · source, paper and reproduction at emem.dev</span><span>Vortx AI</span></div>
 
 </div></div>
 </body>
