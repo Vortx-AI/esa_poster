@@ -3,3 +3,4 @@ emem-key-*.json
 agent_identity.json
 identity.json
 *.seed
+__pycache__/
