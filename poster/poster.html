@@ -18,7 +18,7 @@
 html,body{width:841mm;height:1189mm;background:var(--paper)}
 body{font-family:Plex,sans-serif;color:var(--ink);font-size:6mm;line-height:1.32;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:841mm;height:1189mm;padding:20mm 24mm 16mm}
-.inner{zoom:1;width:793mm;height:1153mm;display:flex;flex-direction:column;gap:5.5mm}
+.inner{zoom:.95;width:calc(793mm / .95);height:calc(1153mm / .95);display:flex;flex-direction:column;gap:5.5mm}
 .mono{font-family:PlexMono,monospace} b{font-weight:600}
 .acc{color:var(--acc)} .bad{color:var(--bad)} .mu{color:var(--muted)} .i2{color:var(--ink2)}
 .s{font-family:PlexMono,monospace;font-weight:600;font-size:.8em;color:var(--acc);background:var(--accs);padding:0 .9mm;border-radius:.8mm;white-space:nowrap}
@@ -27,7 +27,10 @@ body{font-family:Plex,sans-serif;color:var(--ink);font-size:6mm;line-height:1.32
 h1{font-size:14.4mm;line-height:1.08;font-weight:600;letter-spacing:-.01em;margin-top:3.6mm}
 .by{font-size:6mm;margin-top:2.4mm;color:var(--ink2)} .by b{color:var(--ink)}
 /* lead */
-.lead{display:grid;grid-template-columns:.92fr 1.08fr;gap:10mm;align-items:start}
+.lead{display:grid;grid-template-columns:1fr 1fr;gap:10mm;align-items:start}
+.fam{border-top:.7mm solid var(--ink);padding-top:2mm;display:flex;flex-direction:column;gap:1.6mm}
+.fam table.d td{padding:.6mm 1.4mm .6mm 0}
+.fam table.d .m{font-size:4.3mm}
 .q{margin-bottom:3mm;font-size:10.4mm;line-height:1.12;font-weight:600;letter-spacing:-.012em}
 .ans{font-size:6.6mm;line-height:1.34;color:var(--ink2)} .ans b{color:var(--ink)}
 .how{margin-top:2.6mm;font-size:5.2mm;color:var(--ink2);border-left:1.3mm solid var(--acc);padding:1mm 0 1mm 3.4mm}
@@ -35,7 +38,7 @@ h1{font-size:14.4mm;line-height:1.08;font-weight:600;letter-spacing:-.01em;margi
 .alg{font-family:PlexMono,monospace;font-size:4.5mm;line-height:1.36;color:var(--ink);background:var(--accs);border-left:1.2mm solid var(--acc);padding:1.4mm 2.4mm;white-space:normal}
 .alg i{font-style:italic;font-family:Plex,sans-serif}
 .alg .c{color:var(--ink2);font-family:Plex,sans-serif}
-.formal{font-family:PlexMono,monospace;font-size:4.5mm;line-height:1.42;background:var(--box);border:.45mm solid var(--ink);padding:2.4mm 3mm;display:grid;grid-template-columns:17mm 1fr;gap:.6mm 3mm}
+.formal{margin-top:3mm;font-family:PlexMono,monospace;font-size:4.3mm;line-height:1.42;background:var(--box);border:.45mm solid var(--ink);padding:2.4mm 3mm;display:grid;grid-template-columns:17mm 1fr;gap:.6mm 3mm}
 .formal b{font-family:Plex,sans-serif;font-weight:600;color:var(--acc)}
 .formal .c{color:var(--ink2);font-family:Plex,sans-serif;grid-column:1/3;font-size:4.3mm;margin-top:.8mm}
 /* sections */
@@ -93,8 +96,8 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
 
 <section class="lead">
   <div><div class="q">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</div>
-    <p class="ans">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p></div>
-  <div class="formal">
+    <p class="ans">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
+    <div class="formal">
     <b>fact</b><span>f = (kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key, args}, privacy, schema_cid, signer, signed_at)</span>
     <b>bytes</b><span>b = CBOR(f), fields in declaration order; NaN → f9 7e00, −0 → +0</span>
     <b>name</b><span>fact_cid = base32(BLAKE3-256(b)) · token emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>
@@ -105,6 +108,28 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
     <b>log</b><span>leaf = BLAKE3(0x00 ‖ BLAKE3(CBOR(attestation))), node = BLAKE3(0x01 ‖ l ‖ r) — RFC 6962 shape</span>
     <b>receipt</b><span>σ = Ed25519(BLAKE3(“emem.preimage.v1\0” ‖ request_id ‖ served_at ‖ primitive ‖ cells ‖ fact_cids ‖ merkle))</span>
     <span class="c">The memory, as coded at emem 18adb67 (fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest). A fact itself carries no signature: the attestation over its batch does, and the log holds the attestation.</span>
+  </div>
+  </div>
+  <div class="fam">
+    <div class="k">The token family: every data need, one grammar, one hash rule</div>
+    <table class="d">
+      <tr><th>data need</th><th>token</th><th>its id is</th><th>here</th></tr>
+      <tr><td>a place</td><td class="m">emem:cell:&lt;cell64&gt;</td><td class="m">the quantised lat/lng itself; a view of every fact held there</td><td><span class="s">§29</span></td></tr>
+      <tr><td>one value</td><td class="m">emem:fact:&lt;cell&gt;:&lt;cid&gt;</td><td class="m">BLAKE3(CBOR(fact))</td><td><span class="s">§4</span> <span class="s">§12</span></td></tr>
+      <tr><td>nothing there</td><td class="m">emem:fact: · kind absence</td><td class="m">same rule; reason_cid = BLAKE3(reason)[:16]</td><td><span class="s">§15</span></td></tr>
+      <tr><td>an embedding</td><td class="m">emem:fact: · 128 / 1024 floats</td><td class="m">same rule; attester_only</td><td><span class="s">§9</span> <span class="s">§10</span></td></tr>
+      <tr><td>a derived value</td><td class="m">emem:fact: · op, parents</td><td class="m">same rule; emem re-runs op(parents)</td><td><span class="s">§11</span></td></tr>
+      <tr><td>a raster</td><td class="m">emem:raster:&lt;aoi&gt;:&lt;band&gt;:&lt;tslot&gt;:&lt;d&gt;</td><td class="m">aoi = BLAKE3(CBOR(bbox)); pixels = BLAKE3(grid); d = cid of the derivation</td><td><span class="s">§5</span></td></tr>
+      <tr><td>a raster through time</td><td class="m">emem:cube:&lt;aoi&gt;:&lt;band&gt;:&lt;t₀..t₁&gt;:&lt;d&gt;</td><td class="m">BLAKE3(CBOR([member d, tslot order]))</td><td><span class="s">§6</span></td></tr>
+      <tr><td>rasters for one purpose</td><td class="m">emem:rasterset:&lt;set&gt;:&lt;d&gt;</td><td class="m">BLAKE3(CBOR([d…, “purpose:p”]))</td><td>no receipt yet</td></tr>
+      <tr><td>many facts, one handle</td><td class="m">emem:bundle:&lt;cid&gt;</td><td class="m">BLAKE3(fact_cids joined by “|”)[:16]</td><td><span class="s">§16</span></td></tr>
+      <tr><td>a file, one chunk</td><td class="m">emem:tree:&lt;file&gt;#row=i</td><td class="m">Merkle root over (url, offset, length, BLAKE3(chunk))</td><td><span class="s">§1–3</span> <span class="s">§17–26</span></td></tr>
+      <tr><td>a reasoning stage</td><td class="m">emem:state:&lt;cid&gt;</td><td class="m">BLAKE3(CBOR{kind, previous state, fact_cids, payload})</td><td><span class="s">§30</span></td></tr>
+      <tr><td>a named object</td><td class="m">emem:entity:&lt;cid&gt;</td><td class="m">hash of an anchor (e.g. an OSM id): a label, not bytes</td><td>panel 7</td></tr>
+      <tr><td>a device run</td><td class="m">emem:trace:&lt;cid&gt;</td><td class="m">BLAKE3(CBOR(signed OS trace)); no hardware admitted yet</td><td>panel 9</td></tr>
+      <tr><td>a chain of evidence</td><td class="m">track.v1 note</td><td class="m">link<sub>i</sub> = BLAKE3(link<sub>i−1</sub> ‖ ref<sub>i</sub>)[:16]</td><td>this board</td></tr>
+    </table>
+    <p class="src">An embedding is one row of fourteen. Only fact, raster, cube and tree ids hash the observed bytes; bundle, rasterset, state and track ids hash lists of other ids; an entity id hashes a name. Grammars and hash rules as coded at emem 18adb67 (research/repro/v10/algorithms.md).</p>
   </div>
 </section>
 
@@ -149,21 +174,32 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <p class="src">Links 1–5 and 12–14 fit in a 4,906-byte file (our format) that re-verifies 9 checks with networking disabled (unshare -rn) and lists the upstream byte ranges to re-read; a 1-bit tamper, a wrong cell or a wrong key fails it. research/repro/v8/trace_fact.py · verify_bundle.py · <span class="s">§22</span></p>
   </div>
   <div class="sec">
-    <div class="k">11 · Integrity elsewhere</div>
-    <h2>What an agent can check today, by source</h2>
-    <table class="d">
-      <tr><th>what the agent is handed</th><th>integrity it carries</th></tr>
-      <tr><td>Planetary Computer: 281,898,500 B B08 COG URL</td><td>opaque ETag, no checksum</td></tr>
-      <tr><td>Copernicus Data Space: 1,187,971,637 B SAFE</td><td>MD5 + BLAKE3 of the whole product, unsigned</td></tr>
-      <tr><td>NASA Earthdata MCP: a granule concept id (an HLS granule, Bengaluru)</td><td>catalogue revision; older revisions return 404</td></tr>
-      <tr><td>MCP tool results in general (spec 2026-07-28)</td><td>none; proposed in issue #3354</td></tr>
-      <tr><td><b>emem: one value</b></td><td><b>BLAKE3 name of the 1,115-byte record, ed25519 receipt, log inclusion</b></td></tr>
-    </table>
-    <p class="t">STAC and COG locate and read data; openEO and Earth Engine compute; emem names the exact value an agent cited so another agent can check it. emem does not yet store a hash of the upstream bytes (<span class="mono">Source.hash</span> is empty), so the upstream read is checked by re-reading the pixel, as in section 2.</p>
+    <div class="k">3 · One address, every product</div>
+    <h2>One cell, Keylong <span class="s">§29</span>, holds 207 signed facts from 13 products</h2>
+    <div class="alg">emem:cell:defi.zb572.xoso.zb1ec → current fact per band, each emem:fact:&lt;cell&gt;:&lt;cid&gt; · 13 of 13 re-hash (BLAKE3 of the served CBOR = cid)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm"><table class="d">
+      <tr><th>product</th><th>value</th><th>cid</th></tr>
+      <tr><td>Sentinel-2 B04 reflectance</td><td class="n">0.0900</td><td class="m">wbbu4ezm…</td></tr>
+      <tr><td>Sentinel-2 B08 reflectance</td><td class="n">0.2502</td><td class="m">4utkk3hy…</td></tr>
+      <tr><td>Sentinel-2 scene class</td><td class="n">4 (vegetation)</td><td class="m">6kx2hho3…</td></tr>
+      <tr><td>NDVI (30 Sep scene)</td><td class="n">0.4237</td><td class="m">3yyaxn5d…</td></tr>
+      <tr><td>NDWI</td><td class="n">-0.5023</td><td class="m">juokn77p…</td></tr>
+      <tr><td>NBR</td><td class="n">0.2726</td><td class="m">ezs2hn7p…</td></tr>
+      <tr><td>Sentinel-1 RTC VV backscatter</td><td class="n">-7.2151 dB</td><td class="m">655dlfcj…</td></tr>
+    </table><table class="d">
+      <tr><th>product</th><th>value</th><th>cid</th></tr>
+      <tr><td>Copernicus DEM 30 m elevation</td><td class="n">3105.4 m</td><td class="m">txuyxuzb…</td></tr>
+      <tr><td>JRC surface-water recurrence</td><td class="n">0 %</td><td class="m">wfjigqdi…</td></tr>
+      <tr><td>DMSP-OLS night lights</td><td class="n">5 DN</td><td class="m">4goyzdgd…</td></tr>
+      <tr><td>met.no 2 m temperature (forecast)</td><td class="n">19.3 °C</td><td class="m">lklt5nlt…</td></tr>
+      <tr><td>TESSERA embedding (retired band)</td><td class="n">128 floats</td><td class="m">ga2o2nuf…</td></tr>
+      <tr><td>Prithvi-EO-2.0 embedding (retired)</td><td class="n">1024 floats</td><td class="m">vfgcul5q…</td></tr>
+    </table></div>
+    <p class="src">Read 30 Sep 2026 from GET /v1/cells/defi.zb572.xoso.zb1ec; 156 of the 207 facts are NDVI. Sources named inside each record: sentinel_s2_l2a, sentinel_s1_rtc_mpc, copernicus.dem.30m.aws, jrc.gsw.v1_4, dmsp_ols.v4.ngdc, met_no. research/repro/data/v11.</p>
   </div>
   </div>
   <div class="sec">
-    <div class="k">3 · What the trace found</div>
+    <div class="k">4 · What the trace found</div>
     <h2>Before 28 Sep, 162 of 200 sampled records carry a neighbouring pixel</h2>
     <div class="alg">pre-fix row = round(j + (Y − N)/s<sub>y</sub>): the south pixel whenever the fraction ≥ ½ · fixed: ⌊·⌋ · prevalence 162/200, Wilson score interval, z = 1.96</div>
     <img class="fig h" style="height:106mm" src="fig/pixel_audit.svg" alt="Two 5 by 5 NDVI windows around the cell: before the fix the signed DNs are the pixel south of the containing pixel">
@@ -209,7 +245,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
       <tr><td>shared summary, no pressure</td><td class="n">20/72</td><td class="n">15/36</td></tr>
       <tr><td colspan="3">wrong-but-agreeing pairs (3/36) exceed correct answers (0/72): Fisher one-sided p = 0.035 <span class="s">§17</span>; handoff n = 20 per arm: prose 2, dense retrieval 8, BM25 20, token bundle 20 <span class="s">§18</span></td></tr>
     </table>
-    <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value observed 17 Jul and signed 18 Jul. It is a pre-fix read of the pixel south (section 3); it tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs; no-pressure arm p = 0.109 (n.s.); six scoring bugs were corrected across two scorers. Related: Perez et al., ICLR 2025; arXiv 2608.11242; arXiv 2607.25066.</p>
+    <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value observed 17 Jul and signed 18 Jul. It is a pre-fix read of the pixel south (section 4); it tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs; no-pressure arm p = 0.109 (n.s.); six scoring bugs were corrected across two scorers. Related: Perez et al., ICLR 2025; arXiv 2608.11242; arXiv 2607.25066.</p>
   </div>
 </section>
 
@@ -224,7 +260,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
       <tr><td><b>the reader</b></td><td>162 of 200 pre-fix S2 records carry the pixel south <span class="s">§7</span> <span class="s">§8</span></td><td class="m">DN(b) ≠ COG[⌊row⌋, ⌊col⌋]</td></tr>
       <tr><td><b>the source</b></td><td>Bengaluru elevation 918.0 → 915.07 m; “as known on 15 Jun” still returns 918.0 <span class="s">§12</span> <span class="s">§13</span></td><td class="m">fn_key₁ ≠ fn_key₂ (open_meteo_copdem90m → copernicus_dem_30m_aws_pixel)</td></tr>
       <tr><td><b>the date</b></td><td>a raster asked for 23 Sep was the 25 Sep scene, no warning (section 8); a cube member asked for 15 May is the 10 Jun scene <span class="s">§6</span></td><td class="m">date(scene) ≠ asked date</td></tr>
-      <tr><td><b>the place</b></td><td>a token re-labelled with another cell <span class="s">§4</span></td><td class="m">cell(b) ≠ cell(token) → refused</td></tr>
+      <tr><td><b>the place</b></td><td>a token re-labelled with another cell <span class="s">§4</span>; <span class="mono">/v1/ask</span> read “Keylong” as the town point 597 m away and answered NDVI 0.28 from that cell <span class="s">§30</span></td><td class="m">cell(b) ≠ cell(token) → refused</td></tr>
       <tr><td><b>the signer</b></td><td>915.07 m signed 7 times: 7 fact_cids for one value <span class="s">§13</span></td><td class="m">k(f₁) = k(f₂), cid(f₁) ≠ cid(f₂)</td></tr>
       <tr><td><b>the referent</b></td><td>“Maasvlakte ramp 7” resolves to all of Maasvlakte, ≈ 12 × 10 km (<span class="mono">emem:entity:4itylz3k…</span>)</td><td class="no">none: an entity token names a label, not bytes</td></tr>
     </table>
@@ -282,7 +318,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
 <!-- EMEMIFY + LIMITS + SEAL -->
 <section class="row" style="grid-template-columns:1fr 1.05fr 1.05fr">
   <div class="sec">
-    <div class="k">12 · Ememify your work</div>
+    <div class="k">11 · Ememify your work</div>
     <h2>Five steps to sign and cite your own values, each run on 29–30 Sep</h2>
     <div class="alg">pointer.v1: leaf = BLAKE3(url ‖ u64 offset ‖ u64 length ‖ h), node = BLAKE3(l ‖ r), odd node promoted · derive accepted ⇔ ulp_gap(v<sub>caller</sub>, v<sub>emem</sub>) = 0 (≤ 4 for sum, mean, n &gt; 2)</div>
     <div class="ladder">
@@ -295,7 +331,7 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <p class="src">Apache-2.0. pip install ememdev · npm i @vortxai/emem · agent-to-agent (A2A) card at emem.dev/.well-known/agent-card.json, signed.</p>
   </div>
   <div class="sec">
-    <div class="k">13 · What is not established</div>
+    <div class="k">12 · What is not established</div>
     <h2>What a signature does not show</h2>
     <div class="alg">draft check allows ⇔ ∃ number a: round(a·10<sup>d</sup>)/10<sup>d</sup> = s, d = decimals written, s = signed value → “≈ 0.49” passes for 0.4871</div>
     <table class="d">
@@ -310,18 +346,18 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     </table>
   </div>
   <div class="sec">
-    <div class="k">14 · Seal</div>
+    <div class="k">13 · Seal</div>
     <h2>Check this board</h2>
     <div class="alg">link₀ = cid(“”), link<sub>i</sub> = base32(BLAKE3(link<sub>i−1</sub> ‖ ref<sub>i</sub>)[:16]); head = link<sub>n</sub></div>
     <div class="seal">
-      <div class="qr" id="qr"><img src="fig/seal_qr.png" alt="QR: vortx-ai.github.io/ememdemo/?s=emem.dev/memories/by_attester/njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md"></div>
-      <div class="v" id="sealtext"><span style="font-family:Plex,sans-serif;word-break:normal"><b>Opens in ememdemo</b>, which re-hashes every §-step in your browser and recomputes the track’s hash chain.</span><br><br>track: emem.dev/memories/by_attester/njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md<br>head: q62y7frkthtivnqrynwt6iradm (28 of 28 steps)<br>board.jpg sha256: 96fed23a289723e50cc7884f0b56d499e7de2b85a02117192a1fa0a22377701c<br>written after log size 2,568,005 (30 Sep 2026 15:56 UTC)<br>logged as entry 2,568,005</div>
+      <div class="qr" id="qr">QR to the track<br>(filled after the board’s bytes are published)</div>
+      <div class="v" id="sealtext"><span style="font-family:Plex,sans-serif;word-break:normal"><b>Opens in ememdemo</b>, which re-hashes every §-step in your browser and recomputes the track’s hash chain.</span><br><br>track: —<br>head: —<br>board.jpg sha256: —<br>written after log size: —</div>
     </div>
     <p class="src">A file cannot contain its own hash, so this box is the only part of the board not inside the published bytes <span class="s">§1</span>. Signed by the poster key njedkglt…; re-check scripts: research/repro/v8/; each formula with its line in emem’s code: research/repro/v10/algorithms.md.</p>
   </div>
 </section>
 
-<div class="foot"><span>§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements · 23–26 doc rows at emem 18adb67 · 27–28 23 Sep B04, B08 (post-fix). Traffic to 30 Sep: 96,728 MCP tool calls; PyPI 314 · npm 304 last month; 96.2 % of signed agent notes are from operator keys</span><span>Vortx AI</span></div>
+<div class="foot"><span>§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements · 23–26 doc rows at emem 18adb67 · 27–28 23 Sep B04, B08 (post-fix) · 29 the Keylong cell · 30 an /v1/ask reasoning stage. Traffic to 30 Sep: 96,728 MCP tool calls; PyPI 314 · npm 304 last month; 96.2 % of signed agent notes are from operator keys</span><span>Vortx AI</span></div>
 </div></div>
 </body>
 </html>

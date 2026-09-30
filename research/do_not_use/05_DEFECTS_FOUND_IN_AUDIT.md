@@ -41,3 +41,4 @@ them, so we should know them first, and ideally fix them before 19 Oct.
 | 34 | docs vs code: cube scene | `BandCubeReq` docs say "nearest scene"; the code takes the newest scene under the cloud tier in the window (the cause of defect 27) | band_raster.rs:224-238, stac.rs:405-422 |
 | 35 | as-of compare | `as_of_signed_at` is compared as a raw string, so fractional seconds and ±HH:MM offsets order wrongly (read from code, untested) | recall.rs:282-391 |
 | 36 | OS trace binding | a fact binds to a device trace by `H(cbor(value))` alone; band and cell are not checked; the drift-anchor score is not wired into ingest | trace_gate.rs:392-534, drift.rs:50-87 |
+| 37 | ask place | `/v1/ask` with "Keylong, Lahaul (32.57126 N, 77.03448 E)" resolved the place name to the town point (32.5718, 77.0281), 597 m away, cell `defi.zb572.xAnI.zb1a2`, and answered from there (NDVI 0.28); the coordinates in the question were not used | research/repro/data/v11/ask_keylong.json |

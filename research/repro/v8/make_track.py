@@ -35,6 +35,8 @@ STEPS = [
  ("README, the device gate", N + "74gntpglvsg466a5vgevbvteme.md", "pointer.v1"),
  ("B04, 23 Sep, containing pixel", "emem:fact:defi.zb572.xoso.zb1ec:aorer7jtgzrjkjospacmula5rd65tev7uyndw3taogg7trmg2a2q", "fact"),
  ("B08, 23 Sep, containing pixel", "emem:fact:defi.zb572.xoso.zb1ec:flf5bk4qry32c3exazagp66gs2gzdhafx7heqqsslsuvn43ad5bq", "fact"),
+ ("the Keylong cell, 13 products", "emem:cell:defi.zb572.xoso.zb1ec", "cell"),
+ ("an ask reasoning stage, scored", "emem:state:ppfjf5temruiwyrmakafsakuiulgh2yqhuuo5g5xy5wibtmnvyrq", "state"),
 ]
 assert all(len(l) <= 40 and ":" not in l for l, _, _ in STEPS)
 link = cid(b""); rows = []
