@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>EMEM poster A0 (v8, ememified)</title>
+<title>EMEM: a content-addressed, verifiable Earth-memory protocol for AI agents (A0 poster, v11)</title>
+<!--
+  SOURCE of the v11 board. poster/poster.html is a build product: edit this file.
+  Build: python poster/build_v11.py   (figures, SVG inlining, PDF, PNG preview, layout and prose gates)
+  Every number is traced in research/should_do/15_V11_CLAIMS_MAP.md.
+-->
 <style>
 @font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-400-normal.woff2);font-weight:400}
 @font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-400-italic.woff2);font-weight:400;font-style:italic}
@@ -13,315 +18,471 @@
 @font-face{font-family:PlexMono;src:url(fonts/ibm-plex-mono-latin-500-normal.woff2);font-weight:500}
 @font-face{font-family:PlexMono;src:url(fonts/ibm-plex-mono-latin-600-normal.woff2);font-weight:600}
 @page{size:841mm 1189mm;margin:0}
-:root{--paper:#FBFBF8;--ink:#141414;--ink2:#46463F;--muted:#85857E;--rule:#D3D3CC;--acc:#1F4FD8;--accs:#E7ECFA;--bad:#B3261E;--bads:#F7E6E4;--box:#FFFFFF}
+:root{--navy:#0E1A2B;--paper:#FBFBF8;--ink:#141414;--ink2:#46463F;--muted:#85857E;--rule:#D3D3CC;
+      --acc:#1F4FD8;--accs:#E7ECFA;--amb:#A86B00;--ambs:#FBF1DE;--bad:#B3261E;--box:#FFFFFF}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:841mm;height:1189mm;background:var(--paper)}
-body{font-family:Plex,sans-serif;color:var(--ink);font-size:6mm;line-height:1.32;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.page{width:841mm;height:1189mm;padding:20mm 24mm 16mm}
-.inner{zoom:1;width:793mm;height:1153mm;display:flex;flex-direction:column;gap:5.5mm}
-.mono{font-family:PlexMono,monospace} b{font-weight:600}
-.acc{color:var(--acc)} .bad{color:var(--bad)} .mu{color:var(--muted)} .i2{color:var(--ink2)}
-.s{font-family:PlexMono,monospace;font-weight:600;font-size:.8em;color:var(--acc);background:var(--accs);padding:0 .9mm;border-radius:.8mm;white-space:nowrap}
-/* header */
-.meta{display:flex;justify-content:space-between;font-size:5.2mm;color:var(--ink2);border-bottom:.6mm solid var(--ink);padding-bottom:2.6mm}
-h1{font-size:14.4mm;line-height:1.08;font-weight:600;letter-spacing:-.01em;margin-top:3.6mm}
-.by{font-size:6mm;margin-top:2.4mm;color:var(--ink2)} .by b{color:var(--ink)}
-/* lead */
-.lead{display:grid;grid-template-columns:.92fr 1.08fr;gap:10mm;align-items:start}
-.q{margin-bottom:3mm;font-size:10.4mm;line-height:1.12;font-weight:600;letter-spacing:-.012em}
-.ans{font-size:6.6mm;line-height:1.34;color:var(--ink2)} .ans b{color:var(--ink)}
-.how{margin-top:2.6mm;font-size:5.2mm;color:var(--ink2);border-left:1.3mm solid var(--acc);padding:1mm 0 1mm 3.4mm}
-/* algorithms */
-.alg{font-family:PlexMono,monospace;font-size:4.5mm;line-height:1.36;color:var(--ink);background:var(--accs);border-left:1.2mm solid var(--acc);padding:1.4mm 2.4mm;white-space:normal}
-.alg i{font-style:italic;font-family:Plex,sans-serif}
-.alg .c{color:var(--ink2);font-family:Plex,sans-serif}
-.formal{font-family:PlexMono,monospace;font-size:4.5mm;line-height:1.42;background:var(--box);border:.45mm solid var(--ink);padding:2.4mm 3mm;display:grid;grid-template-columns:17mm 1fr;gap:.6mm 3mm}
-.formal b{font-family:Plex,sans-serif;font-weight:600;color:var(--acc)}
-.formal .c{color:var(--ink2);font-family:Plex,sans-serif;grid-column:1/3;font-size:4.3mm;margin-top:.8mm}
-/* sections */
-.row{display:grid;gap:10mm}
-.sec{border-top:.7mm solid var(--ink);padding-top:2.6mm;display:flex;flex-direction:column;gap:2mm;min-width:0}
-.k{font-size:5mm;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-h2{font-size:8.6mm;line-height:1.08;font-weight:600;letter-spacing:-.01em}
-p.t{font-size:5.3mm;line-height:1.33;color:var(--ink2)} p.t b{color:var(--ink)}
-.src{font-size:4.8mm;color:var(--ink2);line-height:1.34}
-img.fig{width:100%;display:block}
-img.fig.h{width:auto;max-width:100%;margin:0 auto}
-table.d{width:100%;border-collapse:collapse;font-size:5.1mm}
-table.d th{font-size:4.4mm;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;border-bottom:.45mm solid var(--ink);padding:0 1.6mm 1mm 0}
-table.d td{border-bottom:.3mm solid var(--rule);padding:.9mm 1.6mm .9mm 0;vertical-align:top;line-height:1.24}
-table.d td.n{text-align:right;font-weight:600;white-space:nowrap}
-table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
-.ok{color:var(--acc);font-weight:600} .no{color:var(--bad);font-weight:600}
-.card{background:var(--box);border:.45mm solid var(--rule);padding:2.4mm 3mm;font-family:PlexMono,monospace;font-size:4.3mm;line-height:1.42;white-space:pre;overflow:hidden}
-.card .c{color:var(--muted)}
-/* hero */
-.hero{display:grid;grid-template-columns:198mm 1fr;gap:10mm}
-.sat{position:relative;background:#222;height:203mm;overflow:hidden}
-.sat img{width:100%;height:100%;object-fit:cover;display:block}
-.sat .mk{position:absolute;left:51.0%;top:46.9%;width:6mm;height:6mm;margin:-3mm 0 0 -3mm;border:.7mm solid #fff;box-shadow:0 0 0 .4mm rgba(0,0,0,.6)}
-.sat .sb{position:absolute;left:4mm;top:4mm;color:#fff;font-size:3.8mm;text-shadow:0 0 1.5mm #000}
-.sat .sb i{display:block;width:44.8mm;height:1mm;background:#fff;margin-top:1mm}
-.sat .cap{position:absolute;left:0;right:0;bottom:0;background:rgba(20,20,20,.88);color:#EDEDE8;padding:3mm 4mm;font-size:4.2mm;line-height:1.36}
-.sat .cap .mono{color:#9FB7F5;font-size:4mm;word-break:break-all}
-/* trace */
-.chain{display:grid;grid-template-columns:14mm 40mm 1fr;gap:1.2mm 2mm;font-size:5.1mm;line-height:1.26}
-.chain .i{font-family:PlexMono,monospace;color:var(--muted);font-size:4.4mm;white-space:nowrap}
-.chain .l{font-weight:600}
-.chain .r{color:var(--ink2)}
-.chain .r i{font-style:normal;color:var(--muted)}
-/* seal */
-.seal{border:1mm solid var(--ink);padding:3mm;display:grid;grid-template-columns:62mm 1fr;gap:4mm;background:#fff}
-.seal .qr{width:62mm;height:62mm;background:repeating-linear-gradient(45deg,#f0f0ec,#f0f0ec 2mm,#fff 2mm,#fff 4mm);display:flex;align-items:center;justify-content:center;text-align:center;font-size:4mm;color:var(--muted)}
-.seal .qr img{width:62mm;height:62mm}
-.seal .v{font-family:PlexMono,monospace;font-size:4.3mm;line-height:1.4;word-break:break-all}
-.seal .v b{font-family:Plex,sans-serif}
-.ladder{display:grid;grid-template-columns:22mm 1fr;gap:1.4mm 3mm;font-size:4.5mm;line-height:1.26}
-.ladder .t{font-weight:600;color:var(--acc)}
-.ladder .mono{font-size:4mm}
-.foot{display:flex;justify-content:space-between;gap:8mm;font-size:4.5mm;color:var(--muted);border-top:.35mm solid var(--rule);padding-top:1.8mm;margin-top:auto}
+html,body{width:841mm;background:var(--paper)}
+body{font-family:Plex,sans-serif;color:var(--ink);font-size:6.2mm;line-height:1.3;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:841mm;height:1189mm;overflow:hidden;position:relative}
+b{font-weight:600} .mono{font-family:PlexMono,monospace} .acc{color:var(--acc)} .amb{color:var(--amb)} .bad{color:var(--bad)} .mu{color:var(--muted)}
+.s{font-family:PlexMono,monospace;font-weight:600;font-size:.78em;color:var(--acc);background:var(--accs);padding:0 .8mm;border-radius:.8mm;white-space:nowrap}
+
+/* header band */
+.head{background:var(--navy);color:#fff;padding:12mm 22mm 10mm;display:grid;grid-template-columns:1fr 54mm;gap:12mm;align-items:end}
+.meta{font-size:5.4mm;color:#B9C4D6;letter-spacing:.02em;display:flex;justify-content:space-between;margin-bottom:4.6mm}
+h1{font-size:18.2mm;line-height:1.06;font-weight:600;letter-spacing:-.012em}
+.by{margin-top:4.6mm;font-size:6.8mm;color:#DCE3EE} .by b{color:#fff}
+.links{margin-top:1.8mm;font-size:5.1mm;color:#B9C4D6;font-family:PlexMono,monospace}
+.qrbox{background:#fff;padding:3.2mm;border-radius:1.5mm;text-align:center;color:var(--ink)}
+.qrbox svg{width:47.6mm;height:47.6mm;display:block}
+.qrbox .cap{font-size:4.5mm;font-weight:600;margin-top:1.6mm;line-height:1.2}
+
+/* body */
+.body{padding:7.5mm 22mm 0;display:flex;flex-direction:column;gap:5.7mm}
+.k{font-size:4.9mm;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:9.4mm;line-height:1.1;font-weight:600;letter-spacing:-.01em}
+h3{font-size:7.7mm;line-height:1.12;font-weight:600;letter-spacing:-.005em}
+p{font-size:6.2mm;line-height:1.32;color:var(--ink2)} p b{color:var(--ink)}
+.small{font-size:5.5mm;line-height:1.32;color:var(--ink2)} .small b{color:var(--ink)}
+
+.thesis{display:grid;grid-template-columns:1fr 1.2fr;gap:14mm;align-items:start}
+.problem h2{margin:1.6mm 0 3mm}
+.inv{border-left:2.2mm solid var(--acc);padding:.6mm 0 1mm 7mm}
+.inv .big{font-size:11.4mm;line-height:1.12;font-weight:600;letter-spacing:-.012em;margin:1.8mm 0 3mm}
+.inv .big em{font-style:normal;color:var(--acc)}
+
+.hero svg{display:block;width:797mm;height:224mm}
+
+.live{display:flex;gap:0 5mm;border-top:.7mm solid var(--ink);border-bottom:.35mm solid var(--rule);padding:3mm 0 3.4mm}
+.live>div{flex:none;width:195.5mm}
+.live .n{font-size:11mm;font-weight:600;line-height:1;letter-spacing:-.01em}
+.live .n.acc{color:var(--acc)}
+.live .l{font-size:5.2mm;line-height:1.25;color:var(--ink2);margin-top:1.4mm}
+
+.sechead{display:flex;align-items:baseline;gap:6mm;border-top:.7mm solid var(--ink);padding-top:2.4mm}
+.sechead .h{font-size:9.6mm;font-weight:600;letter-spacing:-.01em;white-space:nowrap;flex:none}
+.sechead .sub{font-size:5.8mm;color:var(--ink2);flex:1}
+.cards{display:flex;flex-direction:column;gap:6mm}
+.crow{display:flex;gap:9mm}
+.crow>.card{flex:none;width:259.6mm}
+.card{display:flex;flex-direction:column;gap:2.2mm;min-width:0}
+.card .t{display:flex;align-items:center;gap:3.2mm}
+.card .t h3{flex:1 1 0;min-width:0}
+.card .t .badge{flex:none}
+.badge{width:11mm;height:11mm;border-radius:50%;background:var(--acc);color:#fff;font-weight:700;font-size:4.9mm;display:flex;align-items:center;justify-content:center}
+.badge.amb{background:var(--amb)}
+.card p{font-size:6.15mm}
+.f{font-family:PlexMono,monospace;font-size:4.95mm;line-height:1.42;background:var(--accs);border-left:1.1mm solid var(--acc);padding:1.6mm 2.6mm;color:var(--ink)}
+.f.amb{background:var(--ambs);border-left-color:var(--amb)}
+.ev{font-size:5.8mm;line-height:1.3;color:var(--ink)} .ev .num{font-weight:700;color:var(--acc)}
+
+.results{display:flex;gap:10mm}
+.results>.res{flex:none}.results>.res:nth-child(1){width:275mm}.results>.res:nth-child(2){width:259mm}.results>.res:nth-child(3){width:243mm}
+.res{display:flex;flex-direction:column;gap:2.6mm;min-width:0}
+.res img{width:100%;display:block}
+.res .take{font-size:6.4mm;font-weight:600;color:var(--ink);border-left:1.2mm solid var(--acc);padding-left:3mm;line-height:1.25}
+table{border-collapse:collapse;width:100%;font-size:5.2mm}
+td,th{padding:.9mm 1.6mm .9mm 0;border-bottom:.3mm solid var(--rule);vertical-align:top;text-align:left}
+th{font-size:4.5mm;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:.45mm solid var(--ink)}
+td.n{text-align:right;font-weight:600;white-space:nowrap}
+td.ok{color:var(--acc)} td.no{color:var(--bad)}
+td.p,th.p{padding-left:3.4mm}
+table.drift{font-size:4.8mm}
+table.drift td{padding:.55mm 1.4mm .55mm 0}
+table.drift td.t{font-family:PlexMono,monospace;font-size:4.5mm;color:var(--acc);white-space:nowrap}
+table.drift td.t.no{color:var(--bad);font-family:Plex,sans-serif}
+
+.bottom{display:flex;gap:10mm}
+.bottom>div:first-child{flex:none;width:486mm}.bottom>.side{flex:none;width:301mm}
+.qa{display:flex;gap:8mm}
+.qa>.col{flex:none;width:239mm;display:flex;flex-direction:column;gap:3.4mm;min-width:0}
+.qa .q{font-size:6.3mm;font-weight:600;line-height:1.25;color:var(--ink)}
+.qa .a{font-size:5.65mm;line-height:1.3;color:var(--ink2);margin-top:.8mm}
+.tag{font-size:3.9mm;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2mm 1.2mm;border-radius:.8mm;margin-right:1.4mm;vertical-align:.4mm}
+.tag.r{background:var(--accs);color:var(--acc)} .tag.f{background:#ECECE6;color:var(--ink2)} .tag.c{background:var(--ambs);color:var(--amb)}
+.side{display:flex;flex-direction:column;gap:4mm}
+table.idt{font-size:5.0mm}
+table.idt td{padding:.55mm 1.6mm .55mm 0}
+table.idt td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+table.idt td.y{color:var(--acc);font-weight:700;white-space:nowrap}
+table.idt td.pt{color:var(--amb);font-weight:700;white-space:nowrap}
+table.idt td.o{color:var(--muted);font-weight:700;white-space:nowrap}
+.crow3{display:flex;gap:6mm}
+.crow3>div{flex:none;width:158mm;font-size:5.8mm;line-height:1.28;font-weight:500;color:var(--ink);background:var(--accs);border-left:1.4mm solid var(--acc);padding:2.2mm 3mm 2.4mm}
+.crow3 .cn{font-weight:700;color:var(--acc);margin-right:1.6mm}
+.scope li{font-size:5.45mm;line-height:1.3;color:var(--ink2);margin:0 0 1.3mm 5mm}
+.try{background:var(--box);border:.5mm solid var(--ink);padding:2.4mm 3.2mm;display:flex;gap:4mm;align-items:center}
+.try>div{flex:none;width:255mm}
+.try>svg{flex:none}
+.try .cmd{font-family:PlexMono,monospace;font-size:4.5mm;background:var(--accs);padding:1.2mm 1.8mm;margin:1.4mm 0}
+.try svg{width:31mm;height:31mm;display:block}
+.try .small{font-size:4.75mm}
+
+.jobs{display:flex;gap:4mm}
+.job{flex:none;width:96.1mm;background:var(--box);border:.35mm solid var(--rule);border-top:1.2mm solid var(--acc);padding:2.2mm 2.6mm 2.6mm}
+.job .jt{font-size:5.9mm;font-weight:600;line-height:1.18;color:var(--ink)}
+.job .tool{font-family:PlexMono,monospace;font-size:4.4mm;color:var(--acc);margin:1.2mm 0 1mm;line-height:1.3}
+.job .jd{font-size:5.2mm;line-height:1.28;color:var(--ink2)}
+.wild{display:flex;gap:9mm}
+.wild>div{flex:none;width:192.5mm;border-left:1.2mm solid var(--amb);padding:0 0 0 3.4mm}
+.wild .wt{font-size:6mm;font-weight:600;line-height:1.2;color:var(--ink);margin-bottom:1mm}
+.wild .wd{font-size:5.4mm;line-height:1.3;color:var(--ink2)}
+.foot{position:absolute;left:0;right:0;bottom:0;padding:3.6mm 22mm 7mm;display:grid;grid-template-columns:1.62fr 1fr;gap:10mm;font-size:4.2mm;line-height:1.36;color:var(--muted);border-top:.35mm solid var(--rule);background:var(--paper)}
+.foot b{color:var(--ink2)}
 </style>
 </head>
-<body>
-<div class="page"><div class="inner">
+<body><div class="page">
 
-<header>
-  <div class="meta"><span>Agentic AI for Earth Observation · Berlin · 19 Oct 2026</span><span>Every <span class="s">§n</span> on this board is a step of one signed emem track · scan the seal, bottom right</span></div>
-  <h1>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</h1>
-  <div class="by"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> — Vortx AI · paper doi:10.5281/zenodo.20706893 (v0.1.0; current method: whitepaper v3; emem 2.4.2 at <span class="mono">213e273</span> and <span class="mono">18adb67</span>) · measurements 29–30 Sep 2026 · scripts: github.com/Vortx-AI/esa_poster</div>
+<header class="head">
+  <div>
+    <div class="meta"><span>Agentic AI for Earth Observation · ESA Φ-lab and BIFOLD · Berlin, 19–21 October 2026</span><span>Poster Session 1 · 19 Oct · 17:00–18:30</span></div>
+    <h1>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</h1>
+    <div class="by"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai</div>
+    <div class="links">paper doi:10.5281/zenodo.20706893 · code github.com/Vortx-AI/emem (Apache-2.0) · live emem.dev · method: whitepaper v3, emem @18adb67</div>
+  </div>
+  <div class="qrbox"><svg width="25mm" height="25mm" version="1.1" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg"><path d="M0,0H1V1H0zM1,0H2V1H1zM2,0H3V1H2zM3,0H4V1H3zM4,0H5V1H4zM5,0H6V1H5zM6,0H7V1H6zM8,0H9V1H8zM13,0H14V1H13zM18,0H19V1H18zM19,0H20V1H19zM20,0H21V1H20zM21,0H22V1H21zM22,0H23V1H22zM23,0H24V1H23zM24,0H25V1H24zM0,1H1V2H0zM6,1H7V2H6zM9,1H10V2H9zM11,1H12V2H11zM13,1H14V2H13zM14,1H15V2H14zM16,1H17V2H16zM18,1H19V2H18zM24,1H25V2H24zM0,2H1V3H0zM2,2H3V3H2zM3,2H4V3H3zM4,2H5V3H4zM6,2H7V3H6zM8,2H9V3H8zM10,2H11V3H10zM13,2H14V3H13zM14,2H15V3H14zM18,2H19V3H18zM20,2H21V3H20zM21,2H22V3H21zM22,2H23V3H22zM24,2H25V3H24zM0,3H1V4H0zM2,3H3V4H2zM3,3H4V4H3zM4,3H5V4H4zM6,3H7V4H6zM9,3H10V4H9zM10,3H11V4H10zM11,3H12V4H11zM13,3H14V4H13zM14,3H15V4H14zM15,3H16V4H15zM18,3H19V4H18zM20,3H21V4H20zM21,3H22V4H21zM22,3H23V4H22zM24,3H25V4H24zM0,4H1V5H0zM2,4H3V5H2zM3,4H4V5H3zM4,4H5V5H4zM6,4H7V5H6zM9,4H10V5H9zM11,4H12V5H11zM13,4H14V5H13zM14,4H15V5H14zM16,4H17V5H16zM18,4H19V5H18zM20,4H21V5H20zM21,4H22V5H21zM22,4H23V5H22zM24,4H25V5H24zM0,5H1V6H0zM6,5H7V6H6zM8,5H9V6H8zM9,5H10V6H9zM14,5H15V6H14zM18,5H19V6H18zM24,5H25V6H24zM0,6H1V7H0zM1,6H2V7H1zM2,6H3V7H2zM3,6H4V7H3zM4,6H5V7H4zM5,6H6V7H5zM6,6H7V7H6zM8,6H9V7H8zM10,6H11V7H10zM12,6H13V7H12zM14,6H15V7H14zM16,6H17V7H16zM18,6H19V7H18zM19,6H20V7H19zM20,6H21V7H20zM21,6H22V7H21zM22,6H23V7H22zM23,6H24V7H23zM24,6H25V7H24zM11,7H12V8H11zM14,7H15V8H14zM15,7H16V8H15zM16,7H17V8H16zM0,8H1V9H0zM2,8H3V9H2zM6,8H7V9H6zM7,8H8V9H7zM10,8H11V9H10zM11,8H12V9H11zM15,8H16V9H15zM19,8H20V9H19zM22,8H23V9H22zM24,8H25V9H24zM0,9H1V10H0zM1,9H2V10H1zM2,9H3V10H2zM3,9H4V10H3zM4,9H5V10H4zM5,9H6V10H5zM8,9H9V10H8zM9,9H10V10H9zM14,9H15V10H14zM15,9H16V10H15zM16,9H17V10H16zM18,9H19V10H18zM19,9H20V10H19zM21,9H22V10H21zM23,9H24V10H23zM24,9H25V10H24zM0,10H1V11H0zM1,10H2V11H1zM5,10H6V11H5zM6,10H7V11H6zM8,10H9V11H8zM14,10H15V11H14zM15,10H16V11H15zM20,10H21V11H20zM21,10H22V11H21zM22,10H23V11H22zM24,10H25V11H24zM3,11H4V12H3zM7,11H8V12H7zM10,11H11V12H10zM12,11H13V12H12zM16,11H17V12H16zM17,11H18V12H17zM19,11H20V12H19zM21,11H22V12H21zM0,12H1V13H0zM1,12H2V13H1zM3,12H4V13H3zM4,12H5V13H4zM5,12H6V13H5zM6,12H7V13H6zM7,12H8V13H7zM9,12H10V13H9zM12,12H13V13H12zM15,12H16V13H15zM16,12H17V13H16zM18,12H19V13H18zM19,12H20V13H19zM24,12H25V13H24zM1,13H2V14H1zM4,13H5V14H4zM9,13H10V14H9zM10,13H11V14H10zM12,13H13V14H12zM13,13H14V14H13zM15,13H16V14H15zM16,13H17V14H16zM18,13H19V14H18zM19,13H20V14H19zM23,13H24V14H23zM24,13H25V14H24zM0,14H1V15H0zM1,14H2V15H1zM3,14H4V15H3zM4,14H5V15H4zM6,14H7V15H6zM10,14H11V15H10zM12,14H13V15H12zM13,14H14V15H13zM14,14H15V15H14zM15,14H16V15H15zM16,14H17V15H16zM18,14H19V15H18zM21,14H22V15H21zM22,14H23V15H22zM24,14H25V15H24zM2,15H3V16H2zM3,15H4V16H3zM8,15H9V16H8zM9,15H10V16H9zM10,15H11V16H10zM11,15H12V16H11zM12,15H13V16H12zM14,15H15V16H14zM16,15H17V16H16zM17,15H18V16H17zM19,15H20V16H19zM20,15H21V16H20zM21,15H22V16H21zM0,16H1V17H0zM1,16H2V17H1zM2,16H3V17H2zM3,16H4V17H3zM4,16H5V17H4zM5,16H6V17H5zM6,16H7V17H6zM9,16H10V17H9zM15,16H16V17H15zM16,16H17V17H16zM17,16H18V17H17zM18,16H19V17H18zM19,16H20V17H19zM20,16H21V17H20zM23,16H24V17H23zM8,17H9V18H8zM9,17H10V18H9zM10,17H11V18H10zM16,17H17V18H16zM20,17H21V18H20zM24,17H25V18H24zM0,18H1V19H0zM1,18H2V19H1zM2,18H3V19H2zM3,18H4V19H3zM4,18H5V19H4zM5,18H6V19H5zM6,18H7V19H6zM8,18H9V19H8zM11,18H12V19H11zM16,18H17V19H16zM18,18H19V19H18zM20,18H21V19H20zM24,18H25V19H24zM0,19H1V20H0zM6,19H7V20H6zM10,19H11V20H10zM15,19H16V20H15zM16,19H17V20H16zM20,19H21V20H20zM23,19H24V20H23zM24,19H25V20H24zM0,20H1V21H0zM2,20H3V21H2zM3,20H4V21H3zM4,20H5V21H4zM6,20H7V21H6zM9,20H10V21H9zM10,20H11V21H10zM11,20H12V21H11zM12,20H13V21H12zM15,20H16V21H15zM16,20H17V21H16zM17,20H18V21H17zM18,20H19V21H18zM19,20H20V21H19zM20,20H21V21H20zM24,20H25V21H24zM0,21H1V22H0zM2,21H3V22H2zM3,21H4V22H3zM4,21H5V22H4zM6,21H7V22H6zM9,21H10V22H9zM10,21H11V22H10zM12,21H13V22H12zM13,21H14V22H13zM14,21H15V22H14zM16,21H17V22H16zM17,21H18V22H17zM20,21H21V22H20zM22,21H23V22H22zM23,21H24V22H23zM0,22H1V23H0zM2,22H3V23H2zM3,22H4V23H3zM4,22H5V23H4zM6,22H7V23H6zM8,22H9V23H8zM10,22H11V23H10zM12,22H13V23H12zM13,22H14V23H13zM14,22H15V23H14zM17,22H18V23H17zM19,22H20V23H19zM20,22H21V23H20zM21,22H22V23H21zM23,22H24V23H23zM24,22H25V23H24zM0,23H1V24H0zM6,23H7V24H6zM11,23H12V24H11zM12,23H13V24H12zM14,23H15V24H14zM16,23H17V24H16zM17,23H18V24H17zM18,23H19V24H18zM19,23H20V24H19zM20,23H21V24H20zM0,24H1V25H0zM1,24H2V25H1zM2,24H3V25H2zM3,24H4V25H3zM4,24H5V25H4zM5,24H6V25H5zM6,24H7V25H6zM8,24H9V25H8zM12,24H13V25H12zM13,24H14V25H13zM14,24H15V25H14zM15,24H16V25H15zM16,24H17V25H16zM18,24H19V25H18zM21,24H22V25H21zM24,24H25V25H24z" id="qr-path" fill="#000000" fill-opacity="1" fill-rule="nonzero" stroke="none" /></svg><div class="cap">Check any token<br>emem.dev/verify</div></div>
 </header>
 
-<section class="lead">
-  <div><div class="q">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</div>
-    <p class="ans">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p></div>
-  <div class="formal">
-    <b>fact</b><span>f = (kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key, args}, privacy, schema_cid, signer, signed_at)</span>
-    <b>bytes</b><span>b = CBOR(f), fields in declaration order; NaN → f9 7e00, −0 → +0</span>
-    <b>name</b><span>fact_cid = base32(BLAKE3-256(b)) · token emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>
-    <b>cell</b><span>lat_q = round((lat+90)/180·(2²¹−1)), lng_q = round((lng+180)/360·(2²²−1)); pitch 8.583·10⁻⁵° = 9.52 × 8.06 m here</span>
-    <b>time</b><span>tslot = ⌊unix / 86 400⌋ for Sentinel-2 (20721 = 25 Sep 2026)</span>
-    <b>recall</b><span>key k = (cell, band, tslot); as of t: argmax<sub>signed_at ≤ t</sub> (signed_at, cid)</span>
-    <b>sign</b><span>R = Merkle(sorted fact_cids); attestation = Ed25519(PreimageV1(“attestation”){R, registry, schema})</span>
-    <b>log</b><span>leaf = BLAKE3(0x00 ‖ BLAKE3(CBOR(attestation))), node = BLAKE3(0x01 ‖ l ‖ r) — RFC 6962 shape</span>
-    <b>receipt</b><span>σ = Ed25519(BLAKE3(“emem.preimage.v1\0” ‖ request_id ‖ served_at ‖ primitive ‖ cells ‖ fact_cids ‖ merkle))</span>
-    <span class="c">The memory, as coded at emem 18adb67 (fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest). A fact itself carries no signature: the attestation over its batch does, and the log holds the attestation.</span>
+<main class="body">
+
+<section class="thesis">
+  <div class="problem">
+    <div class="k">The problem</div>
+    <h2>Agents that work together drift apart.</h2>
+    <p>Each agent reads the world through its own searches and summaries. After a few handoffs two agents no longer agree on where a place is, what was measured or when, and neither can show the other which number is right. Agreement does not rescue them (R2).</p>
+  </div>
+  <div class="inv">
+    <div class="k">The invention</div>
+    <div class="big">One place, one address. One observation, one signed record. <em>The record's name, not a paraphrase, is what crosses between agents.</em></div>
+    <p>A memory of the physical world that agents share and no agent controls: <b>written by machines</b>, <b>named by the hash</b> of its bytes, <b>kept on two clocks</b>. In a 17-case mutation test on real bytes, prose passed all 15 corruptions it can carry; the full check chain passed none (R1).</p>
   </div>
 </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="sat"><img src="fig/keylong_truecolor.png" alt="Sentinel-2A true colour over Keylong, Lahaul, from four signed grids"><div class="sb">1 km<i></i></div><div class="mk"></div>
-    <div class="cap"><b style="color:#fff">Keylong, Lahaul (Himalaya), Sentinel-2A L2A, 25 Sep 2026, 443 × 453 px at 10 m.</b> Drawn from four signed band grids of 802,780 B each; each re-hashes to its name. The red band is <span class="s">§5</span>: <span class="mono">emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B04:20721:4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq</span>. □ marks the cell of the NDVI record <span class="s">§4</span> (drawn ≈100 m wide; the cell is 9.5 × 8.1 m).</div></div>
-  <div class="sec">
-    <div class="k">1 · From scene to token</div>
-    <h2>1.17 MB read from a 2.02 GB scene; the agent receives 84 characters</h2>
-    <div class="alg">pixel: col = ⌊i + (E − X)/s<sub>x</sub>⌋, row = ⌊j + (Y − N)/s<sub>y</sub>⌋ in UTM 43N · ρ = (DN + o)·10⁻⁴, o = −1000 if baseline ≥ 04.00 (PC) · NDVI = (ρ₈ − ρ₄)/(ρ₈ + ρ₄) · SCL ∈ {0,1,8,9,10} → next scene</div>
-    <img class="fig h" style="height:66mm" src="fig/byte_funnel.svg" alt="Scene 2,023,818,762 B; bytes read 1,165,033; signed fact 1,115 B; token 84 characters">
-    <p class="t">By our reconstruction of its read path, emem range-reads <b>0.058 %</b> of the scene to sign one NDVI value: three 64 KiB COG headers and one tile each of B04, B08 and SCL. It stores the 1,115-byte record, not the tiles. The next agent receives 84 characters (46 GPT-4 tokenizer tokens).</p>
-    <p class="t">We hashed the Earth Search (AWS) copies of the B08 and B04 COGs into two signed pointer notes <span class="s">§2</span> <span class="s">§3</span>: all 292 chunks of each (header + 291 tiles; 238.7 MB, 232.9 MB) under one Merkle root; the files stay on AWS. The tile holding the cell is <span class="mono">emem:tree:khiqtqrddb6jponqn4gv72if7e#row=108</span> (row = leaf index); its 1,586,895 bytes hash to that row. These are not the Planetary Computer file the NDVI was read from (281.9 MB, offset not pre-subtracted), and emem records no hash of that file.</p>
-<div class="card"><span class="c">§4 emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</span>
-band indices.ndvi      day 20721 since 1970-01-01 = 25 Sep 2026
-scene S2A_MSIL2A_20260925T054251_R005_T43SFS · scene class 4, vegetation
-DN    B08 3502  B04 1900  BOA offset −1000 (PC, baseline ≥ 04.00)
-value 0.4708994708994709   <span class="c">(B08−B04)/(B08+B04) after offset: bit-identical</span>
-signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5cecci…</div>
-    <p class="src">Earth Search serves the same tile with the offset already subtracted (B08 2502, B04 900); NDVI is identical. Sizes: Planetary Computer asset sizes (HTTP HEAD) and range reads, 30 Sep; the pointer notes and the 1,586,895-byte tile are Earth Search copies.</p>
+<section class="hero"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 797 224" width="797mm" height="224mm"><defs>
+<marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#141414"/></marker>
+<marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#1F4FD8"/></marker>
+<marker id="d" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#B3261E"/></marker>
+<marker id="c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L7,3.5 L0,7 z" fill="#A86B00"/></marker>
+<clipPath id="imgclip"><rect x="0" y="12" width="165" height="169" rx="2"/></clipPath>
+</defs><text x="0.0" y="7.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#85857E" text-anchor="start">THE WORLD WRITES</text>
+<image href="fig/keylong_truecolor.png" x="0" y="12" width="165" height="169" preserveAspectRatio="xMidYMid slice" clip-path="url(#imgclip)"/>
+<rect x="81.15" y="88.1765" width="6" height="6" rx="0.3" fill="none" stroke="#FFFFFF" stroke-width="0.7"/>
+<rect x="0" y="169" width="165" height="12" fill="#141414" fill-opacity="0.72"/>
+<text x="3.0" y="177.0" font-family="Plex" font-size="4.5" font-weight="500" fill="#FFFFFF" text-anchor="start">Keylong, Himalaya · Sentinel-2 L2A · 25 Sep 2026</text>
+<line x1="4" y1="16" x2="41.2" y2="16" stroke="#FFFFFF" stroke-width="0.8"/>
+<text x="4.0" y="21.0" font-family="Plex" font-size="3.6" font-weight="500" fill="#FFFFFF" text-anchor="start">1 km</text>
+<text x="0.0" y="188.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">a 2.02 GB scene; the square marks the cell</text>
+<text x="0.0" y="194.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">of the NDVI record (drawn 100 m wide)</text>
+<text x="0.0" y="203.5" font-family="Plex" font-size="4.8" font-weight="600" fill="#85857E" text-anchor="start">OTHER WRITERS</text>
+<rect x="0" y="205.7" width="34" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="17.0" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">Copernicus DEM</text>
+<rect x="37" y="205.7" width="32" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="53.0" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">Overture Maps</text>
+<rect x="72" y="205.7" width="21" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="82.5" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">weather</text>
+<rect x="96" y="205.7" width="44" height="7" rx="1.2" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.4"/>
+<text x="118.0" y="210.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#46463F" text-anchor="middle">Earth embeddings</text>
+<rect x="0" y="214.7" width="50" height="7" rx="1.2" fill="#FFFFFF" stroke="#85857E" stroke-width="0.4" stroke-dasharray="1.2 0.8"/>
+<text x="25.0" y="219.5" font-family="Plex" font-size="4.0" font-weight="500" fill="#85857E" text-anchor="middle">enrolled devices (next)</text>
+<path d="M169 70 L208 70" stroke="#141414" stroke-width="0.9" fill="none" marker-end="url(#a)"/>
+<text x="189.0" y="64.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="middle">read</text>
+<text x="189.0" y="78.0" font-family="Plex" font-size="4.3" font-weight="500" fill="#46463F" text-anchor="middle">1.17 MB</text>
+<text x="189.0" y="83.5" font-family="Plex" font-size="4.3" font-weight="500" fill="#46463F" text-anchor="middle">0.058 %</text>
+<rect x="212" y="12" width="296" height="176" rx="3" fill="#E7ECFA" stroke="#1F4FD8" stroke-width="0.8"/>
+<text x="217.0" y="20.8" font-family="Plex" font-size="6.0" font-weight="700" fill="#1F4FD8" text-anchor="start">FACT PLANE</text>
+<text x="254.0" y="20.8" font-family="Plex" font-size="4.5" font-weight="500" fill="#46463F" text-anchor="start">observations, written only by emem's own readers and listed keys</text>
+<circle cx="501" cy="19" r="4.6" fill="#1F4FD8"/>
+<text x="501.0" y="20.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C3</text>
+<rect x="217" y="26" width="286" height="75" rx="1.5" fill="#FFFFFF" stroke="#141414" stroke-width="0.45"/>
+<text x="221.0" y="33.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="start">one observation, one record</text>
+<text x="499.0" y="33.5" font-family="Plex" font-size="4.5" font-weight="500" fill="#46463F" text-anchor="end">1,115 bytes, deterministic CBOR</text>
+<text x="221.0" y="41.5" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">cell</text>
+<text x="248.0" y="41.5" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">defi.zb572.xoso.zb1ec</text>
+<text x="499.0" y="41.5" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">where: a 9.5 × 8.1 m cell</text>
+<text x="221.0" y="48.7" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">band</text>
+<text x="248.0" y="48.7" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">indices.ndvi</text>
+<text x="499.0" y="48.7" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">what</text>
+<text x="221.0" y="55.9" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">tslot</text>
+<text x="248.0" y="55.9" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">20721</text>
+<text x="499.0" y="55.9" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">valid time: 25 Sep 2026</text>
+<text x="221.0" y="63.1" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">value</text>
+<text x="248.0" y="63.1" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">0.4708994708994709</text>
+<text x="499.0" y="63.1" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">(B08 − B04)/(B08 + B04)</text>
+<text x="221.0" y="70.3" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">sources</text>
+<text x="248.0" y="70.3" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">S2A_MSIL2A_20260925T054251_R005_T43SFS</text>
+<text x="221.0" y="77.5" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start"></text>
+<text x="248.0" y="77.5" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">DN B08 3502 · B04 1900 · offset −1000</text>
+<text x="499.0" y="77.5" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">inputs, re-readable</text>
+<text x="221.0" y="84.7" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">signer</text>
+<text x="248.0" y="84.7" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">777er3yi…</text>
+<text x="221.0" y="91.9" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">signed_at</text>
+<text x="248.0" y="91.9" font-family="PlexMono" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">2026-09-28T09:06:56Z</text>
+<text x="499.0" y="91.9" font-family="Plex" font-size="4.2" font-weight="400" fill="#85857E" text-anchor="end" font-style="italic">record time</text>
+<circle cx="216" cy="28" r="4.6" fill="#1F4FD8"/>
+<text x="216.0" y="29.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C1</text>
+<path d="M360.0 102 L360.0 110" stroke="#141414" stroke-width="0.8" fill="none" marker-end="url(#a)"/>
+<text x="365.0" y="107.8" font-family="Plex" font-size="4.4" font-weight="600" fill="#141414" text-anchor="start">BLAKE3-256, base32: the name</text>
+<rect x="217" y="111" width="286" height="11" rx="1.5" fill="#FFFFFF" stroke="#1F4FD8" stroke-width="0.6"/>
+<text x="221.0" y="118.6" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">fact_cid</text>
+<text x="248.0" y="118.6" font-family="PlexMono" font-size="4.5" font-weight="500" fill="#141414" text-anchor="start">oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</text>
+<rect x="217.0" y="127" width="92.66666666666667" height="25" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<text x="220.5" y="134.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">signed in batches</text>
+<text x="220.5" y="140.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">Ed25519 over the Merkle</text>
+<text x="220.5" y="146.6" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">root of sorted fact_cids</text>
+<rect x="313.6666666666667" y="127" width="92.66666666666667" height="25" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<text x="317.2" y="134.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">append-only log</text>
+<text x="317.2" y="140.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">RFC 6962 shape,</text>
+<text x="317.2" y="146.6" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">2,568,005 entries on 30 Sep</text>
+<rect x="410.33333333333337" y="127" width="92.66666666666667" height="25" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<text x="413.8" y="134.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">signed absence</text>
+<text x="413.8" y="140.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">&#x27;looked, found nothing&#x27;,</text>
+<text x="413.8" y="146.6" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">with the bytes it read</text>
+<rect x="217" y="157" width="286" height="27" rx="1.5" fill="#FFFFFF" stroke="#D3D3CC" stroke-width="0.45"/>
+<circle cx="216" cy="159" r="4.6" fill="#1F4FD8"/>
+<text x="216.0" y="160.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C2</text>
+<text x="223.0" y="164.5" font-family="Plex" font-size="4.8" font-weight="600" fill="#141414" text-anchor="start">two clocks</text>
+<text x="253.0" y="164.5" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">valid time (tslot) and record time (signed_at) are both in the bytes;</text>
+<text x="223.0" y="170.8" font-family="Plex" font-size="4.3" font-weight="400" fill="#46463F" text-anchor="start">recall as of t returns what was signed by t. A correction is a new record; the old token still resolves.</text>
+<text x="223.0" y="177.1" font-family="Plex" font-size="4.3" font-weight="400" fill="#141414" text-anchor="start">Bengaluru elevation: 918.0 m signed in May, 915.07 m after the upstream DEM changed. Both verify.</text>
+<rect x="514" y="72" width="76" height="100" rx="2" fill="#FFFFFF" stroke="#1F4FD8" stroke-width="0.6"/>
+<line x1="552" y1="64" x2="552" y2="72" stroke="#1F4FD8" stroke-width="0.6" stroke-dasharray="1.2 0.9"/>
+<circle cx="584" cy="73" r="4.6" fill="#1F4FD8"/>
+<text x="584.0" y="74.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C4</text>
+<text x="518.0" y="80.5" font-family="Plex" font-size="4.7" font-weight="600" fill="#141414" text-anchor="start">the token: 84 characters</text>
+<text x="518.0" y="87.0" font-family="PlexMono" font-size="4.0" font-weight="500" fill="#1F4FD8" text-anchor="start">emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</text>
+<text x="518.0" y="95.5" font-family="Plex" font-size="4.5" font-weight="600" fill="#141414" text-anchor="start">one algebra, pixel to archive</text>
+<text x="518.0" y="104.0" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">fact</text>
+<text x="545.0" y="104.0" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">one value</text>
+<text x="518.0" y="113.9" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">raster</text>
+<text x="545.0" y="113.9" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">a field</text>
+<text x="518.0" y="123.8" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">cube</text>
+<text x="545.0" y="123.8" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">field × time</text>
+<text x="518.0" y="133.7" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">rasterset</text>
+<text x="545.0" y="133.7" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">fields, bound</text>
+<text x="518.0" y="143.6" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">tree</text>
+<text x="545.0" y="143.6" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">any file, in place</text>
+<text x="518.0" y="153.5" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#1F4FD8" text-anchor="start">bundle</text>
+<text x="545.0" y="153.5" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">≤ 256 facts</text>
+<text x="518.0" y="163.4" font-family="PlexMono" font-size="4.5" font-weight="600" fill="#46463F" text-anchor="start">entity</text>
+<text x="545.0" y="163.4" font-family="Plex" font-size="4.1" font-weight="400" fill="#46463F" text-anchor="start">one thing, one name</text>
+<text x="596.0" y="7.0" font-family="Plex" font-size="4.8" font-weight="600" fill="#85857E" text-anchor="start">AGENTS READ, CHECK AND CITE</text>
+<rect x="596.0" y="12" width="64.33333333333333" height="20" rx="2" fill="#FFFFFF" stroke="#141414" stroke-width="0.5"/>
+<text x="628.2" y="20.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="middle">agent A</text>
+<text x="628.2" y="27.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="middle">Claude</text>
+<rect x="664.3333333333334" y="12" width="64.33333333333333" height="20" rx="2" fill="#FFFFFF" stroke="#141414" stroke-width="0.5"/>
+<text x="696.5" y="20.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="middle">agent B</text>
+<text x="696.5" y="27.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="middle">Gemma</text>
+<rect x="732.6666666666666" y="12" width="64.33333333333333" height="20" rx="2" fill="#FFFFFF" stroke="#141414" stroke-width="0.5"/>
+<text x="764.8" y="20.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="middle">agent C</text>
+<text x="764.8" y="27.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="middle">Qwen · any model</text>
+<text x="596.0" y="39.5" font-family="Plex" font-size="4.4" font-weight="500" fill="#46463F" text-anchor="start">over MCP, A2A, REST or the Python and TypeScript SDKs</text>
+<rect x="596" y="45" width="201" height="76" rx="2" fill="#FFFFFF" stroke="#1F4FD8" stroke-width="0.6"/>
+<text x="600.0" y="53.5" font-family="Plex" font-size="5.0" font-weight="600" fill="#141414" text-anchor="start">each receiver checks, trusting no one</text>
+<circle cx="790" cy="46" r="4.6" fill="#1F4FD8"/>
+<text x="790.0" y="47.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C5</text>
+<circle cx="602" cy="59.5" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="60.8" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="607.0" y="61.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">bytes → name</text>
+<text x="642.0" y="61.0" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">re-hash to the fact_cid</text>
+<circle cx="602" cy="69.1" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="70.4" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="607.0" y="70.6" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">cell</text>
+<text x="642.0" y="70.6" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">record&#x27;s cell = token&#x27;s cell, else 409</text>
+<circle cx="602" cy="78.7" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="80.0" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="607.0" y="80.2" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">arithmetic</text>
+<text x="642.0" y="80.2" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">recompute NDVI from the DNs</text>
+<circle cx="602" cy="88.3" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="89.6" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="607.0" y="89.8" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">source</text>
+<text x="642.0" y="89.8" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">re-read the pixel in the public COG</text>
+<circle cx="602" cy="97.9" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="99.2" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="607.0" y="99.4" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">signature</text>
+<text x="642.0" y="99.4" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">Ed25519 receipt, offline</text>
+<circle cx="602" cy="107.5" r="2.5" fill="#1F4FD8"/>
+<text x="602.0" y="108.8" font-family="Plex" font-size="3.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<text x="607.0" y="109.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#141414" text-anchor="start">log</text>
+<text x="642.0" y="109.0" font-family="Plex" font-size="4.4" font-weight="400" fill="#46463F" text-anchor="start">inclusion in the signed tree head</text>
+<path d="M508 64 L596 64" stroke="#1F4FD8" stroke-width="1.2" fill="none" marker-end="url(#b)"/>
+<text x="552.0" y="60.0" font-family="Plex" font-size="4.6" font-weight="600" fill="#1F4FD8" text-anchor="middle">only the name crosses</text>
+<rect x="596" y="128" width="201" height="60" rx="3" fill="#FBF1DE" stroke="#A86B00" stroke-width="0.8"/>
+<text x="600.0" y="136.8" font-family="Plex" font-size="6.0" font-weight="700" fill="#A86B00" text-anchor="start">NOTE PLANE</text>
+<text x="638.0" y="136.8" font-family="Plex" font-size="4.5" font-weight="500" fill="#46463F" text-anchor="start">claims, written by agents under their own keys</text>
+<circle cx="790" cy="135" r="4.6" fill="#1F4FD8"/>
+<text x="790.0" y="136.8" font-family="Plex" font-size="4.6" font-weight="700" fill="#FFFFFF" text-anchor="middle">C6</text>
+<text x="601.0" y="145.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· signed notes, never instructions to the reader</text>
+<text x="601.0" y="153.9" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· hash-chained tracks (this board&#x27;s evidence is one)</text>
+<text x="601.0" y="162.3" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· derivations, re-run by emem before signing</text>
+<text x="601.0" y="170.7" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· a guard that refuses a wrong number</text>
+<text x="601.0" y="179.1" font-family="Plex" font-size="4.5" font-weight="400" fill="#141414" text-anchor="start">· entities: one shared label for a place or thing</text>
+<path d="M610 121.5 L610 127.5" stroke="#A86B00" stroke-width="0.9" fill="none" marker-end="url(#c)"/>
+<text x="613.0" y="126.0" font-family="Plex" font-size="4.3" font-weight="600" fill="#A86B00" text-anchor="start">write</text>
+<path d="M596 180 L515 180" stroke="#B3261E" stroke-width="0.9" fill="none" stroke-dasharray="2 1.4" marker-end="url(#d)"/>
+<path d="M548 176 l8 8 M556 176 l-8 8" stroke="#B3261E" stroke-width="1.2"/>
+<text x="552.0" y="190.0" font-family="Plex" font-size="4.6" font-weight="700" fill="#B3261E" text-anchor="middle">agents cannot write observations</text>
+<text x="212.0" y="199.0" font-family="Plex" font-size="4.7" font-weight="600" fill="#141414" text-anchor="start">Keyed by where, what and when; named by the hash of its bytes.</text>
+<text x="212.0" y="205.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">Only the 84-character name travels; the bytes stay where anyone can re-read them.</text>
+<text x="596.0" y="199.0" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">Every check runs with stock libraries:</text>
+<text x="596.0" y="205.5" font-family="Plex" font-size="4.5" font-weight="400" fill="#46463F" text-anchor="start">Python stdlib, blake3, cbor2, pynacl.</text></svg></section>
+<section class="sechead"><span class="h">Six contributions</span><span class="sub">each a mechanism in emem's code at 18adb67, each with a measurement on the live system</span></section>
+<section class="cards">
+<div class="crow">
+  <div class="card">
+    <div class="t"><span class="badge">C1</span><h3>An address for every observation</h3></div>
+    <p>A value is keyed by where, what and when, and named by the hash of its exact bytes. The key finds a record; the name proves which one.</p>
+    <div class="f">k = (cell64, band, tslot)<br>fact_cid = base32(BLAKE3-256(CBOR(f)))<br>token = emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</div>
+    <div class="ev">A <span class="num">1,115-byte</span> record read from a <span class="num">2.02 GB</span> scene travels as <span class="num">84</span> characters <span class="s">§4</span>; ten client paths re-derive the same fact_cid.</div>
+  </div>
+  <div class="card">
+    <div class="t"><span class="badge">C2</span><h3>A memory on two clocks</h3></div>
+    <p>Valid time (when the Earth was seen) and record time (when it was signed) are both in the hashed bytes. New evidence appends; nothing is rewritten.</p>
+    <div class="f">as of t: argmax<sub>signed_at ≤ t</sub> (signed_at, cid)<br>receipt binds (as_of_tslot, as_of_signed_at)<br>log leaf = BLAKE3(0x00 ‖ BLAKE3(CBOR(attestation)))</div>
+    <div class="ev">Bengaluru elevation moved <span class="num">918.0 → 915.07 m</span> when the upstream DEM changed <span class="s">§12</span> <span class="s">§13</span>. Every read takes both time bounds, and the receipt signs them (R4).</div>
+  </div>
+  <div class="card">
+    <div class="t"><span class="badge">C3</span><h3>Machines write facts; agents write claims</h3></div>
+    <p>Only emem's readers of registered archives, enrolled devices and operator-listed keys write the fact plane. Agents sign notes under their own keys: data, never facts, never instructions to the reader. When nothing qualifies, emem signs an absence.</p>
+    <div class="f">cell(bytes) ≠ cell(token) → refused (HTTP 409)<br>absence = (cell, band, tslot, reason_cid, sources)</div>
+    <div class="ev">Venice: <i>no carriageway within 50 m</i> in Overture 2026-09-23.1, with the row groups it read (<span class="mono">exhq6lps…</span>). <span class="mono">/v1/plane/conformance</span> tests that no tool takes a caller's value.</div>
+  </div>
+</div>
+<div class="crow">
+  <div class="card">
+    <div class="t"><span class="badge">C4</span><h3>One token algebra, pixel to archive</h3></div>
+    <p>The same naming covers a value, a field, a field through time, a set of fields, any file hashed where it lies, and one handle for many facts. Each family declares how strongly it binds.</p>
+    <div class="f">fact → raster → cube → rasterset<br>tree = Merkle(chunks of a file, in place)<br>bundle = one handle over ≤ 256 fact_cids</div>
+    <div class="ev">A 443 × 453 px B04 field under one token <span class="s">§5</span>; a 5-scene cube whose members name the scene actually used <span class="s">§6</span>; a <span class="num">238.7 MB</span> COG hashed in 292 chunks without moving it <span class="s">§2</span>; 8 records behind one 38-character line <span class="s">§16</span>.</div>
+  </div>
+  <div class="card">
+    <div class="t"><span class="badge">C5</span><h3>Verification that needs no trust</h3></div>
+    <p>A receiver checks bytes, place, arithmetic, source pixel, signature and log with stock libraries. Each record shows how deep it can be checked.</p>
+    <div class="f">accept ⇔ BLAKE3(b) = cid ∧ cell(b) = cell(token) ∧ NDVI(DN(b)) = value ∧ COG[row, col] = DN(b) ∧ Ed25519(σ) ∧ leaf ∈ STH<br>depth: recomputable › rerunnable › trace-verified › checkpoint-signed › attester-only</div>
+    <div class="ev">Our script: <span class="num">15 links, 17 checks, 17.9 s</span>, no emem code <span class="s">§22</span>. An unaffiliated agent's clean-room verifier from <span class="mono">/v1/verifier_spec</span>: <span class="num">725</span> requests, zero errors, five tampered receipts rejected.</div>
+  </div>
+  <div class="card">
+    <div class="t"><span class="badge amb">C6</span><h3>Computation others can recompute</h3></div>
+    <p>An agent derives a value over signed facts and emem re-runs the pure operation before recording it. A guard refuses a sentence whose number disagrees with the fact it cites.</p>
+    <div class="f amb">derive accepted ⇔ ulp_gap(v<sub>caller</sub>, v<sub>emem</sub>) = 0 (≤ 4 for n-ary sum, mean)<br>guard: stated ≠ signed at the written precision → deny</div>
+    <div class="ev">Our NDVI change of <span class="num">−0.1298</span> (25 Sep 2025 → 2026) was recomputed bit-identical and signed under our key <span class="s">§11</span>. The guard refuses "35 °C" citing a signed 28.0 °C <span class="s">§14</span>.</div>
+  </div>
+</div>
+</section>
+
+<section class="sechead"><span class="h">What agents do with it</span><span class="sub">one memory for every model, running at emem.dev: 2.57 M signed log entries, 168 versioned algorithms, 46 source schemes (30 Sep 2026)</span></section>
+<section class="jobs">
+  <div class="job"><div class="jt">Research a place, no web</div><div class="tool">ask · 168 recipes</div><div class="jd">Flood, heat, crop or solar scores from signed readings; each recipe cited by id.</div></div>
+  <div class="job"><div class="jt">Hand work to another agent</div><div class="tool">emem:bundle</div><div class="jd">Exact signed bytes behind one line, on any model or vendor.</div></div>
+  <div class="job"><div class="jt">Keep long work alive</div><div class="tool">emem_memory_create</div><div class="jd">Signed notes outlast sessions, compaction and restarts. Notes are public.</div></div>
+  <div class="job"><div class="jt">Agree on what a thing is</div><div class="tool">emem_entity_resolve</div><div class="jd">A farm or a building gets one identity; different phrasings converge on it.</div></div>
+  <div class="job"><div class="jt">Explain why a number moved</div><div class="tool">emem_change_attribution</div><div class="jd">Names the terms behind a change, each with its fact ids.</div></div>
+  <div class="job"><div class="jt">Catch a contradiction</div><div class="tool">emem_memory_contradictions</div><div class="jd">Finds records that disagree; the guard refuses a wrong number.</div></div>
+  <div class="job"><div class="jt">Turn documents into evidence</div><div class="tool">emem:tree</div><div class="jd">Lab reports and land records become signed units under one token.</div></div>
+  <div class="job"><div class="jt">Compute for recomputation</div><div class="tool">emem_derive</div><div class="jd">Pure operations are re-run by emem before the result is recorded.</div></div>
+</section>
+<section class="wild">
+  <div><div class="wt">One token, three vendors</div><div class="wd">Claude (through MCP), Gemma 3 on Amazon Bedrock and Qwen 2.5 running locally all end with the same fact_cid and value. The decoding is emem's, not the model's: two of the three were handed the same resolved response.</div></div>
+  <div><div class="wt">A public dispute, settled by bytes</div><div class="wd">geo.qa's agent re-derived a Doha road fact and reported 9.8 m against emem's 5.4 m. Re-measuring from the full-precision coordinate inside the fact gave 5.4 m, and that agent withdrew its number in a signed note.</div></div>
+  <div><div class="wt">Regulation an auditor can re-check</div><div class="wd">eudr.dev checks farm plots against the EU Deforestation Regulation cut-off with emem's forest facts, and prepares Annex II statements that an auditor can re-verify.</div></div>
+  <div><div class="wt">Any node, the same receipts</div><div class="wd">The hosted node runs the Apache-2.0 binary, and a receipt minted on one node verifies on another. geo.qa runs a second node; an air-gapped build runs with no network at all.</div></div>
+</section>
+
+<section class="sechead"><span class="h">Four results</span><span class="sub">scripts, data and pre-registration hashes: github.com/Vortx-AI/esa_poster/research/repro</span></section>
+<section class="results">
+  <div class="res">
+    <div class="k">R1 · The mutation test: 17 cases × 9 depths, on real bytes</div>
+    <h3>Each check stops a failure that the others let through</h3>
+    <img src="fig/v11/r1_mutation.svg" alt="Matrix of 17 mutations by 9 verification depths.">
+    <p class="small">B receives the Keylong record <span class="s">§4</span> after one corruption; a deterministic verifier, no model in the loop, decides whether B acts on it. The rule "irrigate iff NDVI ≤ 0.4705" flips in 6 of 16 cases. T2 rows use a test key the verifier trusts. Leave-one-out: dropping binding, signature, log, recompute or re-read each lets a case through; the signature subsumes the hash. M15 is the one error emem's own reader made, before 28 Sep <span class="s">§7</span>: only the source re-read catches it, which is how it was found and fixed <span class="s">§8</span>. Units, checkpoints and embeddings are not covered.</p>
+    <div class="take">Prose and JSON pass all 15 corruptions they can carry. Full emem passes none. Which entity A meant (M17) is out of scope by design.</div>
+  </div>
+  <div class="res">
+    <div class="k">R2 · Compaction and handoff</div>
+    <h3>Agreement is not evidence</h3>
+    <img src="fig/v11/r1_agreement.svg" alt="Correct answers and agreeing pairs by condition.">
+    <p class="small">Pre-registered; Gemma-4-12B and Qwen2.5-7B on one host <span class="s">§17</span>. Under pressure, 3 of 36 pairs agreed while 0 of 72 answers were right (Fisher p = 0.035; pairs share trials, so descriptive). In a separate handoff study, n = 20 per arm <span class="s">§18</span>, the exact value survived prose 2/20, dense retrieval 8/20, BM25 20/20, the emem bundle 20/20.</p>
+    <div class="take">Agreement between agents cannot certify a value.</div>
+    <div class="k" style="margin-top:2.4mm">R3 · Two LLMs, emem the only tool</div>
+    <h3>A token helps only when checked</h3>
+    <table>
+      <tr><th>B receives</th><th style="text-align:right">B right</th><th class="p">B checked</th></tr>
+      <tr><td>A's token</td><td class="n ok">10/10</td><td class="p">resolved; harness re-hash, receipt 10/10</td></tr>
+      <tr><td>A's prose, 16 digits</td><td class="n">10/10</td><td class="p">nothing to check</td></tr>
+      <tr><td>prose rounded to "0.47"</td><td class="n no">0/5</td><td class="p">nothing to check</td></tr>
+      <tr><td>token with a forged cell</td><td class="n ok">5/5 declined</td><td class="p">MCP error; REST 409</td></tr>
+    </table>
+    <p class="small">A = Claude Sonnet 5.5, B = Claude Haiku 4.5, pre-registered <span class="s">§22</span>; token vs full prose tied (p = 1); rounded arm exploratory.</p>
+    <div class="take">The check belongs in the resolver, not in the model's goodwill.</div>
+  </div>
+  <div class="res">
+    <div class="k">R4 · Memory through time</div>
+    <h3>The source changed; both answers still verify</h3>
+    <img src="fig/v11/r4_bitemporal.svg" alt="Elevation of one Bengaluru cell against record time, with four as-of queries.">
+    <p class="small">One Bengaluru cell, band <span class="mono">copdem30m.elevation_mean</span> <span class="s">§12</span> <span class="s">§13</span>. In May emem signed 918.0 m from the 90 m Copernicus DEM served by Open-Meteo; from 11 Aug it signed 915.07 m read from the 30 m COG. Nothing was overwritten. Asked "as of 15 Jun", emem still answers 918.0, and every answer re-hashes to its fact_cid (live replay, <span class="mono">verify_bitemporal.py</span>). The contradiction detector labels the pair a provider change by one attester, not a dispute between witnesses. Each re-signing mints a new fact_cid, because signed_at is part of the bytes.</p>
+    <div class="take">An agent that cited the May value can still prove what it saw, and why today's answer differs.</div>
   </div>
 </section>
 
-<!-- TRACE + FOUND -->
-<section class="row" style="grid-template-columns:1fr 1fr">
-  <div style="display:flex;flex-direction:column;gap:7mm;min-width:0">
-  <div class="sec">
-    <div class="k">2 · Full trace</div>
-    <h2>From one token to the source pixel, without emem software</h2>
-    <div class="alg">accept ⇔ BLAKE3(b) = cid ∧ cell(b) = cell(token) ∧ NDVI(DN(b)) = value ∧ COG[row, col] = DN(b) ∧ Ed25519(σ) ∧ leaf ∈ STH ∧ STH<sub>geo.qa</sub> ⊑ STH</div>
-    <p class="t">A 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check. Ten client paths (REST, MCP, A2A, Python and TypeScript SDKs, LangChain, LlamaIndex, stock blake3) returned the same fact_cid, 3 repetitions each; a tampered mirror copy was rejected.</p>
-    <div class="chain">
-      <span class="i">1–3</span><span class="l">bytes → name</span><span class="r">1,115 B hash to the fact_cid; one flipped mantissa bit gives <span class="mono">mu5x2cks…</span> · <i>still trusted: nothing</i></span>
-      <span class="i">4–5</span><span class="l">cell binding</span><span class="r">cell inside the hashed body = cell in the token; cell decodes to the lat/lng the derivation used · <i>nothing</i></span>
-      <span class="i">6–7</span><span class="l">derivation</span><span class="r">scene id, DNs, catalogue and offset are inside the bytes; NDVI recomputed bit-for-bit · <i>argument order is read from emem’s code; no published schema</i></span>
-      <span class="i">8–9</span><span class="l">upstream</span><span class="r">Planetary Computer STAC item matches the scene; the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900 · <i>STAC carries no checksum; the pixel is the one containing the point (GDAL floor)</i></span>
-      <span class="i">10–11</span><span class="l">server signature</span><span class="r">emem.dev’s ed25519 receipt over the request id, time, cells and returned fact_cids · <i>proves what emem.dev served, not that it is true</i></span>
-      <span class="i">12–14</span><span class="l">public log</span><span class="r">entry 2,457,078 is included in the 2,556,451-entry log, whose signed root is consistent with the root geo.qa co-signed · <i>geo.qa is also run by Vortx AI</i></span>
-      <span class="i">15</span><span class="l">key → domain</span><span class="r">the signing key is published in did:web, JWKS and DNS TXT for emem.dev · <i>Web PKI; DNS without DNSSEC</i></span>
+<section class="bottom">
+  <div>
+    <div class="sechead" style="margin-bottom:3.4mm"><span class="h">Discussion</span><span class="sub">design choices, and where emem stops</span></div>
+    <div class="qa">
+      <div class="col">
+      <div><div class="q">Integrity is not truth, so truth is re-read.</div><div class="a">A signature fixes who served which bytes, and when. Whether the value is right is tested against the public source each record names. In R1 it is the only check that catches a signer's own error, and it is how the one such error in production was found; no signed byte was rewritten, so every affected record stays datable.</div></div>
+      <div><div class="q">emem sits under guardrails, not beside them.</div><div class="a">GeoGuard decides whether a claim should stand; provenance-first composition traces a pipeline; STAC, C2PA and PROV locate files, sign media or describe lineage. emem names the exact observation an agent cites, so any of them can check it: a guardrail can take emem tokens as evidence.</div></div>
+      <div><div class="q">Identity first, compression second.</div><div class="a">One token costs about 6× the tokenizer tokens of the bare number (46 vs 8): it buys identity, not brevity. The bundle is the compression: up to 256 facts behind one 38-character line.</div></div>
+      </div>
+      <div class="col">
+      <div><div class="q">Encoders change; the memory keeps what they said.</div><div class="a">Embeddings enter emem as signed model outputs. Clay, Prithvi-EO-2.0, Galileo and a JEPA head left the code after acceptance <span class="s">§23</span>, and new TESSERA vectors are no longer minted; every vector signed before still resolves and verifies <span class="s">§24</span>. Swapping an encoder never rewrites history.</div></div>
+      <div><div class="q">Retrieval finds text; a reference names bytes.</div><div class="a">BM25 matched the exact value when the string was in the corpus (16/16). Dense retrieval returned 4 of 142 exact and up to 138 confident misses, a median 252 m off <span class="s">§25</span>. Neither lets the receiver check what it got.</div></div>
+      <div><div class="q">Independent operation is the next step.</div><div class="a">Every check runs with stock libraries and a published key, with no call to us, and an unaffiliated clean-room verifier reproduced them (C5). The log is cross-signed with a second node, geo.qa, which Vortx AI also runs. Next: independent operators, provider-signed upstream identity and a multi-vendor agent study. R2 and R3 are pre-registered samples; R1 is deterministic.</div></div>
+      </div>
     </div>
-    <p class="src">Links 1–5 and 12–14 fit in a 4,906-byte file (our format) that re-verifies 9 checks with networking disabled (unshare -rn) and lists the upstream byte ranges to re-read; a 1-bit tamper, a wrong cell or a wrong key fails it. research/repro/v8/trace_fact.py · verify_bundle.py · <span class="s">§22</span></p>
-  </div>
-  <div class="sec">
-    <div class="k">11 · Integrity elsewhere</div>
-    <h2>What an agent can check today, by source</h2>
-    <table class="d">
-      <tr><th>what the agent is handed</th><th>integrity it carries</th></tr>
-      <tr><td>Planetary Computer: 281,898,500 B B08 COG URL</td><td>opaque ETag, no checksum</td></tr>
-      <tr><td>Copernicus Data Space: 1,187,971,637 B SAFE</td><td>MD5 + BLAKE3 of the whole product, unsigned</td></tr>
-      <tr><td>NASA Earthdata MCP: a granule concept id (an HLS granule, Bengaluru)</td><td>catalogue revision; older revisions return 404</td></tr>
-      <tr><td>MCP tool results in general (spec 2026-07-28)</td><td>none; proposed in issue #3354</td></tr>
-      <tr><td><b>emem: one value</b></td><td><b>BLAKE3 name of the 1,115-byte record, ed25519 receipt, log inclusion</b></td></tr>
-    </table>
-    <p class="t">STAC and COG locate and read data; openEO and Earth Engine compute; emem names the exact value an agent cited so another agent can check it. emem does not yet store a hash of the upstream bytes (<span class="mono">Source.hash</span> is empty), so the upstream read is checked by re-reading the pixel, as in section 2.</p>
-  </div>
-  </div>
-  <div class="sec">
-    <div class="k">3 · What the trace found</div>
-    <h2>Before 28 Sep, 162 of 200 sampled records carry a neighbouring pixel</h2>
-    <div class="alg">pre-fix row = round(j + (Y − N)/s<sub>y</sub>): the south pixel whenever the fraction ≥ ½ · fixed: ⌊·⌋ · prevalence 162/200, Wilson score interval, z = 1.96</div>
-    <img class="fig h" style="height:106mm" src="fig/pixel_audit.svg" alt="Two 5 by 5 NDVI windows around the cell: before the fix the signed DNs are the pixel south of the containing pixel">
-    <p class="t">Re-reading the COGs named inside the signed records showed that the 23 Sep record <span class="s">§7</span> carries the DNs of the pixel <b>10 m south</b> (dashed red: 2993/1972, SCL 5 bare soil, NDVI <b>0.3444</b>). The pixel that contains the point (blue) reads 0.4860. emem had rounded the fractional pixel index; GDAL takes the floor. The fix shipped on 28 Sep <span class="s">§8</span>.</p>
-    <table class="d">
-      <tr><th>audit of pre-fix Sentinel-2 records</th><th></th></tr>
-      <tr><td>random sample, one per cell, of pre-fix S2 records cited on emem.dev’s agent channel: 200 cells, 164 scenes, 19 bands (192 Element84, 8 Planetary Computer)</td><td class="n">200</td></tr>
-      <tr><td>DNs match the rounded (neighbour) pixel, not the floor pixel</td><td class="n no">162 · 81 % [75–86 %]</td></tr>
-      <tr><td>rounding and floor give the same pixel</td><td class="n">38</td></tr>
-      <tr><td>DNs match the floor pixel where the two rules differ</td><td class="n">0</td></tr>
-      <tr><td>ΔNDVI in emem’s signed change record at this cell, 23 → 25 Sep</td><td class="n">+0.127</td></tr>
-      <tr><td>ΔNDVI at the containing pixel</td><td class="n">−0.015</td></tr>
-    </table>
-    <p class="src">Re-reading the pixel found the error; the signatures date it. No signed byte was rewritten: old tokens still resolve to exactly what was signed, so the error is reproducible and datable. Post-fix records (after 28 Sep) read the containing pixel. Wilson 95 % interval. Figure: ● query point, blue = pixel containing it, dashed red = pixel emem read. The offset is a reproducibility error, not a claim about geolocation accuracy.</p>
-  </div>
-</section>
-
-<!-- HANDOFF + COMPACTION -->
-<section class="row" style="grid-template-columns:.9fr 1.1fr">
-  <div class="sec">
-    <div class="k">5 · Handoff: two LLMs, emem as the only MCP server</div>
-    <h2>Pre-registered handoff: the token protects only an agent that refuses a mismatch</h2>
-    <div class="alg">B acts ⇔ BLAKE3(b) = cid ∧ cell(b) = cell(token) · rule: irrigate ⇔ NDVI ≤ 0.4705 · Fisher exact, one-sided</div>
-    <table class="d">
-      <tr><th>B = Claude Haiku 4.5 receives</th><th>B correct</th><th>B checked</th></tr>
-      <tr><td>A’s token</td><td class="n ok">10/10</td><td>resolve, re-hash, receipt 10/10</td></tr>
-      <tr><td>A’s own prose (16 digits)</td><td class="n">10/10</td><td>nothing to check</td></tr>
-      <tr><td>prose rounded to “0.47”</td><td class="n no">0/5</td><td>—</td></tr>
-      <tr><td>token with a forged cell</td><td class="n ok">5/5 declined</td><td>refusal (MCP error; REST 409)</td></tr>
-    </table>
-    <p class="t">A: Claude Sonnet 5.5 with emem as its only MCP server returned the exact token in 10/10 runs (mean 13 s, 3.3 tool calls; one prose misdated the scene 2025). Rule: irrigate if NDVI ≤ 0.4705, a threshold <b>set on purpose</b> 0.0004 below the value so that 2-decimal rounding flips it; it shows the mechanism, not a rate. Primary test, token vs full prose: 10/10 vs 10/10, a tie (p = 1). The rounded arm was added after A’s runs (exploratory): Fisher p = 0.0003. <b>The pre-registered local Qwen2.5-3B as B</b> (42 of 45 trials run) read 0.4709 from the token yet chose irrigate, 0/19 correct (full prose 10/18); on forged tokens it dropped the cell, resolved the bare id and acted: 0/5 declined.</p>
-    <p class="src">Pre-registration hashed before trial 1 (research/repro/data/v8/prereg.md). Claude arms: one model family for A and B.</p>
-  </div>
-  <div class="sec">
-    <div class="k">6 · Compaction: why a paraphrase is not a citation</div>
-    <h2>After a shared summary, 0 of 72 answers were right, yet 3 of 36 pairs agreed</h2>
-    <div class="alg">H₁: P(pair agrees) &gt; P(answer correct) · Fisher exact one-sided on 3/36 vs 0/72 → p = 0.035 · rule: irrigate ⇔ NDVI &lt; 0.488</div>
-    <img class="fig" src="fig/drift_line.svg" alt="Number line: 0.48715 below the 0.488 threshold, the paraphrase 0.49 above it" style="max-height:44mm;width:auto;max-width:100%">
-    <table class="d">
-      <tr><th>pre-registered, Gemma-4-12B + Qwen2.5-7B, one host</th><th>correct</th><th>agree</th></tr>
-      <tr><td>full context (control)</td><td class="n">72/72</td><td class="n">36/36</td></tr>
-      <tr><td>shared summary, compaction under pressure</td><td class="n no">0/72</td><td class="n">3/36</td></tr>
-      <tr><td>shared summary, no pressure</td><td class="n">20/72</td><td class="n">15/36</td></tr>
-      <tr><td colspan="3">wrong-but-agreeing pairs (3/36) exceed correct answers (0/72): Fisher one-sided p = 0.035 <span class="s">§17</span>; handoff n = 20 per arm: prose 2, dense retrieval 8, BM25 20, token bundle 20 <span class="s">§18</span></td></tr>
-    </table>
-    <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value observed 17 Jul and signed 18 Jul. It is a pre-fix read of the pixel south (section 3); it tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs; no-pressure arm p = 0.109 (n.s.); six scoring bugs were corrected across two scorers. Related: Perez et al., ICLR 2025; arXiv 2608.11242; arXiv 2607.25066.</p>
-  </div>
-</section>
-
-<!-- DRIFT + RAW -->
-<section class="row" style="grid-template-columns:.95fr 1.05fr">
-  <div class="sec">
-    <div class="k">7 · A drift taxonomy from real cases</div>
-    <h2>Seven ways cited evidence drifted, and the part of the record that shows each</h2>
-    <table class="d">
-      <tr><th>what drifted</th><th>real case</th><th>the test that shows it</th></tr>
-      <tr><td><b>the words</b></td><td>0.4871541501976284 retold as “≈ 0.49”; both models skipped irrigation <span class="s">§21</span></td><td class="m">s ≠ v (only if the reader dereferences)</td></tr>
-      <tr><td><b>the reader</b></td><td>162 of 200 pre-fix S2 records carry the pixel south <span class="s">§7</span> <span class="s">§8</span></td><td class="m">DN(b) ≠ COG[⌊row⌋, ⌊col⌋]</td></tr>
-      <tr><td><b>the source</b></td><td>Bengaluru elevation 918.0 → 915.07 m; “as known on 15 Jun” still returns 918.0 <span class="s">§12</span> <span class="s">§13</span></td><td class="m">fn_key₁ ≠ fn_key₂ (open_meteo_copdem90m → copernicus_dem_30m_aws_pixel)</td></tr>
-      <tr><td><b>the date</b></td><td>a raster asked for 23 Sep was the 25 Sep scene, no warning (section 8); a cube member asked for 15 May is the 10 Jun scene <span class="s">§6</span></td><td class="m">date(scene) ≠ asked date</td></tr>
-      <tr><td><b>the place</b></td><td>a token re-labelled with another cell <span class="s">§4</span></td><td class="m">cell(b) ≠ cell(token) → refused</td></tr>
-      <tr><td><b>the signer</b></td><td>915.07 m signed 7 times: 7 fact_cids for one value <span class="s">§13</span></td><td class="m">k(f₁) = k(f₂), cid(f₁) ≠ cid(f₂)</td></tr>
-      <tr><td><b>the referent</b></td><td>“Maasvlakte ramp 7” resolves to all of Maasvlakte, ≈ 12 × 10 km (<span class="mono">emem:entity:4itylz3k…</span>)</td><td class="no">none: an entity token names a label, not bytes</td></tr>
-    </table>
-    <p class="t">Six of the seven are one equality test on a field of a recomputable record. For an embedding the only test is e₁ ≠ e₂: it shows the vector moved, not which input did.</p>
-  </div>
-  <div class="sec">
-    <div class="k">8 · Raw bands, the agent’s own method</div>
-    <h2>Asked for 23 Sep raw bands, emem’s raster tool served the 25 Sep scene</h2>
-    <div class="alg">scene(t) = newest S2 item with cloud &lt; c in [t − D, min(t + D, now)], (c, D) ∈ (40 %, 30 d), (60 %, 60 d), (80 %, 90 d) · t = 23 Sep → window 24 Aug – 30 Sep → 25 Sep (10.8 %); the 23 Sep scene (20 %) cannot win</div>
-    <table class="d">
-      <tr><th>10 pre-registered runs, Claude Sonnet 5.5, emem as the only MCP server</th><th></th></tr>
-      <tr><td>chose their own bands and formula: B04, B08, (B08−B04)/(B08+B04)</td><td class="n">10</td></tr>
-      <tr><td>noticed that both dates had returned one scene</td><td class="n">9</td></tr>
-      <tr><td>got 23 Sep values (via recall and backfill): ΔNDVI 0.486 → 0.471 = −0.015, “no material change” <span class="s">§27</span> <span class="s">§28</span></td><td class="n ok">1</td></tr>
-      <tr><td>wrote “no material change” as a placeholder, saying it was not measured</td><td class="n">5</td></tr>
-      <tr><td>answered “undetermined”, outside the allowed answers</td><td class="n">4</td></tr>
-      <tr><td>said “greener”, the answer the pre-fix record gives (+0.127)</td><td class="n">0</td></tr>
-      <tr><td>wrongly said no 23 Sep scene exists</td><td class="n no">3</td></tr>
-      <tr><td>cited ids that re-hash · data values traced to tool results</td><td class="n">30/30 · all</td></tr>
-    </table>
-    <p class="t">The failure was emem’s: <span class="mono">emem_band_raster</span> returned the byte-identical 25 Sep raster with no warning. The scene named inside the record is how nine agents saw it. No run used SCL.</p>
-    <p class="src">Pre-registration blake3 30d8a1a1… hashed 13:49Z, 30 Sep, before trial 1; write tools denied. The primary test (does the pre-fix record mislead?) could not run; emem’s read tools signed new records mid-run, so trials 9–10 were not independent. research/repro/data/v9/rawband · <span class="s">§22</span></p>
-  </div>
-</section>
-
-<!-- SINCE + LOST -->
-<section class="row" style="grid-template-columns:.88fr 1.12fr">
-  <div class="sec">
-    <div class="k">9 · Since the paper was accepted</div>
-    <h2>emem retired its foundation-model encoders</h2>
-    <div class="alg">TESSERA: e = f32(q<sub>int8</sub>) × f32(scale), 128 dims, recomputable only as a re-read · device: trace_root = Merkle(segment digests); a fact binds ⇔ BLAKE3(CBOR(value)) ∈ outputs; admit ⇔ no reject reason of 17</div>
-    <p class="t">The accepted paper builds on embeddings. Since then Clay v1.5, Prithvi-EO-2.0, Galileo and the JEPA-v2 head were removed from the code <span class="s">§23</span>, and TESSERA is frozen on emem.dev; vectors signed before still resolve and verify <span class="s">§24</span>.</p>
-    <p class="t">The records show the difference. The TESSERA vector <span class="s">§9</span> re-reads bit-exact from its public product (128 B int8 + 4 B scale, max |Δ| = 0, 4 of 4), but it is <span class="mono">attester_only</span>: nobody can recompute the encoder step. The Clay vector <span class="s">§10</span> names its weights by BLAKE2b, and the code that ran them is gone. A raw band read <span class="s">§4</span> is recomputable by anyone from public bytes.</p>
-    <p class="t">A device that cannot be recomputed must bind its output inside a complete OS execution trace. That gate ships as code, with conformance vectors; it admits no real hardware yet <span class="s">§26</span>.</p>
-  </div>
-  <div class="sec">
-    <div class="k">10 · Where emem lost</div>
-    <h2>The authors’ own scorecard</h2>
-    <div class="alg">exact ⇔ answer = signed value · confidently wrong ⇔ answered ∧ answer ≠ signed value · BM25 and dense retrieval top-5 over the same corpora</div>
-    <table class="d">
-      <tr><th>claim, as scored by the authors <span class="s">§19</span></th><th>verdict</th></tr>
-      <tr><td>survives compaction where a paraphrase does not</td><td class="ok">supported</td></tr>
-      <tr><td>beats plain context when the value fits</td><td class="no">refuted</td></tr>
-      <tr><td>beats BM25 on these corpora (BM25 16/16)</td><td class="no">refuted</td></tr>
-      <tr><td>single tokens save context (they cost 9.5× the LLM tokens)</td><td class="no">refuted</td></tr>
-      <tr><td>model agreement is evidence of correctness</td><td class="no">refuted, p = 0.035</td></tr>
-      <tr><td>a bundle saves context (38 chars for up to 256 facts)</td><td class="ok">supported</td></tr>
-      <tr><td>beats peer memory products</td><td>not tested</td></tr>
-    </table>
-    <p class="t">Dereferenced citations: <b>99.2 %</b> exact, 0 confidently wrong (84.4 % before four fixes); dense retrieval 4/142, up to 138 confidently wrong by a median 252 m. On a retrieval miss one model abstained 74/96 and the other gave a real neighbouring-cell value 93/96 <span class="s">§25</span>.</p>
-    <p class="src">Scope: 5 sites, 2 open 7–12B models, one host, no independent replication (labelled SAMPLE). The record lists nineteen withdrawn claims <span class="s">§20</span>.</p>
-  </div>
-</section>
-
-<!-- EMEMIFY + LIMITS + SEAL -->
-<section class="row" style="grid-template-columns:1fr 1.05fr 1.05fr">
-  <div class="sec">
-    <div class="k">12 · Ememify your work</div>
-    <h2>Five steps to sign and cite your own values, each run on 29–30 Sep</h2>
-    <div class="alg">pointer.v1: leaf = BLAKE3(url ‖ u64 offset ‖ u64 length ‖ h), node = BLAKE3(l ‖ r), odd node promoted · derive accepted ⇔ ulp_gap(v<sub>caller</sub>, v<sub>emem</sub>) = 0 (≤ 4 for sum, mean, n &gt; 2)</div>
-    <div class="ladder">
-      <span class="t">1 min</span><span>Give your agent the MCP server: <span class="mono">claude mcp add --transport http emem https://emem.dev/mcp</span> (18 core tools, 114 in all).</span>
-      <span class="t">10 min</span><span>Cite a value in a paper by its token and receipt; a Claude skill (research-grade-citation) drafts the methods text.</span>
-      <span class="t">1 hour</span><span>Register your own result, signed by your key: an NDVI change of −0.1298 (25 Sep 2025 → 2026) at this cell <span class="s">§11</span>; emem recomputed it: bit-identical.</span>
-      <span class="t">1 day</span><span>Hash your files in place: a signed pointer note lists each chunk’s BLAKE3. This board is one <span class="s">§1</span>.</span>
-      <span class="t">1 week</span><span>Run your own node: <span class="mono">docker run ghcr.io/vortx-ai/emem</span>. A local node re-read this pixel: bit-identical NDVI, a different fact_cid (its own key signs).</span>
+    <div class="concl">
+      <div class="sechead" style="margin:3.6mm 0 2.4mm"><span class="h">Conclusion</span></div>
+      <div class="crow3">
+        <div><span class="cn">1</span>Agents can hand each other the name of a signed observation instead of a sentence about it; any receiver checks it offline in under 2 ms.</div>
+        <div><span class="cn">2</span>Five of the six checks each stop a corruption the others miss. Together they stop all 16 in-scope cases, including the signer's own errors.</div>
+        <div><span class="cn">3</span>Records are never rewritten, so the memory answers "what was known, when" across upstream changes and retired encoders.</div>
+      </div>
     </div>
-    <p class="src">Apache-2.0. pip install ememdev · npm i @vortxai/emem · agent-to-agent (A2A) card at emem.dev/.well-known/agent-card.json, signed.</p>
   </div>
-  <div class="sec">
-    <div class="k">13 · What is not established</div>
-    <h2>What a signature does not show</h2>
-    <div class="alg">draft check allows ⇔ ∃ number a: round(a·10<sup>d</sup>)/10<sup>d</sup> = s, d = decimals written, s = signed value → “≈ 0.49” passes for 0.4871</div>
-    <table class="d">
-      <tr><td>A signature says who served a value, not that it is true.</td></tr>
-      <tr><td>A fact_cid names one signed record; two signers of the same value mint different ids.</td></tr>
-      <tr><td>Place and object (entity) tokens are labels; only fact, raster, cube and tree tokens hash bytes; a bundle hashes a citation list.</td></tr>
-      <tr><td>A signed “no tile here” <span class="s">§15</span> is a claim; no complete tile index backs it.</td></tr>
-      <tr><td>emem’s draft checker rejects “35 °C” citing a signed 28.0 °C <span class="s">§14</span>, but it judges at the writer’s precision and allows “≈ 0.49”; it does not check band or unit.</td></tr>
-      <tr><td>Re-minting a raster yields a new token for identical pixels (signed_at is hashed).</td></tr>
-      <tr><td>One responder and one operator; the only domain-vouched log co-signer, geo.qa, is also Vortx AI (109 other witness keys are unvouched). No read federation, no hardware attestation, nothing in orbit.</td></tr>
-      <tr><td>The agent experiments are single-host samples without independent replication.</td></tr>
-    </table>
-  </div>
-  <div class="sec">
-    <div class="k">14 · Seal</div>
-    <h2>Check this board</h2>
-    <div class="alg">link₀ = cid(“”), link<sub>i</sub> = base32(BLAKE3(link<sub>i−1</sub> ‖ ref<sub>i</sub>)[:16]); head = link<sub>n</sub></div>
-    <div class="seal">
-      <div class="qr" id="qr"><img src="fig/seal_qr.png" alt="QR: vortx-ai.github.io/ememdemo/?s=emem.dev/memories/by_attester/njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md"></div>
-      <div class="v" id="sealtext"><span style="font-family:Plex,sans-serif;word-break:normal"><b>Opens in ememdemo</b>, which re-hashes every §-step in your browser and recomputes the track’s hash chain.</span><br><br>track: emem.dev/memories/by_attester/njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md<br>head: q62y7frkthtivnqrynwt6iradm (28 of 28 steps)<br>board.jpg sha256: 96fed23a289723e50cc7884f0b56d499e7de2b85a02117192a1fa0a22377701c<br>written after log size 2,568,005 (30 Sep 2026 15:56 UTC)<br>logged as entry 2,568,005</div>
+  <div class="side">
+    <div>
+      <div class="sechead" style="margin-bottom:2mm"><span class="h">What a verified token guarantees</span></div>
+      <table class="idt">
+        <tr><td>the exact bytes</td><td class="y">guaranteed</td><td>hash, signature, log (R1 D, F, G)</td></tr>
+        <tr><td>the place and time</td><td class="y">guaranteed</td><td>cell and tslot in the bytes (R1 E)</td></tr>
+        <tr><td>the derivation</td><td class="y">recomputable</td><td>signed inputs, named pixel (R1 H, I)</td></tr>
+        <tr><td>the upstream file</td><td class="pt">named</td><td>COG and pixel recorded; provider signature next</td></tr>
+        <tr><td>the value's truth</td><td class="pt">tested</td><td>by re-reading the source, not by the signature</td></tr>
+        <tr><td>the physical entity</td><td class="o">out of scope</td><td>entity tokens are shared labels (R1 M17)</td></tr>
+        <tr><td>the decision</td><td class="o">out of scope</td><td>the agent's, or a guardrail's</td></tr>
+      </table>
     </div>
-    <p class="src">A file cannot contain its own hash, so this box is the only part of the board not inside the published bytes <span class="s">§1</span>. Signed by the poster key njedkglt…; re-check scripts: research/repro/v8/; each formula with its line in emem’s code: research/repro/v10/algorithms.md.</p>
+    <div class="try">
+      <div>
+        <div class="k" style="color:var(--ink)">Try it in one minute</div>
+        <div class="cmd">claude mcp add --transport http emem https://emem.dev/mcp</div>
+        <div class="small">Also in ChatGPT, VS Code, Dify and the GitHub MCP Registry · pip install ememdev · npm i @vortxai/emem · self-host: docker run ghcr.io/vortx-ai/emem. Scan to run R1 yourself: <span class="mono">python research/repro/v11/mutation_suite.py</span>, offline, under a second.</div>
+      </div>
+      <svg width="37mm" height="37mm" version="1.1" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg"><path d="M0,0H1V1H0zM1,0H2V1H1zM2,0H3V1H2zM3,0H4V1H3zM4,0H5V1H4zM5,0H6V1H5zM6,0H7V1H6zM8,0H9V1H8zM9,0H10V1H9zM10,0H11V1H10zM11,0H12V1H11zM13,0H14V1H13zM18,0H19V1H18zM19,0H20V1H19zM22,0H23V1H22zM23,0H24V1H23zM24,0H25V1H24zM25,0H26V1H25zM30,0H31V1H30zM31,0H32V1H31zM32,0H33V1H32zM33,0H34V1H33zM34,0H35V1H34zM35,0H36V1H35zM36,0H37V1H36zM0,1H1V2H0zM6,1H7V2H6zM9,1H10V2H9zM10,1H11V2H10zM13,1H14V2H13zM15,1H16V2H15zM17,1H18V2H17zM18,1H19V2H18zM19,1H20V2H19zM22,1H23V2H22zM24,1H25V2H24zM25,1H26V2H25zM28,1H29V2H28zM30,1H31V2H30zM36,1H37V2H36zM0,2H1V3H0zM2,2H3V3H2zM3,2H4V3H3zM4,2H5V3H4zM6,2H7V3H6zM8,2H9V3H8zM9,2H10V3H9zM11,2H12V3H11zM12,2H13V3H12zM13,2H14V3H13zM14,2H15V3H14zM15,2H16V3H15zM16,2H17V3H16zM17,2H18V3H17zM21,2H22V3H21zM23,2H24V3H23zM24,2H25V3H24zM25,2H26V3H25zM30,2H31V3H30zM32,2H33V3H32zM33,2H34V3H33zM34,2H35V3H34zM36,2H37V3H36zM0,3H1V4H0zM2,3H3V4H2zM3,3H4V4H3zM4,3H5V4H4zM6,3H7V4H6zM10,3H11V4H10zM13,3H14V4H13zM14,3H15V4H14zM15,3H16V4H15zM16,3H17V4H16zM17,3H18V4H17zM18,3H19V4H18zM19,3H20V4H19zM22,3H23V4H22zM25,3H26V4H25zM26,3H27V4H26zM27,3H28V4H27zM30,3H31V4H30zM32,3H33V4H32zM33,3H34V4H33zM34,3H35V4H34zM36,3H37V4H36zM0,4H1V5H0zM2,4H3V5H2zM3,4H4V5H3zM4,4H5V5H4zM6,4H7V5H6zM10,4H11V5H10zM13,4H14V5H13zM16,4H17V5H16zM17,4H18V5H17zM22,4H23V5H22zM24,4H25V5H24zM25,4H26V5H25zM26,4H27V5H26zM30,4H31V5H30zM32,4H33V5H32zM33,4H34V5H33zM34,4H35V5H34zM36,4H37V5H36zM0,5H1V6H0zM6,5H7V6H6zM8,5H9V6H8zM10,5H11V6H10zM11,5H12V6H11zM16,5H17V6H16zM21,5H22V6H21zM22,5H23V6H22zM25,5H26V6H25zM30,5H31V6H30zM36,5H37V6H36zM0,6H1V7H0zM1,6H2V7H1zM2,6H3V7H2zM3,6H4V7H3zM4,6H5V7H4zM5,6H6V7H5zM6,6H7V7H6zM8,6H9V7H8zM10,6H11V7H10zM12,6H13V7H12zM14,6H15V7H14zM16,6H17V7H16zM18,6H19V7H18zM20,6H21V7H20zM22,6H23V7H22zM24,6H25V7H24zM26,6H27V7H26zM28,6H29V7H28zM30,6H31V7H30zM31,6H32V7H31zM32,6H33V7H32zM33,6H34V7H33zM34,6H35V7H34zM35,6H36V7H35zM36,6H37V7H36zM9,7H10V8H9zM10,7H11V8H10zM12,7H13V8H12zM15,7H16V8H15zM18,7H19V8H18zM21,7H22V8H21zM27,7H28V8H27zM28,7H29V8H28zM0,8H1V9H0zM2,8H3V9H2zM6,8H7V9H6zM7,8H8V9H7zM10,8H11V9H10zM11,8H12V9H11zM13,8H14V9H13zM14,8H15V9H14zM15,8H16V9H15zM16,8H17V9H16zM17,8H18V9H17zM18,8H19V9H18zM19,8H20V9H19zM21,8H22V9H21zM28,8H29V9H28zM31,8H32V9H31zM34,8H35V9H34zM36,8H37V9H36zM3,9H4V10H3zM4,9H5V10H4zM5,9H6V10H5zM7,9H8V10H7zM8,9H9V10H8zM11,9H12V10H11zM13,9H14V10H13zM16,9H17V10H16zM18,9H19V10H18zM23,9H24V10H23zM25,9H26V10H25zM27,9H28V10H27zM29,9H30V10H29zM30,9H31V10H30zM31,9H32V10H31zM33,9H34V10H33zM34,9H35V10H34zM35,9H36V10H35zM36,9H37V10H36zM0,10H1V11H0zM1,10H2V11H1zM3,10H4V11H3zM5,10H6V11H5zM6,10H7V11H6zM12,10H13V11H12zM13,10H14V11H13zM14,10H15V11H14zM16,10H17V11H16zM18,10H19V11H18zM19,10H20V11H19zM21,10H22V11H21zM22,10H23V11H22zM23,10H24V11H23zM27,10H28V11H27zM28,10H29V11H28zM30,10H31V11H30zM32,10H33V11H32zM34,10H35V11H34zM36,10H37V11H36zM1,11H2V12H1zM3,11H4V12H3zM4,11H5V12H4zM9,11H10V12H9zM11,11H12V12H11zM14,11H15V12H14zM15,11H16V12H15zM16,11H17V12H16zM18,11H19V12H18zM22,11H23V12H22zM26,11H27V12H26zM29,11H30V12H29zM30,11H31V12H30zM31,11H32V12H31zM33,11H34V12H33zM1,12H2V13H1zM2,12H3V13H2zM3,12H4V13H3zM5,12H6V13H5zM6,12H7V13H6zM8,12H9V13H8zM9,12H10V13H9zM10,12H11V13H10zM11,12H12V13H11zM14,12H15V13H14zM16,12H17V13H16zM19,12H20V13H19zM21,12H22V13H21zM23,12H24V13H23zM28,12H29V13H28zM30,12H31V13H30zM31,12H32V13H31zM33,12H34V13H33zM36,12H37V13H36zM1,13H2V14H1zM2,13H3V14H2zM9,13H10V14H9zM11,13H12V14H11zM12,13H13V14H12zM13,13H14V14H13zM14,13H15V14H14zM15,13H16V14H15zM16,13H17V14H16zM17,13H18V14H17zM18,13H19V14H18zM19,13H20V14H19zM20,13H21V14H20zM23,13H24V14H23zM24,13H25V14H24zM27,13H28V14H27zM30,13H31V14H30zM31,13H32V14H31zM33,13H34V14H33zM36,13H37V14H36zM1,14H2V15H1zM3,14H4V15H3zM4,14H5V15H4zM5,14H6V15H5zM6,14H7V15H6zM9,14H10V15H9zM10,14H11V15H10zM11,14H12V15H11zM14,14H15V15H14zM15,14H16V15H15zM16,14H17V15H16zM19,14H20V15H19zM21,14H22V15H21zM22,14H23V15H22zM23,14H24V15H23zM24,14H25V15H24zM25,14H26V15H25zM27,14H28V15H27zM28,14H29V15H28zM29,14H30V15H29zM30,14H31V15H30zM33,14H34V15H33zM34,14H35V15H34zM36,14H37V15H36zM0,15H1V16H0zM1,15H2V16H1zM7,15H8V16H7zM8,15H9V16H8zM11,15H12V16H11zM12,15H13V16H12zM13,15H14V16H13zM15,15H16V16H15zM17,15H18V16H17zM19,15H20V16H19zM20,15H21V16H20zM22,15H23V16H22zM24,15H25V16H24zM26,15H27V16H26zM27,15H28V16H27zM29,15H30V16H29zM30,15H31V16H30zM31,15H32V16H31zM32,15H33V16H32zM33,15H34V16H33zM35,15H36V16H35zM36,15H37V16H36zM3,16H4V17H3zM4,16H5V17H4zM6,16H7V17H6zM9,16H10V17H9zM10,16H11V17H10zM13,16H14V17H13zM14,16H15V17H14zM15,16H16V17H15zM17,16H18V17H17zM20,16H21V17H20zM21,16H22V17H21zM22,16H23V17H22zM23,16H24V17H23zM27,16H28V17H27zM28,16H29V17H28zM30,16H31V17H30zM31,16H32V17H31zM1,17H2V18H1zM2,17H3V18H2zM3,17H4V18H3zM7,17H8V18H7zM8,17H9V18H8zM9,17H10V18H9zM12,17H13V18H12zM14,17H15V18H14zM20,17H21V18H20zM21,17H22V18H21zM22,17H23V18H22zM23,17H24V18H23zM25,17H26V18H25zM26,17H27V18H26zM27,17H28V18H27zM28,17H29V18H28zM30,17H31V18H30zM31,17H32V18H31zM35,17H36V18H35zM36,17H37V18H36zM1,18H2V19H1zM2,18H3V19H2zM6,18H7V19H6zM10,18H11V19H10zM13,18H14V19H13zM15,18H16V19H15zM17,18H18V19H17zM20,18H21V19H20zM21,18H22V19H21zM22,18H23V19H22zM23,18H24V19H23zM24,18H25V19H24zM25,18H26V19H25zM27,18H28V19H27zM29,18H30V19H29zM31,18H32V19H31zM34,18H35V19H34zM36,18H37V19H36zM0,19H1V20H0zM2,19H3V20H2zM4,19H5V20H4zM5,19H6V20H5zM12,19H13V20H12zM19,19H20V20H19zM20,19H21V20H20zM22,19H23V20H22zM23,19H24V20H23zM24,19H25V20H24zM26,19H27V20H26zM27,19H28V20H27zM29,19H30V20H29zM33,19H34V20H33zM0,20H1V21H0zM4,20H5V21H4zM5,20H6V21H5zM6,20H7V21H6zM7,20H8V21H7zM9,20H10V21H9zM15,20H16V21H15zM22,20H23V21H22zM23,20H24V21H23zM26,20H27V21H26zM27,20H28V21H27zM28,20H29V21H28zM30,20H31V21H30zM31,20H32V21H31zM33,20H34V21H33zM35,20H36V21H35zM0,21H1V22H0zM3,21H4V22H3zM5,21H6V22H5zM7,21H8V22H7zM10,21H11V22H10zM11,21H12V22H11zM14,21H15V22H14zM15,21H16V22H15zM16,21H17V22H16zM20,21H21V22H20zM21,21H22V22H21zM23,21H24V22H23zM24,21H25V22H24zM27,21H28V22H27zM28,21H29V22H28zM29,21H30V22H29zM30,21H31V22H30zM36,21H37V22H36zM2,22H3V23H2zM3,22H4V23H3zM4,22H5V23H4zM6,22H7V23H6zM7,22H8V23H7zM8,22H9V23H8zM9,22H10V23H9zM10,22H11V23H10zM12,22H13V23H12zM15,22H16V23H15zM16,22H17V23H16zM17,22H18V23H17zM18,22H19V23H18zM19,22H20V23H19zM23,22H24V23H23zM24,22H25V23H24zM25,22H26V23H25zM26,22H27V23H26zM27,22H28V23H27zM30,22H31V23H30zM33,22H34V23H33zM34,22H35V23H34zM35,22H36V23H35zM36,22H37V23H36zM2,23H3V24H2zM5,23H6V24H5zM7,23H8V24H7zM8,23H9V24H8zM10,23H11V24H10zM11,23H12V24H11zM14,23H15V24H14zM16,23H17V24H16zM18,23H19V24H18zM21,23H22V24H21zM23,23H24V24H23zM28,23H29V24H28zM29,23H30V24H29zM31,23H32V24H31zM32,23H33V24H32zM33,23H34V24H33zM35,23H36V24H35zM0,24H1V25H0zM1,24H2V25H1zM3,24H4V25H3zM4,24H5V25H4zM6,24H7V25H6zM8,24H9V25H8zM11,24H12V25H11zM12,24H13V25H12zM15,24H16V25H15zM16,24H17V25H16zM17,24H18V25H17zM18,24H19V25H18zM19,24H20V25H19zM21,24H22V25H21zM23,24H24V25H23zM27,24H28V25H27zM28,24H29V25H28zM30,24H31V25H30zM36,24H37V25H36zM5,25H6V26H5zM9,25H10V26H9zM10,25H11V26H10zM12,25H13V26H12zM13,25H14V26H13zM14,25H15V26H14zM16,25H17V26H16zM18,25H19V26H18zM21,25H22V26H21zM23,25H24V26H23zM24,25H25V26H24zM25,25H26V26H25zM26,25H27V26H26zM27,25H28V26H27zM28,25H29V26H28zM30,25H31V26H30zM31,25H32V26H31zM34,25H35V26H34zM36,25H37V26H36zM0,26H1V27H0zM1,26H2V27H1zM2,26H3V27H2zM3,26H4V27H3zM5,26H6V27H5zM6,26H7V27H6zM7,26H8V27H7zM8,26H9V27H8zM9,26H10V27H9zM11,26H12V27H11zM12,26H13V27H12zM13,26H14V27H13zM14,26H15V27H14zM16,26H17V27H16zM17,26H18V27H17zM19,26H20V27H19zM23,26H24V27H23zM27,26H28V27H27zM28,26H29V27H28zM30,26H31V27H30zM34,26H35V27H34zM36,26H37V27H36zM3,27H4V28H3zM4,27H5V28H4zM5,27H6V28H5zM7,27H8V28H7zM8,27H9V28H8zM10,27H11V28H10zM11,27H12V28H11zM12,27H13V28H12zM15,27H16V28H15zM16,27H17V28H16zM18,27H19V28H18zM22,27H23V28H22zM23,27H24V28H23zM24,27H25V28H24zM26,27H27V28H26zM27,27H28V28H27zM31,27H32V28H31zM32,27H33V28H32zM33,27H34V28H33zM35,27H36V28H35zM36,27H37V28H36zM0,28H1V29H0zM1,28H2V29H1zM2,28H3V29H2zM4,28H5V29H4zM5,28H6V29H5zM6,28H7V29H6zM7,28H8V29H7zM9,28H10V29H9zM13,28H14V29H13zM19,28H20V29H19zM20,28H21V29H20zM25,28H26V29H25zM27,28H28V29H27zM28,28H29V29H28zM29,28H30V29H29zM30,28H31V29H30zM31,28H32V29H31zM32,28H33V29H32zM33,28H34V29H33zM35,28H36V29H35zM36,28H37V29H36zM8,29H9V30H8zM11,29H12V30H11zM12,29H13V30H12zM13,29H14V30H13zM15,29H16V30H15zM16,29H17V30H16zM17,29H18V30H17zM18,29H19V30H18zM19,29H20V30H19zM20,29H21V30H20zM23,29H24V30H23zM24,29H25V30H24zM26,29H27V30H26zM27,29H28V30H27zM28,29H29V30H28zM32,29H33V30H32zM36,29H37V30H36zM0,30H1V31H0zM1,30H2V31H1zM2,30H3V31H2zM3,30H4V31H3zM4,30H5V31H4zM5,30H6V31H5zM6,30H7V31H6zM8,30H9V31H8zM11,30H12V31H11zM12,30H13V31H12zM13,30H14V31H13zM14,30H15V31H14zM15,30H16V31H15zM19,30H20V31H19zM21,30H22V31H21zM22,30H23V31H22zM23,30H24V31H23zM26,30H27V31H26zM28,30H29V31H28zM30,30H31V31H30zM32,30H33V31H32zM36,30H37V31H36zM0,31H1V32H0zM6,31H7V32H6zM9,31H10V32H9zM10,31H11V32H10zM12,31H13V32H12zM15,31H16V32H15zM16,31H17V32H16zM17,31H18V32H17zM19,31H20V32H19zM22,31H23V32H22zM23,31H24V32H23zM24,31H25V32H24zM27,31H28V32H27zM28,31H29V32H28zM32,31H33V32H32zM35,31H36V32H35zM0,32H1V33H0zM2,32H3V33H2zM3,32H4V33H3zM4,32H5V33H4zM6,32H7V33H6zM10,32H11V33H10zM11,32H12V33H11zM12,32H13V33H12zM13,32H14V33H13zM17,32H18V33H17zM19,32H20V33H19zM20,32H21V33H20zM21,32H22V33H21zM22,32H23V33H22zM24,32H25V33H24zM27,32H28V33H27zM28,32H29V33H28zM29,32H30V33H29zM30,32H31V33H30zM31,32H32V33H31zM32,32H33V33H32zM36,32H37V33H36zM0,33H1V34H0zM2,33H3V34H2zM3,33H4V34H3zM4,33H5V34H4zM6,33H7V34H6zM10,33H11V34H10zM11,33H12V34H11zM20,33H21V34H20zM22,33H23V34H22zM23,33H24V34H23zM29,33H30V34H29zM32,33H33V34H32zM33,33H34V34H33zM34,33H35V34H34zM0,34H1V35H0zM2,34H3V35H2zM3,34H4V35H3zM4,34H5V35H4zM6,34H7V35H6zM8,34H9V35H8zM9,34H10V35H9zM10,34H11V35H10zM12,34H13V35H12zM13,34H14V35H13zM14,34H15V35H14zM15,34H16V35H15zM18,34H19V35H18zM20,34H21V35H20zM21,34H22V35H21zM23,34H24V35H23zM27,34H28V35H27zM29,34H30V35H29zM31,34H32V35H31zM32,34H33V35H32zM33,34H34V35H33zM36,34H37V35H36zM0,35H1V36H0zM6,35H7V36H6zM11,35H12V36H11zM13,35H14V36H13zM14,35H15V36H14zM19,35H20V36H19zM20,35H21V36H20zM22,35H23V36H22zM23,35H24V36H23zM24,35H25V36H24zM27,35H28V36H27zM28,35H29V36H28zM32,35H33V36H32zM0,36H1V37H0zM1,36H2V37H1zM2,36H3V37H2zM3,36H4V37H3zM4,36H5V37H4zM5,36H6V37H5zM6,36H7V37H6zM8,36H9V37H8zM9,36H10V37H9zM10,36H11V37H10zM11,36H12V37H11zM13,36H14V37H13zM14,36H15V37H14zM15,36H16V37H15zM16,36H17V37H16zM18,36H19V37H18zM24,36H25V37H24zM28,36H29V37H28zM30,36H31V37H30zM31,36H32V37H31zM33,36H34V37H33zM36,36H37V37H36z" id="qr-path" fill="#000000" fill-opacity="1" fill-rule="nonzero" stroke="none" /></svg>
+    </div>
+    <div class="try">
+      <div>
+        <div class="k" style="color:var(--ink)">Every § is signed evidence</div>
+        <div class="small">Each <span class="s">§n</span> is step n of one signed emem track, <span class="mono">njedkglt/7n7qogvn…</span>: 28 steps, all 28 verified in ememdemo on 30 Sep 2026. Scan to re-hash every step and its chain in your browser.</div>
+      </div>
+      <svg width="49mm" height="49mm" version="1.1" viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg"><path d="M0,0H1V1H0zM1,0H2V1H1zM2,0H3V1H2zM3,0H4V1H3zM4,0H5V1H4zM5,0H6V1H5zM6,0H7V1H6zM10,0H11V1H10zM14,0H15V1H14zM16,0H17V1H16zM18,0H19V1H18zM19,0H20V1H19zM20,0H21V1H20zM24,0H25V1H24zM25,0H26V1H25zM26,0H27V1H26zM27,0H28V1H27zM28,0H29V1H28zM29,0H30V1H29zM32,0H33V1H32zM34,0H35V1H34zM37,0H38V1H37zM40,0H41V1H40zM42,0H43V1H42zM43,0H44V1H43zM44,0H45V1H44zM45,0H46V1H45zM46,0H47V1H46zM47,0H48V1H47zM48,0H49V1H48zM0,1H1V2H0zM6,1H7V2H6zM9,1H10V2H9zM10,1H11V2H10zM11,1H12V2H11zM12,1H13V2H12zM13,1H14V2H13zM14,1H15V2H14zM15,1H16V2H15zM17,1H18V2H17zM19,1H20V2H19zM20,1H21V2H20zM21,1H22V2H21zM22,1H23V2H22zM23,1H24V2H23zM24,1H25V2H24zM28,1H29V2H28zM30,1H31V2H30zM31,1H32V2H31zM32,1H33V2H32zM33,1H34V2H33zM35,1H36V2H35zM37,1H38V2H37zM38,1H39V2H38zM39,1H40V2H39zM40,1H41V2H40zM42,1H43V2H42zM48,1H49V2H48zM0,2H1V3H0zM2,2H3V3H2zM3,2H4V3H3zM4,2H5V3H4zM6,2H7V3H6zM8,2H9V3H8zM17,2H18V3H17zM18,2H19V3H18zM21,2H22V3H21zM22,2H23V3H22zM24,2H25V3H24zM25,2H26V3H25zM28,2H29V3H28zM29,2H30V3H29zM30,2H31V3H30zM32,2H33V3H32zM33,2H34V3H33zM34,2H35V3H34zM39,2H40V3H39zM40,2H41V3H40zM42,2H43V3H42zM44,2H45V3H44zM45,2H46V3H45zM46,2H47V3H46zM48,2H49V3H48zM0,3H1V4H0zM2,3H3V4H2zM3,3H4V4H3zM4,3H5V4H4zM6,3H7V4H6zM8,3H9V4H8zM9,3H10V4H9zM12,3H13V4H12zM15,3H16V4H15zM16,3H17V4H16zM17,3H18V4H17zM23,3H24V4H23zM25,3H26V4H25zM29,3H30V4H29zM30,3H31V4H30zM35,3H36V4H35zM36,3H37V4H36zM37,3H38V4H37zM39,3H40V4H39zM42,3H43V4H42zM44,3H45V4H44zM45,3H46V4H45zM46,3H47V4H46zM48,3H49V4H48zM0,4H1V5H0zM2,4H3V5H2zM3,4H4V5H3zM4,4H5V5H4zM6,4H7V5H6zM8,4H9V5H8zM10,4H11V5H10zM12,4H13V5H12zM14,4H15V5H14zM15,4H16V5H15zM16,4H17V5H16zM17,4H18V5H17zM19,4H20V5H19zM20,4H21V5H20zM21,4H22V5H21zM22,4H23V5H22zM23,4H24V5H23zM24,4H25V5H24zM25,4H26V5H25zM26,4H27V5H26zM28,4H29V5H28zM29,4H30V5H29zM30,4H31V5H30zM33,4H34V5H33zM37,4H38V5H37zM42,4H43V5H42zM44,4H45V5H44zM45,4H46V5H45zM46,4H47V5H46zM48,4H49V5H48zM0,5H1V6H0zM6,5H7V6H6zM8,5H9V6H8zM11,5H12V6H11zM12,5H13V6H12zM13,5H14V6H13zM14,5H15V6H14zM17,5H18V6H17zM18,5H19V6H18zM20,5H21V6H20zM22,5H23V6H22zM26,5H27V6H26zM31,5H32V6H31zM33,5H34V6H33zM34,5H35V6H34zM37,5H38V6H37zM38,5H39V6H38zM42,5H43V6H42zM48,5H49V6H48zM0,6H1V7H0zM1,6H2V7H1zM2,6H3V7H2zM3,6H4V7H3zM4,6H5V7H4zM5,6H6V7H5zM6,6H7V7H6zM8,6H9V7H8zM10,6H11V7H10zM12,6H13V7H12zM14,6H15V7H14zM16,6H17V7H16zM18,6H19V7H18zM20,6H21V7H20zM22,6H23V7H22zM24,6H25V7H24zM26,6H27V7H26zM28,6H29V7H28zM30,6H31V7H30zM32,6H33V7H32zM34,6H35V7H34zM36,6H37V7H36zM38,6H39V7H38zM40,6H41V7H40zM42,6H43V7H42zM43,6H44V7H43zM44,6H45V7H44zM45,6H46V7H45zM46,6H47V7H46zM47,6H48V7H47zM48,6H49V7H48zM8,7H9V8H8zM9,7H10V8H9zM10,7H11V8H10zM11,7H12V8H11zM12,7H13V8H12zM13,7H14V8H13zM17,7H18V8H17zM19,7H20V8H19zM20,7H21V8H20zM22,7H23V8H22zM26,7H27V8H26zM27,7H28V8H27zM28,7H29V8H28zM29,7H30V8H29zM30,7H31V8H30zM32,7H33V8H32zM37,7H38V8H37zM40,7H41V8H40zM0,8H1V9H0zM2,8H3V9H2zM3,8H4V9H3zM4,8H5V9H4zM5,8H6V9H5zM6,8H7V9H6zM11,8H12V9H11zM12,8H13V9H12zM14,8H15V9H14zM15,8H16V9H15zM19,8H20V9H19zM20,8H21V9H20zM21,8H22V9H21zM22,8H23V9H22zM23,8H24V9H23zM24,8H25V9H24zM25,8H26V9H25zM26,8H27V9H26zM29,8H30V9H29zM30,8H31V9H30zM31,8H32V9H31zM35,8H36V9H35zM36,8H37V9H36zM37,8H38V9H37zM39,8H40V9H39zM40,8H41V9H40zM42,8H43V9H42zM43,8H44V9H43zM44,8H45V9H44zM45,8H46V9H45zM46,8H47V9H46zM4,9H5V10H4zM5,9H6V10H5zM8,9H9V10H8zM10,9H11V10H10zM11,9H12V10H11zM15,9H16V10H15zM16,9H17V10H16zM19,9H20V10H19zM22,9H23V10H22zM25,9H26V10H25zM29,9H30V10H29zM30,9H31V10H30zM41,9H42V10H41zM42,9H43V10H42zM44,9H45V10H44zM45,9H46V10H45zM46,9H47V10H46zM0,10H1V11H0zM1,10H2V11H1zM5,10H6V11H5zM6,10H7V11H6zM8,10H9V11H8zM9,10H10V11H9zM11,10H12V11H11zM15,10H16V11H15zM16,10H17V11H16zM18,10H19V11H18zM19,10H20V11H19zM21,10H22V11H21zM22,10H23V11H22zM23,10H24V11H23zM26,10H27V11H26zM28,10H29V11H28zM29,10H30V11H29zM31,10H32V11H31zM33,10H34V11H33zM34,10H35V11H34zM35,10H36V11H35zM36,10H37V11H36zM37,10H38V11H37zM38,10H39V11H38zM39,10H40V11H39zM40,10H41V11H40zM41,10H42V11H41zM47,10H48V11H47zM48,10H49V11H48zM0,11H1V12H0zM3,11H4V12H3zM4,11H5V12H4zM8,11H9V12H8zM10,11H11V12H10zM11,11H12V12H11zM12,11H13V12H12zM14,11H15V12H14zM17,11H18V12H17zM19,11H20V12H19zM21,11H22V12H21zM25,11H26V12H25zM27,11H28V12H27zM28,11H29V12H28zM29,11H30V12H29zM30,11H31V12H30zM31,11H32V12H31zM32,11H33V12H32zM40,11H41V12H40zM44,11H45V12H44zM47,11H48V12H47zM48,11H49V12H48zM0,12H1V13H0zM2,12H3V13H2zM3,12H4V13H3zM4,12H5V13H4zM6,12H7V13H6zM7,12H8V13H7zM8,12H9V13H8zM9,12H10V13H9zM10,12H11V13H10zM12,12H13V13H12zM14,12H15V13H14zM16,12H17V13H16zM17,12H18V13H17zM19,12H20V13H19zM22,12H23V13H22zM23,12H24V13H23zM24,12H25V13H24zM25,12H26V13H25zM29,12H30V13H29zM30,12H31V13H30zM31,12H32V13H31zM35,12H36V13H35zM36,12H37V13H36zM38,12H39V13H38zM40,12H41V13H40zM43,12H44V13H43zM47,12H48V13H47zM1,13H2V14H1zM3,13H4V14H3zM4,13H5V14H4zM7,13H8V14H7zM10,13H11V14H10zM14,13H15V14H14zM16,13H17V14H16zM17,13H18V14H17zM21,13H22V14H21zM25,13H26V14H25zM28,13H29V14H28zM30,13H31V14H30zM35,13H36V14H35zM36,13H37V14H36zM42,13H43V14H42zM46,13H47V14H46zM47,13H48V14H47zM0,14H1V15H0zM1,14H2V15H1zM2,14H3V15H2zM5,14H6V15H5zM6,14H7V15H6zM8,14H9V15H8zM10,14H11V15H10zM11,14H12V15H11zM12,14H13V15H12zM13,14H14V15H13zM15,14H16V15H15zM16,14H17V15H16zM18,14H19V15H18zM19,14H20V15H19zM23,14H24V15H23zM24,14H25V15H24zM26,14H27V15H26zM28,14H29V15H28zM29,14H30V15H29zM32,14H33V15H32zM33,14H34V15H33zM34,14H35V15H34zM36,14H37V15H36zM38,14H39V15H38zM43,14H44V15H43zM45,14H46V15H45zM46,14H47V15H46zM47,14H48V15H47zM48,14H49V15H48zM0,15H1V16H0zM1,15H2V16H1zM3,15H4V16H3zM5,15H6V16H5zM8,15H9V16H8zM9,15H10V16H9zM11,15H12V16H11zM12,15H13V16H12zM13,15H14V16H13zM14,15H15V16H14zM16,15H17V16H16zM17,15H18V16H17zM21,15H22V16H21zM30,15H31V16H30zM31,15H32V16H31zM33,15H34V16H33zM36,15H37V16H36zM42,15H43V16H42zM43,15H44V16H43zM44,15H45V16H44zM48,15H49V16H48zM0,16H1V17H0zM1,16H2V17H1zM3,16H4V17H3zM5,16H6V17H5zM6,16H7V17H6zM7,16H8V17H7zM10,16H11V17H10zM11,16H12V17H11zM17,16H18V17H17zM18,16H19V17H18zM20,16H21V17H20zM23,16H24V17H23zM24,16H25V17H24zM25,16H26V17H25zM27,16H28V17H27zM29,16H30V17H29zM30,16H31V17H30zM36,16H37V17H36zM38,16H39V17H38zM39,16H40V17H39zM40,16H41V17H40zM41,16H42V17H41zM43,16H44V17H43zM46,16H47V17H46zM1,17H2V18H1zM2,17H3V18H2zM4,17H5V18H4zM5,17H6V18H5zM8,17H9V18H8zM9,17H10V18H9zM12,17H13V18H12zM13,17H14V18H13zM15,17H16V18H15zM18,17H19V18H18zM19,17H20V18H19zM25,17H26V18H25zM30,17H31V18H30zM31,17H32V18H31zM33,17H34V18H33zM36,17H37V18H36zM37,17H38V18H37zM39,17H40V18H39zM42,17H43V18H42zM3,18H4V19H3zM4,18H5V19H4zM6,18H7V19H6zM11,18H12V19H11zM12,18H13V19H12zM15,18H16V19H15zM16,18H17V19H16zM17,18H18V19H17zM19,18H20V19H19zM20,18H21V19H20zM24,18H25V19H24zM26,18H27V19H26zM27,18H28V19H27zM29,18H30V19H29zM30,18H31V19H30zM35,18H36V19H35zM36,18H37V19H36zM37,18H38V19H37zM38,18H39V19H38zM45,18H46V19H45zM47,18H48V19H47zM48,18H49V19H48zM2,19H3V20H2zM3,19H4V20H3zM7,19H8V20H7zM10,19H11V20H10zM11,19H12V20H11zM16,19H17V20H16zM17,19H18V20H17zM28,19H29V20H28zM30,19H31V20H30zM31,19H32V20H31zM32,19H33V20H32zM34,19H35V20H34zM39,19H40V20H39zM41,19H42V20H41zM42,19H43V20H42zM43,19H44V20H43zM44,19H45V20H44zM47,19H48V20H47zM48,19H49V20H48zM0,20H1V21H0zM1,20H2V21H1zM3,20H4V21H3zM4,20H5V21H4zM6,20H7V21H6zM10,20H11V21H10zM11,20H12V21H11zM13,20H14V21H13zM14,20H15V21H14zM15,20H16V21H15zM17,20H18V21H17zM18,20H19V21H18zM21,20H22V21H21zM22,20H23V21H22zM23,20H24V21H23zM24,20H25V21H24zM25,20H26V21H25zM27,20H28V21H27zM31,20H32V21H31zM33,20H34V21H33zM34,20H35V21H34zM35,20H36V21H35zM36,20H37V21H36zM38,20H39V21H38zM39,20H40V21H39zM40,20H41V21H40zM41,20H42V21H41zM42,20H43V21H42zM46,20H47V21H46zM47,20H48V21H47zM48,20H49V21H48zM0,21H1V22H0zM1,21H2V22H1zM2,21H3V22H2zM5,21H6V22H5zM7,21H8V22H7zM11,21H12V22H11zM12,21H13V22H12zM13,21H14V22H13zM15,21H16V22H15zM16,21H17V22H16zM17,21H18V22H17zM18,21H19V22H18zM19,21H20V22H19zM23,21H24V22H23zM24,21H25V22H24zM27,21H28V22H27zM28,21H29V22H28zM30,21H31V22H30zM37,21H38V22H37zM41,21H42V22H41zM42,21H43V22H42zM43,21H44V22H43zM44,21H45V22H44zM45,21H46V22H45zM46,21H47V22H46zM47,21H48V22H47zM2,22H3V23H2zM4,22H5V23H4zM5,22H6V23H5zM6,22H7V23H6zM7,22H8V23H7zM8,22H9V23H8zM9,22H10V23H9zM10,22H11V23H10zM12,22H13V23H12zM13,22H14V23H13zM17,22H18V23H17zM20,22H21V23H20zM21,22H22V23H21zM22,22H23V23H22zM23,22H24V23H23zM24,22H25V23H24zM25,22H26V23H25zM26,22H27V23H26zM28,22H29V23H28zM31,22H32V23H31zM32,22H33V23H32zM33,22H34V23H33zM34,22H35V23H34zM35,22H36V23H35zM37,22H38V23H37zM38,22H39V23H38zM39,22H40V23H39zM40,22H41V23H40zM41,22H42V23H41zM42,22H43V23H42zM43,22H44V23H43zM44,22H45V23H44zM45,22H46V23H45zM47,22H48V23H47zM48,22H49V23H48zM3,23H4V24H3zM4,23H5V24H4zM8,23H9V24H8zM12,23H13V24H12zM14,23H15V24H14zM17,23H18V24H17zM22,23H23V24H22zM26,23H27V24H26zM27,23H28V24H27zM28,23H29V24H28zM29,23H30V24H29zM30,23H31V24H30zM32,23H33V24H32zM34,23H35V24H34zM36,23H37V24H36zM40,23H41V24H40zM44,23H45V24H44zM0,24H1V25H0zM2,24H3V25H2zM4,24H5V25H4zM6,24H7V25H6zM8,24H9V25H8zM10,24H11V25H10zM11,24H12V25H11zM13,24H14V25H13zM14,24H15V25H14zM15,24H16V25H15zM16,24H17V25H16zM17,24H18V25H17zM18,24H19V25H18zM19,24H20V25H19zM20,24H21V25H20zM21,24H22V25H21zM22,24H23V25H22zM24,24H25V25H24zM26,24H27V25H26zM31,24H32V25H31zM35,24H36V25H35zM36,24H37V25H36zM38,24H39V25H38zM40,24H41V25H40zM42,24H43V25H42zM44,24H45V25H44zM46,24H47V25H46zM48,24H49V25H48zM1,25H2V26H1zM4,25H5V26H4zM8,25H9V26H8zM11,25H12V26H11zM12,25H13V26H12zM14,25H15V26H14zM16,25H17V26H16zM18,25H19V26H18zM22,25H23V26H22zM26,25H27V26H26zM27,25H28V26H27zM28,25H29V26H28zM30,25H31V26H30zM32,25H33V26H32zM37,25H38V26H37zM39,25H40V26H39zM40,25H41V26H40zM44,25H45V26H44zM46,25H47V26H46zM47,25H48V26H47zM0,26H1V27H0zM1,26H2V27H1zM2,26H3V27H2zM4,26H5V27H4zM5,26H6V27H5zM6,26H7V27H6zM7,26H8V27H7zM8,26H9V27H8zM9,26H10V27H9zM10,26H11V27H10zM11,26H12V27H11zM12,26H13V27H12zM14,26H15V27H14zM19,26H20V27H19zM20,26H21V27H20zM22,26H23V27H22zM23,26H24V27H23zM24,26H25V27H24zM25,26H26V27H25zM26,26H27V27H26zM31,26H32V27H31zM32,26H33V27H32zM33,26H34V27H33zM34,26H35V27H34zM36,26H37V27H36zM39,26H40V27H39zM40,26H41V27H40zM41,26H42V27H41zM42,26H43V27H42zM43,26H44V27H43zM44,26H45V27H44zM46,26H47V27H46zM48,26H49V27H48zM0,27H1V28H0zM2,27H3V28H2zM4,27H5V28H4zM8,27H9V28H8zM10,27H11V28H10zM11,27H12V28H11zM13,27H14V28H13zM14,27H15V28H14zM16,27H17V28H16zM17,27H18V28H17zM19,27H20V28H19zM20,27H21V28H20zM21,27H22V28H21zM22,27H23V28H22zM23,27H24V28H23zM25,27H26V28H25zM27,27H28V28H27zM28,27H29V28H28zM30,27H31V28H30zM32,27H33V28H32zM37,27H38V28H37zM40,27H41V28H40zM41,27H42V28H41zM47,27H48V28H47zM0,28H1V29H0zM4,28H5V29H4zM5,28H6V29H5zM6,28H7V29H6zM9,28H10V29H9zM13,28H14V29H13zM17,28H18V29H17zM23,28H24V29H23zM24,28H25V29H24zM25,28H26V29H25zM26,28H27V29H26zM27,28H28V29H27zM31,28H32V29H31zM33,28H34V29H33zM35,28H36V29H35zM36,28H37V29H36zM37,28H38V29H37zM39,28H40V29H39zM43,28H44V29H43zM44,28H45V29H44zM45,28H46V29H45zM46,28H47V29H46zM48,28H49V29H48zM1,29H2V30H1zM3,29H4V30H3zM4,29H5V30H4zM5,29H6V30H5zM7,29H8V30H7zM10,29H11V30H10zM19,29H20V30H19zM20,29H21V30H20zM21,29H22V30H21zM24,29H25V30H24zM25,29H26V30H25zM28,29H29V30H28zM29,29H30V30H29zM30,29H31V30H30zM35,29H36V30H35zM36,29H37V30H36zM40,29H41V30H40zM43,29H44V30H43zM45,29H46V30H45zM1,30H2V31H1zM2,30H3V31H2zM4,30H5V31H4zM6,30H7V31H6zM8,30H9V31H8zM10,30H11V31H10zM12,30H13V31H12zM14,30H15V31H14zM16,30H17V31H16zM18,30H19V31H18zM20,30H21V31H20zM22,30H23V31H22zM23,30H24V31H23zM24,30H25V31H24zM25,30H26V31H25zM28,30H29V31H28zM30,30H31V31H30zM31,30H32V31H31zM33,30H34V31H33zM34,30H35V31H34zM35,30H36V31H35zM37,30H38V31H37zM38,30H39V31H38zM39,30H40V31H39zM41,30H42V31H41zM42,30H43V31H42zM43,30H44V31H43zM44,30H45V31H44zM45,30H46V31H45zM46,30H47V31H46zM47,30H48V31H47zM48,30H49V31H48zM1,31H2V32H1zM3,31H4V32H3zM4,31H5V32H4zM5,31H6V32H5zM7,31H8V32H7zM8,31H9V32H8zM9,31H10V32H9zM12,31H13V32H12zM13,31H14V32H13zM18,31H19V32H18zM19,31H20V32H19zM20,31H21V32H20zM24,31H25V32H24zM26,31H27V32H26zM27,31H28V32H27zM29,31H30V32H29zM34,31H35V32H34zM37,31H38V32H37zM40,31H41V32H40zM43,31H44V32H43zM44,31H45V32H44zM47,31H48V32H47zM48,31H49V32H48zM0,32H1V33H0zM2,32H3V33H2zM4,32H5V33H4zM5,32H6V33H5zM6,32H7V33H6zM7,32H8V33H7zM8,32H9V33H8zM9,32H10V33H9zM10,32H11V33H10zM12,32H13V33H12zM13,32H14V33H13zM14,32H15V33H14zM15,32H16V33H15zM18,32H19V33H18zM19,32H20V33H19zM20,32H21V33H20zM22,32H23V33H22zM23,32H24V33H23zM25,32H26V33H25zM26,32H27V33H26zM28,32H29V33H28zM31,32H32V33H31zM32,32H33V33H32zM33,32H34V33H33zM34,32H35V33H34zM35,32H36V33H35zM36,32H37V33H36zM37,32H38V33H37zM39,32H40V33H39zM41,32H42V33H41zM43,32H44V33H43zM44,32H45V33H44zM45,32H46V33H45zM46,32H47V33H46zM48,32H49V33H48zM4,33H5V34H4zM9,33H10V34H9zM10,33H11V34H10zM11,33H12V34H11zM15,33H16V34H15zM16,33H17V34H16zM23,33H24V34H23zM24,33H25V34H24zM25,33H26V34H25zM27,33H28V34H27zM28,33H29V34H28zM29,33H30V34H29zM32,33H33V34H32zM34,33H35V34H34zM35,33H36V34H35zM36,33H37V34H36zM39,33H40V34H39zM40,33H41V34H40zM41,33H42V34H41zM43,33H44V34H43zM47,33H48V34H47zM1,34H2V35H1zM2,34H3V35H2zM3,34H4V35H3zM4,34H5V35H4zM6,34H7V35H6zM10,34H11V35H10zM15,34H16V35H15zM17,34H18V35H17zM20,34H21V35H20zM21,34H22V35H21zM22,34H23V35H22zM23,34H24V35H23zM25,34H26V35H25zM28,34H29V35H28zM30,34H31V35H30zM31,34H32V35H31zM32,34H33V35H32zM33,34H34V35H33zM35,34H36V35H35zM38,34H39V35H38zM39,34H40V35H39zM42,34H43V35H42zM45,34H46V35H45zM48,34H49V35H48zM0,35H1V36H0zM2,35H3V36H2zM4,35H5V36H4zM5,35H6V36H5zM8,35H9V36H8zM9,35H10V36H9zM10,35H11V36H10zM12,35H13V36H12zM14,35H15V36H14zM15,35H16V36H15zM16,35H17V36H16zM17,35H18V36H17zM18,35H19V36H18zM23,35H24V36H23zM24,35H25V36H24zM26,35H27V36H26zM27,35H28V36H27zM28,35H29V36H28zM29,35H30V36H29zM32,35H33V36H32zM37,35H38V36H37zM39,35H40V36H39zM40,35H41V36H40zM43,35H44V36H43zM0,36H1V37H0zM5,36H6V37H5zM6,36H7V37H6zM8,36H9V37H8zM11,36H12V37H11zM13,36H14V37H13zM16,36H17V37H16zM19,36H20V37H19zM20,36H21V37H20zM21,36H22V37H21zM22,36H23V37H22zM23,36H24V37H23zM25,36H26V37H25zM26,36H27V37H26zM31,36H32V37H31zM34,36H35V37H34zM35,36H36V37H35zM36,36H37V37H36zM39,36H40V37H39zM40,36H41V37H40zM41,36H42V37H41zM42,36H43V37H42zM43,36H44V37H43zM44,36H45V37H44zM46,36H47V37H46zM48,36H49V37H48zM2,37H3V38H2zM3,37H4V38H3zM7,37H8V38H7zM8,37H9V38H8zM11,37H12V38H11zM14,37H15V38H14zM17,37H18V38H17zM21,37H22V38H21zM22,37H23V38H22zM23,37H24V38H23zM24,37H25V38H24zM25,37H26V38H25zM26,37H27V38H26zM28,37H29V38H28zM29,37H30V38H29zM30,37H31V38H30zM31,37H32V38H31zM32,37H33V38H32zM37,37H38V38H37zM41,37H42V38H41zM42,37H43V38H42zM43,37H44V38H43zM1,38H2V39H1zM5,38H6V39H5zM6,38H7V39H6zM7,38H8V39H7zM8,38H9V39H8zM9,38H10V39H9zM10,38H11V39H10zM11,38H12V39H11zM13,38H14V39H13zM14,38H15V39H14zM16,38H17V39H16zM17,38H18V39H17zM19,38H20V39H19zM22,38H23V39H22zM23,38H24V39H23zM25,38H26V39H25zM31,38H32V39H31zM33,38H34V39H33zM34,38H35V39H34zM35,38H36V39H35zM36,38H37V39H36zM37,38H38V39H37zM38,38H39V39H38zM39,38H40V39H39zM40,38H41V39H40zM42,38H43V39H42zM45,38H46V39H45zM47,38H48V39H47zM48,38H49V39H48zM1,39H2V40H1zM2,39H3V40H2zM3,39H4V40H3zM12,39H13V40H12zM13,39H14V40H13zM15,39H16V40H15zM17,39H18V40H17zM19,39H20V40H19zM21,39H22V40H21zM23,39H24V40H23zM26,39H27V40H26zM27,39H28V40H27zM29,39H30V40H29zM30,39H31V40H30zM32,39H33V40H32zM35,39H36V40H35zM37,39H38V40H37zM40,39H41V40H40zM41,39H42V40H41zM43,39H44V40H43zM0,40H1V41H0zM1,40H2V41H1zM2,40H3V41H2zM6,40H7V41H6zM7,40H8V41H7zM8,40H9V41H8zM11,40H12V41H11zM12,40H13V41H12zM17,40H18V41H17zM18,40H19V41H18zM20,40H21V41H20zM21,40H22V41H21zM22,40H23V41H22zM23,40H24V41H23zM24,40H25V41H24zM25,40H26V41H25zM26,40H27V41H26zM29,40H30V41H29zM30,40H31V41H30zM36,40H37V41H36zM38,40H39V41H38zM39,40H40V41H39zM40,40H41V41H40zM41,40H42V41H41zM42,40H43V41H42zM43,40H44V41H43zM44,40H45V41H44zM46,40H47V41H46zM47,40H48V41H47zM48,40H49V41H48zM8,41H9V42H8zM13,41H14V42H13zM15,41H16V42H15zM16,41H17V42H16zM22,41H23V42H22zM26,41H27V42H26zM27,41H28V42H27zM28,41H29V42H28zM30,41H31V42H30zM31,41H32V42H31zM35,41H36V42H35zM36,41H37V42H36zM40,41H41V42H40zM44,41H45V42H44zM45,41H46V42H45zM47,41H48V42H47zM0,42H1V43H0zM1,42H2V43H1zM2,42H3V43H2zM3,42H4V43H3zM4,42H5V43H4zM5,42H6V43H5zM6,42H7V43H6zM9,42H10V43H9zM11,42H12V43H11zM13,42H14V43H13zM14,42H15V43H14zM15,42H16V43H15zM16,42H17V43H16zM17,42H18V43H17zM19,42H20V43H19zM20,42H21V43H20zM22,42H23V43H22zM24,42H25V43H24zM26,42H27V43H26zM27,42H28V43H27zM29,42H30V43H29zM31,42H32V43H31zM32,42H33V43H32zM33,42H34V43H33zM34,42H35V43H34zM35,42H36V43H35zM36,42H37V43H36zM38,42H39V43H38zM40,42H41V43H40zM42,42H43V43H42zM44,42H45V43H44zM47,42H48V43H47zM48,42H49V43H48zM0,43H1V44H0zM6,43H7V44H6zM8,43H9V44H8zM9,43H10V44H9zM10,43H11V44H10zM17,43H18V44H17zM18,43H19V44H18zM19,43H20V44H19zM20,43H21V44H20zM21,43H22V44H21zM22,43H23V44H22zM26,43H27V44H26zM27,43H28V44H27zM28,43H29V44H28zM29,43H30V44H29zM30,43H31V44H30zM31,43H32V44H31zM32,43H33V44H32zM33,43H34V44H33zM34,43H35V44H34zM40,43H41V44H40zM44,43H45V44H44zM47,43H48V44H47zM0,44H1V45H0zM2,44H3V45H2zM3,44H4V45H3zM4,44H5V45H4zM6,44H7V45H6zM8,44H9V45H8zM10,44H11V45H10zM15,44H16V45H15zM17,44H18V45H17zM18,44H19V45H18zM19,44H20V45H19zM21,44H22V45H21zM22,44H23V45H22zM23,44H24V45H23zM24,44H25V45H24zM25,44H26V45H25zM26,44H27V45H26zM31,44H32V45H31zM34,44H35V45H34zM36,44H37V45H36zM38,44H39V45H38zM40,44H41V45H40zM41,44H42V45H41zM42,44H43V45H42zM43,44H44V45H43zM44,44H45V45H44zM46,44H47V45H46zM47,44H48V45H47zM0,45H1V46H0zM2,45H3V46H2zM3,45H4V46H3zM4,45H5V46H4zM6,45H7V46H6zM8,45H9V46H8zM10,45H11V46H10zM12,45H13V46H12zM14,45H15V46H14zM18,45H19V46H18zM21,45H22V46H21zM22,45H23V46H22zM25,45H26V46H25zM26,45H27V46H26zM30,45H31V46H30zM31,45H32V46H31zM36,45H37V46H36zM37,45H38V46H37zM39,45H40V46H39zM40,45H41V46H40zM42,45H43V46H42zM43,45H44V46H43zM44,45H45V46H44zM48,45H49V46H48zM0,46H1V47H0zM2,46H3V47H2zM3,46H4V47H3zM4,46H5V47H4zM6,46H7V47H6zM8,46H9V47H8zM10,46H11V47H10zM13,46H14V47H13zM14,46H15V47H14zM15,46H16V47H15zM16,46H17V47H16zM17,46H18V47H17zM18,46H19V47H18zM19,46H20V47H19zM21,46H22V47H21zM22,46H23V47H22zM23,46H24V47H23zM24,46H25V47H24zM26,46H27V47H26zM27,46H28V47H27zM28,46H29V47H28zM29,46H30V47H29zM32,46H33V47H32zM33,46H34V47H33zM34,46H35V47H34zM41,46H42V47H41zM43,46H44V47H43zM0,47H1V48H0zM6,47H7V48H6zM9,47H10V48H9zM15,47H16V48H15zM17,47H18V48H17zM18,47H19V48H18zM23,47H24V48H23zM24,47H25V48H24zM25,47H26V48H25zM26,47H27V48H26zM30,47H31V48H30zM31,47H32V48H31zM33,47H34V48H33zM37,47H38V48H37zM38,47H39V48H38zM41,47H42V48H41zM42,47H43V48H42zM48,47H49V48H48zM0,48H1V49H0zM1,48H2V49H1zM2,48H3V49H2zM3,48H4V49H3zM4,48H5V49H4zM5,48H6V49H5zM6,48H7V49H6zM8,48H9V49H8zM9,48H10V49H9zM10,48H11V49H10zM11,48H12V49H11zM18,48H19V49H18zM20,48H21V49H20zM23,48H24V49H23zM24,48H25V49H24zM27,48H28V49H27zM29,48H30V49H29zM30,48H31V49H30zM35,48H36V49H35zM36,48H37V49H36zM38,48H39V49H38zM40,48H41V49H40zM41,48H42V49H41zM45,48H46V49H45zM46,48H47V49H46zM47,48H48V49H47zM48,48H49V49H48z" id="qr-path" fill="#000000" fill-opacity="1" fill-rule="nonzero" stroke="none" /></svg>
+    </div>
   </div>
 </section>
+</main>
 
-<div class="foot"><span>§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements · 23–26 doc rows at emem 18adb67 · 27–28 23 Sep B04, B08 (post-fix). Traffic to 30 Sep: 96,728 MCP tool calls; PyPI 314 · npm 304 last month; 96.2 % of signed agent notes are from operator keys</span><span>Vortx AI</span></div>
-</div></div>
-</body>
+<footer class="foot">
+  <div><b>References.</b> BLAKE3 (O'Connor, Aumasson, Neves, Wilcox-O'Hearn 2020) · RFC 6962 Certificate Transparency · RFC 8032 Ed25519 · RFC 8949 CBOR · STAC 1.0; OGC Cloud-Optimized GeoTIFF · openEO · W3C PROV-O · C2PA 2 · Model Context Protocol · Agent2Agent · TESSERA, arXiv:2506.20380 · Earth Embeddings as Products, arXiv:2601.13134 · openEO provenance, arXiv:2506.08597 · Perez et al., ICLR 2025.
+  <b>Track steps.</b> §2 COG pointer · §4 NDVI record · §5 raster · §6 cube · §7 pre-fix record · §8 CHANGELOG line 68 · §9 TESSERA · §11 our derivation · §12–13 elevation · §14 guard · §16 bundle · §17–18, §23–26 emem doc rows · §22 our measurements.</div>
+  <div><b>Reproducibility.</b> Mechanisms read from emem's code at 18adb67; measurements 29–30 Sep 2026 on emem.dev; R1 is research/repro/v11/mutation_suite.py. Every number on this board maps to its source, script and evidence class in research/should_do/15_V11_CLAIMS_MAP.md, with the complete audit trail alongside, at github.com/Vortx-AI/esa_poster. Paper v0.1.0; this board describes whitepaper v3.</div>
+</footer>
+</div></body>
 </html>

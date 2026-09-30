@@ -1,0 +1,1778 @@
+{
+ "poster_repo": "github.com/Vortx-AI/esa_poster",
+ "poster_commit": "50bb8bf",
+ "emem_head": "e226f8b",
+ "emem_pins": [
+  "213e273",
+  "18adb67"
+ ],
+ "live_responder_commit": "9d2c454",
+ "audit_date": "2026-09-30",
+ "A_claims": [
+  {
+   "id": "A01",
+   "panel": "Lead / header",
+   "claim": "emem version and commits",
+   "value": "emem 2.4.2 at 213e273 and 18adb67",
+   "source": "emem Cargo.toml at both commits (version = \"2.4.2\"); git log",
+   "support": "EXACT",
+   "note": "Live responder reported x-emem-commit 9d2c454 on 30 Sep audit GETs (between the two pins); emem HEAD is e226f8b.",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A02",
+   "panel": "Lead / header",
+   "claim": "Measurement window",
+   "value": "29–30 Sep 2026",
+   "source": "repro/README.md; trace_fact_output.txt (2026-09-30T09:15Z); v9 prereg 13:49Z",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A03",
+   "panel": "Lead / header",
+   "claim": "Agents cannot write observations",
+   "value": "—",
+   "source": "algorithms.md (derive promotion); track10 step 11 \"caller-signed NDVI change\"",
+   "support": "PARTIAL",
+   "note": "True for primary observations only. §12 prints \"Register your own result, signed by your key\" (a caller-signed derivative, jb67zixq…). Reword: agents cannot write primary observations; caller derivatives are recomputed before promotion to deterministic_index.",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A04",
+   "panel": "Lead / header",
+   "claim": "B verifies the log entry and receipt offline",
+   "value": "—",
+   "source": "v8/verify_bundle.py (re-run 30 Sep: 9/9 PASS)",
+   "support": "PARTIAL",
+   "note": "The 4,906-byte offline file covers links 1–5 and 12–14 (fact bytes, cell, batch root, attestation sig, STH sig, inclusion, witness, consistency). The serve receipt (link 10) is not in the file.",
+   "evidence_class": "measured (ours), n=1 bundle"
+  },
+  {
+   "id": "A05",
+   "panel": "Lead / header",
+   "claim": "Fact tuple field order",
+   "value": "kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key,args}, privacy, schema_cid, signer, signed_at",
+   "source": "algorithms.md §1 (fact.rs); 04 ledger §1",
+   "support": "EXACT",
+   "note": "Board omits optional uncertainty? and served_via? fields; acceptable if footnoted \"optional fields omitted\".",
+   "evidence_class": "code-read @18adb67"
+  },
+  {
+   "id": "A06",
+   "panel": "Lead / header",
+   "claim": "Canonical bytes",
+   "value": "CBOR in declaration order; NaN→f9 7e00; −0→+0",
+   "source": "algorithms.md §1; defect 33",
+   "support": "EXACT",
+   "note": "Not RFC 8949 §4.2.1 key-sorted (defect 33); board wording is correct.",
+   "evidence_class": "code-read @18adb67"
+  },
+  {
+   "id": "A07",
+   "panel": "Lead / header",
+   "claim": "fact_cid",
+   "value": "base32(BLAKE3-256(b))",
+   "source": "verify_fact.py; trace link 3",
+   "support": "EXACT",
+   "note": "Lower-case, no padding (algorithms.md notation).",
+   "evidence_class": "measured (ours) + code-read"
+  },
+  {
+   "id": "A08",
+   "panel": "Lead / header",
+   "claim": "cell quantisation and pitch",
+   "value": "lat_q = round((lat+90)/180·(2²¹−1)); pitch 8.583·10⁻⁵° = 9.52 × 8.06 m here",
+   "source": "algorithms.md §1; recomputed (WGS84 at 32.571°N)",
+   "support": "EXACT",
+   "note": "Recomputed 9.518 × 8.060 m. Figure caption rounds to 9.5 × 8.1 m (consistent).",
+   "evidence_class": "derived arithmetic"
+  },
+  {
+   "id": "A09",
+   "panel": "Lead / header",
+   "claim": "tslot",
+   "value": "⌊unix/86 400⌋; 20721 = 25 Sep 2026",
+   "source": "recomputed",
+   "support": "EXACT",
+   "note": "20719 = 23 Sep; 20651 = 17 Jul (trap value) also check.",
+   "evidence_class": "derived arithmetic"
+  },
+  {
+   "id": "A10",
+   "panel": "Lead / header",
+   "claim": "As-of recall rule",
+   "value": "argmax signed_at ≤ t (signed_at, cid)",
+   "source": "algorithms.md §1 (recall.rs)",
+   "support": "EXACT",
+   "note": "Defect 35: as_of_signed_at compared as raw string (fractional seconds / offsets order wrongly; untested).",
+   "evidence_class": "code-read @18adb67"
+  },
+  {
+   "id": "A11",
+   "panel": "Lead / header",
+   "claim": "Batch attestation",
+   "value": "R = Merkle(sorted fact_cids); Ed25519(PreimageV1(\"attestation\"){R, registry, schema})",
+   "source": "algorithms.md; attest.rs:105-124; verify_bundle.py \"batch_root recomputed\" PASS",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read + measured (ours)"
+  },
+  {
+   "id": "A12",
+   "panel": "Lead / header",
+   "claim": "Log shape",
+   "value": "leaf = BLAKE3(0x00‖BLAKE3(CBOR(att))), node = BLAKE3(0x01‖l‖r), RFC 6962 shape",
+   "source": "algorithms.md; verify_log.py; verify_bundle.py inclusion+consistency PASS",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read + measured (ours)"
+  },
+  {
+   "id": "A13",
+   "panel": "Lead / header",
+   "claim": "Receipt preimage",
+   "value": "Ed25519(BLAKE3(\"emem.preimage.v1\\0\"‖request_id‖served_at‖primitive‖cells‖fact_cids‖merkle))",
+   "source": "algorithms.md; 04 ledger (Rust/Python/JS agree on preimage digest)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A14",
+   "panel": "Lead figure",
+   "claim": "Keylong field size and grid bytes",
+   "value": "443 × 453 px at 10 m; 802,780 B per band grid",
+   "source": "hero_field.json; token_counts.json raster_artifact_B04_bytes = 802780 (= 443·453·4 + 64)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A15",
+   "panel": "Lead figure",
+   "claim": "Four band grids re-hash to their names",
+   "value": "4 of 4",
+   "source": "repro/README (data/ re-hashed); hero_field.json",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A16",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "Bytes read vs scene",
+   "value": "1.17 MB of 2.02 GB (0.058 %); 1,165,033 of 2,023,818,762 B",
+   "source": "cog_pixel_bytes.json; scene_sizes.json; recomputed 0.0576 %",
+   "support": "EXACT",
+   "note": "\"By our reconstruction of its read path\" is the correct qualifier: emem does not log its own range reads.",
+   "evidence_class": "measured (ours), reconstruction"
+  },
+  {
+   "id": "A17",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "What is read",
+   "value": "three 64 KiB COG headers + one tile each of B04, B08, SCL",
+   "source": "cog_pixel_bytes.json (head_bytes_read 65536 ×3; tiles 468,566 + 477,314 + SCL)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A18",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "Signed record size",
+   "value": "1,115 B",
+   "source": "inventory.json bytes = 1115; trace link 2",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A19",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "Token length",
+   "value": "84 characters (46 GPT-4 tokenizer tokens)",
+   "source": "token_counts.json fact_token_ndvi chars 84, cl100k 46; results.json cl100k_token 46",
+   "support": "EXACT",
+   "note": "Conflicts with §10 \"9.5×\", which uses the docs figure of 51 tokens (see A-§10).",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A20",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "Earth Search pointer notes",
+   "value": "292 chunks each (header + 291 tiles); 238.7 MB (B08), 232.9 MB (B04)",
+   "source": "pub/b04/note.md bytes 232,853,854; live GET of B08 note 30 Sep: bytes 238,683,874, 292 of 292 hashed",
+   "support": "EXACT",
+   "note": "B08 note body is not committed to the repo; commit it (pub/b08/) so the claim is repo-checkable.",
+   "evidence_class": "measured (ours) + live GET"
+  },
+  {
+   "id": "A21",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "Tree row of the cell",
+   "value": "emem:tree:khiqtqrddb6jponqn4gv72if7e#row=108; 1,586,895 B",
+   "source": "live GET of B08 note: 0-based row 108 = level 0 tile 8,9, length 1,586,895",
+   "support": "EXACT",
+   "note": "Not in repo (see above).",
+   "evidence_class": "live GET"
+  },
+  {
+   "id": "A22",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "Planetary Computer B08 file",
+   "value": "281.9 MB; offset not pre-subtracted; emem records no hash of it",
+   "source": "scene_sizes.json / cog_pixel_bytes.json cog_bytes 281,898,500; defect 25 (Source.hash never filled)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours) + code-read"
+  },
+  {
+   "id": "A23",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "§4 record contents",
+   "value": "band indices.ndvi; day 20721; scene S2A_MSIL2A_20260925T054251_R005_T43SFS; SCL 4; DN B08 3502 / B04 1900; offset −1000; value 0.4708994708994709; signed_at 2026-09-28T09:06:56Z",
+   "source": "inventory.json; trace_fact_output.txt link 6; pixel_check.json floor_DN 3502/1900",
+   "support": "EXACT",
+   "note": "Hero record carries no reader=cog-pixel-floor@2 stamp (prevalence_summary post.stamp_absent_signed_at includes 09:06:56Z); post-fix status rests on signed_at > PIXEL_FIX_AT 04:09:26Z.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A24",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "NDVI bit-identical from DNs",
+   "value": "((3502−1000)−(1900−1000)) / ((3502−1000)+(1900−1000)) = (2502−900)/(2502+900) = 0.4708994708994709",
+   "source": "verify_ndvi.py; algorithms.md (0x3fde233788cde233)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A25",
+   "panel": "§ panel 1 · From scene to token",
+   "claim": "Earth Search tile values",
+   "value": "B08 2502, B04 900; NDVI identical",
+   "source": "pub/b04/note.md; live B08 note",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A26",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Trace script",
+   "value": "698-line script (stdlib, blake3, cbor2, pynacl); 15 links, 17 checks, 17.9 s, all verified",
+   "source": "trace_fact.py (698 lines); trace_fact_output.txt",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours), n=1 run"
+  },
+  {
+   "id": "A27",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Tamper sensitivity",
+   "value": "one flipped mantissa bit gives mu5x2cks…",
+   "source": "trace_fact_output.txt link 3",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A28",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Wrong-cell token refused",
+   "value": "HTTP 409",
+   "source": "trace_fact_output.txt link 4",
+   "support": "EXACT",
+   "note": "Server-side convenience; offline check is the cell inside the hashed body.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A29",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Pixel re-read",
+   "value": "col 9098, row 9443: B08 3502, B04 1900",
+   "source": "trace link 9; pixel_check.json",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A30",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Log inclusion",
+   "value": "entry 2,457,078 in 2,556,451-entry log; consistent with root geo.qa co-signed",
+   "source": "verify_bundle.py re-run (entry 2457078 under STH 2556451; witness head 2541495)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A31",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "geo.qa is also run by Vortx AI",
+   "value": "—",
+   "source": "trace residual trust; defect 30; live /v1/log/witnesses: independent_operator_domains = [geo.qa], org_vouched 2 keys, key_only 109",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "live GET + docs"
+  },
+  {
+   "id": "A32",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Key → domain",
+   "value": "did:web, JWKS, DNS TXT; Web PKI; DNS without DNSSEC",
+   "source": "trace link 15 (AD=False)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A33",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Offline file",
+   "value": "4,906 B; 9 checks with networking disabled (unshare -rn); 1-bit tamper, wrong cell, wrong key fail",
+   "source": "proof_bundle_ndvi.cbor = 4906 B; verify_bundle.py prints 9 PASS (re-run by this audit)",
+   "support": "PARTIAL",
+   "note": "9 checks and size verified. The unshare -rn run and the three negative cases have no committed log; re-run and commit the output.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A34",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "Ten client paths, same fact_cid, 3 reps each",
+   "value": "10 paths × 3/3",
+   "source": "crossruntime_table.json: paths 1–7 (10 entries), distinct_fact_cids = 1, all_rehash_ok",
+   "support": "EXACT",
+   "note": "Receipt verified on 9 of 11 NDVI paths (not LlamaIndex, not raw CBOR). Same responder for all paths: availability, not replication. Official MCP Python/TS SDK paths (6c, 6d) are not named in the list.",
+   "evidence_class": "measured (ours), n=10 paths × 3"
+  },
+  {
+   "id": "A35",
+   "panel": "§ panel 2 · Full trace",
+   "claim": "A tampered mirror copy was rejected",
+   "value": "—",
+   "source": "none found",
+   "support": "UNSOURCED",
+   "note": "No mirror/tamper entry in crossruntime_table.json or elsewhere in repo. Commit the run or remove.",
+   "evidence_class": "—"
+  },
+  {
+   "id": "A36",
+   "panel": "§ panel 11 · Integrity elsewhere",
+   "claim": "Planetary Computer: B08 COG URL, opaque ETag, no checksum",
+   "value": "281,898,500 B",
+   "source": "scene_sizes.json",
+   "support": "PARTIAL",
+   "note": "Size sourced; \"opaque ETag, no checksum\" not logged in repo (pointer notes say \"etag: not exposed\" for Earth Search).",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A37",
+   "panel": "§ panel 11 · Integrity elsewhere",
+   "claim": "Copernicus Data Space SAFE: MD5 + BLAKE3 of whole product, unsigned",
+   "value": "1,187,971,637 B",
+   "source": "none found",
+   "support": "UNSOURCED",
+   "note": "No file in repo carries this size or the checksum observation.",
+   "evidence_class": "—"
+  },
+  {
+   "id": "A38",
+   "panel": "§ panel 11 · Integrity elsewhere",
+   "claim": "NASA Earthdata MCP: granule concept id; older revisions 404",
+   "value": "—",
+   "source": "none found",
+   "support": "UNSOURCED",
+   "note": "No repo record of the Earthdata MCP call or the 404 on older revisions; commit the query log or remove the row.",
+   "evidence_class": "—"
+  },
+  {
+   "id": "A39",
+   "panel": "§ panel 11 · Integrity elsewhere",
+   "claim": "MCP tool results carry no integrity; proposed in issue #3354",
+   "value": "spec 2026-07-28",
+   "source": "external: modelcontextprotocol#3354 (SEP proposal, verifiable tool results)",
+   "support": "EXACT",
+   "note": "Source is external, not in repo; cite the URL on the handout.",
+   "evidence_class": "external (web)"
+  },
+  {
+   "id": "A40",
+   "panel": "§ panel 11 · Integrity elsewhere",
+   "claim": "Source.hash is empty",
+   "value": "—",
+   "source": "defect 25 (hash: None, 61 sites)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A41",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "Pre-fix prevalence",
+   "value": "162/200 = 81 % [75–86 %] Wilson 95 %",
+   "source": "prevalence_summary.json pre: matches_round_not_floor 162, Wilson (0.750, 0.858)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours), n=200 random sample, not pre-registered"
+  },
+  {
+   "id": "A42",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "Sample composition",
+   "value": "200 cells, 164 scenes, 19 bands (192 Element84, 8 PC)",
+   "source": "prevalence_summary.json",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A43",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "Same pixel under both rules / floor-only matches",
+   "value": "38 / 0",
+   "source": "prevalence_summary.json floor_equals_round_pixel 38, matches_floor_not_round 0",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A44",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "Pre-fix rule",
+   "value": "row = round(j + (Y−N)/sy): the south pixel whenever the fraction ≥ ½",
+   "source": "CHANGELOG line 68 (south-east neighbour); prevalence frac_parts col≥½ 93, row≥½ 100 of 200",
+   "support": "MISMATCH",
+   "note": "Incomplete: the column was rounded too, so the neighbour is east, south or south-east. State both axes.",
+   "evidence_class": "code-read + measured"
+  },
+  {
+   "id": "A45",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "23 Sep record carries pixel 10 m south",
+   "value": "2993/1972, SCL 5, NDVI 0.3444; containing pixel 0.4860",
+   "source": "pixel_check.json; v9 prereg (SCL 5)",
+   "support": "EXACT",
+   "note": "South is correct for this cell (row fraction .5736, col fraction .3273).",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A46",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "ΔNDVI in emem’s signed change record, 23→25 Sep",
+   "value": "+0.127",
+   "source": "derived: 0.4708994708994709 − 0.34435075885328836 = 0.12655",
+   "support": "PARTIAL",
+   "note": "Arithmetic matches; no signed change record for this pair is in the repo (the only committed change fact is the same-DOY −0.1298). Either cite the change fact or say \"difference of the two signed values\".",
+   "evidence_class": "derived arithmetic"
+  },
+  {
+   "id": "A47",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "ΔNDVI at containing pixel",
+   "value": "−0.015",
+   "source": "0.47090 − 0.48602 = −0.0151; v9 trial 8",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A48",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "Fix shipped 28 Sep",
+   "value": "PIXEL_FIX_AT 2026-09-28T04:09:26Z",
+   "source": "trace_fact_output.txt (lib.rs:12650); CHANGELOG line 68 pointer",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A49",
+   "panel": "§ panel 3 · What the trace found",
+   "claim": "Post-fix records read the containing pixel",
+   "value": "—",
+   "source": "prevalence_summary.json post: n=54, 49/49 floor where rules differ, 0 round (Wilson upper 7.3 %)",
+   "support": "EXACT",
+   "note": "Print n=54; 3 post-fix records lack the reader stamp.",
+   "evidence_class": "measured (ours), n=54"
+  },
+  {
+   "id": "A50",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "A returned exact token",
+   "value": "10/10; mean 13 s; 3.3 tool calls; one prose misdated 2025",
+   "source": "results.json agent_a: token_equals_hero 10, wall_s_mean 13.28, tool_calls_mean 3.3, prose_year_ok 9",
+   "support": "EXACT",
+   "note": "Also: first call errored or used a wrong cell in 3/10 A runs (first_call_error_or_wrong_cell [1,4,5]); not printed.",
+   "evidence_class": "measured (ours), pre-registered, n=10"
+  },
+  {
+   "id": "A51",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "B (Haiku) token arm correct",
+   "value": "10/10; \"B checked A’s token: resolve, re-hash, receipt 10/10\"",
+   "source": "results.json T: resolve_called 10, harness_rehash_ok 10, receipt_valid 10, decision_correct 10",
+   "support": "MISMATCH",
+   "note": "B called resolve; the re-hash and receipt checks were run by the harness, not by B. Say \"B resolved 10/10; harness re-hash and receipt 10/10\".",
+   "evidence_class": "measured (ours), pre-registered, n=10"
+  },
+  {
+   "id": "A52",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "Prose (16 digits) arm",
+   "value": "10/10",
+   "source": "results.json P decision_correct 10",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours), pre-registered, n=10"
+  },
+  {
+   "id": "A53",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "Rounded prose arm",
+   "value": "0/5; Fisher p = 0.0003 (exploratory)",
+   "source": "results.json R: 0/5; T_vs_R p = 0.000333",
+   "support": "EXACT",
+   "note": "Correctly labelled exploratory (arm added after A’s runs).",
+   "evidence_class": "measured (ours), exploratory, n=5"
+  },
+  {
+   "id": "A54",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "Forged-cell tokens declined",
+   "value": "5/5",
+   "source": "results.json F decline 5, forged_detected 5",
+   "support": "EXACT",
+   "note": "Decline followed a responder refusal (MCP error / REST 409), not B’s own hash check.",
+   "evidence_class": "measured (ours), pre-registered, n=5"
+  },
+  {
+   "id": "A55",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "Primary test tie",
+   "value": "10/10 vs 10/10, p = 1",
+   "source": "results.json T_vs_P_primary p_one_sided 1.0",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours), pre-registered"
+  },
+  {
+   "id": "A56",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "Threshold 0.0004 below value",
+   "value": "0.4705 vs 0.4709",
+   "source": "v8 prereg.md decision rule",
+   "support": "EXACT",
+   "note": "Constructed boundary; board says so.",
+   "evidence_class": "pre-registered design"
+  },
+  {
+   "id": "A57",
+   "panel": "§ panel 5 · Handoff",
+   "claim": "Qwen2.5-3B as B",
+   "value": "42 of 45 trials; token 0/19, prose 10/18; forged 0/5 declined",
+   "source": "results.json b.qwen2.5-3b-instruct-q4_k_m = {arms: {}, tests: {}}; RESEARCH_STATE (qualitative only)",
+   "support": "UNSOURCED",
+   "note": "The pinned results file (§22 evidence pointer, blake3 g2dwdmhw…) has empty Qwen arms and no raw logs are committed. The arithmetic is internally consistent (19+18+5 = 42). Commit the Qwen results before printing. Two-sided Fisher on 0/19 vs 10/18 would be p ≈ 1.3·10⁻⁴ against the token arm.",
+   "evidence_class": "claimed pre-registered, data not in repo"
+  },
+  {
+   "id": "A58",
+   "panel": "§ panel 6 · Compaction",
+   "claim": "Agreement ≠ correctness",
+   "value": "0/72 correct, 3/36 agree; Fisher one-sided p = 0.035",
+   "source": "05_EVIDENCE (paper-section-statistics-and-threats.md:85-89); pointer §17; recomputed p = 0.03497",
+   "support": "EXACT",
+   "note": "Test compares 36 pairs with the 72 answers that form them (non-independent units). Defect 28: README prints 27.8 % vs 1.4 %, which does not reproduce p = 0.035.",
+   "evidence_class": "measured (emem docs), pre-registered, n=72/36"
+  },
+  {
+   "id": "A59",
+   "panel": "§ panel 6 · Compaction",
+   "claim": "Control and no-pressure arms",
+   "value": "72/72, 36/36; 20/72, 15/36, p = 0.109",
+   "source": "05_EVIDENCE; recomputed p = 0.1089",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (emem docs), pre-registered"
+  },
+  {
+   "id": "A60",
+   "panel": "§ panel 6 · Compaction",
+   "claim": "Handoff n = 20 per arm",
+   "value": "prose 2, dense 8, BM25 20, bundle 20",
+   "source": "collaboration-log rows (pointer §18)",
+   "support": "PARTIAL",
+   "note": "Omits the single-token arm 16/20, excluded for a window bug. Print as \"(single-token arm excluded: window bug)\".",
+   "evidence_class": "measured (emem docs), n=20/arm, not pre-registered (as far as the repo shows)"
+  },
+  {
+   "id": "A61",
+   "panel": "§ panel 6 · Compaction",
+   "claim": "Trap value",
+   "value": "0.4871541501976284, observed 17 Jul (tslot 20651), signed 18 Jul",
+   "source": "inventory.json ndvi_trap_17jul",
+   "support": "EXACT",
+   "note": "\"Pre-fix read of the pixel south\" is inferred from the hero-cell census (60/66 pre-fix match round), not a direct re-read of the 17 Jul scene.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A62",
+   "panel": "§ panel 6 · Compaction",
+   "claim": "Six scoring bugs across two scorers",
+   "value": "6",
+   "source": "paper-section-statistics-and-threats.md:163-166 pointer",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "docs"
+  },
+  {
+   "id": "A63",
+   "panel": "§ panel 6 · Compaction",
+   "claim": "Models and host",
+   "value": "Gemma-4-12B + Qwen2.5-7B, one host",
+   "source": "05_EVIDENCE",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "docs"
+  },
+  {
+   "id": "A64",
+   "panel": "§ panel 7 · Drift taxonomy",
+   "claim": "The reader row",
+   "value": "162 of 200 pre-fix S2 records carry the pixel south",
+   "source": "prevalence_summary.json frac_parts",
+   "support": "MISMATCH",
+   "note": "Must read \"a neighbouring pixel\"; §3 headline already says so.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A65",
+   "panel": "§ panel 7 · Drift taxonomy",
+   "claim": "Source drift",
+   "value": "Bengaluru elevation 918.0 → 915.07 m; \"as known on 15 Jun\" returns 918.0",
+   "source": "inventory.json elev_may / elev_sep; repro README Exhibit A; verify_bitemporal.py",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A66",
+   "panel": "§ panel 7 · Drift taxonomy",
+   "claim": "Signer drift",
+   "value": "915.07 m signed 7 times: 7 fact_cids",
+   "source": "contra_bengaluru.json: 7 of 8 attestations = 915.0712280273438",
+   "support": "EXACT",
+   "note": "Severity 1.0, scope same_attester_provider_substitution.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A67",
+   "panel": "§ panel 7 · Drift taxonomy",
+   "claim": "Date drift (raster and cube)",
+   "value": "23 Sep → 25 Sep scene; cube member 15 May → 10 Jun",
+   "source": "v9 results.md; cubeK_members.json (days 26)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A68",
+   "panel": "§ panel 7 · Drift taxonomy",
+   "claim": "Referent drift",
+   "value": "\"Maasvlakte ramp 7\" resolves to all of Maasvlakte, ≈ 12 × 10 km",
+   "source": "defect 21 (OSM relation 1411107); defect 31 entity token",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours), n=1"
+  },
+  {
+   "id": "A69",
+   "panel": "§ panel 8 · Raw bands",
+   "claim": "Scene-selection rule and 23 Sep outcome",
+   "value": "window 24 Aug – 30 Sep → 25 Sep (10.8 %); 23 Sep (20 %) cannot win",
+   "source": "algorithms.md (band_raster.rs:224-238, stac.rs:405-422); hero_field.json cloud 10.840102; v9 results.md 20.0 %",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read + measured"
+  },
+  {
+   "id": "A70",
+   "panel": "§ panel 8 · Raw bands",
+   "claim": "Run outcomes",
+   "value": "10 chose B04/B08 NDVI; 9 noticed one scene; 1 got 23 Sep values; 5 placeholders; 4 undetermined; 0 greener; 3 wrongly said no 23 Sep scene; 30/30 CIDs re-hash; all values traced",
+   "source": "v9 results.md headline + table",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours), pre-registered, n=10"
+  },
+  {
+   "id": "A71",
+   "panel": "§ panel 8 · Raw bands",
+   "claim": "Pre-registration hash",
+   "value": "30d8a1a1… at 13:49Z 30 Sep",
+   "source": "prereg_hash.txt; recomputed BLAKE3 of prereg.md matches",
+   "support": "EXACT",
+   "note": "raw/ transcripts and tools_list_full.json named in results.md are not committed.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A72",
+   "panel": "§ panel 9 · Since acceptance",
+   "claim": "Encoders removed from code",
+   "value": "Clay v1.5, Prithvi-EO-2.0, Galileo, JEPA-v2 head",
+   "source": "emem commit 2335c52 (24 Sep); pointer §23 (CHANGELOG line 77)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A73",
+   "panel": "§ panel 9 · Since acceptance",
+   "claim": "TESSERA is frozen on emem.dev",
+   "value": "—",
+   "source": "docs/memory.md (fb4795b, 29 Sep); deploy/systemd EMEM_RETIRED_BANDS=geotessera (80641e0, 29 Sep 21:05Z); inventory.json tessera_keylong signed 2026-09-30T08:33:07Z",
+   "support": "MISMATCH",
+   "note": "The §9 TESSERA vector itself was signed after the documented retirement. Date the freeze (from when?) or explain how the 30 Sep 08:33Z vector was minted.",
+   "evidence_class": "code-read + measured"
+  },
+  {
+   "id": "A74",
+   "panel": "§ panel 9 · Since acceptance",
+   "claim": "TESSERA re-read bit-exact",
+   "value": "128 B int8 + 4 B scale, max |Δ| = 0, 4 of 4",
+   "source": "fig_tessera_data.json: centre_equals_fact = true (1 fact); 7 neighbour cosines recomputed within 1.1·10⁻⁸",
+   "support": "PARTIAL",
+   "note": "\"4 of 4\" and \"max |Δ| = 0\" not found in any repo file.",
+   "evidence_class": "measured (ours), n=1 + 7"
+  },
+  {
+   "id": "A75",
+   "panel": "§ panel 9 · Since acceptance",
+   "claim": "Clay names its weights by BLAKE2b; code gone",
+   "value": "—",
+   "source": "algorithms.md Clay pin (served_via.model_blake2b_hex; sidecar removed, CHANGELOG:77)",
+   "support": "EXACT",
+   "note": "Algorithms.md: digest parameters and the exact file hashed are not determined.",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A76",
+   "panel": "§ panel 9 · Since acceptance",
+   "claim": "Device gate",
+   "value": "17 reject reasons; admits no real hardware",
+   "source": "algorithms.md §device; RESEARCH_STATE",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A77",
+   "panel": "§ panel 10 · Where emem lost",
+   "claim": "Scorecard verdicts",
+   "value": "7 rows (supported / refuted / not tested)",
+   "source": "how-emem-compares.md pointer §19; 05_EVIDENCE",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "docs (authors’ benchmark)"
+  },
+  {
+   "id": "A78",
+   "panel": "§ panel 10 · Where emem lost",
+   "claim": "BM25 ties",
+   "value": "16/16",
+   "source": "docs_out_v9 how-emem-compares rows (lines 79–96)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "docs"
+  },
+  {
+   "id": "A79",
+   "panel": "§ panel 10 · Where emem lost",
+   "claim": "Single tokens cost 9.5× the LLM tokens",
+   "value": "9.5×",
+   "source": "how-emem-compares (84 chars ≈ 51 tokens)",
+   "support": "MISMATCH",
+   "note": "Board’s own measurement: 46 cl100k tokens vs 8 for the 16-digit value = 5.75× (15× vs a 3-dp value). Print the own measurement or label 9.5× as the docs figure.",
+   "evidence_class": "docs vs measured (ours)"
+  },
+  {
+   "id": "A80",
+   "panel": "§ panel 10 · Where emem lost",
+   "claim": "Bundle",
+   "value": "38 chars for up to 256 facts",
+   "source": "05_EVIDENCE; how-emem-compares",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "docs + code-read"
+  },
+  {
+   "id": "A81",
+   "panel": "§ panel 10 · Where emem lost",
+   "claim": "Dereferenced citations",
+   "value": "99.2 % exact, 0 confidently wrong (84.4 % before four fixes); dense 4/142, up to 138 confidently wrong, median 252 m; 74/96 abstain vs 93/96 confident wrong",
+   "source": "docs_out_v9 how-emem-compares rows (lines 79–96, 102–109)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "docs (SAMPLE, 5 sites)"
+  },
+  {
+   "id": "A82",
+   "panel": "§ panel 10 · Where emem lost",
+   "claim": "Nineteen withdrawn claims",
+   "value": "19",
+   "source": "whitepaper-v3 lines 241–246 pointer §20",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "docs"
+  },
+  {
+   "id": "A83",
+   "panel": "§ panel 12 · Ememify",
+   "claim": "MCP tool counts",
+   "value": "18 core, 114 in all",
+   "source": "05_EVIDENCE (snapshot 64cfae5); crossruntime tools_list_count_/mcp 18; v9 results.md: 116 tools at /mcp/full",
+   "support": "STALE",
+   "note": "Core 18 confirmed; \"114 in all\" is stale (116 on 30 Sep).",
+   "evidence_class": "docs + measured"
+  },
+  {
+   "id": "A84",
+   "panel": "§ panel 12 · Ememify",
+   "claim": "Claude skill research-grade-citation",
+   "value": "—",
+   "source": "emem plugins/emem/skills/emem-research-grade-citation/SKILL.md at HEAD",
+   "support": "EXACT",
+   "note": "Skill name has the emem- prefix; print the exact name.",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A85",
+   "panel": "§ panel 12 · Ememify",
+   "claim": "Caller-signed NDVI change, emem recomputed bit-identical",
+   "value": "−0.1298 (25 Sep 2025 → 2026)",
+   "source": "inventory.json derived_ndvi_delta −0.12976424591468844 (derivative, same_doy_ndvi_delta@1)",
+   "support": "PARTIAL",
+   "note": "Value sourced; the derive response (ulp_gap = 0, promotion) is not in the repo.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A86",
+   "panel": "§ panel 12 · Ememify",
+   "claim": "Local node re-read: bit-identical NDVI, different fact_cid",
+   "value": "—",
+   "source": "none found",
+   "support": "UNSOURCED",
+   "note": "Strong claim for the federation objection; commit the run.",
+   "evidence_class": "—"
+  },
+  {
+   "id": "A87",
+   "panel": "§ panel 12 · Ememify",
+   "claim": "A2A card signed",
+   "value": "emem.dev/.well-known/agent-card.json",
+   "source": "crossruntime path 3 (A2A message/send works)",
+   "support": "PARTIAL",
+   "note": "Signature on the card not logged in repo.",
+   "evidence_class": "—"
+  },
+  {
+   "id": "A88",
+   "panel": "§ panel 13 · Not established",
+   "claim": "Draft-check rule",
+   "value": "allows ⇔ ∃ a: round(a·10^d)/10^d = s; \"≈ 0.49\" passes for 0.4871",
+   "source": "algorithms.md guard section; 04 ledger (35 °C vs 28.0 denied)",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A89",
+   "panel": "§ panel 13 · Not established",
+   "claim": "Witness keys",
+   "value": "only domain-vouched co-signer geo.qa (Vortx); 109 other keys unvouched",
+   "source": "live /v1/log/witnesses 30 Sep: key_only 109, org_vouched 2 keys, 1 domain",
+   "support": "EXACT",
+   "note": "Moves over time; re-check before print.",
+   "evidence_class": "live GET"
+  },
+  {
+   "id": "A90",
+   "panel": "§ panel 13 · Not established",
+   "claim": "Re-minting a raster gives a new token",
+   "value": "signed_at is hashed",
+   "source": "14_REAL_GAP_STUDY; algorithms.md",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "code-read"
+  },
+  {
+   "id": "A91",
+   "panel": "§ panel 14 · Seal",
+   "claim": "Track, head, steps",
+   "value": "7n7qogvn2ib3er5nreorzmfnbu; head q62y7frkthtivnqrynwt6iradm; 28 of 28",
+   "source": "pub/track10/note.md; publish_log.json",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A92",
+   "panel": "§ panel 14 · Seal",
+   "claim": "board.jpg sha256",
+   "value": "96fed23a…701c",
+   "source": "recomputed on poster/board.jpg at 5143fac and 50bb8bf",
+   "support": "EXACT",
+   "note": "",
+   "evidence_class": "measured (this audit)"
+  },
+  {
+   "id": "A93",
+   "panel": "§ panel 14 · Seal",
+   "claim": "Written after log size 2,568,005; logged as entry 2,568,005",
+   "value": "2,568,005",
+   "source": "publish_log.json sth.tree_size 2568005 (read before writing)",
+   "support": "PARTIAL",
+   "note": "\"Written after\" is recorded. \"Logged as entry 2,568,005\" is not recorded (no leaf index in publish_log); concurrent writes can interleave. Fetch the inclusion proof and print the actual index.",
+   "evidence_class": "measured (ours)"
+  },
+  {
+   "id": "A94",
+   "panel": "Footer",
+   "claim": "Traffic",
+   "value": "96,728 MCP tool calls; PyPI 314; npm 304 last month; 96.2 % of signed agent notes from operator keys",
+   "source": "none found",
+   "support": "UNSOURCED",
+   "note": "No repo file. channel_messages.json (29 Sep) has 8,478 messages from 216 attesters but no operator-key list to reproduce 96.2 %.",
+   "evidence_class": "—"
+  },
+  {
+   "id": "A95",
+   "panel": "Footer",
+   "claim": "Panel numbering",
+   "value": "panels 1, 2, 11, 3, 5–10, 12–14; no panel 4",
+   "source": "poster.html",
+   "support": "MISMATCH",
+   "note": "Panel numbers collide with §-step numbers (\"section 2\" vs \"§2\" = B08 pointer). Use letters for panels.",
+   "evidence_class": "—"
+  },
+  {
+   "id": "A96",
+   "panel": "HTML metadata",
+   "claim": "<title>",
+   "value": "EMEM poster A0 (v8, ememified)",
+   "source": "poster.html",
+   "support": "STALE",
+   "note": "Cosmetic; appears in PDF metadata.",
+   "evidence_class": "—"
+  }
+ ],
+ "A_repo_side": [
+  "[REPO] research/README.md describes do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md as 22 defects; the file now lists 36 (entries 27–36 added in v9–v10).",
+  "[REPO] should_do/04_VERIFIED_CLAIMS_LEDGER.md (snapshot 64cfae5) still says TESSERA is the live encoder; poster §9 says it is frozen. Update the ledger snapshot to 18adb67.",
+  "[REPO] data/v9/rawband/results.md lists raw/ transcripts and tools_list_full.json; neither is committed. data/v8/prereg.md cites raw/prereg.blake3; not committed. The v8 pre-registration timestamp therefore rests on the file mtime claim only.",
+  "[REPO] poster/README.md says log size 'was 2,537,510 on 29 Sep; the poster says 2.54 M' — v10 no longer prints 2.54 M; the checklist item is stale."
+ ],
+ "B_strongest_results": [
+  {
+   "rank": 1,
+   "title": "Any client re-derives the same name from the served bytes",
+   "result": "10 independent client paths (raw REST, raw MCP JSON-RPC, A2A, Python SDK, TypeScript SDK, LlamaIndex, LangChain MCP adapters, official MCP Python and TypeScript SDKs, stock blake3+cbor2) × 3 repetitions each returned one fact_cid (oj5cecci…) and one value (0.4708994708994709) for the Keylong NDVI record; the Bengaluru elevation record gave the same result on 10 paths. Every path re-hashed; receipts verified on 9/11 (NDVI) and 8/10 (elevation) paths.",
+   "n": "10 paths × 3 reps × 2 records; plus 1 isolated A→B process pair",
+   "stats": "deterministic (all-or-nothing); no test statistic",
+   "source": "research/repro/data/v8/crossruntime_table.json",
+   "caveat": "All paths hit the same responder: this shows client-independent verification, not independent replication or availability."
+  },
+  {
+   "rank": 2,
+   "title": "One 84-character token traces to the source pixel with no emem code",
+   "result": "A 698-line script checked 15 links (17 checks) from token to the Sentinel-2 COG pixel in 17.9 s, all VERIFIED; NDVI recomputed bit-identical (0x3fde233788cde233) from DNs 3502/1900 and the −1000 BOA offset inside the signed bytes; a 1-mantissa-bit change renames the record (mu5x2cks…).",
+   "n": "1 record, 1 run",
+   "stats": "deterministic",
+   "source": "research/repro/v8/trace_fact.py, trace_fact_output.txt; verify_ndvi.py",
+   "caveat": "emem stores no hash of the upstream file (Source.hash empty); the upstream link is checked by re-reading the pixel, and the key→domain link rests on Web PKI and DNS without DNSSEC."
+  },
+  {
+   "rank": 3,
+   "title": "A 4,906-byte evidence file verifies offline",
+   "result": "proof_bundle_ndvi.cbor (4,906 B) passes 9 checks with no network: fact bytes inside the logged attestation hash to the token, token cell = signed cell, batch root recomputed, attestation and STH signatures, inclusion of entry 2,457,078 under the 2,556,451-entry STH, witness co-signature at head 2,541,495, and consistency. Re-run by this audit on 30 Sep: ALL PASS.",
+   "n": "1 bundle",
+   "stats": "deterministic",
+   "source": "research/repro/v8/verify_bundle.py, proof_bundle_ndvi.cbor",
+   "caveat": "The only domain-vouched witness (geo.qa) is operated by Vortx AI, so the file does not yet protect against a split view by the operator; the serve receipt is not in the file."
+  },
+  {
+   "rank": 4,
+   "title": "Signed records audit their own reader",
+   "result": "Re-reading the COG pixel named inside each signed record showed that 162/200 randomly sampled pre-fix Sentinel-2 records (81 %, Wilson 95 % 75–86 %; 200 cells, 164 scenes, 19 bands) carry a neighbouring pixel’s DNs, 0/162 match the containing pixel where the rules differ, and 200/200 values recompute from their signed DNs. After the fix, 0/54 match the rounded pixel and 49/49 match the containing pixel where the rules differ. Old tokens still resolve to exactly what was signed, so the error is dated by signed_at vs PIXEL_FIX_AT (2026-09-28T04:09:26Z).",
+   "n": "200 pre-fix + 54 post-fix records",
+   "stats": "Wilson 95 %: pre 0.750–0.858; post round-match upper bound 0.066",
+   "source": "research/repro/data/v8/prevalence_summary.json, pixel_check.json",
+   "caveat": "The error was emem’s own; addressing did not prevent it — it made it detectable, datable and non-destructively correctable. Not pre-registered."
+  },
+  {
+   "rank": 5,
+   "title": "Agreement between agents is not correctness (pre-registered)",
+   "result": "Under compaction pressure with a shared summary, 0/72 answers were correct while 3/36 model pairs agreed; Fisher one-sided p = 0.035 (recomputed 0.0350). Full-context control 72/72 correct, 36/36 agree; no-pressure arm 20/72 vs 15/36, p = 0.109 (not established).",
+   "n": "72 answers / 36 pairs per arm",
+   "stats": "Fisher exact one-sided p = 0.035 (pre-registered l44rdbk7…)",
+   "source": "emem docs/paper-section-statistics-and-threats.md:85-89 (pointer §17); should_do/05",
+   "caveat": "Two open models (Gemma-4-12B, Qwen2.5-7B) on one host; six scoring bugs fixed across two scorers; the test compares pairs with the answers that form them (non-independent units); emem’s README prints numbers that do not reproduce this p (defect 28)."
+  },
+  {
+   "rank": 6,
+   "title": "Addressed handoff keeps the value exact where prose loses it",
+   "result": "Handoff after a context reset, n = 20 per arm: token bundle 20/20, BM25 20/20, dense retrieval 8/20, prose 2/20. Bundle vs prose Fisher one-sided p ≈ 1.7·10⁻⁹ (computed by this audit, not a pre-registered test).",
+   "n": "20 per arm",
+   "stats": "Wilson (from the log): prose 10 % [3–30 %], dense 40 % [22–61 %]",
+   "source": "emem docs/collaboration-log.md rows (pointer §18)",
+   "caveat": "BM25 ties the bundle; a single-token arm (16/20) was excluded for a window bug; one host, emem-authored benchmark."
+  },
+  {
+   "rank": 7,
+   "title": "Dereferenced citations are exact; dense retrieval is confidently wrong",
+   "result": "Citation dereferenced end-to-end: 99.2 % exact with 0 confidently wrong answers; dense top-5 retrieval 4/142 exact with up to 138 confidently wrong, by a median 252 m. On a retrieval miss one model abstained 74/96 and the other gave a real neighbouring-cell value 93/96.",
+   "n": "142 items; 96 miss cases; 5 sites",
+   "stats": "as recorded by the authors (McNemar p = 6·10⁻⁵ for confident-wrong rate, collaboration-log:14833-14850)",
+   "source": "emem docs/how-emem-compares.md lines 79–109 (pointer §25)",
+   "caveat": "Authors’ benchmark labelled SAMPLE; 84.4 % before four fixes the benchmark prompted; BM25 matches (16/16); 2 open 7–12B models, one host."
+  },
+  {
+   "rank": 8,
+   "title": "Bi-temporal memory keeps both answers and exposes the substitution",
+   "result": "Bengaluru cell defi.zb493.xuqA.zcb5f, copdem30m.elevation_mean: 918.0 m (May, open_meteo_copdem90m@1) and 915.07 m (Sep, copernicus_dem_30m_aws_pixel@1) both re-hash today; an as-of-15-Jun read still returns 918.0; /v1/memory_contradictions reports the pair at severity 1.0 as a same-attester provider substitution; the drift is visible as fn_key₁ ≠ fn_key₂ inside the bytes.",
+   "n": "1 key, 8 attestations",
+   "stats": "deterministic",
+   "source": "research/repro/README.md Exhibit A; data/contra_bengaluru.json; inventory.json; verify_bitemporal.py",
+   "caveat": "915.07 m was signed 7 times as 7 fact_cids: identity is per signed record, not per value; the as-of comparison is a raw string compare (defect 35)."
+  },
+  {
+   "rank": 9,
+   "title": "Embeddings are addressable, checkable records that outlive their encoder",
+   "result": "The TESSERA 128-D vector at the Keylong cell (ga2o2nuf…) re-reads from the public source.coop product with centre_equals_fact = true; for 7 neighbouring TESSERA facts the served cosine was recomputed within 1.1·10⁻⁸; the Clay v1.5 1024-D fact (jh2kmfiy…) still resolves and re-hashes after Clay was removed from the code (2335c52, 24 Sep), with its checkpoint pinned by a BLAKE2b field inside the hashed bytes.",
+   "n": "1 + 7 TESSERA facts; 1 Clay fact",
+   "stats": "deterministic",
+   "source": "research/repro/data/v8/fig_tessera_data.json; inventory.json; algorithms.md (Clay pin)",
+   "caveat": "The encoder step is attester_only (not recomputable); TESSERA is frozen for new materialisation but the §9 vector was signed 30 Sep 08:33Z — date the freeze; Clay digest parameters are not determined."
+  },
+  {
+   "rank": 10,
+   "title": "A forged cell binding is refused; the receiver must enforce it",
+   "result": "Pre-registered two-LLM handoff with emem as the only MCP server: A (Claude Sonnet 5.5) returned the exact token 10/10; B (Claude Haiku 4.5) declined 5/5 tokens with a forged cell (responder refusal: MCP error / REST 409); token vs 16-digit prose tied 10/10 vs 10/10 (primary, p = 1); prose rounded to 0.47 gave 0/5 correct (exploratory, p = 0.0003).",
+   "n": "A 10; B arms 10/10/5/5",
+   "stats": "Fisher one-sided: primary p = 1; exploratory p = 0.00033",
+   "source": "research/repro/data/v8/results.json, prereg.md",
+   "caveat": "The pre-registered Qwen2.5-3B receiver dropped the cell, resolved the bare id and acted (0/5 declined; 0/19 token vs 10/18 prose) — those numbers are not in the committed results.json; one model family for the Claude arms; the re-hash was done by the harness, not by B."
+  }
+ ],
+ "C_objections": [
+  {
+   "objection": "A signature does not make a value true. You have signed a number, not measured the ground.",
+   "answer": "Agreed, and the board should say so in one line: the signature proves who served which bytes and when; it does not prove the ground truth. What emem adds is that the value is checkable and datable. Evidence: re-reading the pixel named inside the signed records found emem’s own rounding error in 162/200 pre-fix records (Wilson 75–86 %), and signed_at against PIXEL_FIX_AT dates every affected record. A prose citation would carry neither. Frame it as \"a checkable claim, not a true one\".",
+   "kind": "concede + scope",
+   "evidence": "§2 residual-trust column; prevalence_summary.json; 04 ledger (what is not proved)"
+  },
+  {
+   "objection": "Your tokens cost more LLM tokens than the value they replace.",
+   "answer": "A single fact token is 84 characters = 46 cl100k tokens against 8 for the 16-digit value (5.75×; the emem docs say 9.5× against ~51 tokens). The claim is fidelity, not compression: under compaction the paraphrase gave 0/72 correct and prose rounded to 0.47 gave 0/5, while the token arm stayed exact. Where size matters, one 38-character bundle handle (~23 tokens) covers up to 256 facts. Print the own measurement and drop \"saves context\" for single tokens.",
+   "kind": "concede + scope",
+   "evidence": "token_counts.json; results.json; §10 scorecard"
+  },
+  {
+   "objection": "BM25 ties you (16/16, 20/20). Why not just keep the corpus and retrieve lexically?",
+   "answer": "On these short corpora BM25 is as accurate as addressing, and the poster should keep that line. BM25 assumes the receiver holds the same corpus and gives no integrity, no place/time binding and no way to detect a substituted or re-minted record. The emem claim is verifiability of the cited value across parties, not retrieval accuracy. Where retrieval is dense (the common agent-memory default), it was exact on 4/142 items and confidently wrong on up to 138 (median 252 m off), against 0 for dereferenced citations.",
+   "kind": "concede + scope",
+   "evidence": "how-emem-compares rows 79–109; collaboration-log handoff rows"
+  },
+  {
+   "objection": "The title says \"over Foundation-Model Embeddings\", but you retired your foundation-model encoders.",
+   "answer": "An embedding in emem is one typed record (model_output) with place, time, source and recipe around it, not the protocol’s identity. The retirement is the test of that design. After Clay, Prithvi, Galileo and the JEPA-v2 head were removed from the code (24 Sep), the vectors signed earlier still resolve and re-hash, and the Clay record still names its checkpoint by BLAKE2b. The TESSERA vector re-reads from its public product. Concede two points: new encoder materialisation is paused, and the encoder step cannot be recomputed (attester_only). Also date the TESSERA freeze, since the §9 vector was signed 30 Sep 08:33Z.",
+   "kind": "reframe",
+   "evidence": "emem 2335c52; algorithms.md Clay pin; fig_tessera_data.json; inventory.json"
+  },
+  {
+   "objection": "Your own reader wrote 162 of 200 wrong-pixel records. Why should anyone trust emem’s memory?",
+   "answer": "Content addressing did not prevent the error. It is the reason the error was found by an outside script, dated to the minute, and corrected without rewriting a single signed byte: old tokens still resolve to what was signed, and post-fix records read the containing pixel (49/49 where the rules differ). This is the property an evaluation poster should want. The limits are that emem makes no claim of immunity to memory poisoning, and three post-fix records (including the hero record) carry no reader stamp.",
+   "kind": "reframe",
+   "evidence": "prevalence_summary.json; CHANGELOG line 68 pointer (§8); RESEARCH_STATE v9 note"
+  },
+  {
+   "objection": "The log co-signer geo.qa is also Vortx AI. That is not independent witnessing.",
+   "answer": "Correct: the only domain-vouched witness is Vortx-operated, and the other 109 keys are key-only (unvouched), so the log gives no protection against a split view by the operator today. What ships is the machinery: RFC 6962-shaped inclusion and consistency proofs that anyone can check offline, and an open POST /v1/log/witness for co-signatures. Ask for a witness at the session: an ESA, BIFOLD or university key vouched by DNS would change the trust statement.",
+   "kind": "concede + scope",
+   "evidence": "live /v1/log/witnesses (30 Sep); defect 30; verify_bundle.py"
+  },
+  {
+   "objection": "Single responder, no federation: if emem.dev disappears, so does your memory.",
+   "answer": "Integrity checks need no responder: a stock BLAKE3 over the served bytes, and a key published under did:web/JWKS/DNS, work from any copy, and the 4,906-byte file verifies offline. Availability does depend on the responder. Read federation is not shipped. The self-hostable node (docker image) re-signs under its own key, so its fact_cids differ for identical values. That supports the design, but the local-node re-read on the board has no committed log.",
+   "kind": "concede + scope",
+   "evidence": "verify_bundle.py; trace link 15; 14_REAL_GAP_STUDY §17"
+  },
+  {
+   "objection": "n is small and everything ran on one host. These are anecdotes.",
+   "answer": "Each number carries its n and design. Compaction: 72/36 per arm, pre-registered, p = 0.035. Handoff: n = 20 per arm. Two-LLM handoff: pre-registered, n = 10/10/5/5, primary test a tie. Raw-band run: pre-registered, n = 10. Mechanism results (re-hash on 10 client paths, the 15-link trace, the offline file) are deterministic and do not need n, only re-runs. There is no independent replication yet. The scripts and pre-registrations are public, and the handout should invite a replication.",
+   "kind": "concede + scope",
+   "evidence": "05_EVIDENCE; v8 prereg.md; v9 prereg.md; repro/"
+  },
+  {
+   "objection": "Why not STAC with checksums, C2PA, W3C PROV or IPFS? This is content addressing plus provenance, both old.",
+   "answer": "The contribution is not the primitive but the object boundary. STAC and COG locate assets (the Planetary Computer B08 COG has an opaque ETag and no checksum). Product checksums cover a whole SAFE, not the value an agent cites. C2PA binds manifests to media assets. PROV is a vocabulary without content identity. IPFS CIDs name bytes but not place, band and valid time, and carry no recomputable derivation. emem composes the four pieces into one citable value: a BLAKE3 name, a (cell, band, tslot) key with as-of recall, a recomputable derivation, and a transparency-logged attestation. Emitting PROV and CIDv1 alongside is compatible, not competing.",
+   "kind": "rebuttal",
+   "evidence": "§11 table; 03_INDUSTRY_SYSTEMS_COMPARISON; do_not_use/01"
+  },
+  {
+   "objection": "In your own pre-registered handoff, full-precision prose tied the token 10/10 vs 10/10 (p = 1). The token adds nothing.",
+   "answer": "When the prose carries all 16 digits and nothing compresses it, it ties, and the board reports the tie as the primary result. The token matters at the two points where prose breaks. Rounding to \"0.47\" flipped every decision (0/5, exploratory). A shared summary under compaction gave 0/72 correct. Only the token lets the receiver check what it got: a forged cell was declined 5/5.",
+   "kind": "concede + scope",
+   "evidence": "results.json; compaction table"
+  },
+  {
+   "objection": "Your pre-registered open-model receiver (Qwen2.5-3B) did worse with tokens (0/19) than with prose (10/18) and accepted forged tokens.",
+   "answer": "Report it as the result: a token protects only a receiver that dereferences it and enforces the cell binding. The 3B model read 0.4709 and still chose irrigate, and it resolved the bare id after dropping the cell. The design consequence is to move enforcement out of the LLM, into client code (SDK verify, a refusal on the responder) and into the guard. Before printing, commit the Qwen results: the pinned results.json has empty Qwen arms.",
+   "kind": "concede + scope",
+   "evidence": "v8 prereg.md; RESEARCH_STATE v8 note; results.json (Qwen arms empty)"
+  },
+  {
+   "objection": "Guardrails and evaluation neighbours: your \"verify before publish\" check lets \"≈ 0.49\" pass for 0.4871 and does not check band or unit, and your Fisher test compares pairs with the answers inside them.",
+   "answer": "Both points hold. The draft checker judges at the writer’s own precision and does not match band or unit, so it catches 35 °C against a signed 28.0 but not a coarse paraphrase. It complements a guardrail and does not replace one. The compaction test is a pre-registered descriptive inversion (3/36 wrong-but-agreeing pairs while 0/72 answers were correct, against a 72/72 control), and the headline claim should rest on \"agreement occurred with zero correct answers\" rather than on the p-value alone. Offer a paired or permutation re-analysis in the handout.",
+   "kind": "concede + scope",
+   "evidence": "algorithms.md guard rule; paper-section-statistics-and-threats"
+  }
+ ],
+ "E_printed_strings": [
+  {
+   "kind": "arxiv",
+   "string": "arXiv 2607.25066",
+   "panels": [
+    "6 · Compaction: why a paraphrase is not a citation"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "arxiv",
+   "string": "arXiv 2608.11242",
+   "panels": [
+    "6 · Compaction: why a paraphrase is not a citation"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "b32_26",
+   "string": "7n7qogvn2ib3er5nreorzmfnbu",
+   "panels": [
+    "14 · Seal"
+   ],
+   "verification": "track10 publish_log cid; 28 steps, verified 28 of 28 (note header)"
+  },
+  {
+   "kind": "b32_26",
+   "string": "khiqtqrddb6jponqn4gv72if7e",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": "track10 step 2 (B08 COG pointer note)"
+  },
+  {
+   "kind": "b32_26",
+   "string": "q62y7frkthtivnqrynwt6iradm",
+   "panels": [
+    "14 · Seal"
+   ],
+   "verification": "track10 note head; equals chain value of step 28"
+  },
+  {
+   "kind": "b32_52",
+   "string": "4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "b32_52",
+   "string": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "b32_52",
+   "string": "zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "band_key",
+   "string": "indices.ndvi",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "band_key",
+   "string": "s2.B04",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "cell64",
+   "string": "defi.zb572.xoso.zb1ec",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "cli",
+   "string": "claude mcp add --transport http emem https://emem.dev/mcp",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "cli",
+   "string": "npm i @vortxai/emem",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "cli",
+   "string": "pip install ememdev",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "code_ident",
+   "string": "Source.hash",
+   "panels": [
+    "11 · Integrity elsewhere"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "code_ident",
+   "string": "attester_only",
+   "panels": [
+    "9 · Since the paper was accepted"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "code_ident",
+   "string": "emem_band_raster",
+   "panels": [
+    "8 · Raw bands, the agent’s own method"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "code_ident",
+   "string": "unshare -rn",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "doi",
+   "string": "doi:10.5281/zenodo.20706893",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": "paper DOI (task brief)"
+  },
+  {
+   "kind": "emem_token",
+   "string": "emem:entity:4itylz3k…",
+   "panels": [
+    "7 · A drift taxonomy from real cases"
+   ],
+   "verification": "prefix of emem:entity:4itylz3kjtwy3lgr76ku52ffqa (defect 31; rehearse9 step 27)"
+  },
+  {
+   "kind": "emem_token",
+   "string": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": "re-hash verified (inventory.json, trace_fact_output.txt, verify_bundle.py re-run 30 Sep: ALL PASS)"
+  },
+  {
+   "kind": "emem_token",
+   "string": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B04:20721:4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": "matches track10 step 5 and hero_field.json"
+  },
+  {
+   "kind": "emem_token",
+   "string": "emem:tree:khiqtqrddb6jponqn4gv72if7e#row=108",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": "row 108 = level-0 tile 8,9, length 1,586,895 B in live B08 pointer note (GET 30 Sep)"
+  },
+  {
+   "kind": "fn_key",
+   "string": "copernicus_dem_30m_aws_pixel",
+   "panels": [
+    "7 · A drift taxonomy from real cases"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "fn_key",
+   "string": "open_meteo_copdem90m",
+   "panels": [
+    "7 · A drift taxonomy from real cases"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "git_commit",
+   "string": "18adb67",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "git_commit",
+   "string": "213e273",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "hash_prefix_ellipsis",
+   "string": "30d8a1a1…",
+   "panels": [
+    "8 · Raw bands, the agent’s own method"
+   ],
+   "verification": "prefix of prereg blake3 30d8a1a1a8cf9646ada5e49b303b9c9c6f0c4ed6d076e797aa1a5fad6e35d50c (recomputed)"
+  },
+  {
+   "kind": "hash_prefix_ellipsis",
+   "string": "4itylz3k…",
+   "panels": [
+    "7 · A drift taxonomy from real cases"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "hash_prefix_ellipsis",
+   "string": "777er3yi…",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": "prefix of responder key 777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka"
+  },
+  {
+   "kind": "hash_prefix_ellipsis",
+   "string": "mu5x2cks…",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": "prefix of mu5x2cksmneuujjb7yihfcrfdplv2eu4tmrefyxr2tckyf2q6m4a (tampered-bit CID, trace_fact_output.txt)"
+  },
+  {
+   "kind": "hash_prefix_ellipsis",
+   "string": "njedkglt…",
+   "panels": [
+    "14 · Seal"
+   ],
+   "verification": "poster attester key prefix (by_attester path)"
+  },
+  {
+   "kind": "hash_prefix_ellipsis",
+   "string": "oj5cecci…",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": "prefix of the §4 fact_cid"
+  },
+  {
+   "kind": "issue",
+   "string": "issue #3354",
+   "panels": [
+    "11 · Integrity elsewhere"
+   ],
+   "verification": "exists: modelcontextprotocol/modelcontextprotocol#3354, SEP proposal for verifiable tool results (web)"
+  },
+  {
+   "kind": "scene_id",
+   "string": "S2A_MSIL2A_20260925T054251_R005_T43SFS",
+   "panels": [
+    "1 · From scene to token"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "sha256_hex",
+   "string": "96fed23a289723e50cc7884f0b56d499e7de2b85a02117192a1fa0a22377701c",
+   "panels": [
+    "14 · Seal"
+   ],
+   "verification": "sha256 of poster/board.jpg at 5143fac and at 50bb8bf (recomputed)"
+  },
+  {
+   "kind": "url",
+   "string": "emem.dev",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "url",
+   "string": "emem.dev/.well-known/agent-card.json",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "url",
+   "string": "emem.dev/memories/by_attester/njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md",
+   "panels": [
+    "14 · Seal"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "url",
+   "string": "geo.qa",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "url",
+   "string": "ghcr.io/vortx-ai/emem",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "url",
+   "string": "github.com/Vortx-AI/esa_poster",
+   "panels": [
+    "header/lead"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "url",
+   "string": "https://emem.dev/mcp",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "url",
+   "string": "vortx-ai.github.io/ememdemo/?s=emem.dev/memories/by_attester/njedkglt/7n7qogvn2ib3er5nreorzmfnbu.md",
+   "panels": [
+    "14 · Seal"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "cli",
+   "string": "docker run ghcr.io/vortx-ai/emem",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "repo_path",
+   "string": "research/repro/v8/trace_fact.py",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "repo_path",
+   "string": "verify_bundle.py",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "repo_path",
+   "string": "research/repro/data/v8/prereg.md",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "repo_path",
+   "string": "research/repro/data/v9/rawband",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "repo_path",
+   "string": "research/repro/v8/",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "repo_path",
+   "string": "research/repro/v10/algorithms.md",
+   "panels": [
+    "2 · Full trace"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "skill",
+   "string": "research-grade-citation",
+   "panels": [
+    "12 · Ememify your work"
+   ],
+   "verification": ""
+  },
+  {
+   "kind": "step_map",
+   "string": "§-steps: 1 board · 2–3 COG pointers · 4 NDVI record · 5 B04 raster · 6 cube · 7 pre-fix record · 8 CHANGELOG line 68 · 9 TESSERA · 10 Clay · 11 your derivation · 12–13 elevation · 14 temperature (draft check) · 15 absence · 16 bundle of 8 · 17–20 doc rows at emem 213e273 · 21 trap value · 22 our measurements · 23–26 doc rows at emem 18adb67 · 27–28 23 Sep B04, B08 (post-fix). Traffic to 30 Sep: 96,728 MCP tool calls; PyPI 314 · npm 304 last month; 96.2 % of signed agent notes are from operator keys",
+   "panels": [
+    "footer"
+   ],
+   "verification": ""
+  }
+ ],
+ "E_track_steps": [
+  {
+   "step": 1,
+   "label": "the board, seal box blank",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/en6hzctku7in4bocyazwtimkou.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 2,
+   "label": "Sentinel-2 B08 COG, 292 tiles",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/khiqtqrddb6jponqn4gv72if7e.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 3,
+   "label": "Sentinel-2 B04 COG, 292 tiles",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/h6d7xdoc5b2uzood22lowblbc4.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 4,
+   "label": "NDVI record, Keylong, 25 Sep 2026",
+   "evidence": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+   "kind": "fact"
+  },
+  {
+   "step": 5,
+   "label": "B04 raster, Keylong, 443 x 453 px",
+   "evidence": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B04:20721:4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq",
+   "kind": "raster"
+  },
+  {
+   "step": 6,
+   "label": "B08 cube, five scenes",
+   "evidence": "emem:cube:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20614..20721:7ath7qdwqbagvs6kojf7pquay5faj2wahytearzkpsrk7e4sufsa",
+   "kind": "cube"
+  },
+  {
+   "step": 7,
+   "label": "pre-fix record, 23 Sep, pixel south",
+   "evidence": "emem:fact:defi.zb572.xoso.zb1ec:kxjvfwpa7grmfhkxoxufq5xjltq2s5syer2rzdx7odbnrxhnjzkq",
+   "kind": "fact"
+  },
+  {
+   "step": 8,
+   "label": "CHANGELOG line 68, the pixel fix",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/7zmocvinsgzdayubripuzruy7q.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 9,
+   "label": "Tessera 128-D embedding",
+   "evidence": "emem:fact:defi.zb572.xoso.zb1ec:ga2o2nufuq4s4tmirplgarpj4y5axb4644y7rftpojarlkcbqdrq",
+   "kind": "fact"
+  },
+  {
+   "step": 10,
+   "label": "Clay v1.5 1024-D embedding",
+   "evidence": "emem:fact:defi.zb519.faci.modA:jh2kmfiy6pbkzx3hix4qfsmrgz3vnxn64itvu3cegh3pbma73omq",
+   "kind": "fact"
+  },
+  {
+   "step": 11,
+   "label": "caller-signed NDVI change",
+   "evidence": "emem:fact:defi.zb572.xoso.zb1ec:jb67zixqk525p7uzjrrhwfkvixusueh7bfklzx4hpq5pfhrq3cxq",
+   "kind": "fact"
+  },
+  {
+   "step": 12,
+   "label": "elevation 918.0 m, May",
+   "evidence": "emem:fact:defi.zb493.xuqA.zcb5f:yqbolgeoycqkvj3zkxukb4bjw4odhpwvfzqo3fbgwf4spk45zala",
+   "kind": "fact"
+  },
+  {
+   "step": 13,
+   "label": "elevation 915.07 m, September",
+   "evidence": "emem:fact:defi.zb493.xuqA.zcb5f:jzxzmvomshs6di3bkgponk6p3rgfk5nyvklekj6caegx6dwcuo5q",
+   "kind": "fact"
+  },
+  {
+   "step": 14,
+   "label": "temperature 28.0 degC, guard test",
+   "evidence": "emem:fact:defi.zb493.zezo.zcb35:nflpddk7zsncywguwjzk5koksseqfyx4jnngkuryrnd4aykqlpfq",
+   "kind": "fact"
+  },
+  {
+   "step": 15,
+   "label": "signed absence, open ocean",
+   "evidence": "emem:fact:defi.zb374.toro.dEcO:jvm4xbmbenl7pzshsojtarwbk5pvhpbq62cel7vwfculuswce6xa",
+   "kind": "fact"
+  },
+  {
+   "step": 16,
+   "label": "the 8 stored records, one handle",
+   "evidence": "emem:bundle:6x5eoxguweqw46n3gvpaqe3e3a",
+   "kind": "bundle"
+  },
+  {
+   "step": 17,
+   "label": "statistics rows, 0 of 72, p 0.035",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/k2ww7uxf7umrfsvy33syzafrfq.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 18,
+   "label": "handoff and paraphrase-trap rows",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/hyl7r2yl3ybzcegxjhxiplr4ai.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 19,
+   "label": "sizes and the authors scorecard",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/eoe5s4arfksqtpd66rczwetviq.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 20,
+   "label": "the record and 19 withdrawals",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/izycf6molcl5z53fkolqly57ze.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 21,
+   "label": "paraphrase-trap value, 17 Jul",
+   "evidence": "emem:fact:defi.zb572.xoso.zb1ec:jwkqm6ehelmzrwupfwyq2oqotiarexr5bdrt4xbl3znuynhurqxq",
+   "kind": "fact"
+  },
+  {
+   "step": 22,
+   "label": "the measurements behind the board",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/67alr3czauetbdatbqs36mr6tq.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 23,
+   "label": "CHANGELOG line 77, encoders retired",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/jk7pfvdydjfdf5hxs3uozqaita.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 24,
+   "label": "memory.md, TESSERA frozen",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/f5hxjofpbmgzdialjilueeartu.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 25,
+   "label": "results table and the safety result",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/ay2lfw4pehm52gjzyn7rnu4szq.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 26,
+   "label": "README, the device gate",
+   "evidence": "https://emem.dev/memories/by_attester/njedkglt/74gntpglvsg466a5vgevbvteme.md",
+   "kind": "pointer.v1"
+  },
+  {
+   "step": 27,
+   "label": "B04, 23 Sep, containing pixel",
+   "evidence": "emem:fact:defi.zb572.xoso.zb1ec:aorer7jtgzrjkjospacmula5rd65tev7uyndw3taogg7trmg2a2q",
+   "kind": "fact"
+  },
+  {
+   "step": 28,
+   "label": "B08, 23 Sep, containing pixel",
+   "evidence": "emem:fact:defi.zb572.xoso.zb1ec:flf5bk4qry32c3exazagp66gs2gzdhafx7heqqsslsuvn43ad5bq",
+   "kind": "fact"
+  }
+ ],
+ "recomputed": {
+  "fisher_compaction_pressure": 0.03497325574560631,
+  "fisher_compaction_free": 0.10890157111297379,
+  "fisher_haiku_T_vs_R": 0.000333000333000333,
+  "fisher_bundle_vs_prose": 1.6757766914946392e-09,
+  "fisher_qwen_P_vs_T_two_sided": 0.00012562220571119345,
+  "wilson_pre_fix_162_200": [
+   0.7499876129240015,
+   0.8583282847220932
+  ],
+  "bytes_read_fraction_pct": 0.05756607369568403,
+  "cell_pitch_m": [
+   9.51835796422484,
+   8.05972515335627
+  ],
+  "board_jpg_sha256": "96fed23a289723e50cc7884f0b56d499e7de2b85a02117192a1fa0a22377701c",
+  "v9_prereg_blake3": "30d8a1a1a8cf9646ada5e49b303b9c9c6f0c4ed6d076e797aa1a5fad6e35d50c",
+  "verify_bundle": "ALL PASS (9 checks)"
+ },
+ "live_gets": {
+  "witnesses": {
+   "current_tree_size": 2568590,
+   "independent_operator_domains": [
+    "geo.qa"
+   ],
+   "witness_keys_by_tier": {
+    "key_only": 109,
+    "org_vouched": 2,
+    "self_operator": 1
+   }
+  },
+  "b08_note": {
+   "bytes": 238683874,
+   "row_108_length": 1586895
+  },
+  "tools_json": "404"
+ }
+}
