@@ -49,12 +49,12 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
 .card{background:var(--box);border:.45mm solid var(--rule);padding:2.4mm 3mm;font-family:PlexMono,monospace;font-size:4.3mm;line-height:1.42;white-space:pre;overflow:hidden}
 .card .c{color:var(--muted)}
 /* hero */
-.hero{display:grid;grid-template-columns:262mm 1fr;gap:10mm}
-.sat{position:relative;background:#222;height:268mm;overflow:hidden}
+.hero{display:grid;grid-template-columns:246mm 1fr;gap:10mm}
+.sat{position:relative;background:#222;height:252mm;overflow:hidden}
 .sat img{width:100%;height:100%;object-fit:cover;display:block}
 .sat .mk{position:absolute;left:51.0%;top:46.9%;width:6mm;height:6mm;margin:-3mm 0 0 -3mm;border:.7mm solid #fff;box-shadow:0 0 0 .4mm rgba(0,0,0,.6)}
 .sat .sb{position:absolute;left:4mm;top:4mm;color:#fff;font-size:3.8mm;text-shadow:0 0 1.5mm #000}
-.sat .sb i{display:block;width:65.1mm;height:1mm;background:#fff;margin-top:1mm}
+.sat .sb i{display:block;width:55.6mm;height:1mm;background:#fff;margin-top:1mm}
 .sat .cap{position:absolute;left:0;right:0;bottom:0;background:rgba(20,20,20,.88);color:#EDEDE8;padding:3mm 4mm;font-size:4.2mm;line-height:1.36}
 .sat .cap .mono{color:#9FB7F5;font-size:4mm;word-break:break-all}
 /* trace */
@@ -87,56 +87,71 @@ table.d .m{font-family:PlexMono,monospace;font-size:4.6mm}
 <section class="lead">
   <div class="q">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</div>
   <div>
-    <p class="ans">B receives a <b>token that names the record’s bytes</b>. emem stores each observation as a signed record named by the <b>BLAKE3 hash of its own bytes</b>. B fetches the bytes, re-hashes them, verifies the signature offline, and can walk the record back to the source pixel in the Sentinel-2 file.</p>
-    <p class="how">Token: <span class="mono">emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>. cell = 64-bit id of a ≈10 m lat/lng grid cell (≈9.6 × 8.1 m at 32.6° N); fact_cid = base32(BLAKE3-256(record bytes, deterministic CBOR)). A token cited under the wrong cell returns HTTP 409.</p>
+    <p class="ans">B receives a <b>token that names the record’s bytes</b>. emem stores each observation as a signed record named by the <b>BLAKE3 hash of its own bytes</b>. B fetches the bytes, re-hashes them, verifies the signed log entry and server receipt offline, and can walk the record back to the source pixel in the Sentinel-2 file.</p>
+    <p class="how">Token: <span class="mono">emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>. cell = 64-bit id of a ≈10 m lat/lng grid cell (here ≈9.5 m N–S × 8.1 m E–W); fact_cid = base32(BLAKE3-256(record bytes, deterministic CBOR)). A token cited under the wrong cell returns HTTP 409.</p>
   </div>
 </section>
 
 <!-- HERO -->
 <section class="hero">
   <div class="sat"><img src="fig/keylong_truecolor.png" alt="Sentinel-2A true colour over Keylong, Lahaul, from four signed grids"><div class="sb">1 km<i></i></div><div class="mk"></div>
-    <div class="cap"><b style="color:#fff">Keylong, Lahaul (Himalaya), Sentinel-2A L2A, 25 Sep 2026, 443 × 453 px at 10 m.</b> Drawn from four signed band grids of 802,780 B each; each re-hashes to its name. The red band is <span class="s">§5</span>: <span class="mono">emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B04:20721:4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq</span>. □ = the 9.55 m × 8.05 m cell of the NDVI record <span class="s">§4</span>.</div></div>
+    <div class="cap"><b style="color:#fff">Keylong, Lahaul (Himalaya), Sentinel-2A L2A, 25 Sep 2026, 443 × 453 px at 10 m.</b> Drawn from four signed band grids of 802,780 B each; each re-hashes to its name. The red band is <span class="s">§5</span>: <span class="mono">emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B04:20721:4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq</span>. □ marks the cell of the NDVI record <span class="s">§4</span> (drawn ≈100 m wide; the cell is 9.5 × 8.1 m).</div></div>
   <div class="sec">
     <div class="k">1 · From scene to token</div>
     <h2>1.17 MB read from a 2.02 GB scene; the agent receives 84 characters</h2>
     <img class="fig h" style="height:78mm" src="fig/byte_funnel.svg" alt="Scene 2,023,818,762 B; bytes read 1,165,033; signed fact 1,115 B; token 84 characters">
-    <p class="t">To sign one NDVI value, emem range-reads <b>0.058 %</b> of the scene: three 64 KiB COG headers and one tile each of B04, B08 and SCL. It stores the 1,115-byte record, not the tiles. The next agent receives 84 characters (46 GPT-4 tokenizer tokens).</p>
-    <p class="t">We hashed the Earth Search (AWS) copies of the B08 and B04 COGs into two signed pointer notes <span class="s">§2</span> <span class="s">§3</span>: all 292 tiles of each (238.7 MB, 232.9 MB) under one Merkle root; the files stay on AWS. The tile holding the cell is <span class="mono">emem:tree:khiqtqrddb6jponqn4gv72if7e#row=108</span> (row = leaf index); its 1,586,895 bytes hash to that row. These are not the Planetary Computer file the NDVI was read from (281.9 MB, offset not pre-subtracted), and emem records no hash of that file.</p>
+    <p class="t">By our reconstruction of its read path, emem range-reads <b>0.058 %</b> of the scene to sign one NDVI value: three 64 KiB COG headers and one tile each of B04, B08 and SCL. It stores the 1,115-byte record, not the tiles. The next agent receives 84 characters (46 GPT-4 tokenizer tokens).</p>
+    <p class="t">We hashed the Earth Search (AWS) copies of the B08 and B04 COGs into two signed pointer notes <span class="s">§2</span> <span class="s">§3</span>: all 292 chunks of each (header + 291 tiles; 238.7 MB, 232.9 MB) under one Merkle root; the files stay on AWS. The tile holding the cell is <span class="mono">emem:tree:khiqtqrddb6jponqn4gv72if7e#row=108</span> (row = leaf index); its 1,586,895 bytes hash to that row. These are not the Planetary Computer file the NDVI was read from (281.9 MB, offset not pre-subtracted), and emem records no hash of that file.</p>
 <div class="card"><span class="c">§4 emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</span>
 band indices.ndvi      day 20721 since 1970-01-01 = 25 Sep 2026
 scene S2A_MSIL2A_20260925T054251_R005_T43SFS · scene class 4, vegetation
 DN    B08 3502  B04 1900  BOA offset −1000 (PC, baseline ≥ 04.00)
 value 0.4708994708994709   <span class="c">(B08−B04)/(B08+B04) after offset: bit-identical</span>
 signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5cecci…</div>
-    <p class="src">Earth Search serves the same tile with the offset already subtracted (B08 2502, B04 900); NDVI is identical. Sizes: Planetary Computer STAC asset sizes and HTTP ranges logged 30 Sep.</p>
+    <p class="src">Earth Search serves the same tile with the offset already subtracted (B08 2502, B04 900); NDVI is identical. Sizes: Planetary Computer asset sizes (HTTP HEAD) and range reads, 30 Sep; the pointer notes and the 1,586,895-byte tile are Earth Search copies.</p>
   </div>
 </section>
 
 <!-- TRACE + FOUND -->
 <section class="row" style="grid-template-columns:1fr 1fr">
+  <div style="display:flex;flex-direction:column;gap:7mm;min-width:0">
   <div class="sec">
     <div class="k">2 · Full trace</div>
     <h2>From one token to the source pixel, without emem software</h2>
-    <p class="t">A 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links in 17.9 s, all verified</b>. Grey: what must still be trusted after each check.</p>
+    <p class="t">A 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check.</p>
     <div class="chain">
       <span class="i">1–3</span><span class="l">bytes → name</span><span class="r">1,115 B hash to the fact_cid; one flipped mantissa bit gives <span class="mono">mu5x2cks…</span> · <i>still trusted: nothing</i></span>
       <span class="i">4–5</span><span class="l">cell binding</span><span class="r">cell inside the hashed body = cell in the token; cell decodes to the lat/lng the derivation used · <i>nothing</i></span>
       <span class="i">6–7</span><span class="l">derivation</span><span class="r">scene id, DNs, catalogue and offset are inside the bytes; NDVI recomputed bit-for-bit · <i>argument order is read from emem’s code; no published schema</i></span>
       <span class="i">8–9</span><span class="l">upstream</span><span class="r">Planetary Computer STAC item matches the scene; the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900 · <i>STAC carries no checksum; the pixel is the one containing the point (GDAL floor)</i></span>
-      <span class="i">10–11</span><span class="l">server signature</span><span class="r">emem.dev’s ed25519 receipt over the request, cells and returned fact_cids · <i>proves what emem.dev served, not that it is true</i></span>
+      <span class="i">10–11</span><span class="l">server signature</span><span class="r">emem.dev’s ed25519 receipt over the request id, time, cells and returned fact_cids · <i>proves what emem.dev served, not that it is true</i></span>
       <span class="i">12–14</span><span class="l">public log</span><span class="r">entry 2,457,078 is included in the 2,556,451-entry log, whose signed root is consistent with the root geo.qa co-signed · <i>geo.qa is also run by Vortx AI</i></span>
       <span class="i">15</span><span class="l">key → domain</span><span class="r">the signing key is published in did:web, JWKS and DNS TXT for emem.dev · <i>Web PKI; DNS without DNSSEC</i></span>
     </div>
-    <p class="src">The whole proof fits in a 4,906-byte file that re-verifies with networking disabled (unshare -rn); a 1-bit tamper, a wrong cell or a wrong key fails it. research/repro/v8/trace_fact.py · verify_bundle.py · <span class="s">§22</span></p>
+    <p class="src">Links 1–5 and 12–14 fit in a 4,906-byte file (our format) that re-verifies 9 checks with networking disabled (unshare -rn) and lists the upstream byte ranges to re-read; a 1-bit tamper, a wrong cell or a wrong key fails it. research/repro/v8/trace_fact.py · verify_bundle.py · <span class="s">§22</span></p>
+  </div>
+  <div class="sec">
+    <div class="k">4 · One token, many clients</div>
+    <h2>Ten client paths, one record</h2>
+    <table class="d">
+      <tr><th>path</th><th>cid</th><th>re-hash</th><th>server sig.</th></tr>
+      <tr><td>REST · MCP (Streamable HTTP) · A2A JSON-RPC</td><td class="m">oj5cecci</td><td class="ok">3/3</td><td class="ok">3/3</td></tr>
+      <tr><td>Python SDK · TypeScript SDK</td><td class="m">oj5cecci</td><td class="ok">2/2</td><td class="ok">2/2 ‡</td></tr>
+      <tr><td>official MCP SDKs, LangChain MCP adapters, LlamaIndex tool</td><td class="m">oj5cecci</td><td class="ok">4/4</td><td>3/3 †</td></tr>
+      <tr><td>stock blake3 + cbor2 on the bytes</td><td class="m">oj5cecci</td><td class="ok">1/1</td><td>—</td></tr>
+      <tr><td>same bytes from an untrusted mirror; tampered copy</td><td class="m">j47f4xb3</td><td class="no">rejected</td><td></td></tr>
+    </table>
+    <p class="src">3 repetitions each, 30 Sep 2026; value 0.4708994708994709 on every path. † the LlamaIndex tool drops the receipt. ‡ the TS SDK has no receipt verifier; ours was used. One responder (emem.dev) behind all paths: this shows client and protocol independence, not independent servers.</p>
+  </div>
   </div>
   <div class="sec">
     <div class="k">3 · What the trace found</div>
     <h2>Before 28 Sep, 162 of 200 sampled records carry a neighbouring pixel</h2>
-    <img class="fig h" style="height:112mm" src="fig/pixel_audit.svg" alt="Two 5 by 5 NDVI windows around the cell: before the fix the signed DNs are the pixel south of the containing pixel">
+    <img class="fig h" style="height:106mm" src="fig/pixel_audit.svg" alt="Two 5 by 5 NDVI windows around the cell: before the fix the signed DNs are the pixel south of the containing pixel">
     <p class="t">Re-reading the COGs named inside the signed records showed that the 23 Sep record <span class="s">§7</span> carries the DNs of the pixel <b>10 m south</b> (dashed red: 2993/1972, SCL 5 bare soil, NDVI <b>0.3444</b>). The pixel that contains the point (blue) reads 0.4860. emem had rounded the fractional pixel index; GDAL takes the floor. The fix shipped on 28 Sep <span class="s">§8</span>.</p>
     <table class="d">
       <tr><th>audit of pre-fix Sentinel-2 records</th><th></th></tr>
-      <tr><td>random sample, 200 records across 164 scenes and 19 bands</td><td class="n">200</td></tr>
+      <tr><td>random sample, one per cell, of pre-fix S2 records cited on emem.dev’s agent channel: 200 cells, 164 scenes, 19 bands (192 Element84, 8 Planetary Computer)</td><td class="n">200</td></tr>
       <tr><td>DNs match the rounded (neighbour) pixel, not the floor pixel</td><td class="n no">162 · 81 % [75–86 %]</td></tr>
       <tr><td>rounding and floor give the same pixel</td><td class="n">38</td></tr>
       <tr><td>DNs match the floor pixel where the two rules differ</td><td class="n">0</td></tr>
@@ -148,47 +163,34 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
 </section>
 
 <!-- PLUGIN -->
-<section class="row" style="grid-template-columns:1fr 1fr 1fr">
-  <div class="sec">
-    <div class="k">4 · One token, many clients</div>
-    <h2>Ten client paths, one record</h2>
-    <table class="d">
-      <tr><th>path</th><th>cid</th><th>re-hash</th><th>server sig.</th></tr>
-      <tr><td>REST · MCP (Streamable HTTP) · A2A JSON-RPC</td><td class="m">oj5cecci</td><td class="ok">3/3</td><td class="ok">3/3</td></tr>
-      <tr><td>Python SDK · TypeScript SDK</td><td class="m">oj5cecci</td><td class="ok">2/2</td><td class="ok">2/2</td></tr>
-      <tr><td>official MCP SDKs, LangChain MCP adapters, LlamaIndex tool</td><td class="m">oj5cecci</td><td class="ok">4/4</td><td>3/3 †</td></tr>
-      <tr><td>stock blake3 + cbor2 on the bytes</td><td class="m">oj5cecci</td><td class="ok">1/1</td><td>—</td></tr>
-      <tr><td>same bytes from an untrusted mirror; tampered copy</td><td class="m">j47f4xb3</td><td class="no">rejected</td><td></td></tr>
-    </table>
-    <p class="src">3 repetitions each, 30 Sep 2026; value 0.4708994708994709 on every path. † the LlamaIndex tool drops the receipt. One responder (emem.dev) behind all paths: this shows client and protocol independence, not independent servers.</p>
-  </div>
+<section class="row" style="grid-template-columns:1fr 1fr">
   <div class="sec">
     <div class="k">5 · Two LLMs, emem as the only MCP server</div>
-    <h2>Pre-registered handoff: forged tokens declined 5/5</h2>
+    <h2>Pre-registered handoff: the token protects only an agent that refuses a mismatch</h2>
     <table class="d">
-      <tr><th>B receives from A</th><th>B correct</th><th>B checked</th></tr>
+      <tr><th>B = Claude Haiku 4.5 receives</th><th>B correct</th><th>B checked</th></tr>
       <tr><td>A’s token</td><td class="n ok">10/10</td><td>resolve, re-hash, receipt 10/10</td></tr>
       <tr><td>A’s own prose (16 digits)</td><td class="n">10/10</td><td>nothing to check</td></tr>
       <tr><td>prose rounded to “0.47”</td><td class="n no">0/5</td><td>—</td></tr>
-      <tr><td>token with a forged cell</td><td class="n ok">5/5 declined</td><td>409 caught</td></tr>
+      <tr><td>token with a forged cell</td><td class="n ok">5/5 declined</td><td>refusal (MCP error; REST 409)</td></tr>
     </table>
-    <p class="t">A: Claude Sonnet 5.5 with emem as its only MCP server returned the exact token in 10/10 runs (13 s, 3.3 tool calls each). B: Claude Haiku 4.5. Rule: irrigate if NDVI ≤ 0.4705, a threshold <b>set on purpose</b> 0.0004 below the value so that 2-decimal rounding flips it; it shows the mechanism, not a rate. Token vs rounded prose: Fisher p = 0.0003; token vs full prose: a tie.</p>
-    <p class="src">Pre-registration hashed before trial 1 (research/repro/data/v8/prereg.md). One model family for both agents; the local Qwen arm did not finish.</p>
+    <p class="t">A: Claude Sonnet 5.5 with emem as its only MCP server returned the exact token in 10/10 runs (mean 13 s, 3.3 tool calls; one prose misdated the scene 2025). Rule: irrigate if NDVI ≤ 0.4705, a threshold <b>set on purpose</b> 0.0004 below the value so that 2-decimal rounding flips it; it shows the mechanism, not a rate. Primary test, token vs full prose: 10/10 vs 10/10, a tie (p = 1). The rounded arm was added after A’s runs (exploratory): Fisher p = 0.0003. <b>The pre-registered local Qwen2.5-3B as B</b> (42 of 45 trials run) read 0.4709 from the token yet chose irrigate, 0/19 correct (full prose 10/18); on forged tokens it dropped the cell, resolved the bare id and acted: 0/5 declined.</p>
+    <p class="src">Pre-registration hashed before trial 1 (research/repro/data/v8/prereg.md). Claude arms: one model family for A and B.</p>
   </div>
   <div class="sec">
     <div class="k">6 · Plugin traffic, as counted by emem.dev</div>
-    <h2>Requests to emem.dev by client family</h2>
+    <h2>Traffic to emem.dev, by user-agent family</h2>
     <table class="d">
       <tr><th>counter (to 30 Sep 2026)</th><th></th></tr>
       <tr><td>calls to the 114 MCP tools</td><td class="n">96,728</td></tr>
       <tr><td>requests from Claude Code clients</td><td class="n">367,478</td></tr>
-      <tr><td>requests from Claude (other clients)</td><td class="n">41,080</td></tr>
-      <tr><td>requests from OpenAI clients</td><td class="n">16,041</td></tr>
+      <tr><td>UA contains “claude”, other (incl. ClaudeBot)</td><td class="n">41,080</td></tr>
+      <tr><td>UA contains “openai” / “gpt” (incl. GPTBot)</td><td class="n">16,041</td></tr>
       <tr><td>requests from Perplexity</td><td class="n">2,701</td></tr>
-      <tr><td>Smithery tool uses · runs of a Dify workflow template</td><td class="n">1,175 · 700</td></tr>
+      <tr><td>Smithery tool uses · uses of two Dify templates</td><td class="n">1,175 · 700</td></tr>
       <tr><td>PyPI ememdev · npm @vortxai/emem, last month</td><td class="n">314 · 304</td></tr>
     </table>
-    <p class="src">Request = any HTTP request; call = one MCP tool invocation; grouped by user-agent, not unique users. 96.2 % of the 56,523 signed agent notes come from 9 keys that the operator runs; 229 other keys wrote 2,070 notes. Availability on ChatGPT and Dify is a listing, not a controlled test.</p>
+    <p class="src">Lifetime counters from an undocumented start, read 30 Sep 09:12Z; request = any HTTP request, call = one MCP tool invocation; not unique users. Claude Code includes our own sessions. 96.2 % of the 56,523 signed agent notes come from 9 operator keys; 229 other keys, some of them Vortx sessions, wrote at most 2,070. Dify lists the plugin; the ChatGPT app is submitted, listing not verified.</p>
   </div>
 </section>
 
@@ -199,19 +201,19 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <h2>A TESSERA vector, re-read bit-exact by anyone</h2>
     <img class="fig" src="fig/tessera_strip.svg" alt="The 128 signed floats of the Tessera embedding at the Keylong cell">
     <p class="t">At the same cell, emem signs the 128-D <b>TESSERA v1</b> (Cambridge; Sentinel-1 + Sentinel-2, 2024) embedding as a <span class="mono">model_output</span> record <span class="s">§9</span>. Two range reads of the public product on Source Cooperative (128 B int8 + 4 B scale) give all 128 floats back with max |Δ| = 0; 4 of 4 facts tested match.</p>
-    <p class="t">emem re-serves this product; it does not run the encoder, and the record says so (<span class="mono">tamper_evidence: attester_only</span>: only the signer vouches for the encoder step). Encoders emem did run, such as Clay v1.5 <span class="s">§10</span>, record the BLAKE2b hash of the weights used.</p>
+    <p class="t">emem re-serves this product; it does not run the encoder, and emem’s resolve response says so (<span class="mono">tamper_evidence: attester_only</span>: only the signer vouches for the encoder step). Encoders emem did run, such as Clay v1.5 <span class="s">§10</span> (a Riyadh cell; now retired), record the BLAKE2b hash of the weights used.</p>
   </div>
   <div class="sec">
     <div class="k">8 · Rasters through time</div>
     <h2>A five-date B08 series; each member names its scene</h2>
     <img class="fig" src="fig/cube_members.png" alt="Five B08 scenes of one cube with requested and used dates">
-    <p class="t">An <span class="mono">emem:cube:</span> token <span class="s">§6</span> signs a list of five B08 raster records; each member states the date asked for and the scene used (+10 to +29 days later). The 13 Sep member is cloudy: scenes are chosen by scene-level cloud cover (≤ 40 %, relaxed in tiers), not a pixel mask.</p>
+    <p class="t">An <span class="mono">emem:cube:</span> token <span class="s">§6</span> signs a list of five B08 raster records; each member states the date asked for and the scene used (+10 to +29 days later). The newest scene under 40 % scene cloud in the window is used, even when a clearer, nearer one exists (3 Aug at 12.6 % over 17 Jul at 6.9 %); there is no pixel mask.</p>
   </div>
   <div class="sec">
     <div class="k">9 · Observation time vs record time</div>
     <h2>Two DEM values for one cell, both queryable by date</h2>
     <img class="fig h" style="height:58mm" src="fig/two_clocks.svg" alt="Elevation served for one key against transaction time">
-    <p class="t">Bengaluru, Copernicus DEM, one cell: <b>918.0 m</b> from a 90 m source signed in May <span class="s">§12</span>, <b>915.07 m</b> (float32 as stored) after emem switched to the 30 m COG <span class="s">§13</span>. Querying “as known on 15 Jun” returns 918.0; both records still re-hash. Absence is also a record: an ocean point with no DEM tile returns a signed “no tile here” record <span class="s">§15</span>, distinct from an unsigned “could not look”.</p>
+    <p class="t">Bengaluru, Copernicus DEM, one cell: <b>918.0 m</b> from a 90 m source signed in May <span class="s">§12</span>, <b>915.07 m</b> (float32 as stored) after emem switched to the 30 m COG in August (<span class="s">§13</span>, re-signed 28 Sep). Querying “as known on 15 Jun” returns 918.0; both records still re-hash. Absence is also a record: an ocean point with no DEM tile returns a signed “no tile here” record <span class="s">§15</span>, distinct from an unsigned “could not look”.</p>
   </div>
 </section>
 
@@ -224,19 +226,20 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <table class="d">
       <tr><th>pre-registered, Gemma-4-12B + Qwen2.5-7B, one host</th><th>correct</th><th>agree</th></tr>
       <tr><td>full context (control)</td><td class="n">72/72</td><td class="n">36/36</td></tr>
-      <tr><td>after a shared context summary (compaction)</td><td class="n no">0/72</td><td class="n">3/36</td></tr>
+      <tr><td>shared summary, compaction under pressure</td><td class="n no">0/72</td><td class="n">3/36</td></tr>
+      <tr><td>shared summary, no pressure</td><td class="n">20/72</td><td class="n">15/36</td></tr>
       <tr><td colspan="3">wrong-but-agreeing pairs (3/36) exceed correct answers (0/72): Fisher one-sided p = 0.035 <span class="s">§17</span>; handoff n = 20 per arm: prose 2, dense retrieval 8, BM25 20, token bundle 20 <span class="s">§18</span></td></tr>
     </table>
-    <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value as signed on 17 Jul. It is a pre-fix read of the pixel south (section 3); the experiment tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs. Related work: telephone-game drift (Perez et al., ICLR 2025), “Lost in Compaction” (arXiv 2608.11242), pointer-based compaction ARC (arXiv 2607.25066).</p>
+    <p class="src">The trap value 0.4871541501976284 <span class="s">§21</span> is the value observed 17 Jul and signed 18 Jul. It is a pre-fix read of the pixel south (section 3); the experiment tests fidelity to the cited value, not the ground. BM25 ties the bundle on short handoffs; the no-pressure arm is not significant (p = 0.109); six scoring bugs were found and corrected across two scorers. Related work: telephone-game drift (Perez et al., ICLR 2025), “Lost in Compaction” (arXiv 2608.11242), pointer-based compaction ARC (arXiv 2607.25066).</p>
   </div>
   <div class="sec">
-    <div class="k">11 · Integrity elsewhere, for the same scene</div>
+    <div class="k">11 · Integrity elsewhere</div>
     <h2>What an agent can check today, by source</h2>
     <table class="d">
       <tr><th>what the agent is handed</th><th>integrity it carries</th></tr>
       <tr><td>Planetary Computer: 281,898,500 B B08 COG URL</td><td>opaque ETag, no checksum</td></tr>
       <tr><td>Copernicus Data Space: 1,187,971,637 B SAFE</td><td>MD5 + BLAKE3 of the whole product, unsigned</td></tr>
-      <tr><td>NASA Earthdata MCP: a granule concept id</td><td>catalogue revision; older revisions return 404</td></tr>
+      <tr><td>NASA Earthdata MCP: a granule concept id (an HLS granule, Bengaluru)</td><td>catalogue revision; older revisions return 404</td></tr>
       <tr><td>MCP tool results in general (spec 2026-07-28)</td><td>none; proposed in issue #3354</td></tr>
       <tr><td><b>emem: one value</b></td><td><b>BLAKE3 name of the 1,115-byte record, ed25519 receipt, log inclusion</b></td></tr>
     </table>
@@ -264,9 +267,9 @@ signer 777er3yi… signed_at 2026-09-28T09:06:56Z · 1,115 B · BLAKE3 → oj5ce
     <table class="d">
       <tr><td>A signature says who served a value, not that it is true.</td></tr>
       <tr><td>A fact_cid names one signed record; two signers of the same value mint different ids.</td></tr>
-      <tr><td>Place and object (entity) tokens are labels; only fact, raster and cube tokens hash bytes.</td></tr>
+      <tr><td>Place and object (entity) tokens are labels; only fact, raster, cube and tree tokens hash bytes; a bundle hashes a citation list.</td></tr>
       <tr><td>A signed “no data” is a claim; no complete tile index backs it.</td></tr>
-      <tr><td>emem’s draft checker rejects “35 °C” citing a signed 28.0 °C <span class="s">§14</span>, but it judges at the writer’s precision and allows “≈ 0.49”.</td></tr>
+      <tr><td>emem’s draft checker rejects “35 °C” citing a signed 28.0 °C <span class="s">§14</span>, but it judges at the writer’s precision and allows “≈ 0.49”; it does not check band or unit.</td></tr>
       <tr><td>Re-minting a raster yields a new token for identical pixels (signed_at is hashed).</td></tr>
       <tr><td>One responder and one operator; the log co-signer is also Vortx AI. No read federation, no hardware attestation, nothing in orbit.</td></tr>
       <tr><td>The agent experiments are single-host samples without independent replication.</td></tr>
