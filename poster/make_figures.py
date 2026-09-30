@@ -53,25 +53,25 @@ for ax, m in zip(axs, cube["members"]):
     ax.imshow(v, cmap="gray", vmin=np.nanpercentile(v, 2), vmax=np.nanpercentile(v, 98)); ax.set_axis_off()
     sd = dt.datetime.strptime(m["scene"].split("_")[2][:8], "%Y%m%d")
     rq = dt.datetime.strptime(m["req"], "%Y-%m-%d")
-    ax.set_title(f"asked {rq:%d %b}\nscene {sd:%d %b}  (+{m['days']} d)", fontsize=5.2, color=INK, pad=2)
-fig.subplots_adjust(.005, .01, .995, .84, wspace=.04); fig.savefig(OUT / "cube_members.png", dpi=300); plt.close(fig)
+    ax.set_title(f"{rq:%d %b} → {sd:%d %b}\n(+{m['days']} d)", fontsize=9.5, color=INK, pad=2)
+fig.subplots_adjust(.005, .01, .995, .76, wspace=.04); fig.savefig(OUT / "cube_members.png", dpi=300); plt.close(fig)
 
 # ---------- F3: two clocks — one key, every attestation, and the answer as known over time ----------
 att = json.load(open(DATA / "contra_bengaluru.json"))["contradictions"][0]["attestations"]
 pts = sorted((dt.datetime.fromisoformat(a["signed_at"].replace("Z", "+00:00")), a["value"]) for a in att)
-fig, ax = plt.subplots(figsize=(3.6, 1.45), dpi=300)
+fig, ax = plt.subplots(figsize=(3.6, 1.6), dpi=300)
 t_end = dt.datetime(2026, 9, 29, tzinfo=dt.timezone.utc)
 xs = [p[0] for p in pts] + [t_end]; ys = [p[1] for p in pts] + [pts[-1][1]]
 ax.step(xs, ys, where="post", color=INK2, lw=1)
 ax.scatter([p[0] for p in pts], [p[1] for p in pts], s=[26 if p[1] == 918 else 14 for p in pts],
            c=[ACC if p[1] == 918 else INK for p in pts], zorder=3, edgecolors="#FBFBF8", linewidths=.6)
-ax.set_ylim(914, 919.2); ax.set_yticks([915, 916, 917, 918]); ax.set_ylabel("elevation served (m)", fontsize=6.5)
+ax.set_ylim(914, 919.8); ax.set_yticks([915, 916, 917, 918]); ax.set_ylabel("elevation (m)", fontsize=8.5); ax.tick_params(labelsize=8)
 ax.xaxis.set_major_locator(mdates.MonthLocator()); ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
-ax.set_xlabel("transaction time: signed_at, 2026", fontsize=6.5)
-ax.annotate("918.0 m · open_meteo (Cop-DEM 90 m)", (pts[0][0], 918), (6, 5), textcoords="offset points", fontsize=6, color=ACC)
-ax.annotate("915.07 m · Cop-DEM 30 m COG\n7 re-signings, same value", (dt.datetime(2026, 8, 17, tzinfo=dt.timezone.utc), 915.07), (0, 6), textcoords="offset points", fontsize=5.8, color=INK, ha="left", va="bottom")
+ax.set_xlabel("record time (signed_at), 2026", fontsize=8.5)
+ax.annotate("918.0 m · Cop-DEM 90 m via Open-Meteo", (pts[0][0], 918), (6, 4), textcoords="offset points", fontsize=8, va="bottom", color=ACC)
+ax.annotate("915.07 m · Cop-DEM 30 m COG\n7 re-signings, same value", (dt.datetime(2026, 5, 30, tzinfo=dt.timezone.utc), 917.55), textcoords="data", fontsize=8, color=INK, ha="left", va="top")
 ax.grid(axis="y", color=RULE, lw=.4)
-fig.subplots_adjust(.15, .24, .98, .95); fig.savefig(OUT / "two_clocks.svg"); plt.close(fig)
+fig.subplots_adjust(.13, .25, .98, .97); fig.savefig(OUT / "two_clocks.svg"); plt.close(fig)
 
 # ---------- F4: transparency-log growth, timestamps decoded from sampled signed entries ----------
 lg = [r for r in json.load(open(DATA / "loggrowth.json")) if r[1]]
