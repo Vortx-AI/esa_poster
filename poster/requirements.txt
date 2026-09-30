@@ -1,0 +1,10 @@
+weasyprint==69.0
+pypdfium2==5.13.0
+matplotlib==3.11.2
+qrcode==8.2
+fonttools==4.63.0
+blake3==1.0.10
+cbor2==6.1.4
+PyNaCl==1.6.2
+Pillow==12.3.0
+numpy==2.5.3

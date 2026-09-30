@@ -1,0 +1,449 @@
+{
+ "failure": {
+  "rows": [
+   [
+    "full context (control)",
+    72,
+    72,
+    36,
+    36
+   ],
+   [
+    "shared summary, no pressure",
+    20,
+    72,
+    15,
+    36
+   ],
+   [
+    "shared summary, under pressure",
+    0,
+    72,
+    3,
+    36
+   ]
+  ]
+ },
+ "r1": {
+  "A": [
+   15,
+   15
+  ],
+  "B": [
+   15,
+   15
+  ],
+  "C": [
+   13,
+   16
+  ],
+  "D": [
+   12,
+   16
+  ],
+  "E": [
+   9,
+   16
+  ],
+  "F": [
+   3,
+   16
+  ],
+  "G": [
+   2,
+   16
+  ],
+  "H": [
+   1,
+   16
+  ],
+  "I": [
+   0,
+   16
+  ]
+ },
+ "berlin": {
+  "cell": "defi.zb655.yaka.pUxe",
+  "facts": 16,
+  "products": 15,
+  "absences": 4,
+  "scene": {
+   "item": "S2C_MSIL2A_20260927T101801_R065_T33UUU_20260927T153810",
+   "datetime": "2026-09-27T10:18:01.025000Z",
+   "bbox": [
+    390880.0,
+    5819270.0,
+    393440.0,
+    5821830.0
+   ]
+  },
+  "rows": [
+   {
+    "product": "Sentinel-2C MSI L2A",
+    "reading": "B08 NIR reflectance 0.0475",
+    "fact_cid": "wtqd64payr37jhzyk624ii4gc6k4in5q7kpr7tabob5lah4yquta",
+    "class": "direct_sensor",
+    "kind": "primary"
+   },
+   {
+    "product": "Sentinel-2C MSI L2A",
+    "reading": "NDVI 0.195",
+    "fact_cid": "y2k2tic2smuobi5hcwfvaq2p2apk3lpwekaggboyawum3tzqjw7a",
+    "class": "deterministic_index",
+    "kind": "primary"
+   },
+   {
+    "product": "Sentinel-1 C-SAR GRD, RTC",
+    "reading": "VV gamma-naught \u22122.82 dB, 1 px",
+    "fact_cid": "2x2enxej23rl4hpkycidwmy3brqfrhghqiucrrwzf6o76a53lyjq",
+    "class": "direct_sensor",
+    "kind": "primary"
+   },
+   {
+    "product": "Copernicus DEM GLO-30",
+    "reading": "surface height 36.6 m (DSM)",
+    "fact_cid": "sdu3gfiu4hioukhphatvgoir52dwju7eukdwosfkxt4ndopahz4a",
+    "class": "direct_sensor",
+    "kind": "primary"
+   },
+   {
+    "product": "Terra MODIS MOD11A2",
+    "reading": "daytime LST 297.4 K (1 km)",
+    "fact_cid": "yqhihmuyozdm2urlpk5nxzkoozct65y6shsysttouoy27ddklhnq",
+    "class": "unclassified",
+    "kind": "primary"
+   },
+   {
+    "product": "ESA WorldCover 2021 v200",
+    "reading": "class 50: built-up",
+    "fact_cid": "xicg6usfctfgarydipb5evusbfl7ew2gmb6waoqy3lputi4cbztq",
+    "class": "model_output",
+    "kind": "primary"
+   },
+   {
+    "product": "ESA CCI Biomass, 100 m",
+    "reading": "biomass 0 t/ha",
+    "fact_cid": "keebyc7rs63obeuiprdromm5spnlokjs7zbsywmkt6vfumqrwtta",
+    "class": "model_output",
+    "kind": "primary"
+   },
+   {
+    "product": "JRC Global Surface Water",
+    "reading": "water occurrence 0 %",
+    "fact_cid": "hohgux3n36e7bjsekaii5f7m4wfxkwpy22666w322s7ey4uqt72q",
+    "class": "model_output",
+    "kind": "primary"
+   },
+   {
+    "product": "Hansen Forest Change v1.13",
+    "reading": "tree cover 2000: 0 %",
+    "fact_cid": "x4kpkygflp35lsynav3dnmybaclt46ayqb34akrrnzst3qrgrjbq",
+    "class": "model_output",
+    "kind": "primary"
+   },
+   {
+    "product": "JRC GFC2020 V4",
+    "reading": "not forest in 2020",
+    "fact_cid": "oog2b4aykebescspshijuxiwuq3dfxdjp47yd4vwxy4pqdnlmwcq",
+    "class": "model_output",
+    "kind": "primary"
+   },
+   {
+    "product": "CAMS forecast, Open-Meteo",
+    "reading": "surface NO$_2$ 12.3 \u00b5g/m\u00b3",
+    "fact_cid": "jvwhwgm6gu6irtd26rsfkkeg6hw72amealfuxdepxam7fpnlf4za",
+    "class": "model_output",
+    "kind": "primary"
+   },
+   {
+    "product": "Overture Maps (not EO)",
+    "reading": "0 building footprints",
+    "fact_cid": "czehax3d3djwpkfrawqdj4b6o7xvkbrugnco6qbin73mo4hofu2a",
+    "class": "human_curated",
+    "kind": "primary"
+   },
+   {
+    "product": "ISRIC SoilGrids v2",
+    "reading": "no data at this cell",
+    "fact_cid": "mkwinv556gemukzvucnj3em3s3bhspp7lct3pmrwv63yeztl6a3q",
+    "class": "model_output",
+    "kind": "absence"
+   },
+   {
+    "product": "CHIRPS v2.0",
+    "reading": "outside the \u00b150\u00b0 product",
+    "fact_cid": "bkaovfadmyjwyj6ggx5kct6j4y2cbig2rfwio24cji7cv7ek4kiq",
+    "class": "model_output",
+    "kind": "absence"
+   },
+   {
+    "product": "JRC Tropical Moist Forest",
+    "reading": "outside the tropical belt",
+    "fact_cid": "w7t2hxc7yvumi6ck75m3fmq5rv4o4qwgzjy3y5zq5xodbx6exudq",
+    "class": "model_output",
+    "kind": "absence"
+   },
+   {
+    "product": "NASA FIRMS, VIIRS + MODIS",
+    "reading": "no fire detected in 24 h",
+    "fact_cid": "k2ykb2dshtzcfamtdrwd6peav4tct3gh4wc4pmhnhcvu27wvu6ma",
+    "class": "unclassified",
+    "kind": "absence"
+   }
+  ]
+ },
+ "encoding": {
+  "slots": 43,
+  "dims": 1792,
+  "bands_cid": "mesoyti3qcs22pftcq27ljwcf3ifktnkqid4euqxyskhea5rpgra",
+  "class_slots": {
+   "model_output": 23,
+   "human_curated": 5,
+   "unclassified": 2,
+   "direct_sensor": 6,
+   "deterministic_index": 7
+  },
+  "encoder_dims": 944,
+  "encoders": [
+   "geotessera",
+   "clay_v1",
+   "prithvi_eo2",
+   "galileo"
+  ]
+ },
+ "keylong": {
+  "cell": "defi.zb572.xoso.zb1ec",
+  "n_2025_2026": 141,
+  "by_satellite": {
+   "A": 15,
+   "B": 61,
+   "C": 65
+  },
+  "n_all": 155,
+  "peaks": [
+   [
+    0.7941004102363742,
+    "2025-08-06T05:27:01.024000Z",
+    "rc2mpyys"
+   ],
+   [
+    0.7273879966187659,
+    "2026-07-27T05:26:49.024000Z",
+    "xbqqfk5r"
+   ]
+  ],
+  "record": [
+   0.4708994708994709,
+   "2026-09-25T05:42:51.024000Z",
+   "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+  ],
+  "chip": {
+   "item": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+   "datetime": "2026-09-25T05:42:51.024000Z",
+   "bbox": [
+    689700.0,
+    3604310.0,
+    692260.0,
+    3606870.0
+   ]
+  }
+ },
+ "rondonia": {
+  "counts": {
+   "eudr_flag_forest_2020_loss_after_2020": 3,
+   "loss_after_2020_on_gfc2020_non_forest": 1,
+   "forest_2020_no_later_loss": 33,
+   "cleared_2001_2020": 20,
+   "not_forest_2020_no_hansen_loss": 43
+  },
+  "flagged_loss_years": [
+   2023,
+   2024,
+   2024
+  ],
+  "n_cells": 100,
+  "facts": 600,
+  "grid": {
+   "rows": 10,
+   "cols": 10,
+   "lat": [
+    -9.7,
+    -9.706667,
+    -9.713333,
+    -9.72,
+    -9.726667,
+    -9.733333,
+    -9.74,
+    -9.746667,
+    -9.753333,
+    -9.76
+   ],
+   "lng": [
+    -63.06,
+    -63.053333,
+    -63.046667,
+    -63.04,
+    -63.033333,
+    -63.026667,
+    -63.02,
+    -63.013333,
+    -63.006667,
+    -63.0
+   ],
+   "spacing_deg": 0.006667,
+   "note": "each grid node is one sampled cell64 (about 10 m); nodes are about 740 m apart; values are point samples, not area means"
+  },
+  "card": {
+   "cell": "defi.zb391.taza.zcc31",
+   "ndvi_date": "2026-09-28",
+   "rows": [
+    [
+     "Hansen loss year",
+     "2023",
+     "6rtcbfumrzhac2a32vkoixocgtel7ws5bxnra2omnrjv5apyfnea"
+    ],
+    [
+     "Hansen tree cover 2000",
+     "100 %",
+     "iv6mhn5veoaoglxzs6mda62gjjiiadn2cjibfidkqz565oaipqiq"
+    ],
+    [
+     "JRC GFC2020 V4",
+     "forest",
+     "ncupl5ptbfrz5kgis4swtfrvleqwcln4xvbpjxjaul3ocz3hznoq"
+    ],
+    [
+     "JRC TMF deforestation",
+     "2023",
+     "sw4zpem3spflpjnxetuxi6b63u62fghu7s6kufnludfzopd5n6sq"
+    ],
+    [
+     "CCI biomass 2022",
+     "208 t/ha",
+     "yc5qjlghl6mwy5kmqggtma64yro6gfjg4poocqsawqwd24wh5uoq"
+    ],
+    [
+     "Sentinel-2 NDVI",
+     "0.43",
+     "ojbthm4vcir7q5j3t62hcmbdnxffnvejfn5yzqiwsrbunq32dnsq"
+    ]
+   ]
+  }
+ },
+ "r4": {
+  "values": [
+   918.0,
+   915.0712280273438,
+   915.0712280273438,
+   915.0712280273438,
+   915.0712280273438,
+   915.0712280273438,
+   915.0712280273438,
+   915.0712280273438
+  ],
+  "signed_at": [
+   "2026-05-28T19:54:32Z",
+   "2026-08-11T09:39:36Z",
+   "2026-08-11T09:40:06Z",
+   "2026-08-13T16:15:31Z",
+   "2026-08-17T06:11:24Z",
+   "2026-08-17T06:11:25Z",
+   "2026-09-28T09:05:18Z",
+   "2026-09-28T09:05:19Z"
+  ],
+  "queries": [
+   [
+    "2026-05-01",
+    null
+   ],
+   [
+    "2026-06-15",
+    918.0
+   ],
+   [
+    "2026-08-12",
+    915.0712280273438
+   ],
+   [
+    "2026-09-29",
+    915.0712280273438
+   ]
+  ]
+ },
+ "m15": {
+  "window": "oj5cecci S2A 2026-09-25 (signed 2026-09-28T09:06Z, post-fix) offset -1000",
+  "genuine": 0.4708994708994709,
+  "south": 0.3015512674990541,
+  "rule": 0.4705,
+  "named_px": [
+   2,
+   2
+  ],
+  "read_px": [
+   3,
+   2
+  ],
+  "pre": [
+   162,
+   200
+  ],
+  "post": [
+   0,
+   54
+  ]
+ },
+ "sat042": {
+  "key": "mwndc7zcesxqvw7bgxmbff3trktrynx3edprmwtzodv6qt45vqvq",
+  "profile": [
+   "orbital.satellite.v1",
+   "8"
+  ],
+  "layers": [
+   "Syscall",
+   "Scheduler",
+   "Memory",
+   "SensorBus",
+   "Signal",
+   "Energy",
+   "Thermal",
+   "Storage"
+  ],
+  "unbound_digest": "cyzwaknc3wznnmpjc52er4sy4kxqkeq6ysflubbmahrxassy4jlq",
+  "facts": [
+   "emem:fact:defi.zb55e.natI.tUpu:ol4ugzp4rmkc7nodxgfnm3bucamdbell6anysvt5syqlwhmzjtia",
+   "emem:fact:defi.zb55e.nadU.tUra:wndl3zwt4b27q2ufzpwc6oxwqx7a2t3ysd3evwzjnewvz5wphefa",
+   "emem:fact:defi.zb55e.mUgI.tUsE:asue5jcmxpwiur3ajfj7xil5u7uz7bvh4rrxbcqswkvjeop2lbhq"
+  ],
+  "trace_token": "emem:trace:3arfrney6ieeugzekzqfufwoayvqj3edhc6fbwaqzhydxn2hbogq",
+  "bundle_token": "emem:bundle:sfxaann374s7omyhfhbavl3qne",
+  "drift": [
+   {
+    "cell": "defi.zb55e.natI.tUpu",
+    "device": 0.6431,
+    "anchor": 0.6402,
+    "score": 0.05,
+    "verdict": "Consistent"
+   },
+   {
+    "cell": "defi.zb55e.nadU.tUra",
+    "device": 0.6512,
+    "anchor": 0.6402,
+    "score": 0.15,
+    "verdict": "Consistent"
+   },
+   {
+    "cell": "defi.zb55e.mUgI.tUsE",
+    "device": 0.2103,
+    "anchor": 0.6402,
+    "score": 0.88,
+    "verdict": "Contradicted"
+   }
+  ],
+  "tamper": [
+   "2",
+   "3"
+  ],
+  "commit": "04b40c5",
+  "run": "2026-09-30T19:14:15Z"
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "live_gets": {
+  "/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa": {
+   "at": "2026-09-30T18:55:32Z",
+   "status": 200
+  },
+  "/v1/manifests": {
+   "at": "2026-09-30T18:58:23Z",
+   "status": 200
+  },
+  "/v1/log/sth": {
+   "at": "2026-09-30T18:58:23Z",
+   "status": 200
+  },
+  "/v1/capabilities": {
+   "at": "2026-09-30T18:58:23Z",
+   "status": 200
+  },
+  "/v1/facts/exhq6lpsjbimxru33wbhvx2rrz72jeecnugpynsber2dxwgrfuea": {
+   "at": "2026-09-30T18:58:23Z",
+   "status": 200
+  },
+  "/openapi.json": {
+   "at": "2026-09-30T18:58:24Z",
+   "status": 200
+  },
+  "/v1/sources": {
+   "at": "2026-09-30T18:58:36Z",
+   "status": 200
+  },
+  "/v1/substrates": {
+   "at": "2026-09-30T18:58:47Z",
+   "status": 200
+  },
+  "/v1/devices": {
+   "at": "2026-09-30T18:58:37Z",
+   "status": 200
+  },
+  "/v1/worlds": {
+   "at": "2026-09-30T18:58:46Z",
+   "status": 200
+  },
+  "/v1/materializers?limit=200": {
+   "at": "2026-09-30T19:05:11Z",
+   "status": 200
+  },
+  "/v1/materializers?page=2&page_size=20": {
+   "at": "2026-09-30T19:05:22Z",
+   "status": 200
+  },
+  "/v1/materializers?page=3&page_size=20": {
+   "at": "2026-09-30T19:05:22Z",
+   "status": 200
+  },
+  "/v1/materializers?page=4&page_size=20": {
+   "at": "2026-09-30T19:05:22Z",
+   "status": 200
+  },
+  "/v1/materializers?page=5&page_size=20": {
+   "at": "2026-09-30T19:05:23Z",
+   "status": 200
+  },
+  "/v1/materializers?page=6&page_size=20": {
+   "at": "2026-09-30T19:05:23Z",
+   "status": 200
+  }
+ },
+ "results": {
+  "manifests_covers": {
+   "algorithms": 168,
+   "bands": 43,
+   "device_platforms": 17,
+   "note": "Entry counts for the manifests digested above, from the same in-process registries the digests are taken over. `algorithms` here counts what `algorithms_cid` covers; `/v1/algorithms` `pagination.total` counts the callable surface, and they are the same number today. Where a count and a digest disagree, the digest is authoritative and this endpoint is the bug.",
+   "sources": 46,
+   "substrates": 18,
+   "trace_encodings": 8
+  },
+  "sth": {
+   "tree_size": 2570200,
+   "signed_at": "2026-09-30T18:58:23Z"
+  },
+  "capabilities": {
+   "extensions": [],
+   "cuda_available": false,
+   "models_loaded": []
+  },
+  "venice_absence": {
+   "status": 200,
+   "kind": "absence",
+   "band": "overture.transportation.road_bearing_deg",
+   "sources": [
+    {
+     "scheme": "overture.maps.foundation.v1",
+     "id": "https://overturemaps-us-west-2.s3.amazonaws.com/release/2026-09-23.1/theme=transportation/type=segment/",
+     "captured_at": "2026-09-30T12:46:09Z"
+    }
+   ],
+   "reason_cid": "fitdtfvabtbyxwj6xauun5bjki",
+   "signed_at": "2026-09-30T12:46:09Z"
+  },
+  "n_paths": 188,
+  "sources_live": [
+   "sentinel2.l2a",
+   "sentinel1.grd.iw",
+   "geotessera.v1",
+   "copernicus.dem.30m",
+   "esa.worldcover.v200",
+   "ghsl.builtup.r2023a",
+   "ghsl.population.r2023a",
+   "worldpop.global.1km",
+   "jrc.gsw.v1_4.occurrence",
+   "jrc.gsw.v1_4.recurrence",
+   "hansen.gfc.v1_12.treecover2000",
+   "hansen.gfc.v1_12.loss",
+   "hansen.gfc.v1_12.lossyear",
+   "viirs.dnb.monthly",
+   "soilgrids.v2.phh2o",
+   "soilgrids.v2.soc",
+   "soilgrids.v2.clay",
+   "soilgrids.v2.sand",
+   "soilgrids.v2.bdod",
+   "soilgrids.v2.nitrogen",
+   "beck.koppen.v2",
+   "open_meteo",
+   "open_meteo_marine",
+   "open_meteo_cams",
+   "open_meteo_era5",
+   "met_no",
+   "nasa_power",
+   "ornl_modis",
+   "gmrt",
+   "sentinel_s2_l2a",
+   "sentinel_s1_rtc_mpc",
+   "geotessera",
+   "overture.maps.foundation.v1",
+   "hansen.gfc.v1_12.2023",
+   "esa.worldcover.v200.2021",
+   "chirps.daily.v2",
+   "viirs.fire.nrt",
+   "openet.30m.daily",
+   "tropomi.s5p.ch4",
+   "tropomi.s5p.no2",
+   "sentinel1.grd.iw.vh",
+   "dynamic_world.v1",
+   "model.prithvi_eo2_300m_tl",
+   "model.clay_v1_5",
+   "model.galileo_v1",
+   "ftw.field_polygons.v1"
+  ],
+  "substrates_live": null,
+  "devices_live": "{\"assurance_is\": \"platform_attested when a whitelisted anchor endorsed the device key, operator_asserted when the operator simply said so. Read endorsed_by to see whose word it rests on: an operator anchor id means the owner vouched, not a manufacturer.\", \"count\": 1, \"devices\": [{\"assurance\": \"operator_endorsed\", \"device_key\": \"r6c3xpbetvl7soyf3eani7knij74gth6bjizqjkrdfyl2ycqcdna\", \"endorsed_by\": \"operator.vortx.v1\", \"last_seen\": 1588532343295000, \"platform_id\": \"generic.linux-host\", \"profile_id\": \"host.counters.v1\", \"traces\": 1}], \"last_seen_is\": \"the end of that device's most recent capture window, in its own monotonic clock (nanoseconds since that machine booted). Not a wall clock, and not comparable between devices.\", \"listing_is_opt_in\": true, \"note\": \"Devices appear here only when their operator has explicitly opted in AND the device has written at least one trace this responder accepted. Enrolling does not list you: joining the protocol and being visible on it are separate acts, and the default is private. So this count is the number of operators who chose to be seen, not the number of devices that exist.\", \"platforms\": \"/v1/device_platforms\", \"schema\": \"emem.devices.v1\", \"verify_a_trace\": \"/v1/trace_verify\"}",
+  "worlds_live": "{\"count\": 4, \"root\": \"/worlds\", \"root_exists\": true, \"worlds\": [{\"artifacts\": {\"ply\": {\"bytes\": 70116, \"file\": \"world.ply\", \"sha256\": \"6527001a9c6b2d702cc6fd7f6c68cc2ca65a60b0917046db6d039411f097da6d\"}, \"scene\": {\"bytes\": 256220, \"file\": \"world.scene.json\", \"sha256\": \"5b7a0cc0d14522b7606f6162cacf44180d4cd4bcd855c6ce77b331a6b17aa980\"}, \"splat\": {\"bytes\": 32768, \"file\": \"world.splat\", \"sha256\": \"fa5caf150a101465353e5f0c54561887760a78445aed1da9c5d486a2b7b0b259\"}}, \"baked_at\": \"2026-07-04T03:42:43Z\", \"bands\": [\"copdem30m.elevation_mean\"], \"bbox\": [-112.18, 36.03, -112.02, 36.14], \"cells\": 1024, \"facts\": 1024, \"preset\": \"canyon\", \"responder_pubkey_b32\": \"777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka\", \"splats\": 1024, \"title\": \"Grand Canyon \\u00b7 elevation\", \"url\": \"/v1/worlds/canyon\", \"view\": \"/worlds?world=canyon\"}, {\"artifacts\": {\"ply\": {\"bytes\": 58147, \"file\": \"world.ply\", \"sha256\": \"eaea6531c31d185eddae166ee9c79e0e806ef24c6474f4c65570298a33bde002\"}, \"scene\": {\"bytes\": 593468, \"file\": \"world.scene.json\", \"sha256\": \"0d1ad223ca0903899545b28f040b97fd1eeafb51f04928d1d7ce3b09bdda72bb\"}, \"splat\": {\"bytes\": 27136, \"file\": \"world.splat\", \"sha256\": \"5e2a9b6c2cad3ac8e22bf158a340c34adb954934e5964532d5a1238fc1fc590c\"}}, \"baked_at\": \"2026-07-04T03:27:38Z\", \"bands\": [\"esa_cci_biomass.agb_t_per_ha_2022\", \"forest_change.lossyear\", \"forest_change.treecover2000\", \"esa_cci_biomass.agb_se_t_per_ha_2022\"], \"bbox\": [-63.5, -9.5, -63.0, -9.1], \"cells\": 1024, \"facts\": 3733, \"preset\": \"carbon\", \"responder_pubkey_b32\": \"777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka\", \"splats\": 848, \"staged_from\": \"examples/3d-worlds/scenes\", \"title\": \"Rond\\u00f4nia \\u00b7 standing carbon and the year it fell\", \"url\": \"/v1/worlds/carbon\", \"view\": \"/worlds?world=carbon\"}, {\"artifacts\": {\"ply\": {\"bytes\": 70116, \"file\": \"world.ply\", \"sha256\": \"6ce5f374cf1c69c2f1186cb8d832db2da4f2df790a24e8638fb4611a55616d7c\"}, \"scene\": {\"bytes\": 479054, \"file\": \"world.scene.json\", \"sha256\": \"c1120874118f7b2a04de31feee9b79ba0b4ad88eaed4497b50ffcf0a6b026137\"}, \"splat\": {\"bytes\": 32768, \"file\": \"world.splat\", \"sha256\": \"fc102126b3665d0855d589a05137680ecf3805957130895b0d875df3be01e236\"}}, \"baked_at\": \"2026-07-04T03:48:43Z\", \"bands\": [\"copdem30m.elevation_mean\", \"indices.ndvi\", \"surface_water.recurrence\"], \"bbox\": [7.62, 46.55, 7.98, 46.76], \"cells\": 1024, \"facts\": 3026, \"preset\": \"interlaken\", \"responder_pubkey_b32\": \"777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka\", \"splats\": 1024, \"title\": \"Interlaken \\u00b7 elevation + vegetation + water\", \"url\": \"/v1/worlds/interlaken\", \"view\": \"/worlds?world=interlaken\"}, {\"artifacts\": {\"ply\": {\"bytes\": 70116, \"file\": \"world.ply\", \"sha256\": \"7b19c5c1107fdab28b77daf49ed91c1814cc041d1d0dcd46ed47f3bb118d1f8e\"}, \"scene\": {\"bytes\": 2620512, \"file\": \"world.scene.json\", \"sha256\": \"35136df510662c5a2e2def7a85209eefe8ea67bde60ad8588e9a628b1ba38553\"}, \"splat\": {\"bytes\": 32768, \"file\": \"world.splat\", \"sha256\": \"faa053b8a86fb05d57854b211900b9f274f0c19645431707e0912d6a66",
+  "zenodo": {
+   "status": 200,
+   "title": "emem: A research on Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings",
+   "version": "0.1.0",
+   "publication_date": "2026-06-15"
+  },
+  "zenodo_latest": {
+   "id": 20706893,
+   "version": "0.1.0",
+   "date": "2026-06-15"
+  }
+ }
+}

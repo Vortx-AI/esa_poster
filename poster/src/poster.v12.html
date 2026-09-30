@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EMEM: a content-addressed, verifiable Earth-memory protocol for AI agents over satellite observations and signed execution traces (A0 poster, v12.1)</title>
+<!--
+  SOURCE of the v12 board. poster/poster.html is a build product: edit this file.
+  Build: python poster/build_v12.py   (figures, SVG inlining, PDF, PNG preview, layout, prose and QR gates)
+  Every number is traced in research/should_do/19_V12_CLAIMS_MAP.md. Figures are drawn 1:1 at the sizes below.
+-->
+<style>
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-400-italic.woff2);font-weight:400;font-style:italic}
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Plex;src:url(fonts/ibm-plex-sans-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:PlexMono;src:url(fonts/ibm-plex-mono-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:PlexMono;src:url(fonts/ibm-plex-mono-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:PlexMono;src:url(fonts/ibm-plex-mono-latin-600-normal.woff2);font-weight:600}
+@page{size:841mm 1189mm;margin:0}
+:root{--navy:#0E1A2B;--paper:#FBFBF8;--ink:#141414;--ink2:#46463F;--muted:#85857E;--rule:#D3D3CC;
+      --acc:#1F4FD8;--accs:#E7ECFA;--amb:#A86B00;--ambs:#FBF1DE;--bad:#B3261E;--bads:#F8E3E1;--sun:#FFD400;--strike:#E5484D}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:841mm;background:var(--paper)}
+body{font-family:Plex,sans-serif;color:var(--ink);font-size:6.6mm;line-height:1.3;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:841mm;height:1189mm;overflow:hidden;position:relative}
+b{font-weight:600} .mono{font-family:PlexMono,monospace} .acc{color:var(--acc)} .amb{color:var(--amb)} .bad{color:var(--bad)} .mu{color:var(--muted)}
+svg{display:block}
+sub,sup{line-height:0}
+
+/* header */
+.head{background:var(--navy);color:#fff;padding:8.5mm 22mm 7.5mm;display:flex;gap:12mm;align-items:flex-end}
+.head .hl{flex:none;width:727mm}
+.meta{font-size:5.4mm;color:#B9C4D6;letter-spacing:.02em;display:flex;justify-content:space-between;margin-bottom:4mm}
+h1{font-size:15.6mm;line-height:1.1;font-weight:600;letter-spacing:-.012em}
+h1 .strike{display:inline-block;position:relative;white-space:nowrap;color:#8C97AA}
+h1 .strike:after{content:"";position:absolute;left:-1mm;right:-1mm;top:54%;height:1.5mm;background:var(--strike);border-radius:.4mm}
+h1 .new{color:#fff}
+.punch{margin-top:4.6mm;font-size:12.4mm;line-height:1.05;font-weight:700;color:var(--sun);letter-spacing:-.01em}
+.punch2{margin-top:2.2mm;font-size:6.8mm;color:#DCE3EE}
+.by{margin-top:4mm;font-size:6.4mm;color:#DCE3EE} .by b{color:#fff}
+.by .links{font-size:5mm;color:#B9C4D6;font-family:PlexMono,monospace;margin-left:4mm}
+.qrbox{flex:none;width:58mm;background:#fff;padding:3.2mm;border-radius:1.5mm;text-align:center;color:var(--ink)}
+.qrbox svg{width:47.6mm;height:47.6mm}
+.qrbox .cap{font-size:6.2mm;font-weight:600;margin-top:1.6mm;line-height:1.2}
+
+/* body */
+.body{padding:5mm 22mm 0;display:flex;flex-direction:column;gap:4.7mm}
+.k{font-size:5.2mm;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:10.4mm;line-height:1.08;font-weight:600;letter-spacing:-.01em}
+h3{font-size:7.6mm;line-height:1.12;font-weight:600;letter-spacing:-.005em}
+p{font-size:6.8mm;line-height:1.3;color:var(--ink2)} p b{color:var(--ink)}
+.cap{font-size:5.4mm;line-height:1.3;color:var(--ink2)} .cap b{color:var(--ink)}
+.sechead{display:flex;align-items:baseline;gap:6mm;border-top:.8mm solid var(--ink);padding-top:2.4mm;margin-bottom:3mm}
+.sechead .n{font-size:10mm;font-weight:700;color:var(--acc);flex:none}
+.sechead .h{font-size:10mm;font-weight:600;letter-spacing:-.01em;white-space:nowrap;flex:none}
+.sechead .sub{font-size:6mm;color:var(--ink2);flex:1}
+.row{display:flex;gap:12mm;align-items:flex-start}
+.col{flex:none;display:flex;flex-direction:column;gap:3mm}
+
+/* 1 problem and idea */
+.problem h2{margin:1.4mm 0 2.6mm}
+.inv{border-left:2.2mm solid var(--acc);padding:.4mm 0 1mm 7mm}
+.inv .big{font-size:10.6mm;line-height:1.12;font-weight:600;letter-spacing:-.012em;margin:1.6mm 0 4mm}
+.inv .big em{font-style:normal;color:var(--acc)}
+.path{display:flex;align-items:center;gap:2.4mm;margin:0 0 2.6mm}
+.path .who{flex:none;width:30mm;font-size:5mm;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.path .c{flex:none;font-size:5.6mm;line-height:1.15;padding:1.8mm 2.6mm;border-radius:1.2mm;background:var(--accs);color:var(--ink);font-weight:500}
+.path .c.m{font-family:PlexMono,monospace;font-size:5.2mm}
+.path .c.go{background:var(--acc);color:#fff;font-weight:600}
+.path .c.px{background:#FFF6CC;border:.5mm solid #C9A800}
+.path .ar{flex:none;font-size:6.4mm;color:var(--ink2)}
+.drift{display:flex;gap:6mm;margin-top:2mm}
+.drift>div{flex:none;width:184mm;border-left:1.2mm solid var(--amb);padding-left:3.2mm}
+.drift .t{font-size:6.2mm;font-weight:600;color:var(--ink)}
+.drift .d{font-size:5.6mm;color:var(--ink2);line-height:1.28}
+
+/* take-away lines */
+.take{font-size:6.8mm;font-weight:600;color:var(--ink);border-left:1.4mm solid var(--acc);padding-left:3.2mm;line-height:1.24}
+.take.amb{border-left-color:var(--amb)}
+
+/* bottom */
+table{border-collapse:collapse;width:100%;font-size:5.5mm}
+td,th{padding:1.1mm 1.8mm 1.1mm 0;border-bottom:.3mm solid var(--rule);vertical-align:top;text-align:left;line-height:1.25}
+th{font-size:4.8mm;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:.5mm solid var(--ink)}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+td.y{color:var(--acc);font-weight:700;white-space:nowrap}
+td.pt{color:var(--amb);font-weight:700;white-space:nowrap}
+td.o{color:var(--muted);font-weight:700;white-space:nowrap}
+td.x{color:var(--ink2)}
+.qa .q{font-size:6mm;font-weight:600;line-height:1.2;color:var(--ink);margin-top:2mm}
+.qa .q:first-of-type{margin-top:0}
+.qa .a{font-size:5.4mm;line-height:1.26;color:var(--ink2);margin-top:.8mm}
+.concl li{list-style:none;font-size:5.9mm;line-height:1.24;font-weight:500;color:var(--ink);background:var(--accs);border-left:1.4mm solid var(--acc);padding:1.8mm 3mm 2mm;margin-bottom:2.2mm}
+.concl li b{color:var(--acc);font-weight:700;margin-right:1.4mm}
+.try{display:flex;gap:4mm;align-items:center;border:.5mm solid var(--ink);background:#fff;padding:2.4mm 3mm}
+.try svg{width:30mm;height:30mm;flex:none}
+.try>div{flex:none;width:143mm}
+.try .cmd{font-family:PlexMono,monospace;font-size:4.5mm;background:var(--accs);padding:1mm 1.6mm;margin:1.2mm 0;word-break:break-all}
+
+.foot{position:absolute;left:0;right:0;bottom:0;padding:3.4mm 22mm 6.5mm;display:flex;gap:10mm;font-size:4.2mm;line-height:1.36;color:var(--muted);border-top:.35mm solid var(--rule);background:var(--paper)}
+.foot>div:first-child{flex:none;width:470mm}.foot>div:last-child{flex:none;width:317mm}
+.foot b{color:var(--ink2)}
+</style>
+</head>
+<body><div class="page">
+
+<header class="head">
+  <div class="hl">
+    <div class="meta"><span>Agentic AI for Earth Observation · ESA Φ-lab and BIFOLD · Berlin, 19–21 October 2026</span><span>Poster Session 1 · 19 Oct · 17:00–18:30</span></div>
+    <h1>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Earth-Observation Products, Foundation-Model Embeddings and Signed Execution Traces</h1>
+    <div class="punch">Agreement is not evidence. The pixel is.</div>
+    <div class="punch2">Every number an agent cites resolves to signed bytes and names the file it came from; open-archive pixels can be re-read.</div>
+    <div class="by"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai<span class="links">doi:10.5281/zenodo.20706893 (v0.1.0) · github.com/Vortx-AI/emem (Apache-2.0) · emem.dev</span></div>
+  </div>
+  <div class="qrbox"><!--inline:fig/v12/qr_try.svg--><div class="cap">Check any token<br>emem.dev/verify</div></div>
+</header>
+
+<main class="body">
+
+<!-- problem and idea -->
+<section class="row">
+  <div class="col problem" style="width:382mm">
+    <div class="k">The problem</div>
+    <h2>Agents that agree are not agents that are right.</h2>
+    <p>Each summary or handoff re-encodes a reading: the words survive, the referent does not. This is <b>referential drift</b>.</p>
+    <!--inline:fig/v12/failure.svg-->
+    <div class="cap">Pre-registered compaction study, Gemma-4-12B and Qwen2.5-7B on one host. Under pressure, the 3 pairs that still agree are all wrong.</div>
+  </div>
+  <div class="col inv" style="width:403mm">
+    <div class="k">The idea</div>
+    <div class="big">Name each satellite observation by the hash of its bytes. <em>Pass the name, not a sentence about it.</em></div>
+    <div class="path"><span class="who">writer</span><span class="c px">Sentinel-2 pixel</span><span class="ar">→</span><span class="c">record: cell, band, time, value</span><span class="ar">→</span><span class="c m">BLAKE3</span><span class="ar">→</span><span class="c m">emem:fact:…</span></div>
+    <div class="path"><span class="who">receiver</span><span class="c">resolve</span><span class="ar">→</span><span class="c">re-hash</span><span class="ar">→</span><span class="c">compare</span><span class="ar">→</span><span class="c go">re-read the pixel</span></div>
+    <div class="drift">
+      <div><div class="t">Names move</div><div class="d">“the north field” drifts; a 64-bit cell id of about 10 m does not.</div></div>
+      <div><div class="t">Values move</div><div class="d">0.4709 becomes “about 0.47”; a fact_cid breaks if one bit changes.</div></div>
+    </div>
+    <!--inline:fig/v12/drift.svg-->
+  </div>
+</section>
+
+<!-- 1 one address -->
+<section>
+  <div class="sechead"><span class="n">1</span><span class="h">One address, every product</span><span class="sub">One 10 m cell in central Berlin, read live on 30 Sep 2026 from each product's native grid (10 m to about 11 km): 15 products, 16 signed facts, 4 of them signed absences.</span></div>
+  <div class="row">
+    <div class="col" style="width:436mm"><!--inline:fig/v12/eo_berlin.svg--></div>
+    <div class="col" style="width:349mm">
+      <h3>How emem encodes a memory</h3>
+      <!--inline:fig/v12/encoding.svg-->
+      <p>Each fact carries a <b>provenance class</b>: how far a verifier can check it. <b>Embeddings are memories too.</b> Each vector is a model-output fact bound to its encoder checkpoint and recipe, so a new encoder shows up as Δ<sub>encoder</sub>, not as change on the ground. Every vector emem signed still resolves.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 memory model -->
+<section>
+  <div class="sechead"><span class="n">2</span><span class="h">The memory model</span><span class="sub">Six definitions from emem's specification; every panel on this board is an instance of them.</span></div>
+  <div class="row">
+    <div class="col" style="width:340mm"><!--inline:fig/v12/model.svg--></div>
+    <div class="col" style="width:445mm">
+      <h3>Memory on two clocks</h3>
+      <!--inline:fig/v12/r4_bitemporal.svg-->
+      <div class="cap">Bengaluru: 918.0 m from the 90 m Copernicus DEM in May, 915.07 m from the 30 m COG since 11 Aug. Nothing was overwritten. Asked “as of 15 Jun”, emem still answers 918.0, and both answers verify.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 EO at work -->
+<section>
+  <div class="sechead"><span class="n">3</span><span class="h">Earth observation an agent can cite</span><span class="sub">All 780 facts pulled for sections 1 and 3, including the 757 drawn here, were re-hashed, signature-checked and found in the log on 30 Sep 2026.</span></div>
+  <div class="row">
+    <div class="col" style="width:392mm">
+      <h3>Two seasons, three satellites, one field</h3>
+      <!--inline:fig/v12/eo_keylong.svg-->
+      <div class="cap">Keylong, Lahaul (India): 141 Sentinel-2 L2A NDVI facts at one 10 m cell, Jan 2025 to Sep 2026. Circled: the record that section 4 corrupts.</div>
+    </div>
+    <div class="col" style="width:392mm">
+      <h3>A deforestation screen an auditor can re-run</h3>
+      <!--inline:fig/v12/eo_rondonia.svg-->
+      <div class="cap">Rondônia (Brazil): 100 point cells 740 m apart, 600 facts. Flag: forest in 2020, tree-cover loss after 31 Dec 2020. A screen, not a due-diligence statement.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 corruption -->
+<section>
+  <div class="sechead"><span class="n">4</span><span class="h">Seventeen ways to corrupt one reading</span><span class="sub">Agent B receives the Keylong record circled in section 3 after one corruption. A deterministic verifier, with no model in the loop, decides whether B acts.</span></div>
+  <div class="row">
+    <div class="col" style="width:468mm">
+      <!--inline:fig/v12/r1_mutation.svg-->
+    </div>
+    <div class="col" style="width:317mm">
+      <div class="take">Prose and JSON pass all 15 corruptions they can carry. With all nine checks, none of the 16 in-scope cases gets through; one full check takes 1.2 ms offline, with the source window cached.</div>
+      <h3 style="margin-top:2mm">M15 in production: the right record, the wrong pixel</h3>
+      <!--inline:fig/v12/m15.svg-->
+      <div class="cap">The old reader rounded the pixel centre instead of flooring it, and so read the row below. It signed what it read, so every check up to recompute passes. Before the fix: 162 of 200 sampled records (75 to 86 %, Wilson 95 %). After: 0 of 54.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 traces -->
+<section>
+  <div class="sechead"><span class="n">5</span><span class="h">How a satellite could prove what it ran</span><span class="sub">SAT-042 is a scripted pass in emem's test harness, not a spacecraft; run on 30 Sep 2026.</span></div>
+  <div class="row">
+    <div class="col" style="width:440mm"><!--inline:fig/v12/sat042.svg--></div>
+    <div class="col" style="width:345mm">
+      <p>Open archives enter emem by recomputation. A device cannot be recomputed, so its profile demands a <b>signed OS execution trace</b>: eight layers for <span class="mono">orbital.satellite.v1</span>, with every payload digest bound inside.</p>
+      <p>On the gated write paths, a write with no trace is refused, and so is a fact the trace never emitted. Rewrite one log segment and the verifier names the broken link.</p>
+      <div class="take">A trace proves what ran, not that the sensor was right. A drift anchor scores each claim:</div>
+      <!--inline:fig/v12/score.svg-->
+      <div class="cap">The harness uses one fixed anchor, 0.6402 ± 0.02 (1σ), for all three captures. 3σ scores 0.5 and 9σ scores 0.75, both pinned by emem-trace's tests.</div>
+    </div>
+  </div>
+</section>
+
+<!-- guarantees, objections, conclusion -->
+<section class="row" style="border-top:.8mm solid var(--ink);padding-top:3mm">
+  <div class="col" style="width:300mm">
+    <h3>What a verified token guarantees</h3>
+    <table>
+      <tr><th>integrity of</th><th></th><th>how</th></tr>
+      <tr><td>the source bytes</td><td class="y">guaranteed</td><td class="x">hash, signature, log</td></tr>
+      <tr><td>the observation</td><td class="y">bound</td><td class="x">cell, band, time signed; re-read confirms</td></tr>
+      <tr><td>the derivation</td><td class="y">recomputable</td><td class="x">fixed formula, signed inputs</td></tr>
+      <tr><td>the upstream file</td><td class="pt">named</td><td class="x">scene id and COG URL</td></tr>
+      <tr><td>the value's accuracy</td><td class="pt">inherited</td><td class="x">the product's own validation</td></tr>
+      <tr><td>the entity</td><td class="o">out of scope</td><td class="x">a shared label (M17)</td></tr>
+    </table>
+  </div>
+  <div class="col qa" style="width:290mm">
+    <h3>Objections, answered</h3>
+    <div class="q">A signature does not make a value true.</div>
+    <div class="a">Agreed. It fixes which bytes were served. Truth is tested by re-reading the pixel; accuracy comes from the product's own validation.</div>
+    <div class="q">Why not STAC, openEO or C2PA?</div>
+    <div class="a">STAC names the scene, openEO the process, C2PA the asset. emem signs the one value an agent cites and names the scene and file it came from.</div>
+    <div class="q">Is a satellite writing to emem today?</div>
+    <div class="a">No spacecraft is enrolled. emem.dev re-checks any signed trace from its one enrolled Linux host; SAT-042 exercises every refusal.</div>
+  </div>
+  <div class="col" style="width:183mm">
+    <ul class="concl">
+      <li><b>1</b>Agents hand each other a signed observation, not a sentence about it.</li>
+      <li><b>2</b>One address joins every product, so an EO screen can be re-run fact by fact.</li>
+      <li><b>3</b>Only the full chain refuses all 16; M15 needs the pixel re-read.</li>
+    </ul>
+    <div class="try"><!--inline:fig/v12/qr_repro.svg--><div class="cap" style="width:139mm"><b>Re-run every result.</b> Data, scripts and claims map: research/repro/v12</div></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div><b>References.</b> Sentinel-2 L2A Product Specification (ESA) · CEOS ARD for Land, Surface Reflectance · Copernicus DEM GLO-30 and GLO-90 · Hansen et al., Science 2013 · JRC GFC2020 V4 and TMF · ESA CCI Biomass · Regulation (EU) 2023/1115 · BLAKE3 (O'Connor et al. 2020) · RFC 6962, RFC 8032, RFC 8949 · STAC 1.0 · openEO · W3C PROV-O · C2PA 2 · Model Context Protocol · TESSERA, arXiv:2506.20380 · Earth Embeddings as Products, arXiv:2601.13134.</div>
+  <div><b>Reproducibility.</b> Mechanisms and formulas read from emem's code and docs/model.md at 04b40c5; measurements 29 to 30 Sep 2026 on emem.dev. Every number maps to its file and script in research/repro/v12/CLAIMS_MAP.md at github.com/Vortx-AI/esa_poster.</div>
+</footer>
+</div></body>
+</html>

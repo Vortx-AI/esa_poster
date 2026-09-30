@@ -1,0 +1,342 @@
+{
+ "fig_a_berlin_cell_stack": {
+  "source": "live emem.dev /v1/recall, one band per call",
+  "cell": "defi.zb655.yaka.pUxe",
+  "query_window_utc": [
+   "2026-09-30T18:57:20.320Z",
+   "2026-09-30T19:03:51.431Z"
+  ],
+  "rows": [
+   {
+    "band": "s2.B08",
+    "instrument": "Sentinel-2 MSI L2A",
+    "kind": "primary",
+    "value": 0.0475,
+    "unit": null,
+    "observed_at": "2026-09-27T10:18:01.025000Z",
+    "provenance_class": "direct_sensor",
+    "fact_cid": "wtqd64payr37jhzyk624ii4gc6k4in5q7kpr7tabob5lah4yquta",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:wtqd64payr37jhzyk624ii4gc6k4in5q7kpr7tabob5lah4yquta",
+    "log_leaf_index": 2570177,
+    "verified": true
+   },
+   {
+    "band": "indices.ndvi",
+    "instrument": "Sentinel-2 MSI L2A",
+    "kind": "primary",
+    "value": 0.19496855345911948,
+    "unit": null,
+    "observed_at": "2026-09-27T10:18:01.025000Z",
+    "provenance_class": "deterministic_index",
+    "fact_cid": "y2k2tic2smuobi5hcwfvaq2p2apk3lpwekaggboyawum3tzqjw7a",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:y2k2tic2smuobi5hcwfvaq2p2apk3lpwekaggboyawum3tzqjw7a",
+    "log_leaf_index": 2570176,
+    "verified": true
+   },
+   {
+    "band": "sentinel1_raw",
+    "instrument": "Sentinel-1 C-SAR GRD IW, RTC",
+    "kind": "primary",
+    "value": -2.8157914266581785,
+    "unit": "dB",
+    "observed_at": "2026-09-28T05:16:29.600562Z",
+    "provenance_class": "direct_sensor",
+    "fact_cid": "2x2enxej23rl4hpkycidwmy3brqfrhghqiucrrwzf6o76a53lyjq",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:2x2enxej23rl4hpkycidwmy3brqfrhghqiucrrwzf6o76a53lyjq",
+    "log_leaf_index": 2570178,
+    "verified": true
+   },
+   {
+    "band": "copdem30m.elevation_mean",
+    "instrument": "Copernicus DEM GLO-30",
+    "kind": "primary",
+    "value": 36.56167984008789,
+    "unit": "m",
+    "observed_at": "2021-04-30T00:00:00Z",
+    "provenance_class": "direct_sensor",
+    "fact_cid": "sdu3gfiu4hioukhphatvgoir52dwju7eukdwosfkxt4ndopahz4a",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:sdu3gfiu4hioukhphatvgoir52dwju7eukdwosfkxt4ndopahz4a",
+    "log_leaf_index": 2570170,
+    "verified": true
+   },
+   {
+    "band": "esa_worldcover.lc_2021",
+    "instrument": "ESA WorldCover 2021 v200",
+    "kind": "primary",
+    "value": 50,
+    "unit": "lccs_class",
+    "observed_at": "2022-10-28T00:00:00Z",
+    "provenance_class": "model_output",
+    "fact_cid": "xicg6usfctfgarydipb5evusbfl7ew2gmb6waoqy3lputi4cbztq",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:xicg6usfctfgarydipb5evusbfl7ew2gmb6waoqy3lputi4cbztq",
+    "log_leaf_index": 2570179,
+    "verified": true
+   },
+   {
+    "band": "esa_cci_biomass.agb_t_per_ha_2022",
+    "instrument": "ESA CCI Biomass v7 (2022)",
+    "kind": "primary",
+    "value": 0.0,
+    "unit": "t_per_ha",
+    "observed_at": "2025-03-01T00:00:00Z",
+    "provenance_class": "model_output",
+    "fact_cid": "keebyc7rs63obeuiprdromm5spnlokjs7zbsywmkt6vfumqrwtta",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:keebyc7rs63obeuiprdromm5spnlokjs7zbsywmkt6vfumqrwtta",
+    "log_leaf_index": 2570185,
+    "verified": true
+   },
+   {
+    "band": "surface_water.occurrence",
+    "instrument": "JRC Global Surface Water v1.4",
+    "kind": "primary",
+    "value": 0.0,
+    "unit": "percent",
+    "observed_at": "2022-01-01T00:00:00Z",
+    "provenance_class": "model_output",
+    "fact_cid": "hohgux3n36e7bjsekaii5f7m4wfxkwpy22666w322s7ey4uqt72q",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:hohgux3n36e7bjsekaii5f7m4wfxkwpy22666w322s7ey4uqt72q",
+    "log_leaf_index": 2570180,
+    "verified": true
+   },
+   {
+    "band": "hansen.tree_cover_2000",
+    "instrument": "Hansen Global Forest Change v1.13",
+    "kind": "primary",
+    "value": 0,
+    "unit": "percent_canopy_cover",
+    "observed_at": "2025-04-01T00:00:00Z",
+    "provenance_class": "model_output",
+    "fact_cid": "x4kpkygflp35lsynav3dnmybaclt46ayqb34akrrnzst3qrgrjbq",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:x4kpkygflp35lsynav3dnmybaclt46ayqb34akrrnzst3qrgrjbq",
+    "log_leaf_index": 2570182,
+    "verified": true
+   },
+   {
+    "band": "jrc_gfc2020.forest_2020",
+    "instrument": "JRC Global Forest Cover 2020 v4 (EUDR baseline)",
+    "kind": "primary",
+    "value": 0,
+    "unit": "boolean_eudr_forest_2020",
+    "observed_at": "2024-04-25T00:00:00Z",
+    "provenance_class": "model_output",
+    "fact_cid": "oog2b4aykebescspshijuxiwuq3dfxdjp47yd4vwxy4pqdnlmwcq",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:oog2b4aykebescspshijuxiwuq3dfxdjp47yd4vwxy4pqdnlmwcq",
+    "log_leaf_index": 2570188,
+    "verified": true
+   },
+   {
+    "band": "cams.no2",
+    "instrument": "Copernicus Atmosphere Monitoring Service (CAMS) via Open-Meteo",
+    "kind": "primary",
+    "value": 12.3,
+    "unit": "ug/m^3",
+    "observed_at": "2026-09-30T18:00:00Z",
+    "provenance_class": "model_output",
+    "fact_cid": "jvwhwgm6gu6irtd26rsfkkeg6hw72amealfuxdepxam7fpnlf4za",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:jvwhwgm6gu6irtd26rsfkkeg6hw72amealfuxdepxam7fpnlf4za",
+    "log_leaf_index": 2570186,
+    "verified": true
+   },
+   {
+    "band": "modis.lst_day_8day",
+    "instrument": "Terra MODIS MOD11A2 (1 km, 8-day)",
+    "kind": "primary",
+    "value": 297.40000000000003,
+    "unit": "K",
+    "observed_at": "2026-08-29",
+    "provenance_class": "unclassified",
+    "fact_cid": "yqhihmuyozdm2urlpk5nxzkoozct65y6shsysttouoy27ddklhnq",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:yqhihmuyozdm2urlpk5nxzkoozct65y6shsysttouoy27ddklhnq",
+    "log_leaf_index": 2570193,
+    "verified": true
+   },
+   {
+    "band": "nightlights.dmsp_ols_avg_dn",
+    "instrument": "DMSP-OLS F18 stable lights",
+    "kind": "primary",
+    "value": 63,
+    "unit": "dmsp_ols_avg_dn",
+    "observed_at": "2014-04-01T00:00:00Z",
+    "provenance_class": "direct_sensor",
+    "fact_cid": "2ozugc3sy2cskemheusdzm6ks7dtcfu6lcbcgjdc4x7m3jo7qeya",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:2ozugc3sy2cskemheusdzm6ks7dtcfu6lcbcgjdc4x7m3jo7qeya",
+    "log_leaf_index": 2570194,
+    "verified": true
+   },
+   {
+    "band": "overture.buildings.count",
+    "instrument": "Overture Maps (not EO)",
+    "kind": "primary",
+    "value": 0,
+    "unit": null,
+    "observed_at": "2026-08-19.0",
+    "provenance_class": "human_curated",
+    "fact_cid": "czehax3d3djwpkfrawqdj4b6o7xvkbrugnco6qbin73mo4hofu2a",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:czehax3d3djwpkfrawqdj4b6o7xvkbrugnco6qbin73mo4hofu2a",
+    "log_leaf_index": 1453714,
+    "verified": true
+   },
+   {
+    "band": "soilgrids.soc_0_30cm",
+    "instrument": "ISRIC SoilGrids v2",
+    "kind": "absence",
+    "value": null,
+    "unit": null,
+    "observed_at": "2026-09-30T18:57:24Z",
+    "provenance_class": "model_output",
+    "fact_cid": "mkwinv556gemukzvucnj3em3s3bhspp7lct3pmrwv63yeztl6a3q",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:mkwinv556gemukzvucnj3em3s3bhspp7lct3pmrwv63yeztl6a3q",
+    "log_leaf_index": 2570192,
+    "verified": true
+   },
+   {
+    "band": "chirps.precip_daily_mm",
+    "instrument": "CHIRPS v2.0 daily",
+    "kind": "absence",
+    "value": null,
+    "unit": null,
+    "observed_at": "2026-09-30T18:57:24Z",
+    "provenance_class": "model_output",
+    "fact_cid": "bkaovfadmyjwyj6ggx5kct6j4y2cbig2rfwio24cji7cv7ek4kiq",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:bkaovfadmyjwyj6ggx5kct6j4y2cbig2rfwio24cji7cv7ek4kiq",
+    "log_leaf_index": 2570184,
+    "verified": true
+   },
+   {
+    "band": "jrc_tmf.deforestation_year",
+    "instrument": "JRC Tropical Moist Forest",
+    "kind": "absence",
+    "value": null,
+    "unit": null,
+    "observed_at": "2026-09-30T18:57:25Z",
+    "provenance_class": "model_output",
+    "fact_cid": "w7t2hxc7yvumi6ck75m3fmq5rv4o4qwgzjy3y5zq5xodbx6exudq",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:w7t2hxc7yvumi6ck75m3fmq5rv4o4qwgzjy3y5zq5xodbx6exudq",
+    "log_leaf_index": 2570187,
+    "verified": true
+   },
+   {
+    "band": "firms.active_fires",
+    "instrument": "NASA FIRMS (VIIRS S-NPP/NOAA-20/NOAA-21 + MODIS C6.1)",
+    "kind": "absence",
+    "value": null,
+    "unit": null,
+    "observed_at": "2026-09-30T18:57:28Z",
+    "provenance_class": "unclassified",
+    "fact_cid": "k2ykb2dshtzcfamtdrwd6peav4tct3gh4wc4pmhnhcvu27wvu6ma",
+    "fact_token": "emem:fact:defi.zb655.yaka.pUxe:k2ykb2dshtzcfamtdrwd6peav4tct3gh4wc4pmhnhcvu27wvu6ma",
+    "log_leaf_index": 2570191,
+    "verified": true
+   }
+  ],
+  "data_file": "data/case_berlin_stack.json"
+ },
+ "fig_b_keylong_ndvi_series": {
+  "source": "live emem.dev /v1/backfill then /v1/trajectory",
+  "cell": "defi.zb572.xoso.zb1ec",
+  "points_plotted": 141,
+  "window": [
+   "2025-01-28",
+   "2026-09-25"
+  ],
+  "annotated": [
+   {
+    "date": "2025-08-06",
+    "value": 0.7941004102363742,
+    "platform": "S2C",
+    "fact_cid": "rc2mpyysxiq4arbkgsmswhpikgcw6mfd5ivktup45wr3jvvcnvma",
+    "fact_token": "emem:fact:defi.zb572.xoso.zb1ec:rc2mpyysxiq4arbkgsmswhpikgcw6mfd5ivktup45wr3jvvcnvma"
+   },
+   {
+    "date": "2026-07-27",
+    "value": 0.7273879966187659,
+    "platform": "S2B",
+    "fact_cid": "xbqqfk5r7celr2oj36asofnmzr5eevdmd67ifofbnesgjs7j7eeq",
+    "fact_token": "emem:fact:defi.zb572.xoso.zb1ec:xbqqfk5r7celr2oj36asofnmzr5eevdmd67ifofbnesgjs7j7eeq"
+   },
+   {
+    "date": "2026-09-25",
+    "value": 0.4708994708994709,
+    "platform": "S2A",
+    "fact_cid": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "fact_token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+   }
+  ],
+  "trajectory_queried_at_utc": "2026-09-30T19:07:32.801Z",
+  "data_file": "data/case_keylong_ndvi.json"
+ },
+ "fig_c_rondonia_eudr_grid": {
+  "source": "live emem.dev /v1/recall, 100 grid nodes x 6 bands",
+  "facts": 600,
+  "flagged": [
+   {
+    "row": 2,
+    "col": 7,
+    "lat": -9.713333,
+    "lng": -63.013333,
+    "cell": "defi.zb391.taza.zcc31",
+    "hansen.loss_year": 2023,
+    "jrc_gfc2020.forest_2020": 1,
+    "hansen.tree_cover_2000": 100,
+    "esa_cci_biomass.agb_t_per_ha_2022": 208.0,
+    "indices.ndvi": 0.43281250000000004,
+    "hansen.loss_year|fact_cid": "6rtcbfumrzhac2a32vkoixocgtel7ws5bxnra2omnrjv5apyfnea",
+    "jrc_gfc2020.forest_2020|fact_cid": "ncupl5ptbfrz5kgis4swtfrvleqwcln4xvbpjxjaul3ocz3hznoq"
+   },
+   {
+    "row": 4,
+    "col": 8,
+    "lat": -9.726667,
+    "lng": -63.006667,
+    "cell": "defi.zb391.nota.zcc7f",
+    "hansen.loss_year": 2024,
+    "jrc_gfc2020.forest_2020": 1,
+    "hansen.tree_cover_2000": 86,
+    "esa_cci_biomass.agb_t_per_ha_2022": 231.0,
+    "indices.ndvi": 0.6816743733268434,
+    "hansen.loss_year|fact_cid": "oiu5g7xg2hnokz25sjoxagm42m7wodcb6xemhxrmokpol4vtu2va",
+    "jrc_gfc2020.forest_2020|fact_cid": "v6dyr5msnzspzl3ltoondbzjyux5n7zpcxel2ulxdrnnevr5ekra"
+   },
+   {
+    "row": 8,
+    "col": 8,
+    "lat": -9.753333,
+    "lng": -63.006667,
+    "cell": "defi.zb391.bOyE.zcc7f",
+    "hansen.loss_year": 2024,
+    "jrc_gfc2020.forest_2020": 1,
+    "hansen.tree_cover_2000": 49,
+    "esa_cci_biomass.agb_t_per_ha_2022": 118.0,
+    "indices.ndvi": 0.6553076734493747,
+    "hansen.loss_year|fact_cid": "kvy4a65jlaqcy3mgbpfoz7vnabnhiknvgoxydaweim4gvftwk53q",
+    "jrc_gfc2020.forest_2020|fact_cid": "vtzio2wculzysclmccj6kc6zu6tfkvxfl64bbk4n45vgfcdrgupa"
+   }
+  ],
+  "maps_disagree": [
+   {
+    "row": 7,
+    "col": 3,
+    "cell": "defi.zb391.fisO.zcafa",
+    "hansen.loss_year": 2023,
+    "jrc_gfc2020.forest_2020": 0,
+    "jrc_tmf.deforestation_year": 1984
+   }
+  ],
+  "category_counts": {
+   "not_forest_2020_no_hansen_loss": 43,
+   "forest_2020_no_later_loss": 33,
+   "cleared_2001_2020": 20,
+   "eudr_flag_forest_2020_loss_after_2020": 3,
+   "loss_after_2020_on_gfc2020_non_forest": 1
+  },
+  "ndvi_dates": {
+   "2026-09-28": 73,
+   "2026-09-21": 27
+  },
+  "query_window_utc": [
+   "2026-09-30T19:12:35.091Z",
+   "2026-09-30T19:13:27.015Z"
+  ],
+  "data_file": "data/case_rondonia_eudr.json"
+ }
+}

@@ -1,16 +1,62 @@
-# The poster: A0 portrait, print-ready
+# The poster: A0 portrait, print-ready (v11)
 
 | file | what it is |
 |---|---|
-| `emem-poster-A0.pdf` | print file, 841 × 1189 mm, fonts embedded (IBM Plex, OFL) |
-| `emem-poster-preview.png` | 3179 × 4494 px preview |
-| `poster.html` | the source; edit this, then re-render |
-| `render.mjs` | renders the HTML to the PDF and PNG (needs `playwright-core` and Chromium) |
-| `qr-*.svg` | QR codes: the repro folder, emem.dev/verify, the DOI |
+| `emem-poster-A0.pdf` | print file, 841 × 1189 mm, one page, fonts embedded (IBM Plex, OFL) |
+| `emem-poster-preview.png` | 3179 px wide preview |
+| `src/poster.v11.html` | **the source; edit this** |
+| `poster.html` | build product (SVGs inlined); do not edit |
+| `build_v11.py` | builds figures, inlines SVG, renders PDF and PNG with WeasyPrint, runs the gates |
+| `make_hero_v11.py` | figure 1, the whole protocol around one real observation |
+| `make_figures_v11.py` | R1 (mutation matrix, from `research/repro/v11/out/mutation_matrix.json`), R2 (agreement vs correctness), R4 (memory through time, from `research/repro/data/contra_bengaluru.json`); also the pixel-audit grids for handouts |
+| `fig/v11/` | generated figures and the three QR codes (each with its payload in a `.txt`) |
+| `archive/v10/` | the v10 board as it was sealed (`board.jpg` and `board.pdf` here are the v10 sealed files) |
+| `render.mjs` | optional Chromium renderer for `poster.html` (needs `playwright-core`) |
 
-Every claim on the poster is traced in `../research/should_do/04_VERIFIED_CLAIMS_LEDGER.md`
-and `05_EVIDENCE_AND_NUMBERS.md`. The printed tokens and bytes were re-verified live on
-2026-09-29 (`../research/repro/`).
+Build:
+
+```
+pip install weasyprint pypdfium2 matplotlib qrcode fonttools
+python poster/build_v11.py            # add --no-figures to skip figure regeneration
+```
+
+The build fails, rather than warns, if the PDF is not exactly one A0 page, if content reaches the footer,
+if running text has an em or en dash or a tell word, or if a QR file is missing.
+
+Every number on the board is mapped to its source in
+[`../research/should_do/15_V11_CLAIMS_MAP.md`](../research/should_do/15_V11_CLAIMS_MAP.md).
+Why the board changed, and what is still open before printing:
+[`../research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md`](../research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md).
+
+## v11.2: a research poster, not an audit (30 Sep 2026)
+
+- **R4 is now memory through time** (Bengaluru elevation across a change of upstream DEM; as-of answers re-hash).
+  The pixel error is one sentence in R1, as the production case of mutation M15.
+- **Discussion** (six design statements) replaces "Objections we expect"; **Conclusion** added.
+- **What a verified token guarantees** replaces the scope table (guaranteed, recomputable, named, tested, out of scope).
+- The six-number strip became one line of scale; the footer points to the claims map instead of listing defects.
+- Reasons: `../research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md` §3c.
+
+## v11: from audit log to invention (30 Sep 2026)
+
+- **One hero figure** shows all of emem around the real Keylong NDVI record: the fact plane (record, fact_cid,
+  batch signing, log, signed absence, two clocks), the token algebra, the six checks any receiver runs, the note
+  plane, and the wall between them (agents cannot write observations).
+- **Six contributions**, C1 to C6, each with its formula from the code and a measurement on the live system.
+- **What agents do with it:** eight jobs and four uses in the wild (common decoder across vendors, the geo.qa
+  dispute settled by bytes, eudr.dev, any node with the same receipts).
+- **Four results.** R1 is the mutation test: 17 corruptions of a real signed record against nine verification
+  depths, from prose (15 of 15 get through) to full emem (0 of 16), with leave-one-out. R2 is agreement versus
+  correctness, R3 the two-LLM handoff, and R4 turns v10's pixel defect into evidence: the records located and dated
+  emem's own error.
+- **What emem establishes:** a seven-row table separating bytes, place and time, derivation, upstream file, entity,
+  truth and decision (yes, checkable, partial, no).
+- **Objections and answers** replace "Where emem lost" and "What is not established"; the full self-audit stays
+  in `research/`, named in the footer.
+- **Removed:** numbers with no committed source (see the claims map); panel numbers that collided with § steps.
+- **Editing:** read `../research/should_do/18_V11_PROCESS_AND_HANDOFF.md` first.
+- **Seal:** the QR still opens the v10 evidence track `7n7qogvn…` (28 of 28), whose steps the § marks cite.
+  Resealing v11 is listed as open work.
 
 ## v11: the token family, one address (30 Sep 2026)
 

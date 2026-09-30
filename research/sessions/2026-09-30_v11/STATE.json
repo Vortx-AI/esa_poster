@@ -1,0 +1,151 @@
+{
+ "written": "2026-09-30",
+ "repo": "github.com/Vortx-AI/esa_poster",
+ "branch": "v11-invention-board",
+ "base": {
+  "main": "24c5d6f",
+  "v10_merge": "50bb8bf"
+ },
+ "commits": [
+  "aff0c21 Poster v11: invention-grade board",
+  "c53480c Poster v11.1: mutation test as R1, identity table, response to field map, handoff",
+  "415bcf7 Objection: 111 witness keys, 2 organisation-vouched; one other operator domain (geo.qa)",
+  "d47a412 Poster v11.2: a research poster, not an audit",
+  "(this commit) session log, next steps, AGENTS.md, requirements"
+ ],
+ "pushed": false,
+ "push_blocker": "supplied token is fine-grained (github_pat_) for avijeetsingh1; 403 on push and on fork; needs a classic token with repo scope or org approval",
+ "emem_read_at": "e226f8b (mechanisms cited at 18adb67)",
+ "event": {
+  "name": "Agentic AI for Earth Observation, ESA Phi-lab and BIFOLD",
+  "session": "Poster Session 1",
+  "when": "2026-10-19 17:00-18:30",
+  "room": "B. von Langenbeck"
+ },
+ "board": {
+  "source": "poster/src/poster.v11.html",
+  "build": "python poster/build_v11.py",
+  "pdf": "poster/emem-poster-A0.pdf",
+  "sections": [
+   "header",
+   "problem and invention",
+   "figure 1 (hero)",
+   "six contributions C1-C6",
+   "what agents do with it",
+   "four results R1-R4",
+   "discussion",
+   "conclusion",
+   "what a verified token guarantees",
+   "try it",
+   "evidence track",
+   "references and reproducibility"
+  ]
+ },
+ "results": {
+  "R1": {
+   "name": "mutation test",
+   "acted_on_corrupted_evidence": {
+    "A": "15/15",
+    "B": "15/15",
+    "C": "13/16",
+    "D": "12/16",
+    "E": "9/16",
+    "F": "3/16",
+    "G": "2/16",
+    "H": "1/16",
+    "I": "0/16"
+   },
+   "leave_one_out_gets_through": {
+    "D": [],
+    "E": [
+     "M4",
+     "M5",
+     "M6"
+    ],
+    "F": [
+     "M9",
+     "M10",
+     "M11",
+     "M12"
+    ],
+    "G": [
+     "M16"
+    ],
+    "H": [
+     "M14"
+    ],
+    "I": [
+     "M15"
+    ]
+   },
+   "genuine_refused_any_level": false
+  },
+  "R2": {
+   "compaction": "72/72 correct, 36/36 agree; 20/72, 15/36; 0/72, 3/36; one-sided Fisher p = 0.035 (descriptive)",
+   "handoff_n20": {
+    "prose": "2/20",
+    "dense": "8/20",
+    "bm25": "20/20",
+    "bundle": "20/20"
+   }
+  },
+  "R3": {
+   "token": "10/10",
+   "prose_16_digits": "10/10",
+   "prose_rounded": "0/5",
+   "forged_cell_declined": "5/5"
+  },
+  "R4": {
+   "key": "defi.zb493.xuqA.zcb5f copdem30m.elevation_mean tslot 0",
+   "as_of": {
+    "2026-05-01": null,
+    "2026-06-15": 918.0,
+    "2026-08-12": 915.0712280273438,
+    "2026-09-29": 915.0712280273438
+   }
+  }
+ },
+ "off_board_but_recorded": [
+  "pixel error rate 162/200 (81 %, Wilson 75-86 %), 49/49 after fix",
+  "MCP tool count 114",
+  "REST paths 177",
+  "wired measurements 118 vs 116",
+  "36 audit defects",
+  "authors' scorecard",
+  "19 withdrawn claims",
+  "v10 drift taxonomy"
+ ],
+ "gates": [
+  "one A0 page",
+  ">= 2 mm above footer",
+  "no em/en dashes outside numeric ranges",
+  "no tell words",
+  "QR files present",
+  "no overlapping or clipped figure labels"
+ ],
+ "toolchain": [
+  "weasyprint==69.0",
+  "pypdfium2==5.13.0",
+  "matplotlib==3.11.2",
+  "qrcode==8.2",
+  "fonttools==4.63.0",
+  "blake3==1.0.10",
+  "cbor2==6.1.4",
+  "PyNaCl==1.6.2",
+  "Pillow==12.3.0",
+  "numpy==2.5.3",
+  "python 3.13"
+ ],
+ "docs": [
+  "AGENTS.md",
+  "research/sessions/2026-09-30_v11/README.md",
+  "research/sessions/2026-09-30_v11/NEXT_STEPS.md",
+  "research/should_do/15_V11_CLAIMS_MAP.md",
+  "research/should_do/16_V11_CRITIQUE_AND_DECISIONS.md",
+  "research/should_do/17_V11_RESPONSE_TO_FIELD_MAP.md",
+  "research/should_do/18_V11_PROCESS_AND_HANDOFF.md",
+  "research/audit_v11/",
+  "research/repro/v11/README.md"
+ ],
+ "next": "research/sessions/2026-09-30_v11/NEXT_STEPS.md"
+}

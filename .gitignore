@@ -4,3 +4,4 @@ agent_identity.json
 identity.json
 *.seed
 __pycache__/
+.DS_Store
