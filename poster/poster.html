@@ -104,7 +104,7 @@ table.t td.m{font-family:PlexMono,monospace;font-size:4.9mm;white-space:nowrap}
 .bottom .chartimg{height:78mm;width:auto;max-width:100%;margin:0 auto}
 
 /* bottom */
-.bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12mm}
+.bottom{display:grid;grid-template-columns:1.15fr .85fr;gap:14mm}
 .blk{border-top:.7mm solid var(--ink);padding-top:3mm;display:flex;flex-direction:column;gap:2.4mm}
 .blk h3{font-size:8.6mm;line-height:1.12;font-weight:600;letter-spacing:-.01em}
 .blk p{font-size:5.4mm;line-height:1.33;color:var(--ink2)} .blk p b{color:var(--ink)}
@@ -129,36 +129,32 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
 
 <header>
   <div class="meta"><span>Agentic AI for Earth Observation · Berlin · Poster Session 1 · 19 Oct 2026</span><span>Apache-2.0 · github.com/Vortx-AI/emem</span></div>
-  <h1>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</h1>
+  <h1>emem: A research on Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</h1>
   <div class="authors"><b>Jaya Kumari</b> · <b>Avijeet Singh</b> — Vortx AI · doi:10.5281/zenodo.20706893 · claims pinned to emem <span class="mono">64cfae5</span>; every live value below obtained from emem.dev on 29 Sep 2026 — integrity checks (A1–A3, A8) re-run with independent code</div>
 </header>
 
 <!-- LEAD -->
 <section class="lead">
   <div class="problem">
-    <div class="q">Two agents working on the same place have no way to know they are working on <span class="acc">the same observation</span>.</div>
-    <div class="src">Each carries its own description, in its own words, inside its own context. Descriptions drift, and nothing in either model can detect it.</div>
-    <p class="ans">emem moves that identity out of the model into a shared record. <b>One place → one address. One observation → one signed fact.</b> An agent hands another party a token; the token dereferences to exact bytes; the receiver checks those bytes without trusting the sender, the network, or the server that served them.</p>
-    <div class="rule1"><b>The one rule:</b> the bytes hash to the id, and the signature checks against a published key. Everything else is convenience.<span class="mu">Earth observation is the first and largest corpus the protocol serves, not its definition.</span></div>
+    <div class="q">Referential drift starts when <span class="acc">evidence becomes prose.</span></div>
+    <div class="src">A real Lahaul NDVI value of 0.4871541501976284 became “≈ 0.49”. Two models agreed more — and both crossed the irrigation threshold the wrong way.</div>
+    <p class="ans">emem changes the handoff unit. <b>Carry the address of the signed observation record, not a sentence about it.</b> A later agent resolves the record, re-hashes the bytes and verifies the attestation before reasoning from it.</p>
+    <div class="rule1"><b>OBSERVE → ADDRESS → HAND OFF → RESOLVE → VERIFY → CONTINUE</b><span class="mu">The agent is temporary. The cited world-state is not. Integrity is checkable; measurement truth is not implied.</span></div>
   </div>
   <div class="tokens">
-    <h4>Token family — openly unequal</h4>
+    <h4>Three EO objects</h4>
     <table class="t">
-      <tr><th>token</th><th>dereferences to</th><th>a match proves</th></tr>
-      <tr><td class="m">emem:fact:</td><td>exact stored bytes (32-byte BLAKE3)</td><td><span class="str b">bytes</span></td></tr>
-      <tr><td class="m">emem:raster:</td><td>signed derivation of an f32 grid</td><td><span class="str b">bytes</span> via artifact</td></tr>
-      <tr><td class="m">emem:cube:</td><td>signed manifest of rasters in time</td><td><span class="str b">bytes</span> via members</td></tr>
-      <tr><td class="m">emem:bundle:</td><td>a set of facts (≤ 256)</td><td><span class="str d">set</span> · members bytes</td></tr>
-      <tr><td class="m">emem:entity:</td><td>a registered identity (16 B)</td><td><span class="str n">shared name</span></td></tr>
-      <tr><td class="m">emem:cell:</td><td>nothing — refused by design</td><td><span class="str n">address only</span></td></tr>
+      <tr><th>carry</th><th>world-state</th><th>receiver can</th></tr>
+      <tr><td class="m">emem:fact:</td><td>one signed observation record</td><td><span class="str b">resolve + re-hash</span></td></tr>
+      <tr><td class="m">emem:raster:</td><td>one spatial field + signed derivation</td><td><span class="str b">re-hash field</span></td></tr>
+      <tr><td class="m">emem:cube:</td><td>that field through time</td><td><span class="str b">resolve members</span></td></tr>
     </table>
-    <p class="tnote">A guard that checks citations treats only the first four as evidence. Treating an entity as a content commitment is the likeliest misuse of the protocol.</p>
+    <p class="tnote"><span class="mono">bundle</span>, <span class="mono">entity</span> and <span class="mono">cell</span> intentionally have different strengths. The protocol does not pretend every token means “same bytes”.</p>
   </div>
 </section>
 
-
 <section class="life">
-  <div class="ttl"><h3>Fig. 1 — The life of one observation, with its real identifiers</h3><span>fact oj5cecci… · Keylong, Lahaul · every value below read from emem.dev on 29 Sep 2026</span></div>
+  <div class="ttl"><h3>Fig. 1 — One real observation becomes portable world-state</h3><span>fact oj5cecci… · Keylong, Lahaul · every value below read from emem.dev on 29 Sep 2026</span></div>
   <div class="lanes"><div class="lane">upstream</div><div class="lane">materialise</div><div class="lane">address</div><div class="lane">content</div><div class="lane">sign · record</div><div class="lane">serve</div><div class="lane">agents</div></div>
   <div class="stages">
     <div class="stg"><span class="n">Sentinel-2A L2A scene</span><span class="v">S2A_MSIL2A_20260925T054251 _R005_T43SFS</span><span class="d">B08 and B04 COGs, found via the Planetary Computer STAC API; scene-level cloud 10.8 %</span></div>
@@ -180,169 +176,117 @@ table.s td:last-child{text-align:right;font-weight:600;white-space:nowrap;paddin
 <section class="eo">
   <figure><div class="h">Fig. 2a — true colour, from signed grids</div><img src="fig/keylong_truecolor.png" alt="Sentinel-2A true colour, Keylong"><figcaption>B04/B03/B02, each an <span class="mono">emem:raster:</span> artifact of 802,780 B re-hashed ✓ · 443 × 453 px at 10 m · 25 Sep 2026</figcaption></figure>
   <figure><div class="h">Fig. 2b — NDVI computed by us from B08, B04</div><img src="fig/keylong_ndvi.png" alt="NDVI from signed grids"><figcaption>□ = the 9.55 m cell of fact <span class="mono">oj5cecci…</span> (NDVI 0.4709), rebuilt bit-for-bit from its own DNs (A1)</figcaption></figure>
-  <figure><div class="h">Fig. 2c — a cube is a signed manifest of scenes; each states its date gap</div><img src="fig/cube_members.png" alt="Five cube members, B08"><figcaption><b>One emem:cube: token, five members, each its own raster token and re-hashed artifact.</b> Asked for the 15th of each month; the scene actually used is 10–29 days later, and the manifest says so. The 13 Sep member is cloudy: selection uses scene-level cloud cover (≤ 40 %, relaxed in tiers), not a per-pixel mask — a limit we show rather than crop.</figcaption></figure>
+  <figure><div class="h">Fig. 2c — FIELD → TIME: one cube token, five independently resolvable scenes</div><img src="fig/cube_members.png" alt="Five cube members, B08"><figcaption><b>One emem:cube: token, five members, each its own raster token and re-hashed artifact.</b> Asked for the 15th of each month; the scene actually used is 10–29 days later, and the manifest says so. The 13 Sep member is cloudy: selection uses scene-level cloud cover (≤ 40 %, relaxed in tiers), not a per-pixel mask — a limit we show rather than crop.</figcaption></figure>
 </section>
 
 <!-- CONTRIBUTIONS -->
 <section class="grid">
 
   <div class="panel">
-    <div class="hd"><span class="no">A1</span><h3>A self-certifying observation you can rebuild</h3></div>
-    <p class="mech">A fact is <b>(cell, band, tslot, value, uncertainty, sources, derivation, signer, signed_at)</b>, encoded as deterministic CBOR (declaration order, NaN/−0 canonical) and named by BLAKE3 of those bytes. The derivation carries enough to recompute the value offline.</p>
-<div class="live"><span class="h">live · verify_ndvi.py</span>fact <span class="ok">oj5cecci…</span>  1,115 bytes   re-hash <span class="ok">MATCH</span>
-scene  S2A_MSIL2A_20260925T054251_R005_T43SFS
-DN     B08 3502   B04 1900   BOA offset −1000 (PC, PB ≥ 04.00)
-signed     0.4708994708994709   0x3fde233788cde233
-rebuilt    0.4708994708994709   0x3fde233788cde233  <span class="ok">bit-identical</span>
+    <div class="hd"><span class="no">01</span><h3>ADDRESS · the observation record names itself</h3></div>
+    <p class="mech">A record is <b>(cell, band, tslot, value, uncertainty, sources, derivation, signer, signed_at)</b>. emem serialises it deterministically; BLAKE3 of those exact bytes becomes its content id.</p>
+<div class="live"><span class="h">real Keylong NDVI · verify_ndvi.py</span>fact <span class="ok">oj5cecci…</span>  1,115 bytes   re-hash <span class="ok">MATCH</span>
+B08 DN 3502   B04 DN 1900   offset −1000
+signed   0.4708994708994709
+rebuilt  0.4708994708994709   <span class="ok">bit-identical</span>
 same cid under another cell → <span class="no">HTTP 409</span></div>
-    <div class="meta2"><span class="l pa">prior art</span><span>STAC file:checksum / Merkle hash assets; RDA Dynamic Data Citation cites a stored query + timestamp.</span><span class="l nw">new</span><span>to our knowledge, an identifier for the individual value, carrying its own recomputation.</span><span class="l li">limit</span><span>signer and signed_at are hashed: a CID names one attestation, not the observation. Scenes are pinned by id, not by hash.</span></div>
+    <div class="meta2"><span class="l nw">invariant</span><span>changed bytes → changed id; wrong place → fail closed.</span><span class="l li">boundary</span><span>the CID names one signed record because signer and signed_at are inside the record; it is not a universal “truth id”.</span></div>
   </div>
 
   <div class="panel">
-    <div class="hd"><span class="no">A2</span><h3>Two clocks: when the ground was so, and when the system knew it</h3></div>
-    <p class="mech"><b>tslot</b> is valid time (days since 1970 for fast bands; 0 for static). <b>signed_at</b> is transaction time. <span class="mono">as_of_signed_at</span> replays a key’s full signed history.</p>
-<div class="duo"><img class="chartimg" src="fig/two_clocks.svg" alt="Elevation served for one key against transaction time: 918.0 m until 11 Aug, then 915.07 m"><div class="live"><span class="h">live · verify_bitemporal.py</span>Bengaluru · elevation_mean
-as known 01 May   <span class="k">no fact</span>
-as known 15 Jun   918.0 m   <span class="ok">✓</span>
-as known 12 Aug   915.07 m  <span class="ok">✓</span>
-as known 29 Sep   915.07 m  <span class="ok">✓</span>
-<span class="k">✓ = bytes re-hash to the cid</span></div></div>
-    <div class="meta2"><span class="l pa">prior art</span><span>SQL:2011 bitemporal periods; XTDB / Datomic as-of; Zep bitemporal agent memory (arXiv 2501.13956).</span><span class="l nw">new</span><span>to our knowledge, signed transaction time on EO values served to agents: a later agent can replay what an earlier one was told.</span><span class="l li">limit</span><span>without an explicit tslot the same query timed out (504) on this 280-fact cell.</span></div>
+    <div class="hd"><span class="no">02</span><h3>HAND OFF · carry the address, not the paraphrase</h3></div>
+    <p class="mech">A trust boundary does not need the previous model’s context. It needs the token. The receiving agent can <b>resolve → re-hash → verify → reason</b> from the same cited record.</p>
+<div class="live"><span class="h">measured paraphrase trap · one real Lahaul fact</span>signed NDVI     0.4871541501976284
+decision rule    WATER if NDVI &lt; 0.488
+token handoff    Gemma WATER · Qwen WATER     <span class="ok">correct</span>
+prose “≈ 0.49”   Gemma SKIP  · Qwen SKIP      <span class="no">agree + wrong</span></div>
+    <div class="meta2"><span class="l nw">drift</span><span>the reference survives even when context is compacted, replaced or moved to another model.</span><span class="l li">boundary</span><span>a valid token does not make a model’s conclusion correct; it makes the evidence it cited recoverable and checkable.</span></div>
   </div>
 
   <div class="panel">
-    <div class="hd"><span class="no">A3</span><h3>“Looked, nothing there” is signed; “could not look” is not</h3></div>
-    <p class="mech">An upstream’s definitive no-data becomes an <b>Absence</b> fact — signed, citable, its reason bound by hash. Timeouts and upstream errors return an <b>unsigned</b> skip note instead, so the two stay distinct.</p>
-<div class="live"><span class="h">live · verify_absence.py · (−12.26, −140.15), open ocean</span>kind  absence   value null
-reason "Cop-DEM GLO-30 publishes no tile … returned 404"
-reason_cid yjtj52cf…  re-derived locally <span class="ok">✓</span>   receipt <span class="ok">valid</span>
-(−82.5, 45.0) indices.ndvi → <span class="k">skip, upstream_error, unsigned</span></div>
-    <div class="meta2"><span class="l pa">prior art</span><span>DNSSEC NSEC/NSEC3; sparse-Merkle non-inclusion proofs; authenticated spatial range queries.</span><span class="l nw">new</span><span>to our knowledge, a signed EO distinction between absence and failure to observe.</span><span class="l li">limit</span><span>a signed assertion, not authenticated denial against a committed set; the reason hashes prose, not the upstream response.</span></div>
+    <div class="hd"><span class="no">03</span><h3>FIELD · give the model pixels, not prose about pixels</h3></div>
+    <p class="mech"><span class="mono">emem:raster:</span> names a spatial field through a signed derivation; <span class="mono">emem:cube:</span> binds independently resolvable fields through time. The derivation pins AOI, band, scene, recipe, date and artifact hash.</p>
+<div class="live"><span class="h">real Keylong B08 cube · Fig. 2</span>15 May → 10 Jun  (+26 d)
+15 Jun → 30 Jun  (+15 d)
+15 Jul → 03 Aug  (+19 d)
+15 Aug → 13 Sep  (+29 d)
+15 Sep → 25 Sep  (+10 d)
+5 artifacts re-hashed <span class="ok">✓</span></div>
+    <div class="meta2"><span class="l nw">use</span><span>satellite state enters reasoning as an addressable field, and the temporal substitution is explicit rather than hidden.</span><span class="l li">boundary</span><span>scene selection uses scene-level cloud cover; re-minting can produce a new derivation id for identical pixels.</span></div>
   </div>
 
   <div class="panel">
-    <div class="hd"><span class="no">A4</span><h3>Disagreement is kept and returned, not fused</h3></div>
-    <p class="mech">Every attestation at a (cell, band, tslot) key is retained. <span class="mono">memory_contradictions</span> returns disagreement per key — scalar spread, 1 − mean cosine for vectors, 1 − mode share for classes — and flags a signer that switched provider or recipe.</p>
-<div class="live"><span class="h">live · Bengaluru elevation key</span>disagreement_scope  same_attester_provider_substitution
-providers  open_meteo_copdem90m@1 → copernicus_dem_30m_aws_pixel@1
-attestations 8  (918.0 ×1, 915.07 ×7)</div>
-    <div class="meta2"><span class="l pa">prior art</span><span>truth discovery (Li et al. 2016) resolves conflicts; land-cover disagreement maps (Fritz et al. 2011); Dempster–Shafer conflict mass — usually in order to fuse.</span><span class="l nw">new</span><span>a design stance, not an algorithm: disagreement is a query answer with provenance.</span><span class="l li">limit</span><span>one responder today, so no genuine multi-party data; the severity scale is uncalibrated for bands without a registry range.</span></div>
+    <div class="hd"><span class="no">04</span><h3>VERIFY · check the sentence before it leaves the agent</h3></div>
+    <p class="mech"><span class="mono">guard/verdict</span> resolves citations in a draft and compares the written number with the signed value at the writer’s precision. A mismatch becomes a typed refusal, not a confidence score.</p>
+<div class="live"><span class="h">real Bengaluru temperature fact = 28.0 °C</span>“… was 35 °C (token)”             <span class="no">deny PROV_VALUE</span>
+“… was 28.0 °C (token)”           <span class="ok">allow</span>
+same cid under another cell       <span class="no">deny PROV_BYTES</span>
+uncited measurable claim, gating  <span class="no">deny CLAIM_UNGROUNDED</span></div>
+    <div class="meta2"><span class="l nw">loop</span><span>OBSERVE → ADDRESS → HAND OFF → RESOLVE → VERIFY → CONTINUE.</span><span class="l li">boundary</span><span>the hosted guard is advisory; it does not yet check whether the cited band semantically matches the sentence.</span></div>
   </div>
 
-  <div class="panel">
-    <div class="hd"><span class="no">A5</span><h3>A claimed derivative is recomputed, and the gap reported in ULPs</h3></div>
-    <p class="mech"><span class="mono">/v1/derive</span> resolves every parent token (mislabelled parent → 409, missing → 404), re-runs the op, and promotes the result to <b>deterministic_index</b> only on a match: exact for leaves, <b>≤ 4 ULP</b> for mean/sum over &gt; 2 parents. It always returns the rule and the measured gap.</p>
-<div class="live"><span class="h">live · signed with a throwaway key</span>exact delta        ulp_gap 0          <span class="ok">verified</span>
-sum, +2 ULP        ulp_gap 2  (tol 4) <span class="ok">verified</span>
-sum, +9 ULP        ulp_gap 9  (tol 4) <span class="no">refused → model_output</span>
-<span class="k">why 4: sum over N = 5, 16, 32, 64, 128 real parents gave 0, 1, 2, 2, 0 ULP</span></div>
-    <div class="meta2"><span class="l pa">prior art</span><span>Nix / Bazel content-addressed derivations; bitwise vs ensemble-statistical reproducibility in Earth-system models.</span><span class="l nw">new</span><span>to our knowledge, hermeticity classes with a declared, measured ULP bound returned with each EO verdict.</span><span class="l li">limit</span><span>tier 1 covers scalar delta/mean/sum and registry expressions; arbitrary code and multi-hop lineage are not re-run.</span></div>
-  </div>
+</section>
 
-  <div class="panel">
-    <div class="hd"><span class="no">A6</span><h3>Fields and fields-through-time as signed derivations</h3></div>
-    <p class="mech">A raster is a canonical f32 grid (64-byte <span class="mono">EMEMGRD1</span> header, NaN/−0 canonical) whose hash sits in a signed record: AOI, band, scene, cloud, sun/view angles, anchor cells. A cube is a signed manifest of rasters; each member records the date asked for and <b>how far its scene is from it</b> (Fig. 2c). The model receives a field, not a sentence about one; pixels can be evicted and rebuilt from the record.</p>
-<div class="live"><span class="h">live · band_cube over Fig. 2 · s2.B08</span>asked 15 May → 10 Jun (+26 d)   15 Jun → 30 Jun (+15 d)
-asked 15 Jul → 03 Aug (+19 d)   15 Aug → 13 Sep (+29 d)
-asked 15 Sep → 25 Sep (+10 d)   5 artifacts re-hashed <span class="ok">✓</span>
-raster/resolve spot_check: grid matches record at 5/5 anchors <span class="ok">✓</span></div>
-    <div class="meta2"><span class="l pa">prior art</span><span>openEO / Earth Engine datacubes; STAC items.</span><span class="l nw">new</span><span>a content-addressed, signed cube manifest that records its temporal substitutions.</span><span class="l li">limit</span><span>scene choice uses scene-level cloud cover; a re-mint yields a new token for identical pixels (signed_at is hashed).</span></div>
-  </div>
-
-  <div class="panel">
-    <div class="hd"><span class="no">A7</span><h3>An agent’s prose is checked against the values it cites</h3></div>
-    <p class="mech"><span class="mono">guard/verdict</span> reads a draft, resolves each cited token, and compares the written number with the signed value at the writer’s own precision. Refusals are typed and carry the fix; a refused write returns the exact digest to sign.</p>
-<div class="live"><span class="h">live · cited fact = 28.0 °C (met.no, Bengaluru)</span>“… was 35 °C (token)”              <span class="no">deny PROV_VALUE</span>
-“… was 28.0 °C (token)”            <span class="ok">allow</span>
-same cid cited under another cell  <span class="no">deny PROV_BYTES</span>
-uncited “35 °C in Bengaluru on 2026-09-28”, gating on  <span class="no">deny CLAIM_UNGROUNDED</span></div>
-    <div class="meta2"><span class="l pa">prior art</span><span>signed receipts for MCP tool calls (2025–26); output guardrails, incl. GeoGuard at this workshop.</span><span class="l nw">new</span><span>to our knowledge, value-level checking of prose against signed EO facts, with citation strength typed.</span><span class="l li">limit</span><span>advisory on emem.dev; claim gating off by default; band-to-sentence matching not checked.</span></div>
-  </div>
-
-  <div class="panel">
-    <div class="hd"><span class="no">A8</span><h3>An append-only record anyone can audit offline</h3></div>
-    <p class="mech">RFC 6962 Merkle log over BLAKE3 with signed tree heads, inclusion and consistency proofs. Receipt v2 signs the Merkle proof <b>or an explicit ABSENT marker</b>, so stripping a proof or downgrading the version breaks the signature.</p>
-<div class="duo" style="grid-template-columns:1fr 1.1fr"><div class="live"><span class="h">live · written from RFC 9162</span>STH signature  <span class="ok">valid</span>  size 2,538,190
-leaf 1,234,567 included   <span class="ok">true</span>
-  same leaf, 1 bit flipped <span class="no">false</span>
-consistency 1 M → 2.54 M  <span class="ok">true</span>
-receipt as served  <span class="ok">valid</span>
-  proof stripped   <span class="no">invalid</span>
-  relabelled v1    <span class="no">invalid</span></div><img class="chartimg" src="fig/log_growth.svg" alt="Log size over time, 0 in April to 2.54 million entries on 29 September"></div>
-    <div class="meta2"><span class="l pa">prior art</span><span>Certificate Transparency, Trillian, Sigstore Rekor, Go sumdb witnesses.</span><span class="l nw">new</span><span>nothing cryptographic — a careful application to EO facts consumed by agents.</span><span class="l li">limit</span><span>the co-signing witness (geo.qa) is a second node on its own key, run by the same organisation; read federation does not exist.</span></div>
-  </div>
-
+<section class="layers" aria-label="Other consequences of the same protocol">
+  <div class="layer"><b>SIGN ABSENCE</b>“looked, nothing there” stays distinct from “could not look”.</div>
+  <div class="layer"><b>KEEP DISAGREEMENT</b>conflicting attestations remain separate; they are not silently averaged.</div>
+  <div class="layer"><b>RE-DERIVE</b>deterministic derivatives are recomputed and their numerical gap is reported.</div>
+  <div class="layer"><b>AUDIT HISTORY</b>attestations enter an append-only Merkle log with offline-checkable proofs.</div>
 </section>
 
 <!-- FINDINGS + REPRO -->
 <section class="bottom">
   <div class="blk">
-    <h3>B1 · Agreement between agents is not evidence of correctness</h3>
-    <svg class="chart" viewBox="0 0 250 64" width="100%" role="img" aria-label="True NDVI 0.48715 lies below the 0.488 threshold (water); paraphrase 0.49 lies above it (skip)">
+    <h3>DRIFT · agreement can rise while correctness falls</h3>
+    <svg class="chart" viewBox="0 0 250 64" width="100%" role="img" aria-label="True NDVI 0.48715 lies below the 0.488 threshold; paraphrase 0.49 lies above it">
       <line x1="6" y1="38" x2="244" y2="38" stroke="#141414" stroke-width=".7"/>
       <g font-size="5" fill="#85857E" text-anchor="middle"><text x="10" y="47">0.480</text><text x="85.3" y="47">0.485</text><text x="164.7" y="47">0.490</text><text x="238" y="47">0.495</text></g>
       <line x1="133" y1="8" x2="133" y2="52" stroke="#141414" stroke-width=".7" stroke-dasharray="2 1.4"/>
-      <text x="133" y="5" font-size="5.2" text-anchor="middle" font-weight="600">water if NDVI &lt; 0.488</text>
+      <text x="133" y="5" font-size="5.2" text-anchor="middle" font-weight="600">WATER if NDVI &lt; 0.488</text>
       <circle cx="119.6" cy="38" r="3.4" fill="#1F4FD8" stroke="#FBFBF8" stroke-width="1.2"/>
-      <text x="115" y="22" font-size="5" text-anchor="end"><tspan font-weight="600">token</tspan> 0.4871541501976284</text>
+      <text x="115" y="22" font-size="5" text-anchor="end"><tspan font-weight="600">addressed</tspan> 0.4871541501976284</text>
       <text x="115" y="29" font-size="4.6" text-anchor="end" fill="#46463F">both models: WATER</text>
       <circle cx="164.7" cy="38" r="3.4" fill="#B3261E" stroke="#FBFBF8" stroke-width="1.2"/>
-      <text x="169" y="22" font-size="5"><tspan font-weight="600">paraphrase</tspan> “≈ 0.49”</text>
+      <text x="169" y="22" font-size="5"><tspan font-weight="600">prose</tspan> “≈ 0.49”</text>
       <text x="169" y="29" font-size="4.6" fill="#B3261E">agree more; both SKIP</text>
-      <text x="6" y="61" font-size="4.6" fill="#46463F">one real Lahaul NDVI fact · Gemma-4-12B and Qwen2.5-7B</text>
+      <text x="6" y="61" font-size="4.6" fill="#46463F">one real Lahaul observation · Gemma-4-12B and Qwen2.5-7B</text>
     </svg>
     <table class="s">
-      <tr><td>pre-registered: full context (control)</td><td>72/72 correct · 36/36 agree</td></tr>
-      <tr><td>after a shared compaction summary</td><td class="rf">0/72 · 3/36 · p = 0.035</td></tr>
-      <tr><td>handoff by prose · dense RAG · BM25 · bundle</td><td>2 · 8 · 20 · 20 of 20</td></tr>
-      <tr><td>599-turn run: citable answers, bundle vs BM25</td><td>100% vs 0%</td></tr>
+      <tr><td>full-context control</td><td>72/72 correct · 36/36 agree</td></tr>
+      <tr><td>shared compaction summary</td><td class="rf">0/72 correct · 3/36 agree · p = 0.035</td></tr>
+      <tr><td>20-turn handoff: prose · dense · BM25 · bundle</td><td>2 · 8 · 20 · 20 correct</td></tr>
+      <tr><td>599-turn run: citable, bundle vs BM25</td><td>100% vs 0%</td></tr>
     </table>
-    <p class="ref">Fisher one-sided; 0/72 ⇒ 95% upper bound ≈ 4.1%; one host, open models, no independent replication. BM25 ties on short handoffs. The phenomenon is known — Perez et al. ICLR 2025 (telephone game); Laban et al. 2505.06120; “The Deliberative Illusion” 2606.03032; “Lost in Compaction” 2608.11242; ARC 2607.25066 (pointer-based compaction). The contribution is a mechanism that detects drift of cited values.</p>
+    <p class="ref">Pre-registered result; Fisher one-sided. Two open models on one host; no independent replication. The known phenomenon is lossy multi-agent communication. emem’s contribution is a handoff object whose cited evidence can be recovered and checked instead of paraphrased.</p>
   </div>
 
   <div class="blk">
-    <h3>B2 · A signed record of agents correcting each other — and us</h3>
-    <img class="chartimg" src="fig/agent_graph.svg" alt="Correspondence graph of agents on emem">
-    <p><b>Real correspondence on 29 Sep:</b> 46 of 54 corresponding agents form one connected group — 96 directed pairs, 6,191 notes addressed to a peer (blue = emem’s own key; size = volume). Across the channel, <b>5,425 of 5,473 cited tokens still resolve (99.1 %)</b>. 13 corrections are recorded, 10 against the corrector’s own position; 19 claims withdrawn in total.</p>
-    <table class="s">
-      <tr><td>per-encoder change calibration — shown impossible by an outside agent (∂²S/∂c∂x = −∂ log L/∂x vanishes on flat fields)</td><td class="rf">withdrawn</td></tr>
-      <tr><td>headline 1.000 counted empty answers → 0.989</td><td class="rf">corrected</td></tr>
-      <tr><td>cell64 cheaper for LLMs than H3 — 12.5 vs 8.5 tokens</td><td class="rf">refuted</td></tr>
-      <tr><td>handing a model the opaque id — tokenizers cut it identically 0–4% of the time; the descriptor <span class="mono">lat,lng@date@band</span> 100%</td><td class="rf">replaced</td></tr>
-      <tr><td>emem vs peer agent-memory products</td><td class="nt">not tested</td></tr>
-    </table>
-    <p class="ref">Record: whitepaper v3 §2–3; counts from the live responder. geo.qa and other Vortx deployments are not independent adoption. Verifiability is not accuracy: a signature says who wrote a thing, never that it is true.</p>
-  </div>
-
-  <div class="blk">
-    <h3>Reproduce</h3>
+    <h3>RESOLVE · RE-HASH · VERIFY</h3>
     <div class="repro">
-<pre><span class="cm"># pip install blake3 cbor2 pynacl</span>
-python verify_fact.py        <span class="cm"># bytes → id</span>
-python verify_ndvi.py        <span class="cm"># A1</span>
-python verify_bitemporal.py  <span class="cm"># A2</span>
-python verify_absence.py     <span class="cm"># A3</span>
-python verify_log.py         <span class="cm"># A8</span>
-python verify_receipt_tamper.py \
-       receipt_2026-09-29.json
+<pre><span class="cm"># one checkable object</span>
+TOKEN='emem:fact:...'
 
-<span class="cm"># agents: MCP (18 core tools)</span>
-claude mcp add --transport http \
-  emem https://emem.dev/mcp
-<span class="cm"># Python: pip install ememdev</span>
-<span class="cm"># node:   docker run -p 5051:5051 \</span>
-<span class="cm">#   ghcr.io/vortx-ai/emem:latest</span></pre>
+<span class="cm"># resolve exact bytes</span>
+curl .../memory_token/resolve
+
+<span class="cm"># recompute its BLAKE3 id</span>
+python verify_fact.py "$TOKEN"
+
+<span class="cm"># verify the signed receipt offline</span>
+python verify_receipt_tamper.py   receipt_2026-09-29.json
+
+<span class="cm"># then hand the same token to another agent</span></pre>
       <div class="qrs">
-        <div class="qr"><img src="qr-repro.svg" alt="QR: repro scripts"><span><b>Scripts</b>every live value here</span></div>
-        <div class="qr"><img src="qr-code.svg" alt="QR: source"><span><b>Source</b>Apache-2.0</span></div>
-        <div class="qr"><img src="qr-doi.svg" alt="QR: paper"><span><b>Paper</b>Zenodo</span></div>
+        <div class="qr"><img src="qr-code.svg" alt="QR: emem.dev"><span><b>emem.dev</b>paper · source · verify · reproduce</span></div>
       </div>
     </div>
-    <p class="ref"><b>Not claimed.</b> Anything running in orbit (edge signing is simulated: 0.17% of a 40 ms frame). Hardware-attested devices. Read federation. Formal proofs or full conformance vectors. Triple-encoder change consensus (retired). The accuracy of any observation.</p>
+    <p><b>What holds:</b> byte identity, spatial binding, signer/receipt integrity, replayable cited state.</p>
+    <p><b>What does not:</b> objective truth, sensor accuracy, model correctness or a guarantee that the prose conclusion follows from the cited band.</p>
+    <p class="ref">The poster uses real tokens, real Sentinel-2 grids and independently re-run checks. Detailed prior art, audit defects, withdrawn claims and all reproduction scripts stay in the repository rather than competing for wall space.</p>
   </div>
 </section>
 
-<div class="foot"><span>Scale on 29 Sep 2026: 5,880 cells · 90 bands · 118 measurements from 46 upstream schemes · log 2,538,190 entries · MCP + REST + A2A from one Rust binary. Open issues found in our own audit are listed in the repository (research/do_not_use/05).</span><span>Contact: Vortx AI</span></div>
+<div class="foot"><span>All examples: real production records checked 29 Sep 2026 · emem commit <span class="mono">64cfae5</span> · source, paper and reproduction at emem.dev</span><span>Vortx AI</span></div>
 
 </div></div>
 </body>
