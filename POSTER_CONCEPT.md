@@ -1,5 +1,7 @@
 # Poster concept — emem at Agentic AI for Earth Observation
 
+> **⚠ Checked against emem source on 2026-09-29.** Several statements below were imprecise or wrong (signature placement, CBOR profile, token families, orbit, encoders). The corrected wording lives in [research/should_do/04_VERIFIED_CLAIMS_LEDGER.md](research/should_do/04_VERIFIED_CLAIMS_LEDGER.md); the list of fixes is in [research/do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md](research/do_not_use/03_CORRECTIONS_TO_CURRENT_CONCEPT.md). Inline fixes are marked **[v2]**.
+
 ## Respect the paper title
 
 **emem: A research on Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings**
@@ -38,7 +40,7 @@ Where:
 - `v` — scalar, vector, embedding, or derived value
 - `u` — uncertainty/confidence
 - `p` — provenance, source ids, derivation rule, encoder/version
-- `s` — signature
+- `s` — signer public key + `signed_at` **[v2]** (the ed25519 signature is on the enclosing attestation, over a Merkle root of fact CIDs)
 
 The atom is the observation, not the model output and not the file.
 
@@ -55,15 +57,15 @@ fact_cid
 ```
 
 ```text
-CID(O) = Base32(BLAKE3(CanonicalCBOR(O)))
+fact_cid = base32(BLAKE3(emem-CBOR(O)))   [v2: declaration-ordered, float-canonical; not RFC 8949 key-sorted]
 ```
 
 For `emem:fact:`:
 
 - the bytes that are hashed are the bytes that are stored;
-- equal canonical bytes independently produce the same name;
+- equal canonical bytes independently produce the same name; **[v2]** because `signer` and `signed_at` are hashed, a CID names one *signed attestation* — two attesters of the same value mint different CIDs;
 - any changed byte produces a different name;
-- the client can re-hash the body and detect substitution.
+- the client can re-hash the body and detect substitution (the resolver itself checks the cell and fails with 409; **the client** re-hashes).
 
 This is the scientific core.
 
@@ -284,9 +286,9 @@ Use six compact scientific mechanisms, not marketing feature boxes:
 1. **Canonical encoding** — same observation serializes to the same bytes.
 2. **Content-derived identity** — changed content changes the CID.
 3. **Spatial binding** — a valid fact cannot silently be relabelled under another cell.
-4. **Signed receipt** — fact ids and query context are bound to a responder key.
+4. **Signed receipt** — request id, time, primitive, cells, fact ids, as-of, manifest and Merkle proof (or signed ABSENT marker) are bound to a responder key. **[v2]** Full query parameters are not bound.
 5. **Immutable evolution** — corrections become new observations; old state remains replayable.
-6. **Pinned semantics** — source, algorithm, schema and band registries are content-addressed too.
+6. **Pinned semantics** — bands, sources, schema and function registry are content-addressed and bound into receipts. **[v2]** `algorithms_cid` is published but not in the receipt preimage.
 
 ---
 

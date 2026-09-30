@@ -1,0 +1,50 @@
+{
+ "cube_token": "emem:cube:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20614..20721:7ath7qdwqbagvs6kojf7pquay5faj2wahytearzkpsrk7e4sufsa",
+ "members": [
+  {
+   "req": "2026-05-15",
+   "scene": "S2B_MSIL2A_20260610T053639_R005_T43SFS_20260610T091702",
+   "days": 26,
+   "artifact": "lwsosygvxa5cul4s5udll4bm7lxchczy6cw53u42jvrknspbg7eq",
+   "rehash": true,
+   "file": "cube_20614.bin",
+   "raster_token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20614:trwmzekmb3mik54gzlz7nsz5564d47evozybaaeslva7w372xjyq"
+  },
+  {
+   "req": "2026-06-15",
+   "scene": "S2B_MSIL2A_20260630T053639_R005_T43SFS_20260630T091701",
+   "days": 15,
+   "artifact": "4oapr7iuwq5262wpazn7ctm2iesvui33zbsv7kqbjuhb2qtqtaxa",
+   "rehash": true,
+   "file": "cube_20634.bin",
+   "raster_token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20634:trnlv376gkscbsmgyrxzlznrl23wyup72cfj244ec7cv4kshrosa"
+  },
+  {
+   "req": "2026-07-15",
+   "scene": "S2A_MSIL2A_20260803T053251_R105_T43SFS_20260803T144710",
+   "days": 19,
+   "artifact": "fbba5ot4s6ejs2ehuwuvji33odifw44bfreqdmcugtor6aktu4rq",
+   "rehash": true,
+   "file": "cube_20668.bin",
+   "raster_token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20668:3k344xokwvghqe6yhnfpd5pmrph4gjiny72jc45ko4o335tcrokq"
+  },
+  {
+   "req": "2026-08-15",
+   "scene": "S2C_MSIL2A_20260913T053641_R005_T43SFS_20260913T101758",
+   "days": 29,
+   "artifact": "st5ltgifplmrrzw4bezmhuwqc37gk3rv6hykl6mkd3ckej7yveua",
+   "rehash": true,
+   "file": "cube_20709.bin",
+   "raster_token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20709:bvlsgt4xotztaohigck6lx6zxefmgu4genxacph2qnrjkqob745a"
+  },
+  {
+   "req": "2026-09-15",
+   "scene": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+   "days": 10,
+   "artifact": "krb5zrnbvis3qdcdqnxcxfux5fbdysd6l4tzlccrscb5hdzywk3a",
+   "rehash": true,
+   "file": "cube_20721.bin",
+   "raster_token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20721:74n3alcksp4pxpljv4qldxywxykrepezhysblvw5t7ccbiw3yeeq"
+  }
+ ]
+}
