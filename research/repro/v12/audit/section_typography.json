@@ -1,0 +1,222 @@
+{
+ "Header": {
+  "lines": 8,
+  "words": 64,
+  "chars": 448,
+  "median_pt": 15.3,
+  "min_pt": 12.8,
+  "max_pt": 51.6,
+  "pct_chars_below_18pt": 64,
+  "pct_mono": 30
+ },
+ "Problem": {
+  "lines": 5,
+  "words": 54,
+  "chars": 300,
+  "median_pt": 17.6,
+  "min_pt": 13.9,
+  "max_pt": 26.6,
+  "pct_chars_below_18pt": 87,
+  "pct_mono": 0
+ },
+ "Invention": {
+  "lines": 5,
+  "words": 72,
+  "chars": 410,
+  "median_pt": 17.6,
+  "min_pt": 13.9,
+  "max_pt": 32.3,
+  "pct_chars_below_18pt": 69,
+  "pct_mono": 0
+ },
+ "Hero figure": {
+  "lines": 115,
+  "words": 417,
+  "chars": 2415,
+  "median_pt": 12.8,
+  "min_pt": 9.9,
+  "max_pt": 17.0,
+  "pct_chars_below_18pt": 100,
+  "pct_mono": 14
+ },
+ "C1": {
+  "lines": 8,
+  "words": 67,
+  "chars": 386,
+  "median_pt": 16.4,
+  "min_pt": 14.0,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 91,
+  "pct_mono": 50
+ },
+ "C2": {
+  "lines": 8,
+  "words": 76,
+  "chars": 459,
+  "median_pt": 16.4,
+  "min_pt": 14.0,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 95,
+  "pct_mono": 49
+ },
+ "C3": {
+  "lines": 8,
+  "words": 83,
+  "chars": 550,
+  "median_pt": 17.4,
+  "min_pt": 14.0,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 92,
+  "pct_mono": 31
+ },
+ "C4": {
+  "lines": 9,
+  "words": 106,
+  "chars": 541,
+  "median_pt": 16.4,
+  "min_pt": 14.0,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 93,
+  "pct_mono": 59
+ },
+ "C5": {
+  "lines": 8,
+  "words": 90,
+  "chars": 566,
+  "median_pt": 16.4,
+  "min_pt": 14.0,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 94,
+  "pct_mono": 69
+ },
+ "C6": {
+  "lines": 7,
+  "words": 88,
+  "chars": 492,
+  "median_pt": 16.4,
+  "min_pt": 14.0,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 93,
+  "pct_mono": 40
+ },
+ "What agents do: tools strip": {
+  "lines": 36,
+  "words": 164,
+  "chars": 1008,
+  "median_pt": 14.7,
+  "min_pt": 12.5,
+  "max_pt": 27.2,
+  "pct_chars_below_18pt": 98,
+  "pct_mono": 13
+ },
+ "What agents do: four vignettes": {
+  "lines": 16,
+  "words": 149,
+  "chars": 876,
+  "median_pt": 15.3,
+  "min_pt": 15.3,
+  "max_pt": 17.0,
+  "pct_chars_below_18pt": 100,
+  "pct_mono": 0
+ },
+ "R1": {
+  "lines": 12,
+  "words": 154,
+  "chars": 894,
+  "median_pt": 15.6,
+  "min_pt": 13.9,
+  "max_pt": 27.2,
+  "pct_chars_below_18pt": 78,
+  "pct_mono": 36
+ },
+ "R2": {
+  "lines": 7,
+  "words": 73,
+  "chars": 425,
+  "median_pt": 15.6,
+  "min_pt": 13.9,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 83,
+  "pct_mono": 46
+ },
+ "R3": {
+  "lines": 20,
+  "words": 89,
+  "chars": 467,
+  "median_pt": 14.7,
+  "min_pt": 12.8,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 80,
+  "pct_mono": 23
+ },
+ "R4": {
+  "lines": 10,
+  "words": 117,
+  "chars": 690,
+  "median_pt": 15.6,
+  "min_pt": 13.9,
+  "max_pt": 21.8,
+  "pct_chars_below_18pt": 80,
+  "pct_mono": 26
+ },
+ "Discussion": {
+  "lines": 30,
+  "words": 325,
+  "chars": 1939,
+  "median_pt": 16.0,
+  "min_pt": 16.0,
+  "max_pt": 27.2,
+  "pct_chars_below_18pt": 99,
+  "pct_mono": 14
+ },
+ "Conclusion": {
+  "lines": 10,
+  "words": 72,
+  "chars": 405,
+  "median_pt": 16.4,
+  "min_pt": 16.4,
+  "max_pt": 27.2,
+  "pct_chars_below_18pt": 98,
+  "pct_mono": 0
+ },
+ "Guarantees table": {
+  "lines": 26,
+  "words": 128,
+  "chars": 771,
+  "median_pt": 14.2,
+  "min_pt": 12.8,
+  "max_pt": 27.2,
+  "pct_chars_below_18pt": 96,
+  "pct_mono": 21
+ },
+ "Try it / evidence boxes": {
+  "lines": 4,
+  "words": 42,
+  "chars": 224,
+  "median_pt": 13.5,
+  "min_pt": 13.5,
+  "max_pt": 13.9,
+  "pct_chars_below_18pt": 100,
+  "pct_mono": 50
+ },
+ "Footer": {
+  "lines": 6,
+  "words": 156,
+  "chars": 1018,
+  "median_pt": 11.9,
+  "min_pt": 11.9,
+  "max_pt": 11.9,
+  "pct_chars_below_18pt": 100,
+  "pct_mono": 0
+ },
+ "other": {
+  "lines": 2,
+  "words": 18,
+  "chars": 103,
+  "median_pt": 16.4,
+  "min_pt": 16.4,
+  "max_pt": 27.2,
+  "pct_chars_below_18pt": 83,
+  "pct_mono": 0
+ }
+}

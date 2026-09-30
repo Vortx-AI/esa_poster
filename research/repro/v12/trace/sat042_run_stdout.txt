@@ -1,0 +1,114 @@
+# SAT-042 reference run (emem satellite_downlink example) and orin_stream
+# emem commit: 04b40c56c97d1c2809ca05003dc2b7d6de450758
+# toolchain: rustc 1.98.1 (48a229cea 2026-09-01) / cargo 1.98.1 (797e8a9bc 2026-08-05)
+# machine: darwin arm64 host, 8 cores, 8 GB RAM; CARGO_BUILD_JOBS=4, dev profile, debuginfo off
+# HOW IT WAS RUN: the example source crates/emem-primitives/examples/satellite_downlink.rs
+#   (sha256 073469b6241fac2eb2c3513823f9e8fb422bc5ea48b7538d952ead2b3f994529) was compiled
+#   as a binary in a local harness crate against the same emem crates at this commit
+#   (emem-storage, emem-trace, emem-fact, emem-core, emem-codec, emem-attest) and the
+#   same Cargo.lock versions. One line differs: the import of
+#   emem_primitives::memory_bundle is replaced by compiling the same file
+#   crates/emem-primitives/src/memory_bundle.rs via #[path]. Reason: emem-primitives
+#   also depends on lance, datafusion, arrow 58, ort and tokenizers (497 crates), which the
+#   example never calls and which do not fit in the 3.6 GB of free disk on this machine.
+#   'cargo run -p emem-primitives --example satellite_downlink' itself was NOT run.
+# run window (UTC): 2026-09-30T19:14:15Z to 2026-09-30T19:14:16Z; exit code 0; stderr empty; two runs byte-identical
+#   stdout sha256 799efb7a1d76ff7f148f53d41939dee00120b16cdc2f837a62a7e3c05eca57db
+# ---------------- satellite_downlink stdout (verbatim) ----------------
+act 1  enrolled spacecraft key mwndc7zcesxqvw7bgxmbff3trktrynx3edprmwtzodv6qt45vqvq
+       profile orbital.satellite.v1 requires 8 trace layers:
+       [Syscall, Scheduler, Memory, SensorBus, Signal, Energy, Thermal, Storage]
+
+act 2  write without a trace:
+       attestation verification failed: os_trace gate: attester mwndc7zcesxqvw7bgxmbff3trktrynx3edprmwtzodv6qt45vqvq is enrolled under orbital.satellite.v1; writes require the device's OS execution trace and none was presented
+
+act 3  smuggle one unemitted fact into a sound batch:
+       attestation verification failed: os_trace gate: fact at band indices.ndvi carries payload digest cyzwaknc3wznnmpjc52er4sy4kxqkeq6ysflubbmahrxassy4jlq that is not bound in the trace's emitted outputs
+
+act 4  admitted: 3 facts under one verified trace
+       emem:fact:defi.zb55e.natI.tUpu:ol4ugzp4rmkc7nodxgfnm3bucamdbell6anysvt5syqlwhmzjtia
+       emem:fact:defi.zb55e.nadU.tUra:wndl3zwt4b27q2ufzpwc6oxwqx7a2t3ysd3evwzjnewvz5wphefa
+       emem:fact:defi.zb55e.mUgI.tUsE:asue5jcmxpwiur3ajfj7xil5u7uz7bvh4rrxbcqswkvjeop2lbhq
+       emem:trace:3arfrney6ieeugzekzqfufwoayvqj3edhc6fbwaqzhydxn2hbogq
+       emem:bundle:sfxaann374s7omyhfhbavl3qne
+
+act 5  drift-anchor scoring against the open archive:
+       defi.zb55e.natI.tUpu  device 0.6431 vs anchor 0.6402  score 0.05  Consistent
+       defi.zb55e.nadU.tUra  device 0.6512 vs anchor 0.6402  score 0.15  Consistent
+       defi.zb55e.mUgI.tUsE  device 0.2103 vs anchor 0.6402  score 0.88  Contradicted
+
+       tampered segment 2 after signing; the verifier answers:
+       reject: chain broken at seq 3
+
+done   three facts, one trace, one bundle, and every forgery named.
+# ---------------- end satellite_downlink stdout ----------------
+
+# orin_stream: examples/orin_stream.rs (sha256 2dc8e7aa2cc543f6482b2a5e99ffa14e11839c38772bed68690212ceeafb1a4e),
+#   compiled unmodified in the same harness; EMEM_FRAMES_DIR set to the committed
+#   crates/emem-primitives/examples/data/orin_frames (the default the example uses).
+# run at (UTC): 2026-09-30T19:14:32Z; exit code 0; two runs byte-identical
+# ---------------- orin_stream stdout (verbatim) ----------------
+act 1  an NVIDIA Jetson Orin NX wants to write to emem
+       device key   ntfeklrwpzf4qswye7rf3me72swfwrmg5gsp2azq327ajzxkfpea
+       platform     nvidia.jetson-orin (TcgDiceX509 root of trust, edge_ai family)
+       profile      robot.fleet.v1 requires 7 trace layers: [Syscall, Scheduler, Memory, SensorBus, Energy, Thermal, Inference]
+
+       attested enrolment refused (as expected): attestation verification failed: os_trace gate: platform attestation rejected: platform nvidia.jetson-orin has no effective trust anchor; it admits nothing yet
+       enrolled operator-asserted (assurance = operator_asserted)
+
+act 2  streaming 4 camera frames, each an OS-traced window:
+       frame 0 (frame_0.png): emem:trace:hbwnyjvop5kzuqoe2k2ravwisnqyf77aty4dgyn2jrvjbj6gl7tq  chained<-(stream head)
+       frame 1 (frame_1.png): emem:trace:xwgzwz7olg2j6asvfkb3mk4ojtf3e667x3fwls7gsdd5nrjuea5q  chained<-hbwnyjvop5kzuqoe2k2ravwisnqyf77aty4dgyn2jrvjbj6gl7tq
+       frame 2 (frame_2.png): emem:trace:6wgijazegcmo4bwzatcafxz2k3v2leay3hxf32ahivrt7wu3nzla  chained<-xwgzwz7olg2j6asvfkb3mk4ojtf3e667x3fwls7gsdd5nrjuea5q
+       frame 3 (frame_3.png): emem:trace:7yetai4ztfiybx7xgtaabea2bumo3ey5mehvveejvpwhbczjltja  chained<-6wgijazegcmo4bwzatcafxz2k3v2leay3hxf32ahivrt7wu3nzla
+
+act 3  drop a frame (a window that does not chain to the head):
+       attestation verification failed: os_trace gate: stream continuity broken — this device's stream head is 7yetai4ztfiybx7xgtaabea2bumo3ey5mehvveejvpwhbczjltja, but the trace's prev_trace_cid is None
+
+act 3b the Orin reboots (fresh boot_id) and streams again:
+       new-boot head admitted: emem:trace:bou3ovrczgz5aztdompy3cxh3u6rvl42fdzooe42ztouqty7detq
+
+act 4  hand off only the tokens; reconstruct and re-verify:
+       emem:trace:hbwnyjvop5kzuqoe2k2ravwisnqyf77aty4dgyn2jrvjbj6gl7tq -> verified Admit, binds image digest: true, prev: (head)
+       emem:trace:xwgzwz7olg2j6asvfkb3mk4ojtf3e667x3fwls7gsdd5nrjuea5q -> verified Admit, binds image digest: true, prev: hbwnyjvop5kzuqoe2k2ravwisnqyf77aty4dgyn2jrvjbj6gl7tq
+       emem:trace:6wgijazegcmo4bwzatcafxz2k3v2leay3hxf32ahivrt7wu3nzla -> verified Admit, binds image digest: true, prev: xwgzwz7olg2j6asvfkb3mk4ojtf3e667x3fwls7gsdd5nrjuea5q
+       emem:trace:7yetai4ztfiybx7xgtaabea2bumo3ey5mehvveejvpwhbczjltja -> verified Admit, binds image digest: true, prev: 6wgijazegcmo4bwzatcafxz2k3v2leay3hxf32ahivrt7wu3nzla
+
+       chain (head -> tail): 7yetai4z..6wgijaze..xwgzwz7o..hbwnyjvo..(head)  4 frames linked
+
+act 5  what reconstruction returns — the honest boundary:
+       the token is 63 bytes; frame 0 (frame_0.png) is 194030 bytes
+       on disk, and a raw 1080p NV12 capture is 3110400 bytes.
+       ratio ~3079x against this file, ~49371x against raw NV12.
+       The token does not carry the frame; it carries
+       PROOF: the verified execution trace and the frame's digest.
+       Resolving it reconstructs the provenance, not the pixels.
+       The image travels out of band; blake3 == the bound digest
+       proves it was not altered. emem is memory, not a blob store:
+       putting the frame bytes in as a fact value would make every
+       fact_cid a hash of megabytes and defeat the 63-byte handoff.
+
+       out-of-band frame 0 re-fetched: blake3 matches the bound
+       digest, so the pixels are provably the ones the Orin emitted.
+
+       trace-of-the-trace: each capture encoding's own integrity:
+       Syscall <- linux.ftrace.v1 (InKernel)
+       Scheduler <- linux.ftrace.v1 (InKernel)
+       Memory <- linux.ftrace.v1 (InKernel)
+       SensorBus <- ros2.bag.v2 (OpenSourceUserspace)
+       Energy <- linux.hwmon.v1 (InKernel)
+       Thermal <- linux.hwmon.v1 (InKernel)
+       Inference <- nvidia.nsys.v1 (VendorRuntime)
+
+done   4 frames streamed, chained, and reconstructed; a dropped
+       frame refused; the image bound by digest, not swallowed.
+# ---------------- end orin_stream stdout ----------------
+
+# gate_path_probe: local probe written for this audit (not part of emem). Same SAT-042
+#   key and first fact. Calls put_attestation_gated (used by POST /v1/attest and
+#   /v1/attest_traced) and put_attestation (called directly by POST /v1/attest_cbor).
+# ---------------- gate_path_probe stdout (verbatim) ----------------
+enrolled mwndc7zcesxqvw7bgxmbff3trktrynx3edprmwtzodv6qt45vqvq under orbital.satellite.v1
+put_attestation_gated, no trace: REFUSED: attestation verification failed: os_trace gate: attester mwndc7zcesxqvw7bgxmbff3trktrynx3edprmwtzodv6qt45vqvq is enrolled under orbital.satellite.v1; writes require the device's OS execution trace and none was presented
+put_attestation (ungated), no trace: ADMITTED 1 fact(s): ol4ugzp4rmkc7nodxgfnm3bucamdbell6anysvt5syqlwhmzjtia
+# ---------------- end gate_path_probe stdout ----------------
