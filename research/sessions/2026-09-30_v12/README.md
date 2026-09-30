@@ -47,3 +47,30 @@ carries a trace.
 asserted per figure), renders one A0 page and fails on footer overrun, em dashes, tell words or missing QR payloads.
 `python research/repro/v12/scripts/claims_map_v12.py` regenerates `research/should_do/19_V12_CLAIMS_MAP.md` and asserts
 the printed strings are on the board.
+
+## v12.1 (same day, after the founder's review and the hostile review of v12)
+
+Founder feedback: the struck title read as harsh; the memory model, the drift formula and the other core formulas were
+missing; the M15 panel was not understandable; the space after the EUDR diagram was unused; the UI needed polish.
+The hostile review of v12 is kept verbatim in `research/repro/v12/audit/hostile_review_v12.md`.
+
+What changed on the board:
+
+| change | where | answers |
+|---|---|---|
+| Title keeps all three inputs, no strike: "over Earth-Observation Products, Foundation-Model Embeddings and Signed Execution Traces" | header | founder; hostile review |
+| Punchline "Agreement is not evidence. The pixel is." (no longer contradicts the problem headline); sub-line says "names the file it came from; open-archive pixels can be re-read" | header | hostile review |
+| New section 2, **The memory model**: six definitions typeset from emem docs/model.md and memory.md (observation tuple, cid and signature, M = (O*, E*), bi-temporal recall, NDVI recompute with the BOA offset, the accept conjunction D to I), beside the two-clock Bengaluru panel | section 2 | founder; hostile review (orphan two-clock panel) |
+| Drift decomposition dz = d_env + d_sensor + d_geo + d_encoder + eps under the idea (no numeric split is claimed) | idea column | founder |
+| Drift-anchor score s = z / (1 + z), z = abs(device - anchor) / 3 sigma, with the pinned 0.5 / 0.75 thresholds from emem-trace's tests | section 5 | founder; hostile review |
+| Reading order fixed: EO (section 3) now precedes the corruption matrix (section 4) that uses the Keylong record | sections 3, 4 | hostile review (sections in inverted order) |
+| M15 panel redrawn: the 5 x 5 NDVI window recomputed from the stored DNs, the named pixel (floor) and the pixel the old reader took (round, 10 m south), the two irrigation decisions, which check refuses it, and 162/200 (Wilson 75 to 86 %) before vs 0/54 after the fix | section 4 | founder |
+| Rondônia: "screen", not "check"; an auditor card for flagged cell A with its six signed facts and fact_cid prefixes fills the space after the grid; scope line on the board | section 3 | founder; hostile review |
+| Encoding bar: no red strike; embedding slots hatched and labelled model output; "embeddings are memories too" paragraph | section 1 | founder; hostile review |
+| Berlin rows: B08 named, S1 gamma-naught and "1 px", GLO-30 as surface height (DSM), MODIS daytime LST (1 km), CCI Biomass without the v6/v7 label, JRC GFC2020 V4 "not forest in 2020", CAMS forecast via Open-Meteo, FIRMS "no fire detected" | section 1 | hostile review, EO errors |
+| Section 5 retitled "How a satellite could prove what it ran"; SAT-042 called a scripted harness pass; "on the gated write paths" | section 5 | hostile review |
+| Guarantees row "the observation: bound"; STAC/openEO/C2PA answer rewritten; conclusions now close sections 3 and 4 | bottom row | hostile review |
+| Timing stated as measured (1.2 ms, level I, source window cached); 757 of 780 facts drawn; claims map copied to research/repro/v12/CLAIMS_MAP.md | sections 3, 4; footer | hostile review |
+
+Not changed, with reason: the Keylong SCL / processing-baseline note needs a per-fact field read that was not
+re-fetched this session; the DOI still resolves to v0.1.0 and is labelled as such.

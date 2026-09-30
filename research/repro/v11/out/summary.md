@@ -1,7 +1,7 @@
 # Mutation suite: summary
 
 16 in-scope mutations, one control (G0), one out-of-scope case (M17, entity).
-Whole suite 0.053 s; one full verification (level I) 1.182 ms, offline.
+Whole suite 0.0528 s; one full verification (level I) 1.187 ms, offline.
 
 | level | representation | in-scope applicable | acted on corrupted evidence | decision flipped | genuine refused |
 |---|---|---|---|---|---|

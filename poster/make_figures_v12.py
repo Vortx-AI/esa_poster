@@ -47,7 +47,8 @@ MM = 1 / 25.4
 mpl.rcParams.update({
     "font.family": SANS, "font.size": L, "axes.labelsize": S, "xtick.labelsize": S, "ytick.labelsize": S,
     "axes.edgecolor": INK2, "axes.linewidth": 1.0, "xtick.color": INK2, "ytick.color": INK2,
-    "svg.fonttype": "path", "mathtext.fontset": "custom", "mathtext.rm": SANS, "mathtext.it": SANS + ":italic",
+    "svg.fonttype": "path", "mathtext.fontset": "custom", "mathtext.rm": SANS, "mathtext.it": SANS + ":italic", "mathtext.bf": SANS + ":bold",
+    "mathtext.tt": MONO, "mathtext.fallback": "stixsans",
     "axes.spines.top": False, "axes.spines.right": False, "hatch.linewidth": 1.2,
 })
 NUMBERS = {}   # every number a figure prints, written to fig/v12/figure_numbers.json for the claims map
@@ -98,8 +99,8 @@ COMPACTION = [("full context (control)", 72, 72, 36, 36),
 
 def fig_failure(w=372, h=84):
     fig = fig_mm(w, h)
-    a = fig.add_axes([0.345, 0.2, 0.64, 0.78])
-    hh = 0.36
+    a = fig.add_axes([0.345, 0.2, 0.64, 0.79])
+    hh = 0.43
     for i, (lab, c, n, ag, npair) in enumerate(COMPACTION):
         a.barh(i - hh / 2, ag / npair, hh, color="#C98A00")
         a.barh(i + hh / 2, max(c / n, 0.005), hh, color=INK)
@@ -139,7 +140,7 @@ def fig_mutation(w=468, h=214):
               "out of scope"]
     real = {m["id"] for m in muts if m["real_case"]}
     RED, PALE, GREYC = "#B3261E", "#CFDBF6", "#E4E4DE"
-    rowh, gap = 1.0, 1.15
+    rowh, gap = 1.0, 1.45
     ys, y, gy = {}, 0.0, []
     for gi, g in enumerate(groups):
         if gi:
@@ -215,22 +216,22 @@ def fig_berlin(w=436, h=252):
     meta = scene_meta(b["cell"])
     s2 = "Sentinel-" + meta["item"][1:3] + " MSI L2A"          # S2C_MSIL2A_20260927... -> Sentinel-2C MSI L2A
     sel = [  # (product label, row, reading)
-        (s2, pick("Sentinel-2", "B08", "2026-09-27"), lambda r: f"NIR reflectance {r['value']:.4f}"),
+        (s2, pick("Sentinel-2", "B08", "2026-09-27"), lambda r: f"B08 NIR reflectance {r['value']:.4f}"),
         (s2, pick("Sentinel-2", "NDVI", "2026-09-27"), lambda r: f"NDVI {r['value']:.3f}"),
-        ("Sentinel-1 C-SAR GRD, RTC", pick("Sentinel-1", "VV", "2026-09-28"), lambda r: f"VV backscatter {r['value']:.2f} dB".replace("-", "\u2212")),
-        ("Copernicus DEM GLO-30", pick("Copernicus DEM", "elevation"), lambda r: f"elevation {r['value']:.1f} m"),
-        ("Terra MODIS MOD11A2", pick("MOD11A2", "temperature"), lambda r: f"day surface temp. {r['value']:.1f} K"),
+        ("Sentinel-1 C-SAR GRD, RTC", pick("Sentinel-1", "VV", "2026-09-28"), lambda r: "VV gamma-naught " + f"{r['value']:.2f} dB".replace("-", "\u2212") + ", 1 px"),
+        ("Copernicus DEM GLO-30", pick("Copernicus DEM", "elevation"), lambda r: f"surface height {r['value']:.1f} m (DSM)"),
+        ("Terra MODIS MOD11A2", pick("MOD11A2", "temperature"), lambda r: f"daytime LST {r['value']:.1f} K (1 km)"),
         ("ESA WorldCover 2021 v200", pick("WorldCover", "class"), lambda r: f"class {int(r['value'])}: built-up"),
-        ("ESA CCI Biomass v7", pick("CCI Biomass", "biomass"), lambda r: f"biomass {r['value']:.0f} t/ha"),
+        ("ESA CCI Biomass, 100 m", pick("CCI Biomass", "biomass"), lambda r: f"biomass {r['value']:.0f} t/ha"),
         ("JRC Global Surface Water", pick("Surface Water", "occurrence"), lambda r: f"water occurrence {r['value']:.0f} %"),
         ("Hansen Forest Change v1.13", pick("Hansen", "tree cover"), lambda r: f"tree cover 2000: {r['value']:.0f} %"),
-        ("JRC Forest Cover 2020", pick("Forest Cover 2020", "forest"), lambda r: "not forest (EUDR baseline)" if r["value"] == 0 else "forest (EUDR baseline)"),
-        ("Copernicus CAMS", pick("Copernicus Atmosphere", "NO2", "2026-09-30"), lambda r: f"surface NO$_2$ {r['value']:.1f} \u00b5g/m\u00b3"),
+        ("JRC GFC2020 V4", pick("Forest Cover 2020", "forest"), lambda r: "not forest in 2020" if r["value"] == 0 else "forest in 2020"),
+        ("CAMS forecast, Open-Meteo", pick("Copernicus Atmosphere", "NO2", "2026-09-30"), lambda r: f"surface NO$_2$ {r['value']:.1f} \u00b5g/m\u00b3"),
         ("Overture Maps (not EO)", pick("Overture", "building"), lambda r: f"{int(r['value'])} building footprints"),
         ("ISRIC SoilGrids v2", pick("SoilGrids", "organic carbon"), lambda r: "no data at this cell"),
         ("CHIRPS v2.0", pick("CHIRPS", "precip"), lambda r: "outside the \u00b150\u00b0 product"),
         ("JRC Tropical Moist Forest", pick("Tropical Moist", "deforestation"), lambda r: "outside the tropical belt"),
-        ("NASA FIRMS, VIIRS + MODIS", pick("FIRMS", "fire"), lambda r: "no active fire in 24 h"),
+        ("NASA FIRMS, VIIRS + MODIS", pick("FIRMS", "fire"), lambda r: "no fire detected in 24 h"),
     ]
     def when(label, r):
         if r["kind"] == "absence":
@@ -240,8 +241,8 @@ def fig_berlin(w=436, h=252):
         if "CCI" in label: return "2022"
         if "Surface Water" in label: return "1984 to 2021"
         if "Hansen" in label: return "2000"
-        if "Forest Cover 2020" in label: return "2020"
-        if "DEM" in label: return "GLO-30 release"
+        if "GFC2020" in label: return "2020"
+        if "DEM" in label: return o[:4] + " release"
         if "Overture" in label: return o[:10] + " release"
         if "CAMS" in label: return fmt_date(o) + ", 18 UTC" if o.endswith("18:00:00Z") or "T18:00" in o else fmt_date(o)
         if "MOD11A2" in label: return fmt_date(o + "T00:00:00") + ", 8-day"
@@ -320,13 +321,10 @@ def fig_encoding(w=345, h=150):
         is_enc = x in enc
         ax.add_patch(Rectangle((x0 + x["offset"] * sc, y0), x["dims"] * sc, bh, fc=c, ec="white", lw=0.6,
                                hatch="////" if is_enc else None, alpha=0.55 if is_enc else 1.0))
-    for x in enc:   # the strike: the same red line as the title
-        ax.plot([x0 + x["offset"] * sc - 0.5, x0 + (x["offset"] + x["dims"]) * sc + 0.5], [y0 + bh / 2] * 2,
-                color="#E5484D", lw=3.2, solid_capstyle="butt")
     ax.text(x0, y0 - 2.5, f"one cell = {len(bands)} slots, {total:,} dimensions (live ontology, bands_cid {d['bands_cid'][:8]}\u2026)",
             fontsize=S, color=INK, va="bottom")
-    ax.text(x0, y0 + bh + 3, f"foundation-model encoder slots: {enc_dims:,} of {total:,} dimensions, struck", fontsize=XS,
-            color="#C0282D", va="top")
+    ax.text(x0, y0 + bh + 3, f"hatched: foundation-model embedding slots, {enc_dims:,} of {total:,} dimensions, class model output",
+            fontsize=XS, color=INK2, va="top")
     # the ladder
     counts = {}
     for x in bands:
@@ -336,7 +334,7 @@ def fig_encoding(w=345, h=150):
               ("model_output", "a signed model checkpoint"),
               ("human_curated", "the attester who drew it"),
               ("unclassified", "nothing: it fails closed, lowest rank")]
-    ty, rh = 50, 12.9
+    ty, rh = 48.5, 11.5
     ax.text(x0, ty - 3, "class", fontsize=XS, color=MUTED, va="bottom")
     ax.text(x0 + 88, ty - 3, "slots", fontsize=XS, color=MUTED, va="bottom")
     ax.text(x0 + 142, ty - 3, "what a verifier leans on", fontsize=XS, color=MUTED, va="bottom")
@@ -349,9 +347,9 @@ def fig_encoding(w=345, h=150):
         ax.add_patch(Rectangle((x0 + 88, yc - 3), n * 1.6, 6, fc=CLS[c], ec="none", alpha=0.85))
         ax.text(x0 + 88 + n * 1.6 + 2, yc, str(n), fontsize=S, color=INK, va="center", fontweight=600)
         ax.text(x0 + 142, yc, lean, fontsize=S, color=INK2, va="center")
-    ax.text(x0, ty + rh * 5 + 5, "Two more classes are defined for fits and devices: estimator (re-run from signed inputs)",
+    ax.text(x0, ty + rh * 5 + 4.5, "Defined for fits and devices: estimator (re-run from signed inputs) and",
             fontsize=XS, color=INK2, va="center")
-    ax.text(x0, ty + rh * 5 + 12, "and attested execution (a reading bound inside a verified device trace).",
+    ax.text(x0, ty + rh * 5 + 11, "attested execution (a reading bound inside a verified device trace).",
             fontsize=XS, color=INK2, va="center")
     NUMBERS["encoding"] = {"slots": len(bands), "dims": total, "bands_cid": d["bands_cid"], "class_slots": counts,
                            "encoder_dims": enc_dims, "encoders": [x["key"] for x in enc]}
@@ -385,9 +383,10 @@ def fig_keylong(w=392, h=124):
                     xytext=(0, 12), textcoords="offset points", ha="center", fontsize=XS, color=INK)
     rec = next(r for r in rows if r["fact_cid"].startswith("oj5cecci"))
     ax.scatter([ts(rec)], [rec["value"]], s=380, facecolor="none", ec=AMB, lw=2.6, zorder=4)
-    ax.annotate(f"the record in section 2: {rec['value']:.4f}, {fmt_date(rec['observed_at'])}", (ts(rec), rec["value"]),
-                xytext=(-12, -58), textcoords="offset points", ha="right", fontsize=XS, color=AMB,
-                arrowprops=dict(arrowstyle="-", color=AMB, lw=1.4))
+    ax.annotate(f"corrupted in section 4\n{rec['value']:.4f}, {fmt_date(rec['observed_at'])}", (ts(rec), rec["value"]),
+                xytext=(datetime(2026, 6, 22, tzinfo=timezone.utc), 0.13), textcoords="data", ha="left", va="center",
+                fontsize=XS, color=AMB, fontweight=600,
+                arrowprops=dict(arrowstyle="-", color=AMB, lw=1.4, shrinkB=9))
     ax.axhline(0, color=MUTED, lw=0.8)
     ax.set_ylabel("NDVI, Sentinel-2 L2A", fontsize=S)
     ax.set_ylim(-0.12, 1.02)
@@ -414,7 +413,7 @@ def fig_keylong(w=392, h=124):
 
 
 # ---- 5b. Rondonia: EUDR check on a 10 x 10 grid ----
-def fig_rondonia(w=392, h=124):
+def fig_rondonia(w=392, h=94):
     r = json.load(open(V12 / "data/case_rondonia_eudr.json"))
     G = np.full((10, 10), "", dtype=object)
     bio = np.full((10, 10), np.nan)
@@ -423,54 +422,69 @@ def fig_rondonia(w=392, h=124):
         G[c["row"], c["col"]] = c["eudr_category"]
         bio[c["row"], c["col"]] = c["esa_cci_biomass.agb_t_per_ha_2022"]
         ly[c["row"], c["col"]] = c["hansen.loss_year"]
-    cats = sorted(set(G.ravel()))
-    colmap = {"forest_2020_no_later_loss": "#1B7A3A", "eudr_flag_forest_2020_loss_after_2020": "#D95F02", "cleared_2001_2020": "#E8C77A",
-              "not_forest_2020_no_hansen_loss": "#DADAD4"}
-    colmap["loss_after_2020_on_gfc2020_non_forest"] = "#F2A774"
-    other = ["loss_after_2020_on_gfc2020_non_forest"]
-    assert set(cats) <= set(colmap), cats
-    labels = {"forest_2020_no_later_loss": "forest in 2020, no later loss", "eudr_flag_forest_2020_loss_after_2020": "forest in 2020, loss after 2020",
-              "cleared_2001_2020": "cleared 2001 to 2020", "not_forest_2020_no_hansen_loss": "not forest in 2020"}
-    labels["loss_after_2020_on_gfc2020_non_forest"] = "loss after 2020, maps disagree"
+    FLAG, DIS = "eudr_flag_forest_2020_loss_after_2020", "loss_after_2020_on_gfc2020_non_forest"
+    colmap = {FLAG: "#D95F02", DIS: "#F2A774", "forest_2020_no_later_loss": "#1B7A3A",
+              "cleared_2001_2020": "#E8C77A", "not_forest_2020_no_hansen_loss": "#DADAD4"}
+    labels = {FLAG: "forest in 2020, loss after 2020", DIS: "loss after 2020, maps disagree",
+              "forest_2020_no_later_loss": "forest in 2020, no later loss", "cleared_2001_2020": "cleared 2001 to 2020",
+              "not_forest_2020_no_hansen_loss": "not forest in 2020"}
+    assert set(G.ravel()) <= set(colmap), set(G.ravel())
+    # the cell an auditor re-runs: the first flagged cell in reading order
+    flagged = [c for c in sorted(r["rows"], key=lambda c: (c["row"], c["col"])) if c["eudr_category"] == FLAG]
+    A = flagged[0]
     fig = fig_mm(w, h)
-    cell = 6.5
-    gx0, gy0 = 4, 16
     ax = mm_axes(fig, w, h)
-    ax.text(gx0, gy0 - 4, "EUDR check per cell", fontsize=S, color=INK, fontweight=600, va="bottom")
-    gx1 = gx0 + 10 * cell + 16
-    ax.text(gx1, gy0 - 4, "ESA CCI biomass 2022, t/ha", fontsize=S, color=INK, fontweight=600, va="bottom")
+    cell, gx0, gy0 = 5.9, 1, 12
+    gx1 = gx0 + 10 * cell + 9
+    ax.text(gx0, gy0 - 2.5, "EUDR screen", fontsize=S, color=INK, fontweight=600, va="bottom")
+    ax.text(gx1, gy0 - 2.5, "CCI biomass, t/ha", fontsize=S, color=INK, fontweight=600, va="bottom")
     cmap = plt.get_cmap("YlGn")
-    flagged = [(i, j) for i in range(10) for j in range(10) if G[i, j] == "eudr_flag_forest_2020_loss_after_2020"]
     for i in range(10):
         for j in range(10):
-            ax.add_patch(Rectangle((gx0 + j * cell, gy0 + i * cell), cell - 0.6, cell - 0.6, fc=colmap[G[i, j]], ec="none"))
-            if G[i, j] in ("eudr_flag_forest_2020_loss_after_2020",) or G[i, j] in other:
-                ax.text(gx0 + j * cell + cell / 2 - 0.3, gy0 + i * cell + cell / 2 - 0.3, f"{ly[i, j] % 100:02d}",
-                        ha="center", va="center", fontsize=XS, color="white", fontweight=700)
+            ax.add_patch(Rectangle((gx0 + j * cell, gy0 + i * cell), cell - 0.5, cell - 0.5, fc=colmap[G[i, j]], ec="none"))
             v = bio[i, j]
-            ax.add_patch(Rectangle((gx1 + j * cell, gy0 + i * cell), cell - 0.6, cell - 0.6,
+            ax.add_patch(Rectangle((gx1 + j * cell, gy0 + i * cell), cell - 0.5, cell - 0.5,
                                    fc=cmap(min(v, 300) / 300) if v == v else "#EEE", ec="none"))
-    for i, j in flagged:
-        ax.add_patch(Rectangle((gx1 + j * cell - 0.4, gy0 + i * cell - 0.4), cell + 0.2, cell + 0.2, fill=False,
-                               ec="#D95F02", lw=2.6))
-    # colour bar for biomass
-    cb_y = gy0 + 10 * cell + 5
+    for c in [c for c in r["rows"] if c["eudr_category"] == FLAG]:
+        for gx in (gx0, gx1):
+            ax.add_patch(Rectangle((gx + c["col"] * cell - 0.35, gy0 + c["row"] * cell - 0.35), cell + 0.2, cell + 0.2,
+                                   fill=False, ec="#D95F02" if gx == gx1 else INK, lw=2.2))
+    ax.text(gx0 + A["col"] * cell + cell / 2 - 0.25, gy0 + A["row"] * cell + cell / 2 - 0.25, "A", ha="center", va="center",
+            fontsize=XS, color="white", fontweight=700)
+    cb_y = gy0 + 10 * cell + 3.5
     for t in range(60):
-        ax.add_patch(Rectangle((gx1 + t * 10 * cell / 60, cb_y), 10 * cell / 60 + 0.05, 3.5, fc=cmap(t / 59), ec="none"))
+        ax.add_patch(Rectangle((gx1 + t * 10 * cell / 60, cb_y), 10 * cell / 60 + 0.05, 3, fc=cmap(t / 59), ec="none"))
     for v in (0, 150, 300):
-        ax.text(gx1 + v / 300 * 10 * cell, cb_y + 5.5, str(v), fontsize=XS, color=INK2, ha="center", va="top")
-    # legend column
-    lx, lyy = gx1 + 10 * cell + 14, gy0 + 4
-    order = ["eudr_flag_forest_2020_loss_after_2020"] + other + ["forest_2020_no_later_loss", "cleared_2001_2020", "not_forest_2020_no_hansen_loss"]
+        ax.text(gx1 + v / 300 * 10 * cell, cb_y + 4.5, str(v), fontsize=XS, color=INK2, ha="center", va="top")
+    # legend
+    lx, lyy = gx1 + 10 * cell + 8, gy0 + 1
+    order = [FLAG, DIS, "forest_2020_no_later_loss", "cleared_2001_2020", "not_forest_2020_no_hansen_loss"]
     cnt = {c: int((G == c).sum()) for c in order}
     for c in order:
-        ax.add_patch(Rectangle((lx, lyy - 3), 6.5, 6.5, fc=colmap[c], ec="none"))
-        ax.text(lx + 9, lyy + 0.2, f"{labels[c]}: {cnt[c]}", fontsize=XS, color=INK, va="center")
-        lyy += 11
-    ax.text(lx, lyy + 3, "digits: Hansen loss year, 20xx", fontsize=XS, color=MUTED, va="center")
-    ax.text(lx, lyy + 11, "outline: flagged cell", fontsize=XS, color="#D95F02", va="center")
-    NUMBERS["rondonia"] = {"counts": cnt, "flagged_loss_years": sorted(int(ly[i, j]) for i, j in flagged),
-                           "n_cells": 100, "facts": r.get("n_facts") or len(r["rows"]) * 6, "grid": r["grid"]}
+        ax.add_patch(Rectangle((lx, lyy - 2.6), 5.4, 5.4, fc=colmap[c], ec="none"))
+        ax.text(lx + 7.5, lyy + 0.2, f"{labels[c]}: {cnt[c]}", fontsize=XS, color=INK, va="center")
+        lyy += 9.6
+    ax.text(lx, lyy + 1.5, "outline: flagged; A: re-run at right", fontsize=XS, color=MUTED, va="center")
+    # the auditor card for cell A
+    kx, ky, kw = w - 146, 3, 146
+    ax.add_patch(FancyBboxPatch((kx, ky), kw, h - 6, boxstyle="round,pad=0,rounding_size=1.6", fc="white", ec="#D95F02", lw=1.6))
+    ax.text(kx + 4, ky + 6, "cell A: six signed facts an auditor re-runs", fontsize=S, color=INK, fontweight=600, va="center")
+    ax.text(kx + 4, ky + 13, A["cell"], fontsize=XS, color=BLUE, family=MONO, va="center")
+    card = [("Hansen loss year", f"{A['hansen.loss_year']}", "hansen.loss_year"),
+            ("Hansen tree cover 2000", f"{A['hansen.tree_cover_2000']} %", "hansen.tree_cover_2000"),
+            ("JRC GFC2020 V4", "forest" if A["jrc_gfc2020.forest_2020"] == 1 else "not forest", "jrc_gfc2020.forest_2020"),
+            ("JRC TMF deforestation", f"{A['jrc_tmf.deforestation_year']}", "jrc_tmf.deforestation_year"),
+            ("CCI biomass 2022", f"{A['esa_cci_biomass.agb_t_per_ha_2022']:.0f} t/ha", "esa_cci_biomass.agb_t_per_ha_2022"),
+            ("Sentinel-2 NDVI", f"{A['indices.ndvi']:.2f}", "indices.ndvi")]
+    for i, (lab, val, key) in enumerate(card):
+        yy = ky + 22 + i * 10.6
+        ax.text(kx + 4, yy, lab, fontsize=XS, color=INK2, va="center")
+        ax.text(kx + 84, yy, val, fontsize=XS, color=INK, va="center", fontweight=600)
+        ax.text(kx + kw - 3, yy, A[key + "|fact_cid"][:7] + "\u2026", fontsize=XS, color=MUTED, va="center", ha="right", family=MONO)
+    NUMBERS["rondonia"] = {"counts": cnt, "flagged_loss_years": sorted(int(c["hansen.loss_year"]) for c in r["rows"] if c["eudr_category"] == FLAG),
+                           "n_cells": 100, "facts": sum(1 for c in r["rows"] for k in c if k.endswith("|fact_cid") and c[k]),
+                           "grid": r["grid"], "card": {"cell": A["cell"], "ndvi_date": A["ndvi_date"],
+                                                        "rows": [(l, v, A[k + "|fact_cid"]) for l, v, k in card]}}
     check_text(fig, "eo_rondonia")
     save(fig, "eo_rondonia")
 
@@ -495,7 +509,7 @@ def fig_bitemporal(w=260, h=124):
         got = as_of(datetime.fromisoformat(q + "T00:00:00+00:00"))
         assert (got["value"] if got else None) == want, (q, got)
     fig = fig_mm(w, h)
-    ax = fig.add_axes([0.12, 0.17, 0.86, 0.6])
+    ax = fig.add_axes([0.1, 0.22, 0.88, 0.5])
     t0, t1 = datetime(2026, 4, 20, tzinfo=timezone.utc), datetime(2026, 10, 15, tzinfo=timezone.utc)
     bt = mtrans.blended_transform_factory(ax.transData, ax.transAxes)
     xs = [ts(at[0]["signed_at"])] + [ts(a["signed_at"]) for a in at[1:]] + [t1]
@@ -505,8 +519,8 @@ def fig_bitemporal(w=260, h=124):
         old = pk.startswith("open_meteo")
         ax.plot(ts(a["signed_at"]), a["value"], "o", ms=9, color="#A3A39C" if old else BLUE, mec="white", mew=1.2, zorder=3)
     ax.text(ts(at[0]["signed_at"]), 918.0 + 0.35, "918.0 m  GLO-90, via Open-Meteo", fontsize=XS, color=INK2, va="bottom")
-    ax.text(datetime(2026, 6, 20, tzinfo=timezone.utc), 915.07 - 0.35, f"915.07 m  GLO-30 COG, signed {len(at) - 1} times",
-            fontsize=XS, color=BLUE, va="top")
+    ax.text(datetime(2026, 8, 18, tzinfo=timezone.utc), 915.07 + 0.45, f"915.07 m  GLO-30 COG, signed {len(at) - 1} times",
+            fontsize=XS, color=BLUE, va="bottom")
     for q, want in queries:
         x = datetime.fromisoformat(q + "T00:00:00+00:00")
         ax.axvline(x, color=MUTED, lw=1.0, ls=(0, (2, 2)), zorder=1)
@@ -519,11 +533,67 @@ def fig_bitemporal(w=260, h=124):
     ax.spines["left"].set_bounds(915, 919)
     ax.set_ylabel("elevation, m", fontsize=XS)
     ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=(5, 7, 9)))
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
-    ax.set_xlabel("record time, 2026", fontsize=XS)
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
     NUMBERS["r4"] = {"values": [a["value"] for a in at], "signed_at": [a["signed_at"] for a in at], "queries": queries}
     check_text(fig, "r4_bitemporal")
     save(fig, "r4_bitemporal")
+
+
+# ---- M15 in production: the right record, the wrong pixel ----
+def fig_m15(w=317, h=96):
+    W = json.load(open(REPO / "research/repro/data/v8/pixel_windows.json"))
+    k = next(k for k in W if k.startswith("oj5cecci"))
+    win = W[k]
+    off = win["offset"]
+    nd = lambda b8, b4: (b8 - b4) / ((b8 + off) + (b4 + off))
+    B8, B4 = np.array(win["B08"], float), np.array(win["B04"], float)
+    NDV = nd(B8, B4)
+    (cc, rr), (oc, orr) = win["centre_col_row"], win["window_origin_col_row"]
+    c0, r0 = int(np.floor(cc)) - oc, int(np.floor(rr)) - orr          # the pixel the cell names (floor)
+    r1, c1 = int(round(rr)) - orr, int(round(cc)) - oc                # the pre-fix reader rounded
+    assert (r1, c1) == (r0 + 1, c0), (r0, c0, r1, c1)
+    meta = json.load(open(REPO / "research/repro/v11/out/mutation_matrix.json"))["meta"]
+    genuine, south = NDV[r0, c0], NDV[r1, c1]
+    assert abs(genuine - meta["genuine_value"]) < 1e-12 and abs(south - meta["neighbour_pixel_value"]) < 1e-12
+    rule = float(re.search(r"<= ([\d.]+)", meta["rule"]).group(1))
+    pre = json.load(open(REPO / "research/repro/data/v8/prevalence_summary.json"))
+    n_pre, bad_pre = pre["pre"]["n"], pre["pre"]["matches_round_not_floor"]
+    n_post, bad_post = pre["post"]["n"], pre["post"]["matches_round_not_floor"]
+    fig = fig_mm(w, h)
+    ax = mm_axes(fig, w, h)
+    cs, gx, gy = 15.2, 1, 12
+    ax.text(gx, gy - 3, "NDVI of the 5 x 5 pixels", fontsize=XS, color=INK2, va="bottom")
+    cmap = plt.get_cmap("YlGn")
+    for i in range(5):
+        for j in range(5):
+            v = NDV[i, j]
+            ax.add_patch(Rectangle((gx + j * cs, gy + i * cs), cs - 0.6, cs - 0.6, fc=cmap((v - 0.1) / 0.7), ec="none"))
+            ax.text(gx + j * cs + cs / 2 - 0.3, gy + i * cs + cs / 2 - 0.3, f"{v:.2f}", ha="center", va="center", fontsize=XS,
+                    color="white" if v > 0.52 else INK)
+    ax.add_patch(Rectangle((gx + c0 * cs - 0.6, gy + r0 * cs - 0.6), cs + 0.6, cs + 0.6, fill=False, ec="#E0B800", lw=3.2))
+    ax.add_patch(Rectangle((gx + c1 * cs - 0.6, gy + r1 * cs - 0.6), cs + 0.6, cs + 0.6, fill=False, ec=BAD, lw=3.2))
+    x = gx + 5 * cs + 10
+    ax.add_patch(Rectangle((x, 9), 6, 6, fc="none", ec="#E0B800", lw=3))
+    ax.text(x + 9, 12, "the pixel the cell names", fontsize=S, color=INK, va="center")
+    ax.text(x + 9, 20, f"NDVI {genuine:.4f}: do not irrigate", fontsize=L, color=INK, va="center", fontweight=700)
+    ax.add_patch(Rectangle((x, 30), 6, 6, fc="none", ec=BAD, lw=3))
+    ax.text(x + 9, 33, "the pixel the old reader took, 10 m south", fontsize=S, color=INK, va="center")
+    ax.text(x + 9, 41, f"NDVI {south:.4f}: irrigate", fontsize=L, color=BAD, va="center", fontweight=700)
+    ax.text(x, 51, f"rule under test: irrigate iff NDVI $\\leq$ {rule}", fontsize=XS, color=INK2, va="center")
+    ax.text(x, 61, "checks A to I", fontsize=XS, color=MUTED, va="center")
+    for i, lv in enumerate("ABCDEFGHI"):
+        cx = x + 40 + i * 11.2
+        ok = lv == "I"
+        ax.add_patch(Rectangle((cx, 57), 10, 8, fc=BLUE if ok else BAD, ec="none"))
+        ax.text(cx + 5, 61.2, lv, ha="center", va="center", fontsize=XS, color="white", fontweight=700)
+    ax.text(x, 72, "hash, binding, signature, log and recompute all pass: the signer", fontsize=XS, color=INK2, va="center")
+    ax.text(x, 79, "signed what it read. Only re-reading the named pixel refuses it.", fontsize=XS, color=INK2, va="center")
+    ax.text(x, 89, f"Seen in {bad_pre} of {n_pre} sampled records before the fix; {bad_post} of {n_post} after.", fontsize=XS,
+            color=AMB, va="center", fontweight=600)
+    NUMBERS["m15"] = {"window": k, "genuine": genuine, "south": south, "rule": rule, "named_px": [r0, c0], "read_px": [r1, c1],
+                      "pre": [bad_pre, n_pre], "post": [bad_post, n_post]}
+    check_text(fig, "m15")
+    save(fig, "m15")
 
 
 # ---- 6. SAT-042: satellites that prove what they ran ----
@@ -606,7 +676,7 @@ def fig_sat042(w=440, h=136):
     ax.text(0, oy + 17, "signed payload digests, bound in the trace", fontsize=XS, color=INK2, va="center")
     # c: drift anchor
     cx0, cx1 = 300, w - 4
-    ax.text(cx0 - 40, by0, "An open-archive anchor scores each claim", fontsize=S, color=INK, va="bottom", fontweight=600)
+    ax.text(cx0 - 40, by0 - 3, "A drift anchor scores each claim", fontsize=S, color=INK, va="bottom", fontweight=600)
     zy0, zy1 = by0 + 12, by0 + 52
     X = lambda v: cx0 + v * (cx1 - cx0)
     for a_, b_, fc, lab, col in ((0, .5, BLUES, "consistent", BLUE), (.5, .75, AMBS, "tension", AMB), (.75, 1, BADS, "contradicted", BAD)):
@@ -620,10 +690,50 @@ def fig_sat042(w=440, h=136):
         ax.text(X(0) - 2, yy, f"{d_['device']:.4f}", ha="right", va="center", fontsize=XS, color=INK, family=MONO)
         ax.text(X(d_["score"]) + (2.5 if d_["score"] < 0.8 else -2.5), yy - 4.5, f"{d_['score']:.2f}",
                 ha="left" if d_["score"] < 0.8 else "right", va="center", fontsize=XS, color=col, fontweight=700)
-    ax.text(cx0 - 40, zy1 + 6, f"device NDVI vs anchor {anchor:.4f} \u00b1 0.02", fontsize=XS, color=INK2, va="center")
+    ax.text(cx0 - 40, zy1 + 6, f"device NDVI vs one harness anchor, {anchor:.4f} \u00b1 0.02 (1 sigma)", fontsize=XS, color=INK2, va="center")
     NUMBERS["sat042"] = V
     check_text(fig, "sat042")
     save(fig, "sat042")
+
+
+# ---- the core formulas, typeset once so the board and the paper agree ----
+def fig_formula(name, w, h, rows, label_w=40, row_h=13.4, top=5.5, fs=None, gl=6.3):
+    """rows: (label, formula, gloss). Formula in mathtext, gloss one line below it."""
+    fig = fig_mm(w, h)
+    ax = mm_axes(fig, w, h)
+    for i, (lab, fx, gloss) in enumerate(rows):
+        y = top + i * row_h
+        ax.text(0, y, lab, fontsize=S, color=BLUE, fontweight=600, va="center")
+        ax.text(label_w, y, fx, fontsize=fs or L, color=INK, va="center")
+        if gloss:
+            ax.text(label_w, y + gl, gloss, fontsize=XS, color=INK2, va="center")
+    check_text(fig, name)
+    save(fig, name)
+
+
+def formulas():
+    fig_formula("model", 340, 100, [
+        ("observation", r"$O = (a,\ b,\ t,\ v,\ u,\ p,\ s)$",
+         "cell64 address (about 9.55 m), band, valid time, value, uncertainty, provenance, signature"),
+        ("name", r"$\mathrm{cid}(O) = \mathrm{BLAKE3}(\,\mathrm{CBOR}_{\mathrm{canonical}}(O)\,),\qquad s = \mathrm{Ed25519}(\,\mathrm{BLAKE3}(\mathrm{body})\,)$",
+         "equal values give equal bytes give equal names; one changed bit is a new cid"),
+        ("memory", r"$M = (O^{*},\ E^{*}),\qquad E = (\mathrm{subj},\ \mathrm{pred},\ \mathrm{obj},\ t_{\mathrm{from}},\ t_{\mathrm{to}})$",
+         "append-only; a change is a new observation that supersedes, never an overwrite"),
+        ("recall", r"$\mathrm{recall}(M, a, b\ |\ t^{*}, \tau)\ =\ $latest $O$ with $t \leq t^{*}$ and $t_{\mathrm{signed}} \leq \tau$",
+         "valid time and transaction time are both inside the signed bytes"),
+        ("recompute", r"$\mathrm{NDVI} = (\mathrm{DN}_{8} - \mathrm{DN}_{4})\ /\ (\mathrm{DN}_{8} + \mathrm{DN}_{4} + 2\,\mathrm{offset})$",
+         "Sentinel-2 L2A digital numbers with the scene's BOA offset (here \u22121000)"),
+        ("accept", r"$\mathrm{hash} \wedge \mathrm{cell} \wedge \mathrm{Ed25519}(\sigma) \wedge \mathrm{leaf} \in \mathrm{log} \wedge f(\mathrm{DN}) = v \wedge \mathrm{COG}[r, c] = \mathrm{DN}$",
+         "checks D to I of section 4, each with stock libraries"),
+    ], label_w=42, row_h=16.2, top=6.5, fs=L * 1.28, gl=7.4)
+    fig_formula("drift", 394, 23, [
+        ("drift", r"$\Delta z = \Delta_{\mathrm{env}} + \Delta_{\mathrm{sensor}} + \Delta_{\mathrm{geo}} + \Delta_{\mathrm{encoder}} + \varepsilon$",
+         "world, instrument, misregistration, model, noise: change at one pinned address"),
+    ], label_w=24, top=7, fs=L * 1.45, gl=9.6)
+    fig_formula("score", 345, 24, [
+        ("score", r"$s = z\,/\,(1 + z),\qquad z = |x_{\mathrm{device}} - x_{\mathrm{anchor}}|\ /\ 3\sigma$",
+         "below 0.5 consistent; 0.5 to 0.75 tension; 0.75 and above contradicted"),
+    ], label_w=26, top=7, fs=L * 1.4, gl=9.6)
 
 
 def qr_codes():
@@ -641,13 +751,15 @@ def qr_codes():
 
 if __name__ == "__main__":
     # sizes are the board slots in mm (width, height); poster.v12.html places each SVG 1:1
-    fig_failure(372, 70)
-    fig_mutation(468, 182)
-    fig_berlin(436, 210)
-    fig_encoding(349, 140)
-    fig_keylong(392, 102)
-    fig_rondonia(392, 102)
-    fig_bitemporal(317, 112)
+    fig_failure(372, 58)
+    fig_mutation(468, 170)
+    fig_berlin(436, 180)
+    fig_encoding(349, 124)
+    fig_keylong(392, 90)
+    fig_rondonia(392, 90)
+    fig_bitemporal(445, 68)
+    fig_m15(317, 96)
+    formulas()
     fig_sat042(440, 130)
     qr_codes()
     json.dump(NUMBERS, open(OUT / "figure_numbers.json", "w"), indent=1, default=str)
