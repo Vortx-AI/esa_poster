@@ -1,3 +1,28 @@
+# The poster: v13, the final A0 (1 Oct 2026)
+
+| file | what it is |
+|---|---|
+| `emem-poster-A0.pdf` | the print file, 841 × 1189 mm, sha256 `6d0f493b…14a5d`, at commit `e66c3ba` |
+| `emem-poster-preview.png` | 3179 × 4495 px preview; `emem-poster-A0-300dpi.png` for proofing |
+| `src/poster.v13.html`, `src/poster.v13.css` | the source; `build_v13.py` renders it and runs 17 gates (see `AGENTS.md`) |
+| `fig/v13/` | 12 figures and 3 diagrams drawn 1:1 from data files by `figs_v13/*.py`; six QR codes |
+| `build_v13_report.json` | the last build's gates, type deviations and the R5 lines as printed |
+
+Specification: `research/v13/12_FINAL_BRIEF.md`. Every number on the face has a row in `research/v13/12_claims_map*.json`.
+Main result: R5, the pre-registered agent-to-agent handoff (`research/repro/v13/r5/results.md`).
+Reviews applied before print: `research/v13/13_review_fixes.md` (23 confirmed findings from four adversarial reviewers).
+
+The printed board is itself a step of a signed emem track (21 steps: every record the board rests on, then the print
+file as a pointer note). ememdemo checks 21 of 21; head `ct2yz27kkkrh64emgdzs7bybgy`; log entry 2,591,968.
+Link: https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fhepwyxdhiwckwi7qahkuvya2b4.md
+It is reached from the INSPECT THE RECORD page (`docs/r/`), so the board face carries no seal box and no hash cycle.
+Composer: `research/repro/v13/track/make_track_v13.py`.
+
+The QR codes open `https://vortx-ai.github.io/esa_poster/…` (`docs/`, built by `build_site.py`); they work once GitHub
+Pages is enabled on `main` → `/docs` and this branch is merged.
+
+---
+
 # The poster: A0 portrait, print-ready (v11)
 
 | file | what it is |
