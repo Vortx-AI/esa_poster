@@ -72,6 +72,9 @@ for k, (band, vec, foot, ec, ls) in enumerate(CARDS):
     v = np.asarray(vec, float)
     lo, hi = np.percentile(v, 2), np.percentile(v, 98)
     z = np.clip((v - lo) / (hi - lo), 0, 1)[None, :]
+    # integer nearest-neighbour upscale so the embedded raster is >= 300 ppi at its 187.4 mm width (print gate)
+    rep = int(np.ceil(300 * (187.4 / 25.4) / z.shape[1]))
+    z = np.repeat(np.repeat(z, max(rep, 1), axis=1), 40, axis=0)
     ax.imshow(z, cmap=GREY, vmin=0, vmax=1, aspect="auto", interpolation="nearest",
               extent=(x0 + 3.0, x0 + CW - 3.0, 14.4, 7.4), zorder=2)
     T(x0 + 3.0, 19.4, foot, ec if k == 0 else C["ink2"], weight="medium" if k == 0 else "normal",

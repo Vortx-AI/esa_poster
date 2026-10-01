@@ -200,7 +200,7 @@ def main():
 
     for p in plan:
         y0, h = p["y"], p["h"]
-        ax.add_patch(Rectangle((0, y0), X_R, h, fc="#F6F6F4", ec="none", zorder=1))
+        ax.add_patch(Rectangle((0, y0), X_R, h, fc=C["na"], ec="none", zorder=1))
         ax.add_patch(Rectangle((0, y0), 3.0, h, fc=C["incident"], ec="none", zorder=2))
         lay = p["chips"][-1][0][1]
         if lay == "L4":
