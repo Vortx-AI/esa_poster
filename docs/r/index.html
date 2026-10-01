@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>INSPECT THE RECORD · EMEM</title>
+<meta name="description" content="The 1115-byte record behind the EMEM poster's main example, field by field.">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<main>
+<nav class="top" aria-label="site"><a href="../">EMEM poster</a><span>·</span><span>inspect the record</span></nav>
+
+<h1>The record Agent A handed over</h1>
+<p class="lead">One observation: NDVI 0.4709 at one 10 m cell near Keylong on 2026-09-25, from a Sentinel-2A L2A scene. Below is every field of its 1,115 bytes, read by the build from <code>research/repro/v8/proof_bundle_ndvi.cbor</code>.</p>
+<div class="box">
+<p><b>The token:</b> <code>emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</code></p>
+<p><b>Its name:</b> <code>oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</code> = base32(BLAKE3-256(the 1,115 bytes)). The name binds every field below. It names this record, not the satellite file.</p>
+<p><b>No signature of its own.</b> The record carries the signer's key as a field. The signature is on the batch: the operator signs a Merkle root over BLAKE3(record) leaves, and the batch is a log entry.</p>
+<p><b>Source named, not hashed.</b> <code>sources[0]</code> names the two COG files by URL and carries no hash of them. So L3 is a re-read of the named pixel, not a hash check.</p>
+</div>
+<h2>1 · The record (1,115 bytes, CBOR)</h2>
+<div class="tw"><table class=" wide"><thead><tr><th>field</th><th>value in this record</th><th>bound by the name</th><th>binds the source file's bytes</th><th>ladder layer</th></tr></thead><tbody><tr><th>kind</th><td><code>primary</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L0</td></tr><tr><th>cell</th><td><code>defi.zb572.xoso.zb1ec</code> (node 32.57126° N, 77.03448° E, near Keylong, Lahaul, India)</td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L1</td></tr><tr><th>band</th><td><code>indices.ndvi</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L1</td></tr><tr><th>tslot</th><td>20721 (UTC day 2026-09-25)</td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L1</td></tr><tr><th>value</th><td><b>0.4708994708994709</b> (IEEE-754 double)</td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L0, L2</td></tr><tr><th>confidence</th><td>0.95 (single-precision float)</td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L2</td></tr><tr><th>sources[0].scheme</th><td><code>sentinel_s2_l2a</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>sources[0].id</th><td><code>T43SFS_20260925T054251_B08_10m.tif</code><br><code>T43SFS_20260925T054251_B04_10m.tif</code><br><span class="note">two Planetary Computer COG URLs, named in full; <b>no hash of either file</b></span></td><td><span class="yes">yes</span></td><td><span class="no">no: named by URL only</span></td><td>L3</td></tr><tr><th>sources[0].captured_at</th><td>2026-09-25T05:42:51.024000Z</td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L1, L3</td></tr><tr><th>derivation.fn_key</th><td><code>sentinel2_l2a_indices_ndvi@1</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L2</td></tr><tr><th>derivation.args[0]</th><td>latitude of the cell node: <code>32.57125977099409</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L1, L3</td></tr><tr><th>derivation.args[1]</th><td>longitude of the cell node: <code>77.03447748052537</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L1, L3</td></tr><tr><th>derivation.args[2]</th><td>Sentinel-2 scene id: <code>S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[3]</th><td>EPSG code of the asset: <code>32643</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[4]</th><td>formula note: <code>NDVI = (B08 − B04) / (B08 + B04). Vegetation greenness.</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L2</td></tr><tr><th>derivation.args[5]</th><td>DNs read [B08, B04]: <code>[3502, 1900]</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L2, L3</td></tr><tr><th>derivation.args[6]</th><td>scene cloud cover, %: <code>10.840102</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[7]</th><td>maximum cloud cover allowed, %: <code>40</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[8]</th><td>look-back window, days: <code>30</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[9]</th><td>SCL class at the pixel: <code>4</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[10]</th><td>scenes tried: <code>1</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[11]</th><td>STAC catalogue searched: <code>https://planetarycomputer.microsoft.com/api/stac/v1/search</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L3</td></tr><tr><th>derivation.args[12]</th><td>BOA offset: <code>-1000</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L2, L3</td></tr><tr><th>privacy_class</th><td><code>public</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>none</td></tr><tr><th>schema_cid</th><td><code>d24rgwlq47a5ism5vkkbiuav3wi2voewqqgy4x4ttnhdnzziyfkq</code></td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L0</td></tr><tr><th>signer</th><td><code>777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka</code> (emem.dev's key; a field, not a signature)</td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L0</td></tr><tr><th>signed_at</th><td>2026-09-28T09:06:56Z</td><td><span class="yes">yes</span></td><td><span class="no">no</span></td><td>L1, L3</td></tr></tbody></table></div>
+<p class="note">Not in the record: <code>unit</code> (absent); <code>uncertainty</code> (absent); <code>sources[0].hash</code> (absent: the server never fills it); <code>sources[0].cid</code> (absent); <code>reader stamp (cog-pixel-floor@2)</code> (absent: signed after the pixel fix of 28 Sep 2026 04:09Z, before the stamp was added). The provenance class is declared per band in the bands manifest, not in the record. The request (the asked date, the question) is not stored.</p>
+<h2>2 · The batch attestation (what is signed)</h2>
+<div class="tw"><table class=""><thead><tr><th>field</th><th>value</th><th>in the signed preimage</th></tr></thead><tbody><tr><th>facts</th><td>a batch of 1 record; its leaf is BLAKE3 of the 1,115 bytes above</td><td>via batch_root</td></tr><tr><th>batch_root</th><td><code>wnljgmqgsxs4rlw6saoi43musygzzllgao3jte6uoqkwqbffq3ea</code> (Merkle root over the sorted BLAKE3 leaves)</td><td><span class="yes">yes</span></td></tr><tr><th>registry_cid</th><td><code>3pbqnyninz6xqll2ynjlh4djlppcp2mdcdmzeq4otebnli5ndzaa</code></td><td><span class="yes">yes</span></td></tr><tr><th>schema_cid</th><td><code>d24rgwlq47a5ism5vkkbiuav3wi2voewqqgy4x4ttnhdnzziyfkq</code></td><td><span class="yes">yes</span></td></tr><tr><th>attester</th><td><code>777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka</code> (the verifying key)</td><td>the key that verifies</td></tr><tr><th>signature</th><td>Ed25519, 64 bytes, over BLAKE3(PreimageV1("attestation"){1: batch_root, 2: registry_cid, 3: schema_cid})</td><td>is the signature</td></tr><tr><th>attested_at</th><td>2026-09-28T09:06:56Z</td><td><span class="no">no</span> (bound only by the log entry hash)</td></tr><tr><th>attester_key_epoch</th><td class="n">0</td><td><span class="no">no</span></td></tr><tr><th>preimage_version</th><td class="n">1</td><td>selects the rule</td></tr></tbody></table></div>
+<p class="note">Every field of the record is signed transitively: its hash is a leaf under <code>batch_root</code>. The pinned key is published under emem.dev in DNS TXT <code>_emem-node.emem.dev</code>, <code>did.json</code> and <code>jwks.json</code>; all are controlled by the operator of emem.dev.</p>
+<h2>3 · The public log</h2>
+<div class="tw"><table class=""><thead><tr><th>object</th><th>value</th><th>read-only link</th></tr></thead><tbody><tr><th>log entry</th><td>2,457,078 (leaf = BLAKE3(0x00 ‖ BLAKE3(attestation entry)), entry 1,604 B)</td><td><a href="https://emem.dev/v1/log/entries?start=2457078&end=2457079">GET the entry</a></td></tr><tr><th>signed tree head</th><td>2,556,451 entries, signed 2026-09-30T09:15:54Z by <code>777er3yi…</code>; inclusion path of 20 hashes</td><td><a href="https://emem.dev/v1/log/inclusion?leaf_index=2457078&tree_size=2556451">GET the inclusion proof</a></td></tr><tr><th>witness</th><td>key <code>quunzdv5qymo…</code> co-signed head 2,541,495; consistency proof of 21 hashes to the head above</td><td><a href="https://emem.dev/v1/log/consistency?first=2541495&second=2556451">GET the consistency proof</a></td></tr><tr><th>current head</th><td>the log keeps growing; pin a head and ask for consistency later</td><td><a href="https://emem.dev/v1/log/sth">GET /v1/log/sth</a></td></tr></tbody></table></div>
+<p class="note">These are the proofs the demo checks offline from the committed bundle (signed 2026-09-30T09:15:54Z). The links fetch fresh copies from emem.dev with GET. One organisation runs both the log and its only independent-tier witness today.</p>
+<div class="slot" id="board-track">
+<p><b>BOARD TRACK</b></p>
+<p>Slot for the link to the printed board's signed emem track (ememdemo URL). It will be added by the build team after the v13 track is signed. No link is published here yet.</p>
+</div>
+<h2>Check it yourself</h2>
+<ul>
+<li><a href="../demo/">VIEW THE DEMO</a>: your browser re-hashes these bytes, checks the attestation and the log, recomputes NDVI and re-reads the pixel.</li>
+<li><a href="../t/">TRY A TOKEN</a>: one GET, one re-hash, one cell comparison. Or emem.dev's own checker: <a href="https://emem.dev/verify?q=emem%3Afact%3Adefi.zb572.xoso.zb1ec%3Aoj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa">emem.dev/verify</a>.</li>
+<li>The raw bytes: <a href="https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa">emem.dev/v1/facts/oj5cecci…</a> (send <code>Accept: application/cbor</code>). <code>b3sum</code> of them, in base32, is the name above.</li>
+<li>Offline, with no network: <a href="../test/#bundle">verify_bundle.py</a> runs the same nine checks in Python.</li>
+</ul>
+<h2>The 1,115 bytes (hex)</h2>
+<pre>ac646b696e64677072696d6172796463656c6c75646566692e7a623537322e78
+6f736f2e7a623165636462616e646c696e64696365732e6e6476696574736c6f
+741950f16576616c7565fb3fde233788cde2336a636f6e666964656e6365fa3f
+73333367736f757263657381a366736368656d656f73656e74696e656c5f7332
+5f6c32616269647901d768747470733a2f2f73656e74696e656c326c32613031
+2e626c6f622e636f72652e77696e646f77732e6e65742f73656e74696e656c32
+2d6c322f34332f532f46532f323032362f30392f32352f5332415f4d53494c32
+415f3230323630393235543035343235315f4e303531335f523030355f543433
+5346535f3230323630393235543039303031352e534146452f4752414e554c45
+2f4c32415f5434335346535f413035383830345f323032363039323554303534
+3234352f494d475f444154412f5231306d2f5434335346535f32303236303932
+35543035343235315f4230385f31306d2e746966203b2068747470733a2f2f73
+656e74696e656c326c326130312e626c6f622e636f72652e77696e646f77732e
+6e65742f73656e74696e656c322d6c322f34332f532f46532f323032362f3039
+2f32352f5332415f4d53494c32415f3230323630393235543035343235315f4e
+303531335f523030355f5434335346535f323032363039323554303930303135
+2e534146452f4752414e554c452f4c32415f5434335346535f41303538383034
+5f3230323630393235543035343234352f494d475f444154412f5231306d2f54
+34335346535f3230323630393235543035343235315f4230345f31306d2e7469
+666b63617074757265645f6174781b323032362d30392d32355430353a34323a
+35312e3032343030305a6a64657269766174696f6ea266666e5f6b6579781c73
+656e74696e656c325f6c32615f696e64696365735f6e64766940316461726773
+8dfb4040491f0a48f854fb40534234e108d38478365332415f4d53494c32415f
+3230323630393235543035343235315f523030355f5434335346535f32303236
+3039323554303930303135197f8378394e445649203d202842303820e2889220
+42303429202f2028423038202b20423034292e2056656765746174696f6e2067
+7265656e6e6573732e82f96ad7f9676cfb4025ae21d96e9bbff95100181e0401
+783a68747470733a2f2f706c616e6574617279636f6d70757465722e6d696372
+6f736f66742e636f6d2f6170692f737461632f76312f736561726368f9e3d06d
+707269766163795f636c617373667075626c69636a736368656d615f63696478
+346432347267776c713437613569736d35766b6b626975617633776932766f65
+777171677934783474746e68646e7a7a6979666b71667369676e6572982018ff
+18fe184818ef08183918901858183218bd183b0518ab185918981896184c1831
+18e41864188e184f182b18fa182418bf183018e0182a18ce1865185469736967
+6e65645f617474323032362d30392d32385430393a30363a35365a</pre>
+<p>A signature fixes these bytes. It does not make the measurement true. Whether the cell is the field you meant (L4), and whether the sensor and a decision taken on the value are right (L5), are outside what this record can show.</p>
+<footer>
+<p>Jaya Kumari, Avijeet Singh · Vortx AI · Poster Session 1, Agentic AI for Earth Observation (ESA Φ-lab and BIFOLD), Berlin, 19 Oct 2026.</p>
+<p>These pages are static files built from the poster repository on 2026-10-01 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
+</footer>
+</main>
+</body>
+</html>

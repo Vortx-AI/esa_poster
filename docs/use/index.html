@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DISCOVER INTEGRATIONS · EMEM</title>
+<meta name="description" content="Where EMEM runs today, each surface labelled by evidence status and the date it was checked.">
+<link rel="stylesheet" href="../assets/site.css">
+<style>.ints{list-style:none;padding:0}.int{border-top:1px solid var(--rule);padding:10px 0 4px}.int p{margin:0 0 6px}.int pre{margin:4px 0 6px}details{font-size:14px;margin:0 0 6px}summary{cursor:pointer;color:var(--ink2)}</style>
+</head>
+<body>
+<main>
+<nav class="top" aria-label="site"><a href="../">EMEM poster</a><span>·</span><span>discover integrations</span></nav>
+
+<h1>Where EMEM runs today</h1>
+<p class="lead">One evidence protocol, reachable from several agent runtimes. Each surface below is labelled by what was checked, not by what was announced. The list is generated from <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/ecosystem_manifest.json"><code>ecosystem_manifest.json</code></a> (38 rows, file of 2026-10-01).</p>
+<div class="box"><p class="note" style="margin:0"><span class="chip LIVE">LIVE</span> run or confirmed live · <span class="chip PROTOCOL">PROTOCOL</span> an open surface; a client was not run by us · <span class="chip REGISTRY">REGISTRY</span> a listing, not an integration · <span class="chip EXAMPLE">EXAMPLE</span> example code in the emem repo · <span class="chip EXPERIMENTAL">EXPERIMENTAL</span> known to need a fix · <span class="chip NOTFOUND">NOT FOUND</span> looked for and absent.<br>Counts: LIVE 11, PROTOCOL 8, REGISTRY 8, EXAMPLE 6, EXPERIMENTAL 4, NOT FOUND 1.</p></div>
+<h2>Agent hosts <span class="note">(9)</span></h2><ul class="ints"><li class="int" id="claude-code-mcp">
+<p><span class="chip LIVE">LIVE</span> <b>Claude Code (MCP)</b></p>
+<pre><code>claude mcp add --transport http emem https://emem.dev/mcp</code></pre><p class="note"><a href="https://github.com/Vortx-AI/emem#quickstart">github.com/Vortx-AI/emem#quickstart</a></p>
+<p>Add emem in one command; the 18 core tools appear in Claude Code sessions.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Connection-level check only: no model turn and no tools/call were run here (tools/call on emem read tools signs and stores records).</li></ul></details>
+</li>
+<li class="int" id="claude-code-plugin">
+<p><span class="chip LIVE">LIVE</span> <b>Claude Code plugin (self-hosted marketplace in the emem repo)</b></p>
+<pre><code>/plugin marketplace add Vortx-AI/emem (19 skills; ~3.7k tokens always-on)</code></pre><p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/plugins/emem">github.com/Vortx-AI/emem/tree/main/plugins/emem</a></p>
+<p>Install the MCP server plus 19 worked skills in two commands.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>This is emem's own marketplace, not Anthropic's directory: anthropics/claude-plugins-official .claude-plugin/marketplace.json has 315 plugins and 0 named emem or pointing at Vortx-AI/emem (LIVE, raw.githubusercontent.com).</li><li>Print the always-on token cost next to it if it is printed at all (issue: 'do not hide the known token overhead').</li></ul></details>
+</li>
+<li class="int" id="dify-marketplace">
+<p><span class="chip LIVE">LIVE</span> <b>Dify Marketplace plugin vortx-ai/emem</b></p>
+<pre><code>Marketplace plugin vortx-ai/emem (community, v2.4.0)</code></pre><p class="note"><a href="https://marketplace.dify.ai/plugin/vortx-ai/emem">marketplace.dify.ai/plugin/vortx-ai/emem</a></p>
+<p>Install the plugin in Dify and call the emem tools from Dify apps and workflows.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (4)</summary><ul><li>Not exercised inside a Dify workspace.</li><li>Version skew: Dify 2.4.0 with 16 tools; live /mcp is 2.4.2 with 18 (Dify lacks search, fetch).</li><li>'community' category is Dify's label, not a Dify endorsement.</li><li>Plugin source lives outside the emem repo (docs/registries/integration-targets.md, build list row 4).</li></ul></details>
+</li>
+<li class="int" id="gemini-cli">
+<p><span class="chip LIVE">LIVE</span> <b>Gemini CLI</b></p>
+<pre><code>gemini mcp add --transport http emem https://emem.dev/mcp</code></pre><p class="note"><a href="https://emem.dev/mcp">emem.dev/mcp</a></p>
+<p>Add emem to Gemini CLI with the generic MCP command above.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (3)</summary><ul><li>Do not print 'gemini extensions install https://emem.dev/gemini-extension.json' (README/docs/agents.md/docs/integrations.md) until fixed; an extension install needs gemini-extension.json at a git repo root, and the emem repo has it only under examples/.</li><li>examples/gemini-extension.json at origin/main still says version 1.1.0 and '113 MCP tools'; the live-served copy says 2.4.2 and 114.</li><li>Connection-level check only; no model turn.</li></ul></details>
+</li>
+<li class="int" id="claude-ai-custom-connector">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>Claude.ai / Claude Desktop (custom connector or config)</b></p>
+<pre><code>add https://emem.dev/mcp as a custom connector</code></pre><p class="note"><a href="https://emem.dev/mcp">emem.dev/mcp</a></p>
+<p>Paste the MCP URL as a custom connector (no key).</p>
+<p class="note">Evidence: SPEC. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>Not exercised in claude.ai in this session.</li><li>Enterprise orgs may block non-directory connectors (docs/mcp-directory.md).</li></ul></details>
+</li>
+<li class="int" id="vscode">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>Visual Studio Code (GitHub Copilot agent mode)</b></p>
+<pre><code>@mcp emem (MCP gallery) or code --add-mcp</code></pre><p class="note"><a href="https://insiders.vscode.dev/redirect/mcp/install?name=emem&amp;config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Femem.dev%2Fmcp%22%7D">insiders.vscode.dev/redirect/mcp/install?name=emem&amp;config=%7B%22type%22%3A%22http%22%2C%22…</a></p>
+<p>One-click install from a link, or search @mcp emem in the Extensions view.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>No VS Code in this container: install not executed.</li><li>Brand: 'Using the icon to identify or promote your own product' is Not OK (code.visualstudio.com/brand). Text only.</li></ul></details>
+</li>
+<li class="int" id="cursor">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>Cursor</b></p>
+<pre><code>one-click MCP install link</code></pre><p class="note"><a href="https://cursor.com/install-mcp?name=emem&amp;config=eyJ1cmwiOiJodHRwczovL2VtZW0uZGV2L21jcCJ9">cursor.com/install-mcp?name=emem&amp;config=eyJ1cmwiOiJodHRwczovL2VtZW0uZGV2L21jcCJ9</a></p>
+<p>One-click install in Cursor, or paste the JSON.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>No Cursor here: install not executed.</li></ul></details>
+</li>
+<li class="int" id="chatgpt">
+<p><span class="chip LIVE">LIVE</span> <b>ChatGPT (ChatGPT Directory plugin 'emem', invoked as @emem)</b></p>
+<pre><code>@emem (ChatGPT Directory)</code></pre><p class="note"><a href="https://chatgpt.com/plugins/plugin_asdk_app_6a6a0832a59081918b19aec0ddf9ec77">chatgpt.com/plugins/plugin_asdk_app_6a6a0832a59081918b19aec0ddf9ec77</a></p>
+<p>If listed as claimed: enable emem in ChatGPT and ask a place question; answers carry emem:fact: tokens.</p>
+<p class="note">Evidence: UNVERIFIED (publisher-attested only). Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster: only after the manual check in the caveats.</p>
+<details><summary>Caveats (3)</summary><ul><li>Not independently confirmed in this session. Before print, a logged-in human must open the URL on a phone and screenshot the directory page (title, developer, status) into research/v13/.</li><li>OpenAI plugin guidelines (developers.openai.com/plugins/plugin-guidelines, fetched here): 'Do not use discovery, operation selection, or schema fetching with a generic executor to enable operations not individually exposed for review.' emem's MCP initialize instructions say tools/call runs any of 114 tools by name. Never print '114 tools in ChatGPT'; print only what the listing exposes.</li><li>OpenAI plugin guidelines: 'Plugins should not imply that they are made or endorsed by OpenAI.'</li></ul></details>
+</li>
+<li class="int" id="cline">
+<p><span class="chip EXPERIMENTAL">EXPERIMENTAL</span> <b>Cline (VS Code extension)</b></p>
+<pre><code>MCP settings, type streamableHttp</code></pre><p class="note"><a href="https://github.com/Vortx-AI/emem/blob/main/examples/cline.mcp.json">github.com/Vortx-AI/emem/blob/main/examples/cline.mcp.json</a></p>
+<p>Add emem manually with type streamableHttp (corrected config); not from the Cline marketplace.</p>
+<p class="note">Evidence: INFERRED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster: only with the corrected config.</p>
+<details><summary>Caveats (2)</summary><ul><li>INFERRED that the shipped example fails (SSE default meets a 405); not executed. Fix the example before printing Cline.</li><li>Not in the Cline marketplace; a submission is not a listing.</li></ul></details>
+</li></ul>
+<h2>Interoperability <span class="note">(5)</span></h2><ul class="ints"><li class="int" id="mcp-core">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>MCP Streamable HTTP endpoint /mcp (core tier)</b></p>
+<pre><code>https://emem.dev/mcp (Streamable HTTP, no key)</code></pre><p class="note"><a href="https://emem.dev/mcp">emem.dev/mcp</a></p>
+<p>Connect any MCP client with no account or key; call the 18 listed tools, and any of 114 by name.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>server.json x-emem.directoryCompliance says the /mcp page is 'about 64 KB'; measured 77,038 bytes (README says ~75 KB). Under the 102,400-byte AWS ceiling that scripts/mcp_host_compat.py asserts.</li><li>Read tools sign and store records on call; not exercised here.</li></ul></details>
+</li>
+<li class="int" id="a2a">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>A2A agent card and task endpoints</b></p>
+<pre><code>signed agent card, https://emem.dev/.well-known/agent-card.json</code></pre><p class="note"><a href="https://emem.dev/.well-known/agent-card.json">emem.dev/.well-known/agent-card.json</a></p>
+<p>Discover emem as an A2A agent, verify its card offline, send a task and verify the signed artifact.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (3)</summary><ul><li>message/send not re-run today (it creates a signed task artifact on the server).</li><li>Card signing as served is from commit ab5af22 ('Agent card signs what it serves'), after the pinned 18adb67.</li><li>Card integrity is self-consistency with emem.dev's own keys (cryptographic trust); it is not a third-party attestation of the operator (source trust).</li></ul></details>
+</li>
+<li class="int" id="rest-openapi">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>REST / OpenAPI 3.1</b></p>
+<pre><code>OpenAPI 3.1, https://emem.dev/openapi.json</code></pre><p class="note"><a href="https://emem.dev/openapi.json">emem.dev/openapi.json</a></p>
+<p>Call emem from any HTTP client; fetch a fact by CID and re-hash it locally.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+
+</li>
+<li class="int" id="chatgpt-custom-gpt-action">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>ChatGPT Custom GPT Action (OpenAPI import)</b></p>
+<p class="note"><a href="https://emem.dev/openapi.action.json">emem.dev/openapi.action.json</a></p>
+<p>Build a Custom GPT that calls emem REST without a key.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>Not exercised inside the GPT builder.</li><li>docs/agents.md (Connect table, origin/main 18adb67) still says import https://emem.dev/openapi.json (375,360 bytes, 206 operations); CHANGELOG says that was fixed to /openapi.action.json. The poster must print the action URL.</li></ul></details>
+</li>
+<li class="int" id="mcp-full">
+<p><span class="chip PROTOCOL">PROTOCOL</span> <b>MCP endpoint /mcp/full (all tools, paged)</b></p>
+<p class="note"><a href="https://emem.dev/mcp/full">emem.dev/mcp/full</a></p>
+<p>List every tool, for hosts that follow nextCursor.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>server.json says 'all 114 across 7 pages (about 290 KB)'; measured 8 pages, 335,788 bytes. Hosts that ignore nextCursor see page one only (13 tools).</li></ul></details>
+</li></ul>
+<h2>Discovery <span class="note">(10)</span></h2><ul class="ints"><li class="int" id="emem-integration-hub">
+<p><span class="chip LIVE">LIVE</span> <b>emem.dev integration landing</b></p>
+<pre><code>DISCOVER INTEGRATIONS -&gt; emem.dev/#use</code></pre><p class="note"><a href="https://emem.dev/#use">emem.dev/#use</a></p>
+<p>One page listing every route with copy buttons.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Not mobile-tested here. The homepage surfaces JSON carries stale labels ('pypi 2.4.0'; Gemini links to the example file). A poster-specific landing page built from this manifest would be ROADMAP.</li></ul></details>
+</li>
+<li class="int" id="official-mcp-registry">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>Official MCP Registry (registry.modelcontextprotocol.io)</b></p>
+<pre><code>io.github.Vortx-AI/emem</code></pre><p class="note"><a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Vortx-AI%2Femem/versions/latest">registry.modelcontextprotocol.io/v0.1/servers/io.github.Vortx-AI%2Femem/versions/latest</a></p>
+<p>Clients and sub-registries that read the official registry discover emem by name.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>A registry entry is metadata; it is not a host integration. No human-facing page per server; the API URL is the most specific public URL.</li></ul></details>
+</li>
+<li class="int" id="github-mcp-registry">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>GitHub MCP Registry (github.com/mcp)</b></p>
+<pre><code>github.com/mcp/Vortx-AI/emem</code></pre><p class="note"><a href="https://github.com/mcp/Vortx-AI/emem">github.com/mcp/Vortx-AI/emem</a></p>
+<p>Find emem in GitHub's registry and in VS Code's @mcp gallery.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Listing, not integration.</li></ul></details>
+</li>
+<li class="int" id="glama">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>Glama MCP directory</b></p>
+<pre><code>listed (graded A, scan of 2026-09-09)</code></pre><p class="note"><a href="https://glama.ai/mcp/servers/Vortx-AI/emem">glama.ai/mcp/servers/Vortx-AI/emem</a></p>
+<p>Find, inspect and try emem from Glama.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Grade is Glama's scan of 16 tools on 2026-09-09, before 2.4.2. A directory grade is not an integration.</li></ul></details>
+</li>
+<li class="int" id="smithery">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>Smithery</b></p>
+<p class="note"><a href="https://smithery.ai/servers/vortxai/emem">smithery.ai/servers/vortxai/emem</a></p>
+<p>Connect through Smithery with a Smithery account.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>The Smithery route needs a Smithery token; the direct emem.dev/mcp route needs none. Tool count cached at 16.</li></ul></details>
+</li>
+<li class="int" id="huggingface-space">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>Hugging Face Space vortx-ai/emem</b></p>
+<p class="note"><a href="https://huggingface.co/spaces/vortx-ai/emem">huggingface.co/spaces/vortx-ai/emem</a></p>
+<p>Try an old emem build in a browser.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Stale mirror (1.1.0 vs 2.4.2). Do not print as equivalent to emem.dev.</li></ul></details>
+</li>
+<li class="int" id="context7">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>Context7 (docs for coding agents)</b></p>
+<p class="note"><a href="https://context7.com/vortx-ai/emem">context7.com/vortx-ai/emem</a></p>
+<p>Coding agents can pull emem docs through Context7.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Listing only.</li></ul></details>
+</li>
+<li class="int" id="mulesoft-exchange">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>MuleSoft Anypoint Exchange</b></p>
+<p class="note"><a href="https://anypoint.mulesoft.com/exchange/68e53915-e89b-4e82-b794-12d37982db4c/vortxAi-asset/">anypoint.mulesoft.com/exchange/68e53915-e89b-4e82-b794-12d37982db4c/vortxAi-asset/</a></p>
+<p>MuleSoft users find the server in Exchange.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Contents not inspected; version per emem's own site is 2.0.0.</li></ul></details>
+</li>
+<li class="int" id="awesome-mcp-servers">
+<p><span class="chip REGISTRY">REGISTRY</span> <b>punkpeye/awesome-mcp-servers</b></p>
+<p class="note"><a href="https://github.com/punkpeye/awesome-mcp-servers">github.com/punkpeye/awesome-mcp-servers</a></p>
+<p>Discovery only.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>A list entry.</li></ul></details>
+</li>
+<li class="int" id="claude-connectors-directory">
+<p><span class="chip NOTFOUND">NOT FOUND</span> <b>Anthropic Claude connectors directory</b></p>
+<p class="note"><a href="https://claude.ai/admin-settings/directory/submissions/new">claude.ai/admin-settings/directory/submissions/new</a></p>
+<p>Nothing via a directory today; use the custom connector route.</p>
+<p class="note">Evidence: SPEC. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Do not print 'in the Claude directory'.</li></ul></details>
+</li></ul>
+<h2>Developer <span class="note">(7)</span></h2><ul class="ints"><li class="int" id="github-repo">
+<p><span class="chip LIVE">LIVE</span> <b><svg class="mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>GitHub repository Vortx-AI/emem</b></p>
+<pre><code>github.com/Vortx-AI/emem (Apache-2.0)</code></pre><p class="note"><a href="https://github.com/Vortx-AI/emem">github.com/Vortx-AI/emem</a></p>
+<p>Read, clone, self-host, re-run the tests.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>Stars and forks are vanity numbers (issue #45); print only with the timestamp or not at all.</li><li>GitHub reports primary language HTML (web/ is large); the server is Rust. Do not quote the linguist label.</li></ul></details>
+</li>
+<li class="int" id="python-sdk">
+<p><span class="chip LIVE">LIVE</span> <b>Python SDK ememdev (PyPI)</b></p>
+<pre><code>pip install ememdev</code></pre><p class="note"><a href="https://pypi.org/project/ememdev/">pypi.org/project/ememdev/</a></p>
+<p>Resolve tokens, fetch facts and verify receipts offline from Python.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>PyPI name 'emem' belongs to an unrelated project (Automatika Robotics, 0.3.0, MIT, 'Hybrid graph-based spatio-temporal memory system for embodied agents'). Print 'pip install ememdev', never 'pip install emem'.</li></ul></details>
+</li>
+<li class="int" id="ts-sdk">
+<p><span class="chip LIVE">LIVE</span> <b>TypeScript SDK @vortxai/emem (npm)</b></p>
+<pre><code>npm i @vortxai/emem</code></pre><p class="note"><a href="https://www.npmjs.com/package/@vortxai/emem">www.npmjs.com/package/@vortxai/emem</a></p>
+<p>Use emem from Node, browsers and edge runtimes.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>Publish lag: repo sdks/emem-ts is 2.4.2, npm latest is 2.4.0.</li><li>npm name 'emem' is an unrelated 2021 package.</li></ul></details>
+</li>
+<li class="int" id="docker">
+<p><span class="chip LIVE">LIVE</span> <b>Docker image ghcr.io/vortx-ai/emem</b></p>
+<pre><code>docker run -p 5051:5051 ghcr.io/vortx-ai/emem:latest</code></pre><p class="note"><a href="https://github.com/Vortx-AI/emem/pkgs/container/emem">github.com/Vortx-AI/emem/pkgs/container/emem</a></p>
+<p>Self-host a responder with its own key; receipts minted elsewhere verify locally.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>Container not run here (no Docker daemon). 865 MB compressed amd64 image.</li><li>The /pkgs/container URL is the conventional GHCR package page; not fetched (session proxy).</li></ul></details>
+</li>
+<li class="int" id="emem-langmem">
+<p><span class="chip LIVE">LIVE</span> <b>emem-langmem (LangChain BaseStore for LangGraph)</b></p>
+<p class="note"><a href="https://pypi.org/project/emem-langmem/">pypi.org/project/emem-langmem/</a></p>
+<p>Use emem as a LangGraph memory store.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Published package, not a LangChain-listed integration.</li></ul></details>
+</li>
+<li class="int" id="llama-index-tools-emem">
+<p><span class="chip EXPERIMENTAL">EXPERIMENTAL</span> <b>llama-index-tools-emem (LlamaIndex ToolSpec)</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/sdks/llama-index-tools-emem">github.com/Vortx-AI/emem/tree/main/sdks/llama-index-tools-emem</a></p>
+<p>Install from the repo path only.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Unpublished; README install line is wrong until it is published.</li></ul></details>
+</li>
+<li class="int" id="n8n">
+<p><span class="chip EXPERIMENTAL">EXPERIMENTAL</span> <b>n8n community node n8n-nodes-emem</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/integrations/n8n">github.com/Vortx-AI/emem/tree/main/integrations/n8n</a></p>
+<p>Nothing without building it locally.</p>
+<p class="note">Evidence: LIVE. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Not published.</li></ul></details>
+</li></ul>
+<h2>Frameworks <span class="note">(7)</span></h2><ul class="ints"><li class="int" id="langchain">
+<p><span class="chip EXAMPLE">EXAMPLE</span> <b>LangChain / LangGraph</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/examples/langchain">github.com/Vortx-AI/emem/tree/main/examples/langchain</a></p>
+<p>Load emem tools into a LangGraph agent (with the one-line API fix).</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Example needs the fix before it is printed as working. Upstream LangChain docs do not list emem (row emem-langmem).</li></ul></details>
+</li>
+<li class="int" id="llamaindex">
+<p><span class="chip EXAMPLE">EXAMPLE</span> <b>LlamaIndex</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/examples/llamaindex">github.com/Vortx-AI/emem/tree/main/examples/llamaindex</a></p>
+<p>Give a LlamaIndex agent the emem tools.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Runs an OpenAI model; needs OPENAI_API_KEY.</li></ul></details>
+</li>
+<li class="int" id="crewai">
+<p><span class="chip EXAMPLE">EXAMPLE</span> <b>CrewAI</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/examples/crewai">github.com/Vortx-AI/emem/tree/main/examples/crewai</a></p>
+<p>Give a CrewAI agent the 18 core tools.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (2)</summary><ul><li>INFERRED: the agent cannot call emem_eudr_dds because MCPServerAdapter exposes only listed tools; point it at /mcp/full or change the task.</li><li>Not upstream.</li></ul></details>
+</li>
+<li class="int" id="autogen">
+<p><span class="chip EXAMPLE">EXAMPLE</span> <b>AutoGen (AgentChat)</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/examples/autogen">github.com/Vortx-AI/emem/tree/main/examples/autogen</a></p>
+<p>Give an AutoGen assistant the emem workbench.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+
+</li>
+<li class="int" id="mastra">
+<p><span class="chip EXAMPLE">EXAMPLE</span> <b>Mastra (TypeScript)</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/examples/mastra">github.com/Vortx-AI/emem/tree/main/examples/mastra</a></p>
+<p>Give a Mastra agent the 18 core tools (on the pinned 0.10 line).</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Works only via the included package.json (old 0.10 line); the README's unpinned command installs a version where the example's API call does not exist. Asks for a tool the listed tier does not contain.</li></ul></details>
+</li>
+<li class="int" id="agno">
+<p><span class="chip EXAMPLE">EXAMPLE</span> <b>Agno</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/examples/agno">github.com/Vortx-AI/emem/tree/main/examples/agno</a></p>
+<p>Give an Agno agent the emem tools.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). On the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>Following the README install line fails at import; add fastmcp (and mcp) to the README.</li></ul></details>
+</li>
+<li class="int" id="semantic-kernel">
+<p><span class="chip EXPERIMENTAL">EXPERIMENTAL</span> <b>Semantic Kernel (Python)</b></p>
+<p class="note"><a href="https://github.com/Vortx-AI/emem/tree/main/examples/semantic-kernel">github.com/Vortx-AI/emem/tree/main/examples/semantic-kernel</a></p>
+<p>Nothing as written; works only if the union type is removed on one side.</p>
+<p class="note">Evidence: MEASURED. Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST). Not on the poster.</p>
+<details><summary>Caveats (1)</summary><ul><li>An interop defect found by this check: one JSON-Schema construct in one tool blocks the whole plugin in SK.</li></ul></details>
+</li></ul>
+<h2>Same token, many runtimes</h2><p>The Keylong token resolved through 11 client paths (REST, raw MCP, A2A, two SDKs, framework adapters, the official MCP SDKs and an independent blake3 and cbor2 reader): 11 of 11 succeeded, with 1 distinct record name and 1 distinct value, run 2026-09-30 08:40 UTC. Model-in-the-loop handoffs between two agent hosts are not shown here. Source: <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/data/v8/crossruntime_table.json"><code>research/repro/data/v8/crossruntime_table.json</code></a>.</p>
+<p class="note">Names are used as plain text to state facts; no endorsement by any vendor is implied. The GitHub mark marks the repository link, as GitHub's logo rules allow. Text chips are used for every other platform. The emem.dev hub with copy buttons: <a href="https://emem.dev/#use">emem.dev/#use</a>.</p>
+<footer>
+<p>Jaya Kumari, Avijeet Singh · Vortx AI · Poster Session 1, Agentic AI for Earth Observation (ESA Φ-lab and BIFOLD), Berlin, 19 Oct 2026.</p>
+<p>These pages are static files built from the poster repository on 2026-10-01 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>RE-RUN THE TEST · EMEM</title>
+<meta name="description" content="Exact commands to re-run every experiment on the EMEM poster.">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<main>
+<nav class="top" aria-label="site"><a href="../">EMEM poster</a><span>·</span><span>re-run the test</span></nav>
+
+<h1>Re-run the test</h1>
+<p class="lead">Every result on the poster comes from a script in the repository. Clone it once:</p>
+<pre><code>git clone https://github.com/Vortx-AI/esa_poster
+cd esa_poster
+pip install blake3 cbor2 pynacl</code></pre>
+
+<h2 id="r1">R1 · The mutation suite (offline, deterministic)</h2>
+<pre><code>python research/repro/v11/mutation_suite.py</code></pre>
+<p>17 corruptions and one control, at 9 verification depths (A prose to I source re-read), on the real Keylong record. Rule: irrigate iff NDVI &lt;= 0.4705. No network; the whole suite took 0.0528 s in the committed run (2026-09-30). It rewrites <code>research/repro/v11/out/</code>; compare with the committed copy:</p>
+<div class="tw"><table class=" wide"><thead><tr><th>depth</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th></tr></thead><tbody><tr><th>acted on corrupted evidence</th><td class="n">15/15</td><td class="n">15/15</td><td class="n">13/16</td><td class="n">12/16</td><td class="n">9/16</td><td class="n">3/16</td><td class="n">2/16</td><td class="n">1/16</td><td class="n">0/16</td></tr></tbody></table></div>
+<p class="note">Source: <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v11/out/mutation_matrix.json"><code>research/repro/v11/out/mutation_matrix.json</code></a> and <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v11/out/summary.md">summary.md</a>. Folder: <a href="https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v11">research/repro/v11</a>.</p>
+
+<h2 id="r5">R5 · Agent-to-agent handoff with language-model receivers</h2>
+<p>R5 puts language-model receivers in Agent B's seat and hands them the same corruptions in seven representations, from prose to an EMEM token behind a fail-closed resolver. The design is on <a href="../methods/#r5">READ THE METHODS</a>.</p>
+<p class="slot"><b>R5 RESULTS</b><br>R5 is being run now. Its pre-registration, scripts, raw trials and the one command to re-run them will appear in <a href="https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v13/r5">research/repro/v13/r5/</a>. Until they are committed on <code>main</code>, that link shows "not found".</p>
+
+<h2 id="trace">The 15-link trace (live)</h2>
+<pre><code>python research/repro/v8/trace_fact.py --out=/tmp/trace</code></pre>
+<p>Walks the Keylong token from the token to the pixel and the signer's domain: resolve, re-hash, cell binding, recompute, STAC metadata, the COG pixel, the SCL class, the byte-range witness, receipts, the log entry, inclusion, consistency and the key's publication (links 1 to 15, plus 9b and 9c). It took 17.9 s in the committed run of 30 Sep 2026. A read-only variant took a median 14.9 s over 5 runs on 1 Oct 2026 (2026-10-01 (UTC)).</p>
+<p class="note"><b>It calls live services.</b> Besides GETs, it sends POST <code>/v1/memory_token/resolve</code>, <code>/v1/range_hash</code> and <code>/v1/recall</code> to emem.dev; the last two sign and store records there. Add <code>--no-pixel</code> or <code>--no-log</code> to skip the slow links. Committed output: <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v8/trace_fact_output.txt">trace_fact_output.txt</a>.</p>
+
+<h2 id="bundle">The offline proof bundle (no network)</h2>
+<pre><code>python research/repro/v8/verify_bundle.py research/repro/v8/proof_bundle_ndvi.cbor</code></pre>
+<p>Nine checks on the 4,906-byte bundle: the record's hash, the batch root and its Ed25519 signature under the pinned key, the log leaf, inclusion under the signed head, the head's signature, the witness signature, its inclusion and its consistency with the head. Median 48.2 ms as a fresh process with networking removed (<code>unshare -rn</code>, n = 50, 2026-10-01 (UTC)), of which 44.4 ms is Python start-up.</p>
+
+<h2 id="site">These pages</h2>
+<pre><code>npm ci --prefix tools/site
+python poster/build_site.py          # rebuild docs/ and the six QR codes
+python poster/build_site.py --test   # plus the headless phone test</code></pre>
+<p class="note">The demo's receiver runs in Node at build time and writes <a href="../demo/transcript.txt">transcript.txt</a>; the build fails if any verdict changes. Source: <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>.</p>
+<footer>
+<p>Jaya Kumari, Avijeet Singh · Vortx AI · Poster Session 1, Agentic AI for Earth Observation (ESA Φ-lab and BIFOLD), Berlin, 19 Oct 2026.</p>
+<p>These pages are static files built from the poster repository on 2026-10-01 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "emem-poster-site",
+  "version": "13.0.0",
+  "private": true,
+  "description": "Builds docs/ (the GitHub Pages site the EMEM poster QR codes open) and tests it headless.",
+  "type": "module",
+  "scripts": {
+    "build": "python3 ../../poster/build_site.py",
+    "test": "node test_site.mjs"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@noble/curves": "1.6.0",
+    "@noble/hashes": "1.5.0",
+    "esbuild": "0.24.0"
+  },
+  "devDependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

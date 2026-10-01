@@ -1,0 +1,39 @@
+{
+ "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+ "results": {
+  "prose": {
+   "verdict": "ACCEPTED",
+   "checked": false,
+   "layer": null,
+   "line": "ACCEPTED, unchecked: no layer can be checked, so nothing is refused"
+  },
+  "M3": {
+   "verdict": "REFUSED",
+   "checked": false,
+   "layer": "L0",
+   "line": "L0 refused: the bytes do not hash to the name"
+  },
+  "M4": {
+   "verdict": "REFUSED",
+   "checked": false,
+   "layer": "L1",
+   "line": "L1 refused: the record is about another cell than the token names"
+  },
+  "M8": {
+   "verdict": "REFUSED",
+   "checked": false,
+   "layer": "L0",
+   "line": "L0 refused: no batch signed by the pinned key contains these bytes"
+  },
+  "G0": {
+   "verdict": "ACCEPTED",
+   "checked": true,
+   "layer": "L0, L1, L2",
+   "line": "ACCEPTED, checked at L0, L1, L2: hash, attestation signature, log inclusion and recompute all check"
+  }
+ },
+ "south": 0.3015512674990541,
+ "named": 0.4708994708994709,
+ "m8cid": "ylcx42oiamnly5e2dmqry2lfj2de2wgj5aalgpd5bgb5mr6nh52a",
+ "m3cid": "47o5vzsvu2krdvijfvtpj2awxdacgwijjkha3tfhlixujqmo7jlq"
+}
