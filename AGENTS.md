@@ -17,7 +17,7 @@ Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind
 ## Build
 
 ```
-pip install -r poster/requirements.txt playwright==1.56.0 opencv-python-headless pyproj   # Chromium is in /opt/pw-browsers
+pip install -r poster/requirements.txt   # Chromium is in /opt/pw-browsers
 python poster/figs_v13/<figure>.py      # each v13 figure, drawn 1:1 into poster/fig/v13/ (svg, png, labels.json)
 python poster/build_v13.py              # board: inlines figures and QRs, renders PDF + PNGs with Chromium, runs every gate
 python poster/build_v13.py --r1         # re-runs R1 first; --allowlist-candidates prints banned-word hits with their BLAKE3
