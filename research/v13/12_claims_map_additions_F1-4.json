@@ -1,0 +1,811 @@
+{
+ "schema": "esa_poster v13 claims map additions for figures F1 to F4 (same row schema as research/v13/12_claims_map.json; the main map is not edited)",
+ "generated": "2026-10-01",
+ "generated_by": "figure build for F1 to F4 (poster/figs_v13/f1_scene.py ... f4_failure_ladder.py)",
+ "rows": [
+  {
+   "id": "F1.scale",
+   "block": "header image (F1)",
+   "print": [
+    "1 km"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/keylong_B04.bin",
+    "pointer": "EMEMGRD1 pixel pitch 10 m; 100 pixels drawn",
+    "script": "poster/figs_v13/f1_scene.py"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "scale bar length computed from the grid pitch, not typed",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.view_demo.caption",
+   "block": "header image (F1)",
+   "print": [
+    "Your phone is Agent B: a paraphrase passes unchecked; three corruptions are refused."
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "C Header, QR tile; F QR set",
+    "qr": "poster/fig/v13/qr_manifest.json slug demo"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "caption wrapped on three lines on the tile",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.heads",
+   "block": "P1 spine (F2)",
+   "print": [
+    "Agent A cites",
+    "handoff",
+    "relay",
+    "Agent B",
+    "B acted on",
+    "corrupted evidence",
+    "no check reaches"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "C 1 Spine, figure text: column heads"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.mode",
+   "block": "P1 spine (F2)",
+   "print": [
+    "deterministic receiver, no model",
+    "agents, pooled over models"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/mutation_suite.py",
+    "pointer": "docstring: a deterministic study of the VERIFIER, not of a language model",
+    "rule": "research/v13/12_FINAL_BRIEF.md G.10 (fallback mode label)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "fallback label when research/repro/v13/r5/results.json is absent or not final; 'agents, pooled over models' only in R5 mode",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.agents",
+   "block": "P1 spine (F2)",
+   "print": [
+    "A",
+    "B"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/06_visual_system.md",
+    "section": "4 glyph grammar"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.agentA",
+   "block": "P1 spine (F2)",
+   "print": [
+    "Agent A reads",
+    "NDVI 0.4709 and cites it"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "research/repro/v8/proof_bundle_ndvi.cbor",
+    "pointer": "fact value (via mutation_suite.genuine())",
+    "text": "research/v13/12_FINAL_BRIEF.md C 1 Spine: 'Agent A reads NDVI 0.4709 and cites it'"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "calc",
+    "arg": 0.4708994708994709,
+    "expect": 0.4709
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.agentA.px",
+   "block": "P1 spine (F2)",
+   "print": [
+    "outlined: the 10 m pixel the record names"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/v8/pixel_windows.json",
+    "pointer": "oj5cecci centre_col_row floor = window (2, 2); grids rows 210-214 x cols 223-227 equal the window minus 1000"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.relay",
+   "block": "P1 spine (F2)",
+   "print": [
+    "value",
+    "cell",
+    "time",
+    "band",
+    "source",
+    "derivation",
+    "stale state",
+    "signature",
+    "pixel",
+    "relay or faulty"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.mutations[*].family grouped as in panel 5 families",
+    "text": "research/v13/12_FINAL_BRIEF.md C 1 Spine relay bar"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.lanes",
+   "block": "P1 spine (F2)",
+   "print": [
+    "prose",
+    "JSON",
+    "retrieved text (RAG)",
+    "opaque id",
+    "EMEM reference"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.levels A, B, C, I (R5: prereg sec. 3 conditions A to E)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "'retrieved text (RAG)' prints only in R5 mode",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.snippets",
+   "block": "P1 spine (F2)",
+   "print": [
+    "“NDVI 0.4708994708994709, 25 Sep 2026”",
+    "{\"band\": \"indices.ndvi\", \"value\": 0.4708994708994709}",
+    "id oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "research/repro/v11/mutation_suite.py",
+    "pointer": "genuine(): stated, record, token (G0, nothing altered)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "rendered by the suite's own handoff state; R5 mode renders items.prose/json_handoff/answer_passage; long strings are cut with an ellipsis",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.actions",
+   "block": "P1 spine (F2)",
+   "print": [
+    "reads the text",
+    "reads the fields",
+    "retrieves a passage",
+    "fetches the sender’s record"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/mutation_suite.py",
+    "pointer": "decide(): levels A, B read the stated value / record; C resolves the id over the untrusted path"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.chips",
+   "block": "P1 spine (F2)",
+   "print": [
+    "resolve L0",
+    "re-hash L0",
+    "bind L1",
+    "signature L0",
+    "log L0",
+    "recompute L2",
+    "re-read L3"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v11/mutation_suite.py",
+    "pointer": "CHECKS D to I and decide() level C; layer tags from research/v13/10_ladder_threat_invention.md sec. 3"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F2.ceiling",
+   "block": "P1 spine (F2, R5 mode only)",
+   "print": [
+    "{R1 ceiling k / n}"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "summary.{A,B,C,I}.false_accepts / applicable"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "ghost square beside each R5 numeral; prints only in R5 mode",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.try_token.caption",
+   "block": "P1 spine (F2)",
+   "print": [
+    "Resolve the Keylong token on emem.dev, then paste your own."
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "C 1 Spine QR; F QR set",
+    "qr": "poster/fig/v13/qr_manifest.json slug t"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "wrapped on five lines beside the symbol",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F3.rule",
+   "block": "P2 eight answers (F3)",
+   "print": [
+    "irrigate ←"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "meta",
+     "rule"
+    ],
+    "prereg": "research/repro/data/v8/prereg.md"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "constructed test rule; the line sits at the threshold read from meta.rule",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F3.chips",
+   "block": "P2 eight answers (F3)",
+   "print": [
+    "resolve L0",
+    "scene id L1",
+    "date L1",
+    "re-read pixel L3",
+    "catalogue offset L3",
+    "asked coordinates L1",
+    "range L2"
+   ],
+   "status": "INFERRED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/eight_answers.json",
+    "pointer": "answers[*].check, layer",
+    "basis": "research/v13/05_failure_modes_catastrophe.md sec. 6 (first check that stops it); R1 levels C, E, I, H"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F3.legend",
+   "block": "P2 eight answers (F3)",
+   "print": [
+    "a signed record or an archive read",
+    "the reader rule or arithmetic applied to real pixel values"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "C 2 figure text legend"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "glyphs drawn as patches",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "E8.json",
+   "block": "P2 eight answers (F3)",
+   "print": [
+    "0.4709",
+    "0.47",
+    "0.4370",
+    "0.4237",
+    "0.3016",
+    "0.2966",
+    "0.2824",
+    "1.1427"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/eight_answers.json",
+    "script": "research/repro/v13/eight_answers.py",
+    "pointer": "answers[*].value, rederived == true for all eight",
+    "live": "Element84 Earth Search STAC + COG range reads (sentinel-cogs), Planetary Computer STAC + SAS token + COG range reads; no emem endpoint"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "research/repro/v13/eight_answers.json",
+    "arg": [
+     "all_rederived"
+    ],
+    "expect": true
+   },
+   "note": "materialises the brief's open item for E8.s2b and E8.double; the figure re-checks each value against its committed file to 1e-12",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.titles",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "Lost in the handoff",
+    "Wrong date",
+    "Wrong place",
+    "Wrong version",
+    "Wrong scale",
+    "Missing data signed as 0",
+    "Wrong pixel, signed",
+    "Wrong thing"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "C 3 figure text (F4) rung column"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.legend",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "each rung happened, in emem or in our tests"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "inputs": [
+     "F.lost",
+     "F.date",
+     "F.place",
+     "F.version",
+     "F.worldpop",
+     "F.missing",
+     "F.pixel",
+     "F.thing"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "the amber bar marks a real incident (report 06 sec. 4); rung 1 happened in our G2 test, the others in emem",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.order",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "↑ passes more checks"
+   ],
+   "status": "INFERRED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/05_failure_modes_catastrophe.md",
+    "section": "5 rule: a rung is the deepest check a wrong value survives",
+    "matrix": "research/repro/v11/out/mutation_matrix.json first_protected_level"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.chips",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "resolve the reference · L0",
+    "bind the date · L1",
+    "asked coordinates · L1",
+    "source + as-of · L1",
+    "recompute · L2",
+    "catalogue · L3",
+    "re-read · L3",
+    "re-read only · L3",
+    "none · L4"
+   ],
+   "status": "INFERRED",
+   "layer": "L0-L4",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "C 3 figure text (F4) check column",
+    "basis": "research/v13/05_failure_modes_catastrophe.md sec. 5; R1 leave_one_out (I alone stops M15)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "'re-read only' is allowlisted with X.only and F.pixel",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.version.consequence",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "an earlier citation looks wrong"
+   ],
+   "status": "INFERRED",
+   "layer": "L1",
+   "source": {
+    "file": "research/repro/data/contra_bengaluru.json",
+    "pointer": "contradictions[0]: one band name, 918.0 m signed 2026-05-28, 915.07 m from 2026-08-11",
+    "report": "research/v13/05_failure_modes_catastrophe.md sec. 5 rung 4 (blame for a value not yet known)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.pixel.what",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "the reader rounded the pixel index"
+   ],
+   "status": "SPEC",
+   "layer": "L3",
+   "source": {
+    "file": "research/v13/evidence/failure_modes/CHANGELOG_18adb67.md",
+    "line": 47,
+    "code": "emem crates/emem-fetch/src/cog.rs:128-143 (floor vs round)",
+    "data": "research/repro/data/v8/pixel_check.json floor(r,c) vs round(r,c)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.1",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "test rule"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/data/v8/prereg.md",
+    "pointer": "constructed boundary test, exploratory arm R"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "the rounding harm exists only under the constructed rule",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.2",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "open"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "row": "F.date",
+    "pointer": "note: status at emem 8e9b401: open (no fix in CHANGELOG or code diff)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.3",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "fix unconfirmed"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "row": "F.place",
+    "pointer": "note: fix not confirmed at 8e9b401"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.4",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "both kept"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/data/contra_bengaluru.json",
+    "pointer": "both values remain signed and resolvable; CHANGELOG_18adb67.md:54 'Nothing signed is rewritten.'"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.5",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "fixed"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "row": "F.worldpop",
+    "pointer": "note: fixed; CHANGELOG_18adb67.md:61"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.6",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "fixed"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "row": "F.missing",
+    "pointer": "note: fixed; CHANGELOG_18adb67.md:53"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.7",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "fixed 28 Sep 2026"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "row": "F.pixel",
+    "pointer": "fix: CHANGELOG_18adb67.md:47 (2026-09-28T04:09:26Z)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "date parsed from the CHANGELOG line by the figure script",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.status.8",
+   "block": "P3 failure ladder (F4)",
+   "print": [
+    "fixed 30 Sep 2026"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "row": "F.thing",
+    "pointer": "emem commit 0edf574 committer date 2026-09-30T19:30:28Z"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "date read with git log by the figure script when the emem clone is present",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F4.rail",
+   "block": "P3 failure ladder (F4) side rail",
+   "print": [
+    "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2)."
+   ],
+   "status": "INFERRED",
+   "layer": "n/a",
+   "source": {
+    "inputs": [
+     "F.rail.cellmatch",
+     "F.rail.langchain",
+     "F.rail.mast"
+    ],
+    "text": "research/v13/12_FINAL_BRIEF.md C 3 side rail"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "'only' allowlisted (F.rail.cellmatch, F.rail.langchain); 'never tested' allowlisted (F.rail.cellmatch)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  }
+ ]
+}

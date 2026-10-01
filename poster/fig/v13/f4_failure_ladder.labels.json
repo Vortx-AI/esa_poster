@@ -1,0 +1,515 @@
+{
+ "figure": "f4_failure_ladder",
+ "size_mm": [
+  193.5,
+  262.0
+ ],
+ "rungs": [
+  {
+   "n": 1,
+   "title": "Lost in the handoff",
+   "y": 233.44675,
+   "h": 28.553250000000006,
+   "status": "test rule"
+  },
+  {
+   "n": 2,
+   "title": "Wrong date",
+   "y": 196.2735,
+   "h": 36.17325,
+   "status": "open"
+  },
+  {
+   "n": 3,
+   "title": "Wrong place",
+   "y": 166.72025000000002,
+   "h": 28.553250000000006,
+   "status": "fix unconfirmed"
+  },
+  {
+   "n": 4,
+   "title": "Wrong version",
+   "y": 137.16700000000003,
+   "h": 28.553250000000006,
+   "status": "both kept"
+  },
+  {
+   "n": 5,
+   "title": "Wrong scale",
+   "y": 99.99375000000003,
+   "h": 36.17325,
+   "status": "fixed"
+  },
+  {
+   "n": 6,
+   "title": "Missing data signed as 0",
+   "y": 70.44050000000003,
+   "h": 28.553250000000006,
+   "status": "fixed"
+  },
+  {
+   "n": 7,
+   "title": "Wrong pixel, signed",
+   "y": 35.55325000000003,
+   "h": 33.88725,
+   "status": "fixed 28 Sep 2026"
+  },
+  {
+   "n": 8,
+   "title": "Wrong thing",
+   "y": 6.000000000000021,
+   "h": 28.553250000000006,
+   "status": "fixed 30 Sep 2026"
+  }
+ ],
+ "labels": [
+  {
+   "text": "each rung happened, in emem or in our tests",
+   "claim": "F4.legend",
+   "x_mm": 5.0,
+   "y_mm": 3.9,
+   "pt": 14
+  },
+  {
+   "text": "↑ passes more checks",
+   "claim": "F4.order",
+   "x_mm": 176.0,
+   "y_mm": 3.9,
+   "pt": 14
+  },
+  {
+   "text": "1",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 240.53,
+   "pt": 17
+  },
+  {
+   "text": "Lost in the handoff",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 240.53,
+   "pt": 17
+  },
+  {
+   "text": "test rule",
+   "claim": "F4.status.1",
+   "x_mm": 160.84,
+   "y_mm": 237.7,
+   "pt": 14
+  },
+  {
+   "text": "resolve the reference · L0",
+   "claim": "F4.chips",
+   "x_mm": 117.82,
+   "y_mm": 237.7,
+   "pt": 14
+  },
+  {
+   "text": "0.47 for 0.4709",
+   "claim": "F.lost",
+   "x_mm": 6.0,
+   "y_mm": 246.28,
+   "pt": 15
+  },
+  {
+   "text": "5 of 5 receivers irrigated",
+   "claim": "F.lost",
+   "x_mm": 6.0,
+   "y_mm": 253.63,
+   "pt": 20
+  },
+  {
+   "text": "Perez et al., ICLR 2025: LLM transmission chains drift",
+   "claim": "F.lost.out",
+   "x_mm": 6.0,
+   "y_mm": 259.32,
+   "pt": 14
+  },
+  {
+   "text": "2",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 203.36,
+   "pt": 17
+  },
+  {
+   "text": "Wrong date",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 203.36,
+   "pt": 17
+  },
+  {
+   "text": "open",
+   "claim": "F4.status.2",
+   "x_mm": 164.24,
+   "y_mm": 200.52,
+   "pt": 14
+  },
+  {
+   "text": "bind the date · L1",
+   "claim": "F4.chips",
+   "x_mm": 133.82,
+   "y_mm": 200.52,
+   "pt": 14
+  },
+  {
+   "text": "asked 23 Sep, served 25 Sep",
+   "claim": "F.date",
+   "x_mm": 6.0,
+   "y_mm": 209.11,
+   "pt": 15
+  },
+  {
+   "text": "10 of 10 agents saw one scene twice; 3 said no",
+   "claim": "F.date",
+   "x_mm": 6.0,
+   "y_mm": 216.46,
+   "pt": 20
+  },
+  {
+   "text": "23 Sep scene existed",
+   "claim": "F.date",
+   "x_mm": 6.0,
+   "y_mm": 224.08,
+   "pt": 20
+  },
+  {
+   "text": "STAC item search defines no default order",
+   "claim": "F.date.out",
+   "x_mm": 6.0,
+   "y_mm": 229.77,
+   "pt": 14
+  },
+  {
+   "text": "3",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 173.8,
+   "pt": 17
+  },
+  {
+   "text": "Wrong place",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 173.8,
+   "pt": 17
+  },
+  {
+   "text": "fix unconfirmed",
+   "claim": "F4.status.3",
+   "x_mm": 152.57,
+   "y_mm": 170.97,
+   "pt": 14
+  },
+  {
+   "text": "asked coordinates · L1",
+   "claim": "F4.chips",
+   "x_mm": 104.72,
+   "y_mm": 170.97,
+   "pt": 14
+  },
+  {
+   "text": "coordinates given, town point answered",
+   "claim": "F.place",
+   "x_mm": 6.0,
+   "y_mm": 179.55,
+   "pt": 15
+  },
+  {
+   "text": "597 m; NDVI 0.28 for the field's 0.42",
+   "claim": "F.place",
+   "x_mm": 6.0,
+   "y_mm": 186.91,
+   "pt": 20
+  },
+  {
+   "text": "GDAL 3 follows CRS axis order (RFC 73)",
+   "claim": "F.place.out",
+   "x_mm": 6.0,
+   "y_mm": 192.59,
+   "pt": 14
+  },
+  {
+   "text": "4",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 144.25,
+   "pt": 17
+  },
+  {
+   "text": "Wrong version",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 144.25,
+   "pt": 17
+  },
+  {
+   "text": "both kept",
+   "claim": "F4.status.4",
+   "x_mm": 159.34,
+   "y_mm": 141.42,
+   "pt": 14
+  },
+  {
+   "text": "source + as-of · L1",
+   "claim": "F4.chips",
+   "x_mm": 122.88,
+   "y_mm": 141.42,
+   "pt": 14
+  },
+  {
+   "text": "918.0 m, then 915.07 m, one band name",
+   "claim": "F.version",
+   "x_mm": 6.0,
+   "y_mm": 150.0,
+   "pt": 15
+  },
+  {
+   "text": "an earlier citation looks wrong",
+   "claim": "F4.version.consequence",
+   "x_mm": 6.0,
+   "y_mm": 157.36,
+   "pt": 20
+  },
+  {
+   "text": "GFC2020 V3 cut forest cover by more than 20 % in the Cerrado",
+   "claim": "F.version.out",
+   "x_mm": 6.0,
+   "y_mm": 163.04,
+   "pt": 14
+  },
+  {
+   "text": "5",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 107.08,
+   "pt": 17
+  },
+  {
+   "text": "Wrong scale",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 107.08,
+   "pt": 17
+  },
+  {
+   "text": "fixed",
+   "claim": "F4.status.5",
+   "x_mm": 164.4,
+   "y_mm": 104.24,
+   "pt": 14
+  },
+  {
+   "text": "catalogue · L3",
+   "claim": "F4.chips",
+   "x_mm": 137.56,
+   "y_mm": 104.24,
+   "pt": 14
+  },
+  {
+   "text": "recompute · L2",
+   "claim": "F4.chips",
+   "x_mm": 99.5,
+   "y_mm": 104.24,
+   "pt": 14
+  },
+  {
+   "text": "WorldPop signed per pixel, not per km²: 1.77× low",
+   "claim": "F.worldpop",
+   "x_mm": 6.0,
+   "y_mm": 112.83,
+   "pt": 15
+  },
+  {
+   "text": "one pixel: 0.4709, 0.2966, 1.1427 under three",
+   "claim": "F.scale",
+   "x_mm": 6.0,
+   "y_mm": 120.18,
+   "pt": 20
+  },
+  {
+   "text": "offset rules",
+   "claim": "F.scale",
+   "x_mm": 6.0,
+   "y_mm": 127.8,
+   "pt": 20
+  },
+  {
+   "text": "Element84 items say \"offset applied\" and \"apply −0.1\"",
+   "claim": "F.scale.out",
+   "x_mm": 6.0,
+   "y_mm": 133.49,
+   "pt": 14
+  },
+  {
+   "text": "6",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 77.52,
+   "pt": 17
+  },
+  {
+   "text": "Missing data signed as 0",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 77.52,
+   "pt": 17
+  },
+  {
+   "text": "fixed",
+   "claim": "F4.status.6",
+   "x_mm": 164.4,
+   "y_mm": 74.69,
+   "pt": 14
+  },
+  {
+   "text": "re-read · L3",
+   "claim": "F4.chips",
+   "x_mm": 140.34,
+   "y_mm": 74.69,
+   "pt": 14
+  },
+  {
+   "text": "off-tile pixels signed as 0",
+   "claim": "F.missing",
+   "x_mm": 6.0,
+   "y_mm": 83.28,
+   "pt": 15
+  },
+  {
+   "text": "a forest-loss screen passes",
+   "claim": "F.missing",
+   "x_mm": 6.0,
+   "y_mm": 90.63,
+   "pt": 20
+  },
+  {
+   "text": "Hansen lossyear 0 means no loss",
+   "claim": "F.missing.out",
+   "x_mm": 6.0,
+   "y_mm": 96.31,
+   "pt": 14
+  },
+  {
+   "text": "7",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 42.63,
+   "pt": 17
+  },
+  {
+   "text": "Wrong pixel, signed",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 42.63,
+   "pt": 17
+  },
+  {
+   "text": "fixed 28 Sep 2026",
+   "claim": "F4.status.7",
+   "x_mm": 150.43,
+   "y_mm": 39.8,
+   "pt": 14
+  },
+  {
+   "text": "re-read only · L3",
+   "claim": "F4.chips",
+   "x_mm": 107.08,
+   "y_mm": 39.8,
+   "pt": 14
+  },
+  {
+   "text": "the reader rounded the pixel index",
+   "claim": "F4.pixel.what",
+   "x_mm": 6.0,
+   "y_mm": 48.39,
+   "pt": 15
+  },
+  {
+   "text": "162 of 200 sampled records",
+   "claim": "F.pixel",
+   "x_mm": 6.0,
+   "y_mm": 55.74,
+   "pt": 20
+  },
+  {
+   "text": "GDAL RFC 33: half-pixel shift; one-pixel misregistration: error > 50 % of",
+   "claim": "F.pixel.out",
+   "x_mm": 6.0,
+   "y_mm": 61.43,
+   "pt": 14
+  },
+  {
+   "text": "NDVI differences (Townshend 1992)",
+   "claim": "F.pixel.out",
+   "x_mm": 6.0,
+   "y_mm": 66.76,
+   "pt": 14
+  },
+  {
+   "text": "8",
+   "claim": "F4.titles",
+   "x_mm": 6.0,
+   "y_mm": 13.08,
+   "pt": 17
+  },
+  {
+   "text": "Wrong thing",
+   "claim": "F4.titles",
+   "x_mm": 11.6,
+   "y_mm": 13.08,
+   "pt": 17
+  },
+  {
+   "text": "fixed 30 Sep 2026",
+   "claim": "F4.status.8",
+   "x_mm": 150.43,
+   "y_mm": 10.25,
+   "pt": 14
+  },
+  {
+   "text": "none · L4",
+   "claim": "F4.chips",
+   "x_mm": 115.19,
+   "y_mm": 10.25,
+   "pt": 14
+  },
+  {
+   "text": "\"this image\" resolved to a hair salon in Ontario",
+   "claim": "F.thing",
+   "x_mm": 6.0,
+   "y_mm": 18.83,
+   "pt": 15
+  },
+  {
+   "text": "receipt, Merkle proof and state chain all valid",
+   "claim": "F.thing",
+   "x_mm": 6.0,
+   "y_mm": 26.19,
+   "pt": 20
+  },
+  {
+   "text": "toponym ambiguity (Gritta et al. 2018)",
+   "claim": "F.thing.out",
+   "x_mm": 6.0,
+   "y_mm": 31.87,
+   "pt": 14
+  },
+  {
+   "text": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter",
+   "claim": "F4.rail",
+   "x_mm": 182.0,
+   "y_mm": 261.0,
+   "pt": 14
+  },
+  {
+   "text": "returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+   "claim": "F4.rail",
+   "x_mm": 188.6,
+   "y_mm": 261.0,
+   "pt": 14
+  }
+ ]
+}

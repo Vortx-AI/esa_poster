@@ -1,0 +1,468 @@
+{
+ "figure": "f2_spine",
+ "size_mm": [
+  801.0,
+  118.0
+ ],
+ "mode": "fallback",
+ "lanes": [
+  "prose",
+  "json",
+  "opaque",
+  "emem"
+ ],
+ "numerals": {
+  "prose": [
+   15,
+   15
+  ],
+  "json": [
+   15,
+   15
+  ],
+  "opaque": [
+   13,
+   16
+  ],
+  "emem": [
+   0,
+   16
+  ]
+ },
+ "snippets": {
+  "prose": "“NDVI 0.4708994708994709, 25 Sep 2026”",
+  "json": "{\"band\": \"indices.ndvi\", \"value\": 0.4708994708994709}",
+  "opaque": "id oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+  "emem": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+ },
+ "r5": {},
+ "labels": [
+  {
+   "text": "Agent A cites",
+   "claim": "F2.heads",
+   "x_mm": 0,
+   "y_mm": 11,
+   "pt": 17
+  },
+  {
+   "text": "handoff",
+   "claim": "F2.heads",
+   "x_mm": 112,
+   "y_mm": 11,
+   "pt": 17
+  },
+  {
+   "text": "relay",
+   "claim": "F2.heads",
+   "x_mm": 355,
+   "y_mm": 11,
+   "pt": 17
+  },
+  {
+   "text": "Agent B",
+   "claim": "F2.heads",
+   "x_mm": 400,
+   "y_mm": 11,
+   "pt": 17
+  },
+  {
+   "text": "B acted on",
+   "claim": "F2.heads",
+   "x_mm": 690,
+   "y_mm": 4.9,
+   "pt": 17
+  },
+  {
+   "text": "corrupted evidence",
+   "claim": "F2.heads",
+   "x_mm": 690,
+   "y_mm": 11,
+   "pt": 17
+  },
+  {
+   "text": "no check reaches",
+   "claim": "F2.heads",
+   "x_mm": 749.5,
+   "y_mm": 11,
+   "pt": 17
+  },
+  {
+   "text": "deterministic receiver, no model",
+   "claim": "F2.mode",
+   "x_mm": 690,
+   "y_mm": 16.4,
+   "pt": 14
+  },
+  {
+   "text": "A",
+   "claim": "F2.agents",
+   "x_mm": 69.0,
+   "y_mm": 28.3,
+   "pt": 28
+  },
+  {
+   "text": "Agent A reads",
+   "claim": "F2.agentA",
+   "x_mm": 0,
+   "y_mm": 76.0,
+   "pt": 20
+  },
+  {
+   "text": "NDVI 0.4709 and cites it",
+   "claim": "F2.agentA",
+   "x_mm": 0,
+   "y_mm": 84.0,
+   "pt": 20
+  },
+  {
+   "text": "Sentinel-2A L2A, 25 Sep 2026",
+   "claim": "H.img.record",
+   "x_mm": 0,
+   "y_mm": 94.0,
+   "pt": 14
+  },
+  {
+   "text": "outlined: the 10 m pixel the record names",
+   "claim": "F2.agentA.px",
+   "x_mm": 0,
+   "y_mm": 100.0,
+   "pt": 14
+  },
+  {
+   "text": "true colour, signed grids",
+   "claim": "H.img.grid",
+   "x_mm": 0,
+   "y_mm": 106.0,
+   "pt": 14
+  },
+  {
+   "text": "relay or faulty",
+   "claim": "S.16",
+   "x_mm": 337,
+   "y_mm": 23.5,
+   "pt": 15
+  },
+  {
+   "text": "signer, one of 16:",
+   "claim": "S.16",
+   "x_mm": 337,
+   "y_mm": 32.45,
+   "pt": 15
+  },
+  {
+   "text": "value",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 41.4,
+   "pt": 15
+  },
+  {
+   "text": "cell",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 50.35,
+   "pt": 15
+  },
+  {
+   "text": "time",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 59.3,
+   "pt": 15
+  },
+  {
+   "text": "band",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 68.25,
+   "pt": 15
+  },
+  {
+   "text": "source",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 77.2,
+   "pt": 15
+  },
+  {
+   "text": "derivation",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 86.15,
+   "pt": 15
+  },
+  {
+   "text": "stale state",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 95.1,
+   "pt": 15
+  },
+  {
+   "text": "signature",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 104.05,
+   "pt": 15
+  },
+  {
+   "text": "pixel",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 113.0,
+   "pt": 15
+  },
+  {
+   "text": "prose",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 22.2,
+   "pt": 22
+  },
+  {
+   "text": "“NDVI 0.4708994708994709, 25 Sep 2026”",
+   "claim": "F2.snippets",
+   "x_mm": 112,
+   "y_mm": 35.0,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 30.3,
+   "pt": 17
+  },
+  {
+   "text": "reads the text",
+   "claim": "F2.actions",
+   "x_mm": 418,
+   "y_mm": 30.0,
+   "pt": 20
+  },
+  {
+   "text": "15 / 15",
+   "claim": "S.R1.A",
+   "x_mm": 690,
+   "y_mm": 30.6,
+   "pt": 64
+  },
+  {
+   "text": "JSON",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 47.2,
+   "pt": 22
+  },
+  {
+   "text": "{\"band\": \"indices.ndvi\", \"value\": 0.4708994708994709}",
+   "claim": "F2.snippets",
+   "x_mm": 112,
+   "y_mm": 60.0,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 55.3,
+   "pt": 17
+  },
+  {
+   "text": "reads the fields",
+   "claim": "F2.actions",
+   "x_mm": 418,
+   "y_mm": 55.0,
+   "pt": 20
+  },
+  {
+   "text": "15 / 15",
+   "claim": "S.R1.B",
+   "x_mm": 690,
+   "y_mm": 55.6,
+   "pt": 64
+  },
+  {
+   "text": "opaque id",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 72.2,
+   "pt": 22
+  },
+  {
+   "text": "id oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+   "claim": "F2.snippets",
+   "x_mm": 112,
+   "y_mm": 85.0,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 80.3,
+   "pt": 17
+  },
+  {
+   "text": "fetches the sender’s record",
+   "claim": "F2.actions",
+   "x_mm": 418,
+   "y_mm": 80.0,
+   "pt": 20
+  },
+  {
+   "text": "13 / 16",
+   "claim": "S.R1.C",
+   "x_mm": 690,
+   "y_mm": 80.6,
+   "pt": 64
+  },
+  {
+   "text": "EMEM reference",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 97.2,
+   "pt": 22
+  },
+  {
+   "text": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk6…",
+   "claim": "O.cid",
+   "x_mm": 114.5,
+   "y_mm": 110.0,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 105.3,
+   "pt": 17
+  },
+  {
+   "text": "resolve L0",
+   "claim": "F2.chips",
+   "x_mm": 433.15,
+   "y_mm": 99.8,
+   "pt": 15
+  },
+  {
+   "text": "re-hash L0",
+   "claim": "F2.chips",
+   "x_mm": 466.09,
+   "y_mm": 99.8,
+   "pt": 15
+  },
+  {
+   "text": "bind L1",
+   "claim": "F2.chips",
+   "x_mm": 495.65,
+   "y_mm": 99.8,
+   "pt": 15
+  },
+  {
+   "text": "signature L0",
+   "claim": "F2.chips",
+   "x_mm": 527.34,
+   "y_mm": 99.8,
+   "pt": 15
+  },
+  {
+   "text": "log L0",
+   "claim": "F2.chips",
+   "x_mm": 427.87,
+   "y_mm": 110.6,
+   "pt": 15
+  },
+  {
+   "text": "recompute L2",
+   "claim": "F2.chips",
+   "x_mm": 459.67,
+   "y_mm": 110.6,
+   "pt": 15
+  },
+  {
+   "text": "re-read L3",
+   "claim": "F2.chips",
+   "x_mm": 497.05,
+   "y_mm": 110.6,
+   "pt": 15
+  },
+  {
+   "text": "0 / 16",
+   "claim": "S.R1.I",
+   "x_mm": 690,
+   "y_mm": 105.6,
+   "pt": 64
+  },
+  {
+   "text": "the entity meant (M17)",
+   "claim": "S.boundary_wall",
+   "x_mm": 711,
+   "y_mm": 30.5,
+   "pt": 20
+  },
+  {
+   "text": "sensor accuracy",
+   "claim": "S.boundary_wall",
+   "x_mm": 711,
+   "y_mm": 43.0,
+   "pt": 20
+  },
+  {
+   "text": "the decision",
+   "claim": "S.boundary_wall",
+   "x_mm": 711,
+   "y_mm": 55.5,
+   "pt": 20
+  },
+  {
+   "text": "TRY A",
+   "claim": "Q.try_token",
+   "x_mm": 756.2,
+   "y_mm": 74.3,
+   "pt": 20
+  },
+  {
+   "text": "TOKEN",
+   "claim": "Q.try_token",
+   "x_mm": 756.2,
+   "y_mm": 81.8,
+   "pt": 20
+  },
+  {
+   "text": "Resolve the",
+   "claim": "Q.try_token.caption",
+   "x_mm": 756.2,
+   "y_mm": 91.3,
+   "pt": 14
+  },
+  {
+   "text": "Keylong token",
+   "claim": "Q.try_token.caption",
+   "x_mm": 756.2,
+   "y_mm": 96.7,
+   "pt": 14
+  },
+  {
+   "text": "on emem.dev,",
+   "claim": "Q.try_token.caption",
+   "x_mm": 756.2,
+   "y_mm": 102.1,
+   "pt": 14
+  },
+  {
+   "text": "then paste",
+   "claim": "Q.try_token.caption",
+   "x_mm": 756.2,
+   "y_mm": 107.5,
+   "pt": 14
+  },
+  {
+   "text": "your own.",
+   "claim": "Q.try_token.caption",
+   "x_mm": 756.2,
+   "y_mm": 112.9,
+   "pt": 14
+  }
+ ]
+}
