@@ -1,0 +1,4 @@
+file: research/repro/v13/r5/prereg.md
+blake3: ddef896fd4a102ae8c681411829f69d7f6aef3ea2ada8fe79609d6fcabff3546
+hashed_at_utc: 2026-10-01T05:22:03Z
+status: before trial 1 (no R5 trial, pilot included, has run)
