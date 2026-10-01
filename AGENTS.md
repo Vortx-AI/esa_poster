@@ -2,34 +2,42 @@
 
 This repository holds the A0 poster for "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents
 over ~~Foundation-Model Embeddings~~ Satellite Observations and Signed Execution Traces" (Agentic AI for Earth
-Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v12.
+Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.
 
 ## Start here
 
-1. `research/sessions/2026-09-30_v12/README.md`: what v12 changed, why, and what stays off the board.
-2. `research/should_do/19_V12_CLAIMS_MAP.md`: every number on the v12 board and its source (generated; no row, no number).
-3. `research/repro/v12/`: live EO evidence (780 verified facts), the SAT-042 trace run, the v11.2 section audit.
-4. v11 history: `research/sessions/2026-09-30_v11/`, `research/should_do/15_V11_CLAIMS_MAP.md`, `18_V11_PROCESS_AND_HANDOFF.md`.
+1. `research/v13/12_FINAL_BRIEF.md`: the v13 build specification (composition, every printed word, figures, gates).
+2. `research/v13/12_claims_map.json` plus `research/v13/12_claims_map_additions_*.json`: every number on the v13 board
+   and its source (no row, no number; `extend_print` entries add printed forms of existing rows).
+3. `poster/build_v13_report.json`: the last build's gate results, layout deviations from the brief and word counts.
+4. v12 history: `research/sessions/2026-09-30_v12/README.md`, `research/should_do/19_V12_CLAIMS_MAP.md`, `research/repro/v12/`
+   (live EO evidence, 780 verified facts, the SAT-042 trace run, the v11.2 section audit).
+5. v11 history: `research/sessions/2026-09-30_v11/`, `research/should_do/15_V11_CLAIMS_MAP.md`, `18_V11_PROCESS_AND_HANDOFF.md`.
 
 ## Build
 
 ```
-pip install -r poster/requirements.txt
-python poster/build_v12.py              # reruns R1, redraws figures, renders PDF and PNG, runs the gates
-python poster/build_v12.py --no-figures # layout only
-python research/repro/v12/scripts/claims_map_v12.py   # regenerates the claims map and checks the board prints it
+pip install -r poster/requirements.txt playwright==1.56.0 opencv-python-headless pyproj   # Chromium is in /opt/pw-browsers
+python poster/figs_v13/<figure>.py      # each v13 figure, drawn 1:1 into poster/fig/v13/ (svg, png, labels.json)
+python poster/build_v13.py              # board: inlines figures and QRs, renders PDF + PNGs with Chromium, runs every gate
+python poster/build_v13.py --r1         # re-runs R1 first; --allowlist-candidates prints banned-word hits with their BLAKE3
 python research/repro/v11/mutation_suite.py   # R1 alone, offline
 ```
 
-Edit `poster/src/poster.v12.html` (never `poster/poster.html`, which is generated). Figures: `poster/make_figures_v12.py`
-draws every panel 1:1 at its board size and fails on text under 15 pt, clipped or overlapping labels. v11 sources stay
-in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 board is in `poster/archive/v10/`.
+Edit `poster/src/poster.v13.html` and `poster/src/poster.v13.css` (never `poster/poster.html`, which is generated).
+Colours: `poster/src/tokens.json`. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
+Deliberate departures from the brief's block rectangles, each with its reason: `poster/src/poster.v13.layout.json`.
+R5 lines (`data-mode="r5"`, `{R5.*}` placeholders) print only when `research/repro/v13/r5/results.json` is final; the
+switch is in the build. v12 sources stay in `poster/src/poster.v12.html`, `poster/build_v12.py`, `poster/make_figures_v12.py`;
+v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 board is in `poster/archive/v10/`.
 
 ## Rules the build enforces (it fails, never warns)
 
-- one page, 841 × 1189 mm; content ends at least 2 mm above the footer;
-- no em dashes, no en dashes outside numeric ranges, no tell words in running text;
-- every QR file present; no overlapping or clipped figure labels;
+- one page, 841 × 1189 mm; content ends at least 2 mm above the footer; no box overflows its block or column;
+- no text below 14 pt (computed in the browser, figure SVG included); kicker, mechanism and take lines at 24 pt, captions 17;
+- no em or en dashes, no tell words, no banned word (report 10 section 5.3) without an allowlist entry;
+- every number on the face (HTML and figure text) has a claims-map row; rows with a check re-run against their files;
+- every QR decodes (OpenCV, 300 dpi render) to its `.txt` payload; every figure placed; colours are tokens; imagery at 300 ppi;
 - an unknown gate result is a failure.
 
 ## Conventions

@@ -3484,7 +3484,7 @@
    "print": [
     "915.07 m",
     "first signed 11 Aug",
-    "re-signed 7 times"
+    "signed 7 times"
    ],
    "status": "MEASURED",
    "layer": "L1",
@@ -3500,7 +3500,7 @@
     "arg": "2026-08-11T09:39:36Z",
     "expect": null
    },
-   "note": "",
+   "note": "; wording corrected 2026-10-01: the file holds 7 signings in all (the first plus 6 re-signings), so \"signed 7 times\"",
    "tier": "1m",
    "fallback": null,
    "r5_key": null,
