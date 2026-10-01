@@ -164,6 +164,14 @@ if R["open_models"]:
 else:
     P("None completed.")
 P("")
+P("## 7b. Cross-runtime demonstration (#43, Block 3)")
+P("")
+X = json.loads((HERE / "crossruntime_demo.json").read_text())
+P(f"Same token through five lanes: distinct cids {X['distinct_cids_T']}, distinct values {X['distinct_values_T']}. "
+  f"Forged token (same cid, Bengaluru cell) refused by lane: {X['forged_refused_by_lane']}. Cost USD {X['total_cost_usd']}. Details and the two adverse notes in `crossruntime_demo.md`.")
+for n in X.get("notes", []):
+    P(f"- {n}")
+P("")
 P("## 8. Overheads (Block 1, Claude; medians)")
 P("")
 P("| model | cond | n | latency s | tokens in | cache write | tokens out | USD/trial | USD/correct decision |")
@@ -191,6 +199,9 @@ P("- Fable 5.1 not used; Block 0 (natural A corruption) not run; open models on 
   "models were run as far as CPU time allowed (section 7 lists the ones that completed).")
 P("- Block 2's `verify_evidence` (L2) verifies against the frozen bundles, not against a fresh fetch of the live record.")
 P("- No manual audit of REASON strings; they are published per trial in trials.jsonl.")
+P("- Open models: Qwen2.5-7B completed its 106 Block 1 cells. Llama-3.2-3B, Gemma-3-4B and Phi-4-mini were downloaded (Llama, Gemma) "
+  "but not run: CPU time ran out after the Claude re-runs, and the chain was stopped before any of their trials so that trials.jsonl "
+  "matches this final scoring. The second model family is therefore Qwen alone.")
 P("")
 P("## 10. Adverse and limiting results, stated plainly")
 P("")

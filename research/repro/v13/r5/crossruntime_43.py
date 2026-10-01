@@ -207,8 +207,25 @@ def report():
             out = f"emitted T unchanged: {r.get('emitted_equals_T')}"
         L.append(f"| {r['lane']} | {r.get('runtime')} {r.get('model') or ''} | {r.get('transport')} | {r['token_kind']} | "
                  f"{(r.get('fact_cid') or '-')[:8]} | {r.get('value_verbatim') or '-'} | {r.get('receipt_sig_ok')} | {out} |")
+    l2 = [r for r in rows if r["lane"].startswith("2")]
+    l3 = [r for r in rows if r["lane"].startswith("3")]
+    notes = []
+    if l2:
+        g = [r for r in l2 if r["token_kind"] == "T"]
+        notes.append(f"Lane 2 (haiku, instructed to resolve and bind cell, band and date): the genuine token T resolved to the right cid and value in "
+                     f"{sum(1 for r in g if r.get('fact_cid'))}/{len(g)} runs but B answered DECLINE in {sum(1 for r in g if r.get('decision') == 'DECLINE')}/{len(g)}, "
+                     "because the live resolve body carries the signing time and no scene date, so B could not confirm the 25 Sep date it was told to check. "
+                     f"T' was refused by the server (isError) and B declined in {sum(1 for r in l2 if r['token_kind'] == chr(84) + chr(39) and r.get('decision') == 'DECLINE')}/{sum(1 for r in l2 if r['token_kind'] == chr(84) + chr(39))} runs.")
+    for r in l3:
+        notes.append(f"Lane 3 (Qwen2.5-7B) {r['token_kind']}: sent `{r.get('token_sent')}` (intact: {r.get('token_intact')}); server isError {r.get('resolve_is_error')}; "
+                     f"resolved cid {(r.get('fact_cid') or '-')[:8]}, value {r.get('value_verbatim')}; decision {r.get('decision')} "
+                     f"({'wrong: 0.4709 > 0.4705 is HOLD' if r.get('decision') == 'IRRIGATE' and r['token_kind'] == 'T' else ''}"
+                     f"{'the relabelled reference was NOT refused: Qwen dropped the emem:fact: prefix, the server resolved the remainder without error, and Qwen acted on it for the wrong field' if r['token_kind'] != 'T' and not r.get('refused') else ''}).")
+    res["notes"] = notes
+    (HERE / "crossruntime_demo.json").write_text(json.dumps(res, indent=1, default=str))
     L += ["", f"Distinct cids for T across lanes: {res['distinct_cids_T']}; distinct values: {res['distinct_values_T']}.",
           f"Forged T' refused by lane: {res['forged_refused_by_lane']}.", f"Total CLI-reported cost: ${res['total_cost_usd']}.",
+          ""] + [f"- {n}" for n in notes] + [
           "", "Not demonstrated: ChatGPT and Dify (need interactive accounts). Lane 5's source check uses the committed 25 Sep COG",
           "window (research/repro/data/v8/pixel_windows.json), not a fresh COG read."]
     (HERE / "crossruntime_demo.md").write_text("\n".join(L) + "\n")
