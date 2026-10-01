@@ -1,0 +1,1 @@
+{"t": 1790834163.586648, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xAnI.zb1a2:p6ewjnlqo5npzooyrlak7gwtia23s2vlnb435xbxz3ycusv7auta"}, "is_error": true, "ms": 9.746, "meta": {"verdict": false, "first_fail": "binding"}, "text": "refused: binding check failed: record cell defi.zb572.xAnI.zb1a2 != question cell defi.zb572.xoso.zb1ec"}
