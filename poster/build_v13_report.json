@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-01T08:55:24+00:00",
+ "built_utc": "2026-10-01T10:06:40+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -10,11 +10,11 @@
  "mode": {
   "results_file": "research/repro/v13/r5/results.json",
   "exists": true,
-  "final": false,
-  "prereg_pushed": "file:",
+  "final": true,
+  "prereg_pushed": "ddef896fd4a102ae8c681411829f69d7f6aef3ea2ada8fe79609d6fcabff3546",
   "prereg_in_results": "ddef896fd4a102ae8c681411829f69d7f6aef3ea2ada8fe79609d6fcabff3546",
-  "mode": "fallback",
-  "why": "results.json not final or prereg hash mismatch"
+  "n_trials_scored": 2794,
+  "mode": "r5"
  },
  "pdf": {
   "pages": 1,
@@ -38,7 +38,7 @@
    "file": "poster/fig/v13/f2_spine.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-01T06:08:41"
+   "mtime": "2026-10-01T09:51:16"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -73,7 +73,7 @@
    "file": "poster/fig/v13/f6_mutation_matrix.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-01T08:49:55"
+   "mtime": "2026-10-01T10:00:19"
   },
   "f7_wrong_pixel": {
    "state": "placed",
@@ -132,7 +132,7 @@
    "mtime": "2026-10-01T06:03:23"
   }
  },
- "figure_text_tokens": 1924,
+ "figure_text_tokens": 2199,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -149,21 +149,21 @@
   "block_rectangles": {
    "pass": true,
    "details": [
-    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x177.5), off by 17.5 mm; reason: Spine content measures 177.5 mm (F2 118 mm, agent strip set in two lines at 24 pt over 468 mm); it starts 3 mm under the header (brief 8) and ends 12.5 mm earlier, giving the three columns 23.5 mm.",
-    "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,372.5,193.5x130.8), off by 23.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,507.5,193.5x348.1), off by 16.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,859.7,193.5x74.2), off by 7.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,938.1,193.5x78.4), off by 2.1 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,372.5,396.0x168.3), off by 23.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,549.5,396.0x275.0), off by 12.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p7: brief (627.5,396.0,193.5x188.0) rendered (627.5,372.5,193.5x202.1), off by 23.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,580.3,193.5x128.8), off by 13.7 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p9: brief (627.5,730.0,193.5x106.0) rendered (627.5,714.8,193.5x95.9), off by 25.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p10: brief (627.5,846.0,193.5x64.0) rendered (627.5,816.4,193.5x77.6), off by 29.6 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p11: brief (627.5,920.0,193.5x96.0) rendered (627.5,899.7,193.5x116.8), off by 20.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Spine content measures 183.5 mm (F2 118 mm, agent strip in two lines at 24 pt beside the R5 scope lines at 14 pt); it starts 3 mm under the header (brief 8) and ends 6.5 mm earlier, giving the three columns 18.5 mm.",
+    "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x130.8), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,511.8,193.5x348.1), off by 13.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,863.4,193.5x76.3), off by 13.8 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,943.3,193.5x73.2), off by 7.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x168.3), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,552.0,396.0x275.0), off by 10.0 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p7: brief (627.5,396.0,193.5x188.0) rendered (627.5,377.5,193.5x202.1), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,584.8,193.5x128.8), off by 9.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p9: brief (627.5,730.0,193.5x106.0) rendered (627.5,718.8,193.5x95.9), off by 21.4 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p10: brief (627.5,846.0,193.5x64.0) rendered (627.5,819.8,193.5x76.1), off by 26.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p11: brief (627.5,920.0,193.5x96.0) rendered (627.5,901.1,193.5x115.4), off by 18.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
     "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1020.5,531.0x146.5), off by 5.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt; F11 sits at the bottom of the panel.",
-    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1020.5,261.0x78.7), off by 8.8 mm; reason: Bottom band starts 1020.5 mm (brief 1026); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
+    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1020.5,261.0x78.0), off by 9.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
     "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1103.0,261.0x64.0), off by 13.0 mm; reason: Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50).",
     "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
    ]
@@ -183,13 +183,13 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (776 text runs)"
+    "every printed code point is in the face that sets it (860 text runs)"
    ]
   },
   "prose_and_banned_words": {
    "pass": true,
    "details": [
-    "no em/en dashes, tell words or unlisted banned words; 40 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
+    "no em/en dashes, tell words or unlisted banned words; 39 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
    ]
   },
   "face_hygiene": {
@@ -201,19 +201,19 @@
   "r5_placeholders": {
    "pass": true,
    "details": [
-    "mode: fallback (results.json not final or prereg hash mismatch)"
+    "mode: r5 (results final)"
    ]
   },
   "claims_coverage": {
    "pass": true,
    "details": [
-    "68 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "82 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "131 rows with a check re-run against their files: all pass (24 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "355 rows with a check re-run against their files: all pass (24 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -221,8 +221,8 @@
    "details": [
     "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
     "qr_t at (20.0,230.3) 801.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/t/' == payload 'https://vortx-ai.github.io/esa_poster/t/'",
-    "qr_r at (568.5,376.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
-    "qr_test at (568.5,774.5) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/test/' == payload 'https://vortx-ai.github.io/esa_poster/test/'",
+    "qr_r at (568.5,381.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
+    "qr_test at (568.5,777.0) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/test/' == payload 'https://vortx-ai.github.io/esa_poster/test/'",
     "qr_use at (501.0,1024.3) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'",
     "qr_methods at (771.0,1117.0) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/methods/' == payload 'https://vortx-ai.github.io/esa_poster/methods/'"
    ]
@@ -261,8 +261,8 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 823 words containing a letter, 869 tokens with numerals (cap 830 / 880; brief 823 / 869)",
-    "  1 · Spine: 91 tokens (section C: 91)",
+    "running text: 822 words containing a letter, 871 tokens with numerals (cap 830 / 880; brief 823 / 869)",
+    "  1 · Spine: 91 tokens (section C: 87)",
     "  10 · Vectors are records too: 43 tokens (section C: 43)",
     "  11 · The source re-read costs most: 53 tokens (section C: 53)",
     "  12 · One evidence protocol, multiple agent runtimes: 44 tokens (section C: 44)",
@@ -275,9 +275,9 @@
     "  7 · Checks stop at the source: 58 tokens (section C: 58)",
     "  8 · Memory keeps what was cited: 48 tokens (section C: 48)",
     "  9 · An auditor re-runs each input: 40 tokens (section C: 40)",
-    "  Conclusion: 36 tokens (section C: 36)",
+    "  Conclusion: 36 tokens (section C: 34)",
     "  Header: 27 tokens (section C: 28)",
-    "  Questions: 75 tokens (section C: 75)",
+    "  Questions: 77 tokens (section C: 77)",
     "  Threat model: 48 tokens (section C: 48)"
    ]
   }
@@ -308,28 +308,35 @@
    "brief": "9 · An auditor re-runs each input"
   }
  ],
+ "r5_lines_as_printed": [
+  "Handed prose, agents acted on 254 of 276 corruptions; handed a reference they check, on 0 of 300.",
+  "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026; n per lane from the results file; adversary simulated; threshold constructed. Per model, prose → checked reference: Haiku 4.5 138 of 138 → 0 of 150; Sonnet 5.5 97 of 115 → 0 of 125; Opus 5.5 19 of 23 → 0 of 25; Qwen2.5-7B (open weights, one run) 22 of 23 → 2 of 25.",
+  "RQ3 Does a reference beat prose, JSON, retrieval or an opaque id? → 1, 5",
+  "JSON and an opaque id caught about half by reading their fields (112 of 276 and 134 of 288). Haiku with the tool but no instruction acted on 2 of 150, both M24, bound to the handoff's cell, not its question. Live, agents acted on the pre-fix record 4 of 4 uninstructed, 2 of 4 told to resolve and bind, 0 of 4 with a source re-read. 771 rows with no model output (a CLI rate limit) were excluded and re-run; the second model family is Qwen alone.",
+  "A signed observation reference left the receiver acting on none of the 16 corruptions in our suite, and agents with a checked reference acted on 0 of 300; entity, sensor and decision stay beyond its checks."
+ ],
  "type_deviations_from_brief": [
   "Questions panel: RQ1 to RQ4 and H1 to H3 at 17 pt (brief A.2 body tier 24 pt)",
-  "Threat model paragraph at 20 pt; panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt)",
+  "Threat model paragraph and the panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt); the threat paragraph went from 20 to 17 pt when the R5 lines landed in the spine",
   "Reason: with the section E figures drawn 1:1 and the section C text verbatim, 24 pt body overfills the side columns by about 40 to 60 mm and the bottom-right block by about 25 mm",
-  "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 4 mm (brief 10 mm)"
+  "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)"
  ],
  "layout_deviations": [
-  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x177.5), off by 17.5 mm; reason: Spine content measures 177.5 mm (F2 118 mm, agent strip set in two lines at 24 pt over 468 mm); it starts 3 mm under the header (brief 8) and ends 12.5 mm earlier, giving the three columns 23.5 mm.",
-  "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,372.5,193.5x130.8), off by 23.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,507.5,193.5x348.1), off by 16.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,859.7,193.5x74.2), off by 7.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,938.1,193.5x78.4), off by 2.1 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,372.5,396.0x168.3), off by 23.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,549.5,396.0x275.0), off by 12.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p7: brief (627.5,396.0,193.5x188.0) rendered (627.5,372.5,193.5x202.1), off by 23.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,580.3,193.5x128.8), off by 13.7 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p9: brief (627.5,730.0,193.5x106.0) rendered (627.5,714.8,193.5x95.9), off by 25.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p10: brief (627.5,846.0,193.5x64.0) rendered (627.5,816.4,193.5x77.6), off by 29.6 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p11: brief (627.5,920.0,193.5x96.0) rendered (627.5,899.7,193.5x116.8), off by 20.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 4 mm gaps; the column runs 372.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Spine content measures 183.5 mm (F2 118 mm, agent strip in two lines at 24 pt beside the R5 scope lines at 14 pt); it starts 3 mm under the header (brief 8) and ends 6.5 mm earlier, giving the three columns 18.5 mm.",
+  "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x130.8), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,511.8,193.5x348.1), off by 13.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,863.4,193.5x76.3), off by 13.8 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,943.3,193.5x73.2), off by 7.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x168.3), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,552.0,396.0x275.0), off by 10.0 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p7: brief (627.5,396.0,193.5x188.0) rendered (627.5,377.5,193.5x202.1), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,584.8,193.5x128.8), off by 9.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p9: brief (627.5,730.0,193.5x106.0) rendered (627.5,718.8,193.5x95.9), off by 21.4 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p10: brief (627.5,846.0,193.5x64.0) rendered (627.5,819.8,193.5x76.1), off by 26.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p11: brief (627.5,920.0,193.5x96.0) rendered (627.5,901.1,193.5x115.4), off by 18.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
   "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1020.5,531.0x146.5), off by 5.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt; F11 sits at the bottom of the panel.",
-  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1020.5,261.0x78.7), off by 8.8 mm; reason: Bottom band starts 1020.5 mm (brief 1026); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
+  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1020.5,261.0x78.0), off by 9.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
   "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1103.0,261.0x64.0), off by 13.0 mm; reason: Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50).",
   "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
  ],
@@ -337,30 +344,32 @@
   {
    "id": "left",
    "content_bottom": 1016.5,
-   "natural_mm": 640.6,
-   "height": 644.0
+   "natural_mm": 635.0,
+   "height": 639.0
   },
   {
    "id": "centre",
    "content_bottom": 1016.5,
-   "natural_mm": 632.7,
-   "height": 644.0
+   "natural_mm": 630.7,
+   "height": 639.0
   },
   {
    "id": "right",
    "content_bottom": 1016.5,
-   "natural_mm": 633.8,
-   "height": 644.0
+   "natural_mm": 626.9,
+   "height": 639.0
   },
   {
    "id": "bottomright",
    "content_bottom": 1167.0,
-   "natural_mm": 144.0,
+   "natural_mm": 143.5,
    "height": 146.5
   }
  ],
- "allowlist_used": 40,
- "allowlist_unused": [],
+ "allowlist_used": 39,
+ "allowlist_unused": [
+  "A signed observation reference left the receiver acting on none of the 16 corrup"
+ ],
  "claims_printed": [
   "B.costscope",
   "C.cpu",
@@ -404,6 +413,23 @@
   "Q.inspect_record",
   "Q.re-run_test",
   "Q.read_methods",
+  "R5.A.haiku",
+  "R5.A.opus",
+  "R5.A.pooled",
+  "R5.A.qwen7b",
+  "R5.A.sonnet",
+  "R5.E.haiku",
+  "R5.E.opus",
+  "R5.E.pooled",
+  "R5.E.qwen7b",
+  "R5.E.sonnet",
+  "R5.E0.haiku.M24",
+  "R5.baseline.catch",
+  "R5.block2.M15r",
+  "R5.dates",
+  "R5.excluded",
+  "R5.models",
+  "R5.qwen.alone",
   "REF.footer",
   "RO.grid",
   "RO.tmf",
@@ -412,10 +438,7 @@
   "S.G2.haiku.F",
   "S.G2.qwen.F",
   "S.G2.qwen.bare",
-  "S.R1.A",
   "S.R1.I",
-  "S.headline",
-  "S.scope",
   "S.threshold",
   "T.can",
   "TM.915",
@@ -431,8 +454,8 @@
   "X.loo",
   "X.only"
  ],
- "figure_numbers_checked": 297,
- "rows_rechecked": 131,
+ "figure_numbers_checked": 455,
+ "rows_rechecked": 355,
  "rows_delegated_to_figure_asserts": [
   "F5.fields",
   "F5.onebit",
@@ -460,7 +483,7 @@
   "F8.trust"
  ],
  "words": {
-  "running_words_with_letter": 823,
-  "running_tokens": 869
+  "running_words_with_letter": 822,
+  "running_tokens": 871
  }
 }

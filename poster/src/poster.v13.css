@@ -45,7 +45,7 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .mech{font-size:24pt;line-height:1.1;color:var(--ink);margin-top:1.0mm}
 .claimline{font-size:24pt;line-height:1.1;font-weight:600;color:var(--ink);margin-top:1.0mm}
 .body{font-size:20pt;line-height:1.12;color:var(--ink);margin-top:1.0mm}
-.body.s17{font-size:17pt;line-height:1.16}
+.body.s17{font-size:17pt;line-height:1.1}
 .cap{font-size:17pt;line-height:1.16;color:var(--ink2);margin-top:1.2mm}
 .must{font-size:17pt;line-height:1.2;font-weight:700;color:var(--ink);margin-top:1.0mm}
 .scope{font-size:14pt;line-height:1.22;color:var(--ink2)}
@@ -103,10 +103,10 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .spinefoot .scope{flex:none;width:323mm;margin-top:.6mm}
 
 /* ---------- questions ---------- */
-.rq{font-size:17pt;line-height:1.16;color:var(--ink);margin-top:.8mm}
+.rq{font-size:17pt;line-height:1.1;color:var(--ink);margin-top:.5mm}
 .rq .id{font-weight:700;color:var(--emem)}
 .rq .nav{color:var(--emem);font-weight:600;white-space:nowrap}
-.hyp{font-size:17pt;line-height:1.16;color:var(--ink2);margin-top:1.2mm}
+.hyp{font-size:17pt;line-height:1.1;color:var(--ink2);margin-top:.8mm}
 .hyp .id{font-weight:700;color:var(--emem)}
 
 /* ---------- conclusion ---------- */

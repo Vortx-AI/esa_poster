@@ -64,9 +64,9 @@ LAYOUT_DEVIATIONS = json.loads((HERE / "src" / "poster.v13.layout.json").read_te
 GATES = {}          # name -> {"pass": bool, "details": [...]}
 TYPE_DEVIATIONS = [  # accepted by the coordinator on 2026-10-01; the 14 pt floor and the 24 pt kicker/mechanism/take tier hold
     "Questions panel: RQ1 to RQ4 and H1 to H3 at 17 pt (brief A.2 body tier 24 pt)",
-    "Threat model paragraph at 20 pt; panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt)",
+    "Threat model paragraph and the panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt); the threat paragraph went from 20 to 17 pt when the R5 lines landed in the spine",
     "Reason: with the section E figures drawn 1:1 and the section C text verbatim, 24 pt body overfills the side columns by about 40 to 60 mm and the bottom-right block by about 25 mm",
-    "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 4 mm (brief 10 mm)",
+    "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)",
 ]
 MOVED = []          # running-text lines that a figure prints itself (dropped from the HTML, still counted)
 REPORT_EXTRA = {}
@@ -114,18 +114,25 @@ def r5_mode():
         return False, None, info
     data = json.loads(res.read_text())
     final = bool(data.get("final") or data.get("status") == "final")
-    pushed = (R5_DIR / "prereg_hash.txt").read_text().split()[0] if (R5_DIR / "prereg_hash.txt").exists() else None
+    pushed = None
+    if (R5_DIR / "prereg_hash.txt").exists():   # "file: .../prereg.md" then "blake3: <hex>"; the first blake3 line is prereg.md's
+        m = re.search(r"^blake3:\s*([0-9a-f]{64})", (R5_DIR / "prereg_hash.txt").read_text(), re.M)
+        pushed = m.group(1) if m else None
     stated = data.get("prereg_blake3") or data.get("prereg_hash")
-    info.update(final=final, prereg_pushed=pushed, prereg_in_results=stated)
-    if final and pushed and stated and stated.startswith(pushed[:16]):
+    info.update(final=final, prereg_pushed=pushed, prereg_in_results=stated, n_trials_scored=data.get("n_trials_scored"))
+    if final and pushed and stated and stated == pushed:
         info["mode"] = "r5"
         return True, data, info
     info["mode"] = "fallback"; info["why"] = "results.json not final or prereg hash mismatch"
     return False, None, info
 
 
-def r5_lookup(data, key):
-    """{R5.E.haiku.false_accept} -> value from results.json; tries the layouts the scorer may write."""
+def r5_lookup(data, key, rows=None):
+    """{R5.E.haiku.false_accept} -> value from results.json; tries the layouts the scorer may write.
+    {R5.models} and {R5.dates} print the wording of their claims rows (research/v13/12_claims_map_additions_r5.json),
+    so the printed string and the row's print[] cannot drift apart."""
+    if key in ("R5.models", "R5.dates") and rows and key in rows:
+        return rows[key]["print"][0]
     parts = key.split(".")[1:]
     cands = [parts, ["primary"] + parts, ["primary", parts[0], "pooled_claude"] + parts[2:] if len(parts) > 1 else parts]
     for c in cands:
@@ -195,7 +202,10 @@ def clean_svg(svg, prefix):
     return svg.strip()
 
 
-def assemble(r5, r5data):
+R5_PRINTED = []     # every data-mode="r5" line as printed (for the build report)
+
+
+def assemble(r5, r5data, rows=None):
     html = SRC.read_text()
     html = html.replace('<link rel="stylesheet" href="src/poster.v13.css">', "<style>\n" + CSS.read_text() + "\n</style>")
     html = strip_mode(html, "r1" if r5 else "r5")
@@ -246,11 +256,14 @@ def assemble(r5, r5data):
     unresolved = []
     if r5:
         def r5rep(m):
-            v = r5_lookup(r5data, m.group(1))
+            v = r5_lookup(r5data, m.group(1), rows)
             if v is None:
                 unresolved.append(m.group(0)); return m.group(0)
             return htmllib.escape(v)
         html = re.sub(r"\{(R5\.[\w.<>+-]+)\}", r5rep, html)
+    if r5:
+        for m in re.finditer(r'<(\w+)\b[^>]*\bdata-mode="r5"[^>]*>(.*?)</\1>', html, re.S):
+            R5_PRINTED.append(re.sub(r"\s+", " ", htmllib.unescape(re.sub(r"<[^>]+>", " ", m.group(2)))).strip())
     # remove the authoring comment block (it is not printed, but keep the file clean)
     html = re.sub(r"<!--\s*\n\s*SOURCE of the v13 board.*?-->", "<!-- build product of poster/src/poster.v13.html via poster/build_v13.py; do not edit -->", html, flags=re.S)
     return html, figs
@@ -1018,7 +1031,7 @@ def g_imagery(meas):
 
 
 @gate("word_budget")
-def g_words(claims):
+def g_words(claims, r5=False):
     wre = re.compile(r"[A-Za-z0-9][\w'.,%/:+·-]*")
     def count(s):
         toks = wre.findall(s)
@@ -1035,11 +1048,26 @@ def g_words(claims):
         per[mv["brief"]][0] += t; per[mv["brief"]][1] += w
     # section C counts
     c_text = BRIEF.read_text().split("## C. The complete printed text")[1].split("## D. Claims map")[0]
-    sec, bc = None, defaultdict(int)
+    sec, bc, r1lines = None, defaultdict(int), defaultdict(list)
     for line in c_text.splitlines():
         if line.startswith("### "):
             sec = line[4:]
-        elif line.startswith("> ") and not line.startswith("> [R5]"):
+        elif line.startswith("> [R5]"):
+            if not r5 or not r1lines[sec]:
+                continue
+            r5_line = line[len("> [R5]"):].strip()
+            toks = wre.findall(r5_line.lstrip("… "))
+            if r5_line.startswith("…"):       # "… tail": the tail replaces the R1 line from where its first words occur
+                base = max(r1lines[sec], key=lambda l: len(set(wre.findall(l)) & set(toks)))
+                bt = wre.findall(base)
+                bare = lambda ts: [t.strip(".,;:") for t in ts]   # noqa: E731  (anchor words, punctuation aside)
+                idx = next((i for i in range(len(bt)) if bare(bt[i:i + 3]) == bare(toks[:3])), None)
+                bc[sec] += (idx + len(toks) - len(bt)) if idx is not None else len(set(toks) - set(bt))
+            else:                              # a replacement of the R1 line that shares its opening words
+                base = max(r1lines[sec], key=lambda l: sum(1 for x, y in zip(wre.findall(l), toks) if x == y))
+                bc[sec] += len(toks) - len(wre.findall(base))
+        elif line.startswith("> "):
+            r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
     # cap: brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16 (807 / 853 before them) plus about 1 % slack
     d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; brief 823 / 869)"]
@@ -1062,7 +1090,7 @@ def main():
         subprocess.run([sys.executable, str(HERE / "make_figures_v13.py")], check=True)
     doc, rows = load_claims()
     r5, r5data, info = r5_mode()
-    html, figs = assemble(r5, r5data)
+    html, figs = assemble(r5, r5data, rows)
     meas, pdfinfo, big = render(html)
     claims = meas["claims"]
     doc_title = re.search(r"<title>(.*?)</title>", html, re.S).group(1)
@@ -1084,7 +1112,7 @@ def main():
     g_fonts(meas)
     g_colour(html, figs)
     g_imagery(meas)
-    g_words(claims)
+    g_words(claims, r5)
 
     figtext = [t["text"] for t in meas["texts"] if t["inSvg"] and not (t["fig"] or "").startswith("qr_")]
     report = {
@@ -1094,6 +1122,7 @@ def main():
         "figure_text_tokens": sum(len(t.split()) for t in figtext),
         "gates": GATES, "summary": {k: ("PASS" if v["pass"] else "FAIL") for k, v in GATES.items()},
         "running_lines_printed_by_figures": MOVED,
+        "r5_lines_as_printed": R5_PRINTED,
         "type_deviations_from_brief": TYPE_DEVIATIONS,
         **REPORT_EXTRA,
     }

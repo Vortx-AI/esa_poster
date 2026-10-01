@@ -31,18 +31,46 @@ SUM, LOO = M["summary"], M["leave_one_out"]
 PR = json.load(open(PROBES))
 
 # ------------------------------------------------------------------ R5 switch (gate 10)
+# figure column -> R5 condition. R1 named its columns A prose, B JSON, C opaque id; R5 names them A prose, B JSON,
+# C RAG, D opaque id (research/repro/v13/r5/results.md, design paragraph). The column keys below stay R1's so the
+# deterministic verdict squares keep their lookups; the R5 reads are mapped here and nowhere else.
+R5_COND = {"A": "A", "B": "B", "RAG": "C", "C": "D"}
+R5_MODEL_NAME = {"claude-haiku-4-5-20251001": "Haiku 4.5", "claude-sonnet-5-5": "Sonnet 5.5", "claude-opus-5-5": "Opus 5.5",
+                 "qwen2.5-7b-instruct-q4_k_m": "Qwen2.5-7B"}
+MONTHS = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
 def load_r5():
-    """R5 cells {cond: {item: (k, n)}} when the results file exists and is final, else None."""
+    """R5 reads when results.json exists and is final, else None (R1 mode).
+
+    results.json (analyze.py): cells[cond][item] = {"false_accept": {"k","n"} or null for controls, "per_model":
+    {"haiku": {"k","n"}, ...}, ...}; primary[cond]["pooled_claude"]["false_accept"] = {"k","n"} over the primary
+    items; models[]; dates{first_trial_utc, ...}; n_trials_scored. Items never run with agents (M17) are absent.
+    """
     if not os.path.exists(R5):
         return None
     d = json.load(open(R5))
     if not d.get("final"):
         return None
-    cells = {}
-    for cond, items in d.get("cells", {}).items():
-        cells[cond] = {i: (v["false_accept"]["k"], v["false_accept"]["n"]) for i, v in items.items()
-                       if isinstance(v, dict) and "false_accept" in v}
-    return {"cells": cells, "models": d.get("models"), "dates": d.get("dates")} if cells else None
+    cells, pooled = {}, {}
+    for col, cond in R5_COND.items():
+        items = d["cells"][cond]
+        cells[col] = {i: (v["false_accept"]["k"], v["false_accept"]["n"]) for i, v in items.items()
+                      if isinstance(v, dict) and isinstance(v.get("false_accept"), dict)}
+        fa = d["primary"][cond]["pooled_claude"]["false_accept"]
+        pooled[col] = (fa["k"], fa["n"])
+    fa = d["primary"]["E"]["pooled_claude"]["false_accept"]
+    pooled["E"] = (fa["k"], fa["n"])
+    # replicates per Claude model in one primary cell (the pre-registered cost rule), e.g. {haiku: 6, sonnet: 5, opus: 1}
+    reps = {m: v["n"] for m, v in d["cells"]["A"]["M1"]["per_model"].items()}
+    per_cell = sum(reps.values())
+    assert all(v[1] == per_cell for c in cells.values() for v in c.values()), "every primary cell has the same n"
+    assert all(pooled[col][1] % per_cell == 0 for col in pooled)
+    n_items = {col: pooled[col][1] // per_cell for col in pooled}
+    day = d["dates"]["first_trial_utc"][:10]
+    date_txt = f"{int(day[8:10])} {MONTHS[int(day[5:7])]} {day[:4]}"
+    return {"cells": cells, "pooled": pooled, "reps": reps, "per_cell": per_cell, "n_items": n_items,
+            "models": d["models"], "date": date_txt, "n_trials": d["n_trials_scored"]}
 
 
 R5D = load_r5()
@@ -154,8 +182,11 @@ FLW = W - X_FL
 assert X_FL + 12 <= W
 
 # ------------------------------------------------------------------ header
-mode_line = "deterministic receiver, no model" if MODE == "R1" else f"agents: {R5D['models']}; {R5D['dates']}"
-T(0.3, 3.6, mode_line, 17, claim="F6.mode", weight=600, color=C["ink2"], va="center")
+if MODE == "R1":
+    T(0.3, 3.6, "deterministic receiver, no model", 17, claim="F6.mode", weight=600, color=C["ink2"], va="center")
+else:
+    T(0.3, 3.6, f"agents as B: three Claude models pooled, {R5D['date']}", 17, claim="R5.dates", weight=600,
+      color=C["ink2"], va="center")
 # glyph legend, two rows, drawn patches + words
 lx, ly = 0.0, 10.2
 for fc, ec, word in ((C["harm"], "none", "B acted on corrupted evidence"), (C["unaffected"], "none", "unaffected"),
@@ -203,16 +234,19 @@ def cell(xc, y, w, h, r, letter=None):
 
 def r5_cell(xc, y, w, h, cond, mid, r1row):
     """R5 mode: bar of the agents' false-acceptance rate, k / n, with the R1 verdict as a 3 mm square."""
-    kn = R5D["cells"].get(cond, {}).get(mid)
+    kn = R5D["cells"][cond].get(mid)
     box(xc, y + h / 2 - 1.5, 3.0, 3.0, FILL[r1row["outcome"]] if r1row else C["na"], r=0.3)
-    if kn is None:
-        T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
+    if kn is None:   # M17 was not run with agents (results.md section 10); M7 has no prose, JSON or RAG form
+        if mid == "M17":
+            T(xc + 5, y + h / 2, "not run", 14, color=C["muted"], claim="R5.M17.notrun")
+        else:
+            T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
         return
     k, n = kn
     bw = (w - 19) * (k / n if n else 0)
     box(xc + 4.5, y + 1.0, max(bw, 0.01), h - 2.0, C["harm"], r=0.4)
-    T(xc + w, y + h / 2, f"{k} / {n}", 14, ha="right", color=C["ink2"],
-      claim=f"R5.cell.{cond}.{mid}.false_accept")
+    T(xc + w, y + h / 2, f"{k}\u2009/\u2009{n}", 14, ha="right", color=C["ink2"],
+      claim=f"R5.cell.{R5_COND[cond]}.{mid}.false_accept")
 
 
 def row(mid, y, h, first_in_group, fam):
@@ -289,19 +323,33 @@ ax.plot([0, W], [yt, yt], color=C["ink2"], lw=0.5 / PTMM, zorder=1)
 ty = yt + 6.6
 T(0.3, ty + 0.6, "B acts on corrupted evidence", 20, weight=600, claim="F6.totals_label")
 claim_of = {"A": "S.R1.A", "B": "S.R1.B", "C": "S.R1.C", "I": "S.R1.I"}
+R5_POOLED_CLAIM = {"A": "R5.A.pooled", "B": "R5.B.pooled", "RAG": "R5.C.pooled", "C": "R5.D.pooled", "E": "R5.E.pooled"}
+R1_CEIL = {"A": ("S.R1.A", SUM["A"]), "B": ("S.R1.B", SUM["B"]), "C": ("S.R1.C", SUM["C"]), "E": ("S.R1.I", SUM["I"])}
+
+
+def r5_total(xc, cond, color):
+    """R5 mode: the agents' pooled false acceptance (primary items, three Claude models) with R1's total beneath
+    as the deterministic ceiling, so the same quantity reads the same here and on the spine."""
+    k, n = R5D["pooled"][cond]
+    T(xc, ty - 1.6, f"{k}\u2009/\u2009{n}", 17, weight=700, color=color(k), ha="center", claim=R5_POOLED_CLAIM[cond])
+    if cond in R1_CEIL:
+        cid, s_ = R1_CEIL[cond]
+        T(xc, ty + 4.2, f"R1 {s_['false_accepts']}\u2009/\u2009{s_['applicable']}", 14, color=C["ink2"], ha="center", claim=cid)
+
+
 for c in cond_cols:
-    if MODE == "R5":                      # pooled agents' false acceptance over the cells drawn
-        kn = [v for m, v in R5D["cells"].get(c, {}).items() if m in ids_in and m != "M17"]
-        k, n = sum(v[0] for v in kn), sum(v[1] for v in kn)
-        T(xs[c] + CW / 2, ty, f"{k}\u2009/\u2009{n}", 17, weight=700, color=C["harm"] if k else C["emem"],
-          ha="center", claim=f"R5.{c}.pooled")
+    if MODE == "R5":
+        r5_total(xs[c] + CW / 2, c, lambda k: C["harm"] if k else C["emem"])
         continue
     s = SUM[c]
     T(xs[c] + CW / 2, ty, f"{s['false_accepts']}\u2009/\u2009{s['applicable']}", 30, weight=700,
       color=C["harm"] if s["false_accepts"] else C["emem"], ha="center", claim=claim_of[c])
 s = SUM["I"]
-T(X_EM + 3 * SW, ty, f"{s['false_accepts']} / {s['applicable']}", 30, weight=700,
-  color=C["emem"] if s["false_accepts"] == 0 else C["harm"], ha="center", claim="S.R1.I")
+if MODE == "R5":
+    r5_total(X_EM + 3 * SW, "E", lambda k: C["emem"] if k == 0 else C["harm"])
+else:
+    T(X_EM + 3 * SW, ty, f"{s['false_accepts']} / {s['applicable']}", 30, weight=700,
+      color=C["emem"] if s["false_accepts"] == 0 else C["harm"], ha="center", claim="S.R1.I")
 assert [SUM[l]["false_accepts"] for l in "ABCI"] == [15, 15, 13, 0]
 assert len(FLIPS) == 6
 
@@ -321,14 +369,19 @@ assert probes_pass and len(PR) == 3
 scope = ("One signed Keylong NDVI record, one band, one run; deterministic receiver; rows M14 to M16 signed with a "
          "test key; the re-read compares with the committed 25 Sep window.")
 scope2 = "Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them."
+scope_claim = "F6.scope"
 if MODE == "R5":
-    scope = (f"Bars: agents' false acceptance, k of n per cell; squares: the deterministic ceiling. "
-             f"{R5D['models']}, {R5D['dates']}.")
-T(0, yl + 5.9, scope, 14, color=C["ink2"], claim="F6.scope")
+    reps = ", ".join(f"{n} {R5_MODEL_NAME.get(m, m)}" for m, n in R5D["reps"].items())
+    reps = reps.replace("haiku", "Haiku 4.5").replace("sonnet", "Sonnet 5.5").replace("opus", "Opus 5.5")
+    scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
+             f"squares: the deterministic ceiling. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
+    scope_claim = "R5.F6.scope"
+T(0, yl + 5.9, scope, 14, color=C["ink2"], claim=scope_claim)
 T(0, yl + 11.2, scope2, 14, color=C["ink2"], claim="X.p123")
 
 assert y_end < 170, y_end
 save(fig, NAME)
-json.dump({"figure": NAME, "size_mm": [W, H], "mode": MODE, "labels": LABELS},
+json.dump({"figure": NAME, "size_mm": [W, H], "mode": MODE, "labels": LABELS,
+           "r5": ({k: v for k, v in R5D.items() if k != "cells"} if MODE == "R5" else None)},
           open(os.path.join(OUT, f"{NAME}.labels.json"), "w"), indent=1, ensure_ascii=False)
 print("mode", MODE, "rows end", round(y_end, 1), "legend", round(yl, 1))

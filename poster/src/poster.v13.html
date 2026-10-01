@@ -44,7 +44,7 @@
 
 <main>
 <!-- ================= 1 SPINE ================= -->
-<section class="blk panel spine c12" data-block="p1" data-brief="1 · Spine" style="--x:20;--y:191;--w:801;--h:177.5">
+<section class="blk panel spine c12" data-block="p1" data-brief="1 · Spine" style="--x:20;--y:191;--w:801;--h:183.5">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">1</span>What survives an agent handoff?</p>
   <h2 class="rt" data-mode="r1" data-role="headline" data-claim="S.headline S.R1.A S.R1.I">Handed prose, B acted on 15 of 15 corruptions; handed a reference it checks, on 0 of 16.</h2>
   <h2 class="rt" data-mode="r5" data-role="headline" data-claim="R5.A.pooled R5.E.pooled">Handed prose, agents acted on {R5.A.pooled.false_accept} corruptions; handed a reference they check, on {R5.E.pooled.false_accept}.</h2>
@@ -53,7 +53,10 @@
   <div class="spinefoot">
     <p class="agentstrip rt" data-role="take" data-claim="S.G2.haiku.F S.G2.qwen.F S.G2.qwen.bare S.G2.boundary">With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3B dropped the cell from all 24 calls and acted 5 of 5: a reference protects only a receiver that keeps it whole and obeys a refusal.</p>
     <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope S.threshold">Deterministic receiver written by us, no model; one record, one band, one run; signer-error rows use a test key; the 0.4705 threshold is set so that rounding flips it. M7, a miscopied token, has no prose form.</p>
-    <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.models R5.dates S.threshold">{R5.models}; {R5.dates}; n per lane from the results file; adversary simulated; threshold constructed.</p>
+    <div class="scope" data-mode="r5">
+      <p data-role="scope" data-claim="R5.models R5.dates S.threshold">{R5.models}; {R5.dates}; n per lane from the results file; adversary simulated; threshold constructed.</p>
+      <p data-role="scope" data-claim="R5.A.haiku R5.E.haiku R5.A.sonnet R5.E.sonnet R5.A.opus R5.E.opus R5.A.qwen7b R5.E.qwen7b R5.models">Per model, prose → checked reference: Haiku 4.5 138 of 138 → 0 of 150; Sonnet 5.5 97 of 115 → 0 of 125; Opus 5.5 19 of 23 → 0 of 25; Qwen2.5-7B (open weights, one run) 22 of 23 → 2 of 25.</p>
+    </div>
   </div>
   <!-- F2 draws the TRY A TOKEN tile inside its wall column; without F2 the board places its own -->
   <div class="qrloc" data-if-fig="f2_spine" data-qr="t" data-qr-in="f2_spine"></div>
@@ -65,7 +68,7 @@
 </section>
 
 <!-- ================= LEFT COLUMN (cols 1 to 3) ================= -->
-<div class="col" data-col="left" style="--gap:4;--x:20;--y:372.5;--w:193.5;--h:644">
+<div class="col" data-col="left" style="--gap:3;--x:20;--y:377.5;--w:193.5;--h:639">
 <section class="panel c3" data-block="p2" data-brief="2 · Eight answers; one is right">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>What can one NDVI become between agents?</p>
   <h2 class="rt" data-role="headline" data-claim="E8.summary">Eight answers; one is right</h2>
@@ -93,13 +96,13 @@
 </section>
 <section class="panel c3" data-block="threat" data-brief="Threat model">
   <h2 class="rt" data-role="headline" data-claim="T.can">A relay can rewrite, not sign</h2>
-  <p class="body rt" data-role="body" data-claim="T.can X.only X.entity">A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read. Out of scope: a compromised key, a wrong sensor, the entity meant, the decision.</p>
+  <p class="body s17 rt" data-role="body" data-claim="T.can X.only X.entity">A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read. Out of scope: a compromised key, a wrong sensor, the entity meant, the decision.</p>
   <div class="fig" data-figslot="d_threat" style="--fw:193.5;--fh:30"><!--fig:d_threat--></div>
 </section>
 </div>
 
 <!-- ================= CENTRE COLUMN (cols 4 to 9) ================= -->
-<div class="col" data-col="centre" style="--gap:4;--x:222.5;--y:372.5;--w:396;--h:644">
+<div class="col" data-col="centre" style="--gap:3;--x:222.5;--y:377.5;--w:396;--h:639">
 <section class="panel c6" data-block="p4" data-brief="4 · The address names the record, not the pixel">
   <div class="qrhead">
     <div class="qrhtext">
@@ -121,7 +124,8 @@
     <div class="qrtext">
       <p class="cap rt" data-role="caption" data-claim="X.only X.entity X.loo">Binding stops cell, time and band swaps; the signature, re-hashed forgeries; the log, a version shown only to B; recomputing, the signer's arithmetic; only the source re-read, the signer's wrong pixel. The entity meant passes every check.</p>
       <p class="scope" data-mode="r1" data-unless-figtext="f6_mutation_matrix|Three further signer errors" data-role="scope" data-claim="S.scope X.p123 H.img.record">One signed Keylong NDVI record, one band, one run; deterministic receiver; rows M14 to M16 signed with a test key; the re-read compares with the committed 25 Sep window. Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them.</p>
-      <p class="scope" data-mode="r5" data-unless-figtext="f6_mutation_matrix|squares: the deterministic ceiling" data-role="scope" data-claim="R5.models R5.dates">Bars: agents' false acceptance, k of n per cell (planned 15: 5 runs × 3 Claude models); squares: the deterministic ceiling. {R5.models}, {R5.dates}.</p>
+      <p class="scope" data-mode="r5" data-unless-figtext="f6_mutation_matrix|squares: the deterministic ceiling" data-role="scope" data-claim="R5.F6.scope">Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic ceiling. Totals pool 23 items, 1 Oct 2026.</p>
+      <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.baseline.catch R5.E0.haiku.M24 R5.block2.M15r R5.excluded R5.qwen.alone">JSON and an opaque id caught about half by reading their fields (112 of 276 and 134 of 288). Haiku with the tool but no instruction acted on 2 of 150, both M24, bound to the handoff's cell, not its question. Live, agents acted on the pre-fix record 4 of 4 uninstructed, 2 of 4 told to resolve and bind, 0 of 4 with a source re-read. 771 rows with no model output (a CLI rate limit) were excluded and re-run; the second model family is Qwen alone.</p>
       <div class="qrlabel inl" data-claim="Q.re-run_test"><span class="cta">RE-RUN THE TEST</span> <span class="qcap" data-role="cap">Data and scripts behind this board's numbers, with one re-run command.</span></div>
     </div>
     <div class="qr inl" data-qr="test" data-claim="Q.re-run_test"><div class="sym"><!--qr:test--></div></div>
@@ -137,7 +141,7 @@
 </div>
 
 <!-- ================= RIGHT COLUMN (cols 10 to 12) ================= -->
-<div class="col" data-col="right" style="--gap:4;--x:627.5;--y:372.5;--w:193.5;--h:644">
+<div class="col" data-col="right" style="--gap:3;--x:627.5;--y:377.5;--w:193.5;--h:639">
 <section class="panel c3" data-block="p7" data-brief="7 · Checks stop at the source">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
   <h2 class="rt" data-role="headline" data-claim="L.reread0">Checks stop at the source</h2>
@@ -195,7 +199,7 @@
   <div class="cleft">
     <div class="ctext">
       <p class="rt" data-mode="r1" data-role="conclusion" data-claim="K.concl S.R1.I F.pixel X.entity">A signed observation reference left the receiver acting on none of the 16 corruptions in our suite; a source re-read exposes a wrong pixel emem signed in production; entity, sensor and decision stay beyond its checks.</p>
-      <p class="rt" data-mode="r5" data-role="conclusion" data-claim="K.concl S.R1.I F.pixel R5.E.pooled">A signed observation reference left the receiver acting on none of the 16 corruptions in our suite; a source re-read exposes a wrong pixel emem signed in production, in our suite, and agents with a checked reference acted on {R5.E.pooled.false_accept}; entity, sensor and decision stay beyond its checks.</p>
+      <p class="rt" data-mode="r5" data-role="conclusion" data-claim="K.concl S.R1.I X.entity R5.E.pooled">A signed observation reference left the receiver acting on none of the 16 corruptions in our suite, and agents with a checked reference acted on {R5.E.pooled.false_accept}; entity, sensor and decision stay beyond its checks.</p>
     </div>
     <div class="qrlabel inl" data-claim="Q.read_methods">
       <div class="cta">READ THE METHODS <span class="url mono">vortx-ai.github.io/esa_poster</span></div>
