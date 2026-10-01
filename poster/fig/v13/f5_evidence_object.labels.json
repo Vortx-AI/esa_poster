@@ -1,0 +1,379 @@
+{
+ "figure": "f5_evidence_object",
+ "size_mm": [
+  396.0,
+  98.0
+ ],
+ "labels": [
+  {
+   "text": "SOURCE FILES",
+   "pt": 15,
+   "claim": "O.nohash"
+  },
+  {
+   "text": "named, not hashed",
+   "pt": 14,
+   "claim": "O.nohash"
+  },
+  {
+   "text": "B08",
+   "pt": 14,
+   "claim": "O.cogs"
+  },
+  {
+   "text": "B04",
+   "pt": 14,
+   "claim": "O.cogs"
+  },
+  {
+   "text": "B04 + B08 COGs",
+   "pt": 14,
+   "claim": "O.cogs"
+  },
+  {
+   "text": "Planetary Computer",
+   "pt": 14,
+   "claim": "O.cogs"
+  },
+  {
+   "text": "277.9 + 281.9 MB",
+   "pt": 14,
+   "claim": "O.cogs"
+  },
+  {
+   "text": "row 9443, col 9098",
+   "pt": 14,
+   "claim": "O.pixel"
+  },
+  {
+   "text": "DN 1900, 3502",
+   "pt": 14,
+   "claim": "O.pixel"
+  },
+  {
+   "text": "RECORD · 1,115 B",
+   "pt": 15,
+   "claim": "O.1115"
+  },
+  {
+   "text": "12 fields as decoded; no signature inside",
+   "pt": 14,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "kind",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "primary",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "cell",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "defi.zb572.xoso.zb1ec",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "bound L1",
+   "pt": 14,
+   "claim": "F5.tags"
+  },
+  {
+   "text": "band",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "indices.ndvi",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "bound L1",
+   "pt": 14,
+   "claim": "F5.tags"
+  },
+  {
+   "text": "tslot",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "20721 (25 Sep)",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "bound L1",
+   "pt": 14,
+   "claim": "F5.tags"
+  },
+  {
+   "text": "value",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "0.4708994708994709",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "recomputable L2",
+   "pt": 14,
+   "claim": "F5.tags"
+  },
+  {
+   "text": "confidence",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "0.95",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "privacy",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "public",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "schema",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "d24rgwlq…",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "signer",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "777er3yi…",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "signed",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "2026-09-28T09:06:56Z",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "sources",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "sentinel_s2_l2a · …B08_10m.tif ; …B04_10m.tif",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "named L3",
+   "pt": 14,
+   "claim": "F5.tags"
+  },
+  {
+   "text": "",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "captured 2026-09-25T05:42:51Z",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "derivation",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "sentinel2_l2a_indices_ndvi@1 · EPSG 32643",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "scene S2A_MSIL2A_20260925T054251_R005_T43SFS…",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "named L3",
+   "pt": 14,
+   "claim": "F5.tags"
+  },
+  {
+   "text": "",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "DNs 3502 / 1900 · offset −1000 · + 9 more args",
+   "pt": 15,
+   "claim": "F5.fields"
+  },
+  {
+   "text": "ADDRESS",
+   "pt": 15,
+   "claim": "O.cid"
+  },
+  {
+   "text": "BLAKE3 of the record",
+   "pt": 14,
+   "claim": "O.cid"
+  },
+  {
+   "text": "oj5ceccile62u",
+   "pt": 17,
+   "claim": "O.cid"
+  },
+  {
+   "text": "vm6hedpuk67cj",
+   "pt": 17,
+   "claim": "O.cid"
+  },
+  {
+   "text": "t2pqc7z33mtsy",
+   "pt": 17,
+   "claim": "O.cid"
+  },
+  {
+   "text": "uffgakxbxmyaa",
+   "pt": 17,
+   "claim": "O.cid"
+  },
+  {
+   "text": "changes if one bit",
+   "pt": 14,
+   "claim": "F5.onebit"
+  },
+  {
+   "text": "of the record",
+   "pt": 14,
+   "claim": "F5.onebit"
+  },
+  {
+   "text": "changes",
+   "pt": 14,
+   "claim": "F5.onebit"
+  },
+  {
+   "text": "ATTESTATION",
+   "pt": 15,
+   "claim": "O.batch"
+  },
+  {
+   "text": "+ LOG",
+   "pt": 15,
+   "claim": "O.log"
+  },
+  {
+   "text": "Ed25519 over",
+   "pt": 15,
+   "claim": "O.batch"
+  },
+  {
+   "text": "a batch root",
+   "pt": 15,
+   "claim": "O.batch"
+  },
+  {
+   "text": "key 777er3yi…",
+   "pt": 14,
+   "claim": "O.key"
+  },
+  {
+   "text": "Merkle log,",
+   "pt": 15,
+   "claim": "O.log"
+  },
+  {
+   "text": "RFC 6962 style,",
+   "pt": 15,
+   "claim": "O.log"
+  },
+  {
+   "text": "BLAKE3",
+   "pt": 15,
+   "claim": "O.log"
+  },
+  {
+   "text": "log entries",
+   "pt": 14,
+   "claim": "O.log"
+  },
+  {
+   "text": "read the containing pixel",
+   "pt": 14,
+   "claim": "F5.read"
+  },
+  {
+   "text": "BLAKE3",
+   "pt": 14,
+   "claim": "O.cid"
+  },
+  {
+   "text": "leaf of a batch root",
+   "pt": 14,
+   "claim": "O.batch"
+  },
+  {
+   "text": "emem:fact:",
+   "pt": 18,
+   "claim": "F5.token"
+  },
+  {
+   "text": "defi.zb572.xoso.zb1ec",
+   "pt": 18,
+   "claim": "F5.token"
+  },
+  {
+   "text": ":",
+   "pt": 18,
+   "claim": "F5.token"
+  },
+  {
+   "text": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+   "pt": 18,
+   "claim": "O.cid"
+  },
+  {
+   "text": "handed over: 84 characters,",
+   "pt": 14,
+   "claim": "O.84"
+  },
+  {
+   "text": "46 tokens (cl100k)",
+   "pt": 14,
+   "claim": "O.46"
+  }
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "figure": "f8_ladder",
+ "size_mm": [
+  193.5,
+  138.0
+ ],
+ "labels": [
+  {
+   "text": "L0",
+   "pt": 20,
+   "claim": "L.status"
+  },
+  {
+   "text": "record bytes",
+   "pt": 18,
+   "claim": "L.status"
+  },
+  {
+   "text": "CHECKABLE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "780 of 780: hash, signature, log",
+   "pt": 15,
+   "claim": "L.780"
+  },
+  {
+   "text": "still trusted: the key is emem.dev's",
+   "pt": 14,
+   "claim": "T.oneop"
+  },
+  {
+   "text": "L1",
+   "pt": 20,
+   "claim": "L.status"
+  },
+  {
+   "text": "identity",
+   "pt": 18,
+   "claim": "L.status"
+  },
+  {
+   "text": "CHECKABLE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "cell and band bound in 780 of 780; a",
+   "pt": 15,
+   "claim": "L.780"
+  },
+  {
+   "text": "relabelled token returns 409",
+   "pt": 15,
+   "claim": "L.780"
+  },
+  {
+   "text": "still trusted: your own question",
+   "pt": 14,
+   "claim": "F8.trust"
+  },
+  {
+   "text": "L2",
+   "pt": 20,
+   "claim": "L.status"
+  },
+  {
+   "text": "derivation",
+   "pt": 18,
+   "claim": "L.status"
+  },
+  {
+   "text": "RECOMPUTABLE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "266 of 780 recomputed bit for bit",
+   "pt": 15,
+   "claim": "L.266"
+  },
+  {
+   "text": "still trusted: the convention the signer chose",
+   "pt": 14,
+   "claim": "F8.trust"
+  },
+  {
+   "text": "L3",
+   "pt": 20,
+   "claim": "L.status"
+  },
+  {
+   "text": "source",
+   "pt": 18,
+   "claim": "L.status"
+  },
+  {
+   "text": "PARTIAL",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "named, not hashed: 0 of 213 Keylong",
+   "pt": 15,
+   "claim": "O.nohash"
+  },
+  {
+   "text": "sources carry a hash; open archives can be",
+   "pt": 15,
+   "claim": "O.nohash"
+  },
+  {
+   "text": "re-read",
+   "pt": 15,
+   "claim": "O.nohash"
+  },
+  {
+   "text": "still trusted: that the archive file is the product",
+   "pt": 14,
+   "claim": "F8.trust"
+  },
+  {
+   "text": "L4",
+   "pt": 20,
+   "claim": "L.status"
+  },
+  {
+   "text": "entity",
+   "pt": 18,
+   "claim": "L.status"
+  },
+  {
+   "text": "OUT OF SCOPE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "M17 passes every check; “this image”",
+   "pt": 15,
+   "claim": "X.entity"
+  },
+  {
+   "text": "became a hair salon",
+   "pt": 15,
+   "claim": "X.entity"
+  },
+  {
+   "text": "L5",
+   "pt": 20,
+   "claim": "L.status"
+  },
+  {
+   "text": "physical truth,",
+   "pt": 18,
+   "claim": "L.status"
+  },
+  {
+   "text": "decision",
+   "pt": 18,
+   "claim": "L.status"
+  },
+  {
+   "text": "INHERITED /",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "OUT OF SCOPE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "GFC2020 V3 forest commission error",
+   "pt": 15,
+   "claim": "L.gfc"
+  },
+  {
+   "text": "13.1 %",
+   "pt": 15,
+   "claim": "L.gfc"
+  }
+ ]
+}
