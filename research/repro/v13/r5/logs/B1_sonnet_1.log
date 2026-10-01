@@ -1,0 +1,5 @@
+B1-claude-sonnet-5-5-M15r-E0-r1-1                       DECLINE      fa=False vcalls=1 $0.0175 10.53s excl=None ledger=$1.48
+B1-claude-sonnet-5-5-M11-D-r1-1                         HOLD         fa=True vcalls=0 $0.0135 7.87s excl=None ledger=$1.52
+B1-claude-sonnet-5-5-M15r-E-r1-1                        DECLINE      fa=False vcalls=1 $0.0127 6.72s excl=None ledger=$1.60
+B1-claude-sonnet-5-5-M5b-E+-r1-1                        DECLINE      fa=False vcalls=1 $0.0115 6.31s excl=None ledger=$1.67
+B1-claude-sonnet-5-5-M8-B-r1-1                          DECLINE      fa=False vcalls=0 $0.0142 18.14s excl=None ledger=$1.76

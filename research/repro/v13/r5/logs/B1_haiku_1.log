@@ -1,0 +1,5 @@
+B1-claude-haiku-4-5-20251001-M5-E-r1-1                  DECLINE      fa=False vcalls=1 $0.0101 11.79s excl=None ledger=$1.49
+B1-claude-haiku-4-5-20251001-M15r-A-r1-1                IRRIGATE     fa=True vcalls=0 $0.0041 7.02s excl=None ledger=$1.52
+B1-claude-haiku-4-5-20251001-M19-E-r1-1                 DECLINE      fa=False vcalls=1 $0.0096 8.78s excl=None ledger=$1.61
+B1-claude-haiku-4-5-20251001-M2-E0-r1-1                 HOLD         fa=False vcalls=1 $0.0108 10.4s excl=None ledger=$1.68
+B1-claude-haiku-4-5-20251001-G0-B-E0-r1-1               CONSISTENT   fa=None vcalls=1 $0.0171 16.32s excl=None ledger=$1.78

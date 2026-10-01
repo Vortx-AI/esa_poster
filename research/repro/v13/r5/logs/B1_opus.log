@@ -1,0 +1,4 @@
+B1-claude-opus-5-5-M3-E0-r1-1                           DECLINE      fa=False vcalls=1 $0.0382 20.15s excl=None ledger=$1.56
+B1-claude-opus-5-5-M6-D-r1-1                            DECLINE      fa=False vcalls=0 $0.0242 11.01s excl=None ledger=$1.65
+B1-claude-opus-5-5-M7-D-r1-1                            DECLINE      fa=False vcalls=0 $0.0243 12.72s excl=None ledger=$1.73
+B1-claude-opus-5-5-M5-E0-r1-1                           DECLINE      fa=False vcalls=1 $0.0364 12.96s excl=None ledger=$1.84

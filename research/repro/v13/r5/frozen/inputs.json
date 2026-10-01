@@ -1,0 +1,724 @@
+{
+ "frozen_at_utc": "2026-10-01T05:10:33Z",
+ "sth": {
+  "tree_size": 2576713,
+  "root_b32": "lo2a3tefuwrowcfyrdnhea4j43l5qzckpc5mi32lycwyu3fdjvka",
+  "signed_at": "2026-10-01T05:10:33Z",
+  "responder_pubkey_b32": "777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka",
+  "signature_b32": "w4pva6ejfasmc7taexyzck3jbhdyjzjc26n6u5o22rpbo6c2iro3nttwx35rs3hzfnatv2mecgzilnqhc47zbbrzyuqyvpo3j6m3wby"
+ },
+ "records": {
+  "3yyaxn5dvvutqukhtycog2y6ab2hfnzlcnf56qlevgnnare3nnsa": {
+   "label": "Keylong NDVI 30 Sep S2C (M5b; M5 truth)",
+   "bytes": 1143,
+   "rehash_ok": true,
+   "cell": "defi.zb572.xoso.zb1ec",
+   "band": "indices.ndvi",
+   "tslot": 20726,
+   "value": 0.42369991474850816,
+   "unit": null,
+   "signed_at": "2026-09-30T22:20:02Z",
+   "fn_key": "sentinel2_l2a_indices_ndvi@1",
+   "probes": 21,
+   "scanned": 3,
+   "leaf_index": 2573672,
+   "entry_hash_b32": "dtl7uxar2yeqxbe24en5bytw6dbq5hpu5abhqj4mbhb3lokfoj4q",
+   "entry_bytes": 1638,
+   "preimage_version": 1,
+   "file": "3yyaxn5d.cbor",
+   "file_blake3": "14d25630e8425609ef4f096c9863b2b578c47ab93043cafb88807ee6c1459a68"
+  },
+  "ezs2hn7psaynfitpzcov4my5vtyxy44re2egie4hmwsupf43mk7q": {
+   "label": "Keylong NBR 25 Sep (M6)",
+   "bytes": 1137,
+   "rehash_ok": true,
+   "cell": "defi.zb572.xoso.zb1ec",
+   "band": "indices.nbr",
+   "tslot": 20721,
+   "value": 0.2726347914547304,
+   "unit": null,
+   "signed_at": "2026-09-30T10:01:53Z",
+   "fn_key": "sentinel2_l2a_indices_nbr@1",
+   "probes": 22,
+   "scanned": 2,
+   "leaf_index": 2562679,
+   "entry_hash_b32": "xargudjnrln7sdaqyoty3qfuyrx2hssjchi45d7zdm2kamm6pola",
+   "entry_bytes": 1629,
+   "preimage_version": 1,
+   "file": "ezs2hn7p.cbor",
+   "file_blake3": "549c33eaf91fb9d4e05e0969581f616e3e094438bb4e8eed1c0393db1a091a56"
+  },
+  "kxjvfwpa7grmfhkxoxufq5xjltq2s5syer2rzdx7odbnrxhnjzkq": {
+   "label": "Keylong NDVI 23 Sep pre-fix wrong pixel (M15r)",
+   "bytes": 1117,
+   "rehash_ok": true,
+   "cell": "defi.zb572.xoso.zb1ec",
+   "band": "indices.ndvi",
+   "tslot": 20719,
+   "value": 0.34435075885328836,
+   "unit": null,
+   "signed_at": "2026-09-25T19:35:27Z",
+   "fn_key": "sentinel2_l2a_indices_ndvi@1",
+   "probes": 22,
+   "scanned": 8,
+   "leaf_index": 2356353,
+   "entry_hash_b32": "s6rc72skxgp2lqwtcp7zeu54sgrcunmfvnac3izbatilojfyutpa",
+   "entry_bytes": 1611,
+   "preimage_version": 1,
+   "file": "kxjvfwpa.cbor",
+   "file_blake3": "f58b2333b7bcc2de9c5ae96396ef9035383700122e50949f588646ce5c3bbb6c"
+  },
+  "yqbolgeoycqkvj3zkxukb4bjw4odhpwvfzqo3fbgwf4spk45zala": {
+   "label": "Bengaluru elevation 918.0 m, May (G0-B)",
+   "bytes": 509,
+   "rehash_ok": true,
+   "cell": "defi.zb493.xuqA.zcb5f",
+   "band": "copdem30m.elevation_mean",
+   "tslot": 0,
+   "value": 918.0,
+   "unit": "m",
+   "signed_at": "2026-05-28T19:54:32Z",
+   "fn_key": "open_meteo_copdem90m@1",
+   "probes": 21,
+   "scanned": 1,
+   "leaf_index": 74767,
+   "entry_hash_b32": "vjw23eui43lyhjez23otk6yyopuhkqygf25pa5uqho45lx5nkwrq",
+   "entry_bytes": 976,
+   "preimage_version": 0,
+   "file": "yqbolgeo.cbor",
+   "file_blake3": "7f3cbf3802544322bc4dbe89e1c3d832a3ea9c1a74c59b00db815fab422b7fd0"
+  },
+  "jzxzmvomshs6di3bkgponk6p3rgfk5nyvklekj6caegx6dwcuo5q": {
+   "label": "Bengaluru elevation 915.07 m, Sep (M20)",
+   "bytes": 718,
+   "rehash_ok": true,
+   "cell": "defi.zb493.xuqA.zcb5f",
+   "band": "copdem30m.elevation_mean",
+   "tslot": 0,
+   "value": 915.0712280273438,
+   "unit": "m",
+   "signed_at": "2026-09-28T09:05:19Z",
+   "fn_key": "copernicus_dem_30m_aws_pixel@1",
+   "probes": 22,
+   "scanned": 3,
+   "leaf_index": 2456966,
+   "entry_hash_b32": "dew5f2fd6lhxy4jsjbryuitmudociu4jes4xf7eyjmc44mgpaesq",
+   "entry_bytes": 1209,
+   "preimage_version": 1,
+   "file": "jzxzmvom.cbor",
+   "file_blake3": "242a5de2ae6268cd6171df0179a6ed7f86ecd0e577e92e13afc74ebce87293d5"
+  },
+  "p6ewjnlqo5npzooyrlak7gwtia23s2vlnb435xbxz3ycusv7auta": {
+   "label": "/v1/ask town-point answer 0.2824, 30 Sep (M24)",
+   "bytes": 1141,
+   "rehash_ok": true,
+   "cell": "defi.zb572.xAnI.zb1a2",
+   "band": "indices.ndvi",
+   "tslot": 20726,
+   "value": 0.28244274809160314,
+   "unit": null,
+   "signed_at": "2026-09-30T22:44:26Z",
+   "fn_key": "sentinel2_l2a_indices_ndvi@1",
+   "probes": 22,
+   "scanned": 18,
+   "leaf_index": 2573915,
+   "entry_hash_b32": "uhqbuapwpldggk4krqpzrx7kjezstb2ghxl2ysdj6nh6o4ac6irq",
+   "entry_bytes": 18623,
+   "preimage_version": 1,
+   "file": "p6ewjnlq.cbor",
+   "file_blake3": "de1d5a1d5fab7fb512249886708cf4e2782dd9fc5f680f29687ccf9214cccccf"
+  }
+ },
+ "http_log": [
+  {
+   "GET": "/v1/log/sth",
+   "status": 200,
+   "bytes": 940
+  },
+  {
+   "GET": "/v1/facts/3yyaxn5dvvutqukhtycog2y6ab2hfnzlcnf56qlevgnnare3nnsa",
+   "status": 200,
+   "bytes": 1143
+  },
+  {
+   "GET": "/v1/log/entries?start=1288356&end=1288357",
+   "status": 200,
+   "bytes": 4477
+  },
+  {
+   "GET": "/v1/log/entries?start=1932534&end=1932535",
+   "status": 200,
+   "bytes": 4775
+  },
+  {
+   "GET": "/v1/log/entries?start=2254623&end=2254624",
+   "status": 200,
+   "bytes": 6121
+  },
+  {
+   "GET": "/v1/log/entries?start=2415668&end=2415669",
+   "status": 200,
+   "bytes": 6125
+  },
+  {
+   "GET": "/v1/log/entries?start=2496190&end=2496191",
+   "status": 200,
+   "bytes": 6193
+  },
+  {
+   "GET": "/v1/log/entries?start=2536451&end=2536452",
+   "status": 200,
+   "bytes": 3561
+  },
+  {
+   "GET": "/v1/log/entries?start=2556582&end=2556583",
+   "status": 200,
+   "bytes": 6185
+  },
+  {
+   "GET": "/v1/log/entries?start=2566647&end=2566648",
+   "status": 200,
+   "bytes": 2684
+  },
+  {
+   "GET": "/v1/log/entries?start=2571680&end=2571681",
+   "status": 200,
+   "bytes": 4861
+  },
+  {
+   "GET": "/v1/log/entries?start=2574196&end=2574197",
+   "status": 200,
+   "bytes": 4873
+  },
+  {
+   "GET": "/v1/log/entries?start=2572938&end=2572939",
+   "status": 200,
+   "bytes": 24477
+  },
+  {
+   "GET": "/v1/log/entries?start=2573567&end=2573568",
+   "status": 200,
+   "bytes": 4851
+  },
+  {
+   "GET": "/v1/log/entries?start=2573882&end=2573883",
+   "status": 200,
+   "bytes": 6273
+  },
+  {
+   "GET": "/v1/log/entries?start=2573725&end=2573726",
+   "status": 200,
+   "bytes": 2682
+  },
+  {
+   "GET": "/v1/log/entries?start=2573646&end=2573647",
+   "status": 200,
+   "bytes": 4883
+  },
+  {
+   "GET": "/v1/log/entries?start=2573686&end=2573687",
+   "status": 200,
+   "bytes": 4589
+  },
+  {
+   "GET": "/v1/log/entries?start=2573666&end=2573667",
+   "status": 200,
+   "bytes": 4227
+  },
+  {
+   "GET": "/v1/log/entries?start=2573676&end=2573677",
+   "status": 200,
+   "bytes": 4881
+  },
+  {
+   "GET": "/v1/log/entries?start=2573671&end=2573672",
+   "status": 200,
+   "bytes": 6009
+  },
+  {
+   "GET": "/v1/log/entries?start=2573669&end=2573670",
+   "status": 200,
+   "bytes": 4249
+  },
+  {
+   "GET": "/v1/log/entries?start=2573670&end=2573671",
+   "status": 200,
+   "bytes": 4279
+  },
+  {
+   "GET": "/v1/log/entries?start=2573670&end=2573926",
+   "status": 200,
+   "bytes": 9851429
+  },
+  {
+   "GET": "/v1/log/inclusion?leaf_index=2573672&tree_size=2576713",
+   "status": 200,
+   "bytes": 2289
+  },
+  {
+   "GET": "/v1/facts/ezs2hn7psaynfitpzcov4my5vtyxy44re2egie4hmwsupf43mk7q",
+   "status": 200,
+   "bytes": 1137
+  },
+  {
+   "GET": "/v1/log/entries?start=2561615&end=2561616",
+   "status": 200,
+   "bytes": 6199
+  },
+  {
+   "GET": "/v1/log/entries?start=2564131&end=2564132",
+   "status": 200,
+   "bytes": 8531
+  },
+  {
+   "GET": "/v1/log/entries?start=2562873&end=2562874",
+   "status": 200,
+   "bytes": 4915
+  },
+  {
+   "GET": "/v1/log/entries?start=2562244&end=2562245",
+   "status": 200,
+   "bytes": 4905
+  },
+  {
+   "GET": "/v1/log/entries?start=2562559&end=2562560",
+   "status": 200,
+   "bytes": 6189
+  },
+  {
+   "GET": "/v1/log/entries?start=2562716&end=2562717",
+   "status": 200,
+   "bytes": 4883
+  },
+  {
+   "GET": "/v1/log/entries?start=2562638&end=2562639",
+   "status": 200,
+   "bytes": 4871
+  },
+  {
+   "GET": "/v1/log/entries?start=2562677&end=2562678",
+   "status": 200,
+   "bytes": 5191
+  },
+  {
+   "GET": "/v1/log/entries?start=2562697&end=2562698",
+   "status": 200,
+   "bytes": 4889
+  },
+  {
+   "GET": "/v1/log/entries?start=2562687&end=2562688",
+   "status": 200,
+   "bytes": 4887
+  },
+  {
+   "GET": "/v1/log/entries?start=2562682&end=2562683",
+   "status": 200,
+   "bytes": 2684
+  },
+  {
+   "GET": "/v1/log/entries?start=2562680&end=2562681",
+   "status": 200,
+   "bytes": 5321
+  },
+  {
+   "GET": "/v1/log/entries?start=2562679&end=2562680",
+   "status": 200,
+   "bytes": 6183
+  },
+  {
+   "GET": "/v1/log/entries?start=2562678&end=2562679",
+   "status": 200,
+   "bytes": 6243
+  },
+  {
+   "GET": "/v1/log/entries?start=2562678&end=2562934",
+   "status": 200,
+   "bytes": 1373971
+  },
+  {
+   "GET": "/v1/log/inclusion?leaf_index=2562679&tree_size=2576713",
+   "status": 200,
+   "bytes": 2344
+  },
+  {
+   "GET": "/v1/facts/kxjvfwpa7grmfhkxoxufq5xjltq2s5syer2rzdx7odbnrxhnjzkq",
+   "status": 200,
+   "bytes": 1117
+  },
+  {
+   "GET": "/v1/log/entries?start=2335146&end=2335147",
+   "status": 200,
+   "bytes": 4849
+  },
+  {
+   "GET": "/v1/log/entries?start=2375407&end=2375408",
+   "status": 200,
+   "bytes": 56061
+  },
+  {
+   "GET": "/v1/log/entries?start=2355277&end=2355278",
+   "status": 200,
+   "bytes": 4759
+  },
+  {
+   "GET": "/v1/log/entries?start=2365342&end=2365343",
+   "status": 200,
+   "bytes": 4247
+  },
+  {
+   "GET": "/v1/log/entries?start=2360310&end=2360311",
+   "status": 200,
+   "bytes": 2624
+  },
+  {
+   "GET": "/v1/log/entries?start=2357794&end=2357795",
+   "status": 200,
+   "bytes": 4601
+  },
+  {
+   "GET": "/v1/log/entries?start=2356536&end=2356537",
+   "status": 200,
+   "bytes": 4263
+  },
+  {
+   "GET": "/v1/log/entries?start=2355907&end=2355908",
+   "status": 200,
+   "bytes": 4791
+  },
+  {
+   "GET": "/v1/log/entries?start=2356222&end=2356223",
+   "status": 200,
+   "bytes": 2624
+  },
+  {
+   "GET": "/v1/log/entries?start=2356379&end=2356380",
+   "status": 200,
+   "bytes": 8593
+  },
+  {
+   "GET": "/v1/log/entries?start=2356301&end=2356302",
+   "status": 200,
+   "bytes": 6109
+  },
+  {
+   "GET": "/v1/log/entries?start=2356340&end=2356341",
+   "status": 200,
+   "bytes": 6113
+  },
+  {
+   "GET": "/v1/log/entries?start=2356360&end=2356361",
+   "status": 200,
+   "bytes": 7303
+  },
+  {
+   "GET": "/v1/log/entries?start=2356350&end=2356351",
+   "status": 200,
+   "bytes": 6105
+  },
+  {
+   "GET": "/v1/log/entries?start=2356345&end=2356346",
+   "status": 200,
+   "bytes": 4289
+  },
+  {
+   "GET": "/v1/log/entries?start=2356348&end=2356349",
+   "status": 200,
+   "bytes": 6131
+  },
+  {
+   "GET": "/v1/log/entries?start=2356347&end=2356348",
+   "status": 200,
+   "bytes": 6125
+  },
+  {
+   "GET": "/v1/log/entries?start=2356346&end=2356347",
+   "status": 200,
+   "bytes": 6119
+  },
+  {
+   "GET": "/v1/log/entries?start=2356346&end=2356602",
+   "status": 200,
+   "bytes": 1372404
+  },
+  {
+   "GET": "/v1/log/inclusion?leaf_index=2356353&tree_size=2576713",
+   "status": 200,
+   "bytes": 2399
+  },
+  {
+   "GET": "/v1/facts/yqbolgeoycqkvj3zkxukb4bjw4odhpwvfzqo3fbgwf4spk45zala",
+   "status": 200,
+   "bytes": 509
+  },
+  {
+   "GET": "/v1/log/entries?start=644178&end=644179",
+   "status": 200,
+   "bytes": 5060
+  },
+  {
+   "GET": "/v1/log/entries?start=322089&end=322090",
+   "status": 200,
+   "bytes": 4346
+  },
+  {
+   "GET": "/v1/log/entries?start=161044&end=161045",
+   "status": 200,
+   "bytes": 5044
+  },
+  {
+   "GET": "/v1/log/entries?start=80522&end=80523",
+   "status": 200,
+   "bytes": 4385
+  },
+  {
+   "GET": "/v1/log/entries?start=40261&end=40262",
+   "status": 200,
+   "bytes": 3895
+  },
+  {
+   "GET": "/v1/log/entries?start=60392&end=60393",
+   "status": 200,
+   "bytes": 4651
+  },
+  {
+   "GET": "/v1/log/entries?start=70457&end=70458",
+   "status": 200,
+   "bytes": 4753
+  },
+  {
+   "GET": "/v1/log/entries?start=75490&end=75491",
+   "status": 200,
+   "bytes": 4791
+  },
+  {
+   "GET": "/v1/log/entries?start=72974&end=72975",
+   "status": 200,
+   "bytes": 4113
+  },
+  {
+   "GET": "/v1/log/entries?start=74232&end=74233",
+   "status": 200,
+   "bytes": 4977
+  },
+  {
+   "GET": "/v1/log/entries?start=74861&end=74862",
+   "status": 200,
+   "bytes": 3895
+  },
+  {
+   "GET": "/v1/log/entries?start=74547&end=74548",
+   "status": 200,
+   "bytes": 4315
+  },
+  {
+   "GET": "/v1/log/entries?start=74704&end=74705",
+   "status": 200,
+   "bytes": 4099
+  },
+  {
+   "GET": "/v1/log/entries?start=74783&end=74784",
+   "status": 200,
+   "bytes": 3889
+  },
+  {
+   "GET": "/v1/log/entries?start=74744&end=74745",
+   "status": 200,
+   "bytes": 3895
+  },
+  {
+   "GET": "/v1/log/entries?start=74764&end=74765",
+   "status": 200,
+   "bytes": 3891
+  },
+  {
+   "GET": "/v1/log/entries?start=74774&end=74775",
+   "status": 200,
+   "bytes": 3889
+  },
+  {
+   "GET": "/v1/log/entries?start=74769&end=74770",
+   "status": 200,
+   "bytes": 3895
+  },
+  {
+   "GET": "/v1/log/entries?start=74767&end=74768",
+   "status": 200,
+   "bytes": 4087
+  },
+  {
+   "GET": "/v1/log/entries?start=74766&end=74767",
+   "status": 200,
+   "bytes": 3883
+  },
+  {
+   "GET": "/v1/log/entries?start=74767&end=75023",
+   "status": 200,
+   "bytes": 1461243
+  },
+  {
+   "GET": "/v1/log/inclusion?leaf_index=74767&tree_size=2576713",
+   "status": 200,
+   "bytes": 2507
+  },
+  {
+   "GET": "/v1/facts/jzxzmvomshs6di3bkgponk6p3rgfk5nyvklekj6caegx6dwcuo5q",
+   "status": 200,
+   "bytes": 718
+  },
+  {
+   "GET": "/v1/log/entries?start=2455929&end=2455930",
+   "status": 200,
+   "bytes": 4375
+  },
+  {
+   "GET": "/v1/log/entries?start=2476060&end=2476061",
+   "status": 200,
+   "bytes": 28087
+  },
+  {
+   "GET": "/v1/log/entries?start=2465995&end=2465996",
+   "status": 200,
+   "bytes": 4455
+  },
+  {
+   "GET": "/v1/log/entries?start=2460962&end=2460963",
+   "status": 200,
+   "bytes": 4593
+  },
+  {
+   "GET": "/v1/log/entries?start=2458446&end=2458447",
+   "status": 200,
+   "bytes": 4515
+  },
+  {
+   "GET": "/v1/log/entries?start=2457188&end=2457189",
+   "status": 200,
+   "bytes": 6093
+  },
+  {
+   "GET": "/v1/log/entries?start=2456559&end=2456560",
+   "status": 200,
+   "bytes": 4569
+  },
+  {
+   "GET": "/v1/log/entries?start=2456874&end=2456875",
+   "status": 200,
+   "bytes": 4535
+  },
+  {
+   "GET": "/v1/log/entries?start=2457031&end=2457032",
+   "status": 200,
+   "bytes": 4301
+  },
+  {
+   "GET": "/v1/log/entries?start=2456953&end=2456954",
+   "status": 200,
+   "bytes": 4771
+  },
+  {
+   "GET": "/v1/log/entries?start=2456992&end=2456993",
+   "status": 200,
+   "bytes": 7043
+  },
+  {
+   "GET": "/v1/log/entries?start=2456973&end=2456974",
+   "status": 200,
+   "bytes": 6025
+  },
+  {
+   "GET": "/v1/log/entries?start=2456963&end=2456964",
+   "status": 200,
+   "bytes": 22729
+  },
+  {
+   "GET": "/v1/log/entries?start=2456968&end=2456969",
+   "status": 200,
+   "bytes": 4241
+  },
+  {
+   "GET": "/v1/log/entries?start=2456966&end=2456967",
+   "status": 200,
+   "bytes": 4839
+  },
+  {
+   "GET": "/v1/log/entries?start=2456965&end=2456966",
+   "status": 200,
+   "bytes": 4839
+  },
+  {
+   "GET": "/v1/log/entries?start=2456964&end=2456965",
+   "status": 200,
+   "bytes": 4833
+  },
+  {
+   "GET": "/v1/log/entries?start=2456964&end=2457220",
+   "status": 200,
+   "bytes": 1555231
+  },
+  {
+   "GET": "/v1/log/inclusion?leaf_index=2456966&tree_size=2576713",
+   "status": 200,
+   "bytes": 2399
+  },
+  {
+   "GET": "/v1/facts/p6ewjnlqo5npzooyrlak7gwtia23s2vlnb435xbxz3ycusv7auta",
+   "status": 200,
+   "bytes": 1141
+  },
+  {
+   "GET": "/v1/log/entries?start=2574039&end=2574040",
+   "status": 200,
+   "bytes": 4573
+  },
+  {
+   "GET": "/v1/log/entries?start=2573961&end=2573962",
+   "status": 200,
+   "bytes": 4273
+  },
+  {
+   "GET": "/v1/log/entries?start=2573922&end=2573923",
+   "status": 200,
+   "bytes": 4855
+  },
+  {
+   "GET": "/v1/log/entries?start=2573902&end=2573903",
+   "status": 200,
+   "bytes": 4861
+  },
+  {
+   "GET": "/v1/log/entries?start=2573892&end=2573893",
+   "status": 200,
+   "bytes": 4855
+  },
+  {
+   "GET": "/v1/log/entries?start=2573897&end=2573898",
+   "status": 200,
+   "bytes": 4877
+  },
+  {
+   "GET": "/v1/log/entries?start=2573900&end=2573901",
+   "status": 200,
+   "bytes": 4865
+  },
+  {
+   "GET": "/v1/log/entries?start=2573899&end=2573900",
+   "status": 200,
+   "bytes": 4877
+  },
+  {
+   "GET": "/v1/log/entries?start=2573898&end=2573899",
+   "status": 200,
+   "bytes": 4877
+  },
+  {
+   "GET": "/v1/log/entries?start=2573898&end=2574154",
+   "status": 200,
+   "bytes": 1593886
+  },
+  {
+   "GET": "/v1/log/inclusion?leaf_index=2573915&tree_size=2576713",
+   "status": 200,
+   "bytes": 2289
+  }
+ ]
+}
