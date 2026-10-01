@@ -1,0 +1,5428 @@
+{
+ "schema": "esa_poster v13 cost measurements",
+ "measured_on": "2026-10-01 (UTC)",
+ "author": "research/v13/08_cost_overhead.md",
+ "environment": {
+  "client_host": "4 vCPU container, Intel Xeon @ 2.80GHz, Python 3.11.15, curl 8.5.0, blake3 1.0.10, pynacl 1.6.2, tiktoken 0.14.0",
+  "network": "all HTTPS goes through the session's local agent proxy to a TLS-re-terminating egress proxy (see /root/.ccr/README.md); HTTP/1.1 only; latencies include that path",
+  "emem_server_commit_header": "x-emem-commit 8e9b401cecae7ab9944d403a2d7840952c6586a6 (GET /v1/facts response, 2026-10-01T00:34Z)",
+  "read_only": "only GET requests to emem.dev except JSON-RPC tools/list on /mcp and /mcp/full; no recall/ask/band_raster/backfill/resolve/range_hash; nothing signed or published"
+ },
+ "scripts": {
+  "m1": "scratchpad m1_resolve.py",
+  "m2": "scratchpad m2_offline.py (+ precompiled exec breakdown)",
+  "m3": "scratchpad make_trace_ro.py -> trace_ro.py (read-only instrumented copy of research/repro/v8/trace_fact.py)",
+  "m4": "scratchpad m4_source.py",
+  "m5": "scratchpad m5_tokens.py",
+  "m6": "scratchpad m6_storage.py"
+ },
+ "m1_resolve_fact_https": {
+  "fact_cid": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+  "window_utc": [
+   "2026-10-01T00:37:06+00:00",
+   "2026-10-01T00:37:55+00:00"
+  ],
+  "cold_cbor_new_connection_ms": {
+   "n": 50,
+   "median": 154.21,
+   "q1": 150.8793,
+   "q3": 166.79,
+   "iqr": 15.9108,
+   "min": 143.251,
+   "max": 394.851
+  },
+  "cold_cbor_tls_setup_ms": {
+   "n": 50,
+   "median": 101.8995,
+   "q1": 99.2417,
+   "q3": 113.615,
+   "iqr": 14.3732,
+   "min": 94.51,
+   "max": 346.567
+  },
+  "cold_cbor_request_to_first_byte_ms": {
+   "n": 50,
+   "median": 50.001,
+   "q1": 48.077,
+   "q3": 52.8978,
+   "iqr": 4.8208,
+   "min": 46.107,
+   "max": 72.52
+  },
+  "warm_cbor_reused_connection_ms": {
+   "n": 49,
+   "median": 40.007,
+   "q1": 38.644,
+   "q3": 43.385,
+   "iqr": 4.741,
+   "min": 37.212,
+   "max": 64.667
+  },
+  "cold_json_ms": {
+   "n": 30,
+   "median": 152.4865,
+   "q1": 147.8423,
+   "q3": 158.805,
+   "iqr": 10.9627,
+   "min": 140.984,
+   "max": 398.726
+  },
+  "cold_cbor_second_fact_bengaluru_ms": {
+   "n": 30,
+   "median": 154.5405,
+   "q1": 148.8803,
+   "q3": 159.139,
+   "iqr": 10.2587,
+   "min": 143.373,
+   "max": 174.55
+  },
+  "http_200": {
+   "cold_cbor_keylong": 50,
+   "warm_cbor_keylong": 50,
+   "cold_json_keylong": 30,
+   "cold_cbor_bengaluru": 30
+  },
+  "n": {
+   "cold_cbor_keylong": 50,
+   "warm_cbor_keylong": 50,
+   "cold_json_keylong": 30,
+   "cold_cbor_bengaluru": 30
+  },
+  "rehash_ok_cold_cbor": 50,
+  "rehash_ok_bengaluru": 30,
+  "bytes": {
+   "body_cbor_keylong": 1115,
+   "body_json_keylong": 1273,
+   "body_json_keylong_gzip": 696,
+   "body_cbor_bengaluru": 509,
+   "response_headers_emem": 6762,
+   "of_which_content_security_policy": 5407,
+   "proxy_connect_line": 39,
+   "request_bytes": 145
+  },
+  "raw_ms": {
+   "cold_cbor_keylong": [
+    394.851,
+    152.864,
+    152.126,
+    153.459,
+    145.52,
+    153.483,
+    152.826,
+    172.919,
+    149.693,
+    147.747,
+    158.116,
+    153.03,
+    143.251,
+    155.505,
+    165.641,
+    143.752,
+    165.483,
+    152.088,
+    165.531,
+    150.202,
+    156.456,
+    180.053,
+    167.173,
+    154.707,
+    150.057,
+    172.531,
+    153.713,
+    172.236,
+    157.482,
+    153.118,
+    158.217,
+    203.11,
+    149.837,
+    164.956,
+    174.903,
+    170.631,
+    152.671,
+    150.68,
+    172.261,
+    156.557,
+    148.123,
+    148.878,
+    145.023,
+    196.958,
+    149.419,
+    151.477,
+    159.913,
+    169.379,
+    167.715,
+    153.224
+   ],
+   "warm_cbor_keylong": [
+    172.32,
+    39.452,
+    39.102,
+    42.391,
+    43.139,
+    37.789,
+    41.053,
+    43.073,
+    37.385,
+    44.051,
+    44.855,
+    37.895,
+    43.385,
+    37.844,
+    44.994,
+    39.203,
+    39.207,
+    39.894,
+    40.007,
+    52.326,
+    38.27,
+    37.644,
+    37.411,
+    37.869,
+    37.212,
+    38.644,
+    38.254,
+    38.647,
+    40.087,
+    45.474,
+    42.013,
+    45.075,
+    64.667,
+    43.473,
+    38.696,
+    39.55,
+    38.574,
+    39.563,
+    39.923,
+    39.657,
+    41.336,
+    50.313,
+    42.292,
+    41.876,
+    38.142,
+    40.255,
+    59.613,
+    41.761,
+    44.429,
+    50.833
+   ],
+   "cold_json_keylong": [
+    398.726,
+    159.005,
+    146.571,
+    158.352,
+    175.234,
+    155.017,
+    214.489,
+    160.34,
+    150.278,
+    153.919,
+    151.911,
+    147.684,
+    146.132,
+    140.984,
+    151.918,
+    147.135,
+    145.871,
+    148.317,
+    151.442,
+    146.72,
+    146.623,
+    152.455,
+    155.398,
+    155.911,
+    157.841,
+    169.616,
+    158.956,
+    152.232,
+    159.067,
+    152.518
+   ],
+   "cold_cbor_bengaluru": [
+    150.047,
+    170.012,
+    174.55,
+    143.373,
+    148.759,
+    156.574,
+    153.545,
+    144.485,
+    147.802,
+    149.914,
+    168.179,
+    166.191,
+    159.441,
+    146.622,
+    155.82,
+    151.795,
+    168.145,
+    155.536,
+    171.18,
+    158.034,
+    156.64,
+    147.877,
+    150.563,
+    155.67,
+    150.495,
+    174.002,
+    158.233,
+    149.244,
+    148.571,
+    143.65
+   ]
+  }
+ },
+ "m2_offline_verification": {
+  "bundle": "research/repro/v8/proof_bundle_ndvi.cbor (4,906 B, 9 checks)",
+  "process_wall_unshare_rn_ms": {
+   "n": 50,
+   "median": 48.1534,
+   "q1": 46.5763,
+   "q3": 50.3788,
+   "iqr": 3.8025,
+   "min": 43.5105,
+   "max": 58.8679,
+   "mean": 48.7874
+  },
+  "process_exit_codes": {
+   "0": 50
+  },
+  "all_pass": true,
+  "baseline_interpreter_plus_imports_ms": {
+   "n": 50,
+   "median": 44.3649,
+   "q1": 42.2494,
+   "q3": 46.7634,
+   "iqr": 4.514,
+   "min": 40.5674,
+   "max": 56.1157,
+   "mean": 45.1958
+  },
+  "in_process_runpy_ms": {
+   "n": 300,
+   "median": 2.3683,
+   "q1": 2.3151,
+   "q3": 2.5419,
+   "iqr": 0.2268,
+   "min": 2.2281,
+   "max": 18.5624,
+   "mean": 2.6065
+  },
+  "in_process_precompiled_exec_ms": {
+   "n": 300,
+   "median": 0.5713,
+   "q1": 0.5457,
+   "q3": 0.6125
+  },
+  "compile_verify_bundle_py_ms_median": 1.529,
+  "primitives_us": {
+   "blake3_fact_1115B": {
+    "n": 30,
+    "median": 1.5703,
+    "q1": 1.5664,
+    "q3": 1.5809,
+    "iqr": 0.0145,
+    "min": 1.5532,
+    "max": 1.8254,
+    "mean": 1.5839
+   },
+   "cbor2_loads_fact_1115B": {
+    "n": 30,
+    "median": 7.786,
+    "q1": 7.55,
+    "q3": 8.1006,
+    "iqr": 0.5506,
+    "min": 7.3869,
+    "max": 9.8159,
+    "mean": 7.9543
+   },
+   "ed25519_verify_pynacl": {
+    "n": 30,
+    "median": 67.7193,
+    "q1": 66.1678,
+    "q3": 69.2876,
+    "iqr": 3.1198,
+    "min": 65.3781,
+    "max": 93.8426,
+    "mean": 69.7139
+   },
+   "inclusion_fold_20_hashes": {
+    "n": 30,
+    "median": 14.3627,
+    "q1": 13.911,
+    "q3": 15.1384,
+    "iqr": 1.2273,
+    "min": 13.6562,
+    "max": 19.8875,
+    "mean": 14.7958
+   },
+   "blake3_entry_1604B": {
+    "n": 30,
+    "median": 2.0312,
+    "q1": 2.0153,
+    "q3": 2.0849,
+    "iqr": 0.0696,
+    "min": 2.0079,
+    "max": 5.6122,
+    "mean": 2.2423
+   }
+  },
+  "mutation_suite_ms_per_decision_by_level": {
+   "A": {
+    "n": 30,
+    "median": 0.0283,
+    "q1": 0.0281,
+    "q3": 0.0286,
+    "iqr": 0.0005,
+    "min": 0.0279,
+    "max": 0.0579,
+    "mean": 0.0295
+   },
+   "B": {
+    "n": 30,
+    "median": 0.0281,
+    "q1": 0.0277,
+    "q3": 0.0288,
+    "iqr": 0.0012,
+    "min": 0.0274,
+    "max": 0.0513,
+    "mean": 0.0294
+   },
+   "C": {
+    "n": 30,
+    "median": 0.048,
+    "q1": 0.0472,
+    "q3": 0.0483,
+    "iqr": 0.0011,
+    "min": 0.0466,
+    "max": 0.0504,
+    "mean": 0.048
+   },
+   "D": {
+    "n": 30,
+    "median": 0.0482,
+    "q1": 0.0475,
+    "q3": 0.0516,
+    "iqr": 0.0042,
+    "min": 0.0467,
+    "max": 0.0715,
+    "mean": 0.0508
+   },
+   "E": {
+    "n": 30,
+    "median": 0.0577,
+    "q1": 0.0566,
+    "q3": 0.0601,
+    "iqr": 0.0035,
+    "min": 0.0558,
+    "max": 0.0874,
+    "mean": 0.0611
+   },
+   "F": {
+    "n": 30,
+    "median": 0.2422,
+    "q1": 0.2322,
+    "q3": 0.2654,
+    "iqr": 0.0332,
+    "min": 0.2277,
+    "max": 0.2934,
+    "mean": 0.25
+   },
+   "G": {
+    "n": 30,
+    "median": 0.3555,
+    "q1": 0.3432,
+    "q3": 0.3701,
+    "iqr": 0.0269,
+    "min": 0.3342,
+    "max": 0.5061,
+    "mean": 0.3681
+   },
+   "H": {
+    "n": 30,
+    "median": 0.3513,
+    "q1": 0.3444,
+    "q3": 0.3649,
+    "iqr": 0.0205,
+    "min": 0.3404,
+    "max": 0.4142,
+    "mean": 0.3564
+   },
+   "I": {
+    "n": 30,
+    "median": 0.3565,
+    "q1": 0.353,
+    "q3": 0.3739,
+    "iqr": 0.0209,
+    "min": 0.3506,
+    "max": 0.4548,
+    "mean": 0.3686
+   }
+  },
+  "mutation_suite_genuine_construction_ms": {
+   "n": 30,
+   "median": 0.0288,
+   "q1": 0.0278,
+   "q3": 0.0305,
+   "iqr": 0.0027,
+   "min": 0.0274,
+   "max": 0.0424,
+   "mean": 0.0306
+  },
+  "committed_v11_full_verification_ms": 1.187,
+  "raw_ms": {
+   "process_wall": [
+    49.398,
+    54.384,
+    51.171,
+    48.084,
+    46.307,
+    48.28,
+    46.46,
+    45.84,
+    47.811,
+    49.521,
+    45.172,
+    48.589,
+    50.56,
+    49.706,
+    53.686,
+    48.928,
+    48.431,
+    47.204,
+    47.435,
+    48.841,
+    47.265,
+    52.378,
+    47.085,
+    52.321,
+    47.54,
+    47.079,
+    56.082,
+    44.857,
+    43.511,
+    48.807,
+    44.14,
+    54.33,
+    58.868,
+    51.061,
+    47.284,
+    47.206,
+    46.925,
+    45.047,
+    49.371,
+    45.298,
+    44.731,
+    48.223,
+    46.166,
+    52.686,
+    45.146,
+    45.853,
+    50.509,
+    56.047,
+    49.987,
+    47.762
+   ],
+   "baseline": [
+    49.655,
+    46.705,
+    43.82,
+    44.402,
+    40.936,
+    42.479,
+    42.22,
+    44.202,
+    41.997,
+    47.804,
+    47.062,
+    45.371,
+    45.442,
+    45.865,
+    41.638,
+    40.623,
+    46.783,
+    44.93,
+    45.003,
+    52.997,
+    42.341,
+    49.958,
+    43.436,
+    43.642,
+    41.635,
+    42.091,
+    42.193,
+    42.338,
+    53.435,
+    41.477,
+    42.213,
+    49.95,
+    42.977,
+    40.567,
+    46.221,
+    45.535,
+    46.266,
+    43.407,
+    56.116,
+    46.793,
+    49.006,
+    51.716,
+    44.895,
+    44.879,
+    44.328,
+    42.04,
+    43.732,
+    41.755,
+    43.317,
+    51.597
+   ]
+  }
+ },
+ "m3_trace_read_only": {
+  "keylong_ndvi": {
+   "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+   "n_runs": 5,
+   "wall_s": {
+    "n": 5,
+    "median": 14.913,
+    "q1": 14.511,
+    "q3": 15.028,
+    "iqr": 0.517,
+    "min": 14.027,
+    "max": 27.791
+   },
+   "requests": [
+    42,
+    44
+   ],
+   "bytes_in": {
+    "n": 5,
+    "median": 3261545,
+    "q1": 3261504.0,
+    "q3": 3261688.0,
+    "iqr": 184.0,
+    "min": 3258676,
+    "max": 3269942
+   },
+   "links": {
+    "1": {
+     "ms_median": 0.0,
+     "ms_min": 0.0,
+     "ms_max": 0.0,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "2": {
+     "ms_median": 177.1,
+     "ms_min": 173.7,
+     "ms_max": 396.4,
+     "bytes": [
+      1115
+     ],
+     "requests": [
+      1
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "3": {
+     "ms_median": 0.5,
+     "ms_min": 0.4,
+     "ms_max": 0.5,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "4": {
+     "ms_median": 0.1,
+     "ms_min": 0.1,
+     "ms_max": 0.2,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "5": {
+     "ms_median": 39.0,
+     "ms_min": 33.5,
+     "ms_max": 46.4,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "6": {
+     "ms_median": 0.1,
+     "ms_min": 0.1,
+     "ms_max": 0.2,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "7": {
+     "ms_median": 0.1,
+     "ms_min": 0.1,
+     "ms_max": 0.1,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "8": {
+     "ms_median": 558.3,
+     "ms_min": 480.2,
+     "ms_max": 688.2,
+     "bytes": [
+      15295
+     ],
+     "requests": [
+      1
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "9": {
+     "ms_median": 4860.5,
+     "ms_min": 4382.8,
+     "ms_max": 17757.6,
+     "bytes": [
+      1077352,
+      1077354
+     ],
+     "requests": [
+      5
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "9b": {
+     "ms_median": 1526.2,
+     "ms_min": 1460.6,
+     "ms_max": 1593.7,
+     "bytes": [
+      88081
+     ],
+     "requests": [
+      2
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "10": {
+     "ms_median": 5.2,
+     "ms_min": 5.1,
+     "ms_max": 5.7,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "11": {
+     "ms_median": 0.1,
+     "ms_min": 0.1,
+     "ms_max": 0.1,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "NOT VERIFIABLE"
+     ]
+    },
+    "12": {
+     "ms_median": 4879.8,
+     "ms_min": 4780.7,
+     "ms_max": 4999.0,
+     "bytes": [
+      1971838,
+      1979687
+     ],
+     "requests": [
+      23
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "13": {
+     "ms_median": 177.1,
+     "ms_min": 162.7,
+     "ms_max": 194.5,
+     "bytes": [
+      2399,
+      2488
+     ],
+     "requests": [
+      1
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "14": {
+     "ms_median": 1348.1,
+     "ms_min": 1233.9,
+     "ms_max": 1548.0,
+     "bytes": [
+      93461,
+      96332,
+      96427,
+      96921
+     ],
+     "requests": [
+      4,
+      6
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "15": {
+     "ms_median": 1026.1,
+     "ms_min": 959.6,
+     "ms_max": 1424.8,
+     "bytes": [
+      9090,
+      9092,
+      9133
+     ],
+     "requests": [
+      5
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    }
+   },
+   "runs": [
+    {
+     "run": "run1",
+     "run_at": "2026-10-01T00:41:05+00:00",
+     "wall_s": 15.028,
+     "requests": 42,
+     "bytes_in": 3258676,
+     "hosts": {
+      "emem.dev": {
+       "requests": 31,
+       "bytes": 2076767
+      },
+      "planetarycomputer.microsoft.com": {
+       "requests": 2,
+       "bytes": 15697
+      },
+      "sentinel2l2a01.blob.core.windows.net": {
+       "requests": 6,
+       "bytes": 1165033
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 300
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 177.14,
+      "3": 0.46,
+      "4": 0.08,
+      "5": 39.02,
+      "6": 0.11,
+      "7": 0.07,
+      "8": 554.4,
+      "9": 5213.26,
+      "9b": 1593.67,
+      "10": 5.06,
+      "11": 0.09,
+      "12": 4999.0,
+      "13": 184.25,
+      "14": 1233.88,
+      "15": 1026.07
+     },
+     "link_bytes": {
+      "2": 1115,
+      "8": 15295,
+      "9": 1077354,
+      "9b": 88081,
+      "12": 1971838,
+      "13": 2399,
+      "14": 93461,
+      "15": 9133
+     },
+     "link_requests": {
+      "2": 1,
+      "8": 1,
+      "9": 5,
+      "9b": 2,
+      "12": 23,
+      "13": 1,
+      "14": 4,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "VERIFIED",
+      "7": "VERIFIED",
+      "8": "VERIFIED",
+      "9": "VERIFIED",
+      "9b": "VERIFIED",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "VERIFIED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "sentinel2l2a01.blob.core.windows.net",
+      "path": "0925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif",
+      "method": "GET",
+      "status": 206,
+      "bytes": 468566,
+      "ms": 1258.04,
+      "next_link": 8
+     }
+    },
+    {
+     "run": "run2",
+     "run_at": "2026-10-01T00:41:42+00:00",
+     "wall_s": 14.913,
+     "requests": 44,
+     "bytes_in": 3261545,
+     "hosts": {
+      "emem.dev": {
+       "requests": 33,
+       "bytes": 2079638
+      },
+      "planetarycomputer.microsoft.com": {
+       "requests": 2,
+       "bytes": 15695
+      },
+      "sentinel2l2a01.blob.core.windows.net": {
+       "requests": 6,
+       "bytes": 1165033
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 300
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 396.43,
+      "3": 0.52,
+      "4": 0.09,
+      "5": 41.8,
+      "6": 0.16,
+      "7": 0.07,
+      "8": 656.36,
+      "9": 4860.53,
+      "9b": 1500.01,
+      "10": 5.19,
+      "11": 0.09,
+      "12": 4780.66,
+      "13": 162.66,
+      "14": 1548.05,
+      "15": 959.6
+     },
+     "link_bytes": {
+      "2": 1115,
+      "8": 15295,
+      "9": 1077352,
+      "9b": 88081,
+      "12": 1971838,
+      "13": 2399,
+      "14": 96332,
+      "15": 9133
+     },
+     "link_requests": {
+      "2": 1,
+      "8": 1,
+      "9": 5,
+      "9b": 2,
+      "12": 23,
+      "13": 1,
+      "14": 6,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "VERIFIED",
+      "7": "VERIFIED",
+      "8": "VERIFIED",
+      "9": "VERIFIED",
+      "9b": "VERIFIED",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "VERIFIED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "sentinel2l2a01.blob.core.windows.net",
+      "path": "0925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+      "method": "GET",
+      "status": 206,
+      "bytes": 477314,
+      "ms": 1152.21,
+      "next_link": 8
+     }
+    },
+    {
+     "run": "run3",
+     "run_at": "2026-10-01T00:42:02+00:00",
+     "wall_s": 14.511,
+     "requests": 44,
+     "bytes_in": 3261504,
+     "hosts": {
+      "emem.dev": {
+       "requests": 33,
+       "bytes": 2079638
+      },
+      "planetarycomputer.microsoft.com": {
+       "requests": 2,
+       "bytes": 15697
+      },
+      "sentinel2l2a01.blob.core.windows.net": {
+       "requests": 6,
+       "bytes": 1165033
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 257
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 173.69,
+      "3": 0.48,
+      "4": 0.16,
+      "5": 33.52,
+      "6": 0.16,
+      "7": 0.07,
+      "8": 688.2,
+      "9": 4481.67,
+      "9b": 1584.66,
+      "10": 5.08,
+      "11": 0.08,
+      "12": 4911.73,
+      "13": 177.13,
+      "14": 1391.23,
+      "15": 1061.73
+     },
+     "link_bytes": {
+      "2": 1115,
+      "8": 15295,
+      "9": 1077354,
+      "9b": 88081,
+      "12": 1971838,
+      "13": 2399,
+      "14": 96332,
+      "15": 9090
+     },
+     "link_requests": {
+      "2": 1,
+      "8": 1,
+      "9": 5,
+      "9b": 2,
+      "12": 23,
+      "13": 1,
+      "14": 6,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "VERIFIED",
+      "7": "VERIFIED",
+      "8": "VERIFIED",
+      "9": "VERIFIED",
+      "9b": "VERIFIED",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "VERIFIED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "sentinel2l2a01.blob.core.windows.net",
+      "path": "0925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+      "method": "GET",
+      "status": 206,
+      "bytes": 477314,
+      "ms": 1058.1,
+      "next_link": 8
+     }
+    },
+    {
+     "run": "run4",
+     "run_at": "2026-10-01T00:42:21+00:00",
+     "wall_s": 14.027,
+     "requests": 44,
+     "bytes_in": 3261688,
+     "hosts": {
+      "emem.dev": {
+       "requests": 33,
+       "bytes": 2079824
+      },
+      "planetarycomputer.microsoft.com": {
+       "requests": 2,
+       "bytes": 15695
+      },
+      "sentinel2l2a01.blob.core.windows.net": {
+       "requests": 6,
+       "bytes": 1165033
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 257
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 177.1,
+      "3": 0.41,
+      "4": 0.07,
+      "5": 35.04,
+      "6": 0.11,
+      "7": 0.06,
+      "8": 558.28,
+      "9": 4382.79,
+      "9b": 1460.63,
+      "10": 5.73,
+      "11": 0.08,
+      "12": 4879.8,
+      "13": 194.49,
+      "14": 1348.14,
+      "15": 983.2
+     },
+     "link_bytes": {
+      "2": 1115,
+      "8": 15295,
+      "9": 1077352,
+      "9b": 88081,
+      "12": 1971838,
+      "13": 2488,
+      "14": 96427,
+      "15": 9092
+     },
+     "link_requests": {
+      "2": 1,
+      "8": 1,
+      "9": 5,
+      "9b": 2,
+      "12": 23,
+      "13": 1,
+      "14": 6,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "VERIFIED",
+      "7": "VERIFIED",
+      "8": "VERIFIED",
+      "9": "VERIFIED",
+      "9b": "VERIFIED",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "VERIFIED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "sentinel2l2a01.blob.core.windows.net",
+      "path": "0925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif",
+      "method": "GET",
+      "status": 206,
+      "bytes": 468566,
+      "ms": 1175.83,
+      "next_link": 8
+     }
+    },
+    {
+     "run": "run5",
+     "run_at": "2026-10-01T00:42:54+00:00",
+     "wall_s": 27.791,
+     "requests": 44,
+     "bytes_in": 3269942,
+     "hosts": {
+      "emem.dev": {
+       "requests": 33,
+       "bytes": 2088078
+      },
+      "planetarycomputer.microsoft.com": {
+       "requests": 2,
+       "bytes": 15695
+      },
+      "sentinel2l2a01.blob.core.windows.net": {
+       "requests": 6,
+       "bytes": 1165033
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 257
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 197.79,
+      "3": 0.47,
+      "4": 0.08,
+      "5": 46.36,
+      "6": 0.13,
+      "7": 0.13,
+      "8": 480.16,
+      "9": 17757.63,
+      "9b": 1526.22,
+      "10": 5.18,
+      "11": 0.09,
+      "12": 4833.75,
+      "13": 169.05,
+      "14": 1347.7,
+      "15": 1424.84
+     },
+     "link_bytes": {
+      "2": 1115,
+      "8": 15295,
+      "9": 1077352,
+      "9b": 88081,
+      "12": 1979687,
+      "13": 2399,
+      "14": 96921,
+      "15": 9092
+     },
+     "link_requests": {
+      "2": 1,
+      "8": 1,
+      "9": 5,
+      "9b": 2,
+      "12": 23,
+      "13": 1,
+      "14": 6,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "VERIFIED",
+      "7": "VERIFIED",
+      "8": "VERIFIED",
+      "9": "VERIFIED",
+      "9b": "VERIFIED",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "VERIFIED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "sentinel2l2a01.blob.core.windows.net",
+      "path": "0925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+      "method": "GET",
+      "status": 206,
+      "bytes": 65536,
+      "ms": 14312.29,
+      "next_link": 8
+     }
+    }
+   ]
+  },
+  "bengaluru_dem": {
+   "token": "emem:fact:defi.zb493.xuqA.zcb5f:yqbolgeoycqkvj3zkxukb4bjw4odhpwvfzqo3fbgwf4spk45zala",
+   "n_runs": 3,
+   "wall_s": {
+    "n": 3,
+    "median": 7.057,
+    "q1": 7.029,
+    "q3": 7.415,
+    "iqr": 0.386,
+    "min": 7.001,
+    "max": 7.773
+   },
+   "requests": [
+    34
+   ],
+   "bytes_in": {
+    "n": 3,
+    "median": 1661008,
+    "q1": 1660986.5,
+    "q3": 1661008.0,
+    "iqr": 21.5,
+    "min": 1660965,
+    "max": 1661008
+   },
+   "links": {
+    "1": {
+     "ms_median": 0.0,
+     "ms_min": 0.0,
+     "ms_max": 0.0,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "2": {
+     "ms_median": 178.8,
+     "ms_min": 178.4,
+     "ms_max": 180.3,
+     "bytes": [
+      509
+     ],
+     "requests": [
+      1
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "3": {
+     "ms_median": 0.5,
+     "ms_min": 0.5,
+     "ms_max": 0.5,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "4": {
+     "ms_median": 0.1,
+     "ms_min": 0.1,
+     "ms_max": 0.1,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "5": {
+     "ms_median": 33.9,
+     "ms_min": 33.7,
+     "ms_max": 43.0,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "6": {
+     "ms_median": 0.1,
+     "ms_min": 0.1,
+     "ms_max": 0.1,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "NOT VERIFIABLE"
+     ]
+    },
+    "10": {
+     "ms_median": 4.9,
+     "ms_min": 4.8,
+     "ms_max": 6.9,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "11": {
+     "ms_median": 0.2,
+     "ms_min": 0.1,
+     "ms_max": 0.2,
+     "bytes": [
+      0
+     ],
+     "requests": [
+      0
+     ],
+     "result": [
+      "NOT VERIFIABLE"
+     ]
+    },
+    "12": {
+     "ms_median": 4634.4,
+     "ms_min": 4528.8,
+     "ms_max": 5315.7,
+     "bytes": [
+      1555287
+     ],
+     "requests": [
+      23
+     ],
+     "result": [
+      "FAILED"
+     ]
+    },
+    "13": {
+     "ms_median": 172.5,
+     "ms_min": 169.0,
+     "ms_max": 198.6,
+     "bytes": [
+      2507
+     ],
+     "requests": [
+      1
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "14": {
+     "ms_median": 989.5,
+     "ms_min": 946.4,
+     "ms_max": 1069.4,
+     "bytes": [
+      93570
+     ],
+     "requests": [
+      4
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    },
+    "15": {
+     "ms_median": 1028.1,
+     "ms_min": 985.2,
+     "ms_max": 1123.6,
+     "bytes": [
+      9092,
+      9135
+     ],
+     "requests": [
+      5
+     ],
+     "result": [
+      "VERIFIED"
+     ]
+    }
+   },
+   "runs": [
+    {
+     "run": "blr1",
+     "run_at": "2026-10-01T00:50:28+00:00",
+     "wall_s": 7.773,
+     "requests": 34,
+     "bytes_in": 1661008,
+     "hosts": {
+      "emem.dev": {
+       "requests": 31,
+       "bytes": 1659829
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 300
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 178.39,
+      "3": 0.5,
+      "4": 0.09,
+      "5": 33.88,
+      "6": 0.08,
+      "10": 4.86,
+      "11": 0.21,
+      "12": 5315.66,
+      "13": 168.97,
+      "14": 946.41,
+      "15": 1123.6
+     },
+     "link_bytes": {
+      "2": 509,
+      "12": 1555287,
+      "13": 2507,
+      "14": 93570,
+      "15": 9135
+     },
+     "link_requests": {
+      "2": 1,
+      "12": 23,
+      "13": 1,
+      "14": 4,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "NOT VERIFIABLE",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "FAILED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "emem.dev",
+      "path": "/v1/log/entries",
+      "method": "GET",
+      "status": 200,
+      "bytes": 6128,
+      "ms": 518.31,
+      "next_link": 8
+     }
+    },
+    {
+     "run": "blr2",
+     "run_at": "2026-10-01T00:50:38+00:00",
+     "wall_s": 7.057,
+     "requests": 34,
+     "bytes_in": 1661008,
+     "hosts": {
+      "emem.dev": {
+       "requests": 31,
+       "bytes": 1659829
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 300
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 180.3,
+      "3": 0.49,
+      "4": 0.08,
+      "5": 43.05,
+      "6": 0.09,
+      "10": 6.86,
+      "11": 0.11,
+      "12": 4528.82,
+      "13": 198.64,
+      "14": 1069.38,
+      "15": 1028.09
+     },
+     "link_bytes": {
+      "2": 509,
+      "12": 1555287,
+      "13": 2507,
+      "14": 93570,
+      "15": 9135
+     },
+     "link_requests": {
+      "2": 1,
+      "12": 23,
+      "13": 1,
+      "14": 4,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "NOT VERIFIABLE",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "FAILED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "geo.qa",
+      "path": "/.well-known/emem-agents.json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 620,
+      "ms": 444.89,
+      "next_link": 10
+     }
+    },
+    {
+     "run": "blr3",
+     "run_at": "2026-10-01T00:50:48+00:00",
+     "wall_s": 7.001,
+     "requests": 34,
+     "bytes_in": 1660965,
+     "hosts": {
+      "emem.dev": {
+       "requests": 31,
+       "bytes": 1659829
+      },
+      "geo.qa": {
+       "requests": 1,
+       "bytes": 620
+      },
+      "dns.google": {
+       "requests": 1,
+       "bytes": 257
+      },
+      "cloudflare-dns.com": {
+       "requests": 1,
+       "bytes": 259
+      }
+     },
+     "link_ms": {
+      "1": 0.0,
+      "2": 178.75,
+      "3": 0.5,
+      "4": 0.08,
+      "5": 33.72,
+      "6": 0.11,
+      "10": 4.84,
+      "11": 0.18,
+      "12": 4634.42,
+      "13": 172.49,
+      "14": 989.53,
+      "15": 985.21
+     },
+     "link_bytes": {
+      "2": 509,
+      "12": 1555287,
+      "13": 2507,
+      "14": 93570,
+      "15": 9092
+     },
+     "link_requests": {
+      "2": 1,
+      "12": 23,
+      "13": 1,
+      "14": 4,
+      "15": 5
+     },
+     "results": {
+      "1": "VERIFIED",
+      "2": "VERIFIED",
+      "3": "VERIFIED",
+      "4": "VERIFIED",
+      "5": "VERIFIED",
+      "6": "NOT VERIFIABLE",
+      "10": "VERIFIED",
+      "11": "NOT VERIFIABLE",
+      "12": "FAILED",
+      "13": "VERIFIED",
+      "14": "VERIFIED",
+      "15": "VERIFIED"
+     },
+     "slowest_request": {
+      "host": "geo.qa",
+      "path": "/.well-known/emem-agents.json",
+      "method": "GET",
+      "status": 200,
+      "bytes": 620,
+      "ms": 354.89,
+      "next_link": 10
+     }
+    }
+   ],
+   "note": "link 6 NOT VERIFIABLE: fn open_meteo_copdem90m@1 has no rule in trace_fact.py; link 12 FAILED only on the harness's assumed v1 batch-root (entry is preimage v0); all other entry checks passed"
+  },
+  "not_run_read_only": [
+   "link 4 wrong-cell POST (offline equality kept)",
+   "link 9c POST /v1/range_hash",
+   "links 10-11 POST /v1/recall and /v1/memory_token/resolve (link 10 replaced by offline check of the committed Keylong recall receipt)"
+  ],
+  "committed_2026-09-30_full_trace_s": 17.9
+ },
+ "m4_source_reread": {
+  "measured_utc": "2026-10-01T00:46:29+00:00",
+  "urls": [
+   "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+   "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif"
+  ],
+  "sas_token_ms": {
+   "n": 30,
+   "median": 724.3365,
+   "q1": 691.1125,
+   "q3": 805.1194999999999,
+   "iqr": 114.00699999999995,
+   "min": 490.371,
+   "max": 1300.77
+  },
+  "sas_bytes": [
+   400,
+   402,
+   404
+  ],
+  "b08_header_64KiB_ms": {
+   "n": 30,
+   "median": 942.7090000000001,
+   "q1": 906.3770000000001,
+   "q3": 989.93775,
+   "iqr": 83.56074999999998,
+   "min": 790.2289999999999,
+   "max": 1259.0140000000001
+  },
+  "b08_header_bytes": [
+   65536
+  ],
+  "b08_tile413_ms": {
+   "n": 30,
+   "median": 1028.225,
+   "q1": 1005.2857499999999,
+   "q3": 1111.11775,
+   "iqr": 105.832,
+   "min": 925.549,
+   "max": 1314.054
+  },
+  "b08_tile_bytes": [
+   477314
+  ],
+  "b04_tile413_ms": {
+   "n": 30,
+   "median": 1235.4095,
+   "q1": 1195.1775000000002,
+   "q3": 1335.06375,
+   "iqr": 139.8862499999998,
+   "min": 995.721,
+   "max": 1515.7240000000002
+  },
+  "b04_tile_bytes": [
+   468566
+  ],
+  "n_ok": {
+   "sas": 30,
+   "b08_head": 30,
+   "b08_tile": 30,
+   "b04_tile": 30
+  },
+  "n_failed": {
+   "sas": 0,
+   "b08_head": 0,
+   "b08_tile": 0,
+   "b04_tile": 0
+  },
+  "tile_blake3_today": {
+   "b08_tile": [
+    "xyzcrqucmzeoavqpdsxnotrt5c2roaao34dfwhbxvr7zh3uzyu5a"
+   ],
+   "b04_tile": [
+    "nw5nehrmxu553ncfx7r2ab6od4rkycmlfppvwdk3u4kfs5p6groa"
+   ]
+  },
+  "tile_blake3_committed": {
+   "b08_tile": "xyzcrqucmzeoavqpdsxnotrt5c2roaao34dfwhbxvr7zh3uzyu5a",
+   "b04_tile": "nw5nehrmxu553ncfx7r2ab6od4rkycmlfppvwdk3u4kfs5p6groa"
+  },
+  "tile_hash_stable": {
+   "b08_tile": true,
+   "b04_tile": true
+  },
+  "decode_B08_tile_to_DN_ms": {
+   "n": 30,
+   "median": 2.4825149998832785,
+   "q1": 2.271092750106618,
+   "q3": 2.9096917501192365,
+   "iqr": 0.6385990000126185,
+   "min": 2.2234509997360874,
+   "max": 6.4860010006668745
+  },
+  "decoded_DN_B08": 3502,
+  "signed_DN_B08": 3502.0,
+  "aborted_first_attempt": "one Azure blob connection closed mid-exchange (agent proxy: ws_closed_mid_exchange); harness crashed on curl code 000; rerun from scratch",
+  "ndvi_cold_read_bytes_total": 1165033,
+  "scene_bytes_all_assets": 2023818762,
+  "open_meteo_bengaluru": {
+   "n": 10,
+   "ok": 9,
+   "bytes": 21,
+   "value": 918.0,
+   "ms_ok": {
+    "n": 9,
+    "median": 198.509,
+    "q1": 181.589,
+    "q3": 283.844,
+    "iqr": 102.255,
+    "min": 178.029,
+    "max": 497.96
+   },
+   "failures": [
+    [
+     "000",
+     "0",
+     "30.367769"
+    ]
+   ]
+  },
+  "raw_ms": {
+   "sas": [
+    672.85,
+    781.67,
+    728.31,
+    686.84,
+    768.5,
+    821.34,
+    1094.71,
+    657.59,
+    804.73,
+    690.23,
+    490.37,
+    841.03,
+    777.7,
+    698.92,
+    870.36,
+    805.25,
+    717.33,
+    817.74,
+    739.61,
+    704.28,
+    685.68,
+    693.75,
+    708.28,
+    1300.77,
+    547.82,
+    780.11,
+    805.91,
+    548.8,
+    719.51,
+    720.37
+   ],
+   "b08_head": [
+    815.95,
+    1096.61,
+    1118.21,
+    991.2,
+    957.05,
+    894.23,
+    896.33,
+    1039.36,
+    886.84,
+    997.19,
+    922.69,
+    911.32,
+    983.76,
+    981.33,
+    1259.01,
+    923.01,
+    1013.96,
+    920.63,
+    938.57,
+    963.82,
+    960.91,
+    906.3,
+    790.23,
+    930.9,
+    946.85,
+    906.6,
+    1207.6,
+    842.4,
+    871.69,
+    986.15
+   ],
+   "b08_tile": [
+    1171.19,
+    1213.3,
+    1157.18,
+    1118.24,
+    1121.27,
+    1007.45,
+    1028.28,
+    1045.43,
+    1027.31,
+    925.55,
+    1031.3,
+    967.95,
+    1038.38,
+    941.84,
+    1023.67,
+    981.52,
+    1042.34,
+    1147.26,
+    989.27,
+    1026.81,
+    1013.83,
+    1009.34,
+    1004.56,
+    1089.42,
+    993.31,
+    973.82,
+    1028.17,
+    1089.76,
+    1143.24,
+    1314.05
+   ],
+   "b04_tile": [
+    1515.72,
+    1209.43,
+    1232.52,
+    1223.63,
+    1223.73,
+    1285.22,
+    1318.67,
+    995.72,
+    1155.83,
+    1340.53,
+    1190.43,
+    1120.6,
+    1367.82,
+    1392.53,
+    1316.99,
+    1291.22,
+    1096.88,
+    1409.74,
+    1240.16,
+    1381.67,
+    1165.89,
+    1182.94,
+    1247.86,
+    1235.66,
+    1452.69,
+    1392.96,
+    1224.45,
+    1222.73,
+    1106.58,
+    1235.15
+   ]
+  }
+ },
+ "m5_tokens": {
+  "tokenizers": {
+   "cl100k_base": "tiktoken 0.14.0",
+   "o200k_base": "tiktoken 0.14.0"
+  },
+  "items": {
+   "fact_token": {
+    "chars": 84,
+    "bytes": 84,
+    "cl100k": 46,
+    "o200k": 45
+   },
+   "bundle_token_8_citations": {
+    "chars": 38,
+    "bytes": 38,
+    "cl100k": 23,
+    "o200k": 23
+   },
+   "value_16_digits": {
+    "chars": 18,
+    "bytes": 18,
+    "cl100k": 8,
+    "o200k": 8
+   },
+   "value_4dp": {
+    "chars": 6,
+    "bytes": 6,
+    "cl100k": 4,
+    "o200k": 4
+   },
+   "value_3dp": {
+    "chars": 5,
+    "bytes": 5,
+    "cl100k": 3,
+    "o200k": 3
+   },
+   "value_2dp": {
+    "chars": 4,
+    "bytes": 4,
+    "cl100k": 3,
+    "o200k": 3
+   },
+   "prose_sentence_constructed": {
+    "chars": 159,
+    "bytes": 159,
+    "cl100k": 62,
+    "o200k": 63
+   },
+   "prose_plus_fact_token": {
+    "chars": 244,
+    "bytes": 244,
+    "cl100k": 108,
+    "o200k": 108
+   },
+   "fact_json_as_served": {
+    "chars": 1271,
+    "bytes": 1273,
+    "cl100k": 562,
+    "o200k": 565
+   },
+   "fact_cbor_base64": {
+    "chars": 1488,
+    "bytes": 1488,
+    "cl100k": 1081,
+    "o200k": 1009
+   },
+   "proof_bundle_4906B_base64": {
+    "chars": 6544,
+    "bytes": 6544,
+    "cl100k": 4746,
+    "o200k": 4491
+   },
+   "bundle_resolve_json_as_served": {
+    "chars": 4930,
+    "bytes": 4930,
+    "cl100k": 2446,
+    "o200k": 2414
+   },
+   "mcp_tools_list_core18_response": {
+    "chars": 77014,
+    "bytes": 77042,
+    "cl100k": 18709,
+    "o200k": 19125
+   },
+   "mcp_tools_list_all114_tools_array": {
+    "chars": 331302,
+    "bytes": 331302,
+    "cl100k": 81754,
+    "o200k": 83655
+   },
+   "agent_card_json": {
+    "chars": 15165,
+    "bytes": 15165,
+    "cl100k": 3780,
+    "o200k": 3796
+   },
+   "verifier_spec_json": {
+    "chars": 29969,
+    "bytes": 29981,
+    "cl100k": 8454,
+    "o200k": 8512
+   },
+   "trace_stdout_run1": {
+    "chars": 12148,
+    "bytes": 12148,
+    "cl100k": 3931,
+    "o200k": 3908
+   }
+  },
+  "ratios": {
+   "fact_token_over_value16_cl100k": 5.75,
+   "fact_token_over_value4dp_cl100k": 11.5,
+   "fact_token_over_value3dp_cl100k": 15.333333333333334,
+   "bundle_token_over_fact_token_cl100k": 0.5,
+   "prose_plus_token_over_prose_cl100k": 1.7419354838709677
+  },
+  "keylong_sample": {
+   "n_scalar_facts": 205,
+   "token_chars": {
+    "n": 205,
+    "median": 84,
+    "q1": 84.0,
+    "q3": 84.0,
+    "mean": 84,
+    "min": 84,
+    "max": 84
+   },
+   "value_chars": {
+    "n": 205,
+    "median": 18,
+    "q1": 18.0,
+    "q3": 19.0,
+    "mean": 17.04390243902439,
+    "min": 1,
+    "max": 21
+   },
+   "token_tokens": {
+    "cl100k": {
+     "n": 205,
+     "median": 48,
+     "q1": 47.0,
+     "q3": 50.0,
+     "mean": 48.40975609756097,
+     "min": 43,
+     "max": 58
+    },
+    "o200k": {
+     "n": 205,
+     "median": 48,
+     "q1": 46.0,
+     "q3": 49.0,
+     "mean": 47.40487804878049,
+     "min": 41,
+     "max": 57
+    }
+   },
+   "value_tokens": {
+    "cl100k": {
+     "n": 205,
+     "median": 8,
+     "q1": 8.0,
+     "q3": 8.0,
+     "mean": 7.580487804878048,
+     "min": 1,
+     "max": 9
+    },
+    "o200k": {
+     "n": 205,
+     "median": 8,
+     "q1": 8.0,
+     "q3": 8.0,
+     "mean": 7.580487804878048,
+     "min": 1,
+     "max": 9
+    }
+   },
+   "ratio_of_means": {
+    "cl100k": 6.386100386100386,
+    "o200k": 6.253539253539254
+   },
+   "ratio_of_sums_chars": 4.928448769318832,
+   "note": "value = Python repr (shortest round-trip, as JSON prints it); same cell for every token"
+  },
+  "bundle_token_sample": {
+   "source": "the five most frequent emem:bundle: tokens in research/ (grep)",
+   "rows": [
+    {
+     "token": "emem:bundle:y2k6h2laeo4libfsiebucdw4mu",
+     "chars": 38,
+     "cl100k": 21,
+     "o200k": 20
+    },
+    {
+     "token": "emem:bundle:6x5eoxguweqw46n3gvpaqe3e3a",
+     "chars": 38,
+     "cl100k": 23,
+     "o200k": 23
+    },
+    {
+     "token": "emem:bundle:xb5x75xfzxkqjqxzxcqlpul2xe",
+     "chars": 38,
+     "cl100k": 21,
+     "o200k": 20
+    },
+    {
+     "token": "emem:bundle:3d4octsgzilnelhvzvxwdvqzty",
+     "chars": 38,
+     "cl100k": 21,
+     "o200k": 19
+    },
+    {
+     "token": "emem:bundle:xbahsudiy3daywvahorl4kbhhy",
+     "chars": 38,
+     "cl100k": 21,
+     "o200k": 18
+    }
+   ]
+  }
+ },
+ "m6_storage": {
+  "started_utc": "2026-10-01T00:47:23+00:00",
+  "sth_json_bytes": 678,
+  "sth": {
+   "tree_size": 2574692,
+   "signed_at": "2026-10-01T00:48:00Z",
+   "root_b32": "lk322aafcnz4yw4n5ele5imgtcefvl67723lvfo6sdebulmxqwea"
+  },
+  "log_pages": {
+   "near_keylong_2457078": {
+    "start": 2457078,
+    "returned": 256,
+    "json_bytes": 1832701
+   },
+   "first_entries_0": {
+    "start": 0,
+    "returned": 256,
+    "json_bytes": 1210301
+   },
+   "mid_1000000": {
+    "start": 1000000,
+    "returned": 256,
+    "json_bytes": 945457
+   },
+   "near_head": {
+    "start": 2574436,
+    "returned": 256,
+    "json_bytes": 1302122
+   }
+  },
+  "inclusion_proof": {
+   "tree_size": 2574692,
+   "path_len": 20,
+   "binary_bytes": 640,
+   "json_bytes": 2399
+  },
+  "consistency_proof_from_2556451": {
+   "len": 20,
+   "binary_bytes": 640,
+   "json_bytes": 1575
+  },
+  "receipts_committed": [
+   {
+    "file": "research/repro/receipt_2026-09-29.json",
+    "primitive": "emem.recall",
+    "n_fact_cids": 6,
+    "json_compact_bytes": 1806,
+    "cbor_reencoded_bytes_no_b32_twins": 1217
+   },
+   {
+    "file": "research/repro/v8/bundle_mint.json",
+    "primitive": "emem.memory_bundle",
+    "n_fact_cids": 8,
+    "json_compact_bytes": 1995,
+    "cbor_reencoded_bytes_no_b32_twins": 1395
+   },
+   {
+    "file": "research/repro/v8/rasterset_mint.json",
+    "primitive": "emem.raster_bundle",
+    "n_fact_cids": 5,
+    "json_compact_bytes": 1750,
+    "cbor_reencoded_bytes_no_b32_twins": 1161
+   },
+   {
+    "file": "research/repro/data/contra_bengaluru.json",
+    "primitive": "emem.memory_contradictions",
+    "n_fact_cids": 8,
+    "json_compact_bytes": 1914,
+    "cbor_reencoded_bytes_no_b32_twins": 1329
+   },
+   {
+    "file": "research/repro/data/v11/ask_keylong.json",
+    "primitive": "emem.recall",
+    "n_fact_cids": 2,
+    "json_compact_bytes": 1592,
+    "cbor_reencoded_bytes_no_b32_twins": 1007
+   },
+   {
+    "file": "research/repro/data/v11/cell_keylong.json",
+    "primitive": "emem.recall",
+    "n_fact_cids": 207,
+    "json_compact_bytes": 12873,
+    "cbor_reencoded_bytes_no_b32_twins": 12077
+   }
+  ],
+  "proof_bundle_committed_bytes": 4906,
+  "proof_bundle_rebuilt_today_bytes": 4770,
+  "finished_utc": "2026-10-01T00:48:01+00:00",
+  "facts": {
+   "n": 207,
+   "rehash_ok": 207,
+   "aligned": 207,
+   "bytes_all": {
+    "n": 207,
+    "median": 1141,
+    "q1": 787.0,
+    "q3": 1141.0,
+    "iqr": 354.0,
+    "min": 547,
+    "max": 8246,
+    "mean": 1017.463768115942,
+    "sum": 210615
+   },
+   "by_value_kind": {
+    "scalar": {
+     "n": 205,
+     "median": 1141,
+     "q1": 787.0,
+     "q3": 1141.0,
+     "iqr": 354.0,
+     "min": 547,
+     "max": 1158,
+     "mean": 981.8146341463415,
+     "sum": 201272
+    },
+    "vector": {
+     "n": 2,
+     "median": 4671.5,
+     "q1": 2884.25,
+     "q3": 6458.75,
+     "iqr": 3574.5,
+     "min": 1097,
+     "max": 8246,
+     "mean": 4671.5,
+     "sum": 9343
+    }
+   },
+   "by_band": {
+    "copdem30m.elevation_mean": {
+     "n": 1,
+     "median": 718,
+     "q1": 718,
+     "q3": 718,
+     "iqr": 0,
+     "min": 718,
+     "max": 718,
+     "mean": 718,
+     "sum": 718
+    },
+    "geotessera": {
+     "n": 1,
+     "median": 1097,
+     "q1": 1097,
+     "q3": 1097,
+     "iqr": 0,
+     "min": 1097,
+     "max": 1097,
+     "mean": 1097,
+     "sum": 1097
+    },
+    "indices.nbr": {
+     "n": 1,
+     "median": 1137,
+     "q1": 1137,
+     "q3": 1137,
+     "iqr": 0,
+     "min": 1137,
+     "max": 1137,
+     "mean": 1137,
+     "sum": 1137
+    },
+    "indices.ndvi": {
+     "n": 156,
+     "median": 1141.0,
+     "q1": 1141.0,
+     "q3": 1141.0,
+     "iqr": 0.0,
+     "min": 787,
+     "max": 1145,
+     "mean": 1079.9615384615386,
+     "sum": 168474
+    },
+    "indices.ndwi": {
+     "n": 2,
+     "median": 981.0,
+     "q1": 892.5,
+     "q3": 1069.5,
+     "iqr": 177.0,
+     "min": 804,
+     "max": 1158,
+     "mean": 981,
+     "sum": 1962
+    },
+    "nightlights.dmsp_ols_avg_dn": {
+     "n": 1,
+     "median": 653,
+     "q1": 653,
+     "q3": 653,
+     "iqr": 0,
+     "min": 653,
+     "max": 653,
+     "mean": 653,
+     "sum": 653
+    },
+    "prithvi_eo2": {
+     "n": 1,
+     "median": 8246,
+     "q1": 8246,
+     "q3": 8246,
+     "iqr": 0,
+     "min": 8246,
+     "max": 8246,
+     "mean": 8246,
+     "sum": 8246
+    },
+    "s2.B04": {
+     "n": 34,
+     "median": 604.0,
+     "q1": 604.0,
+     "q3": 604.0,
+     "iqr": 0.0,
+     "min": 604,
+     "max": 840,
+     "mean": 617.9705882352941,
+     "sum": 21011
+    },
+    "s2.B08": {
+     "n": 2,
+     "median": 845.5,
+     "q1": 845.25,
+     "q3": 845.75,
+     "iqr": 0.5,
+     "min": 845,
+     "max": 846,
+     "mean": 845.5,
+     "sum": 1691
+    },
+    "s2.scl": {
+     "n": 1,
+     "median": 868,
+     "q1": 868,
+     "q3": 868,
+     "iqr": 0,
+     "min": 868,
+     "max": 868,
+     "mean": 868,
+     "sum": 868
+    },
+    "sentinel1_raw": {
+     "n": 5,
+     "median": 728,
+     "q1": 728.0,
+     "q3": 728.0,
+     "iqr": 0.0,
+     "min": 728,
+     "max": 728,
+     "mean": 728,
+     "sum": 3640
+    },
+    "surface_water.recurrence": {
+     "n": 1,
+     "median": 571,
+     "q1": 571,
+     "q3": 571,
+     "iqr": 0,
+     "min": 571,
+     "max": 571,
+     "mean": 571,
+     "sum": 571
+    },
+    "weather.temperature_2m": {
+     "n": 1,
+     "median": 547,
+     "q1": 547,
+     "q3": 547,
+     "iqr": 0,
+     "min": 547,
+     "max": 547,
+     "mean": 547,
+     "sum": 547
+    }
+   },
+   "rows": [
+    {
+     "cid": "txuyxuzb5iwdbqc2vge2qpqiikepqqdnpigayshbnke4zdibndaa",
+     "bytes": 718,
+     "band": "copdem30m.elevation_mean",
+     "fn": "copernicus_dem_30m_aws_pixel@1",
+     "value_kind": "scalar",
+     "tslot": 0
+    },
+    {
+     "cid": "ga2o2nufuq4s4tmirplgarpj4y5axb4644y7rftpojarlkcbqdrq",
+     "bytes": 1097,
+     "band": "geotessera",
+     "fn": "geotessera_v1@2",
+     "value_kind": "vector",
+     "tslot": 54
+    },
+    {
+     "cid": "ezs2hn7psaynfitpzcov4my5vtyxy44re2egie4hmwsupf43mk7q",
+     "bytes": 1137,
+     "band": "indices.nbr",
+     "fn": "sentinel2_l2a_indices_nbr@1",
+     "value_kind": "scalar",
+     "tslot": 20721
+    },
+    {
+     "cid": "2dpnuf4eqjgmacmwq5hqoofpcslmsmehtui2mnul5x6pbh2ttnwq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19019
+    },
+    {
+     "cid": "av3yiinq7ss65rp2zq5sez47fepcu2kgcbw6kdvwbmryhols3ecq",
+     "bytes": 789,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19024
+    },
+    {
+     "cid": "ambveemg22gb6sxg43zmyotgzkl2bdv42y4od64nvlj63qfjwisa",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19031
+    },
+    {
+     "cid": "r47ns5s7yboyn5l2qmwstpw7z2fwvjgxb5zqowe76g2dkhbxdagq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19034
+    },
+    {
+     "cid": "pawwouui324b5ohyalaehuzk3pe5th7wn2tz2mfeepe35izzq7yq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19036
+    },
+    {
+     "cid": "pdggyrzguuwuy3hhaslof2hkdmwupzmdap3e53yw7zsksja7xaxq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19384
+    },
+    {
+     "cid": "6bixwohsocr7ml4jrjga6zq2i3d4v4ir73z2wbhie7qzovzoadsq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19389
+    },
+    {
+     "cid": "gxatpd7rxcybtcqkguejubt5uu2mlzpjjjzgpuekugoxdxricisa",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19391
+    },
+    {
+     "cid": "abq3ohgxtkhefaluiitasxj2x7g22xatcqgudn44z2vbnpqqp66a",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19396
+    },
+    {
+     "cid": "w2aiub3fjkrkh4cezwsktlne3z2l7zciwtxl6tfpqjl3kf5g3osa",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19401
+    },
+    {
+     "cid": "zgtxa5b3sz6sqqcuvqped63m2thrjfnsd5turq4uracpki3wstsa",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19749
+    },
+    {
+     "cid": "uvpcasbwhfjyg7pwp2ad7hjrtvgzk4hfq7vg5wc7hhinzc35krva",
+     "bytes": 791,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19759
+    },
+    {
+     "cid": "jtqrz5afacn7qejs4m2gbzep3rxmddza7d6vbcy7mpnv2sbtlhmq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19761
+    },
+    {
+     "cid": "qwli4ej4zdadwr3cyvmpz5qpttleko44ydh3kqvbfab25dkk5dua",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 19764
+    },
+    {
+     "cid": "qinwnmwkyifxztpojlfqpjjrobifnwmaltezctp7gwvyh23eugja",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20116
+    },
+    {
+     "cid": "dhesyu6hlocjrkkjs6mgus7scl2qle43tpeu5zfiw66ozw4nv3bq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20119
+    },
+    {
+     "cid": "l5bhccee7b4vt277nsnldnz3euxil26clvpytlx2clghhpfg4oyq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20121
+    },
+    {
+     "cid": "52rd5swgxsqrh4okxjjjvauuvgag6wqa37xwdx3n6oqferl3bh5a",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20126
+    },
+    {
+     "cid": "odzwxq7gymlpn7lniohjifgc64lntae3pxka2m236y456d3ehura",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20131
+    },
+    {
+     "cid": "egnix55xnlwnutvaiyp6wmrpfiastichsswkkalc7qebnmrqwffq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20149
+    },
+    {
+     "cid": "dccco5g67rt5lexvlrnt5pqrojo3b3s4cxdn62j6vfrtqw67uuza",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20151
+    },
+    {
+     "cid": "ul74ppkfjsd5wrvitzestifoqemvd3jym5f6au32c34rlbpbwdna",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20154
+    },
+    {
+     "cid": "5lo7yvchfdx3svyhgvdcs4ua4m23x6pic4eaj375bywnwmdywghq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20156
+    },
+    {
+     "cid": "ilhnucuw3ezipljhofawuxccdvnpcpwozl6xb5sfrcsccmijsqxq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20161
+    },
+    {
+     "cid": "wonip2v36xyhrtwl5t4hrhel7o34lh3w3qnbbg5jofvdpgopmxaq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20164
+    },
+    {
+     "cid": "wvsktgghwbbfawlvk3tmnxb5cvex2gckx4cuxnc6xjuthhpqyhza",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20169
+    },
+    {
+     "cid": "57gxhasa46rj2gugpzfq3jbyx6mca34gl3bqa2w3aarfmohoi42q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20171
+    },
+    {
+     "cid": "bdersdzw5n54bydv7vqj46oo6ogvlrcsamwxhzxtekkx7rf4k75a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20174
+    },
+    {
+     "cid": "2xxrfa6bkt3lt2p2yhzawkk5mradps6kw3rjdm35gsovpmlt7y3a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20176
+    },
+    {
+     "cid": "vwrsgykste3v2cpkbdf6nmd3h77shkpmbbkpdraqi4dlxtie56aq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20178
+    },
+    {
+     "cid": "3uqyffbwcw2mnpv4wjtuxszzx4ah6bdr6642sz6e23hx4qjehxrq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20179
+    },
+    {
+     "cid": "ztnusdzumedrb6nfmyxbpzq3wn5nrdq7rwqlxwbi26wqasu63nha",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20181
+    },
+    {
+     "cid": "4euht427es2uruob2lmxssceoqg6f3ltq4soelirhzxmqf2e34vq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20184
+    },
+    {
+     "cid": "akdmtpziqibykoi7cn6xlkeeojeyakodjcls5wtifmg6aem4d3zq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20186
+    },
+    {
+     "cid": "2l5ta6hkuvvlhnjkphkctjlxht66f3sa3oxwgfv2dvjjcstyzhca",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20191
+    },
+    {
+     "cid": "sh35c7qbddanlwx62k42eaizps4l7vsyob32kbprrurbm4z2kr4q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20194
+    },
+    {
+     "cid": "cijznct4colahrrjg335rvcloevj3uxr246joddzkvy7gzyo2wya",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20196
+    },
+    {
+     "cid": "zgklv5c6t2vyw4urhkn4y5g6qjnfcd7v6a5be7prjc7rx4y6b7tq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20201
+    },
+    {
+     "cid": "bkfpa7dnxtg3g64twxe4y4zlwmjlen7nyedxotm5fbyitwllftjq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20204
+    },
+    {
+     "cid": "zabwh3mxvxby2mgkyz7apjfrpfz4a3w6g33xjrcnkv27jyvcwxhq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20206
+    },
+    {
+     "cid": "bqtkdup7yzun2icuc3wdgxy2ncshldouyzy7vhxybqi7lnxol2ca",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20209
+    },
+    {
+     "cid": "iai54v4dnvwaklgyopolulskuu2wyifsi4pxivyjhrup73uvnroa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20219
+    },
+    {
+     "cid": "j4ez6ll5yokybeqhl6mbz7r5uqcssuwqoaemx5rvi4hsgkx5nlra",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20221
+    },
+    {
+     "cid": "m4ymsv465gddpeiszrqbcjqglumsvyjotjxaccik6zlcyymvotra",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20226
+    },
+    {
+     "cid": "3esge77p6esdllhlj7hjkgezgxf7x7nguxckd5fyfa5lawhmsxsq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20229
+    },
+    {
+     "cid": "2qhftyky3ga7lf32b7yknfw6zi7js26y63gujmjpd6touipcttna",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20231
+    },
+    {
+     "cid": "r26hi43g3vpdjyavsyri3ofuv7ewyfrlibbxjuaub54izpqxrz6q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20234
+    },
+    {
+     "cid": "bs7s5a43vq4lb57x4y4pnwl3w3qa4vbrhsnmmqukstlduvm2swxa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20241
+    },
+    {
+     "cid": "7r4vbsvkw7zsx6jy5qp2oqhy5e5ppdgbinperu2c76tllzir3enq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20246
+    },
+    {
+     "cid": "j57vasawosbg7kmjs3zuzynr7t3izbcu5ycwtvubpct2ykqll7qq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20249
+    },
+    {
+     "cid": "u63sp2h7nzmcr2nxuavww554auiimcgvv7odojlee2yd7xn3vola",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20251
+    },
+    {
+     "cid": "cesimadglabj6fa6isv6e6imhctyy2djoyhng63ptsuoyqe7heda",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20258
+    },
+    {
+     "cid": "npphkevfdzgqucd2sdhhuasl2v2v6yfkitbapjen2faxnhvbpplq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20264
+    },
+    {
+     "cid": "vv2q2wquhpiay45mksjbhpft4pi4vb6gzbhj4glntugeph2c3zsa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20266
+    },
+    {
+     "cid": "egp4mm5tmuzqfgg22ngjcrzwwbai5lyhtk6ulbew7tgtookiyw3a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20271
+    },
+    {
+     "cid": "zrcqs2vx5qsqq3mswnflojcq5trtp3xl2me5dmvkwdn7ukym3qpa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20274
+    },
+    {
+     "cid": "7uwcb5xibwcmjl3cgr75hiktc7krgtqgynmufovguc55wc2if7za",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20276
+    },
+    {
+     "cid": "lsrqzf43ypizelqqnltsu3jfinhmfxab4ntzpfvaacsltre473bq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20286
+    },
+    {
+     "cid": "frzmuzkpnmhsaxvvlsot6v5s7qtoezoxbmm25e3cmxeefwlp7dka",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20289
+    },
+    {
+     "cid": "v6cqz7cv7mutitdgaep24tnqrhdyjyomuqxeyqtm7dblvg5zhljq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20296
+    },
+    {
+     "cid": "rc2mpyysxiq4arbkgsmswhpikgcw6mfd5ivktup45wr3jvvcnvma",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20306
+    },
+    {
+     "cid": "w55qck5rvqti2xu6w37skelvqns4qzuo3bvgp3o5kf4dxfbof2pq",
+     "bytes": 1139,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20311
+    },
+    {
+     "cid": "35hjsdebqzb2g7ddbt6f2mlx4nqcua2mnxueol7c5q54x4nkp3pa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20316
+    },
+    {
+     "cid": "5ahk2vf2offgfv6ws5brm73aoscn2qrtwysk2nnfkgmwcqduzmjq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20319
+    },
+    {
+     "cid": "mpjwi6462r5t6vwcybr6iwrsvlraouh74hhok2o6edke5vz5iuiq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20321
+    },
+    {
+     "cid": "ucvd5nbad7jtn5jb5lhtbyejtcktk4hdo3do4lha2syztem7zfma",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20336
+    },
+    {
+     "cid": "cpwbtjzcgsmmd2ifwonm2et6t3bwzoeavx3qsyd6r4yygktepkba",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20341
+    },
+    {
+     "cid": "tzxpxrx5aurqvhmgtldjhn4ttuvcrhzxz6dbjvf6t54jz63frddq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20344
+    },
+    {
+     "cid": "pitvauymasymskralidx3cuwqyjc4zsktpvspmzezozo5277vjna",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20346
+    },
+    {
+     "cid": "6wjavzwctok2n3qye5ft77fxbpbsagtshrbxwzh6dx6cmis66r7a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20349
+    },
+    {
+     "cid": "tomipqiog5o2djk2xylv6onlfv4zoruyaf2flebbyfd3o64ldgja",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20351
+    },
+    {
+     "cid": "t7nc2mpwsps6lzo5fd442lynok64nrucjr4x2jtefjqda6y6hpwa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20354
+    },
+    {
+     "cid": "fal3ndhgdh4ecws6nxluyqsajat6ghff3whmemni5mbwxhkhma4q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20356
+    },
+    {
+     "cid": "gl3cepxngl6kouadxnw4g4uvapunkenv7dccq5gamgyej5wkvbiq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20358
+    },
+    {
+     "cid": "ppqhsnziipnlfb2otd6lvgrcrvoca2d4kshsbndhty5rozvmpbfa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20359
+    },
+    {
+     "cid": "olqj3po6jo7a6do5yt7joa35gx7v3ot4uc55mwx7vmjudhznvesq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20361
+    },
+    {
+     "cid": "ws76b5b4egsxj6odagleis7n4begblgxufgietlbkdhbyfxbwvaa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20369
+    },
+    {
+     "cid": "qncg5ycemsejbnocf6l63lefqqt63ap7noij6vqnboaokuldmsla",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20371
+    },
+    {
+     "cid": "5euwulti6u3ukkgjdkastydr4wrdup2lzsezfzii43phqk276mma",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20374
+    },
+    {
+     "cid": "4n2lhps42quim36wlithjaapnshyzpu3jvfpxpmqm7tctd5sengq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20376
+    },
+    {
+     "cid": "2za5oyziyghdh3i3csxmqqblheicoyx47jeckv6bx4tp2yjbt6ua",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20378
+    },
+    {
+     "cid": "sbtopiujz2vajuftxtveqbusbulvtj5lk3kechp5wyhsuhlkoglq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20379
+    },
+    {
+     "cid": "34k4wmxefoex4l43qcacrnitbx6kzmuqtczrnkhqtyorgp7n5zma",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20381
+    },
+    {
+     "cid": "ke4chyv5goi5eqt3xsyy27fvkmzf4cmighlgdlslperytamkcx3a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20384
+    },
+    {
+     "cid": "zkcprs6akmwmviqisjtpa7ld5axm3i2iyolxcax5pccyo5umayuq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20386
+    },
+    {
+     "cid": "l7jwqsxjtbpqbg5r6t4rv36mbiil5zb6xbsypsnjmhdk4cizujsa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20389
+    },
+    {
+     "cid": "t4fioklxfzhgqvslbecbk5ww2b4gfsfq5cpe7noxpfqeqnmjxgpq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20391
+    },
+    {
+     "cid": "pbcx2oo2q4o7cvd2qwrxa73te2ub2r7pvmbvmrrbud56kjizdpqq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20394
+    },
+    {
+     "cid": "5x7nizwkcju5je2swp6kal724njh5ksyweworaxu2g7mv26q5nua",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20396
+    },
+    {
+     "cid": "kga4lairaavbqikovpmzlqbh3cjjbbsky5od3hr4477nxyvaiz4a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20398
+    },
+    {
+     "cid": "jbe7arunsjvd2vqpnkjo54qy2co2hcrvzqmatkyqu23ldhxgedhq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20399
+    },
+    {
+     "cid": "abexsf72hhujdaarr4pgskp5afrc2beckpkzfotxxwtufkcun56a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20401
+    },
+    {
+     "cid": "hlpsryqjr3kz42fqzzwucrdilf2uwo5ld6bnnufdluie5zingr2q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20404
+    },
+    {
+     "cid": "hy7ao3bt5apxyhk5a6h2jhsmsjheo726s2wzburobqiricd35jyq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20406
+    },
+    {
+     "cid": "gad7jb3d5y3eavsw5rafcpa5ulelwyhwvlcgqybghpwyz3c3aaya",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20409
+    },
+    {
+     "cid": "bg6ra6md5f7fo5mb4hm3scpgssaly6z6sk4a6czweciegdns4ijq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20411
+    },
+    {
+     "cid": "or6diopgrw57bozl4appslnzutqu2bdw5dw5q5tpp2dz2zibepva",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20414
+    },
+    {
+     "cid": "5wn5azfvmdcpwxuqaqzanmko2aec35tyvd2hr5qcq3apay6b5yla",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20416
+    },
+    {
+     "cid": "o6n2wpooii4t3wrlaqykow42t2cdn3dngjcp6arifr6t7drolema",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20418
+    },
+    {
+     "cid": "ezobstlti3rk2yfqxcb3z6tp6lmwf45jndenfirpdscgnb6qny6q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20419
+    },
+    {
+     "cid": "snzym7yecqbnacabc7ackhoa253zlcrdtn6auybwrbkf7kboasdq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20421
+    },
+    {
+     "cid": "4qj3l4mgh7ch5kvxmkqspjdl6y42oqhm42khh3gostccpixkbz5q",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20481
+    },
+    {
+     "cid": "aeg2w2m3d3am2nmfnugytlw5dc6ciwzderx66w3i4khodvdoxnoq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20486
+    },
+    {
+     "cid": "sb5xeaw2s2i4jnlyawuabc7di3tgm5zh24ihc73nvch3le3do3ba",
+     "bytes": 789,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20489
+    },
+    {
+     "cid": "kxd7jgts5wcidgkszlgeycv3ry7npdxd3ullcad3xht26ncqcexa",
+     "bytes": 791,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20491
+    },
+    {
+     "cid": "27wcyyi4zvzgybvqzzdtese5ra5zsrj3jasy2fdvla5pyvsgmspq",
+     "bytes": 789,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20496
+    },
+    {
+     "cid": "2etdpvwibg6dge3jleoy4lfe53kqphdr2c5rh7rraiuc7pqidadq",
+     "bytes": 1142,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20514
+    },
+    {
+     "cid": "bkucgr5rwx5acphqiirnc6rtep5ek4lociginq5u7t6zy57webaa",
+     "bytes": 1142,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20516
+    },
+    {
+     "cid": "j63cro5dm4gz5x37elekkjybszofnqesvgvrglrviy7rrydbf2wq",
+     "bytes": 1144,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20518
+    },
+    {
+     "cid": "wv576wzhb2v7iujztrtwcjhaz7cfi4aez4mrkr6ospc5alroxgrq",
+     "bytes": 1140,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20521
+    },
+    {
+     "cid": "4gql6tueamshkghdo65nk24fexpvpvgwagx3lejgrwb4jy7tujqa",
+     "bytes": 1142,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20526
+    },
+    {
+     "cid": "ocd56xlsoke6lo3nwboz4qja7rzzzvmmr4ao2nyjhgzqq6azmyfa",
+     "bytes": 1144,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20529
+    },
+    {
+     "cid": "7uq76ubexqxbr3bxmhkcaxifyzm2ow4uethyevp4lhrhb6jpp3ma",
+     "bytes": 1142,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20534
+    },
+    {
+     "cid": "dlud4jknjinqt4hx7k2coly6nua7u6m3qkxszdfqvt7e37w5tcsq",
+     "bytes": 1142,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20539
+    },
+    {
+     "cid": "vdph4ykmfomrl2i34ylyxta5r3frbykcezekeahzk2pcjxttlgfq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20548
+    },
+    {
+     "cid": "2kxurmof36zg3tpmgdyythscbv4bhmrjz6riir7g3jvsvchdcxfq",
+     "bytes": 1145,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20549
+    },
+    {
+     "cid": "z4zj4bpkxzfybw5xhjfbgyofvzw5m4syz5d5m6dq4vht63zjp2xq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20556
+    },
+    {
+     "cid": "fcwwby5vtdsdwn72driweqf3qq3p2evu4n57tpl3yetseiyaznvq",
+     "bytes": 1145,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20559
+    },
+    {
+     "cid": "t5g2jdhml5mhkcoxy2gkklwfodbyvhaiwctth5g3ibvfo3op5bgq",
+     "bytes": 1145,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20564
+    },
+    {
+     "cid": "erqkxhj4uyvkzm5igjmcqrq6njwydmtqyauquiroosejqzflltyq",
+     "bytes": 1145,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20566
+    },
+    {
+     "cid": "gwehadlpntvbpxiqfoxsasozgd5mot3oavld6w75gv2vy7jz7cza",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20569
+    },
+    {
+     "cid": "awc3pf5j7sktr6yp6hap6j67d6wquhozu5ytgcffrzgvx2nybjhq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20574
+    },
+    {
+     "cid": "c3i7cpimlhmyhizegrtnvkrn6rcrzdxwpbkhyvmeigjkyozhikna",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20581
+    },
+    {
+     "cid": "midyz3lybrxv4e5ocnoa7uc3j3beiocmffceomik7e52lv4nekva",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20588
+    },
+    {
+     "cid": "u25ma7zuzvtd23jh7hwt5ifgjxsk2kxjyoc2tzdcfge5wrcaixua",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20589
+    },
+    {
+     "cid": "diipckxlcin3effvx3hdwijyra73snkdlko4jcui5kx7ilsl4y4q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20591
+    },
+    {
+     "cid": "slmpt7etbr5v7wgx6efyxhlllhvnxo2wn6qsotokexysulrsljiq",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20596
+    },
+    {
+     "cid": "tmlx4snnc72av5v5pg3iijue5dkb5n7knveolnm5zfha2rymkmna",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20599
+    },
+    {
+     "cid": "quvnbidqicvoozshjw4pmhszyxzvbdmfdydr244gwvgv32soa7aa",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20606
+    },
+    {
+     "cid": "zyorgfe2qdejbuxqvkf7zz37vmn57phndoiszy77tv6haoabxb7q",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20611
+    },
+    {
+     "cid": "nh25ek6yx3sktt2iirfpvik53vivulghaomodra3ovmi7ti7dgmq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20614
+    },
+    {
+     "cid": "svwyrpjrwzbdclvgxfmivn5xbonji222git7bpzqnyzirltf34bq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20628
+    },
+    {
+     "cid": "qqw3jqwr4llqdwucp3cdkgvg6x6nvgsemzitotxs6bae6766gxtq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20631
+    },
+    {
+     "cid": "v7usyptgbm6x3ejgtw7jvur4i6e6exfeorpw2izfqnpytzebl5qa",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20634
+    },
+    {
+     "cid": "vwjdyfds62ur7angwwumo54g34hv4duxtklbp46smfd3bklgiwxq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20649
+    },
+    {
+     "cid": "jwkqm6ehelmzrwupfwyq2oqotiarexr5bdrt4xbl3znuynhurqxq",
+     "bytes": 787,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20651
+    },
+    {
+     "cid": "xbqqfk5r7celr2oj36asofnmzr5eevdmd67ifofbnesgjs7j7eeq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20661
+    },
+    {
+     "cid": "gh6vvnznsmmfka4psdq4x2lfzxhr6644btygxzurqjy7jiwyrr5a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20668
+    },
+    {
+     "cid": "2oeo5ezs4gmhtibjtvlkkg4db37rftlcqurkiq2nszhshta65jha",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20671
+    },
+    {
+     "cid": "jgn4hsc2ytbfs2buio3bgkpctdyqds4d3rgdghlxsqfzuxd54vca",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20674
+    },
+    {
+     "cid": "7kuu6y2hlqn3kdakaw5xe6gfwumybnhm3qvjibya6fqu5zxgagca",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20681
+    },
+    {
+     "cid": "hs5acthlfiqizgoaa4kocuqruh4uxyz5t52ipeyo2ubyaliuqmtq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20689
+    },
+    {
+     "cid": "rdrznvrcep7ethpxa7z5sk3nls4b3rfclogzqsmnbu3cgsj6whna",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20694
+    },
+    {
+     "cid": "dcugypdubcfxmqeqq4rdxrjjdwqsmgbhvicyli3bdilzojsq2qua",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20696
+    },
+    {
+     "cid": "j46c36kfbkzrryu2i3zkqymucn5o5w6d4uziznx6gn4fuid355cq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20699
+    },
+    {
+     "cid": "ducjgy6qxr767gmfeki2oqp6e5kllzx4i3dwmzz3fvu5fl6rhu5q",
+     "bytes": 1145,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20701
+    },
+    {
+     "cid": "cv72gvry64pqn2ccnyk5aqq2uenwlleg64h2vyirzr4b6x4akhwq",
+     "bytes": 1139,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20704
+    },
+    {
+     "cid": "ccdlbl2ektx3btds7rpzp65ziugiw2pkyyw3ka3hqqvvhkpohe3q",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20706
+    },
+    {
+     "cid": "fmqfudqtqdyb67wp2gvy6fnaujv3ndlezwf3o5amause3wqnyd6q",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20708
+    },
+    {
+     "cid": "k4244lyhbp6knqv43e4dn6qrkkxu3b7k65etg4u23ado4ylbgd5a",
+     "bytes": 1141,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20709
+    },
+    {
+     "cid": "ytck2qynqptfchmrvxejzwsej3dhpz4omdecouidq46ul46orkia",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20711
+    },
+    {
+     "cid": "6t22dgsbuzhh5b4bmjt7ejg3bfod3o377zvimz5iqkrezchsf7wq",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20714
+    },
+    {
+     "cid": "ucu3v57ibm2kbx2gtrvlzkcm65kqqnx3sgo7avdbghan6hxhrk6a",
+     "bytes": 1145,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20716
+    },
+    {
+     "cid": "kxjvfwpa7grmfhkxoxufq5xjltq2s5syer2rzdx7odbnrxhnjzkq",
+     "bytes": 1117,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20719
+    },
+    {
+     "cid": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+     "bytes": 1115,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20721
+    },
+    {
+     "cid": "3yyaxn5dvvutqukhtycog2y6ab2hfnzlcnf56qlevgnnare3nnsa",
+     "bytes": 1143,
+     "band": "indices.ndvi",
+     "fn": "sentinel2_l2a_indices_ndvi@1",
+     "value_kind": "scalar",
+     "tslot": 20726
+    },
+    {
+     "cid": "6x6af2zxxkecrvihrwdgipqk2pcfbspgmnl5exk5ipd5thy3cala",
+     "bytes": 804,
+     "band": "indices.ndwi",
+     "fn": "sentinel2_l2a_indices_ndwi@1",
+     "value_kind": "scalar",
+     "tslot": 20634
+    },
+    {
+     "cid": "juokn77pgvd2k6pgwvfq6enc2rp2bcnel4n7t3l62mc7wg4pah3q",
+     "bytes": 1158,
+     "band": "indices.ndwi",
+     "fn": "sentinel2_l2a_indices_ndwi@1",
+     "value_kind": "scalar",
+     "tslot": 20721
+    },
+    {
+     "cid": "4goyzdgdwphyhy3225vahkdsyzh445hzw3dizdslccinq2is2gaa",
+     "bytes": 653,
+     "band": "nightlights.dmsp_ols_avg_dn",
+     "fn": "dmsp_ols_v4_avg_vis_pixel@1",
+     "value_kind": "scalar",
+     "tslot": 43
+    },
+    {
+     "cid": "vfgcul5qdjzza5qdi6xcffq2mng7653uzpskra6cd2uu5nwbj3wa",
+     "bytes": 8246,
+     "band": "prithvi_eo2",
+     "fn": "prithvi_eo2_300m_tl_embed@2",
+     "value_kind": "vector",
+     "tslot": 56
+    },
+    {
+     "cid": "py5ociekpqo2pwqwai3rbdfyvzpbke4uzbeayh542cqrvebvi5kq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19481
+    },
+    {
+     "cid": "4s4unolizynufr3rhestj6ft4scrs6p6jr6zrbnupjli7degly6q",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19551
+    },
+    {
+     "cid": "yhdhwmdpegpmrsfmzfa7g2pw2m42kxgkwlg5o4ubo4e7emzo3k6a",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19581
+    },
+    {
+     "cid": "xn35wcfomlr6ll2zfyot5htvqapvj4kmi4rn3cktx4xdy6aj52oa",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19614
+    },
+    {
+     "cid": "y4fk77xdduhytn6mwf55ls6eympeixmcvlny2oal2giiulmsaqma",
+     "bytes": 605,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19641
+    },
+    {
+     "cid": "xluatkchi7haibxbdywhbyphpda3auyxbxdvk4cjdo5pawsiaqaa",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19856
+    },
+    {
+     "cid": "q2myic3nlwbhj3b3szadq6ikvygiqabwlm55cvgp3wm73v2ykb3q",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19889
+    },
+    {
+     "cid": "jr3kffq22vplp2c2u663kazvu3h3milmqtowwnpyrpzxpp4paczq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19919
+    },
+    {
+     "cid": "trphbpgd2cnyioiw2mif4zrcxvb7jl4twzs7vqu53j2cjiphtaya",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19949
+    },
+    {
+     "cid": "vynyrtr3uvgevvsfr6lt77z2qeghu6nprgukuoiftjbzxquqmx4q",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 19959
+    },
+    {
+     "cid": "q6kqshwr2tmqi6nsl6v5atffpt5jiinyr2q24hlevm7t6mdkx2sq",
+     "bytes": 605,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20011
+    },
+    {
+     "cid": "ucjwog25d2n4kwxn6y6mexc5mbwhbh7aihqks24btvcr4p5goota",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20209
+    },
+    {
+     "cid": "ltota3mxfzscwrv64a2wkjoo5orfjsis2cpyojo7jlbovqtubpsa",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20221
+    },
+    {
+     "cid": "rdvkadqofl6zpjrfclnkbbr5ggshajukyin2nugdy34eo727rz6a",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20231
+    },
+    {
+     "cid": "jl2vwd26mcyro7z27x44tnis4vijqxu3hmmj2ebiqlf4gojkjiiq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20234
+    },
+    {
+     "cid": "2wg6yticy3kep3jepi4yidba5felk5alxfifhm4zvic6j2ojffxq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20251
+    },
+    {
+     "cid": "zrlxowb6vfa6pynqht4wrqy2jxn6xw2jer3t7so7a4oy3s7rt3dq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20258
+    },
+    {
+     "cid": "yvfmzkrccwud3nl6cytvzmf4etailwdchsnsxq62wqfilvdthrpq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20276
+    },
+    {
+     "cid": "tte3ohmv7xpnm3cxvnt5kdd5uzmysyk74czvav2akxypkax5pqgq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20289
+    },
+    {
+     "cid": "7vf7bhlpye4vap5bqsau4kbjvyeo4htaxztmxmcfg4fkeumk3jpa",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20311
+    },
+    {
+     "cid": "chyex6c3jxukmqvicbtsix4gpvpc76da2uy2zj4vuo2ufryeeewa",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20321
+    },
+    {
+     "cid": "2jas36ypzkrkz5muvk57wcxz2anjqbblpi3rfknmk3b4spntxp7a",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20346
+    },
+    {
+     "cid": "6em2ek4yb7hyqm25mgjs7fuots7m4v64t2i2kqq255kj432lascq",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20356
+    },
+    {
+     "cid": "j2l6gn5jtwrb2te3mzdk4nykuhjy53mg63x662tfpj745kbrelsa",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20361
+    },
+    {
+     "cid": "lpdew7c5qqpb7egyjezeuhcbutcwg6sqz34vifhayly66qvofgoq",
+     "bytes": 605,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20376
+    },
+    {
+     "cid": "xvogdfvy46l54yfsubcigt6scsgxa4cheyivvyum2bvcfzjzw56q",
+     "bytes": 605,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20386
+    },
+    {
+     "cid": "rxdy44mcw2wbo2hegz7pk5kf7tbamh5rcbejtxap6l3wzjsen37a",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20574
+    },
+    {
+     "cid": "m43dtn3adrxfl3fgph5i45pkz7anuqegqvefnitylo2bf6w3dcaa",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20586
+    },
+    {
+     "cid": "vdqqaq72mh53nfrrkj6jjf4pf2lnhiwlpbwarcvuperphybshvna",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20596
+    },
+    {
+     "cid": "ce2m6gg66vwjsmfosbjwdeznczrpwizebzl6idgaf3w2wvdnvrua",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20606
+    },
+    {
+     "cid": "aqxsbzg7qd3xwyymfapntekhcq7w2wgmhe47rf2p65mgv5d2eoja",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20628
+    },
+    {
+     "cid": "bbsdnngwi4x6hl3avchpjfabccsy2ylvfpkodnht37rhut2nzbua",
+     "bytes": 604,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20634
+    },
+    {
+     "cid": "aorer7jtgzrjkjospacmula5rd65tev7uyndw3taogg7trmg2a2q",
+     "bytes": 839,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20719
+    },
+    {
+     "cid": "wbbu4ezmlxjwqfay5mu77f3xrvldg475pdce4fe4cxqiaaa5cvcq",
+     "bytes": 840,
+     "band": "s2.B04",
+     "fn": "sentinel2_l2a_s2_B04@1",
+     "value_kind": "scalar",
+     "tslot": 20721
+    },
+    {
+     "cid": "flf5bk4qry32c3exazagp66gs2gzdhafx7heqqsslsuvn43ad5bq",
+     "bytes": 846,
+     "band": "s2.B08",
+     "fn": "sentinel2_l2a_s2_B08@1",
+     "value_kind": "scalar",
+     "tslot": 20719
+    },
+    {
+     "cid": "4utkk3hyjejmufqlzvxkrbzht434j6gwhwmqo2exa4mqxepjajnq",
+     "bytes": 845,
+     "band": "s2.B08",
+     "fn": "sentinel2_l2a_s2_B08@1",
+     "value_kind": "scalar",
+     "tslot": 20721
+    },
+    {
+     "cid": "6kx2hho3xofvemkwvvbtxkgaa54a234b5wgoyohjkublz5rkdxua",
+     "bytes": 868,
+     "band": "s2.scl",
+     "fn": "sentinel2_l2a_s2_scl@1",
+     "value_kind": "scalar",
+     "tslot": 20721
+    },
+    {
+     "cid": "cjs7juiatwtfurxuofar4fzrmfln4tupy5i2galglyhesrdrlvca",
+     "bytes": 728,
+     "band": "sentinel1_raw",
+     "fn": "sentinel1_rtc_vv_db@1",
+     "value_kind": "scalar",
+     "tslot": 20709
+    },
+    {
+     "cid": "r3bt6yrp4pzwekhvfs3hqtk5dxxf4s72nou7d3rfpckmrhryhava",
+     "bytes": 728,
+     "band": "sentinel1_raw",
+     "fn": "sentinel1_rtc_vv_db@1",
+     "value_kind": "scalar",
+     "tslot": 20713
+    },
+    {
+     "cid": "lliyea5rc7xzmbxvnrztlsg3jfwimra57g7klstg5edq4dhx6kga",
+     "bytes": 728,
+     "band": "sentinel1_raw",
+     "fn": "sentinel1_rtc_vv_db@1",
+     "value_kind": "scalar",
+     "tslot": 20720
+    },
+    {
+     "cid": "pyle2pe3dja6a4attqtwboh2iddyk23fauzlr72zipzl6n2jjftq",
+     "bytes": 728,
+     "band": "sentinel1_raw",
+     "fn": "sentinel1_rtc_vv_db@1",
+     "value_kind": "scalar",
+     "tslot": 20721
+    },
+    {
+     "cid": "655dlfcj6657dvbjgzy5vqx4l6qde6ibsrxeuamozh2cjyohd6oq",
+     "bytes": 728,
+     "band": "sentinel1_raw",
+     "fn": "sentinel1_rtc_vv_db@1",
+     "value_kind": "scalar",
+     "tslot": 20725
+    },
+    {
+     "cid": "wfjigqdikr434mn7na2v5tvfmd3tggwmlrdqti2qmrtbn5g7g7fq",
+     "bytes": 571,
+     "band": "surface_water.recurrence",
+     "fn": "jrc_gsw_recurrence_pixel@1",
+     "value_kind": "scalar",
+     "tslot": 0
+    },
+    {
+     "cid": "lklt5nlt3j5g2ogb4twh5f3s2fnuklfghli36kmjiqgsikzzcyoa",
+     "bytes": 547,
+     "band": "weather.temperature_2m",
+     "fn": "met_no_locationforecast_compact@1",
+     "value_kind": "scalar",
+     "tslot": 496205
+    }
+   ]
+  },
+  "log_entries": {
+   "n": 1024,
+   "hash_ok": 1024,
+   "kinds": {
+    "attestation": 949,
+    "emem.memory_write.v1": 75
+   },
+   "cbor_bytes_all": {
+    "n": 1024,
+    "median": 1102.0,
+    "q1": 1033.0,
+    "q3": 1239.0,
+    "iqr": 206.0,
+    "min": 514,
+    "max": 35111,
+    "mean": 1560.9580078125,
+    "sum": 1598421
+   },
+   "cbor_bytes_by_kind": {
+    "emem.memory_write.v1": {
+     "n": 75,
+     "median": 530,
+     "q1": 514.0,
+     "q3": 533.0,
+     "iqr": 19.0,
+     "min": 514,
+     "max": 541,
+     "mean": 523.7733333333333,
+     "sum": 39283
+    },
+    "attestation": {
+     "n": 949,
+     "median": 1103,
+     "q1": 1065.0,
+     "q3": 1272.0,
+     "iqr": 207.0,
+     "min": 911,
+     "max": 35111,
+     "mean": 1642.927291886196,
+     "sum": 1559138
+    }
+   },
+   "facts_per_attestation": {
+    "n": 949,
+    "median": 1,
+    "q1": 1.0,
+    "q3": 1.0,
+    "iqr": 0.0,
+    "min": 1,
+    "max": 42,
+    "mean": 1.3551106427818758,
+    "sum": 1286
+   },
+   "bytes_per_fact_in_attestations": 1212.3934681181959,
+   "by_page": {
+    "near_keylong_2457078": {
+     "kinds": {
+      "attestation": 242,
+      "emem.memory_write.v1": 14
+     },
+     "cbor_bytes": {
+      "n": 256,
+      "median": 1604.0,
+      "q1": 1172.25,
+      "q3": 1621.5,
+      "iqr": 449.25,
+      "min": 514,
+      "max": 35111,
+      "mean": 2183.30859375,
+      "sum": 558927
+     },
+     "facts_per_att": {
+      "n": 242,
+      "median": 1.0,
+      "q1": 1.0,
+      "q3": 1.0,
+      "iqr": 0.0,
+      "min": 1,
+      "max": 42,
+      "mean": 1.6694214876033058,
+      "sum": 404
+     }
+    },
+    "first_entries_0": {
+     "kinds": {
+      "attestation": 256
+     },
+     "cbor_bytes": {
+      "n": 256,
+      "median": 990.5,
+      "q1": 984.0,
+      "q3": 1123.0,
+      "iqr": 139.0,
+      "min": 911,
+      "max": 11604,
+      "mean": 1425.078125,
+      "sum": 364820
+     },
+     "facts_per_att": {
+      "n": 256,
+      "median": 1.0,
+      "q1": 1.0,
+      "q3": 1.0,
+      "iqr": 0.0,
+      "min": 1,
+      "max": 24,
+      "mean": 1.5546875,
+      "sum": 398
+     }
+    },
+    "mid_1000000": {
+     "kinds": {
+      "attestation": 256
+     },
+     "cbor_bytes": {
+      "n": 256,
+      "median": 1101.0,
+      "q1": 1099.0,
+      "q3": 1103.0,
+      "iqr": 4.0,
+      "min": 1090,
+      "max": 1105,
+      "mean": 1100.359375,
+      "sum": 281692
+     },
+     "facts_per_att": {
+      "n": 256,
+      "median": 1.0,
+      "q1": 1.0,
+      "q3": 1.0,
+      "iqr": 0.0,
+      "min": 1,
+      "max": 1,
+      "mean": 1,
+      "sum": 256
+     }
+    },
+    "near_head": {
+     "kinds": {
+      "attestation": 195,
+      "emem.memory_write.v1": 61
+     },
+     "cbor_bytes": {
+      "n": 256,
+      "median": 1131.0,
+      "q1": 996.75,
+      "q3": 1331.25,
+      "iqr": 334.5,
+      "min": 514,
+      "max": 21232,
+      "mean": 1535.0859375,
+      "sum": 392982
+     },
+     "facts_per_att": {
+      "n": 195,
+      "median": 1,
+      "q1": 1.0,
+      "q3": 1.0,
+      "iqr": 0.0,
+      "min": 1,
+      "max": 6,
+      "mean": 1.1692307692307693,
+      "sum": 228
+     }
+    }
+   },
+   "sizes_by_page": {
+    "near_keylong_2457078": [
+     1604,
+     1210,
+     1038,
+     1188,
+     1188,
+     1196,
+     1197,
+     1195,
+     1896,
+     1199,
+     1030,
+     1193,
+     1190,
+     1195,
+     1193,
+     1624,
+     1308,
+     2739,
+     1054,
+     3910,
+     6788,
+     6788,
+     6788,
+     6788,
+     1192,
+     1192,
+     1192,
+     1606,
+     1192,
+     1192,
+     1192,
+     1192,
+     1192,
+     1192,
+     1199,
+     5403,
+     6786,
+     6786,
+     6786,
+     6786,
+     6786,
+     1129,
+     1112,
+     1100,
+     1130,
+     3043,
+     6688,
+     1101,
+     1126,
+     1104,
+     1131,
+     1101,
+     3651,
+     1131,
+     1109,
+     1102,
+     1104,
+     1039,
+     1069,
+     11475,
+     2365,
+     2374,
+     2366,
+     2789,
+     2372,
+     1605,
+     1623,
+     1336,
+     5943,
+     1070,
+     1196,
+     1191,
+     1194,
+     1190,
+     1953,
+     1191,
+     1195,
+     1224,
+     1068,
+     1221,
+     1069,
+     1224,
+     1191,
+     1224,
+     1065,
+     1069,
+     1065,
+     1224,
+     1064,
+     1194,
+     1228,
+     1064,
+     1064,
+     1615,
+     4957,
+     1612,
+     1608,
+     1612,
+     1606,
+     1610,
+     1605,
+     2724,
+     7195,
+     6079,
+     1608,
+     1608,
+     7195,
+     1607,
+     1612,
+     1610,
+     1601,
+     1608,
+     1610,
+     1612,
+     1609,
+     1609,
+     1612,
+     1605,
+     1604,
+     1603,
+     1607,
+     15013,
+     1611,
+     2728,
+     1607,
+     1604,
+     2728,
+     1608,
+     1606,
+     1607,
+     1610,
+     2723,
+     1608,
+     1613,
+     1605,
+     1607,
+     1606,
+     1611,
+     1608,
+     1607,
+     1611,
+     1604,
+     15023,
+     1608,
+     15014,
+     2731,
+     1607,
+     1609,
+     6075,
+     1609,
+     6073,
+     1608,
+     1604,
+     1613,
+     7193,
+     1621,
+     1600,
+     2733,
+     1624,
+     1618,
+     1623,
+     3857,
+     1625,
+     1619,
+     1604,
+     1616,
+     2720,
+     1608,
+     1605,
+     1611,
+     1188,
+     1195,
+     1211,
+     4799,
+     1065,
+     1194,
+     1045,
+     1576,
+     1585,
+     3780,
+     3229,
+     1060,
+     2675,
+     1031,
+     1106,
+     1186,
+     1623,
+     1634,
+     1605,
+     1122,
+     1188,
+     1188,
+     1188,
+     1604,
+     1604,
+     530,
+     514,
+     533,
+     514,
+     531,
+     514,
+     1032,
+     35111,
+     1099,
+     1035,
+     1105,
+     1038,
+     1037,
+     1605,
+     1982,
+     1609,
+     1976,
+     1983,
+     1608,
+     1040,
+     1037,
+     1102,
+     1034,
+     1033,
+     1609,
+     1981,
+     1099,
+     1035,
+     1034,
+     1606,
+     1977,
+     1978,
+     1606,
+     1609,
+     1983,
+     1982,
+     1612,
+     1107,
+     1602,
+     1980,
+     1980,
+     1605,
+     1222,
+     533,
+     514,
+     981,
+     534,
+     514,
+     531,
+     514,
+     1589,
+     531,
+     514,
+     1206,
+     1210,
+     1031,
+     1313,
+     1210,
+     1189,
+     1188,
+     1195
+    ],
+    "first_entries_0": [
+     1703,
+     1709,
+     11528,
+     11578,
+     5572,
+     5637,
+     11604,
+     5654,
+     11526,
+     5657,
+     5664,
+     5647,
+     7496,
+     981,
+     988,
+     978,
+     984,
+     983,
+     987,
+     978,
+     981,
+     983,
+     985,
+     981,
+     983,
+     982,
+     986,
+     984,
+     982,
+     988,
+     977,
+     979,
+     979,
+     979,
+     981,
+     985,
+     980,
+     982,
+     985,
+     983,
+     991,
+     983,
+     978,
+     979,
+     989,
+     984,
+     985,
+     982,
+     975,
+     983,
+     986,
+     977,
+     914,
+     982,
+     989,
+     994,
+     992,
+     982,
+     994,
+     989,
+     984,
+     979,
+     988,
+     986,
+     984,
+     988,
+     990,
+     986,
+     992,
+     987,
+     993,
+     984,
+     985,
+     986,
+     984,
+     985,
+     984,
+     988,
+     988,
+     986,
+     991,
+     988,
+     988,
+     986,
+     982,
+     988,
+     990,
+     987,
+     989,
+     980,
+     984,
+     985,
+     990,
+     984,
+     990,
+     980,
+     988,
+     1082,
+     1673,
+     1053,
+     1047,
+     1049,
+     1665,
+     1055,
+     983,
+     982,
+     7484,
+     1059,
+     1082,
+     1678,
+     1050,
+     1051,
+     1056,
+     1251,
+     1272,
+     1072,
+     1073,
+     1594,
+     1589,
+     6152,
+     1250,
+     6133,
+     1010,
+     1108,
+     1125,
+     1163,
+     1100,
+     982,
+     1010,
+     1583,
+     1250,
+     981,
+     1017,
+     983,
+     1022,
+     990,
+     1014,
+     1014,
+     1068,
+     1102,
+     984,
+     985,
+     980,
+     982,
+     1018,
+     984,
+     1017,
+     982,
+     1013,
+     981,
+     1016,
+     981,
+     1015,
+     984,
+     1009,
+     984,
+     1013,
+     987,
+     1022,
+     982,
+     1004,
+     984,
+     988,
+     985,
+     990,
+     981,
+     1015,
+     987,
+     1013,
+     984,
+     1018,
+     1250,
+     1272,
+     1586,
+     987,
+     911,
+     1016,
+     986,
+     1582,
+     1252,
+     1272,
+     1069,
+     1073,
+     1255,
+     1267,
+     986,
+     1011,
+     1251,
+     1271,
+     1589,
+     1069,
+     1078,
+     980,
+     983,
+     1016,
+     985,
+     1019,
+     979,
+     1015,
+     1269,
+     1274,
+     1016,
+     982,
+     1123,
+     1104,
+     1161,
+     979,
+     1125,
+     985,
+     1128,
+     981,
+     1128,
+     984,
+     1122,
+     982,
+     1128,
+     985,
+     1122,
+     984,
+     1128,
+     980,
+     1018,
+     1264,
+     1282,
+     1243,
+     1017,
+     1256,
+     1126,
+     1160,
+     985,
+     1265,
+     1277,
+     1018,
+     1123,
+     1109,
+     1160,
+     984,
+     1129,
+     980,
+     1126,
+     983,
+     1127,
+     979,
+     1125,
+     980,
+     1123,
+     984,
+     1126,
+     981,
+     1122,
+     981,
+     1015,
+     1274,
+     1279,
+     1049,
+     1041
+    ],
+    "mid_1000000": [
+     1097,
+     1097,
+     1097,
+     1097,
+     1100,
+     1097,
+     1100,
+     1097,
+     1100,
+     1097,
+     1101,
+     1101,
+     1101,
+     1104,
+     1101,
+     1104,
+     1101,
+     1104,
+     1101,
+     1104,
+     1104,
+     1104,
+     1102,
+     1104,
+     1094,
+     1105,
+     1094,
+     1105,
+     1105,
+     1102,
+     1100,
+     1102,
+     1100,
+     1102,
+     1100,
+     1102,
+     1099,
+     1099,
+     1104,
+     1102,
+     1100,
+     1102,
+     1100,
+     1099,
+     1100,
+     1099,
+     1100,
+     1099,
+     1105,
+     1099,
+     1105,
+     1099,
+     1105,
+     1103,
+     1097,
+     1103,
+     1097,
+     1103,
+     1097,
+     1103,
+     1096,
+     1103,
+     1099,
+     1096,
+     1099,
+     1096,
+     1099,
+     1096,
+     1102,
+     1099,
+     1099,
+     1099,
+     1099,
+     1099,
+     1099,
+     1099,
+     1099,
+     1099,
+     1099,
+     1099,
+     1101,
+     1099,
+     1105,
+     1099,
+     1105,
+     1099,
+     1105,
+     1101,
+     1101,
+     1099,
+     1101,
+     1099,
+     1101,
+     1096,
+     1101,
+     1096,
+     1092,
+     1097,
+     1092,
+     1097,
+     1092,
+     1097,
+     1099,
+     1102,
+     1099,
+     1102,
+     1099,
+     1102,
+     1104,
+     1097,
+     1104,
+     1104,
+     1097,
+     1104,
+     1097,
+     1100,
+     1097,
+     1100,
+     1098,
+     1100,
+     1098,
+     1098,
+     1100,
+     1100,
+     1099,
+     1100,
+     1099,
+     1100,
+     1099,
+     1100,
+     1099,
+     1100,
+     1099,
+     1100,
+     1100,
+     1100,
+     1095,
+     1090,
+     1095,
+     1090,
+     1095,
+     1090,
+     1103,
+     1090,
+     1103,
+     1097,
+     1103,
+     1103,
+     1103,
+     1097,
+     1102,
+     1098,
+     1102,
+     1102,
+     1104,
+     1102,
+     1104,
+     1104,
+     1102,
+     1104,
+     1102,
+     1104,
+     1102,
+     1099,
+     1097,
+     1102,
+     1102,
+     1102,
+     1102,
+     1102,
+     1101,
+     1102,
+     1101,
+     1104,
+     1101,
+     1104,
+     1101,
+     1104,
+     1101,
+     1104,
+     1099,
+     1097,
+     1099,
+     1100,
+     1100,
+     1100,
+     1099,
+     1099,
+     1097,
+     1099,
+     1097,
+     1101,
+     1099,
+     1101,
+     1099,
+     1099,
+     1099,
+     1099,
+     1103,
+     1099,
+     1103,
+     1099,
+     1103,
+     1101,
+     1103,
+     1101,
+     1101,
+     1103,
+     1100,
+     1101,
+     1101,
+     1100,
+     1101,
+     1100,
+     1101,
+     1100,
+     1101,
+     1101,
+     1102,
+     1101,
+     1102,
+     1101,
+     1101,
+     1101,
+     1101,
+     1101,
+     1102,
+     1103,
+     1102,
+     1102,
+     1102,
+     1103,
+     1095,
+     1103,
+     1095,
+     1104,
+     1098,
+     1104,
+     1098,
+     1104,
+     1103,
+     1104,
+     1103,
+     1104,
+     1103,
+     1103,
+     1103,
+     1103,
+     1103,
+     1103,
+     1104,
+     1104,
+     1104,
+     1104,
+     1104,
+     1104
+    ],
+    "near_head": [
+     1034,
+     1582,
+     1032,
+     1047,
+     1219,
+     1330,
+     1001,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     530,
+     514,
+     1033,
+     1032,
+     1102,
+     1116,
+     1037,
+     1041,
+     1894,
+     533,
+     514,
+     1130,
+     533,
+     514,
+     531,
+     514,
+     1119,
+     533,
+     514,
+     1219,
+     1217,
+     1950,
+     1217,
+     1217,
+     1218,
+     3398,
+     3405,
+     1948,
+     1218,
+     6797,
+     6797,
+     6797,
+     531,
+     514,
+     1079,
+     1078,
+     21228,
+     21232,
+     1090,
+     1112,
+     1030,
+     2129,
+     1633,
+     1044,
+     1233,
+     1627,
+     1132,
+     1335,
+     530,
+     514,
+     534,
+     514,
+     1041,
+     1038,
+     1033,
+     1108,
+     533,
+     514,
+     541,
+     532,
+     514,
+     1226,
+     1239,
+     1237,
+     1237,
+     1239,
+     1240,
+     1237,
+     1237,
+     1233,
+     1235,
+     1236,
+     1237,
+     1235,
+     1236,
+     1233,
+     1236,
+     1230,
+     1233,
+     1236,
+     1235,
+     1232,
+     1235,
+     1235,
+     1238,
+     1649,
+     533,
+     514,
+     541,
+     532,
+     514,
+     531,
+     514,
+     531,
+     514,
+     1036,
+     533,
+     514,
+     984,
+     1031,
+     1043,
+     1221,
+     1221,
+     1221,
+     1221,
+     1221,
+     2675,
+     4857,
+     2668,
+     1949,
+     1221,
+     6802,
+     6802,
+     6802,
+     531,
+     514,
+     533,
+     514,
+     1631,
+     1628,
+     1633,
+     1621,
+     1625,
+     1633,
+     1630,
+     1636,
+     1631,
+     1625,
+     1036,
+     1034,
+     1630,
+     1103,
+     1632,
+     1632,
+     1628,
+     1632,
+     1628,
+     1630,
+     1631,
+     1628,
+     1629,
+     1631,
+     2769,
+     531,
+     514,
+     1113,
+     1038,
+     1037,
+     534,
+     514,
+     1107,
+     1652,
+     533,
+     514,
+     1655,
+     533,
+     514,
+     541,
+     532,
+     514,
+     531,
+     514,
+     1106,
+     2343,
+     2961,
+     1106,
+     4255,
+     1049,
+     1045,
+     1033,
+     1035,
+     1647,
+     530,
+     514,
+     1221,
+     1215,
+     1217,
+     1222,
+     1944,
+     1217,
+     1220,
+     1217,
+     1217,
+     1213,
+     1223,
+     1219,
+     6798,
+     6798,
+     6798,
+     6798,
+     1109,
+     1040,
+     1042,
+     983,
+     1038,
+     1033,
+     1107,
+     978,
+     1132,
+     533,
+     514,
+     1620,
+     533,
+     514,
+     534,
+     514,
+     1036,
+     1107,
+     1108,
+     1031,
+     1037,
+     1104,
+     1035,
+     1041,
+     1107,
+     1036,
+     1037,
+     1111,
+     1033,
+     1036,
+     1107,
+     1038,
+     1037,
+     531,
+     514,
+     534,
+     514,
+     1102,
+     1093,
+     1104,
+     1631,
+     1636,
+     1634,
+     1636,
+     1633,
+     1631,
+     1640
+    ]
+   }
+  },
+  "log_growth": {
+   "tree_size_2026-09-30T09:15:54Z": 2556451,
+   "tree_size_2026-10-01T00:48:00Z": 2574692
+  }
+ },
+ "committed_agent_level_v8_R3": {
+  "source": "research/repro/data/v8/results.json (prereg research/repro/data/v8/prereg.md); means as committed, no per-trial spread committed",
+  "agent_A_sonnet_5_5_n10": {
+   "cost_usd_mean": 0.1049,
+   "wall_s_mean": 13.28,
+   "wall_s_range": [
+    11.61,
+    17.27
+   ],
+   "tool_calls_mean": 3.3,
+   "cl100k_token": 46,
+   "cl100k_prose_mean": 64.9
+  },
+  "agent_B_haiku_4_5": {
+   "T_token_n10": {
+    "input_tokens_mean": 45568,
+    "cost_usd_mean": 0.01577,
+    "wall_s_mean": 8.85,
+    "decision_correct": 10,
+    "resolve_called": 10
+   },
+   "P_prose_n10": {
+    "input_tokens_mean": 21665,
+    "cost_usd_mean": 0.00849,
+    "wall_s_mean": 7.1,
+    "decision_correct": 10
+   },
+   "R_rounded_prose_n5": {
+    "input_tokens_mean": 21658,
+    "cost_usd_mean": 0.00861,
+    "wall_s_mean": 6.96,
+    "decision_correct": 0
+   },
+   "F_forged_token_n5": {
+    "input_tokens_mean": 43964,
+    "cost_usd_mean": 0.01271,
+    "wall_s_mean": 8.49,
+    "declined": 5
+   }
+  },
+  "v9_rawband_sonnet_5_5_n10": {
+   "source": "research/repro/data/v9/rawband/results.md:16",
+   "cost_usd_total": 2.12,
+   "cost_usd_per_run_range": [
+    0.11,
+    0.52
+   ],
+   "wall_s_median": 31.6,
+   "tool_calls_range": [
+    4,
+    15
+   ]
+  }
+ }
+}
