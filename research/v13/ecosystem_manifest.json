@@ -1,0 +1,1276 @@
+[
+ {
+  "id": "chatgpt",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "ChatGPT (ChatGPT Directory plugin 'emem', invoked as @emem)",
+  "mechanism": "OpenAI Apps SDK / ChatGPT Directory plugin over emem's MCP endpoint https://emem.dev/mcp (Streamable HTTP); 18 core tools per integrations/chatgpt/README.md",
+  "url": "https://chatgpt.com/plugins/plugin_asdk_app_6a6a0832a59081918b19aec0ddf9ec77",
+  "status": "LIVE",
+  "evidence_level": "UNVERIFIED (publisher-attested only)",
+  "evidence": [
+   "LIVE: GET of the URL -> HTTP 403, body 'Enable JavaScript' (Cloudflare challenge); chatgpt.com/apps also 403, so 403 says nothing either way",
+   "LIVE: WebFetch -> HTTP 403",
+   "LIVE: web search shows the same URL pattern chatgpt.com/plugins/plugin_asdk_app_* for other directory apps (ElevenLabs, Quizlet)",
+   "SPEC: emem README.md:127,135 and web/index.html:1009 ('listed': '2026-09-27') link this URL; vortx.ai says 'Listed in ChatGPT' and 'mention @emem in any chat'",
+   "LIVE: https://emem.dev/.well-known/openai-apps-challenge -> 404 (expected: token only set during a submission, integrations/chatgpt/submission.md)"
+  ],
+  "user_can": "If listed as claimed: enable emem in ChatGPT and ask a place question; answers carry emem:fact: tokens",
+  "caveats": [
+   "Not independently confirmed in this session. Before print, a logged-in human must open the URL on a phone and screenshot the directory page (title, developer, status) into research/v13/.",
+   "OpenAI plugin guidelines (developers.openai.com/plugins/plugin-guidelines, fetched here): 'Do not use discovery, operation selection, or schema fetching with a generic executor to enable operations not individually exposed for review.' emem's MCP initialize instructions say tools/call runs any of 114 tools by name. Never print '114 tools in ChatGPT'; print only what the listing exposes.",
+   "OpenAI plugin guidelines: 'Plugins should not imply that they are made or endorsed by OpenAI.'"
+  ],
+  "print": {
+   "allowed": "only after the manual check above",
+   "text": "ChatGPT: @emem (ChatGPT Directory)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "OpenAI",
+   "marks": "ChatGPT name and logo, OpenAI Blossom",
+   "guideline_urls": [
+    "https://openai.com/brand/",
+    "https://developers.openai.com/plugins/plugin-guidelines"
+   ],
+   "fetched": "openai.com/brand -> HTTP 403 to curl and WebFetch (read via search snippets only: UNVERIFIED); plugin guidelines -> 200",
+   "monochrome": "UNVERIFIED (page not readable here)",
+   "rules": [
+    "search snippet of openai.com/brand: use the logo only when it directly relates to OpenAI services, exactly as provided; do not modify it; do not misrepresent the relationship or imply endorsement",
+    "plugin guidelines (LIVE): 'Plugins should not imply that they are made or endorsed by OpenAI.'"
+   ],
+   "poster_use": "Text 'ChatGPT' in poster type. No OpenAI logo unless a person reads openai.com/brand in a browser and it permits this use."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "chatgpt-custom-gpt-action",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "protocol surface",
+  "platform": "ChatGPT Custom GPT Action (OpenAPI import)",
+  "mechanism": "GPT builder -> Actions -> import https://emem.dev/openapi.action.json (curated subset)",
+  "url": "https://emem.dev/openapi.action.json",
+  "status": "PROTOCOL",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: HTTP 200, 121,037 bytes, OpenAPI 3.1.0, title 'emem shared memory: Custom GPT Action subset', 38 paths / 39 operations, info.version 2.4.2",
+   "LIVE: /.well-known/ai-plugin.json HTTP 200 (legacy plugin manifest, schema_version v1); legacy ChatGPT plugins are not a current integration route"
+  ],
+  "user_can": "Build a Custom GPT that calls emem REST without a key",
+  "caveats": [
+   "Not exercised inside the GPT builder.",
+   "docs/agents.md (Connect table, origin/main 18adb67) still says import https://emem.dev/openapi.json (375,360 bytes, 206 operations); CHANGELOG says that was fixed to /openapi.action.json. The poster must print the action URL."
+  ],
+  "print": {
+   "allowed": false,
+   "text": "(fold into REST/OpenAPI; do not give it its own tile)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "OpenAI",
+   "marks": "ChatGPT name and logo, OpenAI Blossom",
+   "guideline_urls": [
+    "https://openai.com/brand/",
+    "https://developers.openai.com/plugins/plugin-guidelines"
+   ],
+   "fetched": "openai.com/brand -> HTTP 403 to curl and WebFetch (read via search snippets only: UNVERIFIED); plugin guidelines -> 200",
+   "monochrome": "UNVERIFIED (page not readable here)",
+   "rules": [
+    "search snippet of openai.com/brand: use the logo only when it directly relates to OpenAI services, exactly as provided; do not modify it; do not misrepresent the relationship or imply endorsement",
+    "plugin guidelines (LIVE): 'Plugins should not imply that they are made or endorsed by OpenAI.'"
+   ],
+   "poster_use": "Text 'ChatGPT' in poster type. No OpenAI logo unless a person reads openai.com/brand in a browser and it permits this use."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "claude-code-mcp",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Claude Code (MCP)",
+  "mechanism": "claude mcp add --transport http emem https://emem.dev/mcp",
+  "url": "https://github.com/Vortx-AI/emem#quickstart",
+  "status": "LIVE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "MEASURED: Claude Code 2.1.286 in an isolated HOME: 'claude mcp add --scope user --transport http emem https://emem.dev/mcp' -> 'Added HTTP MCP server emem'; 'claude mcp list' -> 'emem: https://emem.dev/mcp (HTTP) - √ Connected'"
+  ],
+  "user_can": "Add emem in one command; the 18 core tools appear in Claude Code sessions",
+  "caveats": [
+   "Connection-level check only: no model turn and no tools/call were run here (tools/call on emem read tools signs and stores records)."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Claude Code: claude mcp add --transport http emem https://emem.dev/mcp"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "Anthropic",
+   "marks": "Claude, Claude Code logos and Spark",
+   "guideline_urls": [
+    "https://www.anthropic.com/legal/trademark-guidelines",
+    "https://www.anthropic.com/press-kit"
+   ],
+   "fetched": "trademark guidelines HTTP 200 (effective August 1, 2024); press kit zip 200 (139 entries)",
+   "monochrome": "An official one-color asset exists ('Claude logo - One-color.svg', 'Claude Code logo - One-color.svg' in the press kit), but use needs prior approval",
+   "rules": [
+    "'You may only use our trademarks as specifically permitted by us and only in materials we approve beforehand.'",
+    "'No alterations of our trademarks (changes to color, font, proportion, or otherwise) are permitted.'",
+    "'You may not use our trademarks in a manner that implies Anthropic's sponsorship or endorsement...'",
+    "Contact: marketing@anthropic.com"
+   ],
+   "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "claude-code-plugin",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Claude Code plugin (self-hosted marketplace in the emem repo)",
+  "mechanism": "/plugin marketplace add Vortx-AI/emem  then  /plugin install emem@emem  (.claude-plugin/marketplace.json + plugins/emem/)",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/plugins/emem",
+  "status": "LIVE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "MEASURED: 'claude plugin marketplace add Vortx-AI/emem' cloned https://github.com/Vortx-AI/emem.git and validated: '√ Successfully added marketplace: emem'",
+   "MEASURED: 'claude plugin install emem@emem' -> installed, Version 2.4.2, enabled",
+   "MEASURED: 'claude plugin details emem@emem' -> Skills (19), MCP servers (1) emem, Agents 0, Hooks 0; projected always-on cost ~3,672 tokens per session (Claude Code's own estimate)",
+   "SPEC: plugins/emem/.mcp.json -> {type: http, url: https://emem.dev/mcp}; plugin.json version 2.4.2, Apache-2.0"
+  ],
+  "user_can": "Install the MCP server plus 19 worked skills in two commands",
+  "caveats": [
+   "This is emem's own marketplace, not Anthropic's directory: anthropics/claude-plugins-official .claude-plugin/marketplace.json has 315 plugins and 0 named emem or pointing at Vortx-AI/emem (LIVE, raw.githubusercontent.com).",
+   "Print the always-on token cost next to it if it is printed at all (issue: 'do not hide the known token overhead')."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Claude Code plugin: /plugin marketplace add Vortx-AI/emem (19 skills; ~3.7k tokens always-on)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "Anthropic",
+   "marks": "Claude, Claude Code logos and Spark",
+   "guideline_urls": [
+    "https://www.anthropic.com/legal/trademark-guidelines",
+    "https://www.anthropic.com/press-kit"
+   ],
+   "fetched": "trademark guidelines HTTP 200 (effective August 1, 2024); press kit zip 200 (139 entries)",
+   "monochrome": "An official one-color asset exists ('Claude logo - One-color.svg', 'Claude Code logo - One-color.svg' in the press kit), but use needs prior approval",
+   "rules": [
+    "'You may only use our trademarks as specifically permitted by us and only in materials we approve beforehand.'",
+    "'No alterations of our trademarks (changes to color, font, proportion, or otherwise) are permitted.'",
+    "'You may not use our trademarks in a manner that implies Anthropic's sponsorship or endorsement...'",
+    "Contact: marketing@anthropic.com"
+   ],
+   "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "claude-ai-custom-connector",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Claude.ai / Claude Desktop (custom connector or config)",
+  "mechanism": "Settings -> Connectors -> Add custom connector -> https://emem.dev/mcp ; Claude Desktop: examples/claude-desktop.json",
+  "url": "https://emem.dev/mcp",
+  "status": "PROTOCOL",
+  "evidence_level": "SPEC",
+  "evidence": [
+   "SPEC: docs/mcp-directory.md (origin/main) 'Admin settings -> Connectors -> Add custom connector -> https://emem.dev/mcp'; web/index.html surfaces 'Claude.ai: custom connector'",
+   "LIVE: the endpoint it relies on passes initialize + tools/list (row mcp-core)"
+  ],
+  "user_can": "Paste the MCP URL as a custom connector (no key)",
+  "caveats": [
+   "Not exercised in claude.ai in this session.",
+   "Enterprise orgs may block non-directory connectors (docs/mcp-directory.md)."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Claude.ai: add https://emem.dev/mcp as a custom connector"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "Anthropic",
+   "marks": "Claude, Claude Code logos and Spark",
+   "guideline_urls": [
+    "https://www.anthropic.com/legal/trademark-guidelines",
+    "https://www.anthropic.com/press-kit"
+   ],
+   "fetched": "trademark guidelines HTTP 200 (effective August 1, 2024); press kit zip 200 (139 entries)",
+   "monochrome": "An official one-color asset exists ('Claude logo - One-color.svg', 'Claude Code logo - One-color.svg' in the press kit), but use needs prior approval",
+   "rules": [
+    "'You may only use our trademarks as specifically permitted by us and only in materials we approve beforehand.'",
+    "'No alterations of our trademarks (changes to color, font, proportion, or otherwise) are permitted.'",
+    "'You may not use our trademarks in a manner that implies Anthropic's sponsorship or endorsement...'",
+    "Contact: marketing@anthropic.com"
+   ],
+   "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "claude-connectors-directory",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "directory",
+  "platform": "Anthropic Claude connectors directory",
+  "mechanism": "Directory submission via claude.ai admin portal (Team/Enterprise org)",
+  "url": "https://claude.ai/admin-settings/directory/submissions/new",
+  "status": "NOT FOUND",
+  "evidence_level": "SPEC",
+  "evidence": [
+   "SPEC: docs/registries/anthropic-claude-connectors-submission.md: 'Previous form submission ... went to a deprecated form that is now closed. Action required: Re-submit via the new portal.'",
+   "LIVE: no public listing found; Anthropic's official plugin directory has no emem entry (row claude-code-plugin)"
+  ],
+  "user_can": "Nothing via a directory today; use the custom connector route",
+  "caveats": [
+   "Do not print 'in the Claude directory'."
+  ],
+  "print": {
+   "allowed": false,
+   "text": ""
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "Anthropic",
+   "marks": "Claude, Claude Code logos and Spark",
+   "guideline_urls": [
+    "https://www.anthropic.com/legal/trademark-guidelines",
+    "https://www.anthropic.com/press-kit"
+   ],
+   "fetched": "trademark guidelines HTTP 200 (effective August 1, 2024); press kit zip 200 (139 entries)",
+   "monochrome": "An official one-color asset exists ('Claude logo - One-color.svg', 'Claude Code logo - One-color.svg' in the press kit), but use needs prior approval",
+   "rules": [
+    "'You may only use our trademarks as specifically permitted by us and only in materials we approve beforehand.'",
+    "'No alterations of our trademarks (changes to color, font, proportion, or otherwise) are permitted.'",
+    "'You may not use our trademarks in a manner that implies Anthropic's sponsorship or endorsement...'",
+    "Contact: marketing@anthropic.com"
+   ],
+   "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "dify-marketplace",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Dify Marketplace plugin vortx-ai/emem",
+  "mechanism": "Dify tool plugin (category tool) registering emem tools; install from Marketplace into a Dify workspace (Dify >= 1.9.0)",
+  "url": "https://marketplace.dify.ai/plugin/vortx-ai/emem",
+  "status": "LIVE",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: page HTTP 200, title 'emem - Dify Marketplace'",
+   "LIVE: https://marketplace.dify.ai/api/v1/plugins/vortx-ai/emem -> status 'active', latest_version '2.4.0', created_at 2026-08-24T08:52:39Z, version_updated_at 2026-09-13T07:12:36Z, verification.authorized_category 'community', install_count 32, repository https://github.com/Vortx-AI/emem, 16 tools",
+   "LIVE: versions API -> 2.4.0 (2026-09-13), 2.3.0 (2026-09-03), 2.2.0 (2026-08-24)",
+   "LIVE: Dify template 'emem Referent Lock Lite' https://marketplace.dify.ai/template/emem/ad67ca26-e875-494b-b98f-23902c9a2017 HTTP 200"
+  ],
+  "user_can": "Install the plugin in Dify and call the emem tools from Dify apps and workflows",
+  "caveats": [
+   "Not exercised inside a Dify workspace.",
+   "Version skew: Dify 2.4.0 with 16 tools; live /mcp is 2.4.2 with 18 (Dify lacks search, fetch).",
+   "'community' category is Dify's label, not a Dify endorsement.",
+   "Plugin source lives outside the emem repo (docs/registries/integration-targets.md, build list row 4)."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Dify: Marketplace plugin vortx-ai/emem (community, v2.4.0)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "LangGenius (Dify)",
+   "marks": "Dify logo",
+   "guideline_urls": [
+    "https://dify.ai/brand-guidelines"
+   ],
+   "fetched": "HTTP 200, title 'Dify Brand Guidelines'",
+   "monochrome": "PERMITTED when 'Layout demands mono or reversed options'",
+   "rules": [
+    "Appropriate: 'In a group of logos alongside other tools (“logo garden”)' and 'In documentation, presentations, or integrations referencing Dify technologies'",
+    "'Any use that implies endorsement, partnership, or certification without explicit permission is not allowed.'",
+    "Assets: 'Download Dify Design Kit' on the same page"
+   ],
+   "poster_use": "Official mono Dify logo from the Design Kit is allowed at tile size; keep clear space; no partner lockup."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "gemini-cli",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Gemini CLI",
+  "mechanism": "gemini mcp add --transport http emem https://emem.dev/mcp",
+  "url": "https://emem.dev/mcp",
+  "status": "LIVE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "MEASURED: Gemini CLI 0.62.0 (npx, isolated HOME): 'gemini mcp add --scope user --transport http emem https://emem.dev/mcp' -> 'MCP server \"emem\" added to user settings. (http)'; 'gemini mcp list' -> '✓ emem: https://emem.dev/mcp (http) - Connected'",
+   "MEASURED: emem's documented command 'gemini extensions install https://emem.dev/gemini-extension.json --consent' FAILS: 'Failed to clone Git repository from https://emem.dev/gemini-extension.json ... fatal: repository ... not found'",
+   "SPEC: gemini-cli main packages/cli/src/config/extension-manager.ts inferInstallMetadata treats any https:// source as type 'git'; docs: '<source>: The GitHub URL or local path of the extension'"
+  ],
+  "user_can": "Add emem to Gemini CLI with the generic MCP command above",
+  "caveats": [
+   "Do not print 'gemini extensions install https://emem.dev/gemini-extension.json' (README/docs/agents.md/docs/integrations.md) until fixed; an extension install needs gemini-extension.json at a git repo root, and the emem repo has it only under examples/.",
+   "examples/gemini-extension.json at origin/main still says version 1.1.0 and '113 MCP tools'; the live-served copy says 2.4.2 and 114.",
+   "Connection-level check only; no model turn."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Gemini CLI: gemini mcp add --transport http emem https://emem.dev/mcp"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "Google LLC",
+   "marks": "Gemini, Gemini CLI",
+   "guideline_urls": [
+    "https://about.google/brand-resource-center/guidance/"
+   ],
+   "fetched": "HTTP 200, title 'Brand Resource Center | Guidance'",
+   "monochrome": "NOT PERMITTED without a request: product icons are 'Ask first'; 'Don't imitate ... product icons'",
+   "rules": [
+    "Go for it: 'You can refer to Google or our products in an informational context in plain text'",
+    "Don't: 'Don't use any Google brand elements on merchandise such as shirts, mugs, posters, etc.'",
+    "Don't imply endorsement"
+   ],
+   "poster_use": "Text only: 'Gemini CLI'. No Gemini icon."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "vscode",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Visual Studio Code (GitHub Copilot agent mode)",
+  "mechanism": "Install link vscode:mcp/install?{...}; code --add-mcp '{\"name\":\"emem\",\"type\":\"http\",\"url\":\"https://emem.dev/mcp\"}'; .vscode/mcp.json key 'servers'; @mcp gallery (backed by the GitHub MCP Registry)",
+  "url": "https://insiders.vscode.dev/redirect/mcp/install?name=emem&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Femem.dev%2Fmcp%22%7D",
+  "status": "PROTOCOL",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: the README install link -> HTTP 302 to vscode:mcp/install?{\"type\":\"http\",\"url\":\"https://emem.dev/mcp\",\"name\":\"emem\"}",
+   "SPEC: VS Code docs (microsoft/vscode-docs agent-customization/mcp-servers.md): '@mcp' gallery; 'code --add-mcp'; workspace key 'servers', type 'http'",
+   "LIVE: emem is in the GitHub MCP Registry (row github-mcp-registry), which search results state backs the @mcp gallery"
+  ],
+  "user_can": "One-click install from a link, or search @mcp emem in the Extensions view",
+  "caveats": [
+   "No VS Code in this container: install not executed.",
+   "Brand: 'Using the icon to identify or promote your own product' is Not OK (code.visualstudio.com/brand). Text only."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Visual Studio Code: @mcp emem (MCP gallery) or code --add-mcp"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "Microsoft",
+   "marks": "Visual Studio Code name and icon",
+   "guideline_urls": [
+    "https://code.visualstudio.com/brand"
+   ],
+   "fetched": "HTTP 200",
+   "monochrome": "NOT PERMITTED: blue icon everywhere; 'Use the white variant only when there isn't enough contrast'",
+   "rules": [
+    "Not OK: 'Using the icon to identify or promote your own product, service, application...'",
+    "Not OK: 'Using our icons to associate your offerings with Microsoft or its brands in any way.'",
+    "OK: 'Please use “Visual Studio Code” on the first instance.'; action labels '<action> in VS Code', e.g. 'Open in VS Code'"
+   ],
+   "poster_use": "Text only: 'Visual Studio Code' first, 'VS Code' after. No icon."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "cursor",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Cursor",
+  "mechanism": "Deeplink cursor://anysphere.cursor-deeplink/mcp/install?name=emem&config=<base64 {\"url\":\"https://emem.dev/mcp\"}>; web form https://cursor.com/install-mcp?...; .cursor/mcp.json",
+  "url": "https://cursor.com/install-mcp?name=emem&config=eyJ1cmwiOiJodHRwczovL2VtZW0uZGV2L21jcCJ9",
+  "status": "PROTOCOL",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "MEASURED: config param base64-decodes to {\"url\":\"https://emem.dev/mcp\"}; format matches Cursor docs (cursor.com/docs/context/mcp/install-links)",
+   "LIVE: https://cursor.com/en/install-mcp?name=emem&config=... -> HTTP 308 to https://cursor.com/install-mcp?... (web link usable in a QR; cursor:// is not)",
+   "SPEC: examples/cursor.mcp.json {mcpServers:{emem:{url:https://emem.dev/mcp}}}"
+  ],
+  "user_can": "One-click install in Cursor, or paste the JSON",
+  "caveats": [
+   "No Cursor here: install not executed."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Cursor: one-click MCP install link"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "Anysphere, Inc.",
+   "marks": "Cursor logo, cube, wordmark",
+   "guideline_urls": [
+    "https://cursor.com/brand"
+   ],
+   "fetched": "HTTP 200, title 'Cursor · Brand Guidelines'",
+   "monochrome": "Not stated on the page; official 2D light and dark variants are provided (UNVERIFIED beyond page text)",
+   "rules": [
+    "'Refer to us as Cursor. Not Cursor AI or Cursor Code.'",
+    "Assets: logos 2D (default) and 2.5D, horizontal lockup preferred"
+   ],
+   "poster_use": "Text 'Cursor' (safest). If a mark is used: the official 2D asset in its dark or light variant, unmodified."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "cline",
+  "poster_group": "LIVE CLIENT INTEGRATIONS",
+  "role": "agent host",
+  "platform": "Cline (VS Code extension)",
+  "mechanism": "MCP settings JSON. Working form needs {\"type\":\"streamableHttp\",\"url\":\"https://emem.dev/mcp\"}",
+  "url": "https://github.com/Vortx-AI/emem/blob/main/examples/cline.mcp.json",
+  "status": "EXPERIMENTAL",
+  "evidence_level": "INFERRED",
+  "evidence": [
+   "SPEC: examples/cline.mcp.json has url only, no type; autoApprove lists 'emem.recall', 'emem.compare', ... (dotted names that are not tool names; live names are emem_recall, ...)",
+   "LIVE: Cline docs (docs.cline.bot/mcp/mcp-overview): 'Omitting it defaults to the legacy sse transport ... set \"type\": \"streamableHttp\" explicitly'",
+   "MEASURED: GET https://emem.dev/mcp with Accept: text/event-stream -> HTTP 405 'sse_stream_not_offered' (stateless responder)",
+   "LIVE: Cline MCP Marketplace API https://api.cline.bot/v1/mcp/marketplace -> 199 entries, 0 emem",
+   "LIVE: cline/mcp-marketplace#1605 '[Server Submission]: emem, shared memory for AI agents' open since 2026-05-18, 0 comments"
+  ],
+  "user_can": "Add emem manually with type streamableHttp (corrected config); not from the Cline marketplace",
+  "caveats": [
+   "INFERRED that the shipped example fails (SSE default meets a 405); not executed. Fix the example before printing Cline.",
+   "Not in the Cline marketplace; a submission is not a listing."
+  ],
+  "print": {
+   "allowed": "only with the corrected config",
+   "text": "Cline: MCP settings, type streamableHttp"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "mcp-core",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "protocol",
+  "platform": "MCP Streamable HTTP endpoint /mcp (core tier)",
+  "mechanism": "JSON-RPC 2.0 over HTTPS POST; stateless (no Mcp-Session-Id); no key",
+  "url": "https://emem.dev/mcp",
+  "status": "PROTOCOL",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "MEASURED: initialize (protocolVersion 2025-11-25) -> HTTP 200 in 0.49 s; result.protocolVersion 2025-11-25; serverInfo {name: emem, version: 2.4.2}; capabilities tools/prompts/resources/tasks + extension io.modelcontextprotocol/ui; instructions 4,709 chars; header x-emem-commit 8e9b401c; no mcp-session-id header",
+   "MEASURED: notifications/initialized -> HTTP 202",
+   "MEASURED: tools/list -> HTTP 200, 18 tools, nextCursor null, 77,038 bytes, 0.88 s; every tool carries annotations (readOnlyHint true on 9, false on 9; destructiveHint false on all 18)",
+   "MEASURED: GET with Accept: text/event-stream -> 405 (no SSE stream offered)",
+   "LIVE: /.well-known/emem-manifest.json -> tool_count 114, by tier core 18 / extended 96, protocol_versions_supported 2024-11-05, 2025-03-26, 2025-06-18, 2025-11-25, capability_manifest_cid wlj3x2idaqnri2nxkmuxsralpe45juazgfvkju3d7bwobueyw5ba"
+  ],
+  "user_can": "Connect any MCP client with no account or key; call the 18 listed tools, and any of 114 by name",
+  "caveats": [
+   "server.json x-emem.directoryCompliance says the /mcp page is 'about 64 KB'; measured 77,038 bytes (README says ~75 KB). Under the 102,400-byte AWS ceiling that scripts/mcp_host_compat.py asserts.",
+   "Read tools sign and store records on call; not exercised here."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "MCP: https://emem.dev/mcp (Streamable HTTP, no key)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "LF Projects, LLC (Linux Foundation)",
+   "marks": "Model Context Protocol, MCP, A2A, Agent2Agent (all listed on the policy page)",
+   "guideline_urls": [
+    "https://lfprojects.org/policies/trademark-policy/"
+   ],
+   "fetched": "HTTP 200",
+   "monochrome": "NOT PERMITTED: 'A logo should not be displayed with color variations'",
+   "rules": [
+    "'Do not use a LF Projects logo on posters, brochures, signs, websites, or other marketing materials to promote your events, products or services without written permission from LF Projects.'",
+    "Word marks: 'You may make fair use of word marks to make true factual statements' without implying endorsement",
+    "Compatibility phrasing: 'Correct: <your product name> compatible with <LF Projects mark>'",
+    "Contact: trademarks@lfprojects.org"
+   ],
+   "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "mcp-full",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "protocol",
+  "platform": "MCP endpoint /mcp/full (all tools, paged)",
+  "mechanism": "Same JSON-RPC; tools/list paged by nextCursor",
+  "url": "https://emem.dev/mcp/full",
+  "status": "PROTOCOL",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "MEASURED: 8 pages (cursors all@13 ... all@106, then null): 13,17,14,12,14,25,11,8 tools = 114 distinct; 335,788 bytes total; largest page 45,402 bytes"
+  ],
+  "user_can": "List every tool, for hosts that follow nextCursor",
+  "caveats": [
+   "server.json says 'all 114 across 7 pages (about 290 KB)'; measured 8 pages, 335,788 bytes. Hosts that ignore nextCursor see page one only (13 tools)."
+  ],
+  "print": {
+   "allowed": false,
+   "text": "(30 cm detail only)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "LF Projects, LLC (Linux Foundation)",
+   "marks": "Model Context Protocol, MCP, A2A, Agent2Agent (all listed on the policy page)",
+   "guideline_urls": [
+    "https://lfprojects.org/policies/trademark-policy/"
+   ],
+   "fetched": "HTTP 200",
+   "monochrome": "NOT PERMITTED: 'A logo should not be displayed with color variations'",
+   "rules": [
+    "'Do not use a LF Projects logo on posters, brochures, signs, websites, or other marketing materials to promote your events, products or services without written permission from LF Projects.'",
+    "Word marks: 'You may make fair use of word marks to make true factual statements' without implying endorsement",
+    "Compatibility phrasing: 'Correct: <your product name> compatible with <LF Projects mark>'",
+    "Contact: trademarks@lfprojects.org"
+   ],
+   "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "a2a",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "protocol",
+  "platform": "A2A agent card and task endpoints",
+  "mechanism": "Agent card at /.well-known/agent-card.json (A2A protocolVersion 1.0, JSONRPC binding at https://emem.dev/a2a/tasks); every core tool is a skill; detached JWS (EdDSA) over the RFC 8785 canonical card",
+  "url": "https://emem.dev/.well-known/agent-card.json",
+  "status": "PROTOCOL",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "LIVE: HTTP 200, 15,165 bytes; name emem, version 2.4.2, protocolVersion 1.0, preferredTransport JSONRPC, url https://emem.dev/a2a/tasks, 18 skills, capabilities.extendedAgentCard true, supportsAuthenticatedExtendedCard true, 8 additionalInterfaces (a2a message/send, async tasks, skill query, OpenAPI, action OpenAPI, well-known, agent-card-v1, MCP)",
+   "MEASURED: signatures[0].protected = {alg: EdDSA, jku: https://emem.dev/.well-known/jwks.json, kid: 777er3yi..., typ: JOSE}; verified with an independent RFC 8785 canonicalizer + Python cryptography Ed25519 against the JWKS key: VALID; the same card with name altered: REJECTED",
+   "MEASURED: JWKS kid == base32(JWK x) == card responder.pubkey_b32 == /.well-known/emem.json responder pubkey == first did:web:emem.dev Multikey (decoded)",
+   "SPEC: A2A spec (a2a-protocol.org/latest/specification, v1.0) requires RFC 8785 canonicalization with the signatures field excluded; emem's card follows it",
+   "MEASURED earlier (research/repro/data/v8/crossruntime_table.json, 2026-09-30T08:40Z, server 213e273): A2A message/send resolved the Keylong token 3/3, rehash_ok, card_sig_valid, card_tamper_rejected; card then listed 117 skills"
+  ],
+  "user_can": "Discover emem as an A2A agent, verify its card offline, send a task and verify the signed artifact",
+  "caveats": [
+   "message/send not re-run today (it creates a signed task artifact on the server).",
+   "Card signing as served is from commit ab5af22 ('Agent card signs what it serves'), after the pinned 18adb67.",
+   "Card integrity is self-consistency with emem.dev's own keys (cryptographic trust); it is not a third-party attestation of the operator (source trust)."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "A2A: signed agent card, https://emem.dev/.well-known/agent-card.json"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "LF Projects, LLC (Linux Foundation)",
+   "marks": "Model Context Protocol, MCP, A2A, Agent2Agent (all listed on the policy page)",
+   "guideline_urls": [
+    "https://lfprojects.org/policies/trademark-policy/"
+   ],
+   "fetched": "HTTP 200",
+   "monochrome": "NOT PERMITTED: 'A logo should not be displayed with color variations'",
+   "rules": [
+    "'Do not use a LF Projects logo on posters, brochures, signs, websites, or other marketing materials to promote your events, products or services without written permission from LF Projects.'",
+    "Word marks: 'You may make fair use of word marks to make true factual statements' without implying endorsement",
+    "Compatibility phrasing: 'Correct: <your product name> compatible with <LF Projects mark>'",
+    "Contact: trademarks@lfprojects.org"
+   ],
+   "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "rest-openapi",
+  "poster_group": "SDK/API",
+  "role": "protocol",
+  "platform": "REST / OpenAPI 3.1",
+  "mechanism": "POST/GET https://emem.dev/v1/*; spec at /openapi.json",
+  "url": "https://emem.dev/openapi.json",
+  "status": "PROTOCOL",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: HTTP 200, 375,360 bytes, openapi 3.1.0, info.version 2.4.2, 188 paths / 206 operations",
+   "MEASURED: GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa (Accept: application/cbor) -> 1,115 bytes; BLAKE3 of those bytes, base32 lowercase = the same CID (Keylong NDVI 0.4708994708994709, cell defi.zb572.xoso.zb1ec, tslot 20721, source Sentinel-2A L2A 2026-09-25 B08/B04)"
+  ],
+  "user_can": "Call emem from any HTTP client; fetch a fact by CID and re-hash it locally",
+  "caveats": [],
+  "print": {
+   "allowed": true,
+   "text": "REST: OpenAPI 3.1, https://emem.dev/openapi.json"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "official-mcp-registry",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "registry",
+  "platform": "Official MCP Registry (registry.modelcontextprotocol.io)",
+  "mechanism": "server.json published under namespace io.github.Vortx-AI/emem (GitHub-verified namespace)",
+  "url": "https://registry.modelcontextprotocol.io/v0.1/servers/io.github.Vortx-AI%2Femem/versions/latest",
+  "status": "REGISTRY",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: search API -> 16 versions of io.github.Vortx-AI/emem from 0.0.2 (publishedAt 2026-04-28T13:30:52Z) to 2.4.2 (publishedAt 2026-09-29T18:47:27Z, status active, isLatest true)",
+   "LIVE: versions/latest HTTP 200: remotes [{type: streamable-http, url: https://emem.dev/mcp}], packages [{registryType: oci, identifier: ghcr.io/vortx-ai/emem:latest}]"
+  ],
+  "user_can": "Clients and sub-registries that read the official registry discover emem by name",
+  "caveats": [
+   "A registry entry is metadata; it is not a host integration. No human-facing page per server; the API URL is the most specific public URL."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Official MCP Registry: io.github.Vortx-AI/emem"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "LF Projects, LLC (Linux Foundation)",
+   "marks": "Model Context Protocol, MCP, A2A, Agent2Agent (all listed on the policy page)",
+   "guideline_urls": [
+    "https://lfprojects.org/policies/trademark-policy/"
+   ],
+   "fetched": "HTTP 200",
+   "monochrome": "NOT PERMITTED: 'A logo should not be displayed with color variations'",
+   "rules": [
+    "'Do not use a LF Projects logo on posters, brochures, signs, websites, or other marketing materials to promote your events, products or services without written permission from LF Projects.'",
+    "Word marks: 'You may make fair use of word marks to make true factual statements' without implying endorsement",
+    "Compatibility phrasing: 'Correct: <your product name> compatible with <LF Projects mark>'",
+    "Contact: trademarks@lfprojects.org"
+   ],
+   "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "github-mcp-registry",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "registry",
+  "platform": "GitHub MCP Registry (github.com/mcp)",
+  "mechanism": "GitHub's registry mirroring official-registry entries; backs VS Code's @mcp gallery",
+  "url": "https://github.com/mcp/Vortx-AI/emem",
+  "status": "REGISTRY",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: https://api.mcp.github.com/v0.1/servers/io.github.Vortx-AI%2Femem/versions/latest -> HTTP 200, version 2.4.2, isLatest true, publishedAt 2026-09-29T18:47:27Z, publisher-provided github meta: nameWithOwner Vortx-AI/emem, license Apache License 2.0, stargazerCount 63",
+   "LIVE: search ?search=emem -> 2 results (io.github.Vortx-AI/emem 2.4.2, md.traveler/mcp)",
+   "UNVERIFIED: the HTML page github.com/mcp/Vortx-AI/emem was not reachable from this session (session proxy refuses non-bound github.com paths); URL taken from server-side docs (/.well-known/mcp.json registries[0])"
+  ],
+  "user_can": "Find emem in GitHub's registry and in VS Code's @mcp gallery",
+  "caveats": [
+   "Listing, not integration."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "GitHub MCP Registry: github.com/mcp/Vortx-AI/emem"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "GitHub, Inc.",
+   "marks": "Invertocat, GitHub wordmark",
+   "guideline_urls": [
+    "https://brand.github.com/foundations/logo"
+   ],
+   "fetched": "HTTP 200 (github.com/logos 301 -> here)",
+   "monochrome": "PERMITTED (required): 'should only appear in white, black, or in few cases grey or green'",
+   "rules": [
+    "'Use the Invertocat logo as a social button to link to your GitHub profile or project.'",
+    "'Do not modify the permitted GitHub logos, including changing the color, dimensions, or combining with other words or design elements.'",
+    "'Do not use the GitHub name or any GitHub logo in a way that suggests ... GitHub is endorsing you'"
+   ],
+   "poster_use": "Black Invertocat next to the repo URL is allowed as a link marker. Not for the MCP Registry tile as a GitHub endorsement."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "github-repo",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "source",
+  "platform": "GitHub repository Vortx-AI/emem",
+  "mechanism": "Apache-2.0 source, examples/, plugins/, sdks/, server.json",
+  "url": "https://github.com/Vortx-AI/emem",
+  "status": "LIVE",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE (GitHub MCP search_repositories): public, Apache-2.0, created 2026-04-24T20:31:22Z, pushed 2026-09-30T21:11:14Z, stargazers 63, forks 9, open issues 0, linguist language 'HTML'",
+   "MEASURED: git ls-remote origin main -> 8e9b401c (= live x-emem-commit); pinned origin/main 18adb67 is 7 commits behind; ecosystem files unchanged between them except integrations/chatgpt/tools.md"
+  ],
+  "user_can": "Read, clone, self-host, re-run the tests",
+  "caveats": [
+   "Stars and forks are vanity numbers (issue #45); print only with the timestamp or not at all.",
+   "GitHub reports primary language HTML (web/ is large); the server is Rust. Do not quote the linguist label."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Source: github.com/Vortx-AI/emem (Apache-2.0)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": {
+   "owner": "GitHub, Inc.",
+   "marks": "Invertocat, GitHub wordmark",
+   "guideline_urls": [
+    "https://brand.github.com/foundations/logo"
+   ],
+   "fetched": "HTTP 200 (github.com/logos 301 -> here)",
+   "monochrome": "PERMITTED (required): 'should only appear in white, black, or in few cases grey or green'",
+   "rules": [
+    "'Use the Invertocat logo as a social button to link to your GitHub profile or project.'",
+    "'Do not modify the permitted GitHub logos, including changing the color, dimensions, or combining with other words or design elements.'",
+    "'Do not use the GitHub name or any GitHub logo in a way that suggests ... GitHub is endorsing you'"
+   ],
+   "poster_use": "Black Invertocat next to the repo URL is allowed as a link marker. Not for the MCP Registry tile as a GitHub endorsement."
+  },
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "glama",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "directory",
+  "platform": "Glama MCP directory",
+  "mechanism": "Directory listing claimed via glama.json (maintainers vortx-jaya, avijeetsingh1); Glama scans and grades the server",
+  "url": "https://glama.ai/mcp/servers/Vortx-AI/emem",
+  "status": "REGISTRY",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: HTTP 200, title 'emem by Vortx-AI | Glama'; categories 'Knowledge & Memory', 'Location Services'; marked 'Remote'",
+   "LIVE: badge https://glama.ai/mcp/servers/Vortx-AI/emem/badges/score.svg -> title 'emem – MCP server rated A on Glama'",
+   "LIVE: page payload: scoredAt 2026-09-09T18:51:25Z, scoredToolCount 16, coherenceScore 3.8, descriptionQualityScore 4.5; the only version string in the payload is '2.4.0'",
+   "LIVE: Glama API /api/mcp/v1/servers/Vortx-AI/emem -> 401 (needs a key)"
+  ],
+  "user_can": "Find, inspect and try emem from Glama",
+  "caveats": [
+   "Grade is Glama's scan of 16 tools on 2026-09-09, before 2.4.2. A directory grade is not an integration."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Glama: listed (graded A, scan of 2026-09-09)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "smithery",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "directory",
+  "platform": "Smithery",
+  "mechanism": "Smithery listing with a Smithery-hosted gateway https://emem--vortxai.run.tools",
+  "url": "https://smithery.ai/servers/vortxai/emem",
+  "status": "REGISTRY",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: page HTTP 200, title 'emem - MCP | Smithery'",
+   "LIVE: https://registry.smithery.ai/servers/vortxai/emem -> remote true, deploymentUrl https://emem--vortxai.run.tools, 16 tools, prompts include 'shared_fact'",
+   "MEASURED: POST initialize to the gateway root -> 401 {error: invalid_token, 'Missing Authorization header'}"
+  ],
+  "user_can": "Connect through Smithery with a Smithery account",
+  "caveats": [
+   "The Smithery route needs a Smithery token; the direct emem.dev/mcp route needs none. Tool count cached at 16."
+  ],
+  "print": {
+   "allowed": false,
+   "text": "(optional; not in the brief's required set)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "huggingface-space",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "mirror",
+  "platform": "Hugging Face Space vortx-ai/emem",
+  "mechanism": "Docker Space running an emem responder",
+  "url": "https://huggingface.co/spaces/vortx-ai/emem",
+  "status": "REGISTRY",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "LIVE: page HTTP 200; API: sdk docker, runtime stage RUNNING, lastModified 2026-07-17T14:19:36Z, likes 1",
+   "MEASURED: POST initialize to https://vortx-ai-emem.hf.space/mcp -> serverInfo {name: emem, version: 1.1.0}, protocolVersion 2025-06-18; /.well-known/emem-manifest.json -> 404"
+  ],
+  "user_can": "Try an old emem build in a browser",
+  "caveats": [
+   "Stale mirror (1.1.0 vs 2.4.2). Do not print as equivalent to emem.dev."
+  ],
+  "print": {
+   "allowed": false,
+   "text": ""
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "context7",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "directory",
+  "platform": "Context7 (docs for coding agents)",
+  "mechanism": "Library /vortx-ai/emem (context7.json in repo)",
+  "url": "https://context7.com/vortx-ai/emem",
+  "status": "REGISTRY",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: HTTP 200, title 'emem (vortx-ai/emem) | Context7'"
+  ],
+  "user_can": "Coding agents can pull emem docs through Context7",
+  "caveats": [
+   "Listing only."
+  ],
+  "print": {
+   "allowed": false,
+   "text": ""
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "mulesoft-exchange",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "directory",
+  "platform": "MuleSoft Anypoint Exchange",
+  "mechanism": "Exchange asset 'Vortx AI MCP Server'",
+  "url": "https://anypoint.mulesoft.com/exchange/68e53915-e89b-4e82-b794-12d37982db4c/vortxAi-asset/",
+  "status": "REGISTRY",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: HTTP 200, title 'Vortx AI MCP Server'",
+   "SPEC: web/index.html surfaces 'Exchange: mcp 2.0.0, published 2026-08-13'"
+  ],
+  "user_can": "MuleSoft users find the server in Exchange",
+  "caveats": [
+   "Contents not inspected; version per emem's own site is 2.0.0."
+  ],
+  "print": {
+   "allowed": false,
+   "text": ""
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "awesome-mcp-servers",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "directory",
+  "platform": "punkpeye/awesome-mcp-servers",
+  "mechanism": "README list entry",
+  "url": "https://github.com/punkpeye/awesome-mcp-servers",
+  "status": "REGISTRY",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: raw README line 2961 '- [Vortx-AI/emem](https://github.com/Vortx-AI/emem) ... Signed geospatial facts with citable receipts ...'",
+   "SPEC: registry_claude.md: PR #6532 merged 2026-07-25"
+  ],
+  "user_can": "Discovery only",
+  "caveats": [
+   "A list entry."
+  ],
+  "print": {
+   "allowed": false,
+   "text": ""
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "python-sdk",
+  "poster_group": "SDK/API",
+  "role": "sdk",
+  "platform": "Python SDK ememdev (PyPI)",
+  "mechanism": "pip install ememdev; from ememdev import Client; ememdev.verify.verify_receipt_offline",
+  "url": "https://pypi.org/project/ememdev/",
+  "status": "LIVE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "LIVE: https://pypi.org/pypi/ememdev/json -> version 2.4.2, uploaded 2026-09-29T19:42:00Z, 14 releases, Apache-2.0, requires_python >=3.9",
+   "MEASURED: pip install ememdev==2.4.2 in a clean venv; ememdev.__version__ == '2.4.2'; Client exposes memory_token, memory_token_resolve, fact_by_cid, recall, ask and more",
+   "MEASURED earlier (crossruntime_table.json, 2026-09-30T08:40Z): SDK resolve + offline receipt verify 3/3 on both tokens"
+  ],
+  "user_can": "Resolve tokens, fetch facts and verify receipts offline from Python",
+  "caveats": [
+   "PyPI name 'emem' belongs to an unrelated project (Automatika Robotics, 0.3.0, MIT, 'Hybrid graph-based spatio-temporal memory system for embodied agents'). Print 'pip install ememdev', never 'pip install emem'."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Python: pip install ememdev"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "ts-sdk",
+  "poster_group": "SDK/API",
+  "role": "sdk",
+  "platform": "TypeScript SDK @vortxai/emem (npm)",
+  "mechanism": "npm i @vortxai/emem; import { Client } from '@vortxai/emem'",
+  "url": "https://www.npmjs.com/package/@vortxai/emem",
+  "status": "LIVE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "LIVE: https://registry.npmjs.org/@vortxai%2Femem -> dist-tags.latest 2.4.0, published 2026-09-09T07:45:11Z, 9 versions, Apache-2.0, maintainer avijeetsingh1608",
+   "MEASURED: npm install @vortxai/emem@latest; exports Client, EmemError, EmemHTTPError, VERSION ('2.4.0')",
+   "MEASURED earlier (crossruntime_table.json): TS SDK 2.4.0 resolve 3/3 rehash_ok"
+  ],
+  "user_can": "Use emem from Node, browsers and edge runtimes",
+  "caveats": [
+   "Publish lag: repo sdks/emem-ts is 2.4.2, npm latest is 2.4.0.",
+   "npm name 'emem' is an unrelated 2021 package."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "TypeScript: npm i @vortxai/emem"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "docker",
+  "poster_group": "SDK/API",
+  "role": "self-host",
+  "platform": "Docker image ghcr.io/vortx-ai/emem",
+  "mechanism": "docker run -p 5051:5051 ghcr.io/vortx-ai/emem:latest (whole responder; MCP at http://localhost:5051/mcp)",
+  "url": "https://github.com/Vortx-AI/emem/pkgs/container/emem",
+  "status": "LIVE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "MEASURED: anonymous pull token from ghcr.io; HEAD manifests :latest, :v2.4.2, :2.4.2 -> HTTP 200, OCI image index",
+   "MEASURED: :latest digest sha256:f8bbbb3c36c8...; :v2.4.2 digest sha256:e7100eb66f15...; platforms linux/amd64 + linux/arm64 (+2 attestation manifests)",
+   "MEASURED: :latest amd64 config created 2026-09-30T21:43:52Z; labels io.modelcontextprotocol.server.name=io.github.Vortx-AI/emem, org.opencontainers.image.licenses=Apache-2.0; exposes 443/tcp, 5051/tcp; 5 layers, 865.0 MB compressed",
+   "MEASURED: ghcr.io/vortx-ai/emem-encode:latest and emem-airgap:latest -> HTTP 200"
+  ],
+  "user_can": "Self-host a responder with its own key; receipts minted elsewhere verify locally",
+  "caveats": [
+   "Container not run here (no Docker daemon). 865 MB compressed amd64 image.",
+   "The /pkgs/container URL is the conventional GHCR package page; not fetched (session proxy)."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Self-host: docker run -p 5051:5051 ghcr.io/vortx-ai/emem:latest"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "emem-langmem",
+  "poster_group": "SDK/API",
+  "role": "sdk",
+  "platform": "emem-langmem (LangChain BaseStore for LangGraph)",
+  "mechanism": "pip install emem-langmem",
+  "url": "https://pypi.org/project/emem-langmem/",
+  "status": "LIVE",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: PyPI version 2.4.2, uploaded 2026-09-29T19:41:07Z, 9 releases, Apache-2.0",
+   "LIVE: langchain-ai/docs scripts/data/integration_external_docs.yaml (main) -> 0 matches for 'emem' (the docs row proposed in docs/registries/integration-targets.md is not filed or not merged)"
+  ],
+  "user_can": "Use emem as a LangGraph memory store",
+  "caveats": [
+   "Published package, not a LangChain-listed integration."
+  ],
+  "print": {
+   "allowed": false,
+   "text": "(fold into LangChain tile as 'store package on PyPI')"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "llama-index-tools-emem",
+  "poster_group": "SDK/API",
+  "role": "sdk",
+  "platform": "llama-index-tools-emem (LlamaIndex ToolSpec)",
+  "mechanism": "sdks/llama-index-tools-emem in the emem repo",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/sdks/llama-index-tools-emem",
+  "status": "EXPERIMENTAL",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: https://pypi.org/pypi/llama-index-tools-emem/json -> 404",
+   "LIVE: run-llama/llama_index main has no llama-index-integrations/tools/llama-index-tools-emem (404)",
+   "SPEC: its README says 'pip install llama-index-tools-emem' (would fail today)"
+  ],
+  "user_can": "Install from the repo path only",
+  "caveats": [
+   "Unpublished; README install line is wrong until it is published."
+  ],
+  "print": {
+   "allowed": false,
+   "text": ""
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "n8n",
+  "poster_group": "SDK/API",
+  "role": "sdk",
+  "platform": "n8n community node n8n-nodes-emem",
+  "mechanism": "integrations/n8n (TypeScript node)",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/integrations/n8n",
+  "status": "EXPERIMENTAL",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: https://registry.npmjs.org/n8n-nodes-emem -> 404",
+   "SPEC: integrations/n8n/package.json 0.1.0, license Apache-2.0; docs/registries/integration-targets.md says n8n verification needs MIT and Action-provenance publishing"
+  ],
+  "user_can": "Nothing without building it locally",
+  "caveats": [
+   "Not published."
+  ],
+  "print": {
+   "allowed": false,
+   "text": ""
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "langchain",
+  "poster_group": "FRAMEWORKS",
+  "role": "framework example",
+  "platform": "LangChain / LangGraph",
+  "mechanism": "langchain_mcp_adapters.MultiServerMCPClient (streamable_http) + create_react_agent",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/examples/langchain",
+  "status": "EXAMPLE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "Checked by running the example's own client class and config up to the tool list (no LLM, no tools/call) in a clean venv / node_modules.",
+   "MEASURED: example as written (async with MultiServerMCPClient(...)) FAILS on langchain-mcp-adapters 0.3.2: NotImplementedError 'As of langchain-mcp-adapters 0.1.0, MultiServerMCPClient cannot be used as a context manager'",
+   "MEASURED: current API (client = MultiServerMCPClient(...); await client.get_tools()) -> 18 tools",
+   "MEASURED earlier (crossruntime_table.json path 6b): langchain_mcp_adapters resolved both tokens 3/3 rehash_ok"
+  ],
+  "user_can": "Load emem tools into a LangGraph agent (with the one-line API fix)",
+  "caveats": [
+   "Example needs the fix before it is printed as working. Upstream LangChain docs do not list emem (row emem-langmem)."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "LangChain (MCP adapters)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "llamaindex",
+  "poster_group": "FRAMEWORKS",
+  "role": "framework example",
+  "platform": "LlamaIndex",
+  "mechanism": "llama_index.tools.mcp BasicMCPClient + McpToolSpec + FunctionAgent",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/examples/llamaindex",
+  "status": "EXAMPLE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "Checked by running the example's own client class and config up to the tool list (no LLM, no tools/call) in a clean venv / node_modules.",
+   "MEASURED: llama-index-tools-mcp 0.4.8 -> 18 tools",
+   "MEASURED earlier (path 6a): LlamaIndex FunctionTool resolve 3/3 rehash_ok (receipt not surfaced)"
+  ],
+  "user_can": "Give a LlamaIndex agent the emem tools",
+  "caveats": [
+   "Runs an OpenAI model; needs OPENAI_API_KEY."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "LlamaIndex (MCP tool spec)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "crewai",
+  "poster_group": "FRAMEWORKS",
+  "role": "framework example",
+  "platform": "CrewAI",
+  "mechanism": "crewai_tools.MCPServerAdapter({url, transport: streamable-http})",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/examples/crewai",
+  "status": "EXAMPLE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "Checked by running the example's own client class and config up to the tool list (no LLM, no tools/call) in a clean venv / node_modules.",
+   "MEASURED: crewai / crewai-tools 1.15.23 -> 18 tools; 'emem_eudr_dds' not among them",
+   "SPEC: the example's task tells the agent to 'Call emem_eudr_dds' (an extended-tier tool not listed at /mcp)",
+   "SPEC: registry_claude.md:66: crewAIInc/crewAI 'CLOSED (maintainer declined)'"
+  ],
+  "user_can": "Give a CrewAI agent the 18 core tools",
+  "caveats": [
+   "INFERRED: the agent cannot call emem_eudr_dds because MCPServerAdapter exposes only listed tools; point it at /mcp/full or change the task.",
+   "Not upstream."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "CrewAI (MCP adapter)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "autogen",
+  "poster_group": "FRAMEWORKS",
+  "role": "framework example",
+  "platform": "AutoGen (AgentChat)",
+  "mechanism": "autogen_ext.tools.mcp McpWorkbench(StreamableHttpServerParams)",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/examples/autogen",
+  "status": "EXAMPLE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "Checked by running the example's own client class and config up to the tool list (no LLM, no tools/call) in a clean venv / node_modules.",
+   "MEASURED: autogen-ext / autogen-agentchat 0.7.5 -> 18 tools"
+  ],
+  "user_can": "Give an AutoGen assistant the emem workbench",
+  "caveats": [],
+  "print": {
+   "allowed": true,
+   "text": "AutoGen (MCP workbench)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "mastra",
+  "poster_group": "FRAMEWORKS",
+  "role": "framework example",
+  "platform": "Mastra (TypeScript)",
+  "mechanism": "@mastra/mcp MCPClient({servers:{emem:{url}}})",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/examples/mastra",
+  "status": "EXAMPLE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "Checked by running the example's own client class and config up to the tool list (no LLM, no tools/call) in a clean venv / node_modules.",
+   "MEASURED: pinned range ^0.10.0 -> @mastra/mcp 0.10.12: getTools() -> 18 tools (names prefixed emem_emem_*); emem_hunt not among them",
+   "MEASURED: latest @mastra/mcp 2.1.1: 'mcp.getTools is not a function'; listTools() -> 18 tools",
+   "SPEC: the example prompt says 'Call emem_hunt' (extended tier); registry_claude.md:67: mastra-ai/mastra 'CLOSED (maintainer declined)'",
+   "SPEC: examples/mastra/README.md:10 says 'npm install @mastra/core @mastra/mcp @ai-sdk/openai' (unpinned, resolves to 2.1.1, where getTools() does not exist); README:13 says npm install in the directory uses package.json (^0.10.0, works)"
+  ],
+  "user_can": "Give a Mastra agent the 18 core tools (on the pinned 0.10 line)",
+  "caveats": [
+   "Works only via the included package.json (old 0.10 line); the README's unpinned command installs a version where the example's API call does not exist. Asks for a tool the listed tier does not contain."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Mastra (MCP client)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "agno",
+  "poster_group": "FRAMEWORKS",
+  "role": "framework example",
+  "platform": "Agno",
+  "mechanism": "agno.tools.mcp MCPTools(url, transport='streamable-http')",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/examples/agno",
+  "status": "EXAMPLE",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "Checked by running the example's own client class and config up to the tool list (no LLM, no tools/call) in a clean venv / node_modules.",
+   "MEASURED: agno 3.0.11 + fastmcp 4.0.10 + mcp 2.2.0 -> 18 tools",
+   "MEASURED: with agno + mcp but without fastmcp, MCPTools raises ImportError asking for 'fastmcp>=4.0.0,<5'",
+   "SPEC: examples/agno/README.md:10 installs only 'pip install agno openai' (no mcp, no fastmcp)"
+  ],
+  "user_can": "Give an Agno agent the emem tools",
+  "caveats": [
+   "Following the README install line fails at import; add fastmcp (and mcp) to the README."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Agno (MCP tools)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "semantic-kernel",
+  "poster_group": "FRAMEWORKS",
+  "role": "framework example",
+  "platform": "Semantic Kernel (Python)",
+  "mechanism": "semantic_kernel.connectors.mcp MCPStreamableHttpPlugin",
+  "url": "https://github.com/Vortx-AI/emem/tree/main/examples/semantic-kernel",
+  "status": "EXPERIMENTAL",
+  "evidence_level": "MEASURED",
+  "evidence": [
+   "Checked by running the example's own client class and config up to the tool list (no LLM, no tools/call) in a clean venv / node_modules.",
+   "MEASURED: semantic-kernel 1.44.1 + mcp 1.30.0 (clean venv): plugin load FAILS: pydantic ValidationError on KernelParameterMetadata.type, input ['string', 'number']",
+   "MEASURED: the only union-typed parameter among the 18 core tools is emem_echo_verify.claimed_value, type ['string','number'] (valid JSON Schema; SK 1.44.1 cannot map it)"
+  ],
+  "user_can": "Nothing as written; works only if the union type is removed on one side",
+  "caveats": [
+   "An interop defect found by this check: one JSON-Schema construct in one tool blocks the whole plugin in SK."
+  ],
+  "print": {
+   "allowed": false,
+   "text": "(do not print until fixed)"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "emem-integration-hub",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "landing page",
+  "platform": "emem.dev integration landing",
+  "mechanism": "Homepage section id='use' driven by the 'surfaces' JSON (web/index.html:1009)",
+  "url": "https://emem.dev/#use",
+  "status": "LIVE",
+  "evidence_level": "LIVE",
+  "evidence": [
+   "LIVE: https://emem.dev/ HTTP 200, contains id='use' and id='surfaces', 2 links to the ChatGPT URL",
+   "LIVE: https://emem.dev/integrations -> 200 text/markdown (raw markdown on a phone); https://emem.dev/docs/integrations.html -> 200 HTML 'Integrations - emem docs' but mentions ChatGPT 0 times and A2A 0 times"
+  ],
+  "user_can": "One page listing every route with copy buttons",
+  "caveats": [
+   "Not mobile-tested here. The homepage surfaces JSON carries stale labels ('pypi 2.4.0'; Gemini links to the example file). A poster-specific landing page built from this manifest would be ROADMAP."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "QR: DISCOVER INTEGRATIONS -> emem.dev/#use"
+  },
+  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "brand": null,
+  "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ }
+]
