@@ -202,6 +202,19 @@ for m in CLAUDE:
         if b and b["acted_after_refusal"]:
             ids = sorted({r["item"] for r in live if r["model"] == m and r["cond"] == c and (r.get("refusals_seen") or 0) > 0 and r["actionable"]})
             adv.append(f"{SHORT[m]} in {c} acted after the verifier or gate had returned a failure in {b['acted_after_refusal']} of {b['refusal_seen']} such trials (items {', '.join(ids)}).")
+# mis-bound verification (verified against the handoff's cell/date, not the question's) that led to an action
+for m in CLAUDE:
+    for c in ("E0", "E"):
+        mb = [r for r in live if r["model"] == m and r["cond"] == c and (r.get("verify_calls") or 0) > 0 and (r.get("verify_bound_ok") or 0) == 0]
+        if mb:
+            acted = [r for r in mb if r["actionable"]]
+            adv.append(f"{SHORT[m]} in {c} called verify_evidence with the handoff's cell or date instead of its own question's in {len(mb)} trials "
+                       f"(items {', '.join(sorted({r['item'] for r in mb}))}); in {len(acted)} of them it then acted"
+                       + (f" (false acceptance on {', '.join(sorted({r['item'] for r in acted if r['fa']}))})" if any(r['fa'] for r in acted) else "") + ".")
+# every false acceptance in a token condition, named
+fae = [r for r in live if r["cond"] in ("E0", "E", "E+") and r["fa"] and r["item"] != "M22"]
+if fae:
+    adv.append("False acceptances in the token conditions on primary items: " + "; ".join(f"{r['trial_id']} (VALUE={r['value_str']})" for r in fae) + ".")
 # control false refusals
 for m in CLAUDE:
     for c in CONDS:
