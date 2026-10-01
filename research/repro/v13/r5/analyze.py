@@ -155,7 +155,8 @@ def main():
                 continue
             v = [r for r in rr if (r.get("verify_calls") or 0) > 0]
             beh[m][c] = {"n": len(rr), "verify_called": len(v), "verify_called_rate": round(len(v) / len(rr), 4),
-                         "verify_bound_to_question": sum(1 for r in v if (r.get("verify_bound_ok") or 0) > 0),
+                         "verify_bound_to_question": (sum(1 for r in v if (r.get("verify_bound_ok") or 0) > 0)
+                                                      if c != "E+" else "n/a (harness binds the question)"),
                          "tool_called_any": sum(1 for r in rr if (r.get("n_tool_calls") or 0) > 0),
                          "refusal_seen": sum(1 for r in rr if (r.get("refusals_seen") or 0) > 0),
                          "acted_after_refusal": sum(1 for r in rr if (r.get("refusals_seen") or 0) > 0 and r["actionable"])}

@@ -1,0 +1,1 @@
+{"t": 1790836192.642242, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb493.xuqA.zcb5f:jzxzmvomshs6di3bkgponk6p3rgfk5nyvklekj6caegx6dwcuo5q"}, "is_error": true, "ms": 0.759, "meta": {"verdict": false, "first_fail": "asof"}, "text": "refused: asof check failed: signed 2026-09-28T09:05:19Z is after the as-of time 2026-06-15T23:59:59Z"}
