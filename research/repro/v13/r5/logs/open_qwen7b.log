@@ -26,3 +26,6 @@ B1-qwen2.5-7b-instruct-q4_k_m-G0-E-r1-1       DECLINE      fa=None calls=1 123.9
 B1-qwen2.5-7b-instruct-q4_k_m-M23-A-r1-1      IRRIGATE     fa=True calls=0 26.0s
 B1-qwen2.5-7b-instruct-q4_k_m-M5b-E-r1-1      DECLINE      fa=False calls=1 174.7s
 B1-qwen2.5-7b-instruct-q4_k_m-M15-E-r1-1      DECLINE      fa=False calls=1 111.7s
+B1-qwen2.5-7b-instruct-q4_k_m-M14-E+-r1-1     IRRIGATE     fa=True calls=1 108.9s
+B1-qwen2.5-7b-instruct-q4_k_m-M23-E+-r1-1     DECLINE      fa=False calls=1 73.7s
+B1-qwen2.5-7b-instruct-q4_k_m-M20-B-r1-1      INCONSISTENT fa=True calls=0 59.1s

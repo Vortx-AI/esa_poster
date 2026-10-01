@@ -1,0 +1,1 @@
+{"t": 1790834809.8931832, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:f6dtx3eyxjwworg5lmplu3a2jkkrsuexksue6sqixrncjfgozifq"}, "is_error": true, "ms": 1.387, "meta": {"verdict": false, "first_fail": "signature"}, "text": "refused: signature check failed: attester is not the pinned key"}
