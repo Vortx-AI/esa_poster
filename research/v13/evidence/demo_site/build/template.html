@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src https://emem.dev https://planetarycomputer.microsoft.com https://sentinel2l2a01.blob.core.windows.net; base-uri 'none'; form-action 'none'">
+<title>EMEM receiver demo</title>
+<meta name="description" content="Agent B checks one Sentinel-2 observation handed over by Agent A: a paraphrase is accepted unchecked, three corruptions are refused, the genuine record is accepted, and the source pixel is re-read.">
+<style>
+:root{--ink:#16181b;--ink2:#3b3f45;--mute:#6b6f76;--rule:#d9d8d2;--paper:#faf9f6;--card:#ffffff;
+ --blue:#0F5FA8;--blue-bg:#e6eef7;--red:#D2481E;--red-bg:#fbe9e3;--amber:#E8A317;--amber-bg:#fdf3dc;--grey:#9C9A92;--a:#7A5230;--b:#3D5566;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--ink:#ecebe6;--ink2:#c9c8c2;--mute:#9a9a94;--rule:#34363a;--paper:#121315;--card:#1b1d20;
+ --blue:#5b9be0;--blue-bg:#16263a;--red:#ef7a52;--red-bg:#3a1d14;--amber:#f0b73d;--amber-bg:#3a2e12}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--sans)}
+main{max-width:720px;margin:0 auto;padding:16px 16px 48px}
+.eyebrow{font:600 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+h1{font-size:30px;line-height:1.12;margin:4px 0 10px;letter-spacing:-.01em}
+h2{font-size:19px;margin:28px 0 8px}
+h3{font-size:16px;margin:0;line-height:1.3}
+p{margin:0 0 10px}.lead{color:var(--ink2)}
+code,pre{font-family:var(--mono);font-size:12.5px;overflow-wrap:anywhere;word-break:break-word}
+.obs{display:grid;grid-template-columns:132px 1fr;gap:12px;align-items:start;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:10px;margin:12px 0}
+.obs figure{margin:0;position:relative;width:132px;height:132px}
+.obs img{width:132px;height:132px;display:block;border-radius:6px;image-rendering:pixelated}
+.obs figure::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 1.5px #000}
+.obs .v{font:700 28px/1 var(--mono);color:var(--ink)}
+.obs .k{font-size:13px;color:var(--mute)}
+.hand{border-left:4px solid var(--a);padding:6px 0 6px 10px;margin:10px 0}
+.hand b{color:var(--a)}
+#board{list-style:none;padding:0;margin:14px 0 4px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pill{border:1.5px solid var(--rule);border-radius:8px;padding:6px 8px;font:12px/1.25 var(--mono);background:var(--card)}
+.pill b{display:block;font-size:13px}
+.pill.no{border-color:var(--red);background:var(--red-bg)}.pill.no span{color:var(--red);font-weight:700}
+.pill.ok{border-color:var(--blue);background:var(--blue-bg)}.pill.ok span{color:var(--blue);font-weight:700}
+.pill.warn{border-color:var(--amber);background:var(--amber-bg)}.pill.warn span{color:#8a5d00;font-weight:700}
+@media (prefers-color-scheme:dark){.pill.warn span{color:var(--amber)}}
+#live{min-height:1.5em;font:13px/1.4 var(--mono);color:var(--mute);margin:4px 0 0}
+.card{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--grey);border-radius:10px;padding:12px;margin:10px 0;transition:opacity .3s}
+.card.wait{opacity:.45}.card.no{border-left-color:var(--red)}.card.ok{border-left-color:var(--blue)}.card.warn{border-left-color:var(--amber)}
+.card header{display:flex;gap:8px;align-items:baseline}
+.tag{font:700 12px/1 var(--mono);padding:3px 6px;border-radius:4px;background:var(--b);color:#fff;flex:none}
+.sub{font-size:13px;color:var(--mute);margin:4px 0 6px}
+.got{font-size:13px;margin:0 0 6px}.got .k{color:var(--b);font-weight:600}
+.steps{list-style:none;padding:0;margin:6px 0;display:grid;gap:4px;font-size:13.5px}
+.steps li{display:grid;grid-template-columns:16px 26px 1fr;gap:4px;align-items:baseline}
+.steps i{font-style:normal;font-weight:700}.steps .ly{font:600 11px/1 var(--mono);color:var(--mute)}
+.steps .ok i{color:var(--blue)}.steps .no i,.steps .no span:last-child{color:var(--red)}.steps .na i{color:var(--mute)}
+.verdict{font-weight:700;margin:8px 0 0;font-size:14.5px}.verdict.no{color:var(--red)}.verdict.ok{color:var(--blue)}.verdict.warn{color:#8a5d00}
+@media (prefers-color-scheme:dark){.verdict.warn{color:var(--amber)}}
+#grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;max-width:330px;margin:10px 0}
+.px{aspect-ratio:1;border-radius:4px;display:grid;place-items:center;font:11px/1 var(--mono);color:#fff;
+ background:color-mix(in oklab,#7b5a2c calc((1 - var(--t))*100%),#1f7a3a calc(var(--t)*100%))}
+.px.named{outline:3px solid var(--blue);outline-offset:-3px;font-weight:700}
+.px.south{outline:3px dashed var(--red);outline-offset:-3px}
+.legend{font-size:13px;color:var(--mute)}
+.wait{opacity:.45}
+.bnd{display:grid;gap:6px;margin:8px 0}
+.bnd div{border:1px dashed var(--grey);border-radius:8px;padding:8px 10px;font-size:14px;background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(156,154,146,.12) 6px 12px)}
+.bnd b{font-family:var(--mono);font-size:12px;margin-right:6px}
+details{margin:8px 0;font-size:14px}summary{cursor:pointer;color:var(--ink2)}
+pre{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:8px;max-height:260px;overflow:auto;white-space:pre-wrap}
+footer{margin-top:28px;border-top:1px solid var(--rule);padding-top:12px;font-size:13.5px;color:var(--ink2)}
+footer a{color:var(--blue)}footer li{margin:4px 0}
+#done{font:12px var(--mono);color:var(--mute)}
+@media (min-width:640px){h1{font-size:38px}#board{grid-template-columns:repeat(6,1fr)}}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">EMEM · receiver demo · Agentic AI for EO, Berlin, 19 Oct 2026</p>
+<h1>Change one field. The receiver refuses.</h1>
+<p class="lead">This page is <b>Agent B</b>. Agent A hands it evidence about one 10 m cell near Keylong, India. The page trusts nothing it is handed. It re-hashes the record, checks the signature and the public log, recomputes the value, and re-reads the source pixel. It uses BLAKE3, Ed25519 and CBOR, and no emem code.</p>
+
+<div class="obs" aria-label="the observation">
+ <figure><img alt="Sentinel-2 true colour, 1.92 km across, centred on the cell; the ring is centred on the 10 m cell and is about 200 m wide" src="{{IMG}}"></figure>
+ <div><div class="k">NDVI of the 10 m cell at the ring's centre</div><div class="v" id="val">0.4709</div>
+ <div class="k">Sentinel-2A L2A, B08 and B04<br><span id="obs"></span><br>cell <code>defi.zb572.xoso.zb1ec</code></div></div>
+</div>
+<div class="hand"><b>Agent A hands over</b> one reference, not a sentence:<br><code id="tok"></code><br><span class="legend">It names <span id="nbytes"></span> bytes of CBOR by their BLAKE3-256 hash.</span></div>
+
+<ul id="board" aria-label="verdicts"></ul>
+<p id="live" role="status" aria-live="polite">loading</p>
+
+<h2>Five handoffs, one receiver</h2>
+<div id="cards"></div>
+<p class="legend" id="archive"></p>
+
+<h2>L3 · Re-read the named pixel</h2>
+<section id="l3" class="card wait">
+ <p class="sub">The record names its source files and its pixel. The browser fetches the two 512 × 512 tiles from Planetary Computer and decodes them itself.</p>
+ <ol class="steps" id="l3steps"><li class="na"><i>·</i><span class="ly">L3</span><span>waiting</span></li></ol>
+ <div id="grid" aria-label="NDVI of the 5 by 5 pixels around the cell"></div>
+ <p class="legend"><span id="gridfrom"></span>. Solid blue: the pixel the record names. Dashed red: the pixel 10 m south, NDVI <b id="south">0.3016</b>.</p>
+ <p class="verdict" id="l3verdict"></p>
+ <p><b>The right record, the wrong pixel.</b> Before 28 Sep 2026 emem's reader rounded the pixel index; for this cell that is the dashed pixel. In a sample of 200 earlier records, 162 carried the rounded pixel's values: signed faithfully, and wrong. Every check above accepts such a record. Only this re-read catches it.</p>
+</section>
+
+<h2>What no check here can tell you</h2>
+<div class="bnd wait" id="bnd">
+ <div><b>L4</b>Whether this cell is the field Agent A meant. Out of scope.</div>
+ <div><b>L5</b>Whether the sensor was right, and whether a decision taken on 0.4709 is right. Inherited from product validation, or out of scope.</div>
+</div>
+<p>A signature fixes the bytes. It does not make the measurement true.</p>
+<p id="done"></p>
+
+<details><summary>Exact input: the 1,115 record bytes (hex)</summary><pre id="rawhex"></pre></details>
+<details><summary>The record, decoded</summary><pre id="rawjson"></pre></details>
+
+<footer>
+<ul>
+<li>Text version of this run: <a href="./transcript.txt">transcript.txt</a></li>
+<li>Try any token on emem.dev: <a href="https://emem.dev/verify?q={{TOKEN_Q}}">emem.dev/verify</a></li>
+<li>Re-run the 16-mutation test: <a href="https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v11">research/repro/v11</a></li>
+<li>Embedded data: proof bundle {{BUNDLE_LEN}} B, sha256 <code>{{BUNDLE_SHA}}</code> (<code>research/repro/v8/proof_bundle_ndvi.cbor</code>); image from the committed grids <code>keylong_B0{2,3,4}.bin</code>.</li>
+<li>Pinned key <code>777er3yi…</code> (emem.dev, published in DNS, did.json and jwks.json). Crypto: @noble/hashes 1.5.0, @noble/curves 1.6.0. Live calls: GET emem.dev/v1/facts, the Planetary Computer token API and two byte-range reads. Nothing is written or signed.</li>
+</ul>
+<p>Jaya Kumari, Avijeet Singh · Vortx AI · emem is Apache-2.0: <a href="https://github.com/Vortx-AI/emem">github.com/Vortx-AI/emem</a></p>
+</footer>
+<noscript><p>This page needs JavaScript to run the checks. The same run as text: <a href="./transcript.txt">transcript.txt</a>.</p></noscript>
+</main>
+<script>window.__DEMO__={{DATA}};</script>
+<script>{{BUNDLE_JS}}</script>
+</body>
+</html>

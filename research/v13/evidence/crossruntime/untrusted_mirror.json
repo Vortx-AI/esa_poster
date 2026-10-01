@@ -1,0 +1,1 @@
+{"honest_mirror": {"bytes": 1115, "rehash_cid": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa", "rehash_ok": true, "value": 0.4708994708994709, "receipt_sig_ok": true}, "tampered_mirror": {"bytes": 1115, "rehash_cid": "j47f4xb3ht32txk4uzl5bljby3nttnz36ytgrje3n3cxa6lcezrq", "rehash_ok": false, "value": 0.5708994708994709, "receipt_sig_ok": true}}

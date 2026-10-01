@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Documentation</title>
+  <link rel="alternate" type="application/rss+xml" title="News RSS" href="/feed/news">
+  <link rel="alternate" type="application/rss+xml" title="Global changelog RSS" href="/feed/changelog">
+  <link type="image/x-icon" rel="icon" href="/images/met_favicon.png">
+  <link type="image/x-icon" rel="shortcut icon" href="/images/met_favicon.ico">
+
+  <!-- bootstrap 5 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="/css/mdb.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+
+</head>
+<body>
+  <header>
+    <!-- Intro settings -->
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-met-pri fixed-top">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" target="_blank" href="https://met.no/">
+          <img src="/img/met_logo_icon_neg.png" height="24" alt="MET logo" loading="lazy"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://docs.api.met.no/doc/">Documentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/weatherapi/">API Reference</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/FAQ">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/License">License</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/TermsOfService">Terms of Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/doc/support">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <a class="icon" href="/weatherapi/healthz"><img src='/weatherapi/healthz?icon' height='15px' alt="Healthz status" ></a>
+        <a class="icon" href="/feed/changelog"><img src="/images/16px-Rss-feed.svg.png" alt="Changelog RSS" /></a>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div id="intro" class="p-4 text-center bg-met-light">
+      <h1 class="mb-1">Documentation</h1>
+    </div>
+    <!-- Jumbotron -->
+
+    <!--alert-->
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </svg>
+          Are you getting 403 Forbidden errors? Read the <a href="/doc/FAQ">FAQ</a> and check your User-Agent header!
+
+        </div>
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Section: Content-->
+      
+<style type="text/css">
+    li.nobullet { list-style-type:none; margin-left: -12px }
+</style>
+
+
+<div class="row">
+  <div class="col-md">
+    <div class="card px-3 py-3 documentation">
+
+
+
+
+      <h1>Licensing and Data Policy</h1>
+
+
+      <p>Unless specified otherwise, all data and products are licensed under the
+<a href="https://data.norge.no/nlod/en/2.0/">Norwegian Licence for Open Government Data (NLOD) 2.0</a>
+and <a href="http://creativecommons.org/licenses/by/4.0">Creative Commons 4.0 BY International</a> licences.</p>
+
+<p>Credit should be given to The Norwegian Meteorological Institute, shortened <em>MET
+Norway</em>, as the source of data. Some suggestions: «Data from MET Norway», «Based
+on data from MET Norway». A link to the source where the data can be downloaded
+would also be appreciated.</p>
+
+<p>For full details, please see our <a href="https://www.met.no/en/free-meteorological-data/Licensing-and-crediting">Licensing and Crediting Policy</a>.</p>
+
+<h2 id="weathericons">Weather icons</h2>
+
+<p>The weather icons are licensed under the MIT License (MIT). Copyright (c) 2015-2017 Yr.no.</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+<h2 id="photoillustrations">Photo illustrations</h2>
+
+<ul>
+<li>News: Lewis Hine, New Haven, CN 1909 (public domain)</li>
+<li>Weather: © <a href="http://www.vascoplanet.com/">Vyacheslav Argenberg</a>  (CC BY 4.0)</li>
+<li>Marine: © <a href="https://www.flickr.com/photos/defenceimages/">Defence Imagery</a> (CC BY-SA 2.0)</li>
+<li>Aviation: © <a href="https://www.flickr.com/photos/airlines470/">Eric Salard</a> (CC BY-SA 2.0)</li>
+<li>Images: © EUMETSAT/MET</li>
+<li>Military: © PAO FOH/Forsvaret</li>
+<li>Observations: © Ketil Isaksen/MET</li>
+<li>Other: © NRK</li>
+<li>Changelog: © <a href="https://www.flickr.com/photos/birotography/">Jason Biro</a> (CC BY 2.0)</li>
+</ul>
+
+      <address>2020-05-29, Geir Aalberg</address>
+
+
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <footer class="text-lg-start met-footer">
+    <div id="copyright" class="text-center p-3">
+      © 2022 Copyright:
+      <a class="text-light" href="https://met.no/">MET Norway</a>
+    </div>
+  </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

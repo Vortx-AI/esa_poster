@@ -1,0 +1,57 @@
+== FOGRA39 (Adobe CoatedFOGRA39.icc) round trip, relative colorimetric; dE00 sRGB vs round trip ==
+role                                     hex      CMYK %             back     dE00  contrast-on-white
+ink                                      #16181D  (92, 80, 60, 96)   #1D1D1E   3.28 17.76
+ink2 (secondary text)                    #4A4D55  (69, 59, 47, 46)   #4B4D55   0.58  8.45
+muted (labels)                           #7A7D85  (53, 42, 36, 20)   #7B7D85   0.55  4.12
+rule                                     #D5D6DA  (19, 14, 13, 0)    #D7D6DA   1.02  1.45
+EMEM evidence / refused-at-check         #0F5FA8  (95, 63, 2, 0)     #1A5FA7   0.61  6.52
+EMEM tint (fills)                        #DCE8F5  (16, 6, 2, 0)      #DDE8F4   0.46  1.24
+harm: acted on corrupted evidence        #D2481E  (11, 85, 100, 3)   #D24827   1.87  4.48
+harm tint                                #FADDD2  (1, 18, 17, 0)     #FADCD1   0.39  1.29
+real incident (seen in production)       #E8A317  (7, 40, 100, 1)    #E9A316   0.24  2.17
+out of scope / not established           #9C9A92  (39, 32, 38, 13)   #9E9A92   1.10  2.82
+agent A (sender)                         #7C4D9E  (64, 80, 0, 0)     #7C4E98   1.40  6.15
+agent B (receiver)                       #1E8A72  (84, 23, 64, 7)    #1C8A71   0.35  4.26
+v12 acc #1F4FD8                          #1F4FD8  (90, 71, 0, 0)     #3856A1   7.49  6.63
+v12 bad #B3261E                          #B3261E  (20, 100, 100, 13) #B42827   2.18  6.54
+v12 amb #A86B00                          #A86B00  (25, 57, 100, 21)  #A86C26   3.96  4.40
+Okabe-Ito blue                           #0072B2  (90, 49, 6, 0)     #1272B2   0.64  5.19
+Okabe-Ito vermillion                     #D55E00  (11, 73, 100, 3)   #D66025   4.05  3.87
+Okabe-Ito orange                         #E69F00  (8, 42, 100, 1)    #E79F17   1.09  2.25
+Okabe-Ito bluish green                   #009E73  (82, 9, 69, 0)     #0E9E72   0.42  3.42
+Okabe-Ito reddish purple                 #CC79A7  (20, 65, 8, 0)     #CD78A6   0.39  3.06
+IBM blue 60                              #0F62FE  (87, 63, 0, 0)     #3A62AA   9.59  5.00
+
+== pairwise dE00 between semantic colours, normal and simulated CVD (Machado 2009, severity 100) ==
+EMEM evidence / refused-at-c vs harm: acted on corrupted evi norma  47.2 prota  48.7 deute  56.8 trita  64.1
+EMEM evidence / refused-at-c vs real incident (seen in produ norma  60.3 prota  60.2 deute  67.2 trita  60.3
+EMEM evidence / refused-at-c vs out of scope / not establish norma  37.2 prota  33.8 deute  38.8 trita  30.6
+EMEM evidence / refused-at-c vs agent A (sender)             norma  23.0 prota   2.2 deute   5.5 trita  41.1
+EMEM evidence / refused-at-c vs agent B (receiver)           norma  35.3 prota  33.4 deute  27.9 trita  12.5
+EMEM evidence / refused-at-c vs ink                          norma  30.2 prota  31.6 deute  29.2 trita  30.8
+harm: acted on corrupted evi vs real incident (seen in produ norma  31.6 prota  25.8 deute  17.0 trita  20.9
+harm: acted on corrupted evi vs out of scope / not establish norma  30.8 prota  27.9 deute  23.2 trita  30.3
+harm: acted on corrupted evi vs agent A (sender)             norma  40.1 prota  47.9 deute  51.1 trita  26.4
+harm: acted on corrupted evi vs agent B (receiver)           norma  55.2 prota  19.3 deute  24.0 trita  61.8
+harm: acted on corrupted evi vs ink                          norma  44.1 prota  36.0 deute  46.6 trita  41.6
+real incident (seen in produ vs out of scope / not establish norma  26.5 prota  25.0 deute  26.0 trita  23.3
+real incident (seen in produ vs agent A (sender)             norma  62.3 prota  60.4 deute  60.4 trita  33.0
+real incident (seen in produ vs agent B (receiver)           norma  43.5 prota  25.3 deute  33.6 trita  54.7
+real incident (seen in produ vs ink                          norma  64.2 prota  60.2 deute  67.1 trita  59.9
+out of scope / not establish vs agent A (sender)             norma  37.4 prota  34.8 deute  33.0 trita  25.2
+out of scope / not establish vs agent B (receiver)           norma  24.9 prota   9.3 deute  13.0 trita  28.2
+out of scope / not establish vs ink                          norma  46.7 prota  46.4 deute  46.9 trita  46.3
+agent A (sender)             vs agent B (receiver)           norma  41.3 prota  33.5 deute  23.2 trita  44.1
+agent A (sender)             vs ink                          norma  31.3 prota  29.7 deute  29.8 trita  30.8
+agent B (receiver)           vs ink                          norma  41.2 prota  37.4 deute  32.3 trita  39.7
+
+worst pair under normal: 23.0  ('EMEM evidence / refused-at-check', 'agent A (sender)')
+worst pair under protanomaly: 2.2  ('EMEM evidence / refused-at-check', 'agent A (sender)')
+worst pair under deuteranomaly: 5.5  ('EMEM evidence / refused-at-check', 'agent A (sender)')
+worst pair under tritanomaly: 12.5  ('EMEM evidence / refused-at-check', 'agent B (receiver)')
+
+== the v12 pair and the proposed pair under CVD (refused vs acted-on) ==
+v12 #1F4FD8 vs #B3261E norma  43.9 prota  52.2 deute  60.0 trita  59.1
+v13 #0F5FA8 vs #D2481E norma  47.2 prota  48.7 deute  56.8 trita  64.1
+Okabe-Ito #0072B2 vs #D55E00 norma  49.6 prota  50.0 deute  56.6 trita  65.7
+red vs green #B3261E vs #1E8A72 norma  58.7 prota  23.1 deute  21.9 trita  60.4

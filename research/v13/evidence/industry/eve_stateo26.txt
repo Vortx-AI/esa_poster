@@ -1,0 +1,53 @@
+1
+--- 0
+Enabling Agentic capabilities in Earth Observation using EVE – applications in the EO Dashboard and drought monitoring
+StatEO, 2026
+1
+Riccardo D’Ercole
+*
+, 
+1
+Eva Gmelich Meijling
+*
+ , 
+3
+Kaushik Pillalamarri
+*
+, 
+2
+Anca Anghelea, 
+1
+Chiara Maria Cocchiara, 
+1
+Nicolas 
+Longépé
+1
+European
+ Space Agency Φ
+-
+lab, Frascati, 
+Italy
+; 
+2
+European
+ Space Agency, Frascati, 
+Italy
+; 
+3
+North Carolina State University, North Carolina, United States
+This work investigates how agentic AI can build a 
+connected EO ecosystem, using EVE (Earth Virtual 
+Expert), a domain-specialized LLM funded by ESA's 
+Φ-lab, to autonomously interact with EO tools, APIs, and 
+databases via the Model Context Protocol, enabling 
+dynamic reasoning and cross-source information retrieval.
+MCP Servers
+So, What’s Next?
+Multi-Agent Framework
+[1] Atrio, À. R., Lopez, A., Rohit, J., Ouahidi, Y. E., Politi, M., Iyer, V., Jamil, U., Bratières, S., and Longépé, N.: EVE: A Domain-Specific LLM Framework for Earth Intelligence, arXiv preprint arXiv:2604.13071, 2026.
+[2] https://github.com/kuzhang/mcp-gee-satellite-download
+[3] https://github.com/blazickjp/arxiv-mcp-server
+[4] https://github.com/mahdin75/gis-mcp
+[5] Krechetova, V. and Kochedykov, D.: GeoBenchX: Benchmarking LLMs in agent solving multistep geospatial tasks, in: Proceedings of the 1st ACM SIGSPATIAL International Workshop on Generative and Agentic AI for Multi-Modality Space-Time Intelligence, pp. 27–35, 2025.
+From Q&A to Agentic EO
+Benchmarking Against Other

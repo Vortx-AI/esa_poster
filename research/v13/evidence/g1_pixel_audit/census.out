@@ -1,0 +1,75 @@
+recall(no band filter): 77 facts; bands attested: ['copdem30m.elevation_mean', 'geotessera', 'indices.nbr', 'indices.ndvi', 'indices.ndwi', 'nightlights.dmsp_ols_avg_dn', 'prithvi_eo2', 's2.B04', 's2.scl', 'sentinel1_raw', 'surface_water.recurrence', 'weather.temperature_2m']
+recall(indices.ndvi): 30 facts
+ezs2hn7p indices.nbr   20721 2026-09-25 PC  signed 2026-09-30T10:01:53Z pre=0 dns=[3502.0, 2430.0] floor=[3502, 2430] round=[2720, 2388] -> matches-floor  scl s/f/r=4/4/5 cid_ok=True reader=cog-pixel-floor@2
+2dpnuf4e indices.ndvi  19019 2022-01-27 E84 signed 2026-07-16T05:40:19Z pre=1 dns=[3034.0, 3344.0] floor=[5900, 6195] round=[3034, 3344] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+av3yiinq indices.ndvi  19024 2022-02-01 E84 signed 2026-07-16T05:40:22Z pre=1 dns=[3723.0, 3806.0] floor=[6080, 6524] round=[3723, 3806] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+ambveemg indices.ndvi  19031 2022-02-08 E84 signed 2026-07-16T05:40:24Z pre=1 dns=[4040.0, 4120.0] floor=[6160, 6132] round=[4040, 4120] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+r47ns5s7 indices.ndvi  19034 2022-02-11 E84 signed 2026-07-16T05:40:25Z pre=1 dns=[5992.0, 6548.0] floor=[6622, 6760] round=[5992, 6548] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+pawwouui indices.ndvi  19036 2022-02-13 E84 signed 2026-07-16T05:40:27Z pre=1 dns=[3710.0, 3834.0] floor=[5092, 5408] round=[3710, 3834] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+pdggyrzg indices.ndvi  19384 2023-01-27 E84 signed 2026-07-16T05:40:28Z pre=1 dns=[4508.0, 4492.0] floor=[7576, 7920] round=[4508, 4492] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+6bixwohs indices.ndvi  19389 2023-02-01 E84 signed 2026-07-16T05:40:30Z pre=1 dns=[3664.0, 3900.0] floor=[6511, 7240] round=[3664, 3900] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+gxatpd7r indices.ndvi  19391 2023-02-03 E84 signed 2026-07-16T05:40:33Z pre=1 dns=[3536.0, 3752.0] floor=[6412, 6896] round=[3536, 3752] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+abq3ohgx indices.ndvi  19396 2023-02-08 E84 signed 2026-07-16T05:40:35Z pre=1 dns=[3328.0, 3496.0] floor=[3984, 4212] round=[3328, 3496] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+w2aiub3f indices.ndvi  19401 2023-02-13 E84 signed 2026-07-16T05:40:36Z pre=1 dns=[3864.0, 3784.0] floor=[5908, 5804] round=[3864, 3784] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+zgtxa5b3 indices.ndvi  19749 2024-01-27 E84 signed 2026-07-16T05:40:39Z pre=1 dns=[1261.0, 966.0] floor=[1840, 1412] round=[1261, 966] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+uvpcasbw indices.ndvi  19759 2024-02-06 E84 signed 2026-07-16T05:40:40Z pre=1 dns=[3731.0, 3839.0] floor=[6268, 6755] round=[3731, 3839] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+jtqrz5af indices.ndvi  19761 2024-02-08 E84 signed 2026-07-16T05:40:42Z pre=1 dns=[3452.0, 3492.0] floor=[5948, 6156] round=[3452, 3492] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+qwli4ej4 indices.ndvi  19764 2024-02-11 E84 signed 2026-07-16T05:40:45Z pre=1 dns=[2988.0, 3156.0] floor=[4964, 5020] round=[2988, 3156] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+qinwnmwk indices.ndvi  20116 2025-01-28 E84 signed 2026-07-16T05:40:46Z pre=1 dns=[1714.0, 1468.0] floor=[2280, 1874] round=[1714, 1468] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+dhesyu6h indices.ndvi  20119 2025-01-31 E84 signed 2026-07-16T05:40:47Z pre=1 dns=[1506.0, 1128.0] floor=[1984, 1506] round=[1506, 1128] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+l5bhccee indices.ndvi  20121 2025-02-02 E84 signed 2026-07-16T05:40:49Z pre=1 dns=[1444.0, 1200.0] floor=[2032, 1526] round=[1444, 1200] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+52rd5swg indices.ndvi  20126 2025-02-07 E84 signed 2026-07-16T05:40:52Z pre=1 dns=[4108.0, 3960.0] floor=[4540, 4276] round=[4108, 3960] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+odzwxq7g indices.ndvi  20131 2025-02-12 E84 signed 2026-07-16T05:40:54Z pre=1 dns=[1520.0, 1400.0] floor=[2096, 1694] round=[1520, 1400] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+fal3ndhg indices.ndvi  20356 2025-09-25 PC  signed 2026-09-30T09:20:35Z pre=0 dns=[3894.0, 1722.0] floor=[3894, 1722] round=[2968, 1744] -> matches-floor  scl s/f/r=4/4/5 cid_ok=True reader=cog-pixel-floor@2
+4qj3l4mg indices.ndvi  20481 2026-01-28 E84 signed 2026-07-16T05:40:55Z pre=1 dns=[3232.0, 3588.0] floor=[4868, 5468] round=[3232, 3588] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+aeg2w2m3 indices.ndvi  20486 2026-02-02 E84 signed 2026-07-16T05:40:58Z pre=1 dns=[5136.0, 5336.0] floor=[7960, 8224] round=[5136, 5336] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+sb5xeaw2 indices.ndvi  20489 2026-02-05 E84 signed 2026-07-16T05:40:59Z pre=1 dns=[4688.0, 4927.0] floor=[7748, 8335] round=[4688, 4927] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+kxd7jgts indices.ndvi  20491 2026-02-07 E84 signed 2026-07-16T05:41:02Z pre=1 dns=[3501.0, 3577.0] floor=[6470, 6909] round=[3501, 3577] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+27wcyyi4 indices.ndvi  20496 2026-02-12 E84 signed 2026-07-16T05:41:04Z pre=1 dns=[2439.0, 2588.0] floor=[4697, 4946] round=[2439, 2588] -> matches-round  scl s/f/r=11/11/11 cid_ok=True 
+nh25ek6y indices.ndvi  20614 2026-06-10 E84 signed 2026-07-18T18:19:43Z pre=1 dns=[2944.0, 872.0] floor=[3276, 634] round=[2944, 872] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+v7usyptg indices.ndvi  20634 2026-06-30 E84 signed 2026-07-15T19:37:40Z pre=1 dns=[2788.0, 1063.0] floor=[3572, 562] round=[2788, 1063] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+jwkqm6eh indices.ndvi  20651 2026-07-17 E84 signed 2026-07-18T07:37:57Z pre=1 dns=[3010.0, 1038.0] floor=[4055, 535] round=[3010, 1038] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+kxjvfwpa indices.ndvi  20719 2026-09-23 PC  signed 2026-09-25T19:35:27Z pre=1 dns=[2993.0, 1972.0] floor=[3605, 1901] round=[2993, 1972] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+oj5cecci indices.ndvi  20721 2026-09-25 PC  signed 2026-09-28T09:06:56Z pre=0 dns=[3502.0, 1900.0] floor=[3502, 1900] round=[2720, 1923] -> matches-floor  scl s/f/r=4/4/5 cid_ok=True 
+6x6af2zx indices.ndwi  20634 2026-06-30 E84 signed 2026-07-15T19:37:40Z pre=1 dns=[1117.0, 2788.0] floor=[753, 3572] round=[1117, 2788] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+juokn77p indices.ndwi  20721 2026-09-25 PC  signed 2026-09-30T10:01:53Z pre=0 dns=[1829.0, 3502.0] floor=[1829, 3502] round=[1783, 2720] -> matches-floor  scl s/f/r=4/4/5 cid_ok=True reader=cog-pixel-floor@2
+py5ociek s2.B04        19481 2023-05-04 E84 signed 2026-07-15T21:13:54Z pre=1 dns=[1464.0] floor=[1368] round=[1464] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+4s4unoli s2.B04        19551 2023-07-13 E84 signed 2026-07-15T21:14:08Z pre=1 dns=[881.0] floor=[584] round=[881] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+yhdhwmdp s2.B04        19581 2023-08-12 E84 signed 2026-07-15T21:14:15Z pre=1 dns=[1038.0] floor=[798] round=[1038] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+xn35wcfo s2.B04        19614 2023-09-14 E84 signed 2026-07-15T21:14:20Z pre=1 dns=[1116.0] floor=[1178] round=[1116] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+y4fk77xd s2.B04        19641 2023-10-11 E84 signed 2026-07-15T21:14:28Z pre=1 dns=[901.0] floor=[1094] round=[901] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+xluatkch s2.B04        19856 2024-05-13 E84 signed 2026-07-15T21:14:34Z pre=1 dns=[1266.0] floor=[1096] round=[1266] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+q2myic3n s2.B04        19889 2024-06-15 E84 signed 2026-07-15T21:14:43Z pre=1 dns=[860.0] floor=[751] round=[860] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+jr3kffq2 s2.B04        19919 2024-07-15 E84 signed 2026-07-15T21:14:49Z pre=1 dns=[958.0] floor=[510] round=[958] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+trphbpgd s2.B04        19949 2024-08-14 E84 signed 2026-07-15T21:14:54Z pre=1 dns=[794.0] floor=[794] round=[794] -> both(equal DNs) scl s/f/r=4/4/4 cid_ok=True 
+vynyrtr3 s2.B04        19959 2024-08-24 E84 signed 2026-07-15T21:15:01Z pre=1 dns=[58.0] floor=[70] round=[58] -> matches-round  scl s/f/r=3/3/3 cid_ok=True 
+q6kqshwr s2.B04        20011 2024-10-15 E84 signed 2026-07-15T21:15:10Z pre=1 dns=[1162.0] floor=[1208] round=[1162] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+ucjwog25 s2.B04        20209 2025-05-01 E84 signed 2026-07-15T21:15:15Z pre=1 dns=[1114.0] floor=[1018] round=[1114] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+ltota3mx s2.B04        20221 2025-05-13 E84 signed 2026-07-15T21:15:21Z pre=1 dns=[1316.0] floor=[1224] round=[1316] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+rdvkadqo s2.B04        20231 2025-05-23 E84 signed 2026-07-15T21:15:24Z pre=1 dns=[1052.0] floor=[1042] round=[1052] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+jl2vwd26 s2.B04        20234 2025-05-26 E84 signed 2026-07-15T21:15:29Z pre=1 dns=[870.0] floor=[750] round=[870] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+2wg6ytic s2.B04        20251 2025-06-12 E84 signed 2026-07-15T21:15:32Z pre=1 dns=[1070.0] floor=[978] round=[1070] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+zrlxowb6 s2.B04        20258 2025-06-19 E84 signed 2026-07-15T21:15:41Z pre=1 dns=[921.0] floor=[648] round=[921] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+yvfmzkrc s2.B04        20276 2025-07-07 E84 signed 2026-07-15T21:15:45Z pre=1 dns=[966.0] floor=[661] round=[966] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+tte3ohmv s2.B04        20289 2025-07-20 E84 signed 2026-07-15T21:15:49Z pre=1 dns=[766.0] floor=[557] round=[766] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+7vf7bhlp s2.B04        20311 2025-08-11 E84 signed 2026-07-15T21:15:53Z pre=1 dns=[1578.0] floor=[1400] round=[1578] -> matches-round  scl s/f/r=5/7/5 cid_ok=True 
+chyex6c3 s2.B04        20321 2025-08-21 E84 signed 2026-07-15T21:16:01Z pre=1 dns=[858.0] floor=[832] round=[858] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+2jas36yp s2.B04        20346 2025-09-15 E84 signed 2026-07-15T21:16:07Z pre=1 dns=[825.0] floor=[676] round=[825] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+6em2ek4y s2.B04        20356 2025-09-25 E84 signed 2026-07-15T21:16:11Z pre=1 dns=[744.0] floor=[722] round=[744] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+j2l6gn5j s2.B04        20361 2025-09-30 E84 signed 2026-07-15T21:16:16Z pre=1 dns=[641.0] floor=[680] round=[641] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+lpdew7c5 s2.B04        20376 2025-10-15 E84 signed 2026-07-15T21:16:22Z pre=1 dns=[804.0] floor=[865] round=[804] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+xvogdfvy s2.B04        20386 2025-10-25 E84 signed 2026-07-15T21:16:29Z pre=1 dns=[746.0] floor=[935] round=[746] -> matches-round  scl s/f/r=5/5/5 cid_ok=True 
+rxdy44mc s2.B04        20574 2026-05-01 E84 signed 2026-07-15T21:16:33Z pre=1 dns=[1238.0] floor=[1092] round=[1238] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+m43dtn3a s2.B04        20586 2026-05-13 E84 signed 2026-07-15T21:16:37Z pre=1 dns=[1113.0] floor=[981] round=[1113] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+vdqqaq72 s2.B04        20596 2026-05-23 E84 signed 2026-07-15T21:16:42Z pre=1 dns=[1127.0] floor=[975] round=[1127] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+ce2m6gg6 s2.B04        20606 2026-06-02 E84 signed 2026-07-15T21:16:44Z pre=1 dns=[1102.0] floor=[864] round=[1102] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+aqxsbzg7 s2.B04        20628 2026-06-24 E84 signed 2026-07-15T21:16:50Z pre=1 dns=[1127.0] floor=[791] round=[1127] -> matches-round  scl s/f/r=4/4/4 cid_ok=True 
+bbsdnngw s2.B04        20634 2026-06-30 E84 signed 2026-07-15T21:13:46Z pre=1 dns=[1063.0] floor=[562] round=[1063] -> matches-round  scl s/f/r=5/4/5 cid_ok=True 
+6kx2hho3 s2.scl        20721 2026-09-25 PC  signed 2026-09-30T10:01:53Z pre=0 dns=[4.0] floor=[4] round=[5] -> matches-floor  scl s/f/r=-1/4/5 cid_ok=True reader=cog-pixel-floor@2
+
+SUMMARY (S2 point facts at hero cell): 66
+Counter({(True, 'matches-round'): 60, (False, 'matches-floor'): 5, (True, 'both(equal DNs)'): 1})
+Counter({('s2.B04', True, 'matches-round'): 31, ('indices.ndvi', True, 'matches-round'): 28, ('indices.ndvi', False, 'matches-floor'): 2, ('indices.nbr', False, 'matches-floor'): 1, ('indices.ndwi', True, 'matches-round'): 1, ('indices.ndwi', False, 'matches-floor'): 1, ('s2.B04', True, 'both(equal DNs)'): 1, ('s2.scl', False, 'matches-floor'): 1})
+all cids verify: True
+value recomputation from signed DNs matches signed value: 66 / 66
+bytes {'cog': 40584438, 'cog_requests': 311, 'emem': 438908} elapsed 216.7 s

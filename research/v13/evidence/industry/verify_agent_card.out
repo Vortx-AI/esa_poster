@@ -1,0 +1,3 @@
+header {'alg': 'EdDSA', 'jku': 'https://emem.dev/.well-known/jwks.json', 'kid': '777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka', 'typ': 'JOSE'}
+payload_bytes 55244 verify True
+tamper verify False (expected)

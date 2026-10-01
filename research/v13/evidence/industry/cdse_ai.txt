@@ -1,0 +1,169 @@
+12
+--- p 1
+dataspace.copernicus.eu 1
+AI and EO: From Innovation to Services
+March 9, 2026, Brussels
+Dennis Clarijs, VITO
+CDSE AI 
+Capabilities
+--- p 2
+Largest data space for the largest EO programme
+dataspace.copernicus.eu 2
+• The authoritative source for full and up-to-date archives 
+of Sentinel user data, digitally traced
+• Immediately available, free and open data
+• Currently 85 PB and more than 100 PB by 2028
+• Governed by a Service Level Agreement, ensuring 
+continuity and trust (up to December 2028 with 
+optional extension until December 2032)
+• Open ecosystem of advanced services 
+--- p 3
+3
+What is Copernicus Data Space Ecosystem?
+Sentinel Data
+CCM Data
+Additional 
+EO Data
+Streamlined data 
+access with API-s
+Copernicus 
+Browser
+Onboard Code 
+Repositories
+Cloud Computing 
+Capacity
+Federation and 
+user identity 
+services
+Open 
+Ecosystem
+Online 
+Code Labs 
+and 
+Interfaces
+Traceability 
+services
+Copernicus Data 
+Space Ecosystem
+--- p 4
+dataspace.copernicus.eu 5
+AI-ready ecosystem
+Continuous
+innovation and 
+evolution fostering the 
+development of a 
+European EO AI Ecosystem
+openEO Agent for lowering onboarding 
+barrier and algorithm plaza
+Open and free capacity with potential commercial 
+extension
+ML-ready processing API’s openEO, Sentinel-Hub for feature 
+engineering, model training and inference
+ The authoritative source for full and up-to-date access to Sentinel data, CCM data and GEO-AI 
+datasets and federated back-ends
+Sovereign, secure, scalable, redundant infrastructure ecosystem, CPU/GPU access
+--- p 5
+dataspace.copernicus.eu 6
+GEO AI Datasets ecosystem
+Embeddings datasets at CDSE - optimized for 
+fast inference, vector search and scalable 
+downstream geoAI applications.
+Datasets:
+• MajorTOM
+• SSL4EO-S12
+• OlmoEarth
+• MMEarth
+• BigEarthNet-S1/S2
+• EuroSAT MS/RGB 
+• CloudSEN12 
+• SatlasPretrain
+• TerraMesh 
+Training datasets - supporting pretraining, self-supervised learning, 
+classification and multimodal learning.
+Making geoAI datasets available within CDSE/CREODIAS significantly lowers the barrier to AI 
+development by enabling faster access, easier testing, and tight integration with Copernicus data.
+Additional embedding datasets coming soon…
+MajorTOM embeddings: SSL4EO, 
+MMEarth, SigLIP, DINOv2, DeCUR, (CORSA)
+
+--- p 6
+dataspace.copernicus.eu 7
+Example notebook tutorial available
+
+--- p 7
+dataspace.copernicus.eu 8
+AI and CDSE powering Common Agriculture Policy
+• Signals - Feature engineering
+• openEO, Process API, Statistical API/Batch 
+Processing API, Batch Statistical API
+• CARD BS, CARD4L, CARD DOH6/12, MAJA, 
+FORCE
+• Markers - Model training and inference
+• Jupyter Lab, OpenEO
+• IaaS, Managed Kubernetes
+• Analysis and dissemination of results
+• Copernicus Browser
+• IaaS, S3
+• OGC APIs
+• Next steps
+• Integration of embeddings in the process
+
+--- p 8
+dataspace.copernicus.eu 9
+ESA World Cereal Project ➔ EO Plaza
+
+--- p 9
+dataspace.copernicus.eu
+openEO AI agent (Upcoming)
+1
+Natural Language
+Query
+"Generate a cloud-free
+composite of Brussels
+for summer 2025"
+→
+2
+LLM Agent
+(MCP Server)
+Translates intent into
+openEO process graph
+→
+3
+openEO
+Processing
+Federated execution
+on CDSE cloud
+→
+4
+Actionable
+Results
+Maps, time series,
+analysis delivered
+Open Standard Built on openEO API — not locked into any proprietary ecosystem
+Federated Processes execute across multiple backends, wherever the data resides, linked to user account
+Low threshold Lowering the bar for custom code processing and conversion, free tier
+--- p 10
+MCP server
+dataspace.copernicus.eu 11
+
+--- p 11
+dataspace.copernicus.eu 12
+AI-ready ecosystem
+Continuous
+innovation and 
+evolution fostering the 
+development of a 
+European EO AI Ecosystem
+openEO Agent for lowering onboarding 
+barrier and algorithm plaza
+Open and free capacity with potential commercial 
+extension
+ML-ready processing API’s openEO, Sentinel-Hub for feature 
+engineering, model training and inference
+ The authoritative source for full and up-to-date access to Sentinel data, CCM data and GEO-AI 
+datasets and federated back-ends
+Sovereign, secure, scalable, redundant infrastructure ecosystem, CPU/GPU access
+--- p 12
+dataspace.copernicus.eu
+Open.  Federated.  European.  AI-Ready.
+

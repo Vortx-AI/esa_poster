@@ -1,0 +1,44 @@
+{
+ "T2_offset_zero": {
+  "checks_pass": {
+   "D": true,
+   "E": true,
+   "F": true,
+   "G": true,
+   "H": true,
+   "I": true
+  },
+  "refused_at_level_I": false,
+  "failed_check": null,
+  "value_acted_on": 0.29655683080340617,
+  "decision_flipped": true
+ },
+ "T2_scene_relabel_same_day": {
+  "checks_pass": {
+   "D": true,
+   "E": true,
+   "F": true,
+   "G": true,
+   "H": true,
+   "I": true
+  },
+  "refused_at_level_I": false,
+  "failed_check": null,
+  "value_acted_on": 0.4708994708994709,
+  "decision_flipped": false
+ },
+ "T2_unit_mislabel": {
+  "checks_pass": {
+   "D": true,
+   "E": true,
+   "F": true,
+   "G": true,
+   "H": true,
+   "I": true
+  },
+  "refused_at_level_I": false,
+  "failed_check": null,
+  "value_acted_on": 0.4708994708994709,
+  "decision_flipped": false
+ }
+}

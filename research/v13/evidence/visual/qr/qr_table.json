@@ -1,0 +1,202 @@
+[
+{
+"cta": "VIEW THE DEMO",
+"url": "https://vortx-ai.github.io/esa_poster/demo/",
+"chars": 43,
+"ecc": "M",
+"version": 4,
+"modules": 33,
+"width_mm_for_0_5m": 36.1,
+"width_mm_for_1m": 72.2
+},
+{
+"cta": "VIEW THE DEMO",
+"url": "https://vortx-ai.github.io/esa_poster/demo/",
+"chars": 43,
+"ecc": "Q",
+"version": 4,
+"modules": 33,
+"width_mm_for_0_5m": 36.1,
+"width_mm_for_1m": 72.2
+},
+{
+"cta": "TRY A TOKEN",
+"url": "https://emem.dev/verify?q=emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+"chars": 110,
+"ecc": "M",
+"version": 7,
+"modules": 45,
+"width_mm_for_0_5m": 49.2,
+"width_mm_for_1m": 98.5
+},
+{
+"cta": "TRY A TOKEN",
+"url": "https://emem.dev/verify?q=emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+"chars": 110,
+"ecc": "Q",
+"version": 9,
+"modules": 53,
+"width_mm_for_0_5m": 58.0,
+"width_mm_for_1m": 116.0
+},
+{
+"cta": "INSPECT THE RECORD",
+"url": "https://vortx-ai.github.io/esa_poster/demo/record.html",
+"chars": 54,
+"ecc": "M",
+"version": 4,
+"modules": 33,
+"width_mm_for_0_5m": 36.1,
+"width_mm_for_1m": 72.2
+},
+{
+"cta": "INSPECT THE RECORD",
+"url": "https://vortx-ai.github.io/esa_poster/demo/record.html",
+"chars": 54,
+"ecc": "Q",
+"version": 5,
+"modules": 37,
+"width_mm_for_0_5m": 40.5,
+"width_mm_for_1m": 81.0
+},
+{
+"cta": "RE-RUN THE TEST",
+"url": "https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v13",
+"chars": 67,
+"ecc": "M",
+"version": 5,
+"modules": 37,
+"width_mm_for_0_5m": 40.5,
+"width_mm_for_1m": 81.0
+},
+{
+"cta": "RE-RUN THE TEST",
+"url": "https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v13",
+"chars": 67,
+"ecc": "Q",
+"version": 6,
+"modules": 41,
+"width_mm_for_0_5m": 44.9,
+"width_mm_for_1m": 89.7
+},
+{
+"cta": "READ THE METHODS",
+"url": "https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v13/METHODS.md",
+"chars": 78,
+"ecc": "M",
+"version": 5,
+"modules": 37,
+"width_mm_for_0_5m": 40.5,
+"width_mm_for_1m": 81.0
+},
+{
+"cta": "READ THE METHODS",
+"url": "https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v13/METHODS.md",
+"chars": 78,
+"ecc": "Q",
+"version": 7,
+"modules": 45,
+"width_mm_for_0_5m": 49.2,
+"width_mm_for_1m": 98.5
+},
+{
+"cta": "DISCOVER INTEGRATIONS",
+"url": "https://vortx-ai.github.io/esa_poster/use/",
+"chars": 42,
+"ecc": "M",
+"version": 3,
+"modules": 29,
+"width_mm_for_0_5m": 31.7,
+"width_mm_for_1m": 63.5
+},
+{
+"cta": "DISCOVER INTEGRATIONS",
+"url": "https://vortx-ai.github.io/esa_poster/use/",
+"chars": 42,
+"ecc": "Q",
+"version": 4,
+"modules": 33,
+"width_mm_for_0_5m": 36.1,
+"width_mm_for_1m": 72.2
+},
+{
+"cta": "v12 qr_try",
+"url": "https://emem.dev/verify",
+"chars": 23,
+"ecc": "M",
+"version": 2,
+"modules": 25,
+"width_mm_for_0_5m": 27.4,
+"width_mm_for_1m": 54.7
+},
+{
+"cta": "v12 qr_try",
+"url": "https://emem.dev/verify",
+"chars": 23,
+"ecc": "Q",
+"version": 3,
+"modules": 29,
+"width_mm_for_0_5m": 31.7,
+"width_mm_for_1m": 63.5
+},
+{
+"cta": "v12 qr_repro",
+"url": "https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v12",
+"chars": 67,
+"ecc": "M",
+"version": 5,
+"modules": 37,
+"width_mm_for_0_5m": 40.5,
+"width_mm_for_1m": 81.0
+},
+{
+"cta": "v12 qr_repro",
+"url": "https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v12",
+"chars": 67,
+"ecc": "Q",
+"version": 6,
+"modules": 41,
+"width_mm_for_0_5m": 44.9,
+"width_mm_for_1m": 89.7
+},
+{
+"cta": "ememdemo valid token",
+"url": "https://vortx-ai.github.io/ememdemo/?s=emem%3Afact%3Adefi.zb572.xoso.zb1ec%3Aoj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+"chars": 129,
+"ecc": "M",
+"version": 8,
+"modules": 49,
+"width_mm_for_0_5m": 53.6,
+"width_mm_for_1m": 107.2
+},
+{
+"cta": "ememdemo valid token",
+"url": "https://vortx-ai.github.io/ememdemo/?s=emem%3Afact%3Adefi.zb572.xoso.zb1ec%3Aoj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+"chars": 129,
+"ecc": "Q",
+"version": 9,
+"modules": 53,
+"width_mm_for_0_5m": 58.0,
+"width_mm_for_1m": 116.0
+},
+{
+"cta": "emem.dev/#use",
+"url": "https://emem.dev/#use",
+"chars": 21,
+"ecc": "M",
+"version": 2,
+"modules": 25,
+"width_mm_for_0_5m": 27.4,
+"width_mm_for_1m": 54.7
+},
+{
+"cta": "emem.dev/#use",
+"url": "https://emem.dev/#use",
+"chars": 21,
+"ecc": "Q",
+"version": 3,
+"modules": 29,
+"width_mm_for_0_5m": 31.7,
+"width_mm_for_1m": 63.5
+}
+]

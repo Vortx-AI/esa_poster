@@ -1,0 +1,1580 @@
+ 
+ 
+ 
+ 
+Joint Research Centre  
+Maps of Global Forest Cover 
+2020 Version 3 and Global Forest 
+Type 2020 Version 1 Supporting 
+the EU Deforestation Regulation  
+Methodology,  Accuracy Assessment and Comparison 
+Bourgoin, C., Verhegghen, A., Ameztoy, I., Beuchle, R., Carboni, S., Carreiras, J., Lesiv, M., Lupi, A., Marinelli, D., 
+Richter, J., Simonetti, D., Turubanova, S., Achard, F., Colditz, R. 
+2026 
+ 
+
+ 
+ 
+This document is a publication by the Joint Research Centre (JRC), the European Commission’s science and knowledge 
+service. It aims to provide evidence-based scientific support to the European policymaking process. The contents of this 
+publication do not necessarily reflect the position or opinion of the European Commission. Neither the European 
+Commission nor any person acting on behalf of the Commission is responsible for the use that might be made of this 
+publication. For information on the methodology and quality underlying the data used in this publication for which the 
+source is neither Eurostat nor other Commission services, users should contact the referenced source. The designations 
+employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the 
+part of the European Union concerning the legal status of any country, territory, city or area or of its authorities, or 
+concerning the delimitation of its frontiers or boundaries. 
+Contact information 
+Name: Rene R Colditz 
+Address: Via Enrico Fermi 2749, 21027 Ispra, VA, Italy 
+Email: rene.colditz@ec.europa.eu 
+Tel.: +39 033278-5562 
+Joint Research Centre  
+https://joint-research-centre.ec.europa.eu 
+JRC146622 
+EUR 40716 
+ 
+PDF  ISBN 978-92-68-39780-0  ISSN 1831-9424  doi:10.2760/9982436  KJ-01-26-198-EN-N 
+Luxembourg: Publications Office of the European Union, 2026 
+© European Union, 2026 
+ 
+The reuse policy of the European Commission documents is implemented by the Commission Decision 2011/833/EU of 12 
+December 2011 on the reuse of Commission documents (OJ L 330, 14.12.2011, p. 39). Unless otherwise noted, the reuse 
+of this document is authorised under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence 
+(https://creativecommons.org/licenses/by/4.0/). This means that reuse is allowed provided appropriate credit is given and 
+any changes are indicated.  
+For any use or reproduction of photos or other material that is not owned by the European Union permission must be 
+sought directly from the copyright holders. 
+Cover page illustration, source: JRC, FAO-FRA 
+How to cite this report: Bourgoin, C., Verhegghen, A., Ameztoy, I., Beuchle, R., Carboni, S. et al., Maps of Global Forest Cover 
+2020 Version 3 and Global Forest Type 2020 Version 1 Supporting the EU Deforestation Regulation - Methodology, 
+Accuracy Assessment and Comparison, Publications Office of the European Union, Luxembourg, 2026, 
+https://data.europa.eu/doi/10.2760/9982436, JRC146622. 
+ 
+ 
+
+ 
+1 
+ 
+Contents 
+ 
+Abstract ...................................................................................................................................................................................................... 3 
+Foreword .................................................................................................................................................................................................... 4 
+Acknowledgements .............................................................................................................................................................................. 5 
+Authors ................................................................................................................................................................................................. 5 
+Executive summary .............................................................................................................................................................................. 6 
+Policy context ................................................................................................................................................................................... 6 
+Key conclusions ............................................................................................................................................................................... 6 
+Main findings .................................................................................................................................................................................... 6 
+Related and future Joint Research Centre work ........................................................................................................... 7 
+Quick guide ........................................................................................................................................................................................ 7 
+1. Introduction ....................................................................................................................................................................................... 8 
+2. Data and method ........................................................................................................................................................................ 10 
+2.1. Update of the mapping approach for GFC2020 version 3 ....................................................................... 10 
+2.1.1. Input datasets ....................................................................................................................................................... 10 
+2.1.2. Approach .................................................................................................................................................................. 16 
+2.1.3. Step 1: Maximum potential extent of forest cover.......................................................................... 18 
+2.1.4. Step 2: Exclusion of areas outside forest definition ....................................................................... 19 
+2.1.5. Step 3: Post-processing................................................................................................................................... 22 
+2.2. Mapping approach for GFT2020 version 1 ........................................................................................................ 22 
+2.2.1. Input datasets ....................................................................................................................................................... 22 
+2.2.2. Approach .................................................................................................................................................................. 26 
+2.2.3. Step 1: Extent of planted and plantation forest ............................................................................... 27 
+2.2.4. Step 2: Extent of primary forest ................................................................................................................ 28 
+2.2.5. Step 3: Post-processing................................................................................................................................... 28 
+2.3. Accuracy assessment of GFC2020 V3 ................................................................................................................. 31 
+3. Results ............................................................................................................................................................................................... 32 
+3.1. Data access .......................................................................................................................................................................... 32 
+3.2. The global forest cover map for year 2020 V3 .............................................................................................. 33 
+3.2.1. Map results ............................................................................................................................................................. 33 
+ 
+2 
+ 
+3.2.2. Accuracy of GFC2020 V3 ............................................................................................................................... 41 
+3.2.3. Forest area in GFC2020 .................................................................................................................................. 47 
+3.3. The global forest type map for year 2020 V1................................................................................................. 50 
+3.3.1. Map results ............................................................................................................................................................. 50 
+3.3.2. Forest type areas in GFT2020 ..................................................................................................................... 54 
+4. Limitations and future perspectives ................................................................................................................................ 56 
+5. Conclusions ..................................................................................................................................................................................... 60 
+References ............................................................................................................................................................................................. 61 
+List of abbreviations and definitions ...................................................................................................................................... 68 
+List of figures ....................................................................................................................................................................................... 71 
+List of tables ......................................................................................................................................................................................... 73 
+Annexes ................................................................................................................................................................................................... 74 
+Annex 1. Forest degradation and deforestation related to wood production under the EUDR ...... 74 
+Annex 2. Continental reporting units ................................................................................................................................ 74 
+Annex 3. Accuracy assessment statistics and forest area estimates ........................................................... 75 
+Annex 4. Corrigendum: Corrections to confidence intervals reported in Colditz et al. (2025a)...... 78 
+ 
+ 
+ 
+3 
+Abstract  
+This report presents the third version of the Global map of Forest Cover for the year 2020 at 10 m 
+spatial resolution (GFC2020 V3, dated 28 November 2025) and the first version of the Global map 
+of Forest Types for the year 2020 (GFT2020 V1, dated 15 January 2026). These maps are based on 
+the combination of several global land cover / land use data sets and provide spatially explicit 
+representations of forest presence and absence (GFC2020) and main forest types (GFT2020). The 
+report presents input datasets, mapping methodology and a comparison with other global sources 
+of information. For GFC2020 we also present an accuracy assessment of this new map version and 
+a comparison with the previous version. Results show an improved accuracy and very good match 
+with the global forest area estimate for year 2020 of the latest report of the Global Forest 
+Resources Assessment by the Food and Agriculture Organization. GFC2020 and GFT2020 can 
+support the implementation of the EU Regulation on Deforestation-free supply chains (Regulation 
+(EU) 2023/1115), notably in the phase of risk assessment, but their use is not mandatory, not 
+exclusive and not legally binding. The primary access to this map is via the EU Observatory on 
+Deforestation and Forest Degradation. 
+ 
+4 
+Foreword 
+Forests are indispensable to life on Earth, delivering critical ecosystem services by producing 
+oxygen, sequestering carbon, regulating climate and water cycles, filtering air and water, and 
+sustaining vast biodiversity. They underpin the livelihoods of around 1.6 billion people, provide raw 
+materials for a growing bioeconomy, and carry profound social, cultural, and spiritual significance, 
+particularly for indigenous communities.  
+Despite their importance, forests are under increasing pressure: according to the FAO Global Forest 
+Resources Assessment 2025, deforestation continues at an alarming rate while ongoing 
+degradation further diminishes ecosystem functionality, biodiversity, and carbon storage. 
+In response, the European Union has advanced a key initiative for sustainable competitiveness 
+through the Regulation on deforestation-free products (EUDR). This regulation requires that 
+operators placing relevant commodities (cattle, cocoa, coffee, palm oil, rubber, soya, and wood) and 
+their derived products on the EU market, or exporting them from it, demonstrate that they were not 
+produced on land subject to deforestation or forest degradation after 2020. Compliance entails, 
+among other requirements, providing precise geolocation data of sourcing areas and verifying their 
+legality. Although not explicitly mandated by the EUDR, maps play a key role in supporting 
+deforestation and forest degradation risk assessments within due diligence processes. 
+To this end, the Joint Research Centre (JRC) has developed the Global Forest Cover 2020 (GFC2020) 
+and Global Forest Type 2020 (GFT2020) datasets – harmonized, globally consistent maps of forest 
+presence and main forest types at 10-meter spatial resolution. This report presents the 
+methodology and results of the third version of GFC2020 and the first version of GFT2020, and 
+highlights key areas for future improvement. Even though these maps are not legally binding or 
+mandatory under the EUDR, they are intended to support operators and traders in conducting 
+spatially explicit risk assessments, potentially in combination with other datasets, to help 
+demonstrate compliance with deforestation-free requirements. 
+ 
+ 
+Greet Janssens-Maenhout 
+Head of Land and Climate Unit 
+Directorate Sustainable Resources 
+Joint Research Centre 
+European Commission 
+ 
+ 
+  
+
+ 
+5 
+Acknowledgements  
+We are grateful for technical support, feedback and comments received during numerous 
+discussions from Tanya Birch (Google), John Brandt (WRI), Andreas Brink (JRC), Giovanni Caudullo 
+(Arcadia SIT s.r.l.), Guido Ceccherini (Engineering Ingegneria Informatica S.p.A), Nicholas Clinton 
+(Google), Martina Dürauer (IIASA), Paula Veronica Figueiredo Vilar Pires Correia (JRC), Steffen Fritz 
+(IIASA), Erin Glen (WRI), Liz Goldman (WRI), Martin Herold (GFZ), Simon Ilyushchenko (Google), 
+Nicolas Mansuy (Natural Resources Canada), Andrea Marelli (Arcadia SIT S.r.l.), Nandika Tsendbazar 
+(Wageningen University), Kasimir Orlowski (JRC), Diana Parker (UMD), Timothee Stassin (GFZ), Alicia 
+Sullivan (Google), Alexandra Tyukavina (UMD) and Peter Vogt (JRC). We are also grateful for 
+feedback received during numerous meetings with EUDR stakeholders, including non-governmental 
+organizations, business associations, scientific organizations, third countries and EU Member States.  
+ 
+Authors 
+Clément Bourgoin (JRC D1) 
+Astrid Verhegghen (ARHS Developments Italia S.R.L) 
+Iban Ameztoy (ARHS Developments Italia S.R.L) 
+René Beuchle (JRC D1) 
+Silvia Carboni (European Dynamics Luxembourg S.A.) 
+João Carreiras (VASS) 
+Myroslava Lesiv (IIASA) 
+Andrea Lupi (Unisystems Luxembourg SARL) 
+Daniele Marinelli (JRC D1) 
+Jessica Richter (WRI) 
+Dario Simonetti (Engineering Ingegneria Informatica S.p.A.) 
+Svetlana Turubanova (UMD) 
+Frédéric Achard (JRC D1) 
+René Colditz (JRC D1) 
+ 
+ 
+6 
+Executive summary 
+Policy context 
+The EU Regulation on deforestation-free supply chains (EUDR; Regulation (EU) 2023/1115) sets out 
+rules and obligations for a set of commodities (cattle, cocoa, coffee, oil palm, rubber, soya, wood) 
+and derived products to reduce global deforestation and forest degradation induced by the EU. 
+Deforestation-free means that commodities and products do not originate from land that was 
+subject to deforestation or forest degradation after 31 December 2020. Operators and traders 
+putting or making available above-mentioned commodities and derived products on the EU market, 
+or exporting from it, must exercise due diligence by providing information and data, including the 
+geolocation of the sourcing areas. Spatial information about the land use in 2020 could be highly 
+beneficial to support the risk assessment of the EUDR.  
+Key conclusions 
+In this context, the Joint Research Centre (JRC) developed the Global Forest Cover map for the year 
+2020 (GFC2020) and the Global Forest Type map for the year 2020 (GFT2020) at 10 m spatial 
+resolution. The EU Observatory on Deforestation and Forest Degradation (EUFO) is the primary 
+access to both maps and other sources of global forest maps, spatial forest and forestry-related 
+information, global land use carbon fluxes, and scientific data on supply chains.  
+GFC2020 and GFT2020 are support tools offered free of charge by the European Commission to 
+operators and traders for the implementation of the EUDR deforestation risk assessment. However, 
+GFC2020 and GFT2020, like any other global, regional, or national map, are non-mandatory, non-
+exclusive, and non-legally binding sources of information. The colocation of geolocation data (points 
+or polygons) with forest areas in GFC2020, specific forest types in GFT2020, or forest-related 
+indicators in other geospatial sources, does not automatically indicate non-compliance with the 
+EUDR and vice versa. Instead, such plots should undergo further assessment to determine the 
+actual risk of deforestation or forest degradation with more detailed or locally relevant data for a 
+robust risk evaluation.  
+Main findings 
+Based on updated and new input data, the third version (V3) of GFC2020 improved in terms of 
+forest area estimates and map accuracy. The new Copernicus global land cover map and updated 
+forest loss drivers and forest management layers helped detecting more potential forest areas, 
+including unstocked forest land, whereas commodity-specific data sets enabled targeted 
+improvements to exclude tree crops and areas under shifting cultivation or agroforestry systems 
+(see infographic below).  
+ 
+
+ 
+7 
+The overall accuracy of GFC2020 V3 improved to 92.8% (GFC2020 V2: 91.5%) with an omission 
+error of 10.6% and a commission error of 13.1% for forest. Moreover, there is a close match 
+between the global forest area derived from GFC2020 and the forest area estimate for the year 
+2020 from the Food and Agriculture Organization (FAO) Global Forest Resources Assessment (FRA) 
+published in 2025. Even though the map improved in critical areas there are still regions where the 
+distinction between forest and non-forest is challenging. The product could benefit further from 
+refined data layers with a higher spatial resolution than as they are available today.  
+The report also documents the mapping approach for the first version of GFT2020. Based on the 
+forest area extent mapped in GFC2020 V3, specific processes identify three forest types: (i) primary 
+forest, (ii) naturally regenerating forest and (iii) planted forest, including plantation forests. This 
+mapping is mostly based on indirect indicators or proxies, e.g. distance to artificial land features 
+such as roads or the protection status to infer primary forests. The comparison to other sources 
+shows some differences that can be related to uncertainties (on both sides) and the general 
+difficulty to characterize forest types by remote sensing. No formal accuracy assessment for the 
+three main forest types is yet available. The GFC2020 V3 accuracy assessment remains applicable 
+to the aggregated forest cover across all three forest types, but does not evaluate the accuracy or 
+omission/commission errors of the forest type disaggregation in GFT2020 V1. 
+Related and future Joint Research Centre work 
+This report builds on previous work, including the first two versions of GFC2020 and a preliminary 
+version of GFT2020 (Bourgoin et al., 2024a, 2025, 2026), the development of an accuracy 
+assessment framework for validating GFC2020 (Colditz et al. 2025a) and insights gained from 
+geospatial assessment tool development (Simonetti et al., 2025) and regional studies (Khiripet et al. 
+2026, Verhegghen et al. 2024). The JRC plans to release a fourth version of GFC2020, a second 
+version of GFT2020 and accuracy assessments for both products by the end of 2026. The JRC also 
+collaborates with European Commission services to ensure interoperability between the EUDR 
+Information System and GFC2020. 
+Quick guide 
+This report describes the input data and methodology to produce GFC2020 V3 and GFT2020 V1. 
+The result section illustrates the mapping result and compares these maps against other global 
+data sets. The accuracy assessment of GFC2020 V3 is described in a dedicated section of the 
+report. 
+ 
+8 
+1. Introduction  
+The Regulation “on the making available on the Union market as well as export from the Union of 
+certain commodities and products associated with deforestation and forest degradation” (EU) 
+2023/1115), in the following abbreviated “EUDR”, went into force in June 20231. This Regulation 
+lays down rules and obligations for placing seven commodities (cattle, cocoa, coffee, oil palm, 
+rubber, soya, wood) and associated products on the EU market or exporting from it. Commodities 
+and products must be deforestation-free, produced legally according to the rules of the country of 
+origin, and covered by a due diligence statement. Operators need to exercise due diligence, by 
+providing information, including geographic coordinates about the sourcing location, and under 
+certain conditions a risk assessment and risk mitigation.  
+Deforestation-free means that commodities and products are not sourced from land that 
+underwent deforestation or forest degradation after the cut-off date (31 December 2020). 
+Deforestation refers to the conversion of land from forest to agricultural land use. Forest 
+degradation refers to (i) a conversion of primary forests or naturally regenerating forests to 
+plantation forests or other wooded land or (ii) a conversion of primary forest to planted forest (see 
+also annex 1). 
+The obligation to provide the geolocation as point or polygon if the area is larger than 4 ha for 
+commodities and products makes maps for the year 2020 a useful tool to assess the risk of 
+deforestation or forest degradation. To this end the JRC developed maps of Global Forest Cover for 
+the year 2020 (GFC2020) and Global Forest Types for the year 2020 (GFT2020), notably to support 
+the risk assessment for deforestation and forest degradation, respectively. Adhering to the forest 
+definition as set out in the EUDR, GFC2020 maps forest cover presence and absence at 10m spatial 
+resolution in the year 2020 from a wealth of existing data layers. Previous work describes the 
+mapping of GFC2020 at version 1 (Bourgoin et al., 2024a, Colditz et al., 2024) and version 2 
+(Bourgoin et al., 2025, 2026), including a dedicated map assessment (Colditz et al., 2025a). Based 
+on the forest extent of GFC2020, GFT2020 maps three forest types: primary forest, naturally 
+regenerating forest and planted forest which also includes plantation forest. Given the definition of 
+forest degradation, it is not critical to distinguish between planted forest and plantation forest in 
+2020. This distinction is only necessary for information on the state of land post-2020, which is 
+provided via the geolocation (see also annex 1). As the mapping of forest types is based on fewer 
+data layers and builds largely in secondary information and proxies, the JRC released a preliminary 
+map (GFT2020 version 0) in 2025 (Bourgoin et al., 2025) with the aim to collect feedback.  
+ 
+ 
+1 The EUDR was foreseen to become applicable on 30 December 2024. In fall 2024 co-legislators agreed on a 
+postponement by one year to give more time to prepare for stakeholders (EU 2024). Stress tests of the Information 
+System – an Information Technology (IT) system that collects all relevant information from operators and traders 
+that can then be accessed by Member States competent authorities – indicated significant difficulties in situations 
+of high data traffic. A second amendment postponed the application of the EUDR by another year and introduced 
+several simplifications in the implementation of the Regulation (EU 2025). 
+ 
+9 
+Comparing maps of 2020 to geolocations for post 2020 may indicate the risk of deforestation. 
+Approaches and tools to this end were developed, for instance, by the JRC with a specific interface 
+in the IMPACT Toolbox (Simonetti et al., 2015, Simonetti et al., 2025), the Food and Agriculture 
+Organization (FAO) with the “What is in that Plot” (WHISP) tool (D’Annunzio et al., 2024) and the 
+World Resources Institute (WRI) with Global Forest Watch Pro (GFWPro, 2026). Comparisons of 
+GFC2020 to national data layers exist for the Ivory Coast (Verhegghen et al., 2024) and Thailand 
+(Khiripet et al., 2026). Studies comparing global and regional data layers for the usefulness of EUDR 
+implementation and map quality indicate that GFC2020 ranks amongst the best (Reymondin et al., 
+2025, Freitas Beyer et al., 2025, Paluba et al., 2026). 
+The EU Observatory on Deforestation and Forest Degradation (EUFO) hosts GFC2020 and GFT2020 
+maps for viewing. All maps can be accessed and downloaded free-of-charge via various portals 
+(see section 3.1). GFC2020 and GFT2020 are support tools provided by the European Commission 
+with no authoritative status; hence their use is non-mandatory, non-exclusive and not legally 
+binding. The latter means that a spatial match or non-match between a geolocation in the due 
+diligence statement and forest or a specific forest type in the maps does neither mean with full 
+confidence that the parcel has been deforested/degraded or not been deforested/degraded since 
+2020. In any case, we recommend to pool different spatial and non-spatial data sources for risk 
+assessment. These maps may also be used for verification by competent authorities, e.g. when 
+selecting sample areas to carry out more detailed and robust checks.  
+The main objective of this report is to present the input data and the approach for generating the 
+third version (V3) of GFC2020 and the first version (V1) of GFT2020. The report presents also an 
+analysis of the resulting maps in comparison with other global or international sources. An accuracy 
+assessment has been carried out for GFC2020 V3 and is described in a dedicated section in this 
+report. 
+ 
+10 
+2. Data and method 
+The approach for identifying forest area and forest types combines existing global wall-to-wall 
+datasets or datasets that are global for their scope. “Global for their scope” means that wall-to-wall 
+data layers for zones or ecoregions are used if they provide a global coverage, e.g. for all tropical 
+forests or dry forests on all continents. On the contrary, the workflow does not incorporate data at 
+local, regional national or continental level. The maps are therefore a harmonized, globally 
+consistent representation for the presence or absence of forest cover and forest types in 2020, at 
+10m spatial resolution. 
+2.1. Update of the mapping approach for GFC2020 version 3 
+2.1.1. Input datasets 
+Translating the EUDR’s forest cover definition into a binary forest/non-forest map presents a 
+significant challenge. Not every tree-covered pixel corresponds to a forest, and not all forested 
+areas contain tree cover. Converting tree cover data into “forest” land use requires information on 
+tree height, canopy density, and area, as well as supplementary contextual data, because some 
+treed areas may not meet the criteria for forests or may serve other purposes, such as agriculture 
+or urban development. Similarly, forests can temporarily lose tree cover due to disturbances like 
+fires or logging, yet still qualify as forest land use, with the potential for trees to recover that will 
+meet the required thresholds for height and canopy density. 
+GFC2020 V3 integrates new or updated datasets released since the publication of GFC2020 V2 and 
+incorporates user feedback to enhance the accuracy and comprehensiveness of the global forest 
+extent. This update corrects overestimations in agricultural tree plantation areas, mixed-use 
+landscapes (e.g., shifting cultivation and agroforestry systems), as well as underestimations of 
+planted forests and unstocked areas. 
+This section describes the updated input layers for land cover, land use, tree cover, and tree height 
+used to produce the GFC2020 V3 map (Table 1). Most datasets represent conditions around 2020, 
+with exceptions noted and justified in the following sections. Many datasets provide thematic 
+classifications. In this new version, we increased the use of datasets offering continuous probability 
+values, which require tailored thresholding within the workflow. The integration also uses 
+stratification layers, including global ecological zones, tree cover change drivers, forest 
+management types, and coarse cropland production maps, to refine and enhance the mapping 
+process. 
+ 
+11 
+Table 1. Description of the datasets used as input layers in GFC2020 V3, including details of any pre-processing steps applied to certain datasets. Orange shading 
+indicates revised / updated datasets, blue shading highlights newly introduced datasets, and original datasets used in GFC2020 V2 are white. 
+Dataset 
+name 
+Dataset 
+abbreviatio
+n 
+Description Thematic 
+information 
+Step in 
+workflow 
+Resolutio
+n 
+Scope Year Reference 
+FAO Global 
+Ecological 
+Zones 
+FAO GEZ Global Ecological Zones from FAO. We used the zones of Tropical rain 
+forest, tropical moist forest, tropical dry forest, tropical mountain system, 
+boreal mountain system, boreal tundra woodland and boreal coniferous 
+forest as stratification. 
+Stratification Step 2 Various 
+scales 
+Global 2010 FAO 2012 
+WRI Drivers 
+of global 
+forest loss 
+WRI Drivers Dominant driver of tree cover loss from 2001-2024 and its associated 
+probability, defined as the direct driver that caused the majority of tree 
+cover loss within each 1 km cell over the time period. Permanent drivers 
+include permanent agriculture, hard commodities, shifting cultivation and 
+settlements and infrastructure. Temporary drivers include logging, wildfire 
+and other natural disturbances.  
+Stratification Step 1 and 
+2 
+1km Global 2001-2024 Sims et al. 2025 
+UMD Global 
+Forest Cover 
+loss from fire 
+UMD GFC - fire Global forest cover loss from fire from UMD GLAD was used in step 1 in 
+combination with UMD Tree Cover 2010 (loss year after 2011) to map 
+potential unstocked forest from fire disturbance when ESA WC 2020 and 
+2021 showed no tree cover. It was also used in step 2 in combination with 
+the GFC-loss dataset to prevent the exclusion of burned forests that have 
+the capacity regrow.  
+Stratification Step 1 and 
+2 
+30m Global 2001-2020 Tyukavina et al., 2022 
+updated to version 
+2023 
+NASA Global 
+Cropland-
+Extent 
+Product 
+GCEP Cropland Cropland extent from a combination of Landsat, and elevation derived data. Stratification Step 2 30m Global 2015 Thenkabail et al., 2021 
+IIASA Global 
+Forest 
+Management 
+IIASA Forest 
+Management 
+Revised version of the forest management map including classes on 
+naturally regenerating forest with/without signs of management, planted 
+and plantation forests, rubber, oil palm, agroforestry and fruit plantations.  
+Stratification Step 1 and 
+2 
+100m Global 2020 Lesiv et al., 2026 
+CROPGRIDS CROPGRIDS Stratification of potential coffee, cocoa and cashew area from the global 
+geo-referenced dataset of crop area based on a harmonization of national 
+statistics and gridded data. For coffee, we used a minimum threshold of 
+200ha of crop area when combined with other land cover from JRC-TMF 
+and META/WRI or GSCH height maps. We lowered the threshold to 60ha and 
+70ha when combined with GCEP and GSCH or GCEP and META/WRI 
+respectively. For cocoa, we used a minimum threshold of 300ha when 
+combined with other land cover from JRC-TMF and GSCH height map. We 
+lowered the threshold to 50ha when combined with GCEP and GSCH or 
+Stratification Step 2 0.05° 
+(~5.6km at 
+the equator) 
+Global 2020 Tang et al., 2024 
+ 
+12 
+GCEP and META/WRI. For cashew, we used a minimum threshold of 300ha 
+when combined with other land cover from JRC-TMF and GSCH height map. 
+We lowered the threshold to 50ha when combined with GCEP and GSCH 
+and to 150ha when combined with GCEP and META/WRI. 
+ESA World 
+Cover 
+ESA WC 2020 
+and 2021 
+Tree cover (class 10) and mangroves (class 95) were used in step 1. In 
+GFC2020 V2, water (class 80), built-up (class 50), cropland (class 40), 
+bare/sparse vegetation (class 60), snow (class 70) and herbaceous wetland 
+(class 90) were used in step 2.  
+Tree cover Step 1 and 
+2 
+10m Global 2020 (v100), 
+2021 (V200) 
+Zanaga et al., 2022, 
+2021 
+Copernicus 
+LCFM 2020 
+Copernicus 
+LCFM 2020 
+Global land cover map (version 1) including classes of tree cover, 
+grasslands, croplands, permanent water bodies and wetlands. 
+Tree cover Step 1 and 
+2 
+10m Global 2020 LCFM - LCM 2025 
+Copernicus 
+TCD  2020 
+Copernicus TCD  
+2020 
+Tree cover density map, version 1 Tree cover  Step 1 10m Tropics 2020 LCFM - TCD 2025 
+ESRI LULC 
+2020 
+ESRI LULC 
+2020 
+Global map of land use and land cover. We used the built area as exclusion 
+mask. 
+Land cover Step 2 10m Global 2020 Karra et al., 2021 
+WRI Tropical 
+Tree Cover 
+WRI TTC Tree cover inside and outside forests across the Tropics. In GFC2020 V3, we 
+used a threshold of 70% instead of 50% in GFC2020 V2. 
+Tree cover Step 1 10m Tropics 2020 Brandt et al., 2023 
+Google 
+Natural 
+forest 
+Google natural 
+forest 
+Probability of natural forest presence, excluding planted forest and trees 
+outside forest definition (e.g. tree crops). 
+Tree cover Step 1 and 
+2 
+10m Global 2020 Neuman et al, 2025 
+UMD Tree 
+cover 2000, 
+2010 
+UMD TC 2000, 
+2010 
+Pixel estimates of tree canopy cover derived from cloud-free annual 
+growing season composites of Landsat data. We selected a minimal 
+threshold of 10%. 
+Tree cover Step 1 30m Global 2000 and 
+2010 
+Hansen et al., 2013 
+UMD Global 
+Forest 
+Canopy 
+Height 
+UMD GFCH Gridded map of canopy heights from GEDI and Landsat, including an 
+extrapolation of the model for the boreal regions.  
+Tree height Step 2 30m Global 2019 Potapov et al., 2021 
+Global-scale 
+canopy height 
+GSCH Global-scale canopy height estimation from Sentinel 1 and 2, GEDI and the 
+Shuttle Radar Topography Mission. 
+Tree height Step 2 10m Global 2019-2020 Pauls et al., 2024 
+Very high 
+resolution 
+canopy height 
+META/WRI Canopy height estimation from very-high resolution RGB images. Tree height Step 2  1m Global 2009-2020 Tolan et al., 2024 
+ 
+13 
+UMD Global 
+land cover 
+and land use 
+UMD GLC tree 
+cover, cropland, 
+other land 
+cover, built-up 
+Global land cover and land use from UMD. Classes of tree cover (classes 
+53-91 for terra firma, classes 171-211 for wetland) were used to build the 
+potential maximum forest extent of forest (step 1). Classes 252 (cropland), 
+0-37, 120-157, 251 (other land cover) and 240-249 (built-up) were used in 
+step 2. Classes 51-52 (3 and 4m open trees) were no longer used as an 
+‘other land cover’ excluding mask in step 2. 
+Land cover Step 1 and 
+2 
+30m Global 2019 Hansen et al., 2022 
+Global 
+Mangrove 
+Watch 
+GMW Mangrove extent from Global Mangrove Watch, version 3.0. Land cover Step 1 and 
+2 
+25m (0.8 arc 
+seconds) 
+Global 2020 Bunting et al., 2022 
+JRC Tropical 
+Moist Forest 
+JRC TMF Transition map and annual change datasets of forest cover change in the 
+humid tropics from EC JRC. Undisturbed, mangroves and degraded forest 
+(classes 1-2 from Annual Change) along with old regrowth (≥5 years old) of 
+year 2020 have priority over masking layers of CH GEDI (<5m), GFC loss or 
+other land cover from UMD-GLC. Deforested land including conversion to 
+agricultural plantations and deforested mangroves (classes 3-4 from 
+Annual Change), and young forest regrowth (<5 years old) are used as 
+masking layers over the Tropical rain forest ecological zone. In GFC2020 
+V3, the class ‘other land cover’ was used for its potential to map 
+agricultural commodities established before the monitoring period of TMF 
+changes in early 1990s (areas excluded from the initial tropical moist 
+forest extent). 
+Land cover/use Step 2 30m Tropics 1990-2020, 
+with 2021-
+2024 
+information 
+on post-
+disturbance 
+permanence 
+Vancutsem et al., 2021, 
+updated to version 
+2024 
+UMD Global 
+Forest Cover 
+loss 
+UMD GFC loss Global forest cover loss from UMD GLAD. All tree cover loss from 2001-
+2020 over commodity-driven deforestation and shifting agriculture (Drivers 
+of forest cover loss) areas and not overlaying with forest cover loss from 
+fire or with Forest cover from JRC-TMF were considered as masking layer in 
+step 2. In GFC2020 V2, areas with tree cover loss combined with UMD Tree 
+Cover 2000 (loss year after 2001) or 2010 (loss year after 2011) identified 
+by UMD Drivers of Forest Loss as forestry operations were considered 
+potential unstocked forest from clear-cut harvesting when ESA WC 2020 
+and 2021 showed no tree cover (step 1).  
+Land cover Step 1 and 
+2 
+30m Global 2001-2020 Hansen et al., 2013 
+updated to version 
+2023 
+JRC Global 
+Human 
+Settlement 
+Layer 
+JRC GHSL Global human settlement JRC, Built-Up Characteristics. All values (1-25) 
+were considered as masking layer. 
+Land cover Step 2 10m Global 2018 Pesaresi and Politis, 
+2023 
+JRC Global 
+Human 
+Settlement 
+Layer Degree 
+of 
+Urbanisation 
+JRC GHS SMOD Degree of Urbanisation stage I methodology recommended by UN 
+Statistical Commission. We used the suburban or peri-urban (21), semi-
+dense urban cluster (22), dense urban cluster (23) and urban centre (30) as 
+input classes and created a negative buffer of 1250m to mitigate patchy 
+effects. 
+Land use Step 2 1km Global 2020 Schiavina et al., 2023 
+ 
+14 
+Global mining 
+land use 
+IIASA Mining  Visual interpretation and delineation of large-scale, artisanal and small-
+scale mining sites using Sentinel-2 imagery. The polygons extent was used 
+in combination with any tree cover loss from UMD GFC loss. 
+Land use Step 2 Scale not 
+specified 
+Global 2019 Maus et al., 2022 
+JRC Global 
+Surface 
+Water 
+JRC GSW Classes of permanent water, new permanent water and seasonal to 
+permanent water (1,2 and 7) were used as masking layer only when not 
+overlapping with mangrove area from JRC-TMF (classes 12, 61-64 from 
+Transition map) or GMW. Mask of volcanic areas (lava flows) used to mask 
+tree cover. 
+Land cover Step 2 and 
+3 
+30m Global 1990-2020 Pekel et al., 2016 
+UMD Global 
+Cropland 
+Extension 
+UMD Cropland  Overlapping extent of cropland mapped in 2003, 2007, 2011, 2015 and 
+2019 from GLAD UMD. 
+Land use Step 2 30m Global 2003-2019 Potapov et al., 2022 
+ESA World 
+Cereal 
+ESA World 
+Cereal 
+ESA World cereal for cereal crop mapping: temporary crop extent was used 
+as masking layer. 
+Land use Step 2 10m  Global 2021 Van Tricht et al., 2023 
+Oil palm 
+plantation 
+Descals et al. 
+Oil palm 
+plantation 
+Industrial and smallholder map of closed-canopy oil palm plantations not 
+overlapping with mangrove area from JRC-TMF or GMW. 
+Land use Step 2 10m Global 2019 Descals et al., 2021 
+Coconut 
+plantation 
+Descals et al. 
+Coconut 
+plantation 
+Closed-canopy coconut palm. Plantation not overlapping with mangrove 
+area from JRC-TMF or GMW. 
+Land use Step 2 10m Global 2020 Descals et al., 2023 
+Global 
+mapping of 
+oil palm 
+planting year 
+Descals et al. 
+Oil palm year 
+Year of establishment of industrial and small-holder oil palm plantation 
+using a combination of Sentinel-1 and Landsat images. The planting year 
+layer was used and years from 1990 to 2020 were selected as exclusion 
+mask. 
+Land use Step 2  10m Global 1990-2020 Descals et al., 2024 
+Palm 
+Probability 
+model  
+Google Palm 
+probability 
+Probability estimates of palm occurrence (version ‘2025a’). We selected a 
+threshold higher or equal to 80%. 
+Land use Step 2 10m Global 2020 Clinton et al., 2024. 
+Forest Data Partnership, 
+2025 
+Coffee 
+Probability 
+model  
+Google coffee 
+probability 
+Probability estimates of coffee occurrence (version ‘2025a’). We selected a 
+threshold higher or equal to 90%. 
+Land use Step 2 10m Global 2020 Clinton et al., 2024. 
+Forest Data Partnership, 
+2025 
+Cocoa 
+Probability 
+model  
+Google cocoa 
+probability 
+Probability estimates of cocoa occurrence (version ‘2025a’). We selected a 
+threshold higher or equal to 90%. 
+Land use Step 2 10m Global 2020 Clinton et al., 2024. 
+Forest Data Partnership, 
+2025 
+ 
+15 
+Rubber 
+Probability 
+model  
+Google Rubber 
+probability 
+Probability estimates of rubber occurrence (version ‘2025a’). We selected a 
+threshold higher or equal to 59%. 
+Land use Step 2 10m Global 2020 Clinton et al., 2024. 
+Forest Data Partnership, 
+2025 
+WRI Global 
+Pasture 
+Watch 
+WRI Global 
+Pasture Watch 
+Cultivated and natural/semi-natural grassland map. Land use Step 1 30m Global 2020 Parente et al., 2024 
+WRI Spatial 
+Database of 
+Planted Trees 
+V1.0 
+WRI SDPT V1.0 Spatial Database of Planted Trees (version 1.0) differentiating plantation 
+forests from tree crops (stands of perennial tree crops, such as rubber, oil 
+palm, coffee, coconut, cocoa, and orchards) compiled by WRI. Tree crops 
+was used as a masking layer. 
+Land use Step 2 Various 
+scales 
+Global Varies Harris et al., 2019 
+WRI Spatial 
+Database of 
+Planted Trees 
+V2.1 
+WRI SDPT 
+Planted trees 
+and Tree crops 
+V2.1 
+Spatial Database of Planted Trees (version 2.1). The attribute ‘simpleType’ 
+was used to create a planted forests and a tree crop dataset. Tree crops 
+was used as a masking layer. 
+Land use Step  2 Various 
+scales 
+Global Varies Richter et al., 2024, 
+change log report for 
+version 2.1  
+WRI Spatial 
+Database of 
+Planted Trees 
+V3.0 
+WRI SDPT 
+Planted trees 
+and Tree crops 
+V3 
+Spatial Database of Planted Trees (version 3.0). Planted forests were used 
+in step 1 while tree crops were used in step 2 as a masking layer. 
+Land use Step 1 and 
+2 
+Various 
+scales 
+Global Varies Richter et al., 
+forthcoming in 2026 
+Source: JRC. 
+ 
+ 
+16 
+2.1.2. Approach 
+The approach for mapping forest areas in year 2020 at 10m resolution using the EUDR definition of 
+forests includes three steps:  
+• Step 1: mapping the maximum potential extent of forest cover for year 2020 globally. This 
+includes areas of currently unstocked forest land from harvesting operations, fire (when its 
+direct cause is natural) and other natural disturbance (e.g., storms, flooding, landslides, 
+drought, windthrow, lava flows, sediment flow or meandering rivers, natural flooding, insect 
+outbreaks). This step is crucial, as areas not included in the maximum potential forest cover 
+extent cannot be classified as forest cover in subsequent steps. It also includes an 
+intermediate step that maps high-confidence natural and planted forests to override the 
+exclusion masks applied in Step 2. 
+• Step 2: apply overlays and Boolean decision rules to reduce the maximum potential forest 
+cover extent to the EUDR forest definition using global datasets that cover tree height, 
+agricultural use (i.e. deforestation, cropland, tree crops, shifting agriculture and 
+agroforestry) and other land uses (i.e. non-forest ecosystems and urban). It also includes 
+minor corrections to the output layer (e.g. manual removal striping artefacts).  
+• Step 3: apply a Minimum Mapping Unit (MMU) of 0.5 ha to forest and non-forest patches. 
+Figure 1 illustrates the steps and decision rules in detail. The selection and integration of input 
+datasets are designed to balance commission and omission errors of forest cover globally. However, 
+this tendency may vary regionally and may even be reversed in intensively managed or man-made 
+forest landscapes. 
+ 
+17 
+Figure 1. Three-step process used to produce GFC2020 V3 using Boolean combination rules. The workflow 
+shows the specific input layers that have been revised (orange shading) or added (blue shading) compared to 
+the approach used to produce GFC2020 V2 (removed layers are not shown). The small footer number n 
+beneath some layer combinations indicates that at least n data layers co-occur.  
+ 
+Source: JRC. 
+
+ 
+18 
+2.1.3. Step 1: Maximum potential extent of forest cover 
+To create the potential extent of standing forest cover, we combined the following layers with equal 
+weights: ESA WorldCover 2021 tree cover and mangroves, WRI Tropical Tree Cover 2020 (≥70% 
+tree cover), and Global Mangrove Watch (GMW) 2020. We excluded tree cover from the UMD Global 
+Land Cover and Land Use 2019 dataset in Step 1 due to its coarser resolution and redundancy with 
+other global tree cover products. We incorporated the Copernicus LCFM 2020 tree cover and 
+mangrove dataset only where it coincided with tree cover or mangroves identified in ESA 
+WorldCover 2020 or 2021 with at least two out of 3 layers indicating tree cover. We used the 
+Google Natural Forest layer in three ways. First, we included areas with a forest probability ≥40% 
+that filled gaps in WRI Tropical Tree Cover 2020 to mitigate visual artefacts at dataset boundaries 
+and potential discontinuities due to tiling. Second, we included areas with a forest probability ≥70% 
+where ESA WorldCover 2021 classified land as shrubland or grassland within the following FAO 
+Global Ecological Zones: Tropical Moist Deciduous Forest, Tropical Dry Forest, Tropical Mountain 
+System, Subtropical Mountain System, and Temperate Mountain System. Third, to reduce potential 
+overestimation in dry tropical domains, we excluded areas with <60% probability in the Google 
+Natural Forest layer that were also mapped as shrubland in Copernicus LCFM with <20% tree cover 
+(Copernicus TCD), and where WRI Drivers indicated no disturbance or only non-permanent 
+disturbance, from Step 1.  
+To delineate the potential extent of temporarily unstocked forest, we first identified areas not 
+included in the potential standing forest extent (see previous paragraph) where UMD data indicated 
+>10% tree cover density in 2000, followed by tree cover loss between 2001 and 2020, and where 
+the dominant driver was classified as non-permanent disturbance in the WRI Drivers dataset (see 
+Table 1 for more details). We applied the same approach to: (i) areas with >10% tree cover density 
+in 2010 from UMD Tree Cover 2010 and tree cover loss from non-permanent disturbance between 
+2011 and 2020 from UMD Global Forest Cover Loss and WRI Drivers datasets; (ii) areas with >10% 
+tree cover density in 2000 that were mapped as burned forest in the UMD Global Forest Cover Loss 
+from Fire dataset (2001–2020); and (iii) areas mapped as plantation forest in the IIASA Forest 
+Management dataset where recent tree cover loss (2011–2020) was detected. For planted forests 
+in the IIASA Forest Management dataset with rotation periods longer than 15 years, we applied 
+stricter criteria: we included only areas with >10% tree cover density in 2010 and canopy height >5 
+m in 2020, based on the GSCH dataset. All rules combining historical tree cover, tree cover loss, and 
+specific disturbance drivers or forest management types were spatially constrained to areas 
+classified as shrubland or grassland in WorldCover 2021. We further excluded areas where post-
+loss land use was identified as pastureland in WRI Global Pasture Watch. 
+We combined the potential standing forest cover and the potential temporarily unstocked forest to 
+produce the Step 1 output, which represents the maximum potential extent of forest cover. In 
+parallel, we applied a conservative approach to delineate high confidence areas of natural and 
+planted forest, which serve as safeguards to prevent excessive masking in Step 2. 
+We defined high confidence natural forest by overlaying areas that IIASA Forest Management 
+classified as naturally regenerating, with or without signs of management, and where the Google 
+Natural Forest layer indicated a forest probability of at least 80%. We also included areas identified 
+as mangroves in Global Mangrove Watch, undisturbed tropical moist forest up to 2020 in the JRC 
+TMF dataset, and areas where WRI Drivers indicated no disturbance or only natural disturbance and 
+IIASA classified the forest as naturally regenerating without signs of management. We excluded 
+areas from this mask where IIASA Forest Management identified rubber plantations, where UMD 
+ 
+19 
+detected tree cover loss, or where JRC TMF detected disturbance (deforestation or forest 
+degradation) up to 2020 in areas dominated by permanent disturbance according to WRI Drivers.  
+We defined high confidence planted forest by first using the extent of planted forest from WRI 
+SDPT version 3.0. We excluded areas with less than 10% tree cover in both UMD datasets for 2000 
+and 2010, areas that IIASA Forest Management classified as rubber plantations, and areas that JRC 
+TMF identified as agricultural tree plantations, mainly rubber and oil palm. These exclusions ensure 
+that the SDPT dataset complies with the definition of planted forest under the EUDR. In addition, we 
+expanded the high confidence planted forest mask by including areas that IIASA Forest 
+Management mapped as planted or plantation forest where the probability of logging in WRI Drivers 
+exceeded 85%. We also included areas identified as potentially temporarily unstocked forest in Step 
+1 where the probability of logging in WRI Drivers exceeded 80%.  
+2.1.4. Step 2: Exclusion of areas outside forest definition 
+Three exclusion masks (tree height, agriculture use and other land use) were applied to the 
+maximum potential extent of forest cover (from Step 1) to align to the forest definition. 
+• Tree height: We excluded areas with top canopy heights below 5 meters when both the 
+UMD GFCH and GSCH gridded products (Pauls et al., 2024) reported heights under this 
+threshold. However, we retained areas where the JRC TMF dataset identified any type of 
+tropical moist forest, including undisturbed, degraded, regrowing, or mangrove forests, as 
+well as areas overlapping with high confidence natural or planted forest defined in Step 1. 
+We did not apply this mask to Boreal coniferous forest, Boreal tundra woodland, Boreal 
+mountain system, or Polar ecological zones. In addition, we excluded areas where at least 
+two of the three canopy height products UMD GFCH, GSCH, and META WRI reported canopy 
+heights below 5 meters under the following conditions: First, we applied this rule in areas 
+mapped as primary or naturally regenerating forest in the IIASA Forest Management 
+dataset where WRI Drivers identified logging as the dominant driver with a probability 
+below 50 percent, as this situation may indicate an overestimation of unstocked forest area 
+in Step 1. Second, we applied the rule in areas where WRI Drivers indicated no disturbance 
+or only wildfire or natural disturbances, where at least one data source classified the land 
+cover as non-tree cover according to ESA WorldCover 2020 or 2021 or Copernicus LCFM 
+2020, and where Google Natural Forest indicated a forest probability of 50 percent or 
+lower. We applied this condition to reduce potential overestimation of natural standing 
+forest cover in Step 1. We made an exception for areas identified as high confidence natural 
+or planted forest.  
+• Agricultural use: We generated this mask by integrating multiple datasets on recent 
+deforestation and cropland, and we gave additional emphasis to identifying tree crops, 
+shifting agriculture, and agroforestry systems.  
+o Deforestation: We used tree cover loss data from 2001 to 2020 produced by 
+Hansen et al., 2013 in areas dominated by commodity driven deforestation, shifting 
+agriculture, hard commodities, and settlements and infrastructure as identified by 
+Sims et al., 2025. We excluded from the mask areas that overlapped with forest 
+cover loss due to fire reported by Tyukavina et al., 2022, as well as areas classified 
+as high confidence planted forest, JRC TMF forest including undisturbed, degraded, 
+and regrowth classes, and mangroves reported by Vancutsem et al., 2021. These 
+areas retain potential for recovery or regeneration, and tree cover loss in these 
+ 
+20 
+contexts does not necessarily indicate a change in land use. We also added areas of 
+deforestation with or without subsequent regrowth from JRC TMF, considering only 
+regrowth younger than five years. This category included deforestation to 
+agricultural plantations (mainly rubber and oil palm) identified by JRC TMF, except in 
+areas classified as high confidence natural or planted forest. We excluded areas 
+where forest regrowth exceeded five years because we assumed that forest 
+remained the dominant land use following regeneration on abandoned agricultural 
+land. We included regrowth younger than five years because these areas may not 
+meet the forest definition in terms of land use, tree cover, or height, for example in 
+shifting agriculture systems. 
+o Cropland: We produced a maximum extent mask of global cropland from UMD for 
+the period 2003 to 2019 based on Potapov et al., 2022. We also incorporated the 
+extent of World Cereal temporary crops and UMD GLC cropland, except in areas 
+identified as high confidence natural or planted forest. In addition, we fully 
+integrated ESA WorldCover cropland for the year 2021 into this exclusion mask. 
+Within the tropical rainforest ecological zone, we prioritized excluding cropland data 
+from GCEP where it overlapped with areas showing canopy heights below 5 meters 
+according to META WRI and GSCH.   
+o Tree crops: We produced a maximum extent of tree crops from the WRI SDPT 
+dataset merging V1.0, V2.1 and V3.0 together, excluding areas identified as high 
+confidence natural or planted forest. We extended this mask to areas mapped as 
+fruit trees in the IIASA Forest Management dataset, except where they overlap with 
+≥60% natural forest probability in the Google product or with high-confidence 
+planted forest, and to areas mapped as palm, coffee, rubber, and cocoa based on a 
+combination of probability and stratification layers. For palm plantation, we included 
+the extent of global industrial and smallholder oil palm and coconut plantation from 
+Descals et al., 2021, 2023 and 2024, together with the palm probability dataset 
+from Google, except in areas mapped as mangroves in GMW or high confidence 
+planted forest (more details on the probability threshold in Table 1). For coffee 
+plantations, we used the Google coffee probability dataset. However, we excluded 
+areas where: (i) coffee crop production was less than 200 ha according to the 
+CROPGRIDS dataset; (ii) land was mapped as high-confidence planted forest or 
+naturally regenerating forest without signs of management (i.e., primary forest) in 
+the IIASA Forest Management dataset; (iii) the Google natural forest probability 
+exceeded 80%; or (iv) the JRC TMF dataset classified the area as undisturbed moist 
+forest. For rubber plantations, we used the Google rubber probability dataset, except 
+in areas mapped as high-confidence natural forest or primary forest in the IIASA 
+Forest Management dataset, or where UMD detected tree cover loss due to fire 
+between 2001 and 2020 (as rubber is often misclassified as burned forest). For 
+cocoa plantation, we used the Google cocoa probability dataset, except in areas 
+cocoa crop production was less than 50 ha according to the CROPGRIDS dataset or 
+where IIASA Forest Management mapped the land as naturally regenerating and the 
+Google natural forest probability exceeded 80%. Finally, we used coffee, cocoa and 
+cashew crop area from CROPGRID as stratification layer to refine the masking of 
+tree crops with specific rules based on canopy height (less than 5m from META/WRI 
+or GSCH products), cropland (i.e. GCEP) or potential agricultural commodity datasets 
+(i.e. other land cover classification from JRC TMF) except in areas mapped as high 
+confidence natural or planted forests.  
+ 
+21 
+o Shifting agriculture: We identified areas as shifting agriculture where shifting 
+cultivation had a ≥60% probability and was the dominant driver of forest loss in the 
+WRI Drivers dataset, and where areas were mapped as naturally regenerating forest 
+in the IIASA Forest Management dataset, had canopy height <5 m in the META/WRI 
+dataset, and were classified as degraded, deforested, or forest regrowth in 2020 in 
+the JRC TMF dataset, excluding areas mapped as tree cover loss due to fire (2001–
+2020) in the UMD dataset (to account for potential natural regrowth after fire), as 
+high-confidence planted forest, or as old regrowth (>5 years) in the JRC TMF 
+dataset. 
+o Agroforestry: We used areas mapped as agroforestry in the IIASA Forest 
+Management dataset, excluding those where the Google natural forest probability 
+was ≥85% or where areas were classified as high-confidence planted forest or 
+undisturbed moist forest in the JRC TMF dataset. 
+• Other land use: We generated this mask by integrating multiple datasets on non-forest 
+ecosystems and urban land use, supplemented with manual corrections to remove 
+artefacts. 
+o Non-forest: We identified areas as non-forest ecosystems where the Google natural 
+forest probability was ≤20% and where areas were mapped as permanent 
+disturbance in the WRI Drivers dataset or as naturally regenerating forest in the 
+IIASA Forest Management dataset (i.e., potential commission error in the IIASA 
+dataset), and where at least two of the three canopy height products (UMD GFCH, 
+GSCH, and META/WRI) reported canopy heights <5 m; we did not apply these rules in 
+areas mapped as high-confidence natural or planted forest. We also applied a water 
+mask derived from the JRC Global Surface Water database, including permanent 
+water, new permanent water, seasonal-to-permanent water transitions, and 
+permanent water bodies from the 2021 ESA WorldCover dataset. In addition, we 
+used the “other land cover” class from the UMD dataset, covering true desert, semi-
+arid areas, dense short vegetation, salt pans, sparse wetland vegetation, and ice, as 
+an exclusion layer, except where it overlapped with tree cover loss due to fire (UMD) 
+or high-confidence planted forest. We further applied wetland and bare soil classes 
+from the 2020 and 2021 ESA WorldCover datasets, as well as bare soil from 
+Copernicus LCFM 2020, as exclusion layers, except in areas mapped as high-
+confidence planted forest. Finally, we incorporated the IIASA mining dataset to mask 
+trees under mining land use where coinciding with tree cover loss from UMD, except 
+in areas mapped as high-confidence planted forest. 
+o Urban use: we took the maximum extent of UMD GLC built-up (0-100% built-up 
+classes), JRC GHS-BUILT-C and built-up classifications from WorldCover (2020, 
+2021), Copernicus LCFM 2020 and ESRI LULC 2020 to create an urban mask. We 
+also included 0-10% built up class from UMD GLC where META/WRI indicated less 
+than 5m height. We included JRC GHS SMOD to mask out trees under urban use 
+(pre-processing details in Table 1).  
+o Artefacts remaining in input datasets that propagated to the final map such as the 
+regionally visible stripe patterns due to the Landsat-7 scan line corrector failure 
+were manually masked out or filled using World Cover Tree Cover 2021 extent. The 
+mask from the Global Surface Water database on lava flows was used to remove 
+mapped forest pixels in volcanic area. Finally, isolated pixels forming blocky 
+ 
+22 
+patterns smaller than 4 ha, introduced solely by the 100 m IIASA Forest 
+Management Layer, were filtered across the tropical belt. 
+2.1.5. Step 3: Post-processing 
+To align with the forest definition, we applied a minimum mapping unit of 0.5 hectares. Patches of 
+forest that did not reach the area of 0.5ha were labelled non-forest. Likewise, non-forest patches 
+smaller than 0.5ha were labelled forest. This post-processing operation was based on the 
+computation of each pixel area in square meters (latitude-dependent). We used the eight-neighbour 
+rule to map patches using connected pixels in cardinal and intercardinal directions.  
+2.2. Mapping approach for GFT2020 version 1 
+2.2.1. Input datasets 
+Implementing forest type definitions at the global scale, particularly the distinction between 
+primary, naturally regenerating, planted, and plantation forests, remains constrained by the limited 
+availability of consistent and publicly accessible global datasets. Mapping primary forests presents 
+a major challenge because there are no universally agreed spatial indicators or methodologies that 
+reflect the complexity of the definition. For this class we identify areas with minimal human 
+disturbance and limited pressure on ecological processes. To that end we combine maps of large 
+and continuous forest patches with data layers that indicate highly protected areas alongside 20–
+30-year time series capturing human-induced forest disturbances (see Table 2). For mapping 
+planted and plantation forests, we integrate a globally harmonized compilation of national planted 
+forest datasets with consistent global remote sensing products that capture forest management 
+type, tree cover, tree height, and tree cover loss, along with their respective direct drivers. 
+Under the EUDR definition, forest degradation refers to the conversion of primary forest to 
+plantation forest, planted forest, or other wooded land, or the conversion of naturally regenerating 
+forest to plantation forest or other wooded land (see Annex 1). Therefore, the classification of the 
+initial state in 2020 only requires a distinction between three categories: primary forest, naturally 
+regenerating forest, and other forest types, which by definition include planted and plantation 
+forests. In this context, GFT2020 groups planted and plantation forests into a single category. From 
+a remote sensing perspective, mapping planted forest presents greater challenges than mapping 
+plantation forest. Planted forests often have longer rotation periods, less regular spacing, and more 
+heterogeneous age structures. At maturity, they can resemble naturally regenerating forests in both 
+structure and composition. Plantation forests, in contrast, typically consist of one or two species, 
+even age classes, and regular spacing, which produce more uniform and clearly detectable spectral 
+and textural patterns in satellite imagery. 
+The JRC released a preliminary version of GFT2020 (version 0) in December 2024. This map built on 
+forest cover mapped in GFC2020 V1. The prototype map, produced with a simplified approach, 
+served the collection of initial feedback. In contrast, the production of GFT2020 V1 is based on the 
+latest version of GFC2020 (version 3) and employs more input data layers and a significantly 
+elaborated methodology. We therefore do not report this methodology as an update of the 
+preliminary map, and we also do not show statistical comparisons between GFT2020 V0 
+(preliminary map) and V1 (the map of this report).
+ 
+23 
+Table 2. Description of the datasets used as input layers in GFT2020 V1, including details of any pre-processing steps applied to certain datasets to reduce potential 
+noise (“salt and pepper” effect) propagation.  
+Dataset name Dataset 
+abbreviation 
+Description Thematic 
+information 
+Step in 
+workflow 
+Resolutio
+n 
+Scope Year Reference 
+FAO Global 
+Ecological Zones 
+FAO GEZ Global Ecological Zones from FAO. We used the zones of 
+boreal mountain system, boreal tundra woodland and 
+boreal coniferous forest as stratification. 
+Stratification Step 2 Various 
+scales 
+Global 2010 FAO 2012 
+WRI Drivers of 
+global forest 
+loss 
+WRI Drivers forest loss Dominant driver of tree cover loss from 2001-2024 and its 
+associated probability, defined as the direct driver that 
+caused the majority of tree cover loss within each 1 km cell 
+over the time period. Permanent drivers include permanent 
+agriculture, hard commodities, shifting cultivation and 
+settlements and infrastructure. Temporary or non-
+permanent drivers include logging, wildfire and other 
+natural disturbances. Anthropogenic drivers include 
+permanent agriculture, hard commodities, shifting 
+cultivation and settlements, infrastructure and logging. 
+Stratification Step 1 and 2 1km Global 2001-
+2024 
+Sims et al. 2025 
+IIASA Global 
+Forest 
+Management 
+IIASA Forest 
+Management 
+Revised version of the forest management map including 
+classes on naturally regenerating forest with/without signs 
+of management, planted and plantation forests, rubber, oil 
+palm, agroforestry and fruit plantations. We apply a 
+minimum mapping unit of 4 ha to the combined planted 
+and plantation forest classes to filter out potential noise 
+and reduce the blocky pattern of isolated patches. We then 
+use the resulting extent of planted and plantation forests 
+separately. 
+Stratification Step 1 and 2 100m Global 2015 Lesiv et al., 2026 
+JRC Global 
+Forest Cover 
+2020 
+ JRC GFC Globally harmonized and consistent representation of forest 
+/ non-forest cover for year 2020 (GFC2020 V3).  
+Forest cover Step 3 10m Global 2020  This report. 
+Google Natural 
+forest 
+Google natural forest Probability of natural forest presence, excluding planted 
+forest and trees outside forest definition (e.g. tree crops). 
+Tree cover Step 1 and 2 10m Global 2020 Neuman et al, 2025 
+UMD Global 
+Forest Cover 
+loss 
+UMD GFC loss Global forest cover loss from UMD GLAD.  Forest disturbances 
+(natural and 
+anthropogenic) 
+Step 2 30m Global 2001-
+2020 
+Hansen et al., 2013 
+ 
+24 
+UMD Global 
+Forest Cover 
+loss from fire 
+UMD GFC - fire Global forest cover loss from fire from UMD GLAD. Stratification Step 1 and 2 30m Global 2001-
+2020 
+Tyukavina et al., 2022 
+JRC Tropical 
+Moist Forest 
+JRC TMF Transition map and annual change datasets of forest cover 
+change in the humid tropics from EC JRC. The extent of 
+undisturbed and degraded forest up to end of 2020 was 
+used.  
+Land cover/use Step 1 and 2 30m Tropics 1990-
+2020 
+Vancutsem et al., 2021, 
+updated to version 
+2024 
+JRC Tropical 
+Moist Forest 
+Degradation and 
+Deforestation 
+Year 
+JRC TMF -Disturbance  Spatially-explicit areas of deforestation and forest 
+degradation in tropical moist forests, with pixel values 
+denoting the year of occurrence, derived using Landsat 
+time-series imagery. Forest degradation from selective 
+logging, fire or natural events is defined as temporary 
+disturbances occurring for up to 2.5 years, while 
+deforestation is a longer-term disturbance where 
+disruptions to tree cover (absence of tree foliage cover 
+within a 30-m pixel) are visible for more than 2.5 years.  
+Forest disturbances 
+(natural and 
+anthropogenic) 
+Step 2 30m Tropics 1990-
+2020 
+Vancutsem et al., 2021, 
+updated to version 
+2024 
+Deforestation 
+alerts 
+RADD alerts We use near-real-time forest disturbance alerts in primary 
+humid tropical forests and select only high-confidence 
+(confirmed) alerts. We include alerts from January 2019 to 
+December 2020 for Africa, and from January 2020 to 
+December 2020 for South America, Central America, and 
+Southeast Asia. 
+Forest disturbances 
+(natural and 
+anthropogenic) 
+Step 2 10m  Tropics 2019-
+2020 
+Reiche et al., 2021 
+WRI Spatial 
+Database of 
+Planted Trees 
+3.0 
+SDPT V3 Globally harmonized spatial Database of Planted Trees 
+(version 3.0). We used planted forests to map 
+planted/plantations which are defined as stands—other than 
+tree crops—grown for wood and wood fiber production or 
+for ecosystem protection against wind and/or soil erosion. 
+We apply a 4 ha minimum mapping unit to planted forests 
+where they overlap with planted or plantation areas from 
+the IIASA Forest Management layer, in order to reduce noise 
+in regions where the IIASA map is the only input layer to the 
+SDPT collection. We used tree crops from SDPT as exclusion 
+mask in step 1 and 2. 
+Land use Step 1 and 2 Various 
+scales 
+Global Varies Richter et al., 
+forthcoming in 2026 
+Global mining 
+land use 
+IIASA Mining  Visual interpretation and delineation of large-scale, 
+artisanal and small-scale mining sites using Sentinel-2 
+imagery. The polygon extent was used in combination with 
+any tree cover loss from UMD GFC loss. 
+Land use Step 2 Scale not 
+specified 
+Global 2019 Maus et al., 2022 
+Intact Forest 
+Landscape 
+UMD IFL Forest ecosystems minimally influenced by human activity, 
+with (i) an area of at least 500 km2 (50,000 ha), (ii) a 
+minimum width of 10 km and (iii) a minimum 
+corridor/appendage width of 2 km. Areas with evidence of 
+Continuous expanse 
+of natural forest with 
+no remotely detected 
+signs of human 
+Step 2 Scale 
+1:1,000,000 
+Global 2020 Potapov et al., 2017 
+ 
+25 
+certain types of human influence are considered disturbed 
+or fragmented and consequently not eligible for inclusion in 
+the IFL. 
+activity, and large 
+enough that all native 
+biodiversity could be 
+maintained 
+Forest 
+Landscape 
+Integrity Index 
+FLII The Forest Landscape Integrity Index integrates data on 
+observed and inferred forest pressures and lost forest 
+connectivity to generate a continuous index of forest 
+integrity as determined by degree of anthropogenic 
+modification. We select forest areas with an index of 9.6 or 
+higher and apply a 100-hectare minimum mapping unit to 
+reduce noise and prevent its propagation to the final output. 
+Interiors and natural 
+edges of more or less 
+unmodified naturally 
+regenerated (i.e. non-
+planted) ecosystems, 
+comprised entirely or 
+almost entirely of 
+native species. 
+Step 2 300m Global 2019 Grantham et al., 2020 
+World Database 
+on Protected 
+Areas 
+WDPA Global database on protected areas from the United 
+Nations Environment Programme and the International 
+Union for Conservation of Nature (IUCN) and compiled by 
+over 600 data providers ranging from governments to 
+individuals. The highest IUCN categories were selected as 
+proxy for primary forest: Category Ia – strict nature reserve; 
+Category Ib – wilderness area; Category II – national park. 
+Forest management - 
+protection of 
+biodiversity and 
+ecosystem processes, 
+absence/limited direct 
+human impacts 
+Step 2 Scale not 
+specified 
+Global Varies www.protectedplanet.ne
+t 
+European 
+primary forest 
+database V2.0 
+EPFD Harmonized geodatabase of 48 datasets of primary forests 
+(mostly field-based) spread across 33 European countries. 
+Primary forest definition follow the FAO and include old-
+growth, late-successional forests, but also some early seral 
+stages and young forests that originated after natural 
+disturbances and natural regeneration after management 
+(e.g. 60–80 years after human impacts plus the length of a 
+typical rotation cycle for clear cut forests) 
+Land use Step 2 Scale not 
+specified 
+Europe Varies Sabatini et al., 20212 
+Source: JRC. 
+ 
+ 
+2 Given the limited availability of primary forest data across Europe, this dataset served as the sole continental-level resource used in GFT2020 V1. 
+ 
+26 
+2.2.2. Approach 
+The approach for mapping forest types in year 2020 at 10m resolution builds on the extent of 
+forest mapped in GFC2020 V3, which by default is considered naturally regenerating forest. There 
+are three main steps:  
+• Step 1: We map the extent of planted and plantation forests by combining global collections 
+of national and regional data on planted forests with a wall-to-wall forest management 
+map stratified by drivers of forest loss and levels of forest naturalness. We also include 
+areas of currently unstocked forest land resulting from harvesting operations. We apply a 
+Minimum Mapping Unit (MMU) of 0.5 ha to the resulting planted/plantation forest.  
+• Step 2: We map the extent of primary forests by creating a maximum primary forest layer 
+that combines datasets on intact forests, high-integrity landscapes, and protected areas. We 
+then exclude areas where anthropogenic disturbances have been recorded over the past 
+20–30 years, as well as areas identified as planted or plantation forests in Step 1. To 
+further prevent overlap between primary forest and anthropogenic areas, we removed tree 
+crop and mining classifications (sourced from WRI SDPT V3 and IIASA) from the primary 
+forest extent. While GFC2020 V3 limited the use of these datasets due to uncertainty and 
+resolution constraints, we apply here a strict exclusion rule to ensure the integrity of the 
+primary forest extent. Finally, we apply a MMU of 3 ha to the resulting primary forest. 
+• Step 3: We assemble the outputs of Steps 1 and 2 within the forest cover extent of 
+GFC2020 V3. In doing so, we reclassify planted forest patches smaller than 0.5ha (MMU at 
+the end of Step 1) and primary forest patches smaller than 3 hectares (MMU at the end of 
+Step 2) as naturally regenerating forest. We then address isolated forest patches by 
+checking whether mapped primary or planted forest areas fall below 0.5 hectares; if they 
+do, the algorithm assigns naturally regenerating forest. In the final step, we relabel 
+naturally regenerating forest patches smaller than 0.5 hectares to match the dominant 
+surrounding class (primary or planted forest). We make exceptions for gaps caused by 
+selective logging (such as roads, skid trails, and log decks), shifting cultivation, or fire in 
+tropical regions, and we keep these areas classified as naturally regenerating forest even 
+when they are smaller than 0.5 hectares. 
+Figure 2 illustrates the steps and decision rules in detail. We design the selection and integration of 
+input datasets to identify planted or plantation forests with relatively high confidence. When 
+multiple data layers lack supporting evidence or present contradictions, we classify the area as 
+naturally regenerating forest. Similarly, for primary forest, we adopt a conservative approach, 
+classifying a forest as primary only if it meets strict criteria for intactness, low fragmentation or 
+protected status, and if all such areas show no evidence of human disturbance. 
+ 
+27 
+Figure 2. Three-step process used to produce GFT2020 V1.  
+ 
+Source: JRC. 
+2.2.3. Step 1: Extent of planted and plantation forest 
+For mapping the extent of planted and plantation forest, we use SDPT V3, applied the pre-
+processing steps described in Table 2 and excluded areas mapped as undisturbed tropical moist 
+forest in JRC TMF; degraded tropical moist forest in JRC TMF where the Google natural forest 
+probability was ≥80%; or naturally regenerating forest (with or without signs of management) from 
+IIASA Forest Management Map where the Google natural forest probability was ≥50%. We also 
+excluded areas where the dominant driver in the WRI Drivers of Tree Cover Loss was wildfire and 
+the area was mapped as fire-related tree cover loss in UMD Global Forest Change. 
+Next, we incorporated planted forest from the IIASA Forest Management Map, applying the pre-
+processing steps described in Table 2, but excluded areas overlapping with undisturbed tropical 
+moist forest from JRC TMF. We also included plantation forest from the IIASA Forest Management 
+Map, after pre-processing (Table 2), where the Google natural forest probability was ≤20%, or 
+where the WRI Drivers of Tree Cover Loss identified logging as the dominant driver of loss in UMD 
+Global Forest Change and the Google natural forest probability was ≤70%. In all cases, we excluded 
+areas overlapping with undisturbed tropical moist forest from JRC TMF. 
+We further expanded the planted/plantation forest extent to include areas where the WRI Drivers of 
+Tree Cover Loss mapped logging with a class probability ≥70% and the Google natural forest 
+probability was ≤10%. We also included areas classified as “deforestation to plantation” in JRC TMF 
+where the Google natural forest probability was ≤10%. 
+Finally, we excluded areas classified as tree crops in SDPT and mangroves in Global Mangrove 
+Watch. We applied a minimum mapping unit (MMU) of 0.5 ha to the final planted/plantation forest 
+layer.  
+
+ 
+28 
+2.2.4. Step 2: Extent of primary forest 
+To create the extent of primary forest, we first identified potential primary forest using the Forest 
+Landscape Integrity Index and applied the pre-processing steps described in Table 2 for this layer. 
+We then incorporated the Intact Forest Landscape dataset, undisturbed forests (including 
+mangroves) from JRC TMF, and protected areas from the WDPA and EPFD. In boreal forest 
+ecological zones, as defined by FAO, we added areas mapped as tree cover loss from fire (2001–
+2020) in UMD Global Forest Change, areas where wildfire was the dominant driver in WRI Drivers of 
+Tree Cover Loss, areas classified as primary forest in IIASA Forest Management Map, and areas 
+where the Google probability of natural forest was ≥60%. 
+From this potential primary forest extent, we excluded areas where the dominant driver was 
+anthropogenic in WRI Drivers of Tree Cover Loss, or wildfire in tropical moist forests from JRC TMF, 
+assuming that all fires in this domain are directly or indirectly human-induced, and where UMD tree 
+cover loss, JRC TMF deforestation or degradation, or RADD disturbance alerts occurred up to the end 
+of 2020. Additionally, we removed areas already classified as planted/plantation forest from Step 1, 
+tree crops from SDPT V3, and mining areas from the IIASA dataset. Finally, we applied a minimum 
+mapping unit (MMU) of 3 ha to generate the final primary forest extent. 
+2.2.5. Step 3: Post-processing 
+Post-processing in Steps 1 and 2 removed planted forest patches smaller than 0.5 ha (Figure 3A) 
+and primary forest patches smaller than 3 ha (Figure 3B), respectively. In Step 3, we cross these 
+two inputs with JRC Global Forest Cover V3 (GFC2020 V3) to reclassify those removed patches as 
+naturally regenerating forest. We then applied multiple MMU cleanings to reduce spurious 
+fragmentation in the three-class forest-type product, which reconciles the baseline GFC2020 V3 
+with thematic masks for primary and planted/plantation forest. The baseline GFC2020 defines the 
+forest domain and assigns the default class “naturally regenerating forest” wherever forest exists 
+and no override is needed. The two auxiliary masks act as constraints, enforcing the “primary” class 
+and the “planted” class, respectively. MMU logic prevents small, isolated patches of naturally 
+regenerating forest from persisting within or along the edges of primary or planted areas, avoiding 
+a salt-and-pepper pattern inconsistent with the intended cartographic resolution. 
+The workflow first reclassified all overlapping pixels of naturally regenerating forest from GFC2020 
+V3 with the primary forest mask as primary forest. It then evaluates the spatial contiguity of 
+remaining naturally regenerating pixels using 8-neighbour connected-component analysis. For each 
+pixel, we calculate the connected component’s size in area; components ≤5,000 m² (0.5 ha) fall 
+below the MMU. Naturally regenerating pixels within these small components are reclassified to 
+primary, producing an MMU-corrected “primary-enforced” map (Figure 3C). The procedure is 
+repeated independently for the planted forest: pixels flagged by the planted/plantation mask are set 
+to planted/plantation and the remaining naturally regenerating pixels are analyzed for connected-
+component size, and components ≤0.5 ha are reclassified to planted/plantation, yielding an MMU-
+corrected “Planted-enforced” map (Figure 3D). 
+We then merged the two corrected products into a single categorical map giving priority to 
+planted/plantation forest followed by primary forest and finally naturally regenerating forest. Pixels 
+outside the forest domain remain mapped as non-forest. 
+Finally, we applied a last consistency check to the merged map to remove any residual naturally 
+regenerating fragments below 0.5 ha MMU. We isolated naturally regenerating pixels, recomputed 
+connected-component areas using 8-neighbour connectivity and the 0.5 ha threshold, and 
+ 
+29 
+reclassified the given pixels or below the MMU to the dominant surrounding forest type (i.e., primary 
+or planted/plantation). 
+Overall, the MMU procedure acts as an area-based cartographic generalization. It preserves the 
+three-class logic (primary, planted/plantation, naturally regenerating within the forest domain) while 
+enforcing minimum patch sizes for naturally regenerating forest and reducing micro-patches 
+caused by mask interactions or pixel-level noise. Exceptions include gaps within primary forest 
+patches caused by human-driven disturbances in the tropics, such as selective logging (roads, skid 
+trails, log decks), shifting cultivation, or tropical fires, identified using datasets such as forest 
+degradation from the JRC TMF, logging areas from the WRI Drivers of Tree Cover Loss, or 
+disturbance alerts from RADD. These areas, often smaller than 0.5 ha, remain classified as naturally 
+regenerating forest. 
+ 
+ 
+ 
+30 
+Figure 3. Post-processing step of GFT2020 including reclassification of small and isolated patches of 
+planted/plantation forest to naturally regenerating (a), reclassification of small and isolated patches of 
+primary forest to naturally regenerating (b), reclassification of small patches of naturally regenerating 
+surrounded by primary forest to primary forest (c) and reclassification of small patches of naturally 
+regenerating surrounded by planted/plantation forest to planted/plantation forest (d).  
+ 
+Source: JRC. 
+
+ 
+31 
+2.3. Accuracy assessment of GFC2020 V3 
+We conducted an accuracy assessment of the GFC2020 V3 map with an independent validation 
+dataset to evaluate the accuracy of the map at the global and continental levels. The validation is 
+done following good practices for accuracy assessment of land cover maps (Strahler et al., 2006) 
+and meets the requirements of stage 3 validation guidelines of the Land Product Validation (LPV) 
+subgroup of the Committee on Earth Observing Satellites (CEOS) (Tyukavina et al., 2025). The full 
+protocol, including sampling design, response design, and statistical analysis, is described in detail 
+and was applied to estimate the accuracy of GFC2020 V2 in Colditz et al. (2025a). The following 
+section outlines the main steps of this protocol and its application to GFC2020 V3. 
+The accuracy assessment uses 21,752 sample units from the validation dataset of the Copernicus 
+Global Land Service Land Cover product for the year 2015 (CGLS-LC100) (Tsendbazar et al., 2020, 
+2021) that consist of Primary Sample Units (PSU) of 100x100m divided into 100 10x10m 
+Secondary Sampling Units (SSU). A protocol (Colditz et al., 2025a) was developed to reinterpret and 
+label sample units using very high resolution (VHR) imagery near the EUDR cut-off date (31 
+December 2020), applying the EUDR forest definition to the central 10×10 m SSU while considering 
+the broader PSU context to interpret land-use and assess patch size and connectivity. Interpreters 
+also reported on the forest type or the land use type for non-forest assignments.  
+From the 21,752 sample units, interpreters could not assign classes to 24 sample units while 62 
+sample units were not associated with a strata class. For the comparison of forest area estimates 
+with FAO-FRA 2025, we intersected the sample with the FAO Global Assessment Unit Layer (FAO 
+2015), reducing the sample by an additional 54 sample units. The final reference set (Colditz et al., 
+2025b) with 21,612 sample units was crossed with GFC2020 V3 to report the accuracy metrics. We 
+use the formulas from Stehman (2014), applicable to the case where the stratification does not 
+correspond to the map and to account for unequal inclusion probabilities of sampled units. From 
+this probability confusion matrix we derived overall accuracy, producer and user accuracy and 
+associated omission and commission errors. We derived forest area and variance estimates 
+(reported for the 95% confidence interval) from the final reference set following the stratified 
+estimation approach from Stehman (2013) and Stehman (2014).  
+We then compared area estimates from the reference dataset at global and continental scales with 
+those derived from the three versions of the GFC2020 map (V1, V2, and V3), as well as with global 
+and regional estimates reported in FAO-FRA-2025 (FAO, 2025) for 2020 and the FAO FRA-2020 
+Remote Sensing Survey for 2018, which was based on a sample of over 400,000 units (FAO, 2022). 
+Forest areas derived from GFC2020 are calculated by summing the surface area of all pixels 
+mapped as forest within the GAUL country delineation (FAO 2015) in a WGS84-referenced 
+geographic coordinate system; the geodesic area calculation inherently accounts for latitude-
+dependent pixel size. The global forest area from FAO-FRA builds on national reporting of forest 
+area for year 2020 reported in the FRA-2025. 
+Note that no formal accuracy assessment for the three main forest types in GFT2020 is yet 
+available; it is only applicable to the forest/non-forest mapping.  
+ 
+32 
+3. Results 
+3.1. Data access 
+The Global Forest Cover and Type maps are open source and freely accessible for visualisation and 
+download at: 
+— EU Forest Observatory website (visualisation): https://webobstest.jrc.cec.eu.int/forest/ - select 
+under the layer symbol the map (default is GFC2020 V3).  
+— JRC Data catalogue (metadata) : 
+• GFC2020 V3: https://data.jrc.ec.europa.eu/dataset/8c561543-31df-4e1b-9994-
+e529afecaf54  
+• GFT2020 V1: http://data.europa.eu/89h/45182662-3015-4a25-8d1e-aa857d75235d  
+— Forobs website (download by 10 degree tiles) : 
+• GFC2020 V3: https://forobs.jrc.ec.europa.eu/GFC  
+• GFT2020 V1: https://forobs.jrc.ec.europa.eu/GFT 
+— JRC Big Data Analytics Platform (download global mosaic) : 
+• GFC2020 V3: https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/FOREST/GFC2020/LATEST/  
+• GFT2020 V1: https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/FOREST/GFT2020/LATEST/  
+— WMS (visualisation, links to be placed in a GIS software) : 
+• GFC2020 V3: https://ies-ows.jrc.ec.europa.eu/iforce/gfc2020/wms.py?  
+• GFT2020 V1: https://ies-ows.jrc.ec.europa.eu/iforce/gft2020/wms.py? 
+— Google Earth Engine asset (visualisation and processing) : 
+• GFC2020 V3: https://developers.google.com/earth-
+engine/datasets/catalog/JRC_GFC2020_V3  
+• GFT2020 V1: https://developers.google.com/earth-
+engine/datasets/catalog/JRC_GFC2020_subtypes_V1  
+ 
+ 
+The users are invited to refer to the frequently asked questions of the EU Forest Observatory 
+website for further information on these maps:  
+https://webobstest.jrc.cec.eu.int/Frequently_Asked_Questions_EUFO.docx  
+ 
+33 
+3.2. The global forest cover map for year 2020 V3 
+3.2.1. Map results 
+The Global Forest Cover map for 2020 (V3) depicts the global forest extent according to the EUDR 
+forest definition for that year (Figure 4). The highest forest proportions occur in boreal zones, 
+including Canada and Siberia, as well as in the three tropical humid forest basins: the Amazon 
+Basin, the Congo Basin, and insular South-East Asia (Figure 5A).  
+Figure 4. Map of GFC2020 V3.  
+ 
+Source: JRC. Country delineation from GISCO 2024. 
+Spatial analysis of the relative difference between GFC2020 V2 and GFC2020 V3 shows a global 
+decrease in forest cover in V3, with several distinct hotspots (Figure 5B and 5C). In South America, 
+forest cover declines by more than 20% in the Caatinga and Cerrado biomes. Across Africa, 
+deciduous forests and woodland savannas show similarly strong reductions. 
+We also observe a 5–20% decrease in forest cover between map version 2 and 3 in boreal regions 
+of Canada, the United States, and Sweden, as well as in the tundra–taiga transition zone. This 
+reduction likely results from improved forest representation in open landscapes through the 
+integration of tree cover density and height information. Additional notable decreases occur in West 
+Africa, Central America, along the western margin of the Amazon Basin (including Peru, Ecuador, 
+and Colombia), and in Indonesia (notably Java, Sumatra, and central Kalimantan). These declines 
+likely reflect the exclusion of agricultural tree plantations, shifting cultivation, and agroforestry 
+systems. 
+Conversely, the analysis identifies localized hotspots of increased forest cover in GFC2020 V3 
+compared to V2. These increases concentrate in the eastern Brazilian Amazon, Malaysia, and parts 
+of Indonesia, reflecting improved representation of plantation forests, such as pulp plantations of 
+acacia or eucalyptus against agricultural tree plantations (e.g. rubber and oil palm). In version 3 we 
+also detect higher forest cover in the western and central United States, Canada, and scattered 
+areas of Europe. These increases likely result from improved identification of temporarily unstocked 
+forests following disturbance, enabled by the higher-resolution stratification layer (e.g., WRI Drivers) 
+and refined decision rules.  
+
+ 
+34 
+Figure 5. Proportion of GFC2020 V3 forested land within 1° resolution cells (panel a). Relative difference 
+between forest area in GFC2020 V2 and GFC2020 V3 (panel b). Absolute difference between forest area in 
+GFC2020 V2 and GFC2020 V3 (panel c). White cells indicate areas with less than 0.1 Mha of forest cover in 
+GFC2020 V2. 
+ 
+Source: JRC. Land boundaries are derived from GISCO 2024. 
+
+ 
+35 
+The revised approach better captures unstocked forest areas following clear-cut harvesting (Figure 
+6A) and fire (Figure 6B). It also clarifies the forest–non-forest boundary in dry tropical landscapes 
+by applying an intermediate method that reduces the underestimation of forest in GFC2020 V1 
+while avoiding the potential overestimation associated with other wooded land in GFC2020 V2 
+(Figure 6C). In GFC2020 V3, shifting cultivation systems, characterized by mosaics of small 
+cultivated fields and fallow land at different stages of vegetative recovery, are now excluded from 
+forest cover (except when a forest regrowth signal of more than five consecutive years after 
+deforestation observation is confirmed in the JRC-TMF product), compared to the partial exclusions 
+applied in earlier versions (Figure 6D). Exclusions have also improved in mixed urban and 
+agricultural landscapes. Agroforestry systems, which are difficult to detect and separate from 
+natural forest, are now more effectively excluded through enhanced data inputs and refined 
+decision rules (Figure 6E). However, this stricter approach may introduce new issues, such as more 
+pronounced blocky patterns and reduced precision in forest edge delineation, partly driven by the 
+100 m resolution of the IIASA Forest Management layer. For agricultural tree plantations, including 
+both full-sun and shaded production systems, forest cover estimates now exclude these areas more 
+accurately. This improvement results from incorporating additional datasets on tree crops, including 
+coffee (Figure 6F) and cocoa plantations (Figure 6G). 
+ 
+36 
+Figure 6. Zoom to different inclusion (panels A-B) and exclusion (panels C-G) of forest area in GFC2020 V3 
+compared to GFC2020 V1 and V2. A) Unstocked forest from timber harvesting in Nelson region, New Zealand, 
+B) Unstocked forest fire in Mato Grosso state, Brazil, C) Dry tropical forest in Ceará state, Brazil, D) Shifting 
+cultivation in central Democratic Republic of the Congo, E) Agroforestry systems north of Yaounde, Cameroon, 
+F) Coffee plantations in central Colombia and G) Cocoa plantations in south -east Ivory Coast. 
+ 
+Source: JRC. Background data: Google, © 2026 Maxar Technologies. 
+
+ 
+37 
+Adding input datasets tailored to agricultural tree plantations and mixed agricultural landscapes 
+with non-natural trees under specific management has reduced the overestimation of forest cover 
+across large areas. Figure 7 illustrates the progression of these exclusions in human-dominated 
+coffee-producing landscapes, including both full-sun and shaded agroforestry systems. In GFC2020 
+V3, natural forest is now delineated more accurately (south border of Figure 7), with limited overlap 
+with trees under agricultural land use.  
+Figure 7. Regional zoom of coffee production (mixed full sun and shaded grown in agroforestry systems) in 
+the Central Highlands region of Vietnam. 
+ 
+Source: JRC. Background data: Google, © 2026 Maxar Technologies. 
+Similarly, Figure 8 shows the progression of these exclusions in human-dominated cocoa-producing 
+landscapes, including both full-sun and shaded agroforestry systems. In GFC2020 V3, natural 
+forest, particularly along the southeastern border of Figure 8, is delineated more accurately, and 
+trees under agricultural land use are generally excluded. In contrast, previous versions primarily 
+targeted full-sun cocoa systems for exclusion.  
+
+ 
+38 
+Figure 8. Regional zoom of cocoa production (mixed full sun and shaded grown in agroforestry systems) in 
+Ivory Coast. 
+ 
+Source: JRC. Background data: Google, © 2026 Maxar Technologies. 
+Figure 9 illustrates the progression of these exclusions in human-dominated oil palm–producing 
+landscapes, including both industrial plantations (along the eastern border of Figure 9) and 
+smallholder systems. In GFC2020 V3, exclusions now extend to smallholder plantations and to 
+plantations with mixed palm ages across large areas. In contrast, previous versions were largely 
+limited to industrial plantations or to plantations with regular spacing and uniform age structure. 
+High-confidence natural forest areas, free from trees under agricultural use, are now more clearly 
+delineated and accurately represented in GFC2020 V3. 
+ 

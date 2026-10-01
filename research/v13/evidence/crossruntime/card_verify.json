@@ -1,0 +1,19 @@
+{
+ "card_bytes": 55700,
+ "header": {
+  "alg": "EdDSA",
+  "jku": "https://emem.dev/.well-known/jwks.json",
+  "kid": "777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka",
+  "typ": "JOSE"
+ },
+ "sig_valid": {
+  "rfc8785": true,
+  "json.dumps(sort_keys,compact,utf8)": true
+ },
+ "tampered_name_sig_valid": false,
+ "kid_equals_b32(jwk.x)": true,
+ "skills": 117,
+ "card_version": "2.4.2",
+ "protocolVersion": "1.0",
+ "ms": 486.7
+}

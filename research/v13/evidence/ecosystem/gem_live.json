@@ -1,0 +1,75 @@
+{
+  "_doc": "Gemini CLI extension manifest. Install with one command: `gemini extensions install https://emem.dev/gemini-extension.json`. After install, every Gemini CLI session can call emem_recall, emem_compare, emem_find_similar, emem_memory_bundle, emem_memory_contradictions, etc. against any place on Earth without an API key. The hosted instance at https://emem.dev/mcp is HTTPS-only Streamable HTTP transport (MCP 2025-03-26+). For self-hosted, change `url` to your own emem responder. Counts (114/43/168) are rendered from the live registry at request time.",
+  "author": "Vortx AI Private Limited <avijeet@vortx.ai>",
+  "context": {
+    "agent_card_a2a_url": "https://emem.dev/.well-known/agent-card.json",
+    "agent_card_url": "https://emem.dev/v1/agent_card",
+    "diagrams_url": "https://emem.dev/docs/diagrams/",
+    "gallery_url": "https://emem.dev/docs/gallery",
+    "llms_full_txt_url": "https://emem.dev/llms-full.txt",
+    "llms_txt_url": "https://emem.dev/llms.txt",
+    "openapi_url": "https://emem.dev/openapi.json",
+    "well_known_url": "https://emem.dev/.well-known/emem.json"
+  },
+  "description": "Shared, verifiable memory for AI agents that stops referential drift, the paraphrase side pinned by the token, the world-readout side reported by the change-attribution ledger (the numeric split is roadmap): one canonical, citeable identity per place, fact, and object (emem:entity:<entity_cid>), so different models reason from the same world object. Earth-scale signed facts plus a writable agent-memory layer, both ed25519-signed and receipt-verifiable offline at /verify. 114 MCP tools, 43 bands, 168 composition algorithms. Bi-temporal recall (as_of_tslot + as_of_signed_at), CoALA-typed memory files, capability-bound writes, signed bundles (emem:bundle:<bundle_cid>), multi-attester contradiction scoring. No API keys.",
+  "documentation": "https://emem.dev/agents.md",
+  "examples": [
+    {
+      "arguments": {
+        "q": "Mount Fuji"
+      },
+      "name": "Locate a place by name",
+      "tool": "emem_locate"
+    },
+    {
+      "arguments": {
+        "bands": [
+          "copdem30m.elevation_mean"
+        ],
+        "cell": "damO.zb000.xUti.zde78"
+      },
+      "name": "Recall elevation at a cell",
+      "tool": "emem_recall"
+    },
+    {
+      "arguments": {
+        "band": "geotessera",
+        "k": 5,
+        "key": "damO.zb000.xUti.zde78"
+      },
+      "name": "Find similar places",
+      "tool": "emem_find_similar"
+    }
+  ],
+  "homepage": "https://emem.dev",
+  "icon": "https://emem.dev/logo.png",
+  "keywords": [
+    "memory",
+    "agent-memory",
+    "verifiable",
+    "identity",
+    "mcp",
+    "ed25519",
+    "content-addressed",
+    "earth-observation",
+    "satellite",
+    "no-api-key"
+  ],
+  "license": "Apache-2.0",
+  "live_counts": {
+    "algorithms": 168,
+    "bands": 43,
+    "mcp_tools": 114,
+    "rendered_at_unix_s": 1790810383
+  },
+  "mcpServers": {
+    "emem": {
+      "description": "Shared, verifiable memory for AI agents: recall signed facts, cite them as emem: tokens, verify receipts offline; compare, diff, and trajectory read the same memory.",
+      "transport": "streamable-http",
+      "url": "https://emem.dev/mcp"
+    }
+  },
+  "name": "emem",
+  "repository": "https://github.com/Vortx-AI/emem",
+  "version": "2.4.2"
+}
