@@ -31,3 +31,7 @@ Accepted as is: 17 pt side-panel body (recorded in build report); Dify marked LI
 19. F8 L3 "0 of 213 Keylong sources carry a hash" → "0 of 215 Keylong sources carry a hash", source research/v13/evidence/critic/cell.json (209 facts / 215 sources, 2026-10-01T01:41Z; live GET agrees); update the assert in f8_ladder.py.
 20. "A record check takes 0.36 ms of CPU" → "A record check takes 0.33 ms of CPU" and F10 "all offline checks 0.36 ms" → "all offline checks 0.33 ms" (0.3565 ms per decision minus 0.0288 ms handoff construction; cost_measurements.json m2); update claims row C.cpu.
 21. F11 "checked 1 Oct 2026" → "checked 30 Sep 2026" (manifest verified_utc is 30 Sep 23:10-23:40Z; the board dates by UTC everywhere else).
+
+## From the external-citations reviewer (everything else checked against the live web on 1 Oct)
+22. [medium] Footer "MCP 2026-07-28" → "MCP 2025-11-25" (emem.dev/mcp negotiates 2025-11-25 and rejects server/discover of 2026-07-28); update claims row PA.carry.
+23. [low] Header "ESA Φ-lab and BIFOLD" → "BIFOLD and ESA Φ-lab" (the workshop names BIFOLD first and ESA as organiser).
