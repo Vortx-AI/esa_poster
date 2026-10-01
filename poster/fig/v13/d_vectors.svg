@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="548.503937pt" height="68.031496pt" viewBox="0 0 548.503937 68.031496" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-01T06:03:27.273478</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 68.031496 
+L 548.503937 68.031496 
+L 548.503937 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 5.385827 0.850394 
+L 261.779528 0.850394 
+Q 266.314961 0.850394 266.314961 5.385827 
+L 266.314961 62.645669 
+Q 266.314961 67.181102 261.779528 67.181102 
+L 5.385827 67.181102 
+Q 0.850394 67.181102 0.850394 62.645669 
+L 0.850394 5.385827 
+Q 0.850394 0.850394 5.385827 0.850394 
+z
+" clip-path="url(#p5f209cb48a)" style="fill: #ffffff; stroke: #0f5fa8; stroke-width: 1.558957; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 286.724409 0.850394 
+L 543.11811 0.850394 
+Q 547.653543 0.850394 547.653543 5.385827 
+L 547.653543 62.645669 
+Q 547.653543 67.181102 543.11811 67.181102 
+L 286.724409 67.181102 
+Q 282.188976 67.181102 282.188976 62.645669 
+L 282.188976 5.385827 
+Q 282.188976 0.850394 286.724409 0.850394 
+z
+" clip-path="url(#p5f209cb48a)" style="fill: #ffffff; stroke-dasharray: 4.676871,3.117914; stroke-dashoffset: 0; stroke: #9c9a92; stroke-width: 1.558957; stroke-linejoin: miter"/>
+   </g>
+   <g clip-path="url(#p5f209cb48a)">
+    <image xlink:href="data:image/png;base64,
+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" id="imageeb4f95ec27" transform="scale(1 -1) translate(0 -19.44)" x="9" y="-21.591496" width="531.36" height="19.44"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="8.503937" y="15.258583" transform="rotate(-0 8.503937 15.258583)">prithvi_eo2</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="105.43937" y="15.258583" transform="rotate(-0 105.43937 15.258583)">· 1,024 values</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="8.503937" y="58.912126" transform="rotate(-0 8.503937 58.912126)">checkpoint 2ad1775f… (hashed)</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="289.84252" y="15.258583" transform="rotate(-0 289.84252 15.258583)">geotessera</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="378.377953" y="15.258583" transform="rotate(-0 378.377953 15.258583)">· 128 values</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="289.84252" y="58.912126" transform="rotate(-0 289.84252 58.912126)">…/npy/v1/2024/… (no checkpoint)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5f209cb48a">
+   <rect x="0" y="0" width="548.503937" height="68.031496"/>
+  </clipPath>
+ </defs>
+</svg>
