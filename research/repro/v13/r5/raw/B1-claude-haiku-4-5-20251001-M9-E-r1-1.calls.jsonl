@@ -1,0 +1,1 @@
+{"t": 1790832941.6824667, "name": "verify_evidence", "args": {"token": "emem:fact:defi.zb493.xuqA.zcb5f:pwtqhbh7k7c3m5ir5ultv4szjcs6nixisr4hgn6py5lqi5ia2p5q", "cell": "defi.zb493.xuqA.zcb5f", "band": "indices.ndvi", "date": "2026-09-25"}, "is_error": true, "ms": 0.032, "meta": {"found": false}, "text": "not found: no record for this token"}
