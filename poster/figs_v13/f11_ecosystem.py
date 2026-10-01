@@ -67,7 +67,7 @@ for g, items in GROUPS:
 assert "chatgpt" in HELD or COND["chatgpt"]
 CHATGPT_EVIDENCE = MAN["chatgpt"]["evidence_level"]
 assert CHATGPT_EVIDENCE.startswith("UNVERIFIED")
-CHECKED = max(datetime.fromisoformat(MAN[m]["verified_utc"].split("(")[1].split(" ")[0]) for m in SHOWN)
+CHECKED = max(datetime.fromisoformat(MAN[m]["verified_utc"][:10]) for m in SHOWN)      # the UTC date, as the board dates elsewhere
 
 # ---------------- same-token table ----------------
 XR = J("research/repro/data/v8/crossruntime_table.json")

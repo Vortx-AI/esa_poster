@@ -3,7 +3,7 @@
 The 10 x 10 lattice of case_rondonia_eudr.json drawn as point symbols (north up, 740 m apart), coded by shape and
 colour: EUDR-rule flag (forest 2020 in JRC GFC2020 and Hansen loss after 2020) a vermillion disc; forest with no
 later loss a blue disc; cleared 2001 to 2020 an ink triangle; not forest a grey dot; maps disagree an amber diamond.
-Card: cell A's five inputs, each with the first 8 characters of its signed record's address.
+Card: five of cell A's six signed inputs (NDVI omitted), each with the first 8 characters of its record's address.
 Mandatory line: point samples, not parcel polygons; not a regulatory determination."""
 import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -140,7 +140,7 @@ for x, idx in cols:
         lab, key = card[i]
         t = T(x, y, lab, C["ink"])
         T(ext(t) + 1.8, y, A[key + "|fact_cid"][:8], C["muted"], family=MONO)
-T(CX + 81.6, CY + 19.6, "each a signed record", C["ink2"])
+T(CX + CW - 2.0, CY + 19.6, "five of its six signed inputs", C["ink2"], ha="right")   # NDVI is the sixth, not on the card
 # the mandatory scope line
 T(0, H - 2.7, "Point samples, not parcel polygons; not a regulatory determination.", C["ink"], weight="bold")
 

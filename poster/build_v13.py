@@ -800,6 +800,9 @@ def run_check(c, rows_list, rid=None):
         return exp in str(_ptr(_J(f), p))
     if kind == "approx":
         return abs(round(_ptr(_J(f), p), 2) - exp) <= max(0.01, abs(exp) * 0.01)
+    if kind == "approx_diff":   # arg [pathA, pathB]: round(A - B, 2) == expect (C.cpu: per-decision time less handoff construction)
+        J = _J(f)
+        return round(_ptr(J, p[0]) - _ptr(J, p[1]), 2) == exp
     if kind == "grep":
         return p in _rp(f).read_text()
     if kind == "calc":
@@ -1038,8 +1041,9 @@ def g_words(claims):
             sec = line[4:]
         elif line.startswith("> ") and not line.startswith("> [R5]"):
             bc[sec] += len(wre.findall(line[2:]))
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 820 / 870; brief 807 / 853)"]
-    ok = tot_w <= 820 and tot_t <= 870
+    # cap: brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16 (807 / 853 before them) plus about 1 % slack
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; brief 823 / 869)"]
+    ok = tot_w <= 830 and tot_t <= 880
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)
         flag = ""

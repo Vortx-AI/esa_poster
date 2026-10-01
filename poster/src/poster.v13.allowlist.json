@@ -3,14 +3,6 @@
  "rule": "an entry is bound to one sentence by BLAKE3 of the normalised text (NFC, lower case, single spaces); editing the sentence voids it; evidence is a claims-map row",
  "entries": [
   {
-   "word": "only",
-   "text_sha": "d1db78bcc564eb87fce4d8d4e1839370a39bed0099da3abb668a7c2c9e40f5d6",
-   "sentence": "With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3B dropped the cell from all 24 tokens and acted 5 of 5: a reference protects only a receiver that keeps it whole and obeys a refusal.",
-   "where": "html:p1:take",
-   "evidence": "S.G2.boundary",
-   "reason": "brief G.3: 'only' in the spine strip; the reference protects a receiver that keeps it whole (Haiku declined 5 of 5, Qwen dropped the cell)"
-  },
-  {
    "word": "impossible",
    "text_sha": "fe08bf0a817c8a769ab40e09f3f9bc5ab2f4fe048b6ec165497c269288cfaf09",
    "sentence": "Six cross the irrigation line, one is impossible, one is right; each wrong value needs a different check.",
@@ -33,22 +25,6 @@
    "where": "html:questions:hypothesis",
    "evidence": "X.only",
    "reason": "H2; leave_one_out names I alone for M15"
-  },
-  {
-   "word": "cannot",
-   "text_sha": "df2cc9921110d5f01dbc030155682a61f5824960833c8f3c09f33f78041c765a",
-   "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or forge an address; a signer's misread pixel is caught only by a re-read.",
-   "where": "html:threat:body",
-   "evidence": "T.can",
-   "reason": "threat model: Ed25519 under the pinned key and BLAKE3 addresses (RFC 8032; BLAKE3 128-bit)"
-  },
-  {
-   "word": "only",
-   "text_sha": "df2cc9921110d5f01dbc030155682a61f5824960833c8f3c09f33f78041c765a",
-   "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or forge an address; a signer's misread pixel is caught only by a re-read.",
-   "where": "html:threat:body",
-   "evidence": "X.only",
-   "reason": "threat model; leave_one_out names I alone for M15"
   },
   {
    "word": "every",
@@ -75,36 +51,12 @@
    "reason": "M17 passes every level of the suite"
   },
   {
-   "word": "never",
-   "text_sha": "2eafae401f0e11b49c27141af50687a2e9b031a32bf598880d57498dc1ac41e7",
-   "sentence": "Never \"verified\" without its layer.",
-   "where": "html:p7:mechanism",
-   "evidence": "L.status",
-   "reason": "brief G.3: the ladder line is allowlisted"
-  },
-  {
-   "word": "verif-without-layer",
-   "text_sha": "2eafae401f0e11b49c27141af50687a2e9b031a32bf598880d57498dc1ac41e7",
-   "sentence": "Never \"verified\" without its layer.",
-   "where": "html:p7:mechanism",
-   "evidence": "L.status",
-   "reason": "brief G.3: the ladder line names the rule itself"
-  },
-  {
    "word": "only",
    "text_sha": "90ab8355c3cddcd1c4665b9721a38643268b6b2f7ab97b1196ec82fe2114bbfb",
    "sentence": "Derived representations are addressable too: this cell's Prithvi-EO-2.0 vector names its checkpoint digest inside the hashed record; the TESSERA vector, only a path and year.",
    "where": "html:p10:body",
    "evidence": "V.tessera",
    "reason": "brief G.3: 'only a path and year'"
-  },
-  {
-   "word": "only",
-   "text_sha": "5c2891c4dcfe8bfbd9a96684587e1605a44f8638ee7b7be0522d502e1c12a4ab",
-   "sentence": "A record check takes 0.36 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel.",
-   "where": "html:p11:body",
-   "evidence": "X.only",
-   "reason": "brief G.3: panel 11; the re-read is the one check that refuses M15"
   },
   {
    "word": "judge",
@@ -145,30 +97,6 @@
    "where": "fig:f2_spine",
    "evidence": "H.img.grid",
    "reason": "'true colour' names the band combination"
-  },
-  {
-   "word": "never",
-   "text_sha": "d7d78eb141d4f2018b134c831557eee23fa2db745209b6f331c00a7145e6bea0",
-   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter",
-   "where": "fig:f4_failure_ladder",
-   "evidence": "F.rail.cellmatch",
-   "reason": "brief G.3: 'never tested' (F.rail.cellmatch)"
-  },
-  {
-   "word": "only",
-   "text_sha": "d7d78eb141d4f2018b134c831557eee23fa2db745209b6f331c00a7145e6bea0",
-   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter",
-   "where": "fig:f4_failure_ladder",
-   "evidence": "F.rail.cellmatch",
-   "reason": "brief G.3: the panel 3 rail; 're-read only' is F.pixel"
-  },
-  {
-   "word": "verif-without-layer",
-   "text_sha": "0ac5568399b35f20c973f1eacfca4f8321b4241c3468c3ff9b66535200476404",
-   "sentence": "returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
-   "where": "fig:f4_failure_ladder",
-   "evidence": "F.rail.mast",
-   "reason": "brief G.3: 'verification' in the MAST quote"
   },
   {
    "word": "all",
@@ -291,14 +219,6 @@
    "reason": "as-of 1 May returns no record"
   },
   {
-   "word": "all",
-   "text_sha": "073363ee51489f8d5232f5083a4b73e7006e052bad76ebd67fe4d79458166951",
-   "sentence": "all offline checks 0.36 ms",
-   "where": "fig:f10_cost",
-   "evidence": "C.cpu",
-   "reason": "brief G.3: 'all offline checks'"
-  },
-  {
    "word": "every",
    "text_sha": "0cf8cea5827d41eefd2a7f31d36aa04c8c7a2a905a609d58139a58cb8e2dd4de",
    "sentence": "one address, one value on every path",
@@ -321,6 +241,86 @@
    "where": "fig:f12_prior_art",
    "evidence": "PA.geoguard",
    "reason": "the JUDGE lane is GeoGuard's role"
+  },
+  {
+   "word": "only",
+   "text_sha": "240779e230a1ca90ee08bebda0bb76dc79a9e5b0507c31b69715282817b56a53",
+   "sentence": "With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3B dropped the cell from all 24 calls and acted 5 of 5: a reference protects only a receiver that keeps it whole and obeys a refusal.",
+   "where": "html:p1:take",
+   "evidence": "S.G2.boundary",
+   "reason": "brief G.3: 'only' in the spine strip; the reference protects a receiver that keeps it whole (Haiku declined 5 of 5, Qwen dropped the cell from all 24 tool calls)"
+  },
+  {
+   "word": "never",
+   "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
+   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+   "where": "html:p3:scope",
+   "evidence": "F.rail.cellmatch",
+   "reason": "brief G.3: 'never tested' (F.rail.cellmatch); the F4 side rail sentence, set horizontally under the panel 3 caption (review fix 18)"
+  },
+  {
+   "word": "only",
+   "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
+   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+   "where": "html:p3:scope",
+   "evidence": "F.rail.cellmatch",
+   "reason": "brief G.3: the panel 3 rail sentence (F.rail.cellmatch, F.rail.langchain); 'protects only if it runs'"
+  },
+  {
+   "word": "verif-without-layer",
+   "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
+   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+   "where": "html:p3:scope",
+   "evidence": "F.rail.mast",
+   "reason": "brief G.3: 'verification' in the MAST quote (FM-3.2)"
+  },
+  {
+   "word": "cannot",
+   "text_sha": "505a0a39f58767307ac8a32b8d9b8bdc8130538abf3cf2417f586b5db9a4874a",
+   "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read.",
+   "where": "html:threat:body",
+   "evidence": "T.can",
+   "reason": "threat model: Ed25519 under the pinned key and BLAKE3 addresses (RFC 8032; BLAKE3 128-bit); 'match an address' (a relay can mint a valid address for forged bytes, M8 to M12 pass D and stop at F)"
+  },
+  {
+   "word": "only",
+   "text_sha": "505a0a39f58767307ac8a32b8d9b8bdc8130538abf3cf2417f586b5db9a4874a",
+   "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read.",
+   "where": "html:threat:body",
+   "evidence": "X.only",
+   "reason": "threat model; leave_one_out names I alone for M15"
+  },
+  {
+   "word": "all",
+   "text_sha": "de8cf01ec93da3054b55901761202549d34e9ad787224f1fd2be76d90ff7c712",
+   "sentence": "Of 780 records pulled on 30 Sep 2026, 780 pass L0 and L1; the 266 with a recipe all recompute at L2; their source files are named, not hashed.",
+   "where": "html:p7:caption",
+   "evidence": "L.266",
+   "reason": "eo_evidence_per_fact_checks.csv: recompute pass 266, n/a 514, fail 0; every record with a recipe recomputes (review fix 9)"
+  },
+  {
+   "word": "only",
+   "text_sha": "fb2dce47fd57fc502c65b2dd94913a87ebde2dea214da5d56471677cd9bd73d6",
+   "sentence": "A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel.",
+   "where": "html:p11:body",
+   "evidence": "X.only",
+   "reason": "brief G.3: panel 11; the re-read is the one check that refuses M15"
+  },
+  {
+   "word": "all",
+   "text_sha": "6d422dd7f3b88de6aeb4f946fc23ee600a460b003728d90c69ff89e509de015a",
+   "sentence": "all offline checks 0.33 ms",
+   "where": "fig:f10_cost",
+   "evidence": "C.cpu",
+   "reason": "brief G.3: 'all offline checks' (level I per decision less the handoff construction, review fix 20)"
+  },
+  {
+   "word": "proof",
+   "text_sha": "61679cc28b41ca3fecec084ef55b5042bd5f518d86599d4529b2d82ca95c4838",
+   "sentence": "offline proof bundle 0.57 ms (4,906 B)",
+   "where": "fig:f10_cost",
+   "evidence": "C.bundle",
+   "reason": "'proof bundle' names the committed artefact research/repro/v8/proof_bundle_ndvi.cbor (cost_measurements.json m2.bundle), not a claim about a value"
   }
  ]
 }

@@ -2,7 +2,7 @@
 
 Counts are read from their files and asserted:
   research/repro/v12/data/eo_evidence_per_fact_checks.csv   780 records: verified, cell/band bound, recompute
-  research/repro/data/v11/cell_keylong.json                 213 Keylong source entries, none with a hash or cid
+  research/v13/evidence/critic/cell.json                    215 Keylong source entries (1 Oct), none with a hash or cid
   research/v13/evidence/crossruntime/refusal_matrix.json    a relabelled (wrong-cell) token: HTTP 409 on REST
   research/repro/v11/out/mutation_matrix.json               M17 accepted at every level A to I
   research/v13/evidence/failure_modes/jrc146622.txt:236     GFC2020 V3 forest commission error 13.1 %
@@ -33,10 +33,10 @@ L0_OK = sum(r["verified"] == "PASS" and r["cid_recomputed"] == "pass" and r["att
 L1_OK = sum(r["cell_bound"] == "pass" and r["band_bound"] == "pass" for r in CSV)
 L2_OK = sum(r["recompute"] == "pass" for r in CSV)
 assert (N, L0_OK, L1_OK, L2_OK) == (780, 780, 780, 266)
-KEY = json.load(open(os.path.join(ROOT, "research/repro/data/v11/cell_keylong.json")))
+KEY = json.load(open(os.path.join(ROOT, "research/v13/evidence/critic/cell.json")))      # 209 facts, 2026-10-01T01:41Z
 SRC = [s for f in KEY["facts"] for s in f.get("sources", [])]
 N_SRC, N_HASH = len(SRC), sum(1 for s in SRC if s.get("hash") or s.get("cid"))
-assert (N_SRC, N_HASH) == (213, 0)
+assert (N_SRC, N_HASH) == (215, 0)
 RM = json.load(open(os.path.join(ROOT, "research/v13/evidence/crossruntime/refusal_matrix.json")))
 CODE = re.search(r"HTTP (\d{3})", RM["wrong_cell"]["rest"]).group(1)
 assert CODE == "409"
@@ -56,7 +56,7 @@ RUNGS = [
          ev=f"cell and band bound in {L1_OK} of {N}; a relabelled token returns {CODE}",
          trust="still trusted: your own question", claims=("L.780", "F8.trust")),
     dict(L="L2", name=["derivation"], status=["RECOMPUTABLE"], fill="L2",
-         ev=f"{L2_OK} of {N} recomputed bit for bit", trust="still trusted: the convention the signer chose",
+         ev=f"{L2_OK} of {N} carry a recipe; all {L2_OK} recompute", trust="still trusted: the convention the signer chose",
          claims=("L.266", "F8.trust")),
     dict(L="L3", name=["source"], status=["PARTIAL"], fill="half",
          ev=f"named, not hashed: {N_HASH} of {N_SRC} Keylong sources carry a hash; open archives can be re-read",
@@ -67,7 +67,7 @@ RUNGS = [
     dict(L="L5", name=["physical truth,", "decision"], status=["INHERITED /", "OUT OF SCOPE"], fill="hatch",
          ev=f"GFC2020 V3 forest commission error {GFC}\u00a0%", trust=None, claims=("L.gfc", None)),
 ]
-HEIGHTS = {"L0": 19.0, "L1": 22.4, "L2": 19.0, "L3": 26.2, "L4": 19.4, "L5": 24.2}
+HEIGHTS = {"L0": 17.0, "L1": 22.4, "L2": 22.0, "L3": 26.2, "L4": 18.4, "L5": 24.2}
 GAP, EDGE = 1.2, 3.0                     # gap between rungs; the wider gap is the claim's edge (L3 | L4)
 assert abs(sum(HEIGHTS.values()) + 4 * GAP + EDGE - H) < 1e-6
 

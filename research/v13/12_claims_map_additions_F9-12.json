@@ -435,7 +435,7 @@
    "print": [
     "cell A",
     "defi.zb391.taza.zcc31",
-    "each a signed record",
+    "five of its six signed inputs",
     "6rtcbfum",
     "iv6mhn5v",
     "ncupl5pt",
@@ -457,7 +457,7 @@
     "arg": "rows[27].cell",
     "expect": "defi.zb391.taza.zcc31"
    },
-   "note": "address prefixes are the records' BLAKE3 addresses (first 8 base32 characters); N marks north (grid lat decreasing with row)",
+   "note": "address prefixes are the records' BLAKE3 addresses (first 8 base32 characters); N marks north (grid lat decreasing with row); the card shows five of the cell's six signed inputs (indices.ndvi is the sixth; the grid has 6 records per cell, 600 in all)",
    "tier": "30cm",
    "fallback": null,
    "r5_key": null,

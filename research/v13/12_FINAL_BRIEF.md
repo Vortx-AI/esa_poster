@@ -102,8 +102,8 @@ lists and are figure text (gated like prose, counted separately). Type: Plex San
 claims map allowlists it), "truth", "guarantee", "proves", "trustless", "the satellite decides"; "verified" never
 without its layer.
 
-Word counts (computed from this section by the counter in Appendix I): running text **807 words** containing a letter
-(853 tokens if bare numerals and panel arrows are counted), including every kicker, headline, mechanism line, caption,
+Word counts (computed from this section by the counter in Appendix I): running text **823 words** containing a letter
+(869 tokens if bare numerals and panel arrows are counted; 807 / 853 before the 1 Oct review fixes 9, 13 and 16), including every kicker, headline, mechanism line, caption,
 RQ, hypothesis and the conclusion; cap about 800. Figure, legend, scope and footer text: about 1,740 tokens, all at the
 30 cm tier and all gated like prose. The title, the token, QR payloads and references are excluded from the cap.
 
@@ -124,7 +124,7 @@ Sub-hero (32 pt Medium, #7FB3E6):
 Byline (17 pt, two lines):
 
 `Jaya Kumari · Avijeet Singh · Vortx AI · avijeet@vortx.ai`
-`Agentic AI for Earth Observation · ESA Φ-lab and BIFOLD · Berlin · Poster Session 1 · 19 Oct 2026 · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)`
+`Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026 · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)`
 
 No DOI unless the Zenodo record is corrected first (open item H.6).
 
@@ -153,7 +153,7 @@ Mechanism line (24 pt):
 
 Agent-level strip (24 pt, bottom-left of the spine, x 20 to 400):
 
-> With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3B dropped the cell from all 24 tokens and acted 5 of 5: a reference protects only a receiver that keeps it whole and obeys a refusal.
+> With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3B dropped the cell from all 24 calls and acted 5 of 5: a reference protects only a receiver that keeps it whole and obeys a refusal.
 
 Figure text (see figure F2): lane names `prose` · `JSON` · `retrieved text (RAG)` [R5 only] · `opaque id` · `EMEM reference`;
 column heads `Agent A cites` · `handoff` · `relay` · `Agent B` · `B acted on corrupted evidence` · `no check reaches`;
@@ -161,7 +161,7 @@ relay bar `relay or faulty signer, one of 16: value · cell · time · band · s
 Agent A `Agent A reads NDVI 0.4709 and cites it`; Agent B per lane `reads the text` · `reads the fields` ·
 `retrieves a passage` [R5] · `fetches the sender's record` · check chain chips `resolve L0 · re-hash L0 · bind L1 · signature L0 · log L0 · recompute L2 · re-read L3`;
 wall `the entity meant (M17) · sensor accuracy · the decision`.
-Scope line (14 pt, x 410 to 801, bottom): `Deterministic receiver written by us, no model; one record, one band, one run; signer-error rows use a test key; the 0.4705 threshold is set so that rounding flips it.`
+Scope line (14 pt, x 410 to 801, bottom): `Deterministic receiver written by us, no model; one record, one band, one run; signer-error rows use a test key; the 0.4705 threshold is set so that rounding flips it. M7, a miscopied token, has no prose form.`
 [R5] scope line: `{R5.models}; {R5.dates}; n per lane from the results file; adversary simulated; threshold constructed.`
 QR under the wall: `TRY A TOKEN` / `Resolve the Keylong token on emem.dev, then paste your own.`
 
@@ -193,7 +193,7 @@ Headline (32 pt SemiBold):
 
 > Our own errors name the checks
 
-> Each error happened inside emem, a system built for evidence, or in our tests; each class is documented elsewhere.
+> Each error happened inside emem, a system built for evidence, or in our tests; each has a published precedent.
 
 Caption (17 pt):
 
@@ -206,15 +206,15 @@ Figure text (F4), eight rungs bottom to top, each: what happened · same class e
 | rung | what happened | same class elsewhere | consequence | check | status |
 |---|---|---|---|---|---|
 | 1 Lost in the handoff | `0.47 for 0.4709` | `Perez et al., ICLR 2025: LLM transmission chains drift` | `5 of 5 receivers irrigated` | `resolve the reference · L0` | `test rule` |
-| 2 Wrong date | `asked 23 Sep, served 25 Sep` | `STAC item search defines no default order` | `10 of 10 agents saw one scene twice; 3 said no 23 Sep scene existed` | `bind the date · L1` | `open` |
+| 2 Wrong date | `asked 23 Sep, served 25 Sep` | `STAC item search defines no default order` | `10 of 10 agents saw one scene twice;` / `3 said no 23 Sep scene existed` (line break after "twice;") | `bind the date · L1` | `open` |
 | 3 Wrong place | `coordinates given, town point answered` | `GDAL 3 follows CRS axis order (RFC 73)` | `597 m; NDVI 0.28 for the field's 0.42` | `asked coordinates · L1` | `fix unconfirmed` |
 | 4 Wrong version | `918.0 m, then 915.07 m, one band name` | `GFC2020 V3 cut forest cover by more than 20 % in the Cerrado` | `an earlier citation looks wrong` | `source + as-of · L1` | `both kept` |
-| 5 Wrong scale | `WorldPop signed per pixel, not per km²: 1.77× low` | `Element84 items say "offset applied" and "apply −0.1"` | `one pixel: 0.4709, 0.2966, 1.1427 under three offset rules` | `recompute · L2 · catalogue · L3` | `fixed` |
+| 5 Wrong scale or offset | `WorldPop signed per pixel, not per km²: 1.77× low` | `Element84 items say "offset applied" and "apply −0.1"` | `one pixel: 0.4709, 0.2966, 1.1427 under three offset rules` | `recompute · L2 · catalogue · L3` | `fixed` |
 | 6 Missing data signed as 0 | `off-tile pixels signed as 0` | `Hansen lossyear 0 means no loss` | `a forest-loss screen passes` | `re-read · L3` | `fixed` |
 | 7 Wrong pixel, signed | `the reader rounded the pixel index` | `GDAL RFC 33: half-pixel shift; one-pixel misregistration: error > 50 % of NDVI differences (Townshend 1992)` | `162 of 200 sampled records` | `re-read only · L3` | `fixed 28 Sep 2026` |
 | 8 Wrong thing | `"this image" resolved to a hair salon in Ontario` | `toponym ambiguity (Gritta et al. 2018)` | `receipt, Merkle proof and state chain all valid` | `none · L4` (hatched) | `fixed 30 Sep 2026` |
 
-Side rail (14 pt, `ink2`, vertical strip along the right edge of the rungs): `A check protects only if it runs: emem's resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).`
+Scope line (14 pt, `ink2`, horizontal, under the caption; review fix 18 moved it here from the rotated side rail of F4): `A check protects only if it runs: emem's resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).`
 
 ### Questions (193.5 × 70 mm)
 
@@ -226,7 +226,7 @@ Headline (32 pt SemiBold):
 > RQ2 Which corruption classes can it detect? → 5
 > RQ3 Does a reference beat prose, JSON or an opaque id? → 1
 > RQ4 What stays unverifiable with the reference intact? → 6, 7
-> H1 A checked reference refuses word-preserving corruptions. H2 Only a source re-read catches a signer's wrong pixel. H3 A historical reference keeps the cited state.
+> H1 A checked reference refuses corruptions that keep the stated value. H2 Only a source re-read catches a signer's wrong pixel. H3 A historical reference keeps the cited state.
 
 > [R5] RQ3 Does a reference beat prose, JSON, retrieval or an opaque id? → 1, 5
 
@@ -238,7 +238,7 @@ Headline (32 pt SemiBold):
 
 > A relay can rewrite, not sign
 
-> A relay can rewrite what it carries but cannot sign under the pinned key or forge an address; a signer's misread pixel is caught only by a re-read. Out of scope: a compromised key, a wrong sensor, the entity meant, the decision.
+> A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read. Out of scope: a compromised key, a wrong sensor, the entity meant, the decision.
 
 Figure text (D1): `A` → relay box `rewrites value, cell, date, source, record, reference; replays old records` → `B`; two pins outside the relay `pinned key (DNS TXT, did.json, JWKS)` · `open archive (COG)`; three stripes `cryptographic: the exact record bytes · CHECKABLE` · `source: which file was read · PARTIAL` · `measurement: sensor and product · INHERITED`; 14 pt `All keys today are one operator's.`
 
@@ -262,15 +262,15 @@ arrow `read the containing pixel`; record field list (two columns, Mono 15 pt, a
 address `oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa` `changes if one bit of the record changes`;
 attestation `Ed25519 over a batch root · key 777er3yi… · Merkle log, RFC 6962 style, BLAKE3`;
 token line (Mono 18 pt) `emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa` with `handed over: 84 characters, 46 tokens (cl100k)`.
-QR: `INSPECT THE RECORD` / `The 1,115 bytes behind the main example, field by field.`
+QR: `INSPECT THE RECORD` / `The 1,115 bytes behind the main example, decoded.`
 
-### 5 · Remove one check, and a named corruption passes (396 × 256 mm)
+### 5 · Each of five checks alone stops a corruption (396 × 256 mm)
 
 > Which check stops which corruption?
 
 Headline (40 pt SemiBold):
 
-> Remove one check, and a named corruption passes.
+> Each of five checks alone stops a corruption.
 
 Caption (17 pt):
 
@@ -281,7 +281,7 @@ family labels `value` · `cell` · `time` · `band` · `source` · `derivation` 
 check legend `D hash L0 · E binding L1 · F signature L0 · G log L0 · H recompute L2 · I re-read L3 · ○ the only check that stops it`;
 totals row `B acts on corrupted evidence` `15 / 15 · 15 / 15 · 13 / 16 · 0 / 16`;
 control row `nothing altered: accepted everywhere, never refused`;
-scope (14 pt): `One signed Keylong NDVI record, one band, one run; deterministic receiver; rows M14 to M16 signed with a test key; the re-read compares with the committed 25 Sep window. Three further signer errors (offset, same-day scene, unit) pass checks D to I and need a catalogue re-read.`
+scope (14 pt): `One signed Keylong NDVI record, one band, one run; deterministic receiver; rows M14 to M16 signed with a test key; the re-read compares with the committed 25 Sep window. Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them.`
 [R5] scope: `Bars: agents' false acceptance, k of n per cell (planned 15: 5 runs × 3 Claude models); squares: the deterministic ceiling. {R5.models}, {R5.dates}.`
 QR: `RE-RUN THE TEST` / `Data and scripts behind this board's numbers, with one re-run command.`
 
@@ -303,7 +303,7 @@ Caption (17 pt):
 
 Figure text (F7): (a) `Keylong, Lahaul · Sentinel-2A L2A · 25 Sep 2026` `1 km`; (b) per-pixel NDVI values (2 decimals); `named pixel` · `pixel 10 m south`;
 (c) `test rule: irrigate if NDVI ≤ 0.4705` · `0.4709 → hold` (30 pt ink) · `0.3016 → irrigate` (30 pt `harm`); chips `hash · binding · signature · log · recompute: pass the wrong value` · `re-read: refuses`;
-waffle `162 of 200 sampled pre-fix records carry a neighbour's values (Wilson 95 %: 75 to 86 %)`; `index error where the rules differ: median 0.027, p90 0.113, max 0.301 (n 121)`;
+waffle `162 of 200 sampled pre-fix records carry a neighbour's values (Wilson 95 %: 75 to 86 %)`; `spectral-index error where the rules differ: median 0.027, p90 0.113, max 0.301 (n 121)` (the 121 are the index-band records of the 162; 41 reflectance-band records are excluded);
 the real record line (17 pt, Mono id) `kxjvfwpa… · 23 Sep 2026 · signed 0.3444 · its containing pixel 0.4860`;
 scope (14 pt): `Sample: 200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; 192 Element84, 8 Planetary Computer. After the fix, 0 of 54 (Planetary Computer, two days). On a 100-point Rondônia grid the old rule changed 7 loss years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.`
 
@@ -315,16 +315,16 @@ Headline (32 pt SemiBold):
 
 > Checks stop at the source
 
-> Never "verified" without its layer.
+> Each rung names what it still trusts.
 
 Caption (17 pt):
 
-> Of 780 records pulled on 30 Sep 2026, 780 pass L0 and L1 and 266 recompute at L2; their source files are named, not hashed. No reference establishes the entity, the sensor's accuracy or the decision.
+> Of 780 records pulled on 30 Sep 2026, 780 pass L0 and L1; the 266 with a recipe all recompute at L2; their source files are named, not hashed. No reference establishes the entity, the sensor's accuracy or the decision.
 
 Figure text (F8), rungs bottom to top: `L0 record bytes · CHECKABLE · 780 of 780: hash, signature, log · still trusted: the key is emem.dev's` /
 `L1 identity · CHECKABLE · cell and band bound in 780 of 780; a relabelled token returns 409 · still trusted: your own question` /
-`L2 derivation · RECOMPUTABLE · 266 of 780 recomputed bit for bit · still trusted: the convention the signer chose` /
-`L3 source · PARTIAL · named, not hashed: 0 of 213 Keylong sources carry a hash; open archives can be re-read · still trusted: that the archive file is the product` /
+`L2 derivation · RECOMPUTABLE · 266 of 780 carry a recipe; all 266 recompute · still trusted: the convention the signer chose` /
+`L3 source · PARTIAL · named, not hashed: 0 of 215 Keylong sources carry a hash; open archives can be re-read · still trusted: that the archive file is the product` /
 `L4 entity · OUT OF SCOPE · M17 passes every check; "this image" became a hair salon` /
 `L5 physical truth, decision · INHERITED / OUT OF SCOPE · GFC2020 V3 forest commission error 13.1 %`.
 
@@ -338,7 +338,7 @@ Headline (32 pt SemiBold):
 
 Caption (17 pt):
 
-> Asked about 15 Jun, the memory returns 918.0 m; the August record does not overwrite it, and the receiver checks the cited state by its address.
+> Asked about 15 Jun, the memory returns 918.0 m; the August record does not overwrite it, and the receiver checks the cited state by its address; at Keylong the newer record would flip the decision.
 
 Figure text (F9): `Bengaluru · one cell · copdem30m.elevation_mean`; record 1 `918.0 m · signed 28 May · 90 m DEM via Open-Meteo`; record 2 `915.07 m · first signed 11 Aug · 30 m DEM · re-signed 7 times`; as-of probes `1 May: none` · `15 Jun: 918.0 m` · `12 Aug: 915.07 m` · `29 Sep: 915.07 m`; emphasised `what did agent A know on 15 Jun? → 918.0 m`;
 Keylong strip `cited 25 Sep: 0.4709 → hold` · `30 Sep: 0.4237 → irrigate` · `the cited reference still re-hashes (1 Oct 2026)`; 14 pt `as-of compares signing times (UTC seconds); here the provider changed, not the ground`.
@@ -360,7 +360,7 @@ Caption (17 pt):
 > 100 point samples 740 m apart, 600 signed records, each re-hashed; TMF agrees on 1 of 3 flags.
 
 Figure text (D2): legend `forest 2020 (GFC2020) + loss after 2020 (Hansen): 3` · `forest, no later loss: 33` · `cleared 2001 to 2020: 20` · `not forest: 43` · `maps disagree: 1`;
-cell A card `Hansen loss 2023 · tree cover 2000 100 % · GFC2020 V4 forest · TMF 2023 · CCI 208 t/ha` each with an 8-character address prefix.
+cell A card `Hansen loss 2023 · tree cover 2000 100 % · GFC2020 V4 forest · TMF 2023 · CCI 208 t/ha` each with an 8-character address prefix, and `five of its six signed inputs` (NDVI is the sixth, not on the card).
 
 ### 10 · Vectors are records too (193.5 × 64 mm)
 
@@ -382,9 +382,9 @@ Headline (32 pt SemiBold):
 
 > The source re-read costs most
 
-> A record check takes 0.36 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel. A reference costs 46 tokens, the value 8; a model receiver paid 2.1 times the input tokens for the same decisions.
+> A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel. A reference costs 46 tokens, the value 8; a model receiver read 2.1× the tokens prose costs, same decisions.
 
-Figure text (F10): time strip rows `re-hash 1.6 µs` · `all offline checks 0.36 ms` · `offline bundle, 9 checks 0.57 ms (4,906 B)` · `resolve 40 ms warm, 154 ms cold` · `source re-read about 7 s, 1.18 MB (0.058 % of the scene)`; token strip `value 8` · `reference 46` · `record as JSON 562` · `18-tool MCP list 18,709 (1 Oct)`; scope (14 pt) `One 2.8 GHz Xeon core; network through our TLS proxy; tokens cl100k; Claude Haiku 4.5 receiver, 10 runs per arm, +1.75 s.`
+Figure text (F10): time strip rows `re-hash 1.6 µs` · `all offline checks 0.33 ms` · `offline proof bundle 0.57 ms (4,906 B)` · `resolve 40 ms warm, 154 ms cold` · `source re-read about 7 s, 1.18 MB (0.058 % of the scene)`; token strip `value 8` · `reference 46` · `record as JSON 562` · `18-tool MCP list 18,709 (1 Oct)`; scope (14 pt) `One 2.8 GHz Xeon core; network through our TLS proxy; tokens cl100k; Claude Haiku 4.5 receiver, 10 runs per arm, +1.75 s.`
 
 ### 12 · One evidence protocol, multiple agent runtimes (531 × 140 mm)
 
@@ -403,7 +403,7 @@ groups (names in poster type; glyph from the manifest status):
 `DISCOVERY` ▢ Official MCP Registry · io.github.Vortx-AI/emem ▢ GitHub MCP Registry ● github.com/Vortx-AI/emem ▢ Glama
 `DEVELOPER` ● Gemini CLI ○ Visual Studio Code ○ Cursor ● pip install ememdev ● npm i @vortxai/emem ○ REST / OpenAPI 3.1 ● ghcr.io/vortx-ai/emem
 `FRAMEWORKS` △ LlamaIndex △ AutoGen △ CrewAI △ Mastra (+ △ LangChain (MCP adapters), △ Agno only if their conditions in the claims map are met; + ● ChatGPT (@emem) only with the screenshot)
-legend `● LIVE: connected or published · ○ PROTOCOL: open surface, client not run by us · ▢ REGISTRY: a listing · △ EXAMPLE: repo code, tool list checked · checked 1 Oct 2026`;
+legend `● LIVE: connected or published · ○ PROTOCOL: open surface, client not run by us · ▢ REGISTRY: a listing · △ EXAMPLE: repo code, tool list checked · checked 30 Sep 2026`;
 dot plot rows (median ms, 30 Sep 2026) `official MCP Python SDK 56.3` · `official MCP TypeScript SDK 58.3` · `TypeScript SDK 58.6` · `Python SDK 207.7` · `raw REST 223.5` · `raw MCP 223.7` · `A2A message/send 226.3` · `independent BLAKE3 + CBOR reader 235.6` · `LlamaIndex 300.8` · `LangChain MCP adapters 1,176.8`; axis `ms, log scale; one address, one value on every path`.
 QR: `DISCOVER INTEGRATIONS` / `Where EMEM runs today, each surface labelled by evidence.`
 
@@ -428,7 +428,7 @@ QR: `READ THE METHODS` / `Definitions, denominators, models, and what our own to
 ### Footer (14 pt, two lines, `ink2`)
 
 Line 1 (method): `Mechanisms read from emem's code; where its docs differ, the code is printed. emem.dev at commit 8e9b401; measurements 29 Sep to 1 Oct 2026. Extending verification to execution: reference harness, no spacecraft enrolled.`
-Line 2 (references): `Sentinel-2 Products Specification (ESA) · Copernicus DEM GLO-30/90 · Hansen et al. 2013, GFC v1.13 · JRC GFC2020 V3/V4, TMF · ESA CCI Biomass v7 · Reg. (EU) 2023/1115 · BLAKE3 · RFC 8032 · RFC 6962/9162 · STAC 1.1 · openEO 1.3 · W3C PROV-DM · C2PA 2.4 · MCP 2026-07-28 · A2A 1.0 · Perez et al., ICLR 2025 · Munir et al. 2026 (2604.24919) · Cemri et al. 2025, MAST (2503.13657) · Dang et al. 2026, ARC (2607.25066) · Townshend et al. 1992 · GeoGuard (NASA-IMPACT) · Prithvi-EO-2.0 · TESSERA (2506.20380)`
+Line 2 (references): `Sentinel-2 Products Specification (ESA) · Copernicus DEM GLO-30/90 · Hansen et al. 2013, GFC v1.13 · JRC GFC2020 V3/V4, TMF · ESA CCI Biomass v7 · Reg. (EU) 2023/1115 · BLAKE3 · RFC 8032 · RFC 6962/9162 · STAC 1.1 · openEO 1.3 · W3C PROV-DM · C2PA 2.4 · MCP 2025-11-25 · A2A 1.0 · Perez et al., ICLR 2025 · Munir et al. 2026 (2604.24919) · Cemri et al. 2025, MAST (2503.13657) · Dang et al. 2026, ARC (2607.25066) · Townshend et al. 1992 · GeoGuard (NASA-IMPACT) · Prithvi-EO-2.0 · TESSERA (2506.20380)`
 
 Not on the face (move to `/methods/`): the token-family table, the formulas, SAT-042's figure, the Berlin stack, the
 encoding bar, the compaction study, version history, defect numbers, scorecards, traffic counts, the witnessed flag,
@@ -469,7 +469,7 @@ file, E84 DNs 900/2502), `F.date` (commit an erratum to `research/repro/data/v9/
 | S.threshold | P1 spine + P2 + P6 | 0.4705 / irrigate if NDVI ≤ 0.4705 | PRE-REGISTERED | n/a | file: repro/v11/out/mutation_matrix.json · pointer: ['meta', 'rule'] · prereg: research/repro/data/v8/prereg.md (constructed boundary test) | 2026-09-30 | pass |
 | S.G2.haiku.F | P1 spine | Claude Haiku 4.5 declined 5 of 5 | PRE-REGISTERED | L1 | file: repro/data/v8/results.json · pointer: ['b', 'claude-haiku-4-5', 'arms', 'F', 'decisions', 'DECLINE'] · prereg: research/repro/data/v8/prereg.md blake3 67631a79... | 2026-09-30 | pass |
 | S.G2.qwen.F | P1 spine | Qwen2.5-3B / acted 5 of 5 | PRE-REGISTERED | L1 | file: v13/evidence/g2_handoff/qwen_trials.jsonl · pointer: count(arm=F, decision=IRRIGATE) · prereg: research/v13/evidence/g2_handoff/prereg_addendum2.md | 2026-09-30 | pass |
-| S.G2.qwen.bare | P1 spine | dropped the cell from all 24 tokens | PRE-REGISTERED | L1 | file: v13/evidence/g2_handoff/qwen_trials.jsonl · pointer: count(tool_calls[].token_form == 'bare_cid') over arms T and F | 2026-09-30 | pass |
+| S.G2.qwen.bare | P1 spine | dropped the cell from all 24 calls | PRE-REGISTERED | L1 | file: v13/evidence/g2_handoff/qwen_trials.jsonl · pointer: count(tool_calls[].token_form == 'bare_cid') over arms T and F | 2026-09-30 | pass |
 | S.G2.boundary | P1 spine | a reference protects only a receiver that keeps it whole and obeys a refusal | INFERRED | L1 | inputs: ['S.G2.haiku.F', 'S.G2.qwen.F', 'S.G2.qwen.bare'] | 2026-10-01 | manual |
 | S.scope | P1 spine | one record, one band, one run / test key | MEASURED | n/a | file: research/repro/v11/out/summary.md · pointer: Notes | 2026-09-30 | manual |
 | S.boundary_wall | P1 spine | the entity meant (M17) / sensor accuracy / the decision | OUT-OF-SCOPE | L4-L5 | file: repro/v11/out/mutation_matrix.json · pointer: ['summary', 'I', 'entity_case_accepted'] | 2026-09-30 | pass |
@@ -519,7 +519,7 @@ file, E84 DNs 900/2502), `F.date` (commit an erratum to `research/repro/data/v9/
 | F.rail.langchain | P3 side rail | one framework adapter returns a refusal as plain text | MEASURED | L1 | file: research/v13/evidence/crossruntime/refusal_matrix.json · pointer: ['wrong_cell', 'langchain_mcp'] | 2026-09-30 | pass |
 | F.rail.mast | P3 side rail | MAST: no or incomplete verification (FM-3.2) | EXTERNAL | n/a | url: https://arxiv.org/abs/2503.13657 | 2026-10-01 | manual |
 | F.caption | P3 | Signatures prevented none | INFERRED | n/a | file: research/v13/02_experiment_design.md · section: 18 (honest boundary) | 2026-10-01 | manual |
-| T.can | threat | A relay can rewrite what it carries but cannot sign under the pinned key or forge an address | SPEC | L0 | file: research/v13/10_ladder_threat_invention.md · section: 4.2-4.3 · external: RFC 8032 l.160; BLAKE3 spec 128-bit | 2026-10-01 | manual |
+| T.can | threat | A relay can rewrite what it carries but cannot sign under the pinned key or match an address | SPEC | L0 | file: research/v13/10_ladder_threat_invention.md · section: 4.2-4.3 · external: RFC 8032 l.160; BLAKE3 spec 128-bit | 2026-10-01 | manual |
 | T.pinned | threat | pinned key / DNS TXT / did.json / JWKS | LIVE | L0 | file: research/repro/v8/trace_fact_output.txt · pointer: link 15 | 2026-09-30 | manual |
 | T.oneop | threat | All keys today are one operator's | LIVE | L0 | file: research/v13/evidence/ladder/witnesses.json · pointer: ['independent_operator_count'] | 2026-10-01 | pass |
 | O.84 | P4 | 84 characters / 46 tokens (cl100k) | MEASURED | n/a | file: repro/data/v8/token_counts.json · pointer: ['fact_token_ndvi'] | 2026-09-30 | pass |
@@ -529,14 +529,14 @@ file, E84 DNs 900/2502), `F.date` (commit an erratum to `research/repro/data/v9/
 | O.cogs | P4 | 277.9 + 281.9 MB / B04 + B08 COGs / Planetary Computer | MEASURED | L3 | file: research/repro/data/v8/cog_pixel_bytes.json · pointer: B04 277897303 B, B08 281898500 B | 2026-09-30 | pass |
 | O.pixel | P4 | row 9443, col 9098 / DN 1900, 3502 | MEASURED | L3 | file: repro/data/v8/pixel_check.json · pointer: S2A ... B08.floor(r,c), floor_DN | 2026-09-30 | pass |
 | O.key | P4 | 777er3yi… | LIVE | L0 | file: repro/data/v8/crossruntime_table.json · pointer: responder key | 2026-10-01 | pass |
-| O.nohash | P4 + P7 | named, not hashed / 0 of 213 Keylong sources carry a hash | MEASURED | L3 | file: repro/data/v11/cell_keylong.json · pointer: count(sources[] with hash or cid) | 2026-09-30 | pass |
+| O.nohash | P4 + P7 | named, not hashed / 0 of 215 Keylong sources carry a hash | MEASURED | L3 | file: repro/data/v11/cell_keylong.json · pointer: count(sources[] with hash or cid) | 2026-09-30 | pass |
 | O.sevenaddr | P4 | one Bengaluru value has seven | MEASURED | L0 | file: repro/data/contra_bengaluru.json · pointer: 7 attestations with value 915.0712280273438, 7 fact_cids | 2026-09-29 | pass |
 | O.batch | P4 | a batch signature covers such addresses | SPEC | L0 | repo: emem 18adb67 · file: crates/emem-fact/src/attest.rs:93-143 | 2026-10-01 | manual |
 | O.log | P4 | Merkle log, RFC 6962 style, BLAKE3 | SPEC | L0 | repo: emem · file: crates/emem-attest/src/translog.rs; docs/federation.md 9c | 2026-10-01 | manual |
-| X.loo | P5 | Remove one check, and a named corruption passes. | MEASURED | L0-L3 | file: repro/v11/out/mutation_matrix.json · pointer: ['leave_one_out'] | 2026-09-30 | pass |
+| X.loo | P5 | Each of five checks alone stops a corruption. | MEASURED | L0-L3 | file: repro/v11/out/mutation_matrix.json · pointer: ['leave_one_out'] | 2026-09-30 | pass |
 | X.only | P5 + H2 | only the source re-read, the signer's wrong pixel / Only a source re-read catches a signer's wrong pixel / caught only by a re-read / only it refuses the wrong pixel | MEASURED | L3 | file: repro/v11/out/mutation_matrix.json · pointer: ['leave_one_out', 'I'] | 2026-09-30 | pass |
 | X.flips | P5 | flips the decision | MEASURED | n/a | file: repro/v11/out/mutation_matrix.json · pointer: ['summary', 'A', 'decision_flips'] | 2026-09-30 | pass |
-| X.p123 | P5 scope | Three further signer errors (offset, same-day scene, unit) pass checks D to I | MEASURED | L3 | file: research/v13/evidence/ladder/r1_t2_extra_out.json · pointer: T2_offset_zero, T2_scene_relabel_same_day, T2_unit_mislabel .refused_at_level_I == false | 2026-10-01 | pass |
+| X.p123 | P5 scope | Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them. | MEASURED | L3 | file: research/v13/evidence/ladder/r1_t2_extra_out.json · pointer: T2_offset_zero, T2_scene_relabel_same_day, T2_unit_mislabel .refused_at_level_I == false | 2026-10-01 | pass |
 | X.entity | P5 | The entity meant passes every check | OUT-OF-SCOPE | L4 | file: repro/v11/out/mutation_matrix.json · pointer: M17 outcome at every level | 2026-09-30 | manual |
 | W.vals | P6 | 0.4709 → hold / 0.3016 → irrigate | MEASURED | L3 | file: repro/data/v8/pixel_check.json · pointer: S2A ... ndvi_floor_pixel / ndvi_round_pixel | 2026-09-30 | pass |
 | W.prev | P6 | 162 of 200 sampled pre-fix records / Wilson 95 %: 75 to 86 % | MEASURED | L3 | file: repro/data/v8/prevalence_summary.json · pointer: ['pre', 'frac_round_wilson95'] · script: research/v13/evidence/g1_pixel_audit/prevalence.py (seed 20261019) | 2026-09-30 | pass |
@@ -548,7 +548,7 @@ file, E84 DNs 900/2502), `F.date` (commit an erratum to `research/repro/data/v9/
 | W.south | P6 | pixel 10 m south / 10 m south | MEASURED | L3 | file: repro/data/v8/pixel_check.json · pointer: round(r,c) = floor row + 1, same col | 2026-09-30 | manual |
 | L.780 | P7 | 780 of 780 / 780 records pulled on 30 Sep 2026 / cell and band bound in 780 of 780 | MEASURED | L0-L1 | file: repro/v12/data/eo_evidence_per_fact_checks.csv · pointer: count(verified == PASS) | 2026-09-30 | pass |
 | L.266 | P7 | 266 of 780 | MEASURED | L2 | file: repro/v12/data/eo_evidence_per_fact_checks.csv · pointer: count(recompute == pass) | 2026-09-30 | pass |
-| L.reread0 | P7 | their source files are named, not hashed | SPEC | L3 | repo: emem 18adb67 and 8e9b401 · file: crates/emem-api-rest/src/lib.rs: 62 x 'hash: None', 0 x 'hash: Some(' (report 10 sec. 0 item 2) · measured: 0 of 213 Keylong source entries (O.nohash) | 2026-10-01 | manual |
+| L.reread0 | P7 | their source files are named, not hashed | SPEC | L3 | repo: emem 18adb67 and 8e9b401 · file: crates/emem-api-rest/src/lib.rs: 62 x 'hash: None', 0 x 'hash: Some(' (report 10 sec. 0 item 2) · measured: 0 of 215 Keylong source entries (O.nohash) | 2026-10-01 | manual |
 | L.409 | P7 | a relabelled token returns 409 | MEASURED | L1 | file: research/v13/evidence/crossruntime/refusal_matrix.json · pointer: ['wrong_cell', 'rest'] | 2026-09-30 | pass |
 | L.gfc | P7 | GFC2020 V3 forest commission error 13.1 % | EXTERNAL | L5 | file: research/v13/evidence/failure_modes/jrc146622.txt · line: 236 | 2026-10-01 | pass |
 | L.status | P7 | CHECKABLE / RECOMPUTABLE / PARTIAL / INHERITED / OUT OF SCOPE | SPEC | L0-L5 | file: research/v13/10_ladder_threat_invention.md · section: 3.1-3.2 | 2026-10-01 | manual |
@@ -567,16 +567,16 @@ file, E84 DNs 900/2502), `F.date` (commit an erratum to `research/repro/data/v9/
 | V.tessera | P10 | TESSERA / 128 values / only a path and year / …/npy/v1/2024/… | LIVE | L3 | file: v13/evidence/critic/cell.json · pointer: facts[band=geotessera].sources[0].id = .../npy/v1/2024/..., args [lat, lng, 2024] | 2026-10-01 | pass |
 | V.retired | P10 | emem.dev lists its encoders as retired | SPEC | n/a | file: research/repro/v12/data/v1_bands_2026-09-30.json · pointer: bands[*].materializer.kind == retired for geotessera, clay_v1, prithvi_eo2, galileo | 2026-09-30 | pass |
 | V.resolve | P10 | Both still resolve | LIVE | L0 | file: v13/evidence/critic/cell.json · pointer: GET /v1/cells/defi.zb572.xoso.zb1ec 2026-10-01T01:42Z | 2026-10-01 | manual |
-| C.cpu | P11 | 0.36 ms of CPU / One 2.8 GHz Xeon core | MEASURED | L0-L3 | file: v13/cost_measurements.json · pointer: ['m2_offline_verification', 'mutation_suite_ms_per_decision_by_level', 'I', 'median'] · host: one 2.8 GHz Xeon core | 2026-10-01 | pass |
+| C.cpu | P11 | 0.33 ms of CPU / One 2.8 GHz Xeon core | MEASURED | L0-L3 | file: v13/cost_measurements.json · pointer: ['m2_offline_verification', 'mutation_suite_ms_per_decision_by_level', 'I', 'median'] · host: one 2.8 GHz Xeon core | 2026-10-01 | pass |
 | C.reread | P11 | 1.18 MB / about 7 s | MEASURED | L3 | file: v13/cost_measurements.json · pointer: m3_trace_read_only.keylong_ndvi.links 8+9+9b: 6,945 ms, 1,180,728 B | 2026-10-01 | pass |
 | C.scene | P11 | 0.058 % of the scene | MEASURED | L3 | file: research/repro/data/v8/scene_sizes.json + cog_pixel_bytes.json · pointer: 1,165,033 / 2,023,818,762 | 2026-09-30 | pass |
 | C.tok | P11 | 46 tokens / the value 8 | MEASURED | n/a | file: v13/cost_measurements.json · pointer: ['m5_tokens', 'items', 'value_16_digits', 'cl100k'] | 2026-10-01 | pass |
 | C.tools | P11 | 18-tool MCP list 18,709 (1 Oct) | MEASURED | n/a | file: v13/cost_measurements.json · pointer: ['m5_tokens', 'items', 'mcp_tools_list_core18_response', 'cl100k'] | 2026-10-01 | pass |
 | C.json | P11 | record as JSON 562 | MEASURED | n/a | file: v13/cost_measurements.json · pointer: ['m5_tokens', 'items', 'fact_json_as_served', 'cl100k'] | 2026-10-01 | pass |
-| C.g2tok | P11 | 2.1 times the input tokens / the same decisions | PRE-REGISTERED | n/a | file: repro/data/v8/results.json · pointer: b.claude-haiku-4-5.arms.{T,P}.input_tokens_mean; decision_correct 10/10 both | 2026-09-30 | pass |
+| C.g2tok | P11 | 2.1× the tokens prose costs / same decisions | PRE-REGISTERED | n/a | file: repro/data/v8/results.json · pointer: b.claude-haiku-4-5.arms.{T,P}.input_tokens_mean; decision_correct 10/10 both | 2026-09-30 | pass |
 | C.g2wall | P11 scope | +1.75 s | PRE-REGISTERED | n/a | file: repro/data/v8/results.json · pointer: wall_s_mean T 8.85 - P 7.10 | 2026-09-30 | pass |
 | C.resolve | P11 | 40 ms warm / 154 ms cold | MEASURED | L0 | file: v13/cost_measurements.json · pointer: m1_resolve_fact_https.{warm_cbor_reused_connection_ms,cold_cbor_new_connection_ms}.median | 2026-10-01 | pass |
-| C.bundle | P11 | 4,906 B / 9 checks 0.57 ms | MEASURED | L0-L2 | file: v13/cost_measurements.json · pointer: ['m2_offline_verification', 'in_process_precompiled_exec_ms', 'median'] | 2026-10-01 | pass |
+| C.bundle | P11 | 4,906 B / offline proof bundle 0.57 ms | MEASURED | L0-L2 | file: v13/cost_measurements.json · pointer: ['m2_offline_verification', 'in_process_precompiled_exec_ms', 'median'] | 2026-10-01 | pass |
 | C.hash | P11 | 1.6 µs | MEASURED | L0 | file: v13/cost_measurements.json · pointer: ['m2_offline_verification', 'primitives_us', 'blake3_fact_1115B', 'median'] | 2026-10-01 | pass |
 | EC.11 | P12 | 11 client paths / one address and one value | MEASURED | L0 | file: repro/data/v8/crossruntime_table.json · pointer: ['summary', 'ndvi_keylong', 'paths_ok'] | 2026-09-30 | pass |
 | EC.9of11 | P12 | with receipt signatures checked on 9 | MEASURED | L0 | file: repro/data/v8/crossruntime_table.json · pointer: ['summary', 'ndvi_keylong', 'receipt_verified_paths'] | 2026-09-30 | pass |
@@ -606,20 +606,20 @@ file, E84 DNs 900/2502), `F.date` (commit an erratum to `research/repro/data/v9/
 | EC.row.chatgpt | P12 band (conditional) | ChatGPT (@emem) | OUT-OF-SCOPE | n/a | file: v13/ecosystem_manifest.json · pointer: id=chatgpt | 2026-10-01 | manual |
 | EC.row.langchain | P12 band (conditional) | LangChain (MCP adapters) | MEASURED | n/a | file: v13/ecosystem_manifest.json · pointer: id=langchain | 2026-10-01 | manual |
 | EC.row.agno | P12 band (conditional) | Agno | MEASURED | n/a | file: v13/ecosystem_manifest.json · pointer: id=agno | 2026-10-01 | manual |
-| EC.statusdate | P12 legend | checked 1 Oct 2026 | LIVE | n/a | file: v13/ecosystem_manifest.json · pointer: verified_utc of every printed row | 2026-10-01 | manual |
+| EC.statusdate | P12 legend | checked 30 Sep 2026 | LIVE | n/a | file: v13/ecosystem_manifest.json · pointer: verified_utc of every printed row | 2026-10-01 | manual |
 | PA.stac | P13 | FIND · STAC · an asset (file) | EXTERNAL | n/a | url: https://stacspec.org (STAC 1.1.0) · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
 | PA.openeo | P13 | RUN · openEO · a process graph | EXTERNAL | n/a | url: openEO API 1.3.0 · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
 | PA.prov | P13 | RECORD LINEAGE · W3C PROV · entity, activity, agent | EXTERNAL | n/a | url: https://www.w3.org/TR/prov-dm/ · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
 | PA.c2pa | P13 | SIGN FILES · C2PA, CDSE Traceability · a file | EXTERNAL | n/a | url: C2PA 2.4; documentation.dataspace.copernicus.eu/APIs/Traceability.html · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
 | PA.rag | P13 | RETRIEVE · RAG · a text chunk | EXTERNAL | n/a | url: arXiv 2005.11401 · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
-| PA.carry | P13 | CARRY · MCP, A2A · a tool call, an agent card | EXTERNAL | n/a | url: MCP 2026-07-28; A2A 1.0 · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
+| PA.carry | P13 | CARRY · MCP, A2A · a tool call, an agent card | EXTERNAL | n/a | url: MCP 2025-11-25; A2A 1.0 · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
 | PA.geoguard | P13 | JUDGE · GeoGuard · a claim in text | EXTERNAL | n/a | url: https://github.com/NASA-IMPACT/geoguard · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
 | PA.credit | P13 | Sigstore, RFC 9162, SCITT (RFC 9943) / ARC (arXiv 2607.25066) | EXTERNAL | n/a | url: report 04 sec. 2.8-2.14 · report: research/v13/04_prior_art_and_field.md sec. 1-2 | 2026-10-01 | manual |
 | PA.critical | P13 | A STAC item identifies a file; EMEM identifies the observation an agent cited | SPEC | L1 | file: research/v13/04_prior_art_and_field.md · section: 2.1, 8 | 2026-10-01 | manual |
 | PA.munir | P3 header strip | errors may propagate silently across steps / Munir et al. 2026, arXiv 2604.24919 | EXTERNAL | n/a | url: https://arxiv.org/abs/2604.24919 · report: research/v13/04_prior_art_and_field.md sec. 0 item 9, 2.15 | 2026-10-01 | manual |
 | PA.geoguard_line | P13 | GeoGuard judges the claim; EMEM fixes the evidence it cites. | EXTERNAL | n/a | file: research/v13/04_prior_art_and_field.md · section: 2.7 | 2026-10-01 | manual |
-| H.byline | header | Jaya Kumari / Avijeet Singh / Vortx AI / emem.dev / github.com/Vortx-AI/emem (Apache-2.0) / ESA Φ-lab and BIFOLD / Berlin | LIVE | n/a | file: research/v13/evidence/industry/prog_posters.txt · repo_licence: research/v13/03_ecosystem_manifest.md row GitHub (Apache-2.0) | 2026-10-01 | manual |
-| REF.footer | footer | Sentinel-2 Products Specification (ESA) / Copernicus DEM GLO-30/90 / Hansen et al. 2013, GFC v1.13 / JRC GFC2020 V3/V4, TMF / ESA CCI Biomass v7 / Reg. (EU) 2023/1115 / BLAKE3 / RFC 8032 / RFC 6962/9162 / STAC 1.1 / openEO 1.3 / W3C PROV-DM / C2PA 2.4 / MCP 2026-07-28 / A2A 1.0 / Perez et al., ICLR 2025 / Munir et al. 2026 (2604.24919) / Cemri et al. 2025, MAST (2503.13657) / Dang et al. 2026, ARC (2607.25066) / Townshend et al. 1992 / GeoGuard (NASA-IMPACT) / Prithvi-EO-2.0 / TESSERA (2506.20380) | EXTERNAL | n/a | report: research/v13/04_prior_art_and_field.md sec. 6 (arXiv ids verified via the arXiv API); 00_v11_review_findings.md EXT-3 (ESA document title) | 2026-10-01 | manual |
+| H.byline | header | Jaya Kumari / Avijeet Singh / Vortx AI / emem.dev / github.com/Vortx-AI/emem (Apache-2.0) / BIFOLD and ESA Φ-lab / Berlin | LIVE | n/a | file: research/v13/evidence/industry/prog_posters.txt · repo_licence: research/v13/03_ecosystem_manifest.md row GitHub (Apache-2.0) | 2026-10-01 | manual |
+| REF.footer | footer | Sentinel-2 Products Specification (ESA) / Copernicus DEM GLO-30/90 / Hansen et al. 2013, GFC v1.13 / JRC GFC2020 V3/V4, TMF / ESA CCI Biomass v7 / Reg. (EU) 2023/1115 / BLAKE3 / RFC 8032 / RFC 6962/9162 / STAC 1.1 / openEO 1.3 / W3C PROV-DM / C2PA 2.4 / MCP 2025-11-25 / A2A 1.0 / Perez et al., ICLR 2025 / Munir et al. 2026 (2604.24919) / Cemri et al. 2025, MAST (2503.13657) / Dang et al. 2026, ARC (2607.25066) / Townshend et al. 1992 / GeoGuard (NASA-IMPACT) / Prithvi-EO-2.0 / TESSERA (2506.20380) | EXTERNAL | n/a | report: research/v13/04_prior_art_and_field.md sec. 6 (arXiv ids verified via the arXiv API); 00_v11_review_findings.md EXT-3 (ESA document title) | 2026-10-01 | manual |
 | K.concl | conclusion | none of the 16 corruptions in our suite / a wrong pixel emem signed in production | MEASURED | L0-L3 | inputs: ['S.R1.I', 'F.pixel'] | 2026-09-30 | manual |
 | K.commit | footer | emem.dev at commit 8e9b401 | LIVE | n/a | header: x-emem-commit 8e9b401cecae7ab9944d403a2d7840952c6586a6 · file: v13/cost_measurements.json · pointer: ['environment', 'emem_server_commit_header'] | 2026-10-01 | pass |
 | K.dates | footer | measurements 29 Sep to 1 Oct 2026 | MEASURED | n/a | inputs: dates of every row above | 2026-10-01 | manual |
@@ -853,7 +853,7 @@ poster's own Pages site so a target can be fixed after print (report 09 §2). Ge
 |---|---|---|---|---|---|
 | VIEW THE DEMO | Your phone is Agent B: a paraphrase passes unchecked; three corruptions are refused. | `https://vortx-ai.github.io/esa_poster/demo/` | the static receiver demo (report 09 §3) | 70 mm | header image tile, x 734 to 821, y 13 to 100 |
 | TRY A TOKEN | Resolve the Keylong token on emem.dev, then paste your own. | `https://vortx-ai.github.io/esa_poster/t/` | `https://emem.dev/verify?q=emem%3Afact%3Adefi.zb572.xoso.zb1ec%3Aoj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa` | 40 mm | spine, under the wall plate, x 728 to 778, y 326 to 376 |
-| INSPECT THE RECORD | The 1,115 bytes behind the main example, field by field. | `https://vortx-ai.github.io/esa_poster/r/` | the record page; it also links this board's own signed record when the authors seal it | 40 mm | panel 4, right edge, x 568 to 618, y 400 to 450 |
+| INSPECT THE RECORD | The 1,115 bytes behind the main example, decoded. | `https://vortx-ai.github.io/esa_poster/r/` | the record page; it also links this board's own signed record when the authors seal it | 40 mm | panel 4, right edge, x 568 to 618, y 400 to 450 |
 | RE-RUN THE TEST | Data and scripts behind this board's numbers, with one re-run command. | `https://vortx-ai.github.io/esa_poster/test/` | `https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v13` | 40 mm | panel 5, bottom right, x 568 to 618, y 764 to 814 |
 | DISCOVER INTEGRATIONS | Where EMEM runs today, each surface labelled by evidence. | `https://vortx-ai.github.io/esa_poster/use/` | the integrations page generated from the manifest | 40 mm | panel 12, top right, x 497 to 547, y 1030 to 1080 |
 | READ THE METHODS | Definitions, denominators, models, and what our own tools generated. | `https://vortx-ai.github.io/esa_poster/methods/` | `https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v13/METHODS.md` | 40 mm | conclusion block, x 768 to 818, y 1116 to 1166 |
@@ -1009,7 +1009,7 @@ CM = "v13/cost_measurements.json"
 BG = "repro/data/contra_bengaluru.json"
 RO = "repro/v12/data/case_rondonia_eudr.json"
 EV = "repro/v12/data/eo_evidence_per_fact_checks.csv"
-CK = "repro/data/v11/cell_keylong.json"
+CK = "research/v13/evidence/critic/cell.json"   # 209 facts, 215 sources, 2026-10-01T01:41Z (was repro/data/v11/cell_keylong.json, 213)
 CP = "repro/data/v11/cell_products.json"
 AK = "repro/data/v11/ask_keylong.json"
 CL = "v13/evidence/failure_modes/CHANGELOG_18adb67.md"
@@ -1062,7 +1062,7 @@ row("S.G2.haiku.F", "P1 spine", ["Claude Haiku 4.5 declined 5 of 5"], "PRE-REGIS
 row("S.G2.qwen.F", "P1 spine", ["Qwen2.5-3B", "acted 5 of 5"], "PRE-REGISTERED", "L1",
     {"file": QW, "pointer": "count(arm=F, decision=IRRIGATE)", "prereg": "research/v13/evidence/g2_handoff/prereg_addendum2.md"},
     "2026-09-30", value="5/5", check=("qwen", QW, ("F", "IRRIGATE"), 5), note="52 of 55 pre-registered trials ran; label in methods")
-row("S.G2.qwen.bare", "P1 spine", "dropped the cell from all 24 tokens", "PRE-REGISTERED", "L1",
+row("S.G2.qwen.bare", "P1 spine", "dropped the cell from all 24 calls", "PRE-REGISTERED", "L1",
     {"file": QW, "pointer": "count(tool_calls[].token_form == 'bare_cid') over arms T and F"}, "2026-09-30", value="24/24",
     check=("qwen_bare", QW, None, 24))
 row("S.G2.boundary", "P1 spine", "a reference protects only a receiver that keeps it whole and obeys a refusal", "INFERRED", "L1",
@@ -1156,7 +1156,7 @@ row("F.rail.mast", "P3 side rail", "MAST: no or incomplete verification (FM-3.2)
 row("F.caption", "P3", "Signatures prevented none", "INFERRED", "n/a", {"file": "research/v13/02_experiment_design.md", "section": "18 (honest boundary)"}, "2026-10-01")
 
 # ---------------- threat ----------------
-row("T.can", "threat", "A relay can rewrite what it carries but cannot sign under the pinned key or forge an address", "SPEC", "L0",
+row("T.can", "threat", "A relay can rewrite what it carries but cannot sign under the pinned key or match an address", "SPEC", "L0",
     {"file": "research/v13/10_ladder_threat_invention.md", "section": "4.2-4.3", "external": "RFC 8032 l.160; BLAKE3 spec 128-bit"}, "2026-10-01")
 row("T.pinned", "threat", ["pinned key", "DNS TXT", "did.json", "JWKS"], "LIVE", "L0", {"file": "research/repro/v8/trace_fact_output.txt", "pointer": "link 15"}, "2026-09-30", tier="30cm")
 row("T.oneop", "threat", "All keys today are one operator's", "LIVE", "L0", {"file": "research/v13/evidence/ladder/witnesses.json", "pointer": ["independent_operator_count"]}, "2026-10-01",
@@ -1177,21 +1177,21 @@ row("O.cogs", "P4", ["277.9 + 281.9 MB", "B04 + B08 COGs", "Planetary Computer"]
 row("O.pixel", "P4", ["row 9443, col 9098", "DN 1900, 3502"], "MEASURED", "L3", {"file": PX, "pointer": "S2A ... B08.floor(r,c), floor_DN"}, "2026-09-30",
     check=("json", PX, ["S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)", "B08", "floor_DN"], 3502), tier="30cm")
 row("O.key", "P4", "777er3yi…", "LIVE", "L0", {"file": XR, "pointer": "responder key"}, "2026-10-01", check=("grep", QW, "777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka"), tier="30cm")
-row("O.nohash", "P4 + P7", ["named, not hashed", "0 of 213 Keylong sources carry a hash"], "MEASURED", "L3", {"file": CK, "pointer": "count(sources[] with hash or cid)"}, "2026-09-30",
-    check=("ck_hash", CK, None, (213, 0)))
+row("O.nohash", "P4 + P7", ["named, not hashed", "0 of 215 Keylong sources carry a hash"], "MEASURED", "L3", {"file": CK, "pointer": "count(sources[] with hash or cid)"}, "2026-09-30",
+    check=("ck_hash", CK, None, (215, 0)))
 row("O.sevenaddr", "P4", "one Bengaluru value has seven", "MEASURED", "L0", {"file": BG, "pointer": "7 attestations with value 915.0712280273438, 7 fact_cids"}, "2026-09-29",
     check=("bg_values", BG, None, {918.0: 1, 915.0712280273438: 7}))
 row("O.batch", "P4", "a batch signature covers such addresses", "SPEC", "L0", {"repo": "emem 18adb67", "file": "crates/emem-fact/src/attest.rs:93-143"}, "2026-10-01")
 row("O.log", "P4", "Merkle log, RFC 6962 style, BLAKE3", "SPEC", "L0", {"repo": "emem", "file": "crates/emem-attest/src/translog.rs; docs/federation.md 9c"}, "2026-10-01", tier="30cm")
 
 # ---------------- P5 matrix ----------------
-row("X.loo", "P5", "Remove one check, and a named corruption passes.", "MEASURED", "L0-L3", {"file": MM, "pointer": ["leave_one_out"]}, D_R1,
+row("X.loo", "P5", "Each of five checks alone stops a corruption.", "MEASURED", "L0-L3", {"file": MM, "pointer": ["leave_one_out"]}, D_R1,
     check=("json", MM, ["leave_one_out"], {"D": [], "E": ["M4", "M5", "M6"], "F": ["M9", "M10", "M11", "M12"], "G": ["M16"], "H": ["M14"], "I": ["M15"]}))
 row("X.only", "P5 + H2", ["only the source re-read, the signer's wrong pixel", "Only a source re-read catches a signer's wrong pixel", "caught only by a re-read", "only it refuses the wrong pixel"], "MEASURED", "L3",
     {"file": MM, "pointer": ["leave_one_out", "I"]}, D_R1, check=("json", MM, ["leave_one_out", "I"], ["M15"]), note="allowlist for 'only' (report 10 sec. 5.3)")
 row("X.flips", "P5", "flips the decision", "MEASURED", "n/a", {"file": MM, "pointer": ["summary", "A", "decision_flips"]}, D_R1,
     check=("json", MM, ["summary", "A", "decision_flips"], ["M2", "M8", "M12", "M13", "M14", "M15"]), tier="30cm")
-row("X.p123", "P5 scope", "Three further signer errors (offset, same-day scene, unit) pass checks D to I", "MEASURED", "L3",
+row("X.p123", "P5 scope", "Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them.", "MEASURED", "L3",
     {"file": "research/v13/evidence/ladder/r1_t2_extra_out.json", "pointer": "T2_offset_zero, T2_scene_relabel_same_day, T2_unit_mislabel .refused_at_level_I == false"}, "2026-10-01",
     check=("json", "v13/evidence/ladder/r1_t2_extra_out.json", ["T2_offset_zero", "refused_at_level_I"], False), tier="30cm")
 row("X.entity", "P5", "The entity meant passes every check", "OUT-OF-SCOPE", "L4", {"file": MM, "pointer": "M17 outcome at every level"}, D_R1)
@@ -1219,7 +1219,7 @@ row("W.south", "P6", ["pixel 10 m south", "10 m south"], "MEASURED", "L3", {"fil
 # ---------------- P7 ladder ----------------
 row("L.780", "P7", ["780 of 780", "780 records pulled on 30 Sep 2026", "cell and band bound in 780 of 780"], "MEASURED", "L0-L1", {"file": EV, "pointer": "count(verified == PASS)"}, "2026-09-30", check=("csv", EV, ("verified", "PASS"), 780))
 row("L.266", "P7", "266 of 780", "MEASURED", "L2", {"file": EV, "pointer": "count(recompute == pass)"}, "2026-09-30", check=("csv", EV, ("recompute", "pass"), 266))
-row("L.reread0", "P7", "their source files are named, not hashed", "SPEC", "L3", {"repo": "emem 18adb67 and 8e9b401", "file": "crates/emem-api-rest/src/lib.rs: 62 x 'hash: None', 0 x 'hash: Some(' (report 10 sec. 0 item 2)", "measured": "0 of 213 Keylong source entries (O.nohash)"}, "2026-10-01")
+row("L.reread0", "P7", "their source files are named, not hashed", "SPEC", "L3", {"repo": "emem 18adb67 and 8e9b401", "file": "crates/emem-api-rest/src/lib.rs: 62 x 'hash: None', 0 x 'hash: Some(' (report 10 sec. 0 item 2)", "measured": "0 of 215 Keylong source entries (O.nohash)"}, "2026-10-01")
 row("L.409", "P7", "a relabelled token returns 409", "MEASURED", "L1", {"file": "research/v13/evidence/crossruntime/refusal_matrix.json", "pointer": ["wrong_cell", "rest"]}, "2026-09-30",
     check=("json_contains", "v13/evidence/crossruntime/refusal_matrix.json", ["wrong_cell", "rest"], "409"), tier="30cm")
 row("L.gfc", "P7", "GFC2020 V3 forest commission error 13.1 %", "EXTERNAL", "L5", {"file": "research/v13/evidence/failure_modes/jrc146622.txt", "line": 236}, "2026-10-01",
@@ -1260,8 +1260,8 @@ row("V.retired", "P10", "emem.dev lists its encoders as retired", "SPEC", "n/a",
 row("V.resolve", "P10", "Both still resolve", "LIVE", "L0", {"file": CC, "pointer": "GET /v1/cells/defi.zb572.xoso.zb1ec 2026-10-01T01:42Z"}, "2026-10-01", note="re-fetch at build")
 
 # ---------------- P11 cost ----------------
-row("C.cpu", "P11", ["0.36 ms of CPU", "One 2.8 GHz Xeon core"], "MEASURED", "L0-L3", {"file": CM, "pointer": ["m2_offline_verification", "mutation_suite_ms_per_decision_by_level", "I", "median"], "host": "one 2.8 GHz Xeon core"}, "2026-10-01",
-    check=("approx", CM, ["m2_offline_verification", "mutation_suite_ms_per_decision_by_level", "I", "median"], 0.36), note="committed 1.187 ms on another host; keep the range here, print one host-stated value")
+row("C.cpu", "P11", ["0.33 ms of CPU", "One 2.8 GHz Xeon core"], "MEASURED", "L0-L3", {"file": CM, "pointer": ["m2_offline_verification", "mutation_suite_ms_per_decision_by_level", "I", "median", " minus mutation_suite_genuine_construction_ms.median (0.3565 - 0.0288 ms)"], "host": "one 2.8 GHz Xeon core"}, "2026-10-01",
+    check=("approx_diff", CM, [["m2_offline_verification", "mutation_suite_ms_per_decision_by_level", "I", "median"], ["m2_offline_verification", "mutation_suite_genuine_construction_ms", "median"]], 0.33), note="committed 1.187 ms on another host; keep the range here, print one host-stated value")
 row("C.reread", "P11", ["1.18 MB", "about 7 s"], "MEASURED", "L3", {"file": CM, "pointer": "m3_trace_read_only.keylong_ndvi.links 8+9+9b: 6,945 ms, 1,180,728 B"}, "2026-10-01",
     check=("reread", CM, None, (6945.0, 1180728)), note="through a TLS-re-terminating proxy; print 'on our network path'")
 row("C.scene", "P11", ["0.058 % of the scene"], "MEASURED", "L3", {"file": "research/repro/data/v8/scene_sizes.json + cog_pixel_bytes.json", "pointer": "1,165,033 / 2,023,818,762"}, "2026-09-30",
@@ -1272,13 +1272,13 @@ row("C.tools", "P11", "18-tool MCP list 18,709 (1 Oct)", "MEASURED", "n/a", {"fi
     check=("json", CM, ["m5_tokens", "items", "mcp_tools_list_core18_response", "cl100k"], 18709), tier="30cm", note="raw body, cl100k; never mix with 20,838 (re-serialised) or 18,659 (30 Sep)")
 row("C.json", "P11", "record as JSON 562", "MEASURED", "n/a", {"file": CM, "pointer": ["m5_tokens", "items", "fact_json_as_served", "cl100k"]}, "2026-10-01",
     check=("json", CM, ["m5_tokens", "items", "fact_json_as_served", "cl100k"], 562), tier="30cm")
-row("C.g2tok", "P11", ["2.1 times the input tokens", "the same decisions"], "PRE-REGISTERED", "n/a",
+row("C.g2tok", "P11", ["2.1× the tokens prose costs", "same decisions"], "PRE-REGISTERED", "n/a",
     {"file": G2, "pointer": "b.claude-haiku-4-5.arms.{T,P}.input_tokens_mean; decision_correct 10/10 both"}, "2026-09-30",
     check=("ratio", G2, (["b", "claude-haiku-4-5", "arms", "T", "input_tokens_mean"], ["b", "claude-haiku-4-5", "arms", "P", "input_tokens_mean"]), 2.1))
 row("C.g2wall", "P11 scope", "+1.75 s", "PRE-REGISTERED", "n/a", {"file": G2, "pointer": "wall_s_mean T 8.85 - P 7.10"}, "2026-09-30", check=("calc", None, 8.85 - 7.10, 1.75), tier="30cm")
 row("C.resolve", "P11", ["40 ms warm", "154 ms cold"], "MEASURED", "L0", {"file": CM, "pointer": "m1_resolve_fact_https.{warm_cbor_reused_connection_ms,cold_cbor_new_connection_ms}.median"}, "2026-10-01",
     check=("approx", CM, ["m1_resolve_fact_https", "cold_cbor_new_connection_ms", "median"], 154.2), tier="30cm")
-row("C.bundle", "P11", ["4,906 B", "9 checks 0.57 ms"], "MEASURED", "L0-L2", {"file": CM, "pointer": ["m2_offline_verification", "in_process_precompiled_exec_ms", "median"]}, "2026-10-01",
+row("C.bundle", "P11", ["4,906 B", "offline proof bundle 0.57 ms"], "MEASURED", "L0-L2", {"file": CM, "pointer": ["m2_offline_verification", "in_process_precompiled_exec_ms", "median"]}, "2026-10-01",
     check=("approx", CM, ["m2_offline_verification", "in_process_precompiled_exec_ms", "median"], 0.57), tier="30cm")
 row("C.hash", "P11", "1.6 µs", "MEASURED", "L0", {"file": CM, "pointer": ["m2_offline_verification", "primitives_us", "blake3_fact_1115B", "median"]}, "2026-10-01",
     check=("approx", CM, ["m2_offline_verification", "primitives_us", "blake3_fact_1115B", "median"], 1.57), tier="30cm")
@@ -1304,13 +1304,13 @@ for mid, txt, cond in [("chatgpt", "ChatGPT (@emem)", "only after a dated logged
                        ("agno", "Agno", "only after emem's README names fastmcp")]:
     row(f"EC.row.{mid}", "P12 band (conditional)", txt, "LIVE", "n/a", {"file": EM, "pointer": f"id={mid}"}, "2026-10-01",
         note="CONDITIONAL: " + cond)
-row("EC.statusdate", "P12 legend", "checked 1 Oct 2026", "LIVE", "n/a", {"file": EM, "pointer": "verified_utc of every printed row"}, "2026-10-01", tier="30cm")
+row("EC.statusdate", "P12 legend", "checked 30 Sep 2026", "LIVE", "n/a", {"file": EM, "pointer": "verified_utc of every printed row"}, "2026-10-01", tier="30cm")
 
 # ---------------- P13 prior art ----------------
 for k, t, u in [("stac", "FIND · STAC · an asset (file)", "https://stacspec.org (STAC 1.1.0)"), ("openeo", "RUN · openEO · a process graph", "openEO API 1.3.0"),
                 ("prov", "RECORD LINEAGE · W3C PROV · entity, activity, agent", "https://www.w3.org/TR/prov-dm/"),
                 ("c2pa", "SIGN FILES · C2PA, CDSE Traceability · a file", "C2PA 2.4; documentation.dataspace.copernicus.eu/APIs/Traceability.html"),
-                ("rag", "RETRIEVE · RAG · a text chunk", "arXiv 2005.11401"), ("carry", "CARRY · MCP, A2A · a tool call, an agent card", "MCP 2026-07-28; A2A 1.0"),
+                ("rag", "RETRIEVE · RAG · a text chunk", "arXiv 2005.11401"), ("carry", "CARRY · MCP, A2A · a tool call, an agent card", "MCP 2025-11-25; A2A 1.0"),
                 ("geoguard", "JUDGE · GeoGuard · a claim in text", "https://github.com/NASA-IMPACT/geoguard"),
                 ("credit", ["Sigstore, RFC 9162, SCITT (RFC 9943)", "ARC (arXiv 2607.25066)"], "report 04 sec. 2.8-2.14")]:
     row(f"PA.{k}", "P13", t, "EXTERNAL", "n/a", {"url": u, "report": "research/v13/04_prior_art_and_field.md sec. 1-2"}, "2026-10-01")
@@ -1320,12 +1320,12 @@ row("PA.munir", "P3 header strip", ["errors may propagate silently across steps"
     {"url": "https://arxiv.org/abs/2604.24919", "report": "research/v13/04_prior_art_and_field.md sec. 0 item 9, 2.15"}, "2026-10-01", tier="30cm",
     note="position paper by the workshop organiser B. Demir and keynote S. Khan; quote verbatim from the arXiv HTML")
 row("PA.geoguard_line", "P13", "GeoGuard judges the claim; EMEM fixes the evidence it cites.", "EXTERNAL", "n/a", {"file": "research/v13/04_prior_art_and_field.md", "section": "2.7"}, "2026-10-01")
-row("H.byline", "header", ["Jaya Kumari", "Avijeet Singh", "Vortx AI", "emem.dev", "github.com/Vortx-AI/emem (Apache-2.0)", "ESA Φ-lab and BIFOLD", "Berlin"], "LIVE", "n/a",
+row("H.byline", "header", ["Jaya Kumari", "Avijeet Singh", "Vortx AI", "emem.dev", "github.com/Vortx-AI/emem (Apache-2.0)", "BIFOLD and ESA Φ-lab", "Berlin"], "LIVE", "n/a",
     {"file": "research/v13/evidence/industry/prog_posters.txt", "repo_licence": "research/v13/03_ecosystem_manifest.md row GitHub (Apache-2.0)"}, "2026-10-01", tier="1m")
 
 REFS = ["Sentinel-2 Products Specification (ESA)", "Copernicus DEM GLO-30/90", "Hansen et al. 2013, GFC v1.13", "JRC GFC2020 V3/V4, TMF",
         "ESA CCI Biomass v7", "Reg. (EU) 2023/1115", "BLAKE3", "RFC 8032", "RFC 6962/9162", "STAC 1.1", "openEO 1.3", "W3C PROV-DM", "C2PA 2.4",
-        "MCP 2026-07-28", "A2A 1.0", "Perez et al., ICLR 2025", "Munir et al. 2026 (2604.24919)", "Cemri et al. 2025, MAST (2503.13657)",
+        "MCP 2025-11-25", "A2A 1.0", "Perez et al., ICLR 2025", "Munir et al. 2026 (2604.24919)", "Cemri et al. 2025, MAST (2503.13657)",
         "Dang et al. 2026, ARC (2607.25066)", "Townshend et al. 1992", "GeoGuard (NASA-IMPACT)", "Prithvi-EO-2.0", "TESSERA (2506.20380)"]
 row("REF.footer", "footer", REFS, "EXTERNAL", "n/a", {"report": "research/v13/04_prior_art_and_field.md sec. 6 (arXiv ids verified via the arXiv API); 00_v11_review_findings.md EXT-3 (ESA document title)"}, "2026-10-01", tier="30cm",
     note="the footer prints exactly these strings joined by ' · '; any other reference needs a row")

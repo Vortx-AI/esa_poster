@@ -76,7 +76,12 @@
    "claim": "L.status"
   },
   {
-   "text": "266 of 780 recomputed bit for bit",
+   "text": "266 of 780 carry a recipe; all 266",
+   "pt": 15,
+   "claim": "L.266"
+  },
+  {
+   "text": "recompute",
    "pt": 15,
    "claim": "L.266"
   },
@@ -101,7 +106,7 @@
    "claim": "L.status"
   },
   {
-   "text": "named, not hashed: 0 of 213 Keylong",
+   "text": "named, not hashed: 0 of 215 Keylong",
    "pt": 15,
    "claim": "O.nohash"
   },

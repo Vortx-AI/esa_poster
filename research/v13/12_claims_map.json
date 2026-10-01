@@ -504,7 +504,7 @@
    "id": "S.G2.qwen.bare",
    "block": "P1 spine",
    "print": [
-    "dropped the cell from all 24 tokens"
+    "dropped the cell from all 24 calls"
    ],
    "status": "PRE-REGISTERED",
    "layer": "L1",
@@ -2458,7 +2458,7 @@
    "id": "T.can",
    "block": "threat",
    "print": [
-    "A relay can rewrite what it carries but cannot sign under the pinned key or forge an address"
+    "A relay can rewrite what it carries but cannot sign under the pinned key or match an address"
    ],
    "status": "SPEC",
    "layer": "L0",
@@ -2747,22 +2747,22 @@
    "block": "P4 + P7",
    "print": [
     "named, not hashed",
-    "0 of 213 Keylong sources carry a hash"
+    "0 of 215 Keylong sources carry a hash"
    ],
    "status": "MEASURED",
    "layer": "L3",
    "source": {
-    "file": "repro/data/v11/cell_keylong.json",
-    "pointer": "count(sources[] with hash or cid)"
+    "file": "research/v13/evidence/critic/cell.json",
+    "pointer": "count(sources[] with hash or cid) over 209 facts, 215 sources, 2026-10-01T01:41Z (live GET agrees)"
    },
-   "date": "2026-09-30",
+   "date": "2026-10-01",
    "value": null,
    "check": {
     "kind": "ck_hash",
-    "file": "repro/data/v11/cell_keylong.json",
+    "file": "research/v13/evidence/critic/cell.json",
     "arg": null,
     "expect": [
-     213,
+     215,
      0
     ]
    },
@@ -2847,7 +2847,7 @@
    "id": "X.loo",
    "block": "P5",
    "print": [
-    "Remove one check, and a named corruption passes."
+    "Each of five checks alone stops a corruption."
    ],
    "status": "MEASURED",
    "layer": "L0-L3",
@@ -2889,7 +2889,7 @@
      ]
     }
    },
-   "note": "",
+   "note": "leave_one_out names E, F, G, H and I (D is empty): five checks each the sole stop for a named corruption",
    "tier": "1m",
    "fallback": null,
    "r5_key": null,
@@ -2977,7 +2977,7 @@
    "id": "X.p123",
    "block": "P5 scope",
    "print": [
-    "Three further signer errors (offset, same-day scene, unit) pass checks D to I"
+    "Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them."
    ],
    "status": "MEASURED",
    "layer": "L3",
@@ -2996,7 +2996,7 @@
     ],
     "expect": false
    },
-   "note": "",
+   "note": "the unit error is caught by the band registry, the offset and same-day scene by the item metadata, not by the STAC catalogue re-read",
    "tier": "30cm",
    "fallback": null,
    "r5_key": null,
@@ -3356,7 +3356,7 @@
    "source": {
     "repo": "emem 18adb67 and 8e9b401",
     "file": "crates/emem-api-rest/src/lib.rs: 62 x 'hash: None', 0 x 'hash: Some(' (report 10 sec. 0 item 2)",
-    "measured": "0 of 213 Keylong source entries (O.nohash)"
+    "measured": "0 of 215 Keylong source entries (O.nohash)"
    },
    "date": "2026-10-01",
    "value": null,
@@ -3847,7 +3847,7 @@
    "id": "C.cpu",
    "block": "P11",
    "print": [
-    "0.36 ms of CPU",
+    "0.33 ms of CPU",
     "One 2.8 GHz Xeon core"
    ],
    "status": "MEASURED",
@@ -3858,22 +3858,30 @@
      "m2_offline_verification",
      "mutation_suite_ms_per_decision_by_level",
      "I",
-     "median"
+     "median",
+     " minus mutation_suite_genuine_construction_ms.median (0.3565 - 0.0288 ms)"
     ],
     "host": "one 2.8 GHz Xeon core"
    },
    "date": "2026-10-01",
    "value": null,
    "check": {
-    "kind": "approx",
+    "kind": "approx_diff",
     "file": "v13/cost_measurements.json",
     "arg": [
-     "m2_offline_verification",
-     "mutation_suite_ms_per_decision_by_level",
-     "I",
-     "median"
+     [
+      "m2_offline_verification",
+      "mutation_suite_ms_per_decision_by_level",
+      "I",
+      "median"
+     ],
+     [
+      "m2_offline_verification",
+      "mutation_suite_genuine_construction_ms",
+      "median"
+     ]
     ],
-    "expect": 0.36
+    "expect": 0.33
    },
    "note": "committed 1.187 ms on another host; keep the range here, print one host-stated value",
    "tier": "1m",
@@ -4050,8 +4058,8 @@
    "id": "C.g2tok",
    "block": "P11",
    "print": [
-    "2.1 times the input tokens",
-    "the same decisions"
+    "2.1× the tokens prose costs",
+    "same decisions"
    ],
    "status": "PRE-REGISTERED",
    "layer": "n/a",
@@ -4150,7 +4158,7 @@
    "block": "P11",
    "print": [
     "4,906 B",
-    "9 checks 0.57 ms"
+    "offline proof bundle 0.57 ms"
    ],
    "status": "MEASURED",
    "layer": "L0-L2",
@@ -4978,13 +4986,13 @@
    "id": "EC.statusdate",
    "block": "P12 legend",
    "print": [
-    "checked 1 Oct 2026"
+    "checked 30 Sep 2026"
    ],
    "status": "LIVE",
    "layer": "n/a",
    "source": {
     "file": "v13/ecosystem_manifest.json",
-    "pointer": "verified_utc of every printed row"
+    "pointer": "verified_utc of every printed row (2026-09-30T23:10Z..23:40Z; the board dates by UTC)"
    },
    "date": "2026-10-01",
    "value": null,
@@ -5109,7 +5117,7 @@
    "status": "EXTERNAL",
    "layer": "n/a",
    "source": {
-    "url": "MCP 2026-07-28; A2A 1.0",
+    "url": "MCP 2025-11-25; A2A 1.0",
     "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
    },
    "date": "2026-10-01",
@@ -5237,7 +5245,7 @@
     "Vortx AI",
     "emem.dev",
     "github.com/Vortx-AI/emem (Apache-2.0)",
-    "ESA Φ-lab and BIFOLD",
+    "BIFOLD and ESA Φ-lab",
     "Berlin"
    ],
    "status": "LIVE",
@@ -5272,7 +5280,7 @@
     "openEO 1.3",
     "W3C PROV-DM",
     "C2PA 2.4",
-    "MCP 2026-07-28",
+    "MCP 2025-11-25",
     "A2A 1.0",
     "Perez et al., ICLR 2025",
     "Munir et al. 2026 (2604.24919)",

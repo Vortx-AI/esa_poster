@@ -320,7 +320,7 @@ probes_pass = all(not v["refused_at_level_I"] for v in PR.values())
 assert probes_pass and len(PR) == 3
 scope = ("One signed Keylong NDVI record, one band, one run; deterministic receiver; rows M14 to M16 signed with a "
          "test key; the re-read compares with the committed 25 Sep window.")
-scope2 = "Three further signer errors (offset, same-day scene, unit) pass checks D to I and need a catalogue re-read."
+scope2 = "Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them."
 if MODE == "R5":
     scope = (f"Bars: agents' false acceptance, k of n per cell; squares: the deterministic ceiling. "
              f"{R5D['models']}, {R5D['dates']}.")

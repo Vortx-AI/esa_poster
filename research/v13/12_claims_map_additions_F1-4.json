@@ -468,7 +468,7 @@
     "Wrong date",
     "Wrong place",
     "Wrong version",
-    "Wrong scale",
+    "Wrong scale or offset",
     "Missing data signed as 0",
     "Wrong pixel, signed",
     "Wrong thing"
@@ -784,7 +784,7 @@
   },
   {
    "id": "F4.rail",
-   "block": "P3 failure ladder (F4) side rail",
+   "block": "P3 scope line under the caption (moved from the F4 side rail, review fix 18)",
    "print": [
     "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2)."
    ],

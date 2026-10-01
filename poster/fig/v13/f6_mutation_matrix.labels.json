@@ -697,7 +697,7 @@
    "claim": "F6.scope"
   },
   {
-   "text": "Three further signer errors (offset, same-day scene, unit) pass checks D to I and need a catalogue re-read.",
+   "text": "Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them.",
    "pt": 14,
    "claim": "X.p123"
   }

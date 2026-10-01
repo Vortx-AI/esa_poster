@@ -904,7 +904,7 @@
    "id": "W.err",
    "op": "extend_print",
    "print_add": [
-    "index error where the rules differ"
+    "spectral-index error where the rules differ"
    ],
    "figures": [
     "f7_wrong_pixel"
@@ -971,6 +971,18 @@
     "f6_mutation_matrix"
    ],
    "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "L.266",
+   "op": "extend_print",
+   "print_add": [
+    "266 of 780 carry a recipe; all 266 recompute",
+    "the 266 with a recipe all recompute at L2"
+   ],
+   "figures": [
+    "f8_ladder"
+   ],
+   "note": "review fix 9: 514 of the 780 have no recipe (n/a), not failures; same source as the main row"
   }
  ]
 }

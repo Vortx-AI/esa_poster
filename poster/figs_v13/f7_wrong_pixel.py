@@ -268,9 +268,9 @@ ax.add_patch(Rectangle((XR, WY + 31.4 - SQ / 2), SQ, SQ, fc=C["unaffected"], ec=
 T(XR + SQ + 1.8, WY + 31.4, f"{SAME}: both rules read one pixel", 14, color=C["ink2"], claim="F7.same")
 assert f"{wlo * 100:.0f} to {whi * 100:.0f}" == "75 to 86"
 
-# ------------------------------------------------------------------ bottom-left: the error distribution (n 121)
+# ------------------------------------------------------------------ bottom-left: the error distribution (n 121: indices.* records of the 162 where the rules differ)
 y0 = SC_H + 3.4
-T(0.3, y0, "index error where the rules differ", 14, color=C["ink2"], claim="W.err")
+T(0.3, y0, "spectral-index error where the rules differ", 14, color=C["ink2"], claim="W.err")   # the 121 are the index-band records of the 162 (41 reflectance bands excluded)
 t = T(SC_W, y0, f"n {E['n']}", 14, color=C["ink2"], ha="right", claim="W.err")
 LMIN, LMAX = -5.0, math.log10(0.5)          # log axis: errors span four decades
 assert ERR[0] > 10 ** LMIN and ERR[-1] < 10 ** LMAX

@@ -17,7 +17,8 @@ CM = J("research/v13/cost_measurements.json")
 m1, m2, m3, m5 = CM["m1_resolve_fact_https"], CM["m2_offline_verification"], CM["m3_trace_read_only"], CM["m5_tokens"]
 
 rehash_s = m2["primitives_us"]["blake3_fact_1115B"]["median"] * 1e-6
-chain_s = m2["mutation_suite_ms_per_decision_by_level"]["I"]["median"] * 1e-3
+chain_s = (m2["mutation_suite_ms_per_decision_by_level"]["I"]["median"]
+           - m2["mutation_suite_genuine_construction_ms"]["median"]) * 1e-3     # per decision less the handoff construction
 bundle_s = m2["in_process_precompiled_exec_ms"]["median"] * 1e-3
 bundle_B = os.path.getsize(os.path.join(ROOT, "research/repro/v8/proof_bundle_ndvi.cbor"))
 assert "4,906 B, 9 checks" in m2["bundle"] and bundle_B == 4906
@@ -37,7 +38,7 @@ mb = lambda b: f"{b / 1e6:.2f} MB"
 TIME_ROWS = [  # label, seconds (one or two), ramp level
     (f"re-hash {rehash_s * 1e6:.1f} µs", [rehash_s], "L0"),
     (f"all offline checks {chain_s * 1e3:.2f} ms", [chain_s], "L2"),
-    (f"offline bundle, 9 checks {bundle_s * 1e3:.2f} ms ({bundle_B:,} B)", [bundle_s], "L2"),
+    (f"offline proof bundle {bundle_s * 1e3:.2f} ms ({bundle_B:,} B)", [bundle_s], "L2"),
     (f"resolve {warm_s * 1e3:.0f} ms warm, {cold_s * 1e3:.0f} ms cold", [warm_s, cold_s], "L0"),
     (f"source re-read about {reread_ms / 1e3:.0f} s, {mb(reread_B)} ({frac:.3f} % of the scene)", [reread_ms / 1e3], "L3"),
 ]

@@ -148,7 +148,8 @@ for q, want in PROBES:
         T(x - 1.2, YA, lab, S, C["ink2"])
         ytop, yend = YA + 2.7, YAX
     else:
-        T(x - 0.9, YB, lab, S, C["harm_text"] if hot else C["ink"], ha="right", weight="semibold" if hot else "normal")
+        T(x - (2.9 if hot else 0.9), YB, lab, S, C["harm_text"] if hot else C["ink"], ha="right",
+          weight="semibold" if hot else "normal")           # the 15 Jun label sits 2 mm clear of its dashed rule
         ytop, yend = (YA - 2.6 if hot else YB - 2.6), (Y1 if a in r1 else Y2)
     col, w = (C["harm"], 0.9) if hot else (C["muted"], 0.5)
     ax.plot([x, x], [ytop, yend], color=col, lw=w / PTMM, ls=(0, (2.2 / w, 1.2 / w)) if hot else (0, (3, 3)), zorder=1)
