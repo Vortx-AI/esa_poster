@@ -54,3 +54,6 @@ loaded qwen2.5-7b-instruct-q4_k_m in 394.2s
 B1-qwen2.5-7b-instruct-q4_k_m-M7-E-r1-1       DECLINE      fa=False calls=1 155.7s
 B1-qwen2.5-7b-instruct-q4_k_m-M1-A-r1-1       IRRIGATE     fa=True calls=0 45.1s
 B1-qwen2.5-7b-instruct-q4_k_m-G0-B-E-r1-1     INCONSISTENT fa=None calls=1 164.5s
+B1-qwen2.5-7b-instruct-q4_k_m-M2-E-r1-1       DECLINE      fa=False calls=1 105.8s
+B1-qwen2.5-7b-instruct-q4_k_m-M13-A-r1-1      IRRIGATE     fa=True calls=0 21.0s
+B1-qwen2.5-7b-instruct-q4_k_m-M13-B-r1-1      IRRIGATE     fa=True calls=0 37.1s
