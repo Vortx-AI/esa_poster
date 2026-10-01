@@ -3114,3 +3114,7 @@
 {"trial_id": "B1-claude-haiku-4-5-20251001-M1-E+-r4-1", "attempt": 0, "cost_usd": 0.008571, "t": 1790845180.6398447}
 {"trial_id": "B1-claude-haiku-4-5-20251001-M2-A-r4-1", "attempt": 0, "cost_usd": 0.0032719999999999997, "t": 1790845182.5769382}
 {"trial_id": "B1-claude-haiku-4-5-20251001-M2-D-r4-1", "attempt": 0, "cost_usd": 0.009788, "t": 1790845193.5006623}
+{"trial_id": "B1-claude-haiku-4-5-20251001-M25-E-r5-1", "attempt": 0, "cost_usd": 0.010932, "t": 1790845203.972969}
+{"trial_id": "B1-claude-haiku-4-5-20251001-M18-B-r4-1", "attempt": 0, "cost_usd": 0.016881, "t": 1790845208.2478898}
+{"trial_id": "B1-claude-haiku-4-5-20251001-M19-E+-r5-1", "attempt": 0, "cost_usd": 0.006868, "t": 1790845214.4872355}
+{"trial_id": "B1-claude-haiku-4-5-20251001-G0-B-E-r5-1", "attempt": 0, "cost_usd": 0.010003000000000001, "t": 1790845218.743795}
