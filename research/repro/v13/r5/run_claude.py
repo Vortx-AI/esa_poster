@@ -56,7 +56,8 @@ def append(path, row):
 def done_ids():
     if not TRIALS.exists():
         return set()
-    return {json.loads(l)["trial_id"] for l in TRIALS.read_text().splitlines() if l.strip()}
+    rows = [json.loads(l) for l in TRIALS.read_text().splitlines() if l.strip()]
+    return {r["trial_id"] for r in rows if not r.get("excluded")}
 
 
 def plan(block, model, reps, items):
@@ -172,6 +173,9 @@ def infra_failure(r, needs_mcp):
         return f"cli error {r.get('subtype')}"
     if r.get("is_error") and "API Error" in (r.get("result_text") or ""):
         return "api error"
+    txt = r.get("result_text") or ""
+    if ("hit your session limit" in txt or "rate limit" in txt.lower()) and not S.DEC_RE.search(txt):
+        return "rate limit: no model output"
     return None
 
 
@@ -182,13 +186,15 @@ def run_one(t, by, cap):
     dis = ["mcp__emem__" + n for n in EMEM_DISALLOW] if t["block"] == "2" else None
     prompt = prompt_for(t["block"], it, t["cond"])
     attempts = []
-    for attempt in range(2):
+    for attempt in range(3):
         r = claude_run.run(prompt, IT.system_prompt(it), t["model"], cfg, allowed, disallowed=dis, effort=EFFORT[t["model"]])
         append(LEDGER, {"trial_id": t["trial_id"], "attempt": attempt, "cost_usd": r["cost_usd"] or 0.0, "t": time.time()})
         fail = infra_failure(r, cfg is not None)
         attempts.append(fail)
         if not fail:
             break
+        if fail.startswith("rate limit"):
+            time.sleep(120)
     calls_rows = [json.loads(l) for l in open(calllog)] if os.path.exists(calllog) else []
     tx = analyse_transcript(t["block"], it, t["cond"], r, calls_rows)
     sc_cond = t["cond"] if t["block"] != "2" else "E"

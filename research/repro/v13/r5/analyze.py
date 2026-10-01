@@ -64,6 +64,11 @@ def load():
         r["obeyed_refusal"] = (not r["actionable"]) if (r.get("refusals_seen") or 0) > 0 else None
         out.append(r)
     excluded = [r for r in rows if r["block"] != "P" and r.get("excluded")]
+    done_ids = {r["trial_id"] for r in out}
+    excluded_unreplaced = [r for r in excluded if r["trial_id"] not in done_ids]
+    res_excl = {"n_excluded_rows": len(excluded), "n_excluded_not_rerun": len(excluded_unreplaced)}
+    for r in excluded:
+        r["_excl_summary"] = res_excl
     return out, excluded, rows
 
 
@@ -232,6 +237,46 @@ def main():
     res["overheads"] = ov
     res["total_cost_usd_all_blocks"] = round(sum(json.loads(l)["cost_usd"] or 0 for l in open(HERE / "ledger.jsonl")), 4)
     res["n_by_model_block"] = {f"{m}|B{b}": sum(1 for r in rows if r["model"] == m and r["block"] == b) for m in models for b in ("1", "2")}
+    # ---- figure-facing structure (F2: primary.<cond>.pooled_claude.false_accept; F6: cells[cond][item].false_accept)
+    import sys, time as _t
+    res["final"] = "--final" in sys.argv
+    res["prereg_blake3"] = next(l.split(":", 1)[1].strip() for l in open(HERE / "prereg_hash.txt") if l.startswith("blake3"))
+    res["prereg_addendum1_blake3"] = [l.split(":", 1)[1].strip() for l in open(HERE / "prereg_hash.txt") if l.startswith("blake3")][1]
+    tss = [r["ts"] for r in rows if r.get("ts")]
+    res["dates"] = {"prereg_hashed_utc": next(l.split(": ", 1)[1].strip() for l in open(HERE / "prereg_hash.txt") if l.startswith("hashed_at")),
+                    "first_trial_utc": _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime(min(tss))),
+                    "last_trial_utc": _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime(max(tss))),
+                    "analysed_utc": _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime())}
+    res["primary"] = {}
+    for c in CONDS:
+        res["primary"][c] = {"pooled_claude": {"false_accept": {"k": pooled[c]["k"], "n": pooled[c]["n"]},
+                                               "wilson95": pooled[c]["wilson95"], "rate": pooled[c]["rate"]} if c in pooled else None,
+                             "ceiling": {"false_accept": {"k": res["ceiling_primary_fa"][c]["k"], "n": res["ceiling_primary_fa"][c]["n"]}},
+                             "per_model": {m: {"false_accept": {"k": prim[m][c]["k"], "n": prim[m][c]["n"]}, "wilson95": prim[m][c]["wilson95"]}
+                                           for m in models if c in prim[m]}}
+    cells_f6 = {}
+    for c in CONDS:
+        cells_f6[c] = {}
+        for iid in ITEMS:
+            rr = [r for r in b1 if r["model"] in CLAUDE and r["cond"] == c and r["item"] == iid]
+            if not rr:
+                continue
+            e = {"n": len(rr), "decisions": {d: sum(1 for r in rr if r["decision"] == d) for d in sorted({str(r["decision"]) for r in rr})},
+                 "ceiling_fa": (ceil_by.get((iid, c)) or {}).get("fa"), "family": ITEMS[iid]["family"],
+                 "per_model": {SHORT[m]: {"k": sum(bool(r["fa"]) for r in rr if r["model"] == m and r["fa"] is not None),
+                                          "n": sum(1 for r in rr if r["model"] == m and r["fa"] is not None)} for m in CLAUDE}}
+            if iid in ("G0", "G0-B"):
+                e["false_accept"] = None
+                e["decision_accuracy"] = {"k": sum(r["correct"] for r in rr), "n": len(rr)}
+            else:
+                fa = rate(rr, "fa")
+                e["false_accept"] = {"k": fa["k"], "n": fa["n"]}
+                e["wilson95"] = fa["wilson95"]
+            cells_f6[c][iid] = e
+    res["cells_by_item"] = res["cells"]
+    res["cells"] = cells_f6
+    res["open_models"] = {m: {c: {"false_accept": {"k": prim[m][c]["k"], "n": prim[m][c]["n"]}, "wilson95": prim[m][c]["wilson95"]}
+                              for c in CONDS if c in prim[m]} for m in models if m not in CLAUDE}
     (HERE / "results.json").write_text(json.dumps(res, indent=1, default=str))
     # ---- matrix CSV: rows item, columns cond x model; cell = FA rate (controls: decision accuracy, marked)
     with open(HERE / "fa_matrix.csv", "w", newline="") as fh:
