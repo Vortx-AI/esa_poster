@@ -26,3 +26,8 @@ Applied in one pass, then the board is rebuilt and re-gated. Quotes are exact su
 18. F4 right-hand rotated rail (two 14 pt lines, 262 mm, rotated): move its sentence into the panel 3 caption horizontally, or drop it.
 
 Accepted as is: 17 pt side-panel body (recorded in build report); Dify marked LIVE (published) while "not run by us"; four "X, not Y" contrasts (each substantive); the amber production ring's protan weakness (low, 30 cm detail).
+
+## From the numbers-vs-data reviewer (all low; every other number re-derived and correct)
+19. F8 L3 "0 of 213 Keylong sources carry a hash" → "0 of 215 Keylong sources carry a hash", source research/v13/evidence/critic/cell.json (209 facts / 215 sources, 2026-10-01T01:41Z; live GET agrees); update the assert in f8_ladder.py.
+20. "A record check takes 0.36 ms of CPU" → "A record check takes 0.33 ms of CPU" and F10 "all offline checks 0.36 ms" → "all offline checks 0.33 ms" (0.3565 ms per decision minus 0.0288 ms handoff construction; cost_measurements.json m2); update claims row C.cpu.
+21. F11 "checked 1 Oct 2026" → "checked 30 Sep 2026" (manifest verified_utc is 30 Sep 23:10-23:40Z; the board dates by UTC everywhere else).
