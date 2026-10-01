@@ -70,6 +70,6 @@ def check_text(fig, floor=FLOOR):
 def save(fig, name):
     check_text(fig)
     for ext in ("svg", "png"):
-        fig.savefig(os.path.join(OUT, f"{name}.{ext}"), dpi=300 if ext == "png" else None)
+        fig.savefig(os.path.join(OUT, f"{name}.{ext}"), dpi=300)   # 300 also for SVG so embedded rasters are not resampled to 72 ppi
     plt.close(fig)
     print("wrote", name)
