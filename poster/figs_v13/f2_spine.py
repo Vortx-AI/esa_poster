@@ -239,7 +239,7 @@ def main():
     T(ax, 400, 11, "Agent B", "F2.heads", **hk)
     T(ax, 690, 4.9, "B acted on", "F2.heads", ha="right", **hk)
     T(ax, 690, 11, "corrupted evidence", "F2.heads", ha="right", **hk)
-    T(ax, 698 + 103 / 2, 11, "no check reaches", "F2.heads", ha="center", **hk)
+    T(ax, 698 + 103 / 2, 11, "what is handed over?", "O.84", ha="center", **hk)
     mode = "deterministic receiver, no model" if MODE == "fallback" else "agents, pooled Claude"
     T(ax, 690, 16.4, mode, "F2.mode", fontsize=S.FLOOR, color=C["ink2"], ha="right", va="baseline")
     ax.plot([0, 600], [13.6, 13.6], color=C["rule"], lw=0.35 * MMPT, zorder=1)
@@ -328,31 +328,44 @@ def main():
                 "emem": "R5.E.pooled"}
         T(ax, 690, cy + 0.6, fmt_frac(k, nn), r1id[key] if MODE == "fallback" else r5id[key],
           fontsize=PT["numeral"] if lh >= 20 else 48, fontweight=700, color=col, ha="right", va="center", zorder=4)
-    # the wall: hatched, white plates, nothing typed on the hatch
+    # The former boundary wall now answers the handoff question directly.
+    # It is deliberately compact: the full decoded object is restored as panel 4.
     wx, ww = 698, W - 698
     hatch(ax, wx, ys[0] - 1.5, ww, H - (ys[0] - 1.5), pitch=1.6, z=1)
-    px, pw_ = wx + 8, ww - 16
-    py, ph = ys[0] + 2.5, 44.0
-    ax.add_patch(FancyBboxPatch((px, py), pw_, ph, boxstyle="round,pad=0,rounding_size=1.5", fc="white", ec="none",
-                                zorder=3))
-    for j, s in enumerate(("the entity meant (M17)", "sensor accuracy", "the decision")):
-        T(ax, px + 5, py + 9 + j * 12.5, s, "S.boundary_wall", fontsize=PT["label"], fontweight=600, color=C["ink"],
-          va="center", zorder=4)
-        if j < 2:
-            ax.plot([px + 5, px + pw_ - 5], [py + 15.25 + j * 12.5] * 2, color=C["rule"], lw=0.35 * MMPT, zorder=4)
-    # A control outcome occupies the former duplicate QR tile.
-    ax.add_patch(FancyBboxPatch((px, 73), pw_, 42, boxstyle="round,pad=0,rounding_size=1.5", fc="white", ec="none", zorder=3))
-    T(ax, px+5, 80, "GENUINE CONTROLS", "V7.flow", fontsize=14, fontweight=600, color=C["emem"], va="center", zorder=4)
-    if MODE == "R5":
-        results=json.loads((R5_DIR / "results.json").read_text())
-        ctrl=[v["E"]["decision_accuracy_controls"] for k,v in results["decision_accuracy"].items() if k.startswith("claude-")]
-        ck,cn=sum(v["k"] for v in ctrl),sum(v["n"] for v in ctrl)
-        assert (ck,cn)==(71,72)
-        T(ax, px+5, 93, fmt_frac(ck,cn), "V6.controls", fontsize=38, fontweight=700, color=C["emem"], va="center", zorder=4)
-        T(ax, px+5, 105, "expected decisions", "V7.flow", fontsize=17, color=C["ink2"], va="center", zorder=4)
-        T(ax, px+5, 112, "checked reference · pooled Claude", "V7.flow", fontsize=14, color=C["ink2"], va="center", zorder=4)
-    else:
-        T(ax, px+5, 92, "No agent results", "V7.flow", fontsize=20, color=C["ink2"], va="center", zorder=4)
+    px, pw_ = wx + 7, ww - 14
+
+    # What actually crosses the handoff: the address, not a copied pixel or prose blob.
+    ay, ah = ys[0] + 1.8, 33.5
+    ax.add_patch(FancyBboxPatch((px, ay), pw_, ah, boxstyle="round,pad=0,rounding_size=1.5",
+                                fc=C["emem"], ec="none", zorder=3))
+    T(ax, px + 5, ay + 6.5, "ADDRESS", "O.84", fontsize=14, fontweight=700, color="white", va="center", zorder=4)
+    T(ax, px + 5, ay + 14.0, "84 characters", "O.84", fontsize=22, fontweight=700, color="white", va="center", zorder=4)
+    T(ax, px + 5, ay + 21.0, "BLAKE3(record)", "O.nohash", fontsize=15, color="white", va="center", zorder=4)
+    cid = TOKEN.split(":")[-1]
+    T(ax, px + 5, ay + 27.6, cid[:26], "O.cid", family=S.MONO, fontsize=14, fontweight=600, color="white", va="center", zorder=4)
+    T(ax, px + 5, ay + 32.0, cid[26:], "O.cid", family=S.MONO, fontsize=14, fontweight=600, color="white", va="center", zorder=4)
+
+    # Everything below is recovered from that address and independently checked by the receiver.
+    items = [
+        ("RECORD · 1,115 B", "fetch + re-hash", "O.1115", "L0"),
+        ("ATTESTATION + LOG", "signature + inclusion", "O.batch", "L0"),
+        ("SOURCE FILES", "named, not hashed", "O.nohash", "L3"),
+    ]
+    iy = ay + ah + 3.0
+    ih = 20.5
+    for j, (title, sub, claim, layer) in enumerate(items):
+        y = iy + j * (ih + 2.2)
+        fc = C["emem_tint"] if j < 2 else C["oos_bg"]
+        ec = C["emem"] if j < 2 else C["oos"]
+        ax.add_patch(FancyBboxPatch((px, y), pw_, ih, boxstyle="round,pad=0,rounding_size=1.4",
+                                    fc=fc, ec=ec, lw=0.35 * MMPT, zorder=3))
+        T(ax, px + 5, y + 6.5, title, claim, fontsize=16, fontweight=700,
+          color=C["emem"] if j < 2 else C["ink"], va="center", zorder=4)
+        T(ax, px + 5, y + 14.2, sub, claim, fontsize=14, color=C["ink2"], va="center", zorder=4)
+        if j < len(items) - 1:
+            ax.add_patch(FancyArrowPatch((px + pw_/2, y + ih), (px + pw_/2, y + ih + 2.0),
+                                         arrowstyle="-|>,head_length=1.8,head_width=1.0", mutation_scale=MMPT,
+                                         lw=0.4 * MMPT, color=C["ink2"], zorder=4, shrinkA=0, shrinkB=0))
 
     S.save(fig, NAME)
     meta = {"figure": NAME, "size_mm": [W, H], "mode": MODE, "lanes": [l[0] for l in L],
