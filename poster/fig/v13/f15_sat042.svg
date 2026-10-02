@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="548.503937pt" height="334.488189pt" viewBox="0 0 548.503937 334.488189" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-02T04:25:13.508169</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 334.488189 
+L 548.503937 334.488189 
+L 548.503937 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 0 0 
+L 548.503937 0 
+L 548.503937 32.88189 
+L 0 32.88189 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #f1f0ec"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 119.055118 234.566929 
+L 333.779528 234.566929 
+L 333.779528 288.141732 
+L 119.055118 288.141732 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 333.779528 234.566929 
+L 441.141732 234.566929 
+L 441.141732 288.141732 
+L 333.779528 288.141732 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 441.141732 234.566929 
+L 548.503937 234.566929 
+L 548.503937 288.141732 
+L 441.141732 288.141732 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #faddd2"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 333.779528 234.566929 
+L 333.779528 288.141732 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #ffffff; stroke-width: 1.700787; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 441.141732 234.566929 
+L 441.141732 288.141732 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #ffffff; stroke-width: 1.700787; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 6.80315 50.740157 
+C 8.53219 50.740157 10.190647 51.427113 11.413263 52.649729 
+C 12.63588 53.872345 13.322835 55.530802 13.322835 57.259843 
+C 13.322835 58.988883 12.63588 60.64734 11.413263 61.869956 
+C 10.190647 63.092572 8.53219 63.779528 6.80315 63.779528 
+C 5.074109 63.779528 3.415652 63.092572 2.193036 61.869956 
+C 0.97042 60.64734 0.283465 58.988883 0.283465 57.259843 
+C 0.283465 55.530802 0.97042 53.872345 2.193036 52.649729 
+C 3.415652 51.427113 5.074109 50.740157 6.80315 50.740157 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #0f5fa8"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 143.149606 49.889764 
+L 206.929134 49.889764 
+Q 209.76378 49.889764 209.76378 52.724409 
+L 209.76378 61.795276 
+Q 209.76378 64.629921 206.929134 64.629921 
+L 143.149606 64.629921 
+Q 140.314961 64.629921 140.314961 61.795276 
+L 140.314961 52.724409 
+Q 140.314961 49.889764 143.149606 49.889764 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 6.80315 65.19685 
+C 8.53219 65.19685 10.190647 65.883806 11.413263 67.106422 
+C 12.63588 68.329038 13.322835 69.987495 13.322835 71.716535 
+C 13.322835 73.445576 12.63588 75.104033 11.413263 76.326649 
+C 10.190647 77.549265 8.53219 78.23622 6.80315 78.23622 
+C 5.074109 78.23622 3.415652 77.549265 2.193036 76.326649 
+C 0.97042 75.104033 0.283465 73.445576 0.283465 71.716535 
+C 0.283465 69.987495 0.97042 68.329038 2.193036 67.106422 
+C 3.415652 65.883806 5.074109 65.19685 6.80315 65.19685 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #b5401a"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 143.149606 64.346457 
+L 206.929134 64.346457 
+Q 209.76378 64.346457 209.76378 67.181102 
+L 209.76378 76.251969 
+Q 209.76378 79.086614 206.929134 79.086614 
+L 143.149606 79.086614 
+Q 140.314961 79.086614 140.314961 76.251969 
+L 140.314961 67.181102 
+Q 140.314961 64.346457 143.149606 64.346457 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #faddd2"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 6.80315 79.653543 
+C 8.53219 79.653543 10.190647 80.340498 11.413263 81.563115 
+C 12.63588 82.785731 13.322835 84.444188 13.322835 86.173228 
+C 13.322835 87.902269 12.63588 89.560725 11.413263 90.783342 
+C 10.190647 92.005958 8.53219 92.692913 6.80315 92.692913 
+C 5.074109 92.692913 3.415652 92.005958 2.193036 90.783342 
+C 0.97042 89.560725 0.283465 87.902269 0.283465 86.173228 
+C 0.283465 84.444188 0.97042 82.785731 2.193036 81.563115 
+C 3.415652 80.340498 5.074109 79.653543 6.80315 79.653543 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #0f5fa8"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 143.149606 78.80315 
+L 206.929134 78.80315 
+Q 209.76378 78.80315 209.76378 81.637795 
+L 209.76378 90.708661 
+Q 209.76378 93.543307 206.929134 93.543307 
+L 143.149606 93.543307 
+Q 140.314961 93.543307 140.314961 90.708661 
+L 140.314961 81.637795 
+Q 140.314961 78.80315 143.149606 78.80315 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 6.80315 94.110236 
+C 8.53219 94.110236 10.190647 94.797191 11.413263 96.019808 
+C 12.63588 97.242424 13.322835 98.900881 13.322835 100.629921 
+C 13.322835 102.358962 12.63588 104.017418 11.413263 105.240035 
+C 10.190647 106.462651 8.53219 107.149606 6.80315 107.149606 
+C 5.074109 107.149606 3.415652 106.462651 2.193036 105.240035 
+C 0.97042 104.017418 0.283465 102.358962 0.283465 100.629921 
+C 0.283465 98.900881 0.97042 97.242424 2.193036 96.019808 
+C 3.415652 94.797191 5.074109 94.110236 6.80315 94.110236 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #b5401a"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 143.149606 93.259843 
+L 206.929134 93.259843 
+Q 209.76378 93.259843 209.76378 96.094488 
+L 209.76378 105.165354 
+Q 209.76378 108 206.929134 108 
+L 143.149606 108 
+Q 140.314961 108 140.314961 105.165354 
+L 140.314961 96.094488 
+Q 140.314961 93.259843 143.149606 93.259843 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #faddd2"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 6.80315 108.566929 
+C 8.53219 108.566929 10.190647 109.253884 11.413263 110.476501 
+C 12.63588 111.699117 13.322835 113.357573 13.322835 115.086614 
+C 13.322835 116.815655 12.63588 118.474111 11.413263 119.696728 
+C 10.190647 120.919344 8.53219 121.606299 6.80315 121.606299 
+C 5.074109 121.606299 3.415652 120.919344 2.193036 119.696728 
+C 0.97042 118.474111 0.283465 116.815655 0.283465 115.086614 
+C 0.283465 113.357573 0.97042 111.699117 2.193036 110.476501 
+C 3.415652 109.253884 5.074109 108.566929 6.80315 108.566929 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #0f5fa8"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 143.149606 107.716535 
+L 206.929134 107.716535 
+Q 209.76378 107.716535 209.76378 110.551181 
+L 209.76378 119.622047 
+Q 209.76378 122.456693 206.929134 122.456693 
+L 143.149606 122.456693 
+Q 140.314961 122.456693 140.314961 119.622047 
+L 140.314961 110.551181 
+Q 140.314961 107.716535 143.149606 107.716535 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 6.80315 123.023622 
+C 8.53219 123.023622 10.190647 123.710577 11.413263 124.933194 
+C 12.63588 126.15581 13.322835 127.814266 13.322835 129.543307 
+C 13.322835 131.272348 12.63588 132.930804 11.413263 134.153421 
+C 10.190647 135.376037 8.53219 136.062992 6.80315 136.062992 
+C 5.074109 136.062992 3.415652 135.376037 2.193036 134.153421 
+C 0.97042 132.930804 0.283465 131.272348 0.283465 129.543307 
+C 0.283465 127.814266 0.97042 126.15581 2.193036 124.933194 
+C 3.415652 123.710577 5.074109 123.023622 6.80315 123.023622 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 143.149606 122.173228 
+L 206.929134 122.173228 
+Q 209.76378 122.173228 209.76378 125.007874 
+L 209.76378 134.07874 
+Q 209.76378 136.913386 206.929134 136.913386 
+L 143.149606 136.913386 
+Q 140.314961 136.913386 140.314961 134.07874 
+L 140.314961 125.007874 
+Q 140.314961 122.173228 143.149606 122.173228 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 6.80315 137.480315 
+C 8.53219 137.480315 10.190647 138.16727 11.413263 139.389886 
+C 12.63588 140.612503 13.322835 142.270959 13.322835 144 
+C 13.322835 145.729041 12.63588 147.387497 11.413263 148.610114 
+C 10.190647 149.83273 8.53219 150.519685 6.80315 150.519685 
+C 5.074109 150.519685 3.415652 149.83273 2.193036 148.610114 
+C 0.97042 147.387497 0.283465 145.729041 0.283465 144 
+C 0.283465 142.270959 0.97042 140.612503 2.193036 139.389886 
+C 3.415652 138.16727 5.074109 137.480315 6.80315 137.480315 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #b5401a"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 143.149606 136.629921 
+L 206.929134 136.629921 
+Q 209.76378 136.629921 209.76378 139.464567 
+L 209.76378 148.535433 
+Q 209.76378 151.370079 206.929134 151.370079 
+L 143.149606 151.370079 
+Q 140.314961 151.370079 140.314961 148.535433 
+L 140.314961 139.464567 
+Q 140.314961 136.629921 143.149606 136.629921 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #faddd2"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 2.834646 171.070866 
+L 62.751969 171.070866 
+Q 65.586614 171.070866 65.586614 173.905512 
+L 65.586614 199.417323 
+Q 65.586614 202.251969 62.751969 202.251969 
+L 2.834646 202.251969 
+Q 0 202.251969 0 199.417323 
+L 0 173.905512 
+Q 0 171.070866 2.834646 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 71.822835 171.070866 
+L 131.740157 171.070866 
+Q 134.574803 171.070866 134.574803 173.905512 
+L 134.574803 199.417323 
+Q 134.574803 202.251969 131.740157 202.251969 
+L 71.822835 202.251969 
+Q 68.988189 202.251969 68.988189 199.417323 
+L 68.988189 173.905512 
+Q 68.988189 171.070866 71.822835 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 140.811024 171.070866 
+L 200.728346 171.070866 
+Q 203.562992 171.070866 203.562992 173.905512 
+L 203.562992 199.417323 
+Q 203.562992 202.251969 200.728346 202.251969 
+L 140.811024 202.251969 
+Q 137.976378 202.251969 137.976378 199.417323 
+L 137.976378 173.905512 
+Q 137.976378 171.070866 140.811024 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #faddd2; stroke: #d2481e; stroke-width: 3.401575; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 209.799213 171.070866 
+L 269.716535 171.070866 
+Q 272.551181 171.070866 272.551181 173.905512 
+L 272.551181 199.417323 
+Q 272.551181 202.251969 269.716535 202.251969 
+L 209.799213 202.251969 
+Q 206.964567 202.251969 206.964567 199.417323 
+L 206.964567 173.905512 
+Q 206.964567 171.070866 209.799213 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 278.787402 171.070866 
+L 338.704724 171.070866 
+Q 341.53937 171.070866 341.53937 173.905512 
+L 341.53937 199.417323 
+Q 341.53937 202.251969 338.704724 202.251969 
+L 278.787402 202.251969 
+Q 275.952756 202.251969 275.952756 199.417323 
+L 275.952756 173.905512 
+Q 275.952756 171.070866 278.787402 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 347.775591 171.070866 
+L 407.692913 171.070866 
+Q 410.527559 171.070866 410.527559 173.905512 
+L 410.527559 199.417323 
+Q 410.527559 202.251969 407.692913 202.251969 
+L 347.775591 202.251969 
+Q 344.940945 202.251969 344.940945 199.417323 
+L 344.940945 173.905512 
+Q 344.940945 171.070866 347.775591 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 416.76378 171.070866 
+L 476.681102 171.070866 
+Q 479.515748 171.070866 479.515748 173.905512 
+L 479.515748 199.417323 
+Q 479.515748 202.251969 476.681102 202.251969 
+L 416.76378 202.251969 
+Q 413.929134 202.251969 413.929134 199.417323 
+L 413.929134 173.905512 
+Q 413.929134 171.070866 416.76378 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 485.751969 171.070866 
+L 545.669291 171.070866 
+Q 548.503937 171.070866 548.503937 173.905512 
+L 548.503937 199.417323 
+Q 548.503937 202.251969 545.669291 202.251969 
+L 485.751969 202.251969 
+Q 482.917323 202.251969 482.917323 199.417323 
+L 482.917323 173.905512 
+Q 482.917323 171.070866 485.751969 171.070866 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #dce8f5"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 119.055118 252.141732 
+L 140.527559 252.141732 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #0f5fa8; stroke-width: 3.401575"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 119.055118 266.598425 
+L 183.472441 266.598425 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #0f5fa8; stroke-width: 3.401575"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 119.055118 281.055118 
+L 496.970079 281.055118 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #d2481e; stroke-width: 3.401575"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 65.586614 186.661417 
+L 68.988189 186.661417 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #4a4d55; stroke-width: 2.267717; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 134.574803 186.661417 
+L 137.976378 186.661417 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #4a4d55; stroke-width: 2.267717; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 203.562992 186.661417 
+L 206.964567 186.661417 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #d2481e; stroke-width: 3.968504; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 272.551181 186.661417 
+L 275.952756 186.661417 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #4a4d55; stroke-width: 2.267717; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 341.53937 186.661417 
+L 344.940945 186.661417 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #4a4d55; stroke-width: 2.267717; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 410.527559 186.661417 
+L 413.929134 186.661417 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #4a4d55; stroke-width: 2.267717; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 479.515748 186.661417 
+L 482.917323 186.661417 
+" clip-path="url(#p16d993bc47)" style="fill: none; stroke: #4a4d55; stroke-width: 2.267717; stroke-linecap: square"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 140.527559 248.740157 
+C 141.429667 248.740157 142.294949 249.098569 142.932836 249.736456 
+C 143.570722 250.374342 143.929134 251.239624 143.929134 252.141732 
+C 143.929134 253.04384 143.570722 253.909122 142.932836 254.547009 
+C 142.294949 255.184896 141.429667 255.543307 140.527559 255.543307 
+C 139.625451 255.543307 138.760169 255.184896 138.122282 254.547009 
+C 137.484396 253.909122 137.125984 253.04384 137.125984 252.141732 
+C 137.125984 251.239624 137.484396 250.374342 138.122282 249.736456 
+C 138.760169 249.098569 139.625451 248.740157 140.527559 248.740157 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #0f5fa8; stroke: #ffffff; stroke-width: 1.133858; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 183.472441 263.19685 
+C 184.374549 263.19685 185.239831 263.555262 185.877718 264.193149 
+C 186.515604 264.831035 186.874016 265.696317 186.874016 266.598425 
+C 186.874016 267.500533 186.515604 268.365815 185.877718 269.003702 
+C 185.239831 269.641589 184.374549 270 183.472441 270 
+C 182.570333 270 181.705051 269.641589 181.067164 269.003702 
+C 180.429278 268.365815 180.070866 267.500533 180.070866 266.598425 
+C 180.070866 265.696317 180.429278 264.831035 181.067164 264.193149 
+C 181.705051 263.555262 182.570333 263.19685 183.472441 263.19685 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #0f5fa8; stroke: #ffffff; stroke-width: 1.133858; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 496.970079 277.653543 
+C 497.872187 277.653543 498.737469 278.011955 499.375355 278.649842 
+C 500.013242 279.287728 500.371654 280.15301 500.371654 281.055118 
+C 500.371654 281.957226 500.013242 282.822508 499.375355 283.460395 
+C 498.737469 284.098282 497.872187 284.456693 496.970079 284.456693 
+C 496.067971 284.456693 495.202689 284.098282 494.564802 283.460395 
+C 493.926915 282.822508 493.568504 281.957226 493.568504 281.055118 
+C 493.568504 280.15301 493.926915 279.287728 494.564802 278.649842 
+C 495.202689 278.011955 496.067971 277.653543 496.970079 277.653543 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #d2481e; stroke: #ffffff; stroke-width: 1.133858; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 205.26378 188.362205 
+C 206.917645 188.362205 208.503994 189.019292 209.673453 190.188751 
+C 210.842912 191.358211 211.5 192.94456 211.5 194.598425 
+C 211.5 196.25229 210.842912 197.83864 209.673453 199.008099 
+C 208.503994 200.177558 206.917645 200.834646 205.26378 200.834646 
+C 203.609915 200.834646 202.023565 200.177558 200.854106 199.008099 
+C 199.684647 197.83864 199.027559 196.25229 199.027559 194.598425 
+C 199.027559 192.94456 199.684647 191.358211 200.854106 190.188751 
+C 202.023565 189.019292 203.609915 188.362205 205.26378 188.362205 
+z
+" clip-path="url(#p16d993bc47)" style="fill: #ffffff; stroke: #d2481e; stroke-width: 2.551181; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="4.535433" y="12.990866" transform="rotate(-0 4.535433 12.990866)">SAT-042 is a scripted pass in emem's test harness,</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="4.535433" y="27.731024" transform="rotate(-0 4.535433 27.731024)">not a spacecraft; run on 30 Sep 2026.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #4a4d55" x="543.968504" y="12.990866" transform="rotate(-0 543.968504 12.990866)">emem 04b40c5, deterministic:</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #4a4d55" x="543.968504" y="27.731024" transform="rotate(-0 543.968504 27.731024)">fixed key, clocks, digests, anchor</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="45.011969" transform="rotate(-0 0 45.011969)">a</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="13.03937" y="44.171969" transform="rotate(-0 13.03937 44.171969)">one scripted pass: two writes refused, one rewrite caught</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="6.80315" y="61.463307" transform="rotate(-0 6.80315 61.463307)">1</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="18.141732" y="61.179843" transform="rotate(-0 18.141732 61.179843)">Enrol</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #0f5fa8" x="175.03937" y="61.179843" transform="rotate(-0 175.03937 61.179843)">ENROLLED</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="215.433071" y="61.179843" transform="rotate(-0 215.433071 61.179843)">orbital.satellite.v1 enrolled; 8 layers required</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="6.80315" y="75.92" transform="rotate(-0 6.80315 75.92)">2</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="18.141732" y="75.636535" transform="rotate(-0 18.141732 75.636535)">Write, no trace</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #b5401a" x="175.03937" y="75.636535" transform="rotate(-0 175.03937 75.636535)">REFUSED</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="215.433071" y="75.636535" transform="rotate(-0 215.433071 75.636535)">no OS execution trace was presented</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="6.80315" y="90.376693" transform="rotate(-0 6.80315 90.376693)">3</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="18.141732" y="90.093228" transform="rotate(-0 18.141732 90.093228)">Capture the pass</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #0f5fa8" x="175.03937" y="90.093228" transform="rotate(-0 175.03937 90.093228)">SIGNED</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="215.433071" y="90.093228" transform="rotate(-0 215.433071 90.093228)">8 layers chained; 3 NDVI payload digests bound</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="6.80315" y="104.833386" transform="rotate(-0 6.80315 104.833386)">4</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="18.141732" y="104.549921" transform="rotate(-0 18.141732 104.549921)">Smuggle a 4th fact</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #b5401a" x="175.03937" y="104.549921" transform="rotate(-0 175.03937 104.549921)">REFUSED</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="215.433071" y="104.549921" transform="rotate(-0 215.433071 104.549921)">digest cyzwak… is not among the trace's outputs</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="6.80315" y="119.290079" transform="rotate(-0 6.80315 119.290079)">5</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="18.141732" y="119.006614" transform="rotate(-0 18.141732 119.006614)">Honest batch</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #0f5fa8" x="175.03937" y="119.006614" transform="rotate(-0 175.03937 119.006614)">ADMITTED</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="215.433071" y="119.006614" transform="rotate(-0 215.433071 119.006614)">3 facts under 1 trace, 3arfrn…, 1 bundle</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="6.80315" y="133.746772" transform="rotate(-0 6.80315 133.746772)">6</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="18.141732" y="133.463307" transform="rotate(-0 18.141732 133.463307)">Score vs anchor</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #8a5a00" x="175.03937" y="133.463307" transform="rotate(-0 175.03937 133.463307)">SCORED</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="215.433071" y="133.463307" transform="rotate(-0 215.433071 133.463307)">2 consistent, 1 contradicted; scored after admission</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="6.80315" y="148.203465" transform="rotate(-0 6.80315 148.203465)">7</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="18.141732" y="147.92" transform="rotate(-0 18.141732 147.92)">Rewrite one log</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #b5401a" x="175.03937" y="147.92" transform="rotate(-0 175.03937 147.92)">CAUGHT</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="215.433071" y="147.92" transform="rotate(-0 215.433071 147.92)">segment 2 edited after signing: chain broken at seq 3</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="165.626142" transform="rotate(-0 0 165.626142)">b</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="13.03937" y="164.786142" transform="rotate(-0 13.03937 164.786142)">the trace: 8 layers, each log digest chained to the previous</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="32.793307" y="182.644409" transform="rotate(-0 32.793307 182.644409)">syscall</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #4a4d55" x="32.793307" y="198.518425" transform="rotate(-0 32.793307 198.518425)">seq 0</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="101.781496" y="182.644409" transform="rotate(-0 101.781496 182.644409)">scheduler</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #4a4d55" x="101.781496" y="198.518425" transform="rotate(-0 101.781496 198.518425)">seq 1</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #b5401a" x="170.769685" y="182.644409" transform="rotate(-0 170.769685 182.644409)">memory</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #b5401a" x="170.769685" y="198.518425" transform="rotate(-0 170.769685 198.518425)">seq 2</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #d2481e" x="205.26378" y="198.80189" transform="rotate(-0 205.26378 198.80189)">×</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="239.757874" y="182.644409" transform="rotate(-0 239.757874 182.644409)">sensor bus</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #4a4d55" x="239.757874" y="198.518425" transform="rotate(-0 239.757874 198.518425)">seq 3</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="308.746063" y="182.644409" transform="rotate(-0 308.746063 182.644409)">signal</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #4a4d55" x="308.746063" y="198.518425" transform="rotate(-0 308.746063 198.518425)">seq 4</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="377.734252" y="182.644409" transform="rotate(-0 377.734252 182.644409)">energy</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #4a4d55" x="377.734252" y="198.518425" transform="rotate(-0 377.734252 198.518425)">seq 5</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="446.722441" y="182.644409" transform="rotate(-0 446.722441 182.644409)">thermal</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #4a4d55" x="446.722441" y="198.518425" transform="rotate(-0 446.722441 198.518425)">seq 6</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="515.71063" y="182.644409" transform="rotate(-0 515.71063 182.644409)">storage</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: middle; fill: #4a4d55" x="515.71063" y="198.518425" transform="rotate(-0 515.71063 198.518425)">seq 7</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="137.976378" y="214.675906" transform="rotate(-0 137.976378 214.675906)">seq 2 rewritten after signing; the verifier: chain broken at seq 3</text>
+   </g>
+   <g id="text_55">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="230.256063" transform="rotate(-0 0 230.256063)">c</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="13.03937" y="229.416063" transform="rotate(-0 13.03937 229.416063)">drift anchor 0.6402 ± 0.02 (1σ): scored after admission, not a gate</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #0f5fa8" x="226.417323" y="245.290079" transform="rotate(-0 226.417323 245.290079)">consistent</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #8a5a00" x="387.46063" y="245.290079" transform="rotate(-0 387.46063 245.290079)">tension</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #b5401a" x="494.822835" y="245.290079" transform="rotate(-0 494.822835 245.290079)">contradicted</text>
+   </g>
+   <g id="text_60">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #222428" x="113.385827" y="256.061732" transform="rotate(-0 113.385827 256.061732)">0.6431 → 0.05</text>
+   </g>
+   <g id="text_61">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #222428" x="113.385827" y="270.518425" transform="rotate(-0 113.385827 270.518425)">0.6512 → 0.15</text>
+   </g>
+   <g id="text_62">
+    <text style="font-weight: 500; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #b5401a" x="113.385827" y="284.975118" transform="rotate(-0 113.385827 284.975118)">0.2103 → 0.88</text>
+   </g>
+   <g id="text_63">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="300.565669" transform="rotate(-0 0 300.565669)">s = z/(1+z), z = |x − anchor| / 3σ; 3σ scores 0.5, 9σ scores 0.75 (emem-trace tests)</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="315.305827" transform="rotate(-0 0 315.305827)">The gate binds the value digest only; band, cell and tslot are not checked.</text>
+   </g>
+   <g id="text_65">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="330.045984" transform="rotate(-0 0 330.045984)">Three refusals shown; no device is enrolled under orbital.satellite.v1.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p16d993bc47">
+   <rect x="0" y="0" width="548.503937" height="334.488189"/>
+  </clipPath>
+ </defs>
+</svg>
