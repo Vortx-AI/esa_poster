@@ -16,6 +16,7 @@ ACTIVE = [
     "f18_workflow.py",
     "f2_spine.py",
     "f3_eight_answers.py",
+    "f4_failure_ladder.py",
     "f5_evidence_object.py",
     "f6_mutation_matrix.py",
     "f7_wrong_pixel.py",
