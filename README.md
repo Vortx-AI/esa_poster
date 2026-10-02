@@ -6,9 +6,9 @@ EMEM gives an observation a lookup identity and a content-addressed record. An a
 
 Jaya Kumari and Avijeet Singh, Vortx AI. Agentic AI for Earth Observation, BIFOLD and ESA Φ-lab, Berlin, 19 October 2026.
 
-## Current poster: v13.9
+## Current poster: reviewed v13 source
 
-The full Observe → Locate → Record → Hand off → Resolve → Check → Continue workflow now sits above the handoff experiment. Section 11 releases 56 mm by removing repeated prose and rearranging its platform cards beside the Connect QR. All 11 existing scientific figures retain their dimensions; all 33 retained community labels keep their wording and type sizes. [Layout and release review](research/v13/24_WORKFLOW_AND_COMPACT_COMMUNITY.md).
+The full Observe → Locate → Record → Hand off → Resolve → Check → Continue workflow sits above the handoff experiment. The reviewed build restores the eight-value diagnostic, decoded evidence object, single-line change model with the implemented anchor score, and SAT-042 execution harness. Section 7 consolidates the checked-reference scope. The compact community band is section 12. [Review and validation](research/v13/25_REVIEWED_SOURCE_AND_A0.md).
 
 - [Print-ready A0 PDF](poster/emem-poster-A0.pdf)
 - [Preview](poster/emem-poster-preview.png) and [300 dpi proof](poster/emem-poster-A0-300dpi.png)
@@ -17,7 +17,7 @@ The full Observe → Locate → Record → Hand off → Resolve → Check → Co
 
 The accepted programme title is **EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings**. The printed scientific title preserves it.
 
-The poster follows one system: observe, locate, record, hand off, resolve, check and continue. The controlled handoff experiment, source-pixel example and temporal memory demonstrate the checks. A Berlin multi-product stack and the token family show the wider scope; the ecosystem panel distinguishes tested paths from protocol, registry and example surfaces.
+The poster follows one system: observe, locate, record, hand off, resolve, check and continue. The controlled handoff experiment, source-pixel example and temporal memory demonstrate the checks. The complete token family and execution harness show the wider scope; the ecosystem panel distinguishes tested paths from protocol, registry and example surfaces. The Berlin multi-product stack remains in the repository and companion methods.
 
 ## Read the mechanism
 
