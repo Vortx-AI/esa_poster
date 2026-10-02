@@ -1,0 +1,2 @@
+No domain-verification challenge is configured on this node.
+Set EMEM_APPS_CHALLENGE to the token the directory issued for this submission. It is per-operator and per-submission, so it is deliberately not compiled in.

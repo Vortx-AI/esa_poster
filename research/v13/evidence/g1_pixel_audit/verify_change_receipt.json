@@ -1,0 +1,14 @@
+{
+ "signature_valid": true,
+ "served_at": "2026-09-30T10:54:28Z",
+ "fact_cids": [
+  "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+  "kxjvfwpa7grmfhkxoxufq5xjltq2s5syer2rzdx7odbnrxhnjzkq",
+  "juokn77pgvd2k6pgwvfq6enc2rp2bcnel4n7t3l62mc7wg4pah3q",
+  "6x6af2zxxkecrvihrwdgipqk2pcfbspgmnl5exk5ipd5thy3cala",
+  "maid4smoefmozww25brtzkbeiei5i37x2yraew4hwv5ablogmskq"
+ ],
+ "ledger_cid": "maid4smoefmozww25brtzkbeiei5i37x2yraew4hwv5ablogmskq",
+ "ledger_rehash_ok": true,
+ "ledger_signed_at": "2026-09-30T10:01:53Z"
+}

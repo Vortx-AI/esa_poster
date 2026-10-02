@@ -1,0 +1,1 @@
+{"t": 1790832665.306493, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:3yyaxn5dvvutqukhtycog2y6ab2hfnzlcnf56qlevgnnare3nnsa"}, "is_error": true, "ms": 0.536, "meta": {"verdict": false, "first_fail": "binding"}, "text": "refused: binding check failed: record date 2026-09-30 != question date 2026-09-25"}

@@ -1,0 +1,1 @@
+{"t": 1790833171.4414883, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"}, "is_error": true, "ms": 0.515, "meta": {"verdict": false, "first_fail": "hash"}, "text": "refused: hash check failed: BLAKE3 of the served bytes does not equal the cid in the reference"}

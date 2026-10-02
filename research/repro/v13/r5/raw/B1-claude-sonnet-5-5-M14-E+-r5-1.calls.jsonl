@@ -1,0 +1,1 @@
+{"t": 1790844600.8319135, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:ijfp2jfqcompmsw3ubet257pmbre2jkpyvnjqhczjsyipwmfirjq"}, "is_error": true, "ms": 0.852, "meta": {"verdict": false, "first_fail": "recompute"}, "text": "refused: recompute check failed: signed DNs give 0.4708994708994709, record says 0.46"}

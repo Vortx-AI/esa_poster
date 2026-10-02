@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="548.503937pt" height="720.566929pt" viewBox="0 0 548.503937 720.566929" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-01T08:54:37.507940</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720.566929 
+L 548.503937 720.566929 
+L 548.503937 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 0 0.566929 
+L 8.503937 0.566929 
+L 8.503937 13.606299 
+L 0 13.606299 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 0 642.189862 
+L 538.582677 642.189862 
+L 538.582677 720.566929 
+L 0 720.566929 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 0 539.97815 
+L 538.582677 539.97815 
+L 538.582677 639.355217 
+L 0 639.355217 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 0 458.766437 
+L 538.582677 458.766437 
+L 538.582677 537.143504 
+L 0 537.143504 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 0 377.554724 
+L 538.582677 377.554724 
+L 538.582677 455.931791 
+L 0 455.931791 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 0 275.343012 
+L 538.582677 275.343012 
+L 538.582677 374.720079 
+L 0 374.720079 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 0 194.131299 
+L 538.582677 194.131299 
+L 538.582677 272.508366 
+L 0 272.508366 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 0 98.219587 
+L 538.582677 98.219587 
+L 538.582677 191.296654 
+L 0 191.296654 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 0 17.007874 
+L 538.582677 17.007874 
+L 538.582677 95.384941 
+L 0 95.384941 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f2f2f0"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 0 642.189862 
+L 8.503937 642.189862 
+L 8.503937 720.566929 
+L 0 720.566929 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 530.07874 642.189862 
+L 538.582677 642.189862 
+L 538.582677 720.566929 
+L 530.07874 720.566929 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #8fb5e0"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 0 539.97815 
+L 8.503937 539.97815 
+L 8.503937 639.355217 
+L 0 639.355217 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 530.07874 539.97815 
+L 538.582677 539.97815 
+L 538.582677 639.355217 
+L 530.07874 639.355217 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #5b8fcb"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 0 458.766437 
+L 8.503937 458.766437 
+L 8.503937 537.143504 
+L 0 537.143504 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 530.07874 458.766437 
+L 538.582677 458.766437 
+L 538.582677 537.143504 
+L 530.07874 537.143504 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #5b8fcb"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 0 377.554724 
+L 8.503937 377.554724 
+L 8.503937 455.931791 
+L 0 455.931791 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 530.07874 377.554724 
+L 538.582677 377.554724 
+L 538.582677 455.931791 
+L 530.07874 455.931791 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #5b8fcb"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 0 275.343012 
+L 8.503937 275.343012 
+L 8.503937 374.720079 
+L 0 374.720079 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 530.07874 275.343012 
+L 538.582677 275.343012 
+L 538.582677 374.720079 
+L 530.07874 374.720079 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #0b4a86"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 0 194.131299 
+L 8.503937 194.131299 
+L 8.503937 272.508366 
+L 0 272.508366 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 530.07874 194.131299 
+L 538.582677 194.131299 
+L 538.582677 272.508366 
+L 530.07874 272.508366 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #0b4a86"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 0 98.219587 
+L 8.503937 98.219587 
+L 8.503937 191.296654 
+L 0 191.296654 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 530.07874 98.219587 
+L 538.582677 98.219587 
+L 538.582677 191.296654 
+L 530.07874 191.296654 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #0b4a86"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 0 17.007874 
+L 8.503937 17.007874 
+L 8.503937 95.384941 
+L 0 95.384941 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #e8a317"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 530.07874 17.007874 
+L 538.582677 17.007874 
+L 538.582677 95.384941 
+L 530.07874 95.384941 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f1f0ec"/>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 530.07874 21.818427 
+L 534.889293 17.007874 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 26.62898 
+L 538.582677 18.125043 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 31.439534 
+L 538.582677 22.935597 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 36.250087 
+L 538.582677 27.74615 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 41.06064 
+L 538.582677 32.556703 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 45.871193 
+L 538.582677 37.367256 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 50.681747 
+L 538.582677 42.17781 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 55.4923 
+L 538.582677 46.988363 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 60.302853 
+L 538.582677 51.798916 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 65.113406 
+L 538.582677 56.609469 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 69.923959 
+L 538.582677 61.420022 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 74.734513 
+L 538.582677 66.230576 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 79.545066 
+L 538.582677 71.041129 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 84.355619 
+L 538.582677 75.851682 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 89.166172 
+L 538.582677 80.662235 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 530.07874 93.976726 
+L 538.582677 85.472789 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 533.481078 95.384941 
+L 538.582677 90.283342 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 538.291631 95.384941 
+L 538.582677 95.093895 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #8a5a00" x="14.173228" y="11.055118" transform="rotate(-0 14.173228 11.055118)">each rung happened, in emem or in our tests</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #4a4d55" x="538.582677" y="11.055118" transform="rotate(-0 538.582677 11.055118)">↑ passes more checks</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="661.005295" transform="rotate(-0 17.007874 661.005295)">1</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="661.005295" transform="rotate(-0 32.88189 661.005295)">Lost in the handoff</text>
+   </g>
+   <g id="patch_27">
+    <path d="M 468.214193 645.874902 
+L 522.992126 645.874902 
+Q 525.826772 645.874902 525.826772 648.709547 
+L 525.826772 657.213484 
+Q 525.826772 660.04813 522.992126 660.04813 
+L 468.214193 660.04813 
+Q 465.379547 660.04813 465.379547 657.213484 
+L 465.379547 648.709547 
+Q 465.379547 645.874902 468.214193 645.874902 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 291.033248 645.024508 
+L 456.308681 645.024508 
+Q 459.710256 645.024508 459.710256 648.426083 
+L 459.710256 657.496949 
+Q 459.710256 660.898524 456.308681 660.898524 
+L 291.033248 660.898524 
+Q 287.631673 660.898524 287.631673 657.496949 
+L 287.631673 648.426083 
+Q 287.631673 645.024508 291.033248 645.024508 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #8fb5e0"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="676.860295" transform="rotate(-0 17.007874 676.860295)">0.47 for 0.4709</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="697.125295" transform="rotate(-0 17.007874 697.125295)">5 of 5 receivers irrigated</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="712.791295" transform="rotate(-0 17.007874 712.791295)">Perez et al., ICLR 2025: LLM transmission chains drift</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="558.793583" transform="rotate(-0 17.007874 558.793583)">2</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="558.793583" transform="rotate(-0 32.88189 558.793583)">Wrong date</text>
+   </g>
+   <g id="patch_29">
+    <path d="M 487.496693 543.663189 
+L 522.992126 543.663189 
+Q 525.826772 543.663189 525.826772 546.497835 
+L 525.826772 555.001772 
+Q 525.826772 557.836417 522.992126 557.836417 
+L 487.496693 557.836417 
+Q 484.662047 557.836417 484.662047 555.001772 
+L 484.662047 546.497835 
+Q 484.662047 543.663189 487.496693 543.663189 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 362.448248 542.812795 
+L 475.591181 542.812795 
+Q 478.992756 542.812795 478.992756 546.21437 
+L 478.992756 555.285236 
+Q 478.992756 558.686811 475.591181 558.686811 
+L 362.448248 558.686811 
+Q 359.046673 558.686811 359.046673 555.285236 
+L 359.046673 546.21437 
+Q 359.046673 542.812795 362.448248 542.812795 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #5b8fcb"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="574.648583" transform="rotate(-0 17.007874 574.648583)">asked 23 Sep, served 25 Sep</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="594.913583" transform="rotate(-0 17.007874 594.913583)">10 of 10 agents saw one scene twice;</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="615.913583" transform="rotate(-0 17.007874 615.913583)">3 said no 23 Sep scene existed</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="631.579583" transform="rotate(-0 17.007874 631.579583)">STAC item search defines no default order</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="477.58187" transform="rotate(-0 17.007874 477.58187)">3</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="477.58187" transform="rotate(-0 32.88189 477.58187)">Wrong place</text>
+   </g>
+   <g id="patch_31">
+    <path d="M 421.335443 462.451476 
+L 522.992126 462.451476 
+Q 525.826772 462.451476 525.826772 465.286122 
+L 525.826772 473.790059 
+Q 525.826772 476.624705 522.992126 476.624705 
+L 421.335443 476.624705 
+Q 418.500797 476.624705 418.500797 473.790059 
+L 418.500797 465.286122 
+Q 418.500797 462.451476 421.335443 462.451476 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 263.639498 461.601083 
+L 409.429931 461.601083 
+Q 412.831506 461.601083 412.831506 465.002657 
+L 412.831506 474.073524 
+Q 412.831506 477.475098 409.429931 477.475098 
+L 263.639498 477.475098 
+Q 260.237923 477.475098 260.237923 474.073524 
+L 260.237923 465.002657 
+Q 260.237923 461.601083 263.639498 461.601083 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #5b8fcb"/>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="493.43687" transform="rotate(-0 17.007874 493.43687)">coordinates given, town point answered</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="513.70187" transform="rotate(-0 17.007874 513.70187)">597 m; NDVI 0.28 for the field's 0.42</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="529.36787" transform="rotate(-0 17.007874 529.36787)">GDAL 3 follows CRS axis order (RFC 73)</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="396.370157" transform="rotate(-0 17.007874 396.370157)">4</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="396.370157" transform="rotate(-0 32.88189 396.370157)">Wrong version</text>
+   </g>
+   <g id="patch_33">
+    <path d="M 459.731693 381.239764 
+L 522.992126 381.239764 
+Q 525.826772 381.239764 525.826772 384.074409 
+L 525.826772 392.578346 
+Q 525.826772 395.412992 522.992126 395.412992 
+L 459.731693 395.412992 
+Q 456.897047 395.412992 456.897047 392.578346 
+L 456.897047 384.074409 
+Q 456.897047 381.239764 459.731693 381.239764 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 328.214498 380.38937 
+L 447.826181 380.38937 
+Q 451.227756 380.38937 451.227756 383.790945 
+L 451.227756 392.861811 
+Q 451.227756 396.263386 447.826181 396.263386 
+L 328.214498 396.263386 
+Q 324.812923 396.263386 324.812923 392.861811 
+L 324.812923 383.790945 
+Q 324.812923 380.38937 328.214498 380.38937 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #5b8fcb"/>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="412.225157" transform="rotate(-0 17.007874 412.225157)">918.0 m, then 915.07 m, one band name</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="432.490157" transform="rotate(-0 17.007874 432.490157)">an earlier citation looks wrong</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="448.156157" transform="rotate(-0 17.007874 448.156157)">GFC2020 V3 cut forest cover by more than 20 % in the Cerrado</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="294.158445" transform="rotate(-0 17.007874 294.158445)">5</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="294.158445" transform="rotate(-0 32.88189 294.158445)">Wrong scale or offset</text>
+   </g>
+   <g id="patch_35">
+    <path d="M 488.385443 279.028051 
+L 522.992126 279.028051 
+Q 525.826772 279.028051 525.826772 281.862697 
+L 525.826772 290.366634 
+Q 525.826772 293.20128 522.992126 293.20128 
+L 488.385443 293.20128 
+Q 485.550797 293.20128 485.550797 290.366634 
+L 485.550797 281.862697 
+Q 485.550797 279.028051 488.385443 279.028051 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 382.776998 278.177657 
+L 476.479931 278.177657 
+Q 479.881506 278.177657 479.881506 281.579232 
+L 479.881506 290.650098 
+Q 479.881506 294.051673 476.479931 294.051673 
+L 382.776998 294.051673 
+Q 379.375423 294.051673 379.375423 290.650098 
+L 379.375423 281.579232 
+Q 379.375423 278.177657 382.776998 278.177657 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #0b4a86"/>
+   </g>
+   <g id="patch_37">
+    <path d="M 272.054232 278.177657 
+L 371.438415 278.177657 
+Q 374.83999 278.177657 374.83999 281.579232 
+L 374.83999 290.650098 
+Q 374.83999 294.051673 371.438415 294.051673 
+L 272.054232 294.051673 
+Q 268.652657 294.051673 268.652657 290.650098 
+L 268.652657 281.579232 
+Q 268.652657 278.177657 272.054232 278.177657 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #0f5fa8"/>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="310.013445" transform="rotate(-0 17.007874 310.013445)">WorldPop signed per pixel, not per km²: 1.77× low</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="330.278445" transform="rotate(-0 17.007874 330.278445)">one pixel: 0.4709, 0.2966, 1.1427 under three offset</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="351.278445" transform="rotate(-0 17.007874 351.278445)">rules</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="366.944445" transform="rotate(-0 17.007874 366.944445)">Element84 items say "offset applied" and "apply −0.1"</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="212.946732" transform="rotate(-0 17.007874 212.946732)">6</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="212.946732" transform="rotate(-0 32.88189 212.946732)">Missing data signed as 0</text>
+   </g>
+   <g id="patch_38">
+    <path d="M 488.385443 197.816339 
+L 522.992126 197.816339 
+Q 525.826772 197.816339 525.826772 200.650984 
+L 525.826772 209.154921 
+Q 525.826772 211.989567 522.992126 211.989567 
+L 488.385443 211.989567 
+Q 485.550797 211.989567 485.550797 209.154921 
+L 485.550797 200.650984 
+Q 485.550797 197.816339 488.385443 197.816339 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_39">
+    <path d="M 398.504498 196.965945 
+L 476.479931 196.965945 
+Q 479.881506 196.965945 479.881506 200.36752 
+L 479.881506 209.438386 
+Q 479.881506 212.839961 476.479931 212.839961 
+L 398.504498 212.839961 
+Q 395.102923 212.839961 395.102923 209.438386 
+L 395.102923 200.36752 
+Q 395.102923 196.965945 398.504498 196.965945 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #0b4a86"/>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="228.801732" transform="rotate(-0 17.007874 228.801732)">off-tile pixels signed as 0</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="249.066732" transform="rotate(-0 17.007874 249.066732)">a forest-loss screen passes</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="264.732732" transform="rotate(-0 17.007874 264.732732)">Hansen lossyear 0 means no loss</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="117.03502" transform="rotate(-0 17.007874 117.03502)">7</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="117.03502" transform="rotate(-0 32.88189 117.03502)">Wrong pixel, signed</text>
+   </g>
+   <g id="patch_40">
+    <path d="M 409.185443 101.904626 
+L 522.992126 101.904626 
+Q 525.826772 101.904626 525.826772 104.739272 
+L 525.826772 113.243209 
+Q 525.826772 116.077854 522.992126 116.077854 
+L 409.185443 116.077854 
+Q 406.350797 116.077854 406.350797 113.243209 
+L 406.350797 104.739272 
+Q 406.350797 101.904626 409.185443 101.904626 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_41">
+    <path d="M 289.165748 101.054232 
+L 397.279931 101.054232 
+Q 400.681506 101.054232 400.681506 104.455807 
+L 400.681506 113.526673 
+Q 400.681506 116.928248 397.279931 116.928248 
+L 289.165748 116.928248 
+Q 285.764173 116.928248 285.764173 113.526673 
+L 285.764173 104.455807 
+Q 285.764173 101.054232 289.165748 101.054232 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #0b4a86"/>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="132.89002" transform="rotate(-0 17.007874 132.89002)">the reader rounded the pixel index</text>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="153.15502" transform="rotate(-0 17.007874 153.15502)">162 of 200 sampled records</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="168.82102" transform="rotate(-0 17.007874 168.82102)">GDAL RFC 33: half-pixel shift; one-pixel misregistration: error &gt; 50 % of NDVI</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="183.52102" transform="rotate(-0 17.007874 183.52102)">differences (Townshend 1992)</text>
+   </g>
+   <g id="text_41">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="35.823307" transform="rotate(-0 17.007874 35.823307)">8</text>
+   </g>
+   <g id="text_42">
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="32.88189" y="35.823307" transform="rotate(-0 32.88189 35.823307)">Wrong thing</text>
+   </g>
+   <g id="patch_42">
+    <path d="M 409.185443 20.692913 
+L 522.992126 20.692913 
+Q 525.826772 20.692913 525.826772 23.527559 
+L 525.826772 32.031496 
+Q 525.826772 34.866142 522.992126 34.866142 
+L 409.185443 34.866142 
+Q 406.350797 34.866142 406.350797 32.031496 
+L 406.350797 23.527559 
+Q 406.350797 20.692913 409.185443 20.692913 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff; stroke: #d5d6da; stroke-width: 0.992126; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_43">
+    <path d="M 331.742923 19.84252 
+L 400.681506 19.84252 
+L 400.681506 35.716535 
+L 331.742923 35.716535 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #f1f0ec"/>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="17.007874" y="51.678307" transform="rotate(-0 17.007874 51.678307)">"this image" resolved to a hair salon in Ontario</text>
+   </g>
+   <g id="text_44">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="17.007874" y="71.943307" transform="rotate(-0 17.007874 71.943307)">receipt, Merkle proof and state chain all valid</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="17.007874" y="87.609307" transform="rotate(-0 17.007874 87.609307)">toponym ambiguity (Gritta et al. 2018)</text>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 331.742923 24.653073 
+L 336.553476 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 331.742923 29.463626 
+L 341.36403 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 331.742923 34.274179 
+L 346.174583 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 335.11112 35.716535 
+L 350.985136 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 339.921674 35.716535 
+L 355.795689 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 344.732227 35.716535 
+L 360.606243 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 349.54278 35.716535 
+L 365.416796 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 354.353333 35.716535 
+L 370.227349 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 359.163886 35.716535 
+L 375.037902 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 363.97444 35.716535 
+L 379.848455 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 368.784993 35.716535 
+L 384.659009 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 373.595546 35.716535 
+L 389.469562 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 378.406099 35.716535 
+L 394.280115 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 383.216653 35.716535 
+L 399.090668 19.84252 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 388.027206 35.716535 
+L 400.681506 23.062235 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 392.837759 35.716535 
+L 400.681506 27.872789 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+    <path d="M 397.648312 35.716535 
+L 400.681506 32.683342 
+" clip-path="url(#pf7061744b8)" style="fill: none; stroke: #9c9a92; stroke-width: 0.992126"/>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="495.603159" y="657.306713" transform="rotate(-0 495.603159 657.306713)">test rule</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="505.244409" y="555.095" transform="rotate(-0 505.244409 555.095)">open</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="472.163784" y="473.883287" transform="rotate(-0 472.163784 473.883287)">fix unconfirmed</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="491.361909" y="392.671575" transform="rotate(-0 491.361909 392.671575)">both kept</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="505.688784" y="290.459862" transform="rotate(-0 505.688784 290.459862)">fixed</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="505.688784" y="209.24815" transform="rotate(-0 505.688784 209.24815)">fixed</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="466.088784" y="113.336437" transform="rotate(-0 466.088784 113.336437)">fixed 28 Sep 2026</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #4a4d55" x="466.088784" y="32.124724" transform="rotate(-0 466.088784 32.124724)">fixed 30 Sep 2026</text>
+   </g>
+   <g id="patch_44">
+    <path d="M 336.845285 22.677165 
+L 395.579144 22.677165 
+Q 397.279931 22.677165 397.279931 24.377953 
+L 397.279931 31.181102 
+Q 397.279931 32.88189 395.579144 32.88189 
+L 336.845285 32.88189 
+Q 335.144498 32.88189 335.144498 31.181102 
+L 335.144498 24.377953 
+Q 335.144498 22.677165 336.845285 22.677165 
+z
+" clip-path="url(#pf7061744b8)" style="fill: #ffffff"/>
+   </g>
+   <g id="text_54">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="373.670965" y="657.306713" transform="rotate(-0 373.670965 657.306713)">resolve the reference · L0</text>
+   </g>
+   <g id="text_55">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="419.019715" y="555.095" transform="rotate(-0 419.019715 555.095)">bind the date · L1</text>
+   </g>
+   <g id="text_56">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="336.534715" y="473.883287" transform="rotate(-0 336.534715 473.883287)">asked coordinates · L1</text>
+   </g>
+   <g id="text_57">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="388.02034" y="392.671575" transform="rotate(-0 388.02034 392.671575)">source + as-of · L1</text>
+   </g>
+   <g id="text_58">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="429.628465" y="290.459862" transform="rotate(-0 429.628465 290.459862)">catalogue · L3</text>
+   </g>
+   <g id="text_59">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="321.746324" y="290.459862" transform="rotate(-0 321.746324 290.459862)">recompute · L2</text>
+   </g>
+   <g id="text_60">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="437.492215" y="209.24815" transform="rotate(-0 437.492215 209.24815)">re-read · L3</text>
+   </g>
+   <g id="text_61">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="343.22284" y="113.336437" transform="rotate(-0 343.22284 113.336437)">re-read only · L3</text>
+   </g>
+   <g id="text_62">
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #222428" x="366.212215" y="32.124724" transform="rotate(-0 366.212215 32.124724)">none · L4</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf7061744b8">
+   <rect x="0" y="0" width="548.503937" height="720.566929"/>
+  </clipPath>
+ </defs>
+</svg>

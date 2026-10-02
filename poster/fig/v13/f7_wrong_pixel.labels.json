@@ -1,0 +1,349 @@
+{
+ "figure": "f7_wrong_pixel",
+ "size_mm": [
+  396.0,
+  128.0
+ ],
+ "labels": [
+  {
+   "text": "a",
+   "pt": 17,
+   "claim": null
+  },
+  {
+   "text": "Keylong, Lahaul",
+   "pt": 17,
+   "claim": "F7.scene"
+  },
+  {
+   "text": "Sentinel-2A L2A · 25 Sep 2026",
+   "pt": 14,
+   "claim": "F7.scene"
+  },
+  {
+   "text": "1 km",
+   "pt": 14,
+   "claim": "F7.scale"
+  },
+  {
+   "text": "true colour B04/B03/B02, signed 10 m grids,",
+   "pt": 14,
+   "claim": "H.img.grid"
+  },
+  {
+   "text": "linear 1 to 99 % stretch, γ 1/1.35",
+   "pt": 14,
+   "claim": "H.img.grid"
+  },
+  {
+   "text": "b",
+   "pt": 17,
+   "claim": null
+  },
+  {
+   "text": "NDVI of each 10 m pixel",
+   "pt": 15,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.59",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.65",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.49",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.41",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.37",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.53",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.55",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.50",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.50",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.39",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.39",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.43",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.47",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.54",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.44",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.30",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.33",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.30",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.41",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.48",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.09",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.06",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.07",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.21",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "0.43",
+   "pt": 17,
+   "claim": "F7.window"
+  },
+  {
+   "text": "c",
+   "pt": 17,
+   "claim": null
+  },
+  {
+   "text": "test rule: irrigate if NDVI ≤ 0.4705",
+   "pt": 17,
+   "claim": "S.threshold"
+  },
+  {
+   "text": "0.4709 → hold",
+   "pt": 30,
+   "claim": "W.vals"
+  },
+  {
+   "text": "named pixel",
+   "pt": 17,
+   "claim": "F7.named"
+  },
+  {
+   "text": "0.3016 → irrigate",
+   "pt": 30,
+   "claim": "W.vals"
+  },
+  {
+   "text": "pixel 10 m south",
+   "pt": 17,
+   "claim": "W.south"
+  },
+  {
+   "text": "hash",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "binding",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "signature",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "log",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "recompute",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "re-read",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "pass the wrong value",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "refuses",
+   "pt": 15,
+   "claim": "F7.chips"
+  },
+  {
+   "text": "162 of 200",
+   "pt": 30,
+   "claim": "W.prev"
+  },
+  {
+   "text": "sampled pre-fix records",
+   "pt": 15,
+   "claim": "W.prev"
+  },
+  {
+   "text": "carry a neighbour's values",
+   "pt": 15,
+   "claim": "W.prev"
+  },
+  {
+   "text": "Wilson 95 %: 75 to 86 %",
+   "pt": 14,
+   "claim": "W.prev"
+  },
+  {
+   "text": "38: both rules read one pixel",
+   "pt": 14,
+   "claim": "F7.same"
+  },
+  {
+   "text": "spectral-index error where the rules differ",
+   "pt": 14,
+   "claim": "W.err"
+  },
+  {
+   "text": "n 121",
+   "pt": 14,
+   "claim": "W.err"
+  },
+  {
+   "text": "0.0001",
+   "pt": 14,
+   "claim": "F7.axis"
+  },
+  {
+   "text": "0.001",
+   "pt": 14,
+   "claim": "F7.axis"
+  },
+  {
+   "text": "0.01",
+   "pt": 14,
+   "claim": "F7.axis"
+  },
+  {
+   "text": "0.1",
+   "pt": 14,
+   "claim": "F7.axis"
+  },
+  {
+   "text": "median 0.027 · p90 0.113 · max 0.301",
+   "pt": 14,
+   "claim": "W.err"
+  },
+  {
+   "text": "the real record ",
+   "pt": 17,
+   "claim": "W.kx"
+  },
+  {
+   "text": "kxjvfwpa…",
+   "pt": 17,
+   "claim": "W.kx"
+  },
+  {
+   "text": " · 23 Sep 2026 · signed ",
+   "pt": 17,
+   "claim": "W.kx"
+  },
+  {
+   "text": "0.3444",
+   "pt": 17,
+   "claim": "W.kx"
+  },
+  {
+   "text": " · its containing pixel ",
+   "pt": 17,
+   "claim": "W.kx"
+  },
+  {
+   "text": "0.4860",
+   "pt": 17,
+   "claim": "W.kx"
+  },
+  {
+   "text": "Sample: 200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; 192 Element84, 8 Planetary",
+   "pt": 14,
+   "claim": "F7.scope"
+  },
+  {
+   "text": "Computer. After the fix, 0 of 54 (Planetary Computer, two days). On a 100-point Rondônia grid the old rule changed 7 loss",
+   "pt": 14,
+   "claim": "F7.scope"
+  },
+  {
+   "text": "years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.",
+   "pt": 14,
+   "claim": "F7.scope"
+  }
+ ]
+}

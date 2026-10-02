@@ -1,0 +1,1 @@
+{"t": 1790846695.9800382, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:f6dtx3eyxjwworg5lmplu3a2jkkrsuexksue6sqixrncjfgozifq"}, "is_error": true, "ms": 0.563, "meta": {"verdict": false, "first_fail": "signature"}, "text": "refused: signature check failed: the fact bytes are not in the attestation"}

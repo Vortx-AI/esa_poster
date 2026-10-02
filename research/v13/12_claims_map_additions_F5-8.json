@@ -1,0 +1,988 @@
+{
+ "schema": "esa_poster v13 claims map additions (figures F5 to F8)",
+ "base": "research/v13/12_claims_map.json",
+ "generated": "2026-10-01",
+ "generated_from": [
+  "poster/fig/v13/f5_evidence_object.labels.json",
+  "poster/fig/v13/f6_mutation_matrix.labels.json",
+  "poster/fig/v13/f7_wrong_pixel.labels.json",
+  "poster/fig/v13/f8_ladder.labels.json"
+ ],
+ "rule": "rows: new ids used by F5 to F8 figure text; extend_print: strings the figures print under an existing row id, to be merged into that row's print[]",
+ "rows": [
+  {
+   "id": "F5.fields",
+   "block": "P4 / F5",
+   "print": [
+    "0.4708994708994709",
+    "0.95",
+    "12 fields as decoded; no signature inside",
+    "2026-09-28T09:06:56Z",
+    "20721 (25 Sep)",
+    "777er3yi…",
+    "DNs 3502 / 1900 · offset −1000 · + 9 more args",
+    "captured 2026-09-25T05:42:51Z",
+    "d24rgwlq…",
+    "defi.zb572.xoso.zb1ec",
+    "indices.ndvi",
+    "primary",
+    "public",
+    "scene S2A_MSIL2A_20260925T054251_R005_T43SFS…",
+    "sentinel2_l2a_indices_ndvi@1 · EPSG 32643",
+    "sentinel_s2_l2a · …B08_10m.tif ; …B04_10m.tif"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "research/repro/v8/proof_bundle_ndvi.cbor",
+    "pointer": "entry.facts[0] bytes, decoded with cbor2 (12 keys; no signature key; sources[0] has no hash or cid)",
+    "script": "poster/figs_v13/f5_evidence_object.py asserts"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f5_evidence_object.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "the record's own field values, abbreviated with an ellipsis where cut; + 9 more args = len(derivation.args) - 4 shown",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F5.onebit",
+   "block": "P4 / F5",
+   "print": [
+    "changes",
+    "changes if one bit",
+    "of the record"
+   ],
+   "status": "SPEC",
+   "layer": "L0",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "0 item 2: fact_cid = base32(BLAKE3-256(ciborium(fact)))"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f5_evidence_object.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F5.read",
+   "block": "P4 / F5",
+   "print": [
+    "read the containing pixel"
+   ],
+   "status": "SPEC",
+   "layer": "L3",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "3.3 L3 (floor rule, containing pixel)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f5_evidence_object.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F5.tags",
+   "block": "P4 / F5",
+   "print": [
+    "bound L1",
+    "named L3",
+    "recomputable L2"
+   ],
+   "status": "SPEC",
+   "layer": "L1-L3",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "2.3 (serves layer column)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f5_evidence_object.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "field tags: cell/band/tslot bound L1, value recomputable L2, sources and scene id named L3",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F5.token",
+   "block": "P4 / F5",
+   "print": [
+    ":",
+    "defi.zb572.xoso.zb1ec",
+    "emem:fact:"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "research/repro/v8/proof_bundle_ndvi.cbor",
+    "pointer": "token"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f5_evidence_object.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.checks",
+   "block": "P5 / F6",
+   "print": [
+    "binding L1",
+    "hash L0",
+    "log L0",
+    "re-read L3",
+    "recompute L2",
+    "resolve L0",
+    "signature L0"
+   ],
+   "status": "SPEC",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.levels C..I; layers per research/v13/10_ladder_threat_invention.md 0 item 4"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.cumulative",
+   "block": "P5 / F6",
+   "print": [
+    "D to I are cumulative: each adds one check"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.levels[].name '+ binding', '+ signature', ... (each level adds one check)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.desc",
+   "block": "P5 / F6",
+   "print": [
+    "1 ULP changed inside the served bytes",
+    "DNs read from the pixel 10 m south",
+    "a record for another band handed over",
+    "a second signed version shown only to B",
+    "an older record handed over as current",
+    "cell changed inside the record, re-hashed",
+    "offset changed, value recomputed, re-hashed",
+    "record cited for another cell",
+    "same record; A meant another entity (out of scope)",
+    "source scene id changed, re-hashed",
+    "stated value moved by 1 ULP",
+    "stated value rounded to “0.47”",
+    "token miscopied by one character",
+    "tslot changed to look current, re-hashed",
+    "value (0.46) disagrees with the signed DNs",
+    "value 0.45 under the forger's own key",
+    "value 0.45, re-encoded and re-hashed"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.mutations[].desc (shortened in the figure script; every number asserted to occur in desc)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.family",
+   "block": "P5 / F6",
+   "print": [
+    "band",
+    "cell",
+    "derivation",
+    "entity",
+    "signature / id",
+    "source",
+    "source pixel",
+    "stale / current",
+    "time",
+    "value"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "E F6 (MASTER sec. 9 families)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "family labels; 'entity' row carries '(out of scope)' in its description",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.first",
+   "block": "P5 / F6",
+   "print": [
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "L0",
+    "L1",
+    "L2",
+    "L3"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.mutations[].first_protected_level; layer per research/v13/10_ladder_threat_invention.md 3.4"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.ids",
+   "block": "P5 / F6",
+   "print": [
+    "G0",
+    "M1",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16",
+    "M17",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.mutations[].id; amber ring where real_case is not null (M2, M4, M5, M15, M17)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.mode",
+   "block": "P5 / F6",
+   "print": [
+    "deterministic receiver, no model"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "section": "G gate 10 (fallback label)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "switches to the R5 models/dates line when research/repro/v13/r5/results.json is final",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.na",
+   "block": "P5 / F6",
+   "print": [
+    "n/a"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "rows M7 x A, B outcome n/a"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.scope",
+   "block": "P5 scope / F6",
+   "print": [
+    "One signed Keylong NDVI record, one band, one run; deterministic receiver; rows M14 to M16 signed with a test key; the re-read compares with the committed 25 Sep window."
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/summary.md",
+    "pointer": "Notes; mutation_suite.py docstring (T2 test key)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "same wording as brief C sec. 5 scope, first sentence",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F6.totals_label",
+   "block": "P5 / F6",
+   "print": [
+    "B acts on corrupted evidence"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "summary[*].false_accepts / applicable"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f6_mutation_matrix.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.axis",
+   "block": "P6 / F7",
+   "print": [
+    "0.0001",
+    "0.001",
+    "0.01",
+    "0.1"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/v13/evidence/g1_pixel_audit/prevalence.json",
+    "pointer": "121 index errors, log axis 1e-5 to 0.5"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "axis tick labels",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.chips",
+   "block": "P6 / F7",
+   "print": [
+    "binding",
+    "hash",
+    "log",
+    "pass the wrong value",
+    "re-read",
+    "recompute",
+    "refuses",
+    "signature"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v11/out/mutation_matrix.json",
+    "pointer": "rows M15 x D..H acted on corrupted evidence, I refused; leave_one_out.I = [M15]"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.named",
+   "block": "P6 / F7",
+   "print": [
+    "named pixel"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/v8/pixel_check.json",
+    "pointer": "S2A ... floor(r,c) = containing pixel"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.same",
+   "block": "P6 / F7",
+   "print": [
+    "38: both rules read one pixel"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/v8/prevalence_summary.json",
+    "pointer": [
+     "pre",
+     "floor_equals_round_pixel"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "38 = 200 - 162",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.scale",
+   "block": "P6 / F7",
+   "print": [
+    "1 km"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/data/keylong_B04.bin",
+    "pointer": "EMEMGRD1 header dx = 10.0 m; 100 px = 1 km"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.scene",
+   "block": "P6 / F7",
+   "print": [
+    "Keylong, Lahaul",
+    "Sentinel-2A L2A · 25 Sep 2026"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "research/repro/data/v8/pixel_check.json",
+    "pointer": "S2A 2026-09-25 (fact oj5cecci); grids keylong_B0{2,3,4}.bin"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "same as H.img.record",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.scope",
+   "block": "P6 scope / F7",
+   "print": [
+    "Computer. After the fix, 0 of 54 (Planetary Computer, two days). On a 100-point Rondônia grid the old rule changed 7 loss",
+    "Sample: 200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; 192 Element84, 8 Planetary",
+    "years and no EUDR flag. (b) applies the old rule to the 25 Sep scene."
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "inputs": [
+     "W.frame",
+     "W.post",
+     "W.rondonia"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "brief C sec. 6 scope verbatim, wrapped",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F7.window",
+   "block": "P6 / F7",
+   "print": [
+    "0.06",
+    "0.07",
+    "0.09",
+    "0.21",
+    "0.30",
+    "0.33",
+    "0.37",
+    "0.39",
+    "0.41",
+    "0.43",
+    "0.44",
+    "0.47",
+    "0.48",
+    "0.49",
+    "0.50",
+    "0.53",
+    "0.54",
+    "0.55",
+    "0.59",
+    "0.65",
+    "NDVI of each 10 m pixel"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/v8/pixel_windows.json",
+    "pointer": "oj5cecci ... ndvi_5x5 (recomputed from B04/B08 DNs, offset -1000; equals grids - 1000)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f7_wrong_pixel.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "25 NDVI values, 2 decimals",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F8.trust",
+   "block": "P7 / F8",
+   "print": [
+    "still trusted: that the archive file is the product",
+    "still trusted: the convention the signer chose",
+    "still trusted: your own question"
+   ],
+   "status": "SPEC",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "3.2 'what stays trusted'"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f8_ladder.py",
+    "arg": null,
+    "expect": null
+   },
+   "note": "brief C sec. 7 wording",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  }
+ ],
+ "extend_print": [
+  {
+   "id": "L.780",
+   "op": "extend_print",
+   "print_add": [
+    "relabelled token returns 409"
+   ],
+   "figures": [
+    "f8_ladder"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "L.status",
+   "op": "extend_print",
+   "print_add": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "decision",
+    "derivation",
+    "entity",
+    "identity",
+    "physical truth,",
+    "record bytes",
+    "source"
+   ],
+   "figures": [
+    "f8_ladder"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "O.batch",
+   "op": "extend_print",
+   "print_add": [
+    "ATTESTATION",
+    "Ed25519 over",
+    "a batch root",
+    "leaf of a batch root"
+   ],
+   "figures": [
+    "f5_evidence_object"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "O.cid",
+   "op": "extend_print",
+   "print_add": [
+    "ADDRESS",
+    "BLAKE3",
+    "BLAKE3 of the record"
+   ],
+   "figures": [
+    "f5_evidence_object"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "O.log",
+   "op": "extend_print",
+   "print_add": [
+    "+ LOG",
+    "log entries"
+   ],
+   "figures": [
+    "f5_evidence_object"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "O.nohash",
+   "op": "extend_print",
+   "print_add": [
+    "SOURCE FILES",
+    "re-read",
+    "sources carry a hash; open archives can be"
+   ],
+   "figures": [
+    "f5_evidence_object",
+    "f8_ladder"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "S.R1.A",
+   "op": "extend_print",
+   "print_add": [
+    "15 / 15"
+   ],
+   "figures": [
+    "f6_mutation_matrix"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "S.R1.B",
+   "op": "extend_print",
+   "print_add": [
+    "15 / 15"
+   ],
+   "figures": [
+    "f6_mutation_matrix"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "S.R1.C",
+   "op": "extend_print",
+   "print_add": [
+    "13 / 16"
+   ],
+   "figures": [
+    "f6_mutation_matrix"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "S.R1.I",
+   "op": "extend_print",
+   "print_add": [
+    "0 / 16",
+    "nothing altered: accepted everywhere, never refused"
+   ],
+   "figures": [
+    "f6_mutation_matrix"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "T.oneop",
+   "op": "extend_print",
+   "print_add": [
+    "still trusted: the key is emem.dev's"
+   ],
+   "figures": [
+    "f8_ladder"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "W.err",
+   "op": "extend_print",
+   "print_add": [
+    "spectral-index error where the rules differ"
+   ],
+   "figures": [
+    "f7_wrong_pixel"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "W.kx",
+   "op": "extend_print",
+   "print_add": [
+    " · its containing pixel ",
+    "kxjvfwpa…",
+    "the real record "
+   ],
+   "figures": [
+    "f7_wrong_pixel"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "W.prev",
+   "op": "extend_print",
+   "print_add": [
+    "carry a neighbour's values"
+   ],
+   "figures": [
+    "f7_wrong_pixel"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "X.entity",
+   "op": "extend_print",
+   "print_add": [
+    "M17 passes every check; “this image”",
+    "became a hair salon",
+    "none"
+   ],
+   "figures": [
+    "f6_mutation_matrix",
+    "f8_ladder"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "X.loo",
+   "op": "extend_print",
+   "print_add": [
+    "first check",
+    "that refuses"
+   ],
+   "figures": [
+    "f6_mutation_matrix"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "X.only",
+   "op": "extend_print",
+   "print_add": [
+    "the only check that stops it"
+   ],
+   "figures": [
+    "f6_mutation_matrix"
+   ],
+   "note": "figure text split across lines, set with thin spaces (U+2009), or a heading of the same fact; same source as the main row"
+  },
+  {
+   "id": "L.266",
+   "op": "extend_print",
+   "print_add": [
+    "266 of 780 carry a recipe; all 266 recompute",
+    "the 266 with a recipe all recompute at L2"
+   ],
+   "figures": [
+    "f8_ladder"
+   ],
+   "note": "review fix 9: 514 of the 780 have no recipe (n/a), not failures; same source as the main row"
+  }
+ ]
+}

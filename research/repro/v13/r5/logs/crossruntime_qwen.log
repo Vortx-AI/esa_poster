@@ -1,0 +1,2 @@
+{"lane": "3 Qwen as B", "token_kind": "T", "fact_cid": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa", "value_verbatim": "0.4708994708994709", "decision": "IRRIGATE", "refused": false, "cost_usd": 0}
+{"lane": "3 Qwen as B", "token_kind": "T'", "fact_cid": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa", "value_verbatim": "0.4708994708994709", "decision": "IRRIGATE", "refused": false, "cost_usd": 0}

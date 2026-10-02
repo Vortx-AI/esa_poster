@@ -12,7 +12,10 @@ FILES = [("15-link trace output, 30 Sep", "research/repro/v8/trace_fact_output.t
          ("raw-band run results", "research/repro/data/v9/rawband/results.json"),
          ("raw-band run, per-trial records", "research/repro/data/v9/rawband/trials.jsonl"),
          ("defects found in the audit", "research/do_not_use/05_DEFECTS_FOUND_IN_AUDIT.md"),
-         ("the algorithms, as coded at emem 18adb67", "research/repro/v10/algorithms.md")]
+         ("the algorithms, as coded at emem 18adb67", "research/repro/v10/algorithms.md"),
+         ("13 products at the Keylong cell, re-hashed", "research/repro/data/v11/cell_products.json"),
+         ("an ask answer with its reasoning stages", "research/repro/data/v11/ask_keylong.json"),
+         ("recompute every emem:state address", "research/repro/data/v11/recompute_state.py")]
 b32 = lambda b: base64.b32encode(b).decode().lower().rstrip("=")
 H = lambda b: blake3.blake3(b).digest()
 rows, leaves = [], []

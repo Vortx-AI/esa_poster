@@ -1,0 +1,147 @@
+{
+ "run_at_utc": "2026-09-30T09:46:44Z",
+ "nasa_cmr_mcp": {
+  "tools": [
+   "get_citations",
+   "get_collections",
+   "get_granules",
+   "get_keywords",
+   "get_services",
+   "get_tools",
+   "get_variables"
+  ],
+  "granule_keys": [
+   "access_urls",
+   "additional_attributes",
+   "bounding_box",
+   "cloud_cover",
+   "collection_concept_id",
+   "concept_id",
+   "data_format",
+   "day_night_flag",
+   "granule_ur",
+   "native_id",
+   "orbit_info",
+   "producer_granule_id",
+   "production_date",
+   "provider_id",
+   "revision_id",
+   "size_mb",
+   "time_end",
+   "time_start"
+  ],
+  "concept_id": "G4313620580-LPCLOUD",
+  "revision_id": 3,
+  "granule_ur": "HLS.S30.T43PGQ.2026247T050651.v2.0",
+  "n_access_urls": 18,
+  "access_urls_protected": true,
+  "has_checksum_in_mcp_result": false,
+  "umm_archive_info": [
+   {
+    "Name": "Not provided",
+    "SizeInBytes": 239554055,
+    "SizeUnit": "MB"
+   }
+  ],
+  "revision_http_codes": {
+   "1": "404",
+   "2": "404",
+   "3": "200",
+   "4": "404"
+  }
+ },
+ "mpc_stac": {
+  "item_id": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+  "b08_asset_keys": [
+   "eo:bands",
+   "gsd",
+   "href",
+   "proj:bbox",
+   "proj:shape",
+   "proj:transform",
+   "roles",
+   "title",
+   "type"
+  ],
+  "item_has_file_checksum": false,
+  "item_has_created_or_updated": false,
+  "sas_expiry": "2026-09-30T10:31:50Z",
+  "b08_head": {
+   "Content-Length": "281898500",
+   "ETag": "\"0x8DF1B1150626008\"",
+   "Content-MD5": null,
+   "Last-Modified": "Fri, 25 Sep 2026 14:28:48 GMT"
+  }
+ },
+ "cdse_odata": {
+  "id": "134acef3-83f3-4588-a5dc-f354bcf5368f",
+  "name": "S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE",
+  "checksums": [
+   {
+    "Value": "7caf7153a56cd30dfb93a3938a74079f",
+    "Algorithm": "MD5",
+    "ChecksumDate": "2026-09-25T10:00:57.904548Z"
+   },
+   {
+    "Value": "7404a212625caf1bb38d585d01c444845dbbbb5c9e54d53972f802a80b914ba5",
+    "Algorithm": "BLAKE3",
+    "ChecksumDate": "2026-09-25T10:00:59.780529Z"
+   }
+  ],
+  "content_length": 1187971637,
+  "publication": "2026-09-25T10:01:01.055794Z"
+ },
+ "alphaearth_source_coop_index": {
+  "url": "https://data.source.coop/tge-labs/aef/v1/annual/aef_index.parquet",
+  "bytes": 77829744,
+  "rows": 302466,
+  "columns": [
+   "fid",
+   "crs",
+   "path",
+   "year",
+   "utm_zone",
+   "utm_west",
+   "utm_south",
+   "utm_east",
+   "utm_north",
+   "wgs84_west",
+   "wgs84_south",
+   "wgs84_east",
+   "wgs84_north",
+   "geom",
+   "geom_bbox",
+   "location"
+  ],
+  "etag": "\"74a0205eddb595b7b0eaadcc428cb99f-10\"",
+  "has_hash_column": false
+ },
+ "emem_mcp_resolve": {
+  "value": 28.0,
+  "unit": "degC",
+  "band": "weather.temperature_2m",
+  "fact_cid": "nflpddk7zsncywguwjzk5koksseqfyx4jnngkuryrnd4aykqlpfq",
+  "receipt_keys": [
+   "cells",
+   "cost",
+   "fact_cids",
+   "merkle_proof",
+   "preimage_version",
+   "primitive",
+   "registry_cid",
+   "request_id",
+   "responder",
+   "responder_key_epoch",
+   "responder_pubkey_b32",
+   "schema_cid",
+   "served_at",
+   "signature",
+   "signature_b32",
+   "source_versions"
+  ],
+  "receipt_preimage_version": 2,
+  "responder_pubkey_b32": "777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka",
+  "provenance_class": "model_output",
+  "fact_url_status_no_auth": "200"
+ }
+}

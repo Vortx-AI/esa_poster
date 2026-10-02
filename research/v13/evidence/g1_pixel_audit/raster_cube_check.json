@@ -1,0 +1,1487 @@
+{
+ "PIXEL_FIX_AT": "2026-09-28T04:09:26Z",
+ "rasters": {
+  "fig2_B04": {
+   "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B04:20721:4wmvv7i6bv4hjqp6lqbja3zjts53xlwlzwttzbpozt4eetukd2oq",
+   "derivation_cid_ok": true,
+   "signed_at": "2026-09-29T21:27:52Z",
+   "signed_after_fix": true,
+   "scene": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+   "asset": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif",
+   "captured_at": "2026-09-25T05:42:51.024000Z",
+   "dn_offset": -1000.0,
+   "artifact_cid": "p7eertl6qkbotpzxj6tn4uifzjxe3vbf3b6pxjdzpzqh66sz7flq",
+   "artifact_rehash_ok": true,
+   "header": {
+    "w": 443,
+    "h": 453,
+    "epsg": 32643,
+    "x0": 688735.0,
+    "y0": 3607705.0,
+    "dx": 10.0,
+    "dy": -10.0
+   },
+   "record_grid": {
+    "crs_note": "header origin and steps are in the scene's UTM CRS named by epsg; the request bbox is WGS-84",
+    "dx": 10.0,
+    "dy": -10.0,
+    "epsg": 32643,
+    "height": 453,
+    "width": 443,
+    "x0": 688735.0,
+    "y0": 3607705.0
+   },
+   "cog_rows": [
+    9231,
+    9683
+   ],
+   "cog_cols": [
+    8873,
+    9315
+   ],
+   "pixels_equal": 200678,
+   "pixels_total": 200679,
+   "nan_in_artifact": 0,
+   "pixels_equal_if_shifted_1_row_south": 842,
+   "hero_point_raster_frac": [
+    212.57357191108167,
+    225.32732190324458
+   ],
+   "hero_pixel": [
+    212,
+    225
+   ],
+   "hero_value": 900.0,
+   "hero_cog_dn": 1900.0,
+   "anchors": [
+    {
+     "cell": "defi.zb572.pefe.zb0da",
+     "named": [
+      443,
+      8
+     ],
+     "floor": [
+      443,
+      8
+     ],
+     "round": [
+      443,
+      9
+     ],
+     "value": 1155.0,
+     "raster_at_named": 1155.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.pefe.zb2f3",
+     "named": [
+      435,
+      441
+     ],
+     "floor": [
+      435,
+      441
+     ],
+     "round": [
+      435,
+      442
+     ],
+     "value": 801.0,
+     "raster_at_named": 801.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb0da",
+     "named": [
+      17,
+      0
+     ],
+     "floor": [
+      17,
+      0
+     ],
+     "round": [
+      18,
+      1
+     ],
+     "value": 1515.0,
+     "raster_at_named": 1515.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb2f3",
+     "named": [
+      9,
+      433
+     ],
+     "floor": [
+      9,
+      433
+     ],
+     "round": [
+      10,
+      433
+     ],
+     "value": 1068.0,
+     "raster_at_named": 1068.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.wUdo.zb1e6",
+     "named": [
+      226,
+      221
+     ],
+     "floor": [
+      226,
+      220
+     ],
+     "round": [
+      227,
+      221
+     ],
+     "value": 2031.0,
+     "raster_at_named": 2031.0,
+     "fact_cid": null
+    }
+   ]
+  },
+  "cube_20614": {
+   "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20614:trwmzekmb3mik54gzlz7nsz5564d47evozybaaeslva7w372xjyq",
+   "derivation_cid_ok": true,
+   "signed_at": "2026-09-29T22:05:16Z",
+   "signed_after_fix": true,
+   "scene": "S2B_MSIL2A_20260610T053639_R005_T43SFS_20260610T091702",
+   "asset": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/06/10/S2B_MSIL2A_20260610T053639_N0512_R005_T43SFS_20260610T091702.SAFE/GRANULE/L2A_T43SFS_A048365_20260610T054811/IMG_DATA/R10m/T43SFS_20260610T053639_B08_10m.tif",
+   "captured_at": "2026-06-10T05:36:39.024000Z",
+   "dn_offset": -1000.0,
+   "artifact_cid": "lwsosygvxa5cul4s5udll4bm7lxchczy6cw53u42jvrknspbg7eq",
+   "artifact_rehash_ok": true,
+   "header": {
+    "w": 443,
+    "h": 453,
+    "epsg": 32643,
+    "x0": 688735.0,
+    "y0": 3607705.0,
+    "dx": 10.0,
+    "dy": -10.0
+   },
+   "record_grid": {
+    "crs_note": "header origin and steps are in the scene's UTM CRS named by epsg; the request bbox is WGS-84",
+    "dx": 10.0,
+    "dy": -10.0,
+    "epsg": 32643,
+    "height": 453,
+    "width": 443,
+    "x0": 688735.0,
+    "y0": 3607705.0
+   },
+   "cog_rows": [
+    9231,
+    9683
+   ],
+   "cog_cols": [
+    8873,
+    9315
+   ],
+   "pixels_equal": 200679,
+   "pixels_total": 200679,
+   "nan_in_artifact": 0,
+   "pixels_equal_if_shifted_1_row_south": 1322,
+   "hero_point_raster_frac": [
+    212.57357191108167,
+    225.32732190324458
+   ],
+   "hero_pixel": [
+    212,
+    225
+   ],
+   "hero_value": 3276.0,
+   "hero_cog_dn": 4276.0,
+   "anchors": [
+    {
+     "cell": "defi.zb572.pefe.zb0da",
+     "named": [
+      443,
+      8
+     ],
+     "floor": [
+      443,
+      8
+     ],
+     "round": [
+      443,
+      9
+     ],
+     "value": 3323.0,
+     "raster_at_named": 3323.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.pefe.zb2f3",
+     "named": [
+      435,
+      441
+     ],
+     "floor": [
+      435,
+      441
+     ],
+     "round": [
+      435,
+      442
+     ],
+     "value": 2886.0,
+     "raster_at_named": 2886.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb0da",
+     "named": [
+      17,
+      0
+     ],
+     "floor": [
+      17,
+      0
+     ],
+     "round": [
+      18,
+      1
+     ],
+     "value": 1521.0,
+     "raster_at_named": 1521.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb2f3",
+     "named": [
+      9,
+      433
+     ],
+     "floor": [
+      9,
+      433
+     ],
+     "round": [
+      10,
+      433
+     ],
+     "value": 1719.0,
+     "raster_at_named": 1719.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.wUdo.zb1e6",
+     "named": [
+      226,
+      221
+     ],
+     "floor": [
+      226,
+      220
+     ],
+     "round": [
+      227,
+      221
+     ],
+     "value": 2510.0,
+     "raster_at_named": 2510.0,
+     "fact_cid": null
+    }
+   ]
+  },
+  "cube_20634": {
+   "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20634:trnlv376gkscbsmgyrxzlznrl23wyup72cfj244ec7cv4kshrosa",
+   "derivation_cid_ok": true,
+   "signed_at": "2026-09-29T22:05:16Z",
+   "signed_after_fix": true,
+   "scene": "S2B_MSIL2A_20260630T053639_R005_T43SFS_20260630T091701",
+   "asset": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/06/30/S2B_MSIL2A_20260630T053639_N0512_R005_T43SFS_20260630T091701.SAFE/GRANULE/L2A_T43SFS_A048651_20260630T054811/IMG_DATA/R10m/T43SFS_20260630T053639_B08_10m.tif",
+   "captured_at": "2026-06-30T05:36:39.024000Z",
+   "dn_offset": -1000.0,
+   "artifact_cid": "4oapr7iuwq5262wpazn7ctm2iesvui33zbsv7kqbjuhb2qtqtaxa",
+   "artifact_rehash_ok": true,
+   "header": {
+    "w": 443,
+    "h": 453,
+    "epsg": 32643,
+    "x0": 688735.0,
+    "y0": 3607705.0,
+    "dx": 10.0,
+    "dy": -10.0
+   },
+   "record_grid": {
+    "crs_note": "header origin and steps are in the scene's UTM CRS named by epsg; the request bbox is WGS-84",
+    "dx": 10.0,
+    "dy": -10.0,
+    "epsg": 32643,
+    "height": 453,
+    "width": 443,
+    "x0": 688735.0,
+    "y0": 3607705.0
+   },
+   "cog_rows": [
+    9231,
+    9683
+   ],
+   "cog_cols": [
+    8873,
+    9315
+   ],
+   "pixels_equal": 200679,
+   "pixels_total": 200679,
+   "nan_in_artifact": 0,
+   "pixels_equal_if_shifted_1_row_south": 962,
+   "hero_point_raster_frac": [
+    212.57357191108167,
+    225.32732190324458
+   ],
+   "hero_pixel": [
+    212,
+    225
+   ],
+   "hero_value": 3572.0,
+   "hero_cog_dn": 4572.0,
+   "anchors": [
+    {
+     "cell": "defi.zb572.pefe.zb0da",
+     "named": [
+      443,
+      8
+     ],
+     "floor": [
+      443,
+      8
+     ],
+     "round": [
+      443,
+      9
+     ],
+     "value": 3708.0,
+     "raster_at_named": 3708.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.pefe.zb2f3",
+     "named": [
+      435,
+      441
+     ],
+     "floor": [
+      435,
+      441
+     ],
+     "round": [
+      435,
+      442
+     ],
+     "value": 3040.0,
+     "raster_at_named": 3040.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb0da",
+     "named": [
+      17,
+      0
+     ],
+     "floor": [
+      17,
+      0
+     ],
+     "round": [
+      18,
+      1
+     ],
+     "value": 1549.0,
+     "raster_at_named": 1549.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb2f3",
+     "named": [
+      9,
+      433
+     ],
+     "floor": [
+      9,
+      433
+     ],
+     "round": [
+      10,
+      433
+     ],
+     "value": 1547.0,
+     "raster_at_named": 1547.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.wUdo.zb1e6",
+     "named": [
+      226,
+      221
+     ],
+     "floor": [
+      226,
+      220
+     ],
+     "round": [
+      227,
+      221
+     ],
+     "value": 2388.0,
+     "raster_at_named": 2388.0,
+     "fact_cid": null
+    }
+   ]
+  },
+  "cube_20668": {
+   "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20668:3k344xokwvghqe6yhnfpd5pmrph4gjiny72jc45ko4o335tcrokq",
+   "derivation_cid_ok": true,
+   "signed_at": "2026-09-29T22:05:16Z",
+   "signed_after_fix": true,
+   "scene": "S2A_MSIL2A_20260803T053251_R105_T43SFS_20260803T144710",
+   "asset": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/08/03/S2A_MSIL2A_20260803T053251_N0512_R105_T43SFS_20260803T144710.SAFE/GRANULE/L2A_T43SFS_A058046_20260803T053701/IMG_DATA/R10m/T43SFS_20260803T053251_B08_10m.tif",
+   "captured_at": "2026-08-03T05:32:51.024000Z",
+   "dn_offset": -1000.0,
+   "artifact_cid": "fbba5ot4s6ejs2ehuwuvji33odifw44bfreqdmcugtor6aktu4rq",
+   "artifact_rehash_ok": true,
+   "header": {
+    "w": 443,
+    "h": 453,
+    "epsg": 32643,
+    "x0": 688735.0,
+    "y0": 3607705.0,
+    "dx": 10.0,
+    "dy": -10.0
+   },
+   "record_grid": {
+    "crs_note": "header origin and steps are in the scene's UTM CRS named by epsg; the request bbox is WGS-84",
+    "dx": 10.0,
+    "dy": -10.0,
+    "epsg": 32643,
+    "height": 453,
+    "width": 443,
+    "x0": 688735.0,
+    "y0": 3607705.0
+   },
+   "cog_rows": [
+    9231,
+    9683
+   ],
+   "cog_cols": [
+    8873,
+    9315
+   ],
+   "pixels_equal": 200679,
+   "pixels_total": 200679,
+   "nan_in_artifact": 0,
+   "pixels_equal_if_shifted_1_row_south": 1116,
+   "hero_point_raster_frac": [
+    212.57357191108167,
+    225.32732190324458
+   ],
+   "hero_pixel": [
+    212,
+    225
+   ],
+   "hero_value": 3796.0,
+   "hero_cog_dn": 4796.0,
+   "anchors": [
+    {
+     "cell": "defi.zb572.pefe.zb0da",
+     "named": [
+      443,
+      8
+     ],
+     "floor": [
+      443,
+      8
+     ],
+     "round": [
+      443,
+      9
+     ],
+     "value": 3875.0,
+     "raster_at_named": 3875.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.pefe.zb2f3",
+     "named": [
+      435,
+      441
+     ],
+     "floor": [
+      435,
+      441
+     ],
+     "round": [
+      435,
+      442
+     ],
+     "value": 3169.0,
+     "raster_at_named": 3169.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb0da",
+     "named": [
+      17,
+      0
+     ],
+     "floor": [
+      17,
+      0
+     ],
+     "round": [
+      18,
+      1
+     ],
+     "value": 1436.0,
+     "raster_at_named": 1436.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb2f3",
+     "named": [
+      9,
+      433
+     ],
+     "floor": [
+      9,
+      433
+     ],
+     "round": [
+      10,
+      433
+     ],
+     "value": 1797.0,
+     "raster_at_named": 1797.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.wUdo.zb1e6",
+     "named": [
+      226,
+      221
+     ],
+     "floor": [
+      226,
+      220
+     ],
+     "round": [
+      227,
+      221
+     ],
+     "value": 2346.0,
+     "raster_at_named": 2346.0,
+     "fact_cid": null
+    }
+   ]
+  },
+  "cube_20709": {
+   "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20709:bvlsgt4xotztaohigck6lx6zxefmgu4genxacph2qnrjkqob745a",
+   "derivation_cid_ok": true,
+   "signed_at": "2026-09-29T22:05:16Z",
+   "signed_after_fix": true,
+   "scene": "S2C_MSIL2A_20260913T053641_R005_T43SFS_20260913T101758",
+   "asset": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/13/S2C_MSIL2A_20260913T053641_N0512_R005_T43SFS_20260913T101758.SAFE/GRANULE/L2A_T43SFS_A010557_20260913T054851/IMG_DATA/R10m/T43SFS_20260913T053641_B08_10m.tif",
+   "captured_at": "2026-09-13T05:36:41.025000Z",
+   "dn_offset": -1000.0,
+   "artifact_cid": "st5ltgifplmrrzw4bezmhuwqc37gk3rv6hykl6mkd3ckej7yveua",
+   "artifact_rehash_ok": true,
+   "header": {
+    "w": 443,
+    "h": 453,
+    "epsg": 32643,
+    "x0": 688735.0,
+    "y0": 3607705.0,
+    "dx": 10.0,
+    "dy": -10.0
+   },
+   "record_grid": {
+    "crs_note": "header origin and steps are in the scene's UTM CRS named by epsg; the request bbox is WGS-84",
+    "dx": 10.0,
+    "dy": -10.0,
+    "epsg": 32643,
+    "height": 453,
+    "width": 443,
+    "x0": 688735.0,
+    "y0": 3607705.0
+   },
+   "cog_rows": [
+    9231,
+    9683
+   ],
+   "cog_cols": [
+    8873,
+    9315
+   ],
+   "pixels_equal": 200679,
+   "pixels_total": 200679,
+   "nan_in_artifact": 0,
+   "pixels_equal_if_shifted_1_row_south": 1252,
+   "hero_point_raster_frac": [
+    212.57357191108167,
+    225.32732190324458
+   ],
+   "hero_pixel": [
+    212,
+    225
+   ],
+   "hero_value": 2778.0,
+   "hero_cog_dn": 3778.0,
+   "anchors": [
+    {
+     "cell": "defi.zb572.pefe.zb0da",
+     "named": [
+      443,
+      8
+     ],
+     "floor": [
+      443,
+      8
+     ],
+     "round": [
+      443,
+      9
+     ],
+     "value": 3567.0,
+     "raster_at_named": 3567.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.pefe.zb2f3",
+     "named": [
+      435,
+      441
+     ],
+     "floor": [
+      435,
+      441
+     ],
+     "round": [
+      435,
+      442
+     ],
+     "value": 4084.0,
+     "raster_at_named": 4084.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb0da",
+     "named": [
+      17,
+      0
+     ],
+     "floor": [
+      17,
+      0
+     ],
+     "round": [
+      18,
+      1
+     ],
+     "value": 5835.0,
+     "raster_at_named": 5835.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb2f3",
+     "named": [
+      9,
+      433
+     ],
+     "floor": [
+      9,
+      433
+     ],
+     "round": [
+      10,
+      433
+     ],
+     "value": 1376.0,
+     "raster_at_named": 1376.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.wUdo.zb1e6",
+     "named": [
+      226,
+      221
+     ],
+     "floor": [
+      226,
+      220
+     ],
+     "round": [
+      227,
+      221
+     ],
+     "value": 2122.0,
+     "raster_at_named": 2122.0,
+     "fact_cid": null
+    }
+   ]
+  },
+  "cube_20721 (= Fig. 2 B08)": {
+   "token": "emem:raster:zhiz2prbnvds6ex3cmwbwghlzzdhi6b7nro6h42p3xtamezq5voq:s2.B08:20721:74n3alcksp4pxpljv4qldxywxykrepezhysblvw5t7ccbiw3yeeq",
+   "derivation_cid_ok": true,
+   "signed_at": "2026-09-29T22:05:17Z",
+   "signed_after_fix": true,
+   "scene": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+   "asset": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+   "captured_at": "2026-09-25T05:42:51.024000Z",
+   "dn_offset": -1000.0,
+   "artifact_cid": "krb5zrnbvis3qdcdqnxcxfux5fbdysd6l4tzlccrscb5hdzywk3a",
+   "artifact_rehash_ok": true,
+   "header": {
+    "w": 443,
+    "h": 453,
+    "epsg": 32643,
+    "x0": 688735.0,
+    "y0": 3607705.0,
+    "dx": 10.0,
+    "dy": -10.0
+   },
+   "record_grid": {
+    "crs_note": "header origin and steps are in the scene's UTM CRS named by epsg; the request bbox is WGS-84",
+    "dx": 10.0,
+    "dy": -10.0,
+    "epsg": 32643,
+    "height": 453,
+    "width": 443,
+    "x0": 688735.0,
+    "y0": 3607705.0
+   },
+   "cog_rows": [
+    9231,
+    9683
+   ],
+   "cog_cols": [
+    8873,
+    9315
+   ],
+   "pixels_equal": 200679,
+   "pixels_total": 200679,
+   "nan_in_artifact": 0,
+   "pixels_equal_if_shifted_1_row_south": 1048,
+   "hero_point_raster_frac": [
+    212.57357191108167,
+    225.32732190324458
+   ],
+   "hero_pixel": [
+    212,
+    225
+   ],
+   "hero_value": 2502.0,
+   "hero_cog_dn": 3502.0,
+   "anchors": [
+    {
+     "cell": "defi.zb572.pefe.zb0da",
+     "named": [
+      443,
+      8
+     ],
+     "floor": [
+      443,
+      8
+     ],
+     "round": [
+      443,
+      9
+     ],
+     "value": 3103.0,
+     "raster_at_named": 3103.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.pefe.zb2f3",
+     "named": [
+      435,
+      441
+     ],
+     "floor": [
+      435,
+      441
+     ],
+     "round": [
+      435,
+      442
+     ],
+     "value": 2771.0,
+     "raster_at_named": 2771.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb0da",
+     "named": [
+      17,
+      0
+     ],
+     "floor": [
+      17,
+      0
+     ],
+     "round": [
+      18,
+      1
+     ],
+     "value": 1223.0,
+     "raster_at_named": 1223.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.zcaed.zb2f3",
+     "named": [
+      9,
+      433
+     ],
+     "floor": [
+      9,
+      433
+     ],
+     "round": [
+      10,
+      433
+     ],
+     "value": 1274.0,
+     "raster_at_named": 1274.0,
+     "fact_cid": null
+    },
+    {
+     "cell": "defi.zb572.wUdo.zb1e6",
+     "named": [
+      226,
+      221
+     ],
+     "floor": [
+      226,
+      220
+     ],
+     "round": [
+      227,
+      221
+     ],
+     "value": 2087.0,
+     "raster_at_named": 2087.0,
+     "fact_cid": null
+    }
+   ]
+  }
+ },
+ "cube": {
+  "derivation_cid": "7ath7qdwqbagvs6kojf7pquay5faj2wahytearzkpsrk7e4sufsa",
+  "rehash_ok": true,
+  "signed_at": "2026-09-29T22:05:17Z",
+  "members": [
+   [
+    20614,
+    "S2B_MSIL2A_20260610T053639_R005_T43SFS_20260610T091702",
+    [
+     "2026-05-15"
+    ],
+    26
+   ],
+   [
+    20634,
+    "S2B_MSIL2A_20260630T053639_R005_T43SFS_20260630T091701",
+    [
+     "2026-06-15"
+    ],
+    15
+   ],
+   [
+    20668,
+    "S2A_MSIL2A_20260803T053251_R105_T43SFS_20260803T144710",
+    [
+     "2026-07-15"
+    ],
+    19
+   ],
+   [
+    20709,
+    "S2C_MSIL2A_20260913T053641_R005_T43SFS_20260913T101758",
+    [
+     "2026-08-15"
+    ],
+    29
+   ],
+   [
+    20721,
+    "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+    [
+     "2026-09-15"
+    ],
+    10
+   ]
+  ]
+ },
+ "stac_scenes": [
+  [
+   "2026-04-11",
+   "S2B_MSIL2A_20260411T053639_R005_T43SFS_20260411T092032",
+   93.573296,
+   "43SFS"
+  ],
+  [
+   "2026-04-13",
+   "S2C_MSIL2A_20260413T053021_R105_T43SFS_20260413T084816",
+   1.820051,
+   "43SFS"
+  ],
+  [
+   "2026-04-16",
+   "S2C_MSIL2A_20260416T053641_R005_T43SFS_20260416T104257",
+   7.862417,
+   "43SFS"
+  ],
+  [
+   "2026-04-18",
+   "S2B_MSIL2A_20260418T052639_R105_T43SFS_20260418T091045",
+   85.41286,
+   "43SFS"
+  ],
+  [
+   "2026-04-21",
+   "S2B_MSIL2A_20260421T053639_R005_T43SFS_20260421T091905",
+   0.012494,
+   "43SFS"
+  ],
+  [
+   "2026-04-23",
+   "S2C_MSIL2A_20260423T053021_R105_T43SFS_20260423T084910",
+   0.249393,
+   "43SFS"
+  ],
+  [
+   "2026-04-25",
+   "S2A_MSIL2A_20260425T053241_R105_T43SFS_20260425T103313",
+   80.259472,
+   "43SFS"
+  ],
+  [
+   "2026-04-26",
+   "S2C_MSIL2A_20260426T053641_R005_T43SFS_20260426T090218",
+   1.497448,
+   "43SFS"
+  ],
+  [
+   "2026-04-28",
+   "S2A_MSIL2A_20260428T054251_R005_T43SFS_20260428T091020",
+   45.416528,
+   "43SFS"
+  ],
+  [
+   "2026-04-28",
+   "S2B_MSIL2A_20260428T052639_R105_T43SFS_20260428T091040",
+   37.691215,
+   "43SFS"
+  ],
+  [
+   "2026-05-01",
+   "S2B_MSIL2A_20260501T053639_R005_T43SFS_20260501T091554",
+   21.75308,
+   "43SFS"
+  ],
+  [
+   "2026-05-03",
+   "S2C_MSIL2A_20260503T053021_R105_T43SFS_20260503T084016",
+   76.907045,
+   "43SFS"
+  ],
+  [
+   "2026-05-06",
+   "S2C_MSIL2A_20260506T053641_R005_T43SFS_20260506T090210",
+   54.934055,
+   "43SFS"
+  ],
+  [
+   "2026-05-08",
+   "S2B_MSIL2A_20260508T052639_R105_T43SFS_20260508T091207",
+   8.023599,
+   "43SFS"
+  ],
+  [
+   "2026-05-11",
+   "S2B_MSIL2A_20260511T053639_R005_T43SFS_20260511T091918",
+   53.741723,
+   "43SFS"
+  ],
+  [
+   "2026-05-15",
+   "S2A_MSIL2A_20260515T053241_R105_T43SFS_20260515T102157",
+   64.094758,
+   "43SFS"
+  ],
+  [
+   "2026-05-16",
+   "S2C_MSIL2A_20260516T053641_R005_T43SFS_20260516T101809",
+   28.751558,
+   "43SFS"
+  ],
+  [
+   "2026-05-18",
+   "S2A_MSIL2A_20260518T054251_R005_T43SFS_20260518T085615",
+   0.02455,
+   "43SFS"
+  ],
+  [
+   "2026-05-21",
+   "S2B_MSIL2A_20260521T053639_R005_T43SFS_20260521T091732",
+   78.349274,
+   "43SFS"
+  ],
+  [
+   "2026-05-23",
+   "S2C_MSIL2A_20260523T052641_R105_T43SFS_20260523T102312",
+   14.541468,
+   "43SFS"
+  ],
+  [
+   "2026-05-26",
+   "S2C_MSIL2A_20260526T053641_R005_T43SFS_20260526T102117",
+   2.008584,
+   "43SFS"
+  ],
+  [
+   "2026-05-31",
+   "S2B_MSIL2A_20260531T053639_R005_T43SFS_20260531T091850",
+   75.916553,
+   "43SFS"
+  ],
+  [
+   "2026-06-02",
+   "S2C_MSIL2A_20260602T052641_R105_T43SFS_20260602T102053",
+   26.613626,
+   "43SFS"
+  ],
+  [
+   "2026-06-04",
+   "S2A_MSIL2A_20260604T053241_R105_T43SFS_20260604T090112",
+   63.340282,
+   "43SFS"
+  ],
+  [
+   "2026-06-05",
+   "S2C_MSIL2A_20260605T053641_R005_T43SFS_20260605T101858",
+   80.672854,
+   "43SFS"
+  ],
+  [
+   "2026-06-07",
+   "S2A_MSIL2A_20260607T054251_R005_T43SFS_20260607T085916",
+   20.204335,
+   "43SFS"
+  ],
+  [
+   "2026-06-07",
+   "S2B_MSIL2A_20260607T052639_R105_T43SFS_20260607T091704",
+   16.599466,
+   "43SFS"
+  ],
+  [
+   "2026-06-10",
+   "S2B_MSIL2A_20260610T053639_R005_T43SFS_20260610T091702",
+   15.470789,
+   "43SFS"
+  ],
+  [
+   "2026-06-12",
+   "S2C_MSIL2A_20260612T052641_R105_T43SFS_20260612T102118",
+   84.911197,
+   "43SFS"
+  ],
+  [
+   "2026-06-15",
+   "S2C_MSIL2A_20260615T053641_R005_T43SFS_20260615T102024",
+   68.565434,
+   "43SFS"
+  ],
+  [
+   "2026-06-17",
+   "S2B_MSIL2A_20260617T052649_R105_T43SFS_20260617T104156",
+   92.07201,
+   "43SFS"
+  ],
+  [
+   "2026-06-20",
+   "S2B_MSIL2A_20260620T053639_R005_T43SFS_20260620T091923",
+   61.683345,
+   "43SFS"
+  ],
+  [
+   "2026-06-22",
+   "S2C_MSIL2A_20260622T052641_R105_T43SFS_20260622T102411",
+   99.592024,
+   "43SFS"
+  ],
+  [
+   "2026-06-24",
+   "S2A_MSIL2A_20260624T053241_R105_T43SFS_20260624T102111",
+   31.925088,
+   "43SFS"
+  ],
+  [
+   "2026-06-25",
+   "S2C_MSIL2A_20260625T053641_R005_T43SFS_20260625T101830",
+   95.700991,
+   "43SFS"
+  ],
+  [
+   "2026-06-27",
+   "S2A_MSIL2A_20260627T054251_R005_T43SFS_20260627T085509",
+   32.660082,
+   "43SFS"
+  ],
+  [
+   "2026-06-27",
+   "S2B_MSIL2A_20260627T052639_R105_T43SFS_20260627T091125",
+   30.179757,
+   "43SFS"
+  ],
+  [
+   "2026-06-30",
+   "S2B_MSIL2A_20260630T053639_R005_T43SFS_20260630T091701",
+   30.882183,
+   "43SFS"
+  ],
+  [
+   "2026-07-02",
+   "S2C_MSIL2A_20260702T052641_R105_T43SFS_20260702T102509",
+   98.643893,
+   "43SFS"
+  ],
+  [
+   "2026-07-05",
+   "S2C_MSIL2A_20260705T053641_R005_T43SFS_20260705T101824",
+   95.497876,
+   "43SFS"
+  ],
+  [
+   "2026-07-07",
+   "S2B_MSIL2A_20260707T052639_R105_T43SFS_20260707T091307",
+   75.043571,
+   "43SFS"
+  ],
+  [
+   "2026-07-10",
+   "S2B_MSIL2A_20260710T053639_R005_T43SFS_20260710T091511",
+   70.243061,
+   "43SFS"
+  ],
+  [
+   "2026-07-12",
+   "S2C_MSIL2A_20260712T052651_R105_T43SFS_20260712T104114",
+   93.18918,
+   "43SFS"
+  ],
+  [
+   "2026-07-14",
+   "S2A_MSIL2A_20260714T053241_R105_T43SFS_20260714T102412",
+   87.421525,
+   "43SFS"
+  ],
+  [
+   "2026-07-15",
+   "S2C_MSIL2A_20260715T053641_R005_T43SFS_20260715T101509",
+   66.698068,
+   "43SFS"
+  ],
+  [
+   "2026-07-17",
+   "S2B_MSIL2A_20260717T052649_R105_T43SFS_20260717T091139",
+   6.884965,
+   "43SFS"
+  ],
+  [
+   "2026-07-20",
+   "S2B_MSIL2A_20260720T053639_R005_T43SFS_20260720T230420",
+   94.611704,
+   "43SFS"
+  ],
+  [
+   "2026-07-22",
+   "S2C_MSIL2A_20260722T052651_R105_T43SFS_20260722T102614",
+   99.907094,
+   "43SFS"
+  ],
+  [
+   "2026-07-25",
+   "S2C_MSIL2A_20260725T053641_R005_T43SFS_20260725T101710",
+   90.727741,
+   "43SFS"
+  ],
+  [
+   "2026-07-27",
+   "S2A_MSIL2A_20260727T054251_R005_T43SFS_20260727T085910",
+   29.878506,
+   "43SFS"
+  ],
+  [
+   "2026-07-27",
+   "S2B_MSIL2A_20260727T052649_R105_T43SFS_20260727T091136",
+   18.894213,
+   "43SFS"
+  ],
+  [
+   "2026-07-30",
+   "S2B_MSIL2A_20260730T053639_R005_T43SFS_20260730T091623",
+   89.100355,
+   "43SFS"
+  ],
+  [
+   "2026-08-01",
+   "S2C_MSIL2A_20260801T052651_R105_T43SFS_20260801T103008",
+   92.56621,
+   "43SFS"
+  ],
+  [
+   "2026-08-03",
+   "S2A_MSIL2A_20260803T053251_R105_T43SFS_20260803T144710",
+   12.642965,
+   "43SFS"
+  ],
+  [
+   "2026-08-04",
+   "S2C_MSIL2A_20260804T053641_R005_T43SFS_20260804T102016",
+   94.02833,
+   "43SFS"
+  ],
+  [
+   "2026-08-06",
+   "S2B_MSIL2A_20260806T052649_R105_T43SFS_20260806T091024",
+   75.545949,
+   "43SFS"
+  ],
+  [
+   "2026-08-09",
+   "S2B_MSIL2A_20260809T053639_R005_T43SFS_20260809T091637",
+   42.754823,
+   "43SFS"
+  ],
+  [
+   "2026-08-11",
+   "S2C_MSIL2A_20260811T052641_R105_T43SFS_20260811T102712",
+   72.353607,
+   "43SFS"
+  ],
+  [
+   "2026-08-14",
+   "S2C_MSIL2A_20260814T053641_R005_T43SFS_20260814T085710",
+   99.507928,
+   "43SFS"
+  ],
+  [
+   "2026-08-16",
+   "S2A_MSIL2A_20260816T054251_R005_T43SFS_20260816T090308",
+   68.256313,
+   "43SFS"
+  ],
+  [
+   "2026-08-16",
+   "S2B_MSIL2A_20260816T052639_R105_T43SFS_20260816T091153",
+   56.062496,
+   "43SFS"
+  ],
+  [
+   "2026-08-19",
+   "S2B_MSIL2A_20260819T053639_R005_T43SFS_20260819T091716",
+   97.040826,
+   "43SFS"
+  ],
+  [
+   "2026-08-21",
+   "S2C_MSIL2A_20260821T052641_R105_T43SFS_20260821T102216",
+   94.954526,
+   "43SFS"
+  ],
+  [
+   "2026-08-23",
+   "S2A_MSIL2A_20260823T053241_R105_T43SFS_20260823T122218",
+   97.68272,
+   "43SFS"
+  ],
+  [
+   "2026-08-24",
+   "S2C_MSIL2A_20260824T053641_R005_T43SFS_20260824T102214",
+   18.001974,
+   "43SFS"
+  ],
+  [
+   "2026-08-29",
+   "S2B_MSIL2A_20260829T053639_R005_T43SFS_20260829T091959",
+   24.623488,
+   "43SFS"
+  ],
+  [
+   "2026-08-31",
+   "S2C_MSIL2A_20260831T052641_R105_T43SFS_20260831T102215",
+   58.750165,
+   "43SFS"
+  ],
+  [
+   "2026-09-03",
+   "S2C_MSIL2A_20260903T053641_R005_T43SFS_20260903T102309",
+   40.540633,
+   "43SFS"
+  ],
+  [
+   "2026-09-05",
+   "S2A_MSIL2A_20260905T054251_R005_T43SFS_20260905T122510",
+   56.540281,
+   "43SFS"
+  ],
+  [
+   "2026-09-05",
+   "S2B_MSIL2A_20260905T052639_R105_T43SFS_20260905T092108",
+   55.585176,
+   "43SFS"
+  ],
+  [
+   "2026-09-08",
+   "S2B_MSIL2A_20260908T053639_R005_T43SFS_20260908T092007",
+   14.094211,
+   "43SFS"
+  ],
+  [
+   "2026-09-10",
+   "S2C_MSIL2A_20260910T052641_R105_T43SFS_20260910T102519",
+   12.344653,
+   "43SFS"
+  ],
+  [
+   "2026-09-12",
+   "S2A_MSIL2A_20260912T053241_R105_T43SFS_20260912T102503",
+   18.461542,
+   "43SFS"
+  ],
+  [
+   "2026-09-13",
+   "S2C_MSIL2A_20260913T053641_R005_T43SFS_20260913T101758",
+   11.110359,
+   "43SFS"
+  ],
+  [
+   "2026-09-15",
+   "S2B_MSIL2A_20260915T052639_R105_T43SFS_20260915T092127",
+   34.92108,
+   "43SFS"
+  ],
+  [
+   "2026-09-18",
+   "S2B_MSIL2A_20260918T053639_R005_T43SFS_20260918T092317",
+   6.53794,
+   "43SFS"
+  ],
+  [
+   "2026-09-20",
+   "S2C_MSIL2A_20260920T052651_R105_T43SFS_20260920T102311",
+   28.512567,
+   "43SFS"
+  ],
+  [
+   "2026-09-23",
+   "S2C_MSIL2A_20260923T053641_R005_T43SFS_20260923T101809",
+   20.023987,
+   "43SFS"
+  ],
+  [
+   "2026-09-25",
+   "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+   10.840102,
+   "43SFS"
+  ],
+  [
+   "2026-09-25",
+   "S2B_MSIL2A_20260925T052649_R105_T43SFS_20260925T092202",
+   1.588229,
+   "43SFS"
+  ],
+  [
+   "2026-09-28",
+   "S2B_MSIL2A_20260928T053639_R005_T43SFS_20260928T093404",
+   97.325701,
+   "43SFS"
+  ]
+ ],
+ "scene_rule": [
+  {
+   "requested": "2026-05-15",
+   "latest_under40": [
+    "2026-06-10",
+    "S2B_MSIL2A_20260610T053639_R005_T43SFS_20260610T091702",
+    15.470789,
+    "43SFS"
+   ],
+   "nearest_under40": [
+    "2026-05-16",
+    "S2C_MSIL2A_20260516T053641_R005_T43SFS_20260516T101809",
+    28.751558,
+    "43SFS"
+   ]
+  },
+  {
+   "requested": "2026-06-15",
+   "latest_under40": [
+    "2026-06-30",
+    "S2B_MSIL2A_20260630T053639_R005_T43SFS_20260630T091701",
+    30.882183,
+    "43SFS"
+   ],
+   "nearest_under40": [
+    "2026-06-10",
+    "S2B_MSIL2A_20260610T053639_R005_T43SFS_20260610T091702",
+    15.470789,
+    "43SFS"
+   ]
+  },
+  {
+   "requested": "2026-07-15",
+   "latest_under40": [
+    "2026-08-03",
+    "S2A_MSIL2A_20260803T053251_R105_T43SFS_20260803T144710",
+    12.642965,
+    "43SFS"
+   ],
+   "nearest_under40": [
+    "2026-07-17",
+    "S2B_MSIL2A_20260717T052649_R105_T43SFS_20260717T091139",
+    6.884965,
+    "43SFS"
+   ]
+  },
+  {
+   "requested": "2026-08-15",
+   "latest_under40": [
+    "2026-09-13",
+    "S2C_MSIL2A_20260913T053641_R005_T43SFS_20260913T101758",
+    11.110359,
+    "43SFS"
+   ],
+   "nearest_under40": [
+    "2026-08-24",
+    "S2C_MSIL2A_20260824T053641_R005_T43SFS_20260824T102214",
+    18.001974,
+    "43SFS"
+   ]
+  },
+  {
+   "requested": "2026-09-15",
+   "latest_under40": [
+    "2026-09-25",
+    "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+    10.840102,
+    "43SFS"
+   ],
+   "nearest_under40": [
+    "2026-09-15",
+    "S2B_MSIL2A_20260915T052639_R105_T43SFS_20260915T092127",
+    34.92108,
+    "43SFS"
+   ]
+  }
+ ]
+}

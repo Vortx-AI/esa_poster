@@ -1,0 +1,139 @@
+{
+ "figure": "f8_ladder",
+ "size_mm": [
+  193.5,
+  60.0
+ ],
+ "labels": [
+  {
+   "text": "L0",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "record bytes",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "CHECKABLE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "780 of 780: hash, signature, log",
+   "pt": 14,
+   "claim": "L.780"
+  },
+  {
+   "text": "L1",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "identity",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "CHECKABLE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "cell and band bound in 780 of 780",
+   "pt": 14,
+   "claim": "L.780"
+  },
+  {
+   "text": "L2",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "derivation",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "RECOMPUTABLE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "266 of 780 recompute from a recipe",
+   "pt": 14,
+   "claim": "L.266"
+  },
+  {
+   "text": "L3",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "source",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "PARTIAL",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "named, not hashed: 0 of 215 hashed",
+   "pt": 14,
+   "claim": "O.nohash"
+  },
+  {
+   "text": "L4",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "entity",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "OUT OF SCOPE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "M17 passes every check; “this image”",
+   "pt": 14,
+   "claim": "X.entity"
+  },
+  {
+   "text": "became a hair salon",
+   "pt": 14,
+   "claim": "X.entity"
+  },
+  {
+   "text": "L5",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "physical truth, decision",
+   "pt": 16,
+   "claim": "L.status"
+  },
+  {
+   "text": "INHERITED / OUT OF SCOPE",
+   "pt": 14,
+   "claim": "L.status"
+  },
+  {
+   "text": "GFC2020 V3 forest commission",
+   "pt": 14,
+   "claim": "L.gfc"
+  },
+  {
+   "text": "error 13.1 %",
+   "pt": 14,
+   "claim": "L.gfc"
+  }
+ ]
+}

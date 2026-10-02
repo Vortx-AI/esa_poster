@@ -1,0 +1,271 @@
+{
+ "figure": "f15b_sat042_strip",
+ "size_mm": [
+  193.5,
+  60.0
+ ],
+ "kicker": {
+  "text": "Extending verification from observations to execution",
+  "claim": "A15.kicker",
+  "role": "kicker"
+ },
+ "run": "2026-09-30T19:14:15Z",
+ "commit": "04b40c5",
+ "labels": [
+  {
+   "text": "Enrol",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "ENROLLED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Write,",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "no trace",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "REFUSED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Capture",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "the pass",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "SIGNED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Smuggle a",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "4th fact",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "REFUSED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Honest",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "batch",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "ADMITTED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Score vs",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "anchor",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "SCORED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Rewrite",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "one log",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "CAUGHT",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "8 trace layers, each log digest chained;",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "seq 2 rewritten after signing: broken at seq 3",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "syscall",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 0",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "scheduler",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 1",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "memory",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 2",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "×",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "sensor bus",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 3",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "signal",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 4",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "energy",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 5",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "thermal",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 6",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "storage",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 7",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "drift anchor",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "0.6402 ± 0.02 (1σ):",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "scored after admission,",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "not a gate",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "consistent",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "tension",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "contradicted",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "0.5",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "0.75",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "0.6431 → 0.05",
+   "pt": 14,
+   "claim": "A15.drift"
+  },
+  {
+   "text": "0.6512 → 0.15",
+   "pt": 14,
+   "claim": "A15.drift"
+  },
+  {
+   "text": "0.2103 → 0.88",
+   "pt": 14,
+   "claim": "A15.drift"
+  }
+ ]
+}

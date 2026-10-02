@@ -1,0 +1,1 @@
+{"t": 1790833801.4643457, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:zewkvccpbpgtosrast342htuvlvfejiy4dy5nkj6id3t5tp2fklq"}, "is_error": true, "ms": 0.731, "meta": {"verdict": false, "first_fail": "log"}, "text": "refused: log check failed: inclusion proof does not fold to the signed root"}

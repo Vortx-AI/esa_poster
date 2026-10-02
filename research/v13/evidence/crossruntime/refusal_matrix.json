@@ -1,0 +1,20 @@
+{
+ "wrong_cell": {
+  "rest": "HTTP 409 code=invalid_argument",
+  "mcp_raw": "HTTP 200 isError=True jsonrpc_error=None text=\"tool error (-25): token cell `defi.zb493.xuqA.zcb5f` does not match the signed fact's cell\"",
+  "a2a": "HTTP 200 state=None jsonrpc_error=-32602 msg=\"\"",
+  "python_sdk": "EmemHTTPError None",
+  "llamaindex": "HTTPStatusError: Client error '409 Conflict' for url 'https://emem.dev/v1/memory_token/resolve'\nF",
+  "langchain_mcp": "returned [{'type': 'text', 'text': \"tool error (-25): token cell `defi.zb493.xuqA.zcb5f` does not m",
+  "mcp_python_sdk": "isError=True text='tool error (-25): token cell `defi.zb493.xuqA.zcb5f` does not match the signed f'"
+ },
+ "unknown_cid": {
+  "rest": "HTTP 404 code=cid_not_found",
+  "mcp_raw": "HTTP 200 isError=True jsonrpc_error=None text='tool error (-6): no fact for cid=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa. Tok'",
+  "a2a": "HTTP 200 state=None jsonrpc_error=-32602 msg=\"\"",
+  "python_sdk": "EmemHTTPError None",
+  "llamaindex": "HTTPStatusError: Client error '404 Not Found' for url 'https://emem.dev/v1/memory_token/resolve'\n",
+  "langchain_mcp": "returned [{'type': 'text', 'text': \"tool error (-6): no fact for cid=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "mcp_python_sdk": "isError=True text='tool error (-6): no fact for cid=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'"
+ }
+}

@@ -1,0 +1,169 @@
+
+Posters — Agentic AI for Earth Observation
+      Agentic AI for Earth Observation
+Home
+Dates
+About
+Objectives
+Main Topics
+Organizers
+Contact
+Calls
+Call for Abstract
+Call for Demos
+Call for Hands-on Sessions
+Programme
+Schedule
+Keynote Speakers
+Attend
+Registration
+Venue
+Accommodation
+Child Care
+Posters
+  43 posters are on display across 2 sessions at
+  Langenbeck-Virchow-Haus. Presenters stand by their boards for the whole session.
+Search posters
+  No posters match your search.
+Poster Session 1
+    Day 1 · 19 October 2026 · 17:00–18:30 ·
+    B. von Langenbeck (1st Floor) ·
+    23 posters
+Presenters stand by their boards for the full session.
+Fitness for Purpose as an Agentic Task: Domain Encoded Reasoning for EO Data Selection in Regulated Environmental Work
+      Nahid Alemi Kermani
+Aniterra Pty Ltd
+SENSOR2RAG: Multimodal Sensor-to-RAG Architecture for Site-Specific Decision Support in Natural Capital Risk Management
+      Jacopo Soldateschi
+The Landbanking Group GmbH
+Beyond Task Success: Domain-Grounded Evaluation of Earth Observation Agents in Environmental Risk Workflows
+      Alexandros Oikonomidis
+Centre for Research and Technology Hellas (CERTH) and National and Technical University of Athens (NTUA)
+EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings
+      Jaya Kumari
+Vortx AI
+CLUES: A Comprehensive Workflow for Integrating Geospatial Data in Biomedical Research
+      Marcel Jentsch
+Center of Digital Health BIH@Charité
+GEODES Assistant
+      Killian Perriot
+THALES
+From Isolated Models to Agentic Orchestration: A Ground Segment Multi-Agent Framework for Coastal and In-Land Water Resilience
+      Roger Escolà, Mariona Badenas-Agusti
+isardSAT
+Thematic Datacubes On-Demand (THEDE): An Agentic AI Framework for On-Demand EO Data Dissemination Using Large Language Models
+      Edoardo Kimani Bellotto
+Sistema GmbH
+EIS: An Open-Source Geo-Agent Framework Democratizing Environmental Knowledge and Collaboration
+      Matteo Mattiuzzi
+European Environment Agency
+AI Agentic Development of xAI for Earth Observation: Building SegExplainer
+      Yulia Grushetskaya, Mike Sips
+GFZ Helmholtz Centre for Geosciences
+Ask, Detect, Explain: An End-to-End Agentic System for Satellite Change Detection
+      Bartłomiej Ostrowski, Marcin Kluczek, Bartosz Augustyn, Jędrzej S. Bojanowski
+CloudFerro S.A.
+Agentic Interaction between Raster Flood Observations and GIS Features for Crisis Situational Awareness
+      Jente Bosmans
+VITO
+LATINSIGHT: A React-Based Multi-Agent System for Urban EO Analytics
+      Edoardo Schettino, Paolo De Piano
+Latitudo 40 S.r.l.
+ECHOSAT: Physically Consistent Spatio-Temporal Canopy Height Mapping as an Enabling Layer for Agentic Earth Observation
+      Berkant Turan
+Zuse Institute Berlin
+Engineering a Trustworthy NASA Earth Science Discovery Agent Using the CARE Methodology
+      Lillianne Thomas
+Development Seed
+A Simulation Study of LLM-Based Onboard Orchestration for Coordinated Earth-Observation Constellations
+      Christopher Castro Traba
+Agentic Ground Segment: How Generative AI Redesigns Data Discovery and Processing, Ordering, and Operations
+      Filippo Bianchini
+Telespazio S.p.A.
+Hierarchical System with Agentic Refinement for Large-Scale Earth Observation Archives
+      Omjyoti Dutta, Joao Vitorino
+GMV S.L.
+AI-Driven ASAP Country Assessments
+      Filip Sabo
+European Commission, Joint Research Centre (JRC)
+From Earth Observation Data to Decision: An Agentic Architecture for Disaster Resilience
+      Bartosz Augustyn, Marcin Kluczek
+CloudFerro S.A.
+Advancing Disaster Resilience through Agentic AI Integration in the EO-PIN Suite
+      Guy Schumann
+RSS-Hydro
+EO Agents in Actions - Lessons Learned from Building Products Around Analysis Agents
+      Lillianne Thomas, Drishtie Patel
+Development Seed
+GeoGuard: An Agentic Guardrails and Validation Framework for Geospatial AI
+      Rohit Sisir Sahoo
+The University of Alabama in Huntsville
+Poster Session 2
+    Day 2 · 20 October 2026 · 17:45–19:00 ·
+    B. von Langenbeck (1st Floor) ·
+    20 posters
+Presenters stand by their boards for the full session.
+Autonomous Geospatial Intelligence: An Agentic Workflow for End-to-End Feature Interpretation And Large-Scale Scene Monitoring
+      Marie-Charlotte Teulières
+Airbus Defense and Space Geo
+EOMAS – A Multi Agent System-Backed Assistant for Earth Observation
+      Hans Meine
+Fraunhofer Institute for Digital Medicine MEVIS and OHB Digital Services
+An Interactive Multi-Agent System for User-Driven And Context-Aware Hyperspectral Image Compression
+      Tristan Reimann, Maxim Smirnov, Viktor Tevosyan
+Technische Universität Berlin and BIFOLD
+Towards Earth Observation-Based Siting of Sponge-City Infrastructure in East African Cities: An Open-Data Framework
+      Karl A. W. Amolo
+Urban Canopy Kenya and East African Sponge Cities Initiative (EASCI)
+AI-Driven End-To-End (E2E) Monitoring in the Context Of The ESA Earth Observation Operations Framework Copernicus Space Component (EOF-CSC)
+      Caroline Ball
+Capgemini (France)
+From Perception to Priorities: An Agentic Pipeline for Multi-Hazard Triage and Explainable Resource Allocation in Earth Observation
+      Alessandro Princi
+RINA Consulting S.p.A
+Learned Satellite Embeddings as Covariates for Global Digital Soil Mapping: A Multi-Model, Multi-Resolution Evaluation Developed with AI Coding Agents
+      Laura Poggio
+ISRIC - World Soil Information
+Specialized Geospatial Foundation Models for Agentic Earth Observation: Lessons from Spheer FM
+      Mark Boer, Jordy de Lange
+Spheer
+Multi-Satellite Task Orchestration for Wildfire Monitoring with On-Board Visual-Language Models
+      Riccardo D’Ercole (ESA Φ-lab), Ana-Maria Pelin (Φ-lab and TU Delft)
+Provenance-First Geospatial Composition: A Scaffold-Based Builder as a Trust-Bearing Counterpoint to Agentic Autonomy in Earth Observation
+      Sudhakaran Chithamanan (Earthward, 33 Blueprints Collective), Aravindh S. Subramanian (Technical University of Munich, Earthward)
+Beyond the State of the Art in Geospatial Foundation Models: A Diagnostic Comparison of TerraMind and THOR
+      Frederick Schindlegger
+Bertelsmann Foundation
+Agentic AI as an Auditable Co-Scientist for Earth-Observation-Based Irrigation Mapping and Groundwater Accounting
+      Peter ReVelle
+Desert Research Institute (DRI)
+SeismicAgent: Benchmarking Evidence-Conflict Reasoning for Post-Earthquake Building-Damage Assessment
+      Fatma Elik
+Istanbul Metropolitan Municipality, Earthquake and Ground Investigation Directorate
+Towards Agentic AI Workflows for Earth Observation-Based Air Quality Studies
+      Alberto Vavassori, Yasil Yordanov
+Politecnico di Milano
+Enabling Adaptive Agentic Earth Observation across the Space–Ground–Cloud Continuum
+      Cecilia Calavaro
+Department of Civil Engineering and Computer Science Engineering, University of Rome Tor Vergata
+Manteo AI: Agentic Geospatial Intelligence for Earth Observation
+      Ioannis Prapas
+manteo.ai
+Airbus Geo Explore: Leveraging Semantic Search APIs for LLM Agentic Workflows
+      Fahd Benatia
+Airbus DS
+Aperture: Semantic Change Understanding and Grounded GeoAI Reasoning via SAR-Optical-Language Alignment
+      Magdalena Kaiser, Paul Weinmann
+LiveEO
+FlyPix AI: Agentic Vision-Language System
+      Ivan Tankoyeu
+Flypix AI
+Virtual Support for Earth Observation (VISEO)
+      Romain Sixt, Killian Perriot, Dorian Voydie
+THALES
+Back to the full schedule
+ -->
+Imprint
+·
+Data Privacy
+        © 2026 Agentic AI for Earth Observation. All rights reserved.

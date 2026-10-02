@@ -1,0 +1,5532 @@
+{
+ "schema": "esa_poster v13 claims map",
+ "version": 1,
+ "generated": "2026-10-01",
+ "brief": "research/v13/12_FINAL_BRIEF.md",
+ "rule": "no row, no print: every number and every claim sentence on the board (HTML and figure text) must match a row's print[] string; rows with status PRE-REGISTERED and date 'pending' print only in R5 mode; rows whose note starts CONDITIONAL print only when the condition is met",
+ "statuses": [
+  "SPEC",
+  "LIVE",
+  "MEASURED",
+  "PRE-REGISTERED",
+  "INFERRED",
+  "EXTERNAL",
+  "OUT-OF-SCOPE"
+ ],
+ "live_max_age_days_at_build": 7,
+ "ecosystem_max_age_days": 14,
+ "rows": [
+  {
+   "id": "H.title",
+   "block": "header",
+   "print": [
+    "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/evidence/industry/prog_posters.txt",
+    "line": 42,
+    "url": "https://agentic-eo.berlin/programme/posters/"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/industry/prog_posters.txt",
+    "arg": "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings",
+    "expect": null
+   },
+   "note": "programme title verbatim; re-check the week of print",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "H.session",
+   "block": "header",
+   "print": [
+    "Poster Session 1",
+    "19 Oct 2026"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/evidence/industry/prog_posters.txt",
+    "url": "https://agentic-eo.berlin/programme/posters/"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "EMEM is the 4th entry of Session 1 (report 04 sec. 4.2); print only 'Poster Session 1 · 19 Oct 2026' for the date (site gives 19-20 and 19-21 Oct)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "H.hero",
+   "block": "header",
+   "print": [
+    "Agents hand each other evidence references, not paraphrases."
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "1.1 invention statement"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "mechanism statement; the measured support is S.* and M.* rows",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "H.sub.mechanism",
+   "block": "header",
+   "print": [
+    "The receiver resolves the reference, re-hashes the record, re-reads the source."
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v11/out/summary.md",
+    "pointer": "levels C, D, I"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "H.sub.boundary",
+   "block": "header",
+   "print": [
+    "A signature fixes the record's bytes, not the measurement."
+   ],
+   "status": "OUT-OF-SCOPE",
+   "layer": "L5",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "example": "M15: signed 0.3444 vs containing pixel 0.4860 (kxjvfwpa)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "H.img.record",
+   "block": "header",
+   "print": [
+    "NDVI 0.4709",
+    "Sentinel-2A L2A",
+    "Keylong, Lahaul, India",
+    "25 Sep 2026"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "pointer": [
+     "S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)",
+     "ndvi_floor_pixel"
+    ]
+   },
+   "date": "2026-09-25",
+   "value": 0.4708994708994709,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/pixel_check.json",
+    "arg": [
+     "S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)",
+     "ndvi_floor_pixel"
+    ],
+    "expect": 0.4708994708994709
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "H.img.grid",
+   "block": "header",
+   "print": [
+    "signed 10 m grids",
+    "B04/B03/B02",
+    "linear 1 to 99 % stretch, γ 1/1.35"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/keylong_B0{2,3,4}.bin",
+    "note": "EMEMGRD1 443 x 453 px, EPSG:32643, values DN-1000; window equality asserted in research/v13/evidence/visual/proto_m15.py"
+   },
+   "date": "2026-09-25",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "S.R1.A",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "15 / 15"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "summary",
+     "A",
+     "false_accepts"
+    ],
+    "denominator": [
+     "summary",
+     "A",
+     "applicable"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": "15/15",
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "summary",
+     "A",
+     "false_accepts"
+    ],
+    "expect": 15
+   },
+   "note": "R1 opaque id is R5 condition D; R1 level I is the ceiling for R5 condition E/E+",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": "R5.A.pooled.false_accept",
+   "checked": true
+  },
+  {
+   "id": "S.R1.B",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "15 / 15"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "summary",
+     "B",
+     "false_accepts"
+    ],
+    "denominator": [
+     "summary",
+     "B",
+     "applicable"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": "15/15",
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "summary",
+     "B",
+     "false_accepts"
+    ],
+    "expect": 15
+   },
+   "note": "R1 opaque id is R5 condition D; R1 level I is the ceiling for R5 condition E/E+",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": "R5.B.pooled.false_accept",
+   "checked": true
+  },
+  {
+   "id": "S.R1.C",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "13 / 16"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "summary",
+     "C",
+     "false_accepts"
+    ],
+    "denominator": [
+     "summary",
+     "C",
+     "applicable"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": "13/16",
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "summary",
+     "C",
+     "false_accepts"
+    ],
+    "expect": 13
+   },
+   "note": "R1 opaque id is R5 condition D; R1 level I is the ceiling for R5 condition E/E+",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": "R5.D.pooled.false_accept",
+   "checked": true
+  },
+  {
+   "id": "S.R1.I",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "0 / 16"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "summary",
+     "I",
+     "false_accepts"
+    ],
+    "denominator": [
+     "summary",
+     "I",
+     "applicable"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": "0/16",
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "summary",
+     "I",
+     "false_accepts"
+    ],
+    "expect": 0
+   },
+   "note": "R1 opaque id is R5 condition D; R1 level I is the ceiling for R5 condition E/E+",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": "R5.E.pooled.false_accept",
+   "checked": true
+  },
+  {
+   "id": "S.headline",
+   "block": "P1 spine",
+   "print": [
+    "Handed prose, B acted on 15 of 15 corruptions; handed a reference it checks, on 0 of 16."
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": "summary.A, summary.I"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": "R5 template: 'Handed prose, agents acted on {R5.A.pooled.false_accept} corruptions; handed a reference, on {R5.E.pooled.false_accept}.'",
+   "checked": null
+  },
+  {
+   "id": "S.16",
+   "block": "P1 spine",
+   "print": [
+    "16 ways",
+    "16 corruptions"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": "meta.mutations minus G0 and M17"
+   },
+   "date": "2026-09-30",
+   "value": 16,
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "summary",
+     "I",
+     "applicable"
+    ],
+    "expect": 16
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "S.threshold",
+   "block": "P1 spine + P2 + P6",
+   "print": [
+    "0.4705",
+    "irrigate if NDVI ≤ 0.4705"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "meta",
+     "rule"
+    ],
+    "prereg": "research/repro/data/v8/prereg.md (constructed boundary test)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "meta",
+     "rule"
+    ],
+    "expect": "irrigate iff NDVI <= 0.4705"
+   },
+   "note": "must be labelled a constructed test rule wherever printed",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "S.G2.haiku.F",
+   "block": "P1 spine",
+   "print": [
+    "Claude Haiku 4.5 declined 5 of 5"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v8/results.json",
+    "pointer": [
+     "b",
+     "claude-haiku-4-5",
+     "arms",
+     "F",
+     "decisions",
+     "DECLINE"
+    ],
+    "prereg": "research/repro/data/v8/prereg.md blake3 67631a79..."
+   },
+   "date": "2026-09-30",
+   "value": "5/5",
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/results.json",
+    "arg": [
+     "b",
+     "claude-haiku-4-5",
+     "arms",
+     "F",
+     "decisions",
+     "DECLINE"
+    ],
+    "expect": 5
+   },
+   "note": "the refusal came through the server's 409; the harness, not the model, re-hashed (review F3)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "S.G2.qwen.F",
+   "block": "P1 spine",
+   "print": [
+    "Qwen2.5-3B",
+    "acted 5 of 5"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L1",
+   "source": {
+    "file": "v13/evidence/g2_handoff/qwen_trials.jsonl",
+    "pointer": "count(arm=F, decision=IRRIGATE)",
+    "prereg": "research/v13/evidence/g2_handoff/prereg_addendum2.md"
+   },
+   "date": "2026-09-30",
+   "value": "5/5",
+   "check": {
+    "kind": "qwen",
+    "file": "v13/evidence/g2_handoff/qwen_trials.jsonl",
+    "arg": [
+     "F",
+     "IRRIGATE"
+    ],
+    "expect": 5
+   },
+   "note": "52 of 55 pre-registered trials ran; label in methods",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "S.G2.qwen.bare",
+   "block": "P1 spine",
+   "print": [
+    "dropped the cell from all 24 calls"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L1",
+   "source": {
+    "file": "v13/evidence/g2_handoff/qwen_trials.jsonl",
+    "pointer": "count(tool_calls[].token_form == 'bare_cid') over arms T and F"
+   },
+   "date": "2026-09-30",
+   "value": "24/24",
+   "check": {
+    "kind": "qwen_bare",
+    "file": "v13/evidence/g2_handoff/qwen_trials.jsonl",
+    "arg": null,
+    "expect": 24
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "S.G2.boundary",
+   "block": "P1 spine",
+   "print": [
+    "a reference protects only a receiver that keeps it whole and obeys a refusal"
+   ],
+   "status": "INFERRED",
+   "layer": "L1",
+   "source": {
+    "inputs": [
+     "S.G2.haiku.F",
+     "S.G2.qwen.F",
+     "S.G2.qwen.bare"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "'only' allowlisted with these three rows",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "S.scope",
+   "block": "P1 spine",
+   "print": [
+    "one record, one band, one run",
+    "test key"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v11/out/summary.md",
+    "pointer": "Notes"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "S.boundary_wall",
+   "block": "P1 spine",
+   "print": [
+    "the entity meant (M17)",
+    "sensor accuracy",
+    "the decision"
+   ],
+   "status": "OUT-OF-SCOPE",
+   "layer": "L4-L5",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "summary",
+     "I",
+     "entity_case_accepted"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "summary",
+     "I",
+     "entity_case_accepted"
+    ],
+    "expect": true
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "R5.A.pooled",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "{R5.A.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.A.pooled_claude.false_accept",
+    "prereg": "research/repro/v13/r5/prereg.md (BLAKE3 pushed before trial 1)"
+   },
+   "date": "pending",
+   "value": "k/285 planned (3 Claude models x 95: haiku, sonnet, opus, as in the R5 plan files of 1 Oct); k/380 if Fable 5.1 is added",
+   "check": null,
+   "note": "print k/n with Wilson 95 % and models, n, dates; absent until results.json exists (fallback: R1 row)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5.A.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.A.haiku",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.A.haiku.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.A.haiku.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.A.haiku.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.A.sonnet",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.A.sonnet.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.A.sonnet.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.A.sonnet.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.A.opus",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.A.opus.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.A.opus.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.A.opus.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.A.fable",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.A.fable.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.A.fable.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.A.fable.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.A.qwen7b",
+   "block": "P5 matrix (30 cm)",
+   "print": [
+    "{R5.A.qwen7b.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.A.qwen7b.false_accept"
+   },
+   "date": "pending",
+   "value": "k/19 planned (1 replicate; descriptive only)",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.A.qwen7b.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.B.pooled",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "{R5.B.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.B.pooled_claude.false_accept",
+    "prereg": "research/repro/v13/r5/prereg.md (BLAKE3 pushed before trial 1)"
+   },
+   "date": "pending",
+   "value": "k/285 planned (3 Claude models x 95: haiku, sonnet, opus, as in the R5 plan files of 1 Oct); k/380 if Fable 5.1 is added",
+   "check": null,
+   "note": "print k/n with Wilson 95 % and models, n, dates; absent until results.json exists (fallback: R1 row)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5.B.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.B.haiku",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.B.haiku.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.B.haiku.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.B.haiku.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.B.sonnet",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.B.sonnet.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.B.sonnet.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.B.sonnet.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.B.opus",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.B.opus.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.B.opus.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.B.opus.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.B.fable",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.B.fable.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.B.fable.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.B.fable.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.B.qwen7b",
+   "block": "P5 matrix (30 cm)",
+   "print": [
+    "{R5.B.qwen7b.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.B.qwen7b.false_accept"
+   },
+   "date": "pending",
+   "value": "k/19 planned (1 replicate; descriptive only)",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.B.qwen7b.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.C.pooled",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "{R5.C.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.C.pooled_claude.false_accept",
+    "prereg": "research/repro/v13/r5/prereg.md (BLAKE3 pushed before trial 1)"
+   },
+   "date": "pending",
+   "value": "k/285 planned (3 Claude models x 95: haiku, sonnet, opus, as in the R5 plan files of 1 Oct); k/380 if Fable 5.1 is added",
+   "check": null,
+   "note": "print k/n with Wilson 95 % and models, n, dates; absent until results.json exists (fallback: R1 row)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5.C.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.C.haiku",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.C.haiku.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.C.haiku.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.C.haiku.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.C.sonnet",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.C.sonnet.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.C.sonnet.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.C.sonnet.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.C.opus",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.C.opus.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.C.opus.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.C.opus.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.C.fable",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.C.fable.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.C.fable.false_accept"
+   },
+   "date": "pending",
+   "value": "k/95 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.C.fable.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.C.qwen7b",
+   "block": "P5 matrix (30 cm)",
+   "print": [
+    "{R5.C.qwen7b.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.C.qwen7b.false_accept"
+   },
+   "date": "pending",
+   "value": "k/19 planned (1 replicate; descriptive only)",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.C.qwen7b.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.D.pooled",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "{R5.D.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.D.pooled_claude.false_accept",
+    "prereg": "research/repro/v13/r5/prereg.md (BLAKE3 pushed before trial 1)"
+   },
+   "date": "pending",
+   "value": "k/300 planned (3 Claude models x 100: haiku, sonnet, opus, as in the R5 plan files of 1 Oct); k/400 if Fable 5.1 is added",
+   "check": null,
+   "note": "print k/n with Wilson 95 % and models, n, dates; absent until results.json exists (fallback: R1 row)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5.D.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.D.haiku",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.D.haiku.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.D.haiku.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.D.haiku.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.D.sonnet",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.D.sonnet.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.D.sonnet.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.D.sonnet.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.D.opus",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.D.opus.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.D.opus.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.D.opus.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.D.fable",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.D.fable.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.D.fable.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.D.fable.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.D.qwen7b",
+   "block": "P5 matrix (30 cm)",
+   "print": [
+    "{R5.D.qwen7b.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.D.qwen7b.false_accept"
+   },
+   "date": "pending",
+   "value": "k/20 planned (1 replicate; descriptive only)",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.D.qwen7b.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E0.pooled",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "{R5.E0.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E0.pooled_claude.false_accept",
+    "prereg": "research/repro/v13/r5/prereg.md (BLAKE3 pushed before trial 1)"
+   },
+   "date": "pending",
+   "value": "k/300 planned (3 Claude models x 100: haiku, sonnet, opus, as in the R5 plan files of 1 Oct); k/400 if Fable 5.1 is added",
+   "check": null,
+   "note": "print k/n with Wilson 95 % and models, n, dates; absent until results.json exists (fallback: R1 row)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5.E0.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E0.haiku",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E0.haiku.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E0.haiku.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E0.haiku.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E0.sonnet",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E0.sonnet.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E0.sonnet.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E0.sonnet.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E0.opus",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E0.opus.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E0.opus.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E0.opus.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E0.fable",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E0.fable.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E0.fable.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E0.fable.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E0.qwen7b",
+   "block": "P5 matrix (30 cm)",
+   "print": [
+    "{R5.E0.qwen7b.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E0.qwen7b.false_accept"
+   },
+   "date": "pending",
+   "value": "k/20 planned (1 replicate; descriptive only)",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E0.qwen7b.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E.pooled",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "{R5.E.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E.pooled_claude.false_accept",
+    "prereg": "research/repro/v13/r5/prereg.md (BLAKE3 pushed before trial 1)"
+   },
+   "date": "pending",
+   "value": "k/300 planned (3 Claude models x 100: haiku, sonnet, opus, as in the R5 plan files of 1 Oct); k/400 if Fable 5.1 is added",
+   "check": null,
+   "note": "print k/n with Wilson 95 % and models, n, dates; absent until results.json exists (fallback: R1 row)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5.E.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E.haiku",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E.haiku.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E.haiku.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E.haiku.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E.sonnet",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E.sonnet.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E.sonnet.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E.sonnet.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E.opus",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E.opus.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E.opus.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E.opus.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E.fable",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.E.fable.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E.fable.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E.fable.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.E.qwen7b",
+   "block": "P5 matrix (30 cm)",
+   "print": [
+    "{R5.E.qwen7b.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.E.qwen7b.false_accept"
+   },
+   "date": "pending",
+   "value": "k/20 planned (1 replicate; descriptive only)",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E.qwen7b.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.Eplus.pooled",
+   "block": "P1 spine + P5 matrix",
+   "print": [
+    "{R5.Eplus.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.Eplus.pooled_claude.false_accept",
+    "prereg": "research/repro/v13/r5/prereg.md (BLAKE3 pushed before trial 1)"
+   },
+   "date": "pending",
+   "value": "k/300 planned (3 Claude models x 100: haiku, sonnet, opus, as in the R5 plan files of 1 Oct); k/400 if Fable 5.1 is added",
+   "check": null,
+   "note": "print k/n with Wilson 95 % and models, n, dates; absent until results.json exists (fallback: R1 row)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5.Eplus.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.Eplus.haiku",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.Eplus.haiku.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.Eplus.haiku.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.Eplus.haiku.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.Eplus.sonnet",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.Eplus.sonnet.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.Eplus.sonnet.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.Eplus.sonnet.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.Eplus.opus",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.Eplus.opus.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.Eplus.opus.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.Eplus.opus.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.Eplus.fable",
+   "block": "P5 matrix (30 cm per-model strip)",
+   "print": [
+    "{R5.Eplus.fable.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.Eplus.fable.false_accept"
+   },
+   "date": "pending",
+   "value": "k/100 planned",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.Eplus.fable.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.Eplus.qwen7b",
+   "block": "P5 matrix (30 cm)",
+   "print": [
+    "{R5.Eplus.qwen7b.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)",
+    "pointer": "primary.Eplus.qwen7b.false_accept"
+   },
+   "date": "pending",
+   "value": "k/20 planned (1 replicate; descriptive only)",
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.Eplus.qwen7b.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.cell.cond.item.false_accept",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.cell.<cond>.<item>.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "k/15 per cell planned (5 reps x 3 Claude models)",
+   "check": null,
+   "note": "matrix cell bars",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.cell.<cond>.<item>.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.G0.cond.pooled.false_refusal",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.G0.<cond>.pooled.false_refusal}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "k/45 per condition planned (15 x 3)",
+   "check": null,
+   "note": "control row",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.G0.<cond>.pooled.false_refusal",
+   "checked": null
+  },
+  {
+   "id": "R5.E0.pooled.verify_called",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.E0.pooled.verify_called}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "k/100 per model",
+   "check": null,
+   "note": "E0 vs E line",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.E0.pooled.verify_called",
+   "checked": null
+  },
+  {
+   "id": "R5.M15r.Eplugin.false_accept",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.M15r.Eplugin.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "k/15 (5 x 3, Block 2)",
+   "check": null,
+   "note": "real pre-fix record, no re-read",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.M15r.Eplugin.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.M15r.EpluginV.false_accept",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.M15r.EpluginV.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "k/15 (5 x 3, Block 2)",
+   "check": null,
+   "note": "real pre-fix record, with re-read",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.M15r.EpluginV.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.M20.E.pooled.false_accept",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.M20.E.pooled.false_accept}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "k/15",
+   "check": null,
+   "note": "as-of case",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.M20.E.pooled.false_accept",
+   "checked": null
+  },
+  {
+   "id": "R5.models",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.models}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "3 Claude (haiku 4.5, sonnet 5.5, opus 5.5) + Qwen2.5-7B planned",
+   "check": null,
+   "note": "models line",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.models",
+   "checked": null
+  },
+  {
+   "id": "R5.dates",
+   "block": "P1/P5 (R5 mode only)",
+   "print": [
+    "{R5.dates}"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/repro/v13/r5/results.json (name as written by the R5 scorer; bind at build)"
+   },
+   "date": "pending",
+   "value": "run dates",
+   "check": null,
+   "note": "scope line",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": "R5.dates",
+   "checked": null
+  },
+  {
+   "id": "E8.right",
+   "block": "P2 eight answers",
+   "print": [
+    "0.4709 signed record"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "pointer": "S2A ... ndvi_floor_pixel"
+   },
+   "date": "2026-10-01",
+   "value": "0.4709",
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/pixel_check.json",
+    "arg": [
+     "S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)",
+     "ndvi_floor_pixel"
+    ],
+    "expect": 0.4708994708994709
+   },
+   "note": "signed record oj5cecci (containing pixel, S2A R005); filled dot (a signed record or an archive read)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "E8.rounded",
+   "block": "P2 eight answers",
+   "print": [
+    "0.47 rounded in prose"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/results.json",
+    "pointer": "b.claude-haiku-4-5.arms.R.decisions.IRRIGATE = 5 (exploratory addendum)"
+   },
+   "date": "2026-10-01",
+   "value": "0.47",
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/results.json",
+    "arg": [
+     "b",
+     "claude-haiku-4-5",
+     "arms",
+     "R",
+     "decisions",
+     "IRRIGATE"
+    ],
+    "expect": 5
+   },
+   "note": "rounded in prose (G2 arm R: 5 of 5 IRRIGATE); hollow dot (rule or arithmetic on real DNs)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "E8.s2b",
+   "block": "P2 eight answers",
+   "print": [
+    "0.4370 other satellite, same day"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "research/repro/v13/eight_answers.json (to create; values from report 05 sec. 4.2, rasterio 1.4.4, 2026-10-01)"
+   },
+   "date": "2026-10-01",
+   "value": "0.4370",
+   "check": null,
+   "note": "S2B R105, same day, same tslot; Element84 DNs 1014/2588; filled dot (a signed record or an archive read)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "E8.newer",
+   "block": "P2 eight answers",
+   "print": [
+    "0.4237 30 Sep record handed as 25 Sep"
+   ],
+   "status": "LIVE",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v11/cell_products.json",
+    "pointer": "band=indices.ndvi value"
+   },
+   "date": "2026-10-01",
+   "value": "0.4237",
+   "check": {
+    "kind": "cp",
+    "file": "repro/data/v11/cell_products.json",
+    "arg": "indices.ndvi",
+    "expect": 0.42369991474850816
+   },
+   "note": "30 Sep record 3yyaxn5d handed as 25 Sep; filled dot (a signed record or an archive read)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "E8.neighbour",
+   "block": "P2 eight answers",
+   "print": [
+    "0.3016 neighbour pixel"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "pointer": "S2A ... ndvi_round_pixel"
+   },
+   "date": "2026-10-01",
+   "value": "0.3016",
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/pixel_check.json",
+    "arg": [
+     "S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)",
+     "ndvi_round_pixel"
+    ],
+    "expect": 0.3015512674990541
+   },
+   "note": "old reader rule on this scene (pixel 10 m south); hollow dot (rule or arithmetic on real DNs)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "E8.offset0",
+   "block": "P2 eight answers",
+   "print": [
+    "0.2966 offset left out"
+   ],
+   "status": "INFERRED",
+   "layer": "L3",
+   "source": {
+    "inputs": "pixel_check.json DNs",
+    "formula": "(3502-1900)/(3502+1900)"
+   },
+   "date": "2026-10-01",
+   "value": "0.2966",
+   "check": {
+    "kind": "calc",
+    "file": null,
+    "arg": 0.29655683080340617,
+    "expect": 0.2966
+   },
+   "note": "DNs 3502/1900 read without the -1000 offset; hollow dot (rule or arithmetic on real DNs)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "E8.place",
+   "block": "P2 eight answers",
+   "print": [
+    "0.2824 town point 597 m away (30 Sep)"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v11/ask_keylong.json",
+    "pointer": "answer fact p6ewjnlq value 0.28244274809160314"
+   },
+   "date": "2026-10-01",
+   "value": "0.2824",
+   "check": {
+    "kind": "grep",
+    "file": "repro/data/v11/ask_keylong.json",
+    "arg": "0.28244274809160314",
+    "expect": null
+   },
+   "note": "town point 597 m from the asked coordinates (30 Sep scene, p6ewjnlq); filled dot (a signed record or an archive read)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "E8.double",
+   "block": "P2 eight answers",
+   "print": [
+    "1.1427 offset applied twice"
+   ],
+   "status": "INFERRED",
+   "layer": "L2",
+   "source": {
+    "inputs": "E84 DNs 900/2502 (report 05 sec. 4.2) + raster:bands offset -0.1 (research/v13/evidence/failure_modes/e84_keylong.json)",
+    "formula": "(0.2502-0.1 - (0.0900-0.1))/(0.2502-0.1 + 0.0900-0.1)"
+   },
+   "date": "2026-10-01",
+   "value": "1.1427",
+   "check": {
+    "kind": "calc",
+    "file": null,
+    "arg": 1.1426533523537805,
+    "expect": 1.1427
+   },
+   "note": "Element84 DNs with Element84's declared -0.1 offset; hollow dot (rule or arithmetic on real DNs)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "E8.summary",
+   "block": "P2 eight answers",
+   "print": [
+    "Six cross the irrigation line, one is impossible, one is right"
+   ],
+   "status": "INFERRED",
+   "layer": "n/a",
+   "source": {
+    "inputs": [
+     "E8.right",
+     "E8.rounded",
+     "E8.s2b",
+     "E8.newer",
+     "E8.neighbour",
+     "E8.offset0",
+     "E8.place",
+     "E8.double"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "E8.place_m",
+   "block": "P2 + P3",
+   "print": [
+    "597 m"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v11/ask_keylong.json",
+    "pointer": "located stage (32.5717891, 77.0281479) vs asked (32.57126, 77.03448)",
+    "method": "pyproj Geod WGS84 inv: 597.49 m"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "geod",
+    "file": null,
+    "arg": [
+     77.03448,
+     32.57126,
+     77.0281479,
+     32.5717891
+    ],
+    "expect": 597
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.lost",
+   "block": "P3",
+   "print": [
+    "0.47 for 0.4709",
+    "5 of 5 receivers irrigated"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/results.json",
+    "pointer": "b.claude-haiku-4-5.arms.R.decisions.IRRIGATE"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/results.json",
+    "arg": [
+     "b",
+     "claude-haiku-4-5",
+     "arms",
+     "R",
+     "decisions",
+     "IRRIGATE"
+    ],
+    "expect": 5
+   },
+   "note": "exploratory addendum arm; constructed threshold",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.lost.out",
+   "block": "P3",
+   "print": [
+    "Perez et al., ICLR 2025: LLM transmission chains drift"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://arxiv.org/abs/2407.04503"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.date",
+   "block": "P3",
+   "print": [
+    "asked 23 Sep, served 25 Sep",
+    "10 of 10 agents saw one scene twice",
+    "3 said no 23 Sep scene existed"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v9/rawband/trials.jsonl",
+    "pointer": "result_text of all 10 trials (critic C1 recount); results.md:14 says 9 and needs an erratum",
+    "prereg": "research/repro/data/v9/rawband/prereg.md blake3 30d8a1a1"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "status at emem 8e9b401: open (no fix in CHANGELOG or code diff)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.date.out",
+   "block": "P3",
+   "print": [
+    "STAC item search defines no default order"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/evidence/failure_modes/item-search_README.md"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.place",
+   "block": "P3",
+   "print": [
+    "coordinates given, town point answered",
+    "597 m",
+    "NDVI 0.28 for the field's 0.42"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v11/ask_keylong.json",
+    "pointer": "located stage; answer value 0.28244",
+    "field": "repro/data/v11/cell_products.json indices.ndvi 0.4237 (same 30 Sep scene)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "fix not confirmed at 8e9b401",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.place.out",
+   "block": "P3",
+   "print": [
+    "GDAL 3 follows CRS axis order (RFC 73)"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://gdal.org/development/rfc/rfc73_proj6_wkt2_srsbarn.html"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.version",
+   "block": "P3 + P8",
+   "print": [
+    "918.0 m",
+    "915.07 m",
+    "one band name"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "pointer": "contradictions[0].attestations values"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": {
+    "kind": "bg_values",
+    "file": "repro/data/contra_bengaluru.json",
+    "arg": null,
+    "expect": {
+     "918.0": 1,
+     "915.0712280273438": 7
+    }
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.version.out",
+   "block": "P3",
+   "print": [
+    "GFC2020 V3 cut forest cover by more than 20 % in the Cerrado"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/evidence/failure_modes/jrc146622.txt",
+    "line": 1492,
+    "doi": "10.2760/9982436"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/failure_modes/jrc146622.txt",
+    "arg": "more than 20% in the Caatinga and Cerrado",
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.worldpop",
+   "block": "P3",
+   "print": [
+    "WorldPop signed per pixel, not per km²: 1.77× low"
+   ],
+   "status": "SPEC",
+   "layer": "L2",
+   "source": {
+    "file": "v13/evidence/failure_modes/CHANGELOG_18adb67.md",
+    "line": 61,
+    "repo": "emem 18adb67 CHANGELOG [2.4.2]"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/failure_modes/CHANGELOG_18adb67.md",
+    "arg": "1.77x low at Paris",
+    "expect": null
+   },
+   "note": "fixed",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.scale",
+   "block": "P3",
+   "print": [
+    "one pixel: 0.4709, 0.2966, 1.1427 under three offset rules"
+   ],
+   "status": "INFERRED",
+   "layer": "L2-L3",
+   "source": {
+    "inputs": [
+     "E8.right",
+     "E8.offset0",
+     "E8.double"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.scale.out",
+   "block": "P3",
+   "print": [
+    "Element84 items say \"offset applied\" and \"apply −0.1\""
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/evidence/failure_modes/e84_keylong.json",
+    "pointer": "features[*].properties earthsearch:boa_offset_applied + assets.red raster:bands offset"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/failure_modes/e84_keylong.json",
+    "arg": "boa_offset_applied",
+    "expect": null
+   },
+   "note": "five items at one tile; do not generalise",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.missing",
+   "block": "P3",
+   "print": [
+    "off-tile pixels signed as 0",
+    "a forest-loss screen passes"
+   ],
+   "status": "SPEC",
+   "layer": "L3",
+   "source": {
+    "file": "v13/evidence/failure_modes/CHANGELOG_18adb67.md",
+    "line": 53,
+    "repo": "emem 18adb67 CHANGELOG [2.4.2]"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/failure_modes/CHANGELOG_18adb67.md",
+    "arg": "signed the far side's out-of-image pixels as 0",
+    "expect": null
+   },
+   "note": "fixed; prevalence not known, print no count",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.missing.out",
+   "block": "P3",
+   "print": [
+    "Hansen lossyear 0 means no loss"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2025-v1.13/download.html"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.pixel",
+   "block": "P3 + P6",
+   "print": [
+    "162 of 200",
+    "fixed 28 Sep 2026"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/prevalence_summary.json",
+    "pointer": [
+     "pre",
+     "matches_round_not_floor"
+    ],
+    "fix": "v13/evidence/failure_modes/CHANGELOG_18adb67.md:47 (2026-09-28T04:09:26Z)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/prevalence_summary.json",
+    "arg": [
+     "pre",
+     "matches_round_not_floor"
+    ],
+    "expect": 162
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.pixel.out",
+   "block": "P3",
+   "print": [
+    "GDAL RFC 33: half-pixel shift",
+    "one-pixel misregistration: error > 50 % of NDVI differences (Townshend 1992)"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": [
+     "https://gdal.org/en/stable/development/rfc/rfc33_gtiff_pixelispoint.html",
+     "doi:10.1109/36.175340"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.thing",
+   "block": "P3",
+   "print": [
+    "\"this image\" resolved to a hair salon in Ontario",
+    "receipt, Merkle proof and state chain all valid",
+    "fixed 30 Sep 2026"
+   ],
+   "status": "SPEC",
+   "layer": "L4",
+   "source": {
+    "repo": "Vortx-AI/emem",
+    "commit": "0edf574",
+    "quote": "Every part of the verification machinery worked on an answer about a hair salon in Canada."
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "read with git log -1 0edf574 in /home/user/vortx-ai/emem",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.thing.out",
+   "block": "P3",
+   "print": [
+    "toponym ambiguity (Gritta et al. 2018)"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "doi": "10.1007/s10579-017-9385-8"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.rail.cellmatch",
+   "block": "P3 side rail",
+   "print": [
+    "emem's resolver once reported a cell match it never tested"
+   ],
+   "status": "SPEC",
+   "layer": "L1",
+   "source": {
+    "repo": "emem 18adb67",
+    "file": "crates/emem-api-rest/src/lib.rs:37800-37818 (line numbers move at 8e9b401)"
+   },
+   "date": "2026-08-11",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.rail.langchain",
+   "block": "P3 side rail",
+   "print": [
+    "one framework adapter returns a refusal as plain text"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "research/v13/evidence/crossruntime/refusal_matrix.json",
+    "pointer": [
+     "wrong_cell",
+     "langchain_mcp"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json_contains",
+    "file": "v13/evidence/crossruntime/refusal_matrix.json",
+    "arg": [
+     "wrong_cell",
+     "langchain_mcp"
+    ],
+    "expect": "returned [{'type': 'text'"
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "F.rail.mast",
+   "block": "P3 side rail",
+   "print": [
+    "MAST: no or incomplete verification (FM-3.2)"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://arxiv.org/abs/2503.13657"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "F.caption",
+   "block": "P3",
+   "print": [
+    "Signatures prevented none"
+   ],
+   "status": "INFERRED",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/02_experiment_design.md",
+    "section": "18 (honest boundary)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "T.can",
+   "block": "threat",
+   "print": [
+    "A relay can rewrite what it carries but cannot sign under the pinned key or match an address"
+   ],
+   "status": "SPEC",
+   "layer": "L0",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "4.2-4.3",
+    "external": "RFC 8032 l.160; BLAKE3 spec 128-bit"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "T.pinned",
+   "block": "threat",
+   "print": [
+    "pinned key",
+    "DNS TXT",
+    "did.json",
+    "JWKS"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "research/repro/v8/trace_fact_output.txt",
+    "pointer": "link 15"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "T.oneop",
+   "block": "threat",
+   "print": [
+    "All keys today are one operator's"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "research/v13/evidence/ladder/witnesses.json",
+    "pointer": [
+     "independent_operator_count"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "v13/evidence/ladder/witnesses.json",
+    "arg": [
+     "independent_operator_count"
+    ],
+    "expect": 1
+   },
+   "note": "the one independent domain (geo.qa) is also Vortx AI; never print the witnessed flag",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.84",
+   "block": "P4",
+   "print": [
+    "84 characters",
+    "46 tokens (cl100k)"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/data/v8/token_counts.json",
+    "pointer": [
+     "fact_token_ndvi"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/token_counts.json",
+    "arg": [
+     "fact_token_ndvi",
+     "chars"
+    ],
+    "expect": 84
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.46",
+   "block": "P4 + P11",
+   "print": [
+    "46 tokens"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "m5_tokens",
+     "items",
+     "fact_token",
+     "cl100k"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "m5_tokens",
+     "items",
+     "fact_token",
+     "cl100k"
+    ],
+    "expect": 46
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.1115",
+   "block": "P4",
+   "print": [
+    "1,115 B"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/token_counts.json",
+    "pointer": [
+     "fact_cbor_bytes",
+     "bytes"
+    ],
+    "live": "GET /v1/facts/oj5cecci... re-hashed 2026-10-01T01:42Z (critic)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/token_counts.json",
+    "arg": [
+     "fact_cbor_bytes",
+     "bytes"
+    ],
+    "expect": 1115
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.cid",
+   "block": "P4",
+   "print": [
+    "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "research/repro/v8/proof_bundle_ndvi.cbor",
+    "pointer": "token"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/data/v8/crossruntime_table.json",
+    "arg": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "expect": null
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.cogs",
+   "block": "P4",
+   "print": [
+    "277.9 + 281.9 MB",
+    "B04 + B08 COGs",
+    "Planetary Computer"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/v8/cog_pixel_bytes.json",
+    "pointer": "B04 277897303 B, B08 281898500 B"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/data/v8/cog_pixel_bytes.json",
+    "arg": "281898500",
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.pixel",
+   "block": "P4",
+   "print": [
+    "row 9443, col 9098",
+    "DN 1900, 3502"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "pointer": "S2A ... B08.floor(r,c), floor_DN"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/pixel_check.json",
+    "arg": [
+     "S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)",
+     "B08",
+     "floor_DN"
+    ],
+    "expect": 3502
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.key",
+   "block": "P4",
+   "print": [
+    "777er3yi…"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/crossruntime_table.json",
+    "pointer": "responder key"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/g2_handoff/qwen_trials.jsonl",
+    "arg": "777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka",
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.nohash",
+   "block": "P4 + P7",
+   "print": [
+    "named, not hashed",
+    "0 of 215 Keylong sources carry a hash"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/v13/evidence/critic/cell.json",
+    "pointer": "count(sources[] with hash or cid) over 209 facts, 215 sources, 2026-10-01T01:41Z (live GET agrees)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "ck_hash",
+    "file": "research/v13/evidence/critic/cell.json",
+    "arg": null,
+    "expect": [
+     215,
+     0
+    ]
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.sevenaddr",
+   "block": "P4",
+   "print": [
+    "one Bengaluru value has seven"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "pointer": "7 attestations with value 915.0712280273438, 7 fact_cids"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": {
+    "kind": "bg_values",
+    "file": "repro/data/contra_bengaluru.json",
+    "arg": null,
+    "expect": {
+     "918.0": 1,
+     "915.0712280273438": 7
+    }
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "O.batch",
+   "block": "P4",
+   "print": [
+    "a batch signature covers such addresses"
+   ],
+   "status": "SPEC",
+   "layer": "L0",
+   "source": {
+    "repo": "emem 18adb67",
+    "file": "crates/emem-fact/src/attest.rs:93-143"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "O.log",
+   "block": "P4",
+   "print": [
+    "Merkle log, RFC 6962 style, BLAKE3"
+   ],
+   "status": "SPEC",
+   "layer": "L0",
+   "source": {
+    "repo": "emem",
+    "file": "crates/emem-attest/src/translog.rs; docs/federation.md 9c"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "X.loo",
+   "block": "P5",
+   "print": [
+    "Each of five checks alone stops a corruption."
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "leave_one_out"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "leave_one_out"
+    ],
+    "expect": {
+     "D": [],
+     "E": [
+      "M4",
+      "M5",
+      "M6"
+     ],
+     "F": [
+      "M9",
+      "M10",
+      "M11",
+      "M12"
+     ],
+     "G": [
+      "M16"
+     ],
+     "H": [
+      "M14"
+     ],
+     "I": [
+      "M15"
+     ]
+    }
+   },
+   "note": "leave_one_out names E, F, G, H and I (D is empty): five checks each the sole stop for a named corruption",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "X.only",
+   "block": "P5 + H2",
+   "print": [
+    "only the source re-read, the signer's wrong pixel",
+    "Only a source re-read catches a signer's wrong pixel",
+    "caught only by a re-read",
+    "only it refuses the wrong pixel"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "leave_one_out",
+     "I"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "leave_one_out",
+     "I"
+    ],
+    "expect": [
+     "M15"
+    ]
+   },
+   "note": "allowlist for 'only' (report 10 sec. 5.3)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "X.flips",
+   "block": "P5",
+   "print": [
+    "flips the decision"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": [
+     "summary",
+     "A",
+     "decision_flips"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/v11/out/mutation_matrix.json",
+    "arg": [
+     "summary",
+     "A",
+     "decision_flips"
+    ],
+    "expect": [
+     "M2",
+     "M8",
+     "M12",
+     "M13",
+     "M14",
+     "M15"
+    ]
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "X.p123",
+   "block": "P5 scope",
+   "print": [
+    "Three further signer errors (offset, same-day scene, unit) pass checks D to I; metadata checks catch them."
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/v13/evidence/ladder/r1_t2_extra_out.json",
+    "pointer": "T2_offset_zero, T2_scene_relabel_same_day, T2_unit_mislabel .refused_at_level_I == false"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "v13/evidence/ladder/r1_t2_extra_out.json",
+    "arg": [
+     "T2_offset_zero",
+     "refused_at_level_I"
+    ],
+    "expect": false
+   },
+   "note": "the unit error is caught by the band registry, the offset and same-day scene by the item metadata, not by the STAC catalogue re-read",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "X.entity",
+   "block": "P5",
+   "print": [
+    "The entity meant passes every check"
+   ],
+   "status": "OUT-OF-SCOPE",
+   "layer": "L4",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": "M17 outcome at every level"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "W.vals",
+   "block": "P6",
+   "print": [
+    "0.4709 → hold",
+    "0.3016 → irrigate"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "pointer": "S2A ... ndvi_floor_pixel / ndvi_round_pixel"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/pixel_check.json",
+    "arg": [
+     "S2A 2026-09-25 (now, fact oj5cecci, signed 2026-09-28T09:06Z = post-fix)",
+     "ndvi_round_pixel"
+    ],
+    "expect": 0.3015512674990541
+   },
+   "note": "",
+   "tier": "3m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "W.prev",
+   "block": "P6",
+   "print": [
+    "162 of 200 sampled pre-fix records",
+    "Wilson 95 %: 75 to 86 %"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/prevalence_summary.json",
+    "pointer": [
+     "pre",
+     "frac_round_wilson95"
+    ],
+    "script": "research/v13/evidence/g1_pixel_audit/prevalence.py (seed 20261019)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "wilson",
+    "file": "repro/data/v8/prevalence_summary.json",
+    "arg": [
+     "pre",
+     "frac_round_wilson95"
+    ],
+    "expect": [
+     0.75,
+     0.86
+    ]
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "W.err",
+   "block": "P6",
+   "print": [
+    "median 0.027",
+    "p90 0.113",
+    "max 0.301",
+    "n 121"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/prevalence_summary.json",
+    "pointer": [
+     "pre",
+     "abs_err_index_where_differ"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "err",
+    "file": "repro/data/v8/prevalence_summary.json",
+    "arg": [
+     "pre",
+     "abs_err_index_where_differ"
+    ],
+    "expect": [
+     0.027,
+     0.113,
+     0.301,
+     121
+    ]
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "W.kx",
+   "block": "P6",
+   "print": [
+    "signed 0.3444",
+    "0.4860",
+    "23 Sep 2026"
+   ],
+   "status": "LIVE",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "pointer": "S2C 2026-09-23 ... ndvi_round_pixel / ndvi_floor_pixel",
+    "live": "research/v13/evidence/critic/kx.json (GET 2026-10-01T01:41Z, no warning in body)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/pixel_check.json",
+    "arg": [
+     "S2C 2026-09-23 (prev, fact kxjvfwpa, signed 2026-09-25T19:35Z = pre-fix)",
+     "ndvi_floor_pixel"
+    ],
+    "expect": 0.4860239589275528
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "W.frame",
+   "block": "P6 scope",
+   "print": [
+    "200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded",
+    "192 Element84, 8 Planetary Computer"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/data/v8/prevalence_summary.json",
+    "pointer": [
+     "pre",
+     "providers"
+    ],
+    "script": "research/v13/evidence/g1_pixel_audit/prevalence.py:1-20"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/prevalence_summary.json",
+    "arg": [
+     "pre",
+     "providers"
+    ],
+    "expect": {
+     "E84": 192,
+     "PC": 8
+    }
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "W.post",
+   "block": "P6 scope",
+   "print": [
+    "0 of 54",
+    "Planetary Computer, two days"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/prevalence_summary.json",
+    "pointer": [
+     "post",
+     "matches_round_not_floor"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/prevalence_summary.json",
+    "arg": [
+     "post",
+     "matches_round_not_floor"
+    ],
+    "expect": 0
+   },
+   "note": "provider and fix confounded; say so",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "W.rondonia",
+   "block": "P6 scope",
+   "print": [
+    "changed 7 loss years and no EUDR flag",
+    "100-point Rondônia grid"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/v13/evidence/failure_modes/rondonia_floor_round_v2.json",
+    "pointer": "count(lossyear floor != round) = 7; flags floor 3 / round 3"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "rond",
+    "file": "v13/evidence/failure_modes/rondonia_floor_round_v2.json",
+    "arg": null,
+    "expect": [
+     7,
+     3,
+     3
+    ]
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "W.south",
+   "block": "P6",
+   "print": [
+    "pixel 10 m south",
+    "10 m south"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/data/v8/pixel_check.json",
+    "pointer": "round(r,c) = floor row + 1, same col"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "true of this record only; the 162 carry an east, south or south-east neighbour (review M7)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "L.780",
+   "block": "P7",
+   "print": [
+    "780 of 780",
+    "780 records pulled on 30 Sep 2026",
+    "cell and band bound in 780 of 780"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L1",
+   "source": {
+    "file": "repro/v12/data/eo_evidence_per_fact_checks.csv",
+    "pointer": "count(verified == PASS)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "csv",
+    "file": "repro/v12/data/eo_evidence_per_fact_checks.csv",
+    "arg": [
+     "verified",
+     "PASS"
+    ],
+    "expect": 780
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "L.266",
+   "block": "P7",
+   "print": [
+    "266 of 780"
+   ],
+   "status": "MEASURED",
+   "layer": "L2",
+   "source": {
+    "file": "repro/v12/data/eo_evidence_per_fact_checks.csv",
+    "pointer": "count(recompute == pass)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "csv",
+    "file": "repro/v12/data/eo_evidence_per_fact_checks.csv",
+    "arg": [
+     "recompute",
+     "pass"
+    ],
+    "expect": 266
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "L.reread0",
+   "block": "P7",
+   "print": [
+    "their source files are named, not hashed"
+   ],
+   "status": "SPEC",
+   "layer": "L3",
+   "source": {
+    "repo": "emem 18adb67 and 8e9b401",
+    "file": "crates/emem-api-rest/src/lib.rs: 62 x 'hash: None', 0 x 'hash: Some(' (report 10 sec. 0 item 2)",
+    "measured": "0 of 215 Keylong source entries (O.nohash)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "L.409",
+   "block": "P7",
+   "print": [
+    "a relabelled token returns 409"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "research/v13/evidence/crossruntime/refusal_matrix.json",
+    "pointer": [
+     "wrong_cell",
+     "rest"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json_contains",
+    "file": "v13/evidence/crossruntime/refusal_matrix.json",
+    "arg": [
+     "wrong_cell",
+     "rest"
+    ],
+    "expect": "409"
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "L.gfc",
+   "block": "P7",
+   "print": [
+    "GFC2020 V3 forest commission error 13.1 %"
+   ],
+   "status": "EXTERNAL",
+   "layer": "L5",
+   "source": {
+    "file": "research/v13/evidence/failure_modes/jrc146622.txt",
+    "line": 236
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/failure_modes/jrc146622.txt",
+    "arg": "commission error of 13.1%",
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "L.status",
+   "block": "P7",
+   "print": [
+    "CHECKABLE",
+    "RECOMPUTABLE",
+    "PARTIAL",
+    "INHERITED",
+    "OUT OF SCOPE"
+   ],
+   "status": "SPEC",
+   "layer": "L0-L5",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "3.1-3.2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "TM.918",
+   "block": "P8",
+   "print": [
+    "918.0 m",
+    "signed 28 May",
+    "90 m DEM via Open-Meteo"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "pointer": "attestation yqbolgeo signed_at 2026-05-28T19:54:32Z; fn_key open_meteo_copdem90m@1"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/data/contra_bengaluru.json",
+    "arg": "2026-05-28T19:54:32Z",
+    "expect": null
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "TM.915",
+   "block": "P8",
+   "print": [
+    "915.07 m",
+    "first signed 11 Aug",
+    "signed 7 times"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "pointer": "7 attestations value 915.0712280273438, first 2026-08-11T09:39:36Z"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/data/contra_bengaluru.json",
+    "arg": "2026-08-11T09:39:36Z",
+    "expect": null
+   },
+   "note": "; wording corrected 2026-10-01: the file holds 7 signings in all (the first plus 6 re-signings), so \"signed 7 times\"",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "TM.asof",
+   "block": "P8",
+   "print": [
+    "1 May: none",
+    "15 Jun: 918.0 m",
+    "12 Aug: 915.07 m",
+    "29 Sep: 915.07 m"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "recompute": "poster/make_figures_v12.py:506-510 asserts these as-of answers from the attestations"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "TM.keylong",
+   "block": "P8",
+   "print": [
+    "cited 25 Sep: 0.4709 → hold",
+    "30 Sep: 0.4237 → irrigate"
+   ],
+   "status": "LIVE",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/v11/cell_products.json",
+    "pointer": "indices.ndvi 3yyaxn5d 0.4237 signed 2026-09-30T22:20:02Z"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "cp",
+    "file": "repro/data/v11/cell_products.json",
+    "arg": "indices.ndvi",
+    "expect": 0.42369991474850816
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "TM.still",
+   "block": "P8",
+   "print": [
+    "the cited reference still re-hashes (1 Oct 2026)"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "research/v13/11_research_gaps.md",
+    "pointer": "P1-8: oj5cecci 1,115 B re-hash equal at 01:42Z"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "re-fetch within 7 days of print",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "TM.asof_rule",
+   "block": "P8 scope",
+   "print": [
+    "as-of compares signing times (UTC seconds)"
+   ],
+   "status": "SPEC",
+   "layer": "L1",
+   "source": {
+    "repo": "emem",
+    "file": "crates/emem-primitives/src/recall.rs:282-391; defect 35 (string compare)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "RO.grid",
+   "block": "P9",
+   "print": [
+    "100 point samples",
+    "740 m apart",
+    "600 signed records"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/v12/data/case_rondonia_eudr.json",
+    "pointer": [
+     "grid"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "csv",
+    "file": "repro/v12/data/eo_evidence_per_fact_checks.csv",
+    "arg": [
+     "case",
+     "rondonia"
+    ],
+    "expect": 600
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "RO.cats",
+   "block": "P9",
+   "print": [
+    "forest 2020 (GFC2020) + loss after 2020 (Hansen): 3",
+    "forest, no later loss: 33",
+    "cleared 2001 to 2020: 20",
+    "not forest: 43",
+    "maps disagree: 1"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/data/case_rondonia_eudr.json",
+    "pointer": [
+     "category_counts"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/v12/data/case_rondonia_eudr.json",
+    "arg": [
+     "category_counts"
+    ],
+    "expect": {
+     "not_forest_2020_no_hansen_loss": 43,
+     "forest_2020_no_later_loss": 33,
+     "cleared_2001_2020": 20,
+     "eudr_flag_forest_2020_loss_after_2020": 3,
+     "loss_after_2020_on_gfc2020_non_forest": 1
+    }
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "RO.tmf",
+   "block": "P9",
+   "print": [
+    "TMF agrees on 1 of 3 flags"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/data/case_rondonia_eudr.json",
+    "pointer": "rows with eudr flag: jrc_tmf.deforestation_year 2023, 0, 0"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "RO.cardA",
+   "block": "P9",
+   "print": [
+    "Hansen loss 2023",
+    "tree cover 2000 100 %",
+    "GFC2020 V4 forest",
+    "TMF 2023",
+    "CCI 208 t/ha"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/data/case_rondonia_eudr.json",
+    "pointer": "row cell defi.zb391.taza.zcc31"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "RO.must",
+   "block": "P9",
+   "print": [
+    "Point samples, not parcel polygons; not a regulatory determination."
+   ],
+   "status": "OUT-OF-SCOPE",
+   "layer": "L5",
+   "source": {
+    "file": "research/SHARED_STATE_EMEM_A0_MASTER.md",
+    "section": "21"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "V.prithvi",
+   "block": "P10",
+   "print": [
+    "Prithvi-EO-2.0",
+    "1,024 values",
+    "checkpoint 2ad1775f…"
+   ],
+   "status": "LIVE",
+   "layer": "L2",
+   "source": {
+    "file": "v13/evidence/critic/cell.json",
+    "pointer": "facts[band=prithvi_eo2].served_via.model_blake2b_hex == derivation.args.args[4]"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "prithvi",
+    "file": "v13/evidence/critic/cell.json",
+    "arg": null,
+    "expect": "2ad1775f298264470dd3f0b6e7819b62d7860968665fe308ed93abb766af62cc"
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "V.tessera",
+   "block": "P10",
+   "print": [
+    "TESSERA",
+    "128 values",
+    "only a path and year",
+    "…/npy/v1/2024/…"
+   ],
+   "status": "LIVE",
+   "layer": "L3",
+   "source": {
+    "file": "v13/evidence/critic/cell.json",
+    "pointer": "facts[band=geotessera].sources[0].id = .../npy/v1/2024/..., args [lat, lng, 2024]"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/evidence/critic/cell.json",
+    "arg": "tessera/npy/v1/2024/...",
+    "expect": null
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "V.retired",
+   "block": "P10",
+   "print": [
+    "emem.dev lists its encoders as retired"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v12/data/v1_bands_2026-09-30.json",
+    "pointer": "bands[*].materializer.kind == retired for geotessera, clay_v1, prithvi_eo2, galileo"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/data/v1_bands_2026-09-30.json",
+    "arg": "retired on this deployment",
+    "expect": null
+   },
+   "note": "do not print a retirement date (the TESSERA record carries signed_at 2026-09-30T08:33Z)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "V.resolve",
+   "block": "P10",
+   "print": [
+    "Both still resolve"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "v13/evidence/critic/cell.json",
+    "pointer": "GET /v1/cells/defi.zb572.xoso.zb1ec 2026-10-01T01:42Z"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "re-fetch at build",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "C.cpu",
+   "block": "P11",
+   "print": [
+    "0.33 ms of CPU",
+    "One 2.8 GHz Xeon core"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "m2_offline_verification",
+     "mutation_suite_ms_per_decision_by_level",
+     "I",
+     "median",
+     " minus mutation_suite_genuine_construction_ms.median (0.3565 - 0.0288 ms)"
+    ],
+    "host": "one 2.8 GHz Xeon core"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "approx_diff",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     [
+      "m2_offline_verification",
+      "mutation_suite_ms_per_decision_by_level",
+      "I",
+      "median"
+     ],
+     [
+      "m2_offline_verification",
+      "mutation_suite_genuine_construction_ms",
+      "median"
+     ]
+    ],
+    "expect": 0.33
+   },
+   "note": "committed 1.187 ms on another host; keep the range here, print one host-stated value",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.reread",
+   "block": "P11",
+   "print": [
+    "1.18 MB",
+    "about 7 s"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": "m3_trace_read_only.keylong_ndvi.links 8+9+9b: 6,945 ms, 1,180,728 B"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "reread",
+    "file": "v13/cost_measurements.json",
+    "arg": null,
+    "expect": [
+     6945.0,
+     1180728
+    ]
+   },
+   "note": "through a TLS-re-terminating proxy; print 'on our network path'",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.scene",
+   "block": "P11",
+   "print": [
+    "0.058 % of the scene"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "research/repro/data/v8/scene_sizes.json + cog_pixel_bytes.json",
+    "pointer": "1,165,033 / 2,023,818,762"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "calc",
+    "file": null,
+    "arg": 0.05756607369568403,
+    "expect": 0.058
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.tok",
+   "block": "P11",
+   "print": [
+    "46 tokens",
+    "the value 8"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "m5_tokens",
+     "items",
+     "value_16_digits",
+     "cl100k"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "m5_tokens",
+     "items",
+     "value_16_digits",
+     "cl100k"
+    ],
+    "expect": 8
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.tools",
+   "block": "P11",
+   "print": [
+    "18-tool MCP list 18,709 (1 Oct)"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "m5_tokens",
+     "items",
+     "mcp_tools_list_core18_response",
+     "cl100k"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "m5_tokens",
+     "items",
+     "mcp_tools_list_core18_response",
+     "cl100k"
+    ],
+    "expect": 18709
+   },
+   "note": "raw body, cl100k; never mix with 20,838 (re-serialised) or 18,659 (30 Sep)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.json",
+   "block": "P11",
+   "print": [
+    "record as JSON 562"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "m5_tokens",
+     "items",
+     "fact_json_as_served",
+     "cl100k"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "m5_tokens",
+     "items",
+     "fact_json_as_served",
+     "cl100k"
+    ],
+    "expect": 562
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.g2tok",
+   "block": "P11",
+   "print": [
+    "2.1× the tokens prose costs",
+    "same decisions"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/data/v8/results.json",
+    "pointer": "b.claude-haiku-4-5.arms.{T,P}.input_tokens_mean; decision_correct 10/10 both"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "ratio",
+    "file": "repro/data/v8/results.json",
+    "arg": [
+     [
+      "b",
+      "claude-haiku-4-5",
+      "arms",
+      "T",
+      "input_tokens_mean"
+     ],
+     [
+      "b",
+      "claude-haiku-4-5",
+      "arms",
+      "P",
+      "input_tokens_mean"
+     ]
+    ],
+    "expect": 2.1
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.g2wall",
+   "block": "P11 scope",
+   "print": [
+    "+1.75 s"
+   ],
+   "status": "PRE-REGISTERED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/data/v8/results.json",
+    "pointer": "wall_s_mean T 8.85 - P 7.10"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "calc",
+    "file": null,
+    "arg": 1.75,
+    "expect": 1.75
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.resolve",
+   "block": "P11",
+   "print": [
+    "40 ms warm",
+    "154 ms cold"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": "m1_resolve_fact_https.{warm_cbor_reused_connection_ms,cold_cbor_new_connection_ms}.median"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "approx",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "m1_resolve_fact_https",
+     "cold_cbor_new_connection_ms",
+     "median"
+    ],
+    "expect": 154.2
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.bundle",
+   "block": "P11",
+   "print": [
+    "4,906 B",
+    "offline proof bundle 0.57 ms"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L2",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "m2_offline_verification",
+     "in_process_precompiled_exec_ms",
+     "median"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "approx",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "m2_offline_verification",
+     "in_process_precompiled_exec_ms",
+     "median"
+    ],
+    "expect": 0.57
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "C.hash",
+   "block": "P11",
+   "print": [
+    "1.6 µs"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "m2_offline_verification",
+     "primitives_us",
+     "blake3_fact_1115B",
+     "median"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "approx",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "m2_offline_verification",
+     "primitives_us",
+     "blake3_fact_1115B",
+     "median"
+    ],
+    "expect": 1.57
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "EC.11",
+   "block": "P12",
+   "print": [
+    "11 client paths",
+    "one address and one value"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/crossruntime_table.json",
+    "pointer": [
+     "summary",
+     "ndvi_keylong",
+     "paths_ok"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/crossruntime_table.json",
+    "arg": [
+     "summary",
+     "ndvi_keylong",
+     "paths_ok"
+    ],
+    "expect": 11
+   },
+   "note": "server 213e273, 3 reps",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "EC.9of11",
+   "block": "P12",
+   "print": [
+    "with receipt signatures checked on 9"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/crossruntime_table.json",
+    "pointer": [
+     "summary",
+     "ndvi_keylong",
+     "receipt_verified_paths"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/crossruntime_table.json",
+    "arg": [
+     "summary",
+     "ndvi_keylong",
+     "receipt_verified_paths"
+    ],
+    "expect": 9
+   },
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "EC.ms",
+   "block": "P12 dot plot",
+   "print": [
+    "56.3",
+    "58.3",
+    "58.6",
+    "207.7",
+    "223.5",
+    "223.7",
+    "226.3",
+    "235.6",
+    "300.8",
+    "1,176.8"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/crossruntime_table.json",
+    "pointer": "rows.ndvi_keylong[*].ms_median (never .ms, which is the last repetition)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "xr_med",
+    "file": "repro/data/v8/crossruntime_table.json",
+    "arg": null,
+    "expect": null
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "EC.notrun",
+   "block": "P12",
+   "print": [
+    "Not run by us: ChatGPT, claude.ai, Dify, VS Code, Cursor"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "rows chatgpt, claude-ai-custom-connector, dify-marketplace, vscode, cursor: evidence_level"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "EC.row.claude-code-mcp",
+   "block": "P12 band",
+   "print": [
+    "Claude Code"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=claude-code-mcp: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "claude-code-mcp",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.claude-code-plugin",
+   "block": "P12 band",
+   "print": [
+    "Claude Code plugin"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=claude-code-plugin: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "claude-code-plugin",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.claude-ai-custom-connector",
+   "block": "P12 band",
+   "print": [
+    "Claude.ai custom connector"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=claude-ai-custom-connector: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "claude-ai-custom-connector",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "PROTOCOL"
+  },
+  {
+   "id": "EC.row.dify-marketplace",
+   "block": "P12 band",
+   "print": [
+    "Dify Marketplace plugin (community)"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=dify-marketplace: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "dify-marketplace",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.mcp-core",
+   "block": "P12 band",
+   "print": [
+    "Model Context Protocol (MCP)"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=mcp-core: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "mcp-core",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "PROTOCOL"
+  },
+  {
+   "id": "EC.row.a2a",
+   "block": "P12 band",
+   "print": [
+    "Agent2Agent (A2A)"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=a2a: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "a2a",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "PROTOCOL"
+  },
+  {
+   "id": "EC.row.official-mcp-registry",
+   "block": "P12 band",
+   "print": [
+    "Official MCP Registry"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=official-mcp-registry: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "official-mcp-registry",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "REGISTRY"
+  },
+  {
+   "id": "EC.row.github-mcp-registry",
+   "block": "P12 band",
+   "print": [
+    "GitHub MCP Registry"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=github-mcp-registry: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "github-mcp-registry",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "REGISTRY"
+  },
+  {
+   "id": "EC.row.github-repo",
+   "block": "P12 band",
+   "print": [
+    "github.com/Vortx-AI/emem"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=github-repo: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "github-repo",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.glama",
+   "block": "P12 band",
+   "print": [
+    "Glama"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=glama: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "glama",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "REGISTRY"
+  },
+  {
+   "id": "EC.row.gemini-cli",
+   "block": "P12 band",
+   "print": [
+    "Gemini CLI"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=gemini-cli: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "gemini-cli",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.vscode",
+   "block": "P12 band",
+   "print": [
+    "Visual Studio Code"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=vscode: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "vscode",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "PROTOCOL"
+  },
+  {
+   "id": "EC.row.cursor",
+   "block": "P12 band",
+   "print": [
+    "Cursor"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=cursor: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "cursor",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "PROTOCOL"
+  },
+  {
+   "id": "EC.row.python-sdk",
+   "block": "P12 band",
+   "print": [
+    "pip install ememdev"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=python-sdk: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "python-sdk",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.ts-sdk",
+   "block": "P12 band",
+   "print": [
+    "npm i @vortxai/emem"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=ts-sdk: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "ts-sdk",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.rest-openapi",
+   "block": "P12 band",
+   "print": [
+    "REST / OpenAPI 3.1"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=rest-openapi: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "rest-openapi",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "PROTOCOL"
+  },
+  {
+   "id": "EC.row.docker",
+   "block": "P12 band",
+   "print": [
+    "ghcr.io/vortx-ai/emem"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=docker: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "docker",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.llamaindex",
+   "block": "P12 band",
+   "print": [
+    "LlamaIndex"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=llamaindex: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "llamaindex",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "EXAMPLE"
+  },
+  {
+   "id": "EC.row.autogen",
+   "block": "P12 band",
+   "print": [
+    "AutoGen"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=autogen: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "autogen",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "EXAMPLE"
+  },
+  {
+   "id": "EC.row.crewai",
+   "block": "P12 band",
+   "print": [
+    "CrewAI"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=crewai: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "crewai",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "EXAMPLE"
+  },
+  {
+   "id": "EC.row.mastra",
+   "block": "P12 band",
+   "print": [
+    "Mastra"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=mastra: status, print.allowed, verified_utc"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "eco",
+    "file": "v13/ecosystem_manifest.json",
+    "arg": "mastra",
+    "expect": null
+   },
+   "note": "glyph drawn from the row's status; re-verify within 14 days of print",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "manifest_status": "EXAMPLE"
+  },
+  {
+   "id": "EC.row.chatgpt",
+   "block": "P12 band (conditional)",
+   "print": [
+    "ChatGPT (@emem)"
+   ],
+   "status": "OUT-OF-SCOPE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=chatgpt"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "CONDITIONAL: only after a dated logged-in screenshot is committed; manifest says LIVE but evidence is UNVERIFIED (critic P0-8): not printed by default",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "manifest_status": "LIVE"
+  },
+  {
+   "id": "EC.row.langchain",
+   "block": "P12 band (conditional)",
+   "print": [
+    "LangChain (MCP adapters)"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=langchain"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "CONDITIONAL: only after emem's example is fixed (03 sec. 1.4)",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "manifest_status": "EXAMPLE"
+  },
+  {
+   "id": "EC.row.agno",
+   "block": "P12 band (conditional)",
+   "print": [
+    "Agno"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=agno"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "CONDITIONAL: only after emem's README names fastmcp",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "manifest_status": "EXAMPLE"
+  },
+  {
+   "id": "EC.statusdate",
+   "block": "P12 legend",
+   "print": [
+    "checked 30 Sep 2026"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "verified_utc of every printed row (2026-09-30T23:10Z..23:40Z; the board dates by UTC)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.stac",
+   "block": "P13",
+   "print": [
+    "FIND · STAC · an asset (file)"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://stacspec.org (STAC 1.1.0)",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.openeo",
+   "block": "P13",
+   "print": [
+    "RUN · openEO · a process graph"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "openEO API 1.3.0",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.prov",
+   "block": "P13",
+   "print": [
+    "RECORD LINEAGE · W3C PROV · entity, activity, agent"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://www.w3.org/TR/prov-dm/",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.c2pa",
+   "block": "P13",
+   "print": [
+    "SIGN FILES · C2PA, CDSE Traceability · a file"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "C2PA 2.4; documentation.dataspace.copernicus.eu/APIs/Traceability.html",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.rag",
+   "block": "P13",
+   "print": [
+    "RETRIEVE · RAG · a text chunk"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "arXiv 2005.11401",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.carry",
+   "block": "P13",
+   "print": [
+    "CARRY · MCP, A2A · a tool call, an agent card"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "MCP 2025-11-25; A2A 1.0",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.geoguard",
+   "block": "P13",
+   "print": [
+    "JUDGE · GeoGuard · a claim in text"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://github.com/NASA-IMPACT/geoguard",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.credit",
+   "block": "P13",
+   "print": [
+    "Sigstore, RFC 9162, SCITT (RFC 9943)",
+    "ARC (arXiv 2607.25066)"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "report 04 sec. 2.8-2.14",
+    "report": "research/v13/04_prior_art_and_field.md sec. 1-2"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.critical",
+   "block": "P13",
+   "print": [
+    "A STAC item identifies a file; EMEM identifies the observation an agent cited"
+   ],
+   "status": "SPEC",
+   "layer": "L1",
+   "source": {
+    "file": "research/v13/04_prior_art_and_field.md",
+    "section": "2.1, 8"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.munir",
+   "block": "P3 header strip",
+   "print": [
+    "errors may propagate silently across steps",
+    "Munir et al. 2026, arXiv 2604.24919"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "url": "https://arxiv.org/abs/2604.24919",
+    "report": "research/v13/04_prior_art_and_field.md sec. 0 item 9, 2.15"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "position paper by the workshop organiser B. Demir and keynote S. Khan; quote verbatim from the arXiv HTML",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "PA.geoguard_line",
+   "block": "P13",
+   "print": [
+    "GeoGuard judges the claim; EMEM fixes the evidence it cites."
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/04_prior_art_and_field.md",
+    "section": "2.7"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "H.byline",
+   "block": "header",
+   "print": [
+    "Jaya Kumari",
+    "Avijeet Singh",
+    "Vortx AI",
+    "emem.dev",
+    "github.com/Vortx-AI/emem (Apache-2.0)",
+    "BIFOLD and ESA Φ-lab",
+    "Berlin"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/evidence/industry/prog_posters.txt",
+    "repo_licence": "research/v13/03_ecosystem_manifest.md row GitHub (Apache-2.0)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "REF.footer",
+   "block": "footer",
+   "print": [
+    "Sentinel-2 Products Specification (ESA)",
+    "Copernicus DEM GLO-30/90",
+    "Hansen et al. 2013, GFC v1.13",
+    "JRC GFC2020 V3/V4, TMF",
+    "ESA CCI Biomass v7",
+    "Reg. (EU) 2023/1115",
+    "BLAKE3",
+    "RFC 8032",
+    "RFC 6962/9162",
+    "STAC 1.1",
+    "openEO 1.3",
+    "W3C PROV-DM",
+    "C2PA 2.4",
+    "MCP 2025-11-25",
+    "A2A 1.0",
+    "Perez et al., ICLR 2025",
+    "Munir et al. 2026 (2604.24919)",
+    "Cemri et al. 2025, MAST (2503.13657)",
+    "Dang et al. 2026, ARC (2607.25066)",
+    "Townshend et al. 1992",
+    "GeoGuard (NASA-IMPACT)",
+    "Prithvi-EO-2.0",
+    "TESSERA (2506.20380)"
+   ],
+   "status": "EXTERNAL",
+   "layer": "n/a",
+   "source": {
+    "report": "research/v13/04_prior_art_and_field.md sec. 6 (arXiv ids verified via the arXiv API); 00_v11_review_findings.md EXT-3 (ESA document title)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "the footer prints exactly these strings joined by ' · '; any other reference needs a row",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "K.concl",
+   "block": "conclusion",
+   "print": [
+    "none of the 16 corruptions in our suite",
+    "a wrong pixel emem signed in production"
+   ],
+   "status": "MEASURED",
+   "layer": "L0-L3",
+   "source": {
+    "inputs": [
+     "S.R1.I",
+     "F.pixel"
+    ]
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": "R5 template appends: 'agents with a checked reference acted on {R5.E.pooled.false_accept}'",
+   "checked": null
+  },
+  {
+   "id": "K.commit",
+   "block": "footer",
+   "print": [
+    "emem.dev at commit 8e9b401"
+   ],
+   "status": "LIVE",
+   "layer": "n/a",
+   "source": {
+    "header": "x-emem-commit 8e9b401cecae7ab9944d403a2d7840952c6586a6",
+    "file": "v13/cost_measurements.json",
+    "pointer": [
+     "environment",
+     "emem_server_commit_header"
+    ]
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "json_contains",
+    "file": "v13/cost_measurements.json",
+    "arg": [
+     "environment",
+     "emem_server_commit_header"
+    ],
+    "expect": "8e9b401"
+   },
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true
+  },
+  {
+   "id": "K.dates",
+   "block": "footer",
+   "print": [
+    "measurements 29 Sep to 1 Oct 2026"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "inputs": "dates of every row above"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "K.sat042",
+   "block": "footer",
+   "print": [
+    "Extending verification to execution: reference harness, no spacecraft enrolled."
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/repro/v12/trace/sat042_run_stdout.txt"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.view_demo",
+   "block": "QR",
+   "print": [
+    "VIEW THE DEMO"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "payload": "https://vortx-ai.github.io/esa_poster/demo/",
+    "file": "research/v13/evidence/visual/qr/qr_table.json"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "QR gate: decode == payload; follow redirects to HTTP 200 text/html on a 390 x 844 viewport",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.try_token",
+   "block": "QR",
+   "print": [
+    "TRY A TOKEN"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "payload": "https://vortx-ai.github.io/esa_poster/t/",
+    "file": "research/v13/evidence/visual/qr/qr_table.json"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "QR gate: decode == payload; follow redirects to HTTP 200 text/html on a 390 x 844 viewport",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.inspect_record",
+   "block": "QR",
+   "print": [
+    "INSPECT THE RECORD"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "payload": "https://vortx-ai.github.io/esa_poster/r/",
+    "file": "research/v13/evidence/visual/qr/qr_table.json"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "QR gate: decode == payload; follow redirects to HTTP 200 text/html on a 390 x 844 viewport",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.re-run_test",
+   "block": "QR",
+   "print": [
+    "RE-RUN THE TEST"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "payload": "https://vortx-ai.github.io/esa_poster/test/",
+    "file": "research/v13/evidence/visual/qr/qr_table.json"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "QR gate: decode == payload; follow redirects to HTTP 200 text/html on a 390 x 844 viewport",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.read_methods",
+   "block": "QR",
+   "print": [
+    "READ THE METHODS"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "payload": "https://vortx-ai.github.io/esa_poster/methods/",
+    "file": "research/v13/evidence/visual/qr/qr_table.json"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "QR gate: decode == payload; follow redirects to HTTP 200 text/html on a 390 x 844 viewport",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  },
+  {
+   "id": "Q.discover_integrations",
+   "block": "QR",
+   "print": [
+    "DISCOVER INTEGRATIONS"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "payload": "https://vortx-ai.github.io/esa_poster/use/",
+    "file": "research/v13/evidence/visual/qr/qr_table.json"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "QR gate: decode == payload; follow redirects to HTTP 200 text/html on a 390 x 844 viewport",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null
+  }
+ ]
+}

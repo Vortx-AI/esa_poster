@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The record behind the EMEM poster</title><meta name="description" content="One signed Sentinel-2 NDVI record, field by field."><style>:root{--ink:#16181b;--ink2:#3b3f45;--mute:#6b6f76;--rule:#d9d8d2;--paper:#faf9f6;--card:#fff;--blue:#0F5FA8;--red:#D2481E;--amber:#E8A317;--grey:#9C9A92;
+--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--ink:#ecebe6;--ink2:#c9c8c2;--mute:#9a9a94;--rule:#34363a;--paper:#121315;--card:#1b1d20;--blue:#5b9be0;--red:#ef7a52;--amber:#f0b73d}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--sans)}main{max-width:720px;margin:0 auto;padding:16px 16px 48px}
+.eyebrow{font:600 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}h1{font-size:28px;line-height:1.15;margin:4px 0 10px}h2{font-size:18px;margin:24px 0 8px}
+p{margin:0 0 10px}a{color:var(--blue)}code,pre{font-family:var(--mono);font-size:12.5px;overflow-wrap:anywhere;word-break:break-word}
+.cta{display:block;border:1.5px solid var(--ink);border-radius:10px;padding:12px 14px;margin:10px 0;text-decoration:none;color:var(--ink);background:var(--card)}
+.cta b{display:block;font:700 14px/1.3 var(--mono);letter-spacing:.04em}.cta span{font-size:14px;color:var(--ink2)}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-top:1px solid var(--rule);padding:6px 4px;vertical-align:top;text-align:left}th{width:34%;color:var(--mute);font-weight:600}
+.st{font:700 11px/1 var(--mono);padding:3px 5px;border-radius:4px;border:1.5px solid currentColor;white-space:nowrap}.LIVE{color:var(--blue)}.PROTOCOL{color:var(--ink2)}.REGISTRY{color:var(--mute)}.EXAMPLE{color:#8a5d00}.EXPERIMENTAL{color:var(--red)}
+li{margin:6px 0}pre{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:8px;max-height:240px;overflow:auto;white-space:pre-wrap}
+footer{margin-top:24px;border-top:1px solid var(--rule);padding-top:10px;font-size:13px;color:var(--mute)}</style></head><body><main><p class="eyebrow">EMEM · inspect the record</p><h1>The record Agent A handed over</h1>
+<p>One signed observation: NDVI 0.4709 at one 10 m cell on 25 Sep 2026. Every field below is read from its 1,115 bytes.</p>
+<table><tr><th>token Agent A hands over</th><td><code>emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</code></td></tr><tr><th>place (cell, about 10 m)</th><td><code>defi.zb572.xoso.zb1ec</code> · centre 32.57126° N, 77.03448° E (near Keylong, Lahaul, India)</td></tr><tr><th>band / product</th><td><code>indices.ndvi</code> · NDVI = (B08 − B04) / (B08 + B04). Vegetation greenness.</td></tr><tr><th>valid time (capture)</th><td>2026-09-25T05:42:51.024000Z · scene <code>S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015</code> · cloud 10.840102 %</td></tr><tr><th>value</th><td><b>0.4708994708994709</b> · confidence 0.95</td></tr><tr><th>inputs (signed in the record)</th><td>B08 DN 3502, B04 DN 1900, offset -1000 → recomputes to 0.4708994708994709</td></tr><tr><th>source files (named, not hashed)</th><td><code>T43SFS_20260925T054251_B08_10m.tif</code><br><code>T43SFS_20260925T054251_B04_10m.tif</code><br>scheme <code>sentinel_s2_l2a</code>; the record carries no hash of these files</td></tr><tr><th>derivation</th><td><code>sentinel2_l2a_indices_ndvi@1</code></td></tr><tr><th>name of the record</th><td><code>oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa</code> = base32(BLAKE3-256(the 1115 bytes below)). It names this record, not the satellite file.</td></tr><tr><th>signed</th><td>2026-09-28T09:06:56Z by key <code>777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka</code>; batch of 1, root <code>wnljgmqgsxs4rlw6saoi43musygzzllgao3jte6uoqkwqbffq3ea</code>, attested 2026-09-28T09:06:56Z</td></tr><tr><th>logged</th><td>entry 2,457,078 of the public log; checked under head 2,556,451 (2026-09-30T09:15:54Z); co-signed by witness <code>quunzdv5qymo…</code> at 2,541,495</td></tr></table>
+<h2>Check it yourself</h2><ul><li><a href="../demo/">VIEW THE DEMO</a>: your browser re-hashes these bytes, checks the signature and the log, and re-reads the pixel.</li>
+<li><a href="https://emem.dev/verify?q=emem%3Afact%3Adefi.zb572.xoso.zb1ec%3Aoj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa">emem.dev/verify</a> with this token.</li>
+<li>The raw bytes: <a href="https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa">emem.dev/v1/facts/oj5cecci…</a> (send <code>accept: application/cbor</code> for CBOR); <code>b3sum</code> of them is the name above.</li></ul>
+<h2>The 1,115 bytes (hex)</h2><pre>ac646b696e64677072696d6172796463656c6c75646566692e7a623537322e78
+6f736f2e7a623165636462616e646c696e64696365732e6e6476696574736c6f
+741950f16576616c7565fb3fde233788cde2336a636f6e666964656e6365fa3f
+73333367736f757263657381a366736368656d656f73656e74696e656c5f7332
+5f6c32616269647901d768747470733a2f2f73656e74696e656c326c32613031
+2e626c6f622e636f72652e77696e646f77732e6e65742f73656e74696e656c32
+2d6c322f34332f532f46532f323032362f30392f32352f5332415f4d53494c32
+415f3230323630393235543035343235315f4e303531335f523030355f543433
+5346535f3230323630393235543039303031352e534146452f4752414e554c45
+2f4c32415f5434335346535f413035383830345f323032363039323554303534
+3234352f494d475f444154412f5231306d2f5434335346535f32303236303932
+35543035343235315f4230385f31306d2e746966203b2068747470733a2f2f73
+656e74696e656c326c326130312e626c6f622e636f72652e77696e646f77732e
+6e65742f73656e74696e656c322d6c322f34332f532f46532f323032362f3039
+2f32352f5332415f4d53494c32415f3230323630393235543035343235315f4e
+303531335f523030355f5434335346535f323032363039323554303930303135
+2e534146452f4752414e554c452f4c32415f5434335346535f41303538383034
+5f3230323630393235543035343234352f494d475f444154412f5231306d2f54
+34335346535f3230323630393235543035343235315f4230345f31306d2e7469
+666b63617074757265645f6174781b323032362d30392d32355430353a34323a
+35312e3032343030305a6a64657269766174696f6ea266666e5f6b6579781c73
+656e74696e656c325f6c32615f696e64696365735f6e64766940316461726773
+8dfb4040491f0a48f854fb40534234e108d38478365332415f4d53494c32415f
+3230323630393235543035343235315f523030355f5434335346535f32303236
+3039323554303930303135197f8378394e445649203d202842303820e2889220
+42303429202f2028423038202b20423034292e2056656765746174696f6e2067
+7265656e6e6573732e82f96ad7f9676cfb4025ae21d96e9bbff95100181e0401
+783a68747470733a2f2f706c616e6574617279636f6d70757465722e6d696372
+6f736f66742e636f6d2f6170692f737461632f76312f736561726368f9e3d06d
+707269766163795f636c617373667075626c69636a736368656d615f63696478
+346432347267776c713437613569736d35766b6b626975617633776932766f65
+777171677934783474746e68646e7a7a6979666b71667369676e6572982018ff
+18fe184818ef08183918901858183218bd183b0518ab185918981896184c1831
+18e41864188e184f182b18fa182418bf183018e0182a18ce1865185469736967
+6e65645f617474323032362d30392d32385430393a30363a35365a</pre>
+<p>A signature fixes these bytes. It does not make the measurement true: whether the cell is the field you meant, and whether the sensor was right, are outside what this record can show.</p>
+<footer>EMEM · Jaya Kumari, Avijeet Singh · Vortx AI · Agentic AI for Earth Observation, Berlin, 19 Oct 2026 · <a href="https://github.com/Vortx-AI/esa_poster">source of these pages</a></footer></main></body></html>

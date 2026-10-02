@@ -1,0 +1,500 @@
+{
+ "schema": "esa_poster v13 claims map additions (figures F9 to F12, D1, D2, D4)",
+ "version": 1,
+ "generated": "2026-10-01",
+ "brief": "research/v13/12_FINAL_BRIEF.md",
+ "rule": "same schema and rules as research/v13/12_claims_map.json; these rows cover figure-text strings with numbers that the main map does not list; merge into the main map at build",
+ "rows": [
+  {
+   "id": "A9.signed7",
+   "block": "P8 figure F9",
+   "print": [
+    "signed 7 times"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "pointer": "contradictions[0].attestations with value 915.0712280273438: 7 (2026-08-11T09:39:36Z to 2026-09-28T09:05:19Z)"
+   },
+   "date": "2026-09-29",
+   "value": 7,
+   "check": {
+    "kind": "count",
+    "file": "repro/data/contra_bengaluru.json",
+    "arg": "attestations value 915.0712280273438",
+    "expect": 7
+   },
+   "note": "replaces 're-signed 7 times' (TM.915) in the figure: the file holds 7 signings of 915.07 m in all, i.e. the first plus 6 re-signings; 'signed 7 times' is exact",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f9_timeline.py"
+  },
+  {
+   "id": "A9.ground",
+   "block": "P8 figure F9 scope",
+   "print": [
+    "here the provider changed, not the ground"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "pointer": "providers[0].fn_key open_meteo_copdem90m@1, providers[1..7].fn_key copernicus_dem_30m_aws_pixel@1; disagreement_scope same_attester_provider_substitution; band copdem30m.elevation_mean (a static DEM)"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": null,
+   "note": "brief §C panel 8 figure text",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f9_timeline.py"
+  },
+  {
+   "id": "A9.axis",
+   "block": "P8 figure F9 axis",
+   "print": [
+    "2026",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/data/contra_bengaluru.json",
+    "pointer": "attestations[*].signed_at (all in 2026)"
+   },
+   "date": "2026-09-29",
+   "value": null,
+   "check": null,
+   "note": "axis scale label",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f9_timeline.py"
+  },
+  {
+   "id": "A9.prefix",
+   "block": "P8 figure F9 Keylong strip legend",
+   "print": [
+    "signed before the reader's pixel fix (28 Sep 2026)"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/v12/data/case_keylong_ndvi.json",
+    "pointer": "rows[*].signed_at < PIXEL_FIX_AT 2026-09-28T04:09:26Z (research/repro/v8/trace_fact.py:435, citing emem lib.rs:12650); 14 of the 141 rows dated 2025-26 are drawn hollow",
+    "finding": "research/v13/00_v11_review_findings.md F01; research/v13/11_research_gaps.md C5"
+   },
+   "date": "2026-09-30",
+   "value": 14,
+   "check": {
+    "kind": "count",
+    "file": "repro/v12/data/case_keylong_ndvi.json",
+    "arg": "rows date >= 2025-01-01 and signed_at < 2026-09-28T04:09:26Z",
+    "expect": 14
+   },
+   "note": "the counts 14 and 141 are asserted by the figure script, not printed (brief settlement)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f9_timeline.py"
+  },
+  {
+   "id": "A9.kaxis",
+   "block": "P8 figure F9 Keylong axis",
+   "print": [
+    "2025",
+    "2026",
+    "Keylong field · NDVI",
+    "0",
+    "0.5"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/data/case_keylong_ndvi.json",
+    "pointer": "rows[*].date, 2025-01-28 to 2026-09-25 for the plotted 141; plus repro/data/v11/cell_products.json indices.ndvi tslot 20726 (30 Sep 2026)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "axis year labels; the strip is broken at 13 Sep 2026 and 13 Sep to 1 Oct is stretched",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f9_timeline.py"
+  },
+  {
+   "id": "A10.axes",
+   "block": "P11 figure F10 axes",
+   "print": [
+    "1 µs",
+    "10 µs",
+    "100 µs",
+    "1 ms",
+    "10 ms",
+    "100 ms",
+    "1 s",
+    "10 s",
+    "1 token (cl100k)",
+    "100",
+    "1,000",
+    "10,000",
+    "100,000"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/cost_measurements.json",
+    "pointer": "axis decades spanning m2 primitives_us (µs) to m3 links 8+9+9b (s); m5_tokens.tokenizers.cl100k_base tiktoken 0.14.0"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "log-axis decade labels (brief §E F10: 1 µs to 10 s; 1 to 100 000)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f10_cost.py"
+  },
+  {
+   "id": "A10.m15",
+   "block": "P11 figure F10",
+   "print": [
+    "M15"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/v11/out/mutation_matrix.json",
+    "pointer": "mutations[id=M15] (signer reads the neighbouring pixel): refused only at level I, source re-read"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": null,
+   "note": "mutation id shared with figure F6; marks the source re-read as the check that refuses the wrong pixel (brief §E F10)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f10_cost.py"
+  },
+  {
+   "id": "A11.header",
+   "block": "P12 figure F11 dot plot",
+   "print": [
+    "one address, one value on every path",
+    "median ms of 3 runs, log scale, 30 Sep 2026",
+    "official MCP Python SDK",
+    "official MCP TypeScript SDK",
+    "TypeScript SDK",
+    "Python SDK",
+    "raw REST",
+    "raw MCP",
+    "A2A message/send",
+    "independent BLAKE3 + CBOR reader",
+    "LlamaIndex",
+    "LangChain MCP adapters"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/crossruntime_table.json",
+    "pointer": "reps 3; generated_utc 2026-09-30T08:40:43Z; summary.ndvi_keylong.distinct_fact_cids (1) and distinct_values (1); rows[*].path"
+   },
+   "date": "2026-09-30",
+   "value": 3,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/crossruntime_table.json",
+    "arg": [
+     "reps"
+    ],
+    "expect": 3
+   },
+   "note": "row names are the brief's §C panel 12 names for the paths",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f11_ecosystem.py"
+  },
+  {
+   "id": "A11.abrow",
+   "block": "P12 figure F11 dot plot",
+   "print": [
+    "A to B, two processes",
+    "772.8 · one run"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/crossruntime_table.json",
+    "pointer": "rows.ndvi_keylong[path=A->B_isolated_processes].ms (no ms_median: a single run); token_equals_expected, rehash_ok, receipt_sig_ok true"
+   },
+   "date": "2026-09-30",
+   "value": 772.8,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/crossruntime_table.json",
+    "arg": "rows.ndvi_keylong[10].ms",
+    "expect": 772.8
+   },
+   "note": "drawn hollow (brief §E F11)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f11_ecosystem.py"
+  },
+  {
+   "id": "A11.axis",
+   "block": "P12 figure F11 dot plot axis",
+   "print": [
+    "30",
+    "100",
+    "300",
+    "1,000",
+    "receipt signature checked on 9 of 11"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/data/v8/crossruntime_table.json",
+    "pointer": "axis 30 ms to 2 s (brief); summary.ndvi_keylong.receipt_verified_paths 9, paths_ok 11; receipt_not_available_paths 6a_llamaindex_FunctionTool, 7_independent_blake3_cbor2"
+   },
+   "date": "2026-09-30",
+   "value": 9,
+   "check": {
+    "kind": "json",
+    "file": "repro/data/v8/crossruntime_table.json",
+    "arg": [
+     "summary",
+     "ndvi_keylong",
+     "receipt_verified_paths"
+    ],
+    "expect": 9
+   },
+   "note": "tick per row marks receipt_sig_ok true; a dash marks no receipt in the path's output",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f11_ecosystem.py"
+  },
+  {
+   "id": "A11.legend",
+   "block": "P12 figure F11 legend",
+   "print": [
+    "LIVE connected or published",
+    "PROTOCOL open surface, client not run by us",
+    "REGISTRY a listing",
+    "EXAMPLE repo code, tool list checked",
+    "AGENT HOSTS",
+    "INTEROPERABILITY",
+    "DISCOVERY",
+    "DEVELOPER",
+    "FRAMEWORKS",
+    "emem.dev/mcp",
+    "signed agent card",
+    "io.github.Vortx-AI/emem"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "status_vocabulary; brief §C panel 12 figure text"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "glyphs drawn from each row's status",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f11_ecosystem.py"
+  },
+  {
+   "id": "A11.chatgpt",
+   "block": "P12 figure F11 legend",
+   "print": [
+    "ChatGPT (@emem): listed by its publisher, not confirmed by us; held off the band"
+   ],
+   "status": "OUT-OF-SCOPE",
+   "layer": "n/a",
+   "source": {
+    "file": "v13/ecosystem_manifest.json",
+    "pointer": "id=chatgpt: status LIVE, evidence_level 'UNVERIFIED (publisher-attested only)', print.allowed 'only after the manual check above'"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "prints while no logged-in screenshot is committed; once research/v13/*chatgpt*screenshot* exists the script moves ChatGPT into AGENT HOSTS with the manifest glyph and drops this line",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f11_ecosystem.py"
+  },
+  {
+   "id": "A11.bridge",
+   "block": "P12 figure F11 bridge",
+   "print": [
+    "EMEM signed record",
+    "emem:fact:…",
+    "MCP · A2A",
+    "transport",
+    "agent host or client",
+    "carries the reference",
+    "next agent",
+    "resolves, re-hashes, re-reads"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "research/v13/12_FINAL_BRIEF.md",
+    "pointer": "§C panel 12 figure text, bridge nodes"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f11_ecosystem.py"
+  },
+  {
+   "id": "A12.thread",
+   "block": "P13 figure F12",
+   "print": [
+    "EMEM: is this the observation the sender cited?",
+    "cite",
+    "hand off",
+    "resolve · re-hash · re-read"
+   ],
+   "status": "SPEC",
+   "layer": "L0-L3",
+   "source": {
+    "file": "research/v13/04_prior_art_and_field.md",
+    "section": "1.1-1.2 (thread label and its three verbs)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "brief §C panel 13 figure text and §E F12",
+   "tier": "1m",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f12_prior_art.py"
+  },
+  {
+   "id": "A13.threat",
+   "block": "threat figure D1",
+   "print": [
+    "rewrites value, cell, date, source, record, reference; replays old records",
+    "open archive (COG)",
+    "cryptographic: the exact record bytes · CHECKABLE",
+    "source: which file was read · PARTIAL",
+    "measurement: sensor and product · INHERITED"
+   ],
+   "status": "SPEC",
+   "layer": "L0-L5",
+   "source": {
+    "file": "research/v13/10_ladder_threat_invention.md",
+    "section": "4.2-4.3 (relay T1, signer T2) and 3.1-3.2 (status vocabulary)"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": null,
+   "note": "brief §C threat model figure text (D1)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/d_threat.py"
+  },
+  {
+   "id": "A14.card",
+   "block": "P9 figure D2",
+   "print": [
+    "cell A",
+    "defi.zb391.taza.zcc31",
+    "five of its six signed inputs",
+    "6rtcbfum",
+    "iv6mhn5v",
+    "ncupl5pt",
+    "sw4zpem3",
+    "yc5qjlgh",
+    "N"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/v12/data/case_rondonia_eudr.json",
+    "pointer": "rows[row=2,col=7] (cell defi.zb391.taza.zcc31, the first EUDR-rule flag in reading order): *|fact_cid[:8] for hansen.loss_year, hansen.tree_cover_2000, jrc_gfc2020.forest_2020, jrc_tmf.deforestation_year, esa_cci_biomass.agb_t_per_ha_2022; all_verified true"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json",
+    "file": "repro/v12/data/case_rondonia_eudr.json",
+    "arg": "rows[27].cell",
+    "expect": "defi.zb391.taza.zcc31"
+   },
+   "note": "address prefixes are the records' BLAKE3 addresses (first 8 base32 characters); N marks north (grid lat decreasing with row); the card shows five of the cell's six signed inputs (indices.ndvi is the sixth; the grid has 6 records per cell, 600 in all)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/d_rondonia.py"
+  },
+  {
+   "id": "A15.vec",
+   "block": "P10 figure D4",
+   "print": [
+    "prithvi_eo2",
+    "· 1,024 values",
+    "checkpoint 2ad1775f… (hashed)",
+    "geotessera",
+    "· 128 values",
+    "…/npy/v1/2024/… (no checkpoint)"
+   ],
+   "status": "LIVE",
+   "layer": "L2-L3",
+   "source": {
+    "file": "v13/evidence/critic/cell.json",
+    "pointer": "facts[band=prithvi_eo2].value (1024), served_via.model_blake2b_hex == derivation.args.args[4] 2ad1775f…; facts[band=geotessera].value (128), sources[0].id https://data.source.coop/tessera/tessera/npy/v1/2024/..., derivation.args [lat, lng, 2024]"
+   },
+   "date": "2026-10-01",
+   "value": null,
+   "check": {
+    "kind": "prithvi",
+    "file": "v13/evidence/critic/cell.json",
+    "arg": null,
+    "expect": "2ad1775f298264470dd3f0b6e7819b62d7860968665fe308ed93abb766af62cc"
+   },
+   "note": "the barcodes draw the signed values (grey by value, 2nd to 98th percentile), no numbers printed",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/d_vectors.py"
+  }
+ ]
+}

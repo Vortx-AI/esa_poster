@@ -1,0 +1,741 @@
+{
+ "schema": "esa_poster v13 claims map additions (figures F13 one address, F14 token family, F15 SAT-042)",
+ "version": 1,
+ "generated": "2026-10-02",
+ "brief": "research/v13/12_FINAL_BRIEF.md",
+ "rule": "same schema and rules as research/v13/12_claims_map.json; every printed string of the three figures with a number has a row here (the figure scripts assert this when they draw); merge into the main map at build",
+ "rows": [
+  {
+   "id": "A13.head",
+   "block": "right column figure F13 header",
+   "print": [
+    "Berlin",
+    "defi.zb655.yaka.pUxe",
+    "52.5243 N, 13.4105 E",
+    "one 10 m cell"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "pointer": "cell; cell_centre.lat 52.52432943550559, cell_centre.lng 13.410490372297858; place 'Berlin (emem gazetteer Berlin, 16 DE)'",
+    "finding": "issue #20: common addressing layer, native grids labelled, no co-registration implied"
+   },
+   "date": "2026-09-30",
+   "value": "defi.zb655.yaka.pUxe",
+   "check": {
+    "kind": "json",
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "arg": [
+     "cell"
+    ],
+    "expect": "defi.zb655.yaka.pUxe"
+   },
+   "note": "the v12 panel-1 cell; the chip scene_defi.zb655.yaka.pUxe.png is this cell's; '10 m' is the cell size the v12 board states and the Sentinel-2 pixel the chip is drawn at",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.dates",
+   "block": "right column figure F13 footer dates",
+   "print": [
+    "read live 30 Sep 2026",
+    "re-hashed on 2 Oct 2026",
+    "30 Sep 2026",
+    "2 Oct 2026"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "pointer": "rows[*].queried_at_utc 2026-09-30T18:57Z; re-hash: poster/fig/v13/f13_one_address.verify.json fetched_utc (GET https://emem.dev/v1/facts/<cid>, Accept application/cbor), 16 of 16 rehash_equals_cid"
+   },
+   "date": "2026-10-02",
+   "value": 16,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f13_one_address.py",
+    "arg": "V['n_ok'] == 16 after a live GET of each cid",
+    "expect": 16
+   },
+   "note": "the figure script refuses to draw unless all 16 re-hash; the verify file is rewritten on every networked run, so the printed re-hash date follows the file",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.chip",
+   "block": "right column figure F13 chip",
+   "print": [
+    "1 km",
+    "Sentinel-2C L2A",
+    "27 Sep 2026",
+    "true colour,",
+    "2.24 km across,",
+    "224 px of 10 m,",
+    "6.5 % cloud;",
+    "box: 90 m"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/v12/data/scene_defi.zb655.yaka.pUxe.headers",
+    "pointer": "x-emem-scene-item-id S2C_MSIL2A_20260927T101801_R065_T33UUU_20260927T153810; x-emem-scene-datetime 2026-09-27T10:18:01Z; x-emem-scene-bbox-crs 390880,5819270,393440,5821830 (2560 m); x-emem-scene-pixel-size 10,10; x-emem-scene-cloud-cover 6.51; PNG 256 x 256 px; the cell centre falls in pixel (128, 128) (pyproj to EPSG:32633), marked by a 9 px = 90 m box; drawn: the central 224 x 224 px of the 256 px chip (2.24 km), nearest-neighbour 2:1"
+   },
+   "date": "2026-09-30",
+   "value": 2.24,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/data/scene_defi.zb655.yaka.pUxe.headers",
+    "arg": "x-emem-scene-bbox-crs: 390880.000,5819270.000,393440.000,5821830.000",
+    "expect": null
+   },
+   "note": "drawn at 2 printer pixels per 10 m pixel (nearest neighbour, no resampling); the 1 km bar is 100 chip pixels",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.products",
+   "block": "right column figure F13 product column",
+   "print": [
+    "Sentinel-2C L2A",
+    "Sentinel-1C RTC",
+    "GLO-30 DEM",
+    "MODIS MOD11A2",
+    "ESA WorldCover",
+    "ESA CCI Biomass",
+    "JRC GSW v1.4",
+    "Hansen v1.13",
+    "JRC GFC2020 V4",
+    "Copernicus CAMS",
+    "Overture, not EO",
+    "ISRIC SoilGrids",
+    "CHIRPS v2.0",
+    "JRC TMF",
+    "NASA FIRMS"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "pointer": "rows[*].instrument for the 16 drawn rows; Sentinel-2C from the scene id S2C_...; Sentinel-1C from the S1C_IW_GRDH scene in the derivation"
+   },
+   "date": "2026-09-30",
+   "value": 15,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f13_one_address.py",
+    "arg": "len({product}) == 15",
+    "expect": 15
+   },
+   "note": "15 distinct products over 16 rows (Sentinel-2C L2A gives B08 and NDVI)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.readings",
+   "block": "right column figure F13 reading column",
+   "print": [
+    "NIR 0.0475",
+    "NDVI 0.195",
+    "VV −2.82 dB",
+    "36.6 m DSM",
+    "297.4 K day LST",
+    "built-up (50)",
+    "0 t/ha",
+    "0 % water",
+    "0 % tree cover",
+    "not forest",
+    "NO₂ 12.3 µg/m³",
+    "0 buildings",
+    "no data, null",
+    "outside ±50°",
+    "outside ±30°",
+    "no fire in 24 h"
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "pointer": "rows[15].value 0.0475 (s2.B08); rows[8].value 0.19496855345911948 (indices.ndvi 2026-09-27); rows[17].value -2.8157914266581785 dB; rows[2].value 36.56167984008789 m; rows[10].value 297.4 K; rows[4].value 50 (WorldCover class 50 = built-up, v1_bands landcover dimensions[4]); rows[3].value 0.0 t/ha; rows[18].value 0.0 %; rows[6].value 0 %; rows[9].value 0; rows[1].value 12.3 ug/m^3; rows[13].value 0; rows[24] absence soilgrids_no_data; rows[20] absence out_of_bounds ±50°; rows[22] absence jrc_tmf_coverage_gap ±30°; rows[21] absence no_detections 24h rolling window"
+   },
+   "date": "2026-09-30",
+   "value": 0.0475,
+   "check": {
+    "kind": "json",
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "arg": [
+     "rows",
+     15,
+     "value"
+    ],
+    "expect": 0.0475
+   },
+   "note": "every value is formatted in the script from the row's value; the live CBOR body of each fact was re-fetched on 2026-10-02 and its value equals the JSON value (verify.json value_matches_json)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.times",
+   "block": "right column figure F13 valid-time column",
+   "print": [
+    "27 Sep 2026",
+    "28 Sep 2026",
+    "2021",
+    "29 Aug 2026",
+    "2022",
+    "1984 to 2021",
+    "2000",
+    "2020",
+    "30 Sep 2026",
+    "Aug 2026"
+   ],
+   "status": "MEASURED",
+   "layer": "L1",
+   "source": {
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "pointer": "rows[*].observed_at: S2 2026-09-27T10:18:01Z; S1 2026-09-28T05:16:29Z; DEM 2021-04-30 (year); MODIS 2026-08-29 (8-day composite start); WorldCover product year 2021 (band esa_worldcover.lc_2021); CCI product year 2022 (band agb_t_per_ha_2022); GSW 1984 to 2021 climatology (v1_bands surface_water); Hansen tree_cover_2000; GFC2020 forest_2020; CAMS 2026-09-30T18:00Z; Overture release 2026-08-19.0; absences signed_at 2026-09-30"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "json_contains",
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "arg": [
+     "rows",
+     17,
+     "observed_at"
+    ],
+    "expect": "2026-09-28"
+   },
+   "note": "product years for the static layers are the years in the band names; the DEM prints its observed_at year",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.grids",
+   "block": "right column figure F13 native-grid column",
+   "print": [
+    "10 m",
+    "n/s",
+    "30 m",
+    "1 km",
+    "100 m",
+    "~11 km",
+    "vector",
+    "250 m",
+    "0.05°",
+    "points"
+   ],
+   "status": "MEASURED",
+   "layer": "L3",
+   "source": {
+    "file": "repro/v12/data/v1_bands_2026-09-30.json",
+    "pointer": "landcover 'at 10 m'; esa_cci_biomass 'at 100 m'; surface_water 'at 30 m'; jrc_gfc2020 '10 m native'; air_quality '~11 km native resolution'; soilgrids '250 m native'; chirps.precip_daily_mm 'global 0.05° COG'; jrc_tmf '30 m primary product'. From the re-fetched fact bodies (f13_one_address.verify.json grid_arg): s2.B08 derivation arg 'B08 10m'; MOD11A2 band LST_Day_1km; DEM COG host copernicus-dem-30m; CHIRPS cog path p05; Overture source theme=buildings (vector). Sentinel-1 RTC and Hansen v1.13: no committed file states the grid, printed 'n/s'. FIRMS: point detections within the cell bbox (absence reason)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/data/v1_bands_2026-09-30.json",
+    "arg": "~11 km native resolution",
+    "expect": null
+   },
+   "note": "issue #20: native grids are labelled per product; nothing in the figure claims co-registration; the range '10 m to about 11 km' is the min and max of the stated grids",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.cids",
+   "block": "right column figure F13 fact_cid column",
+   "print": [
+    "wtqd64…",
+    "y2k2ti…",
+    "2x2enx…",
+    "sdu3gf…",
+    "yqhihm…",
+    "xicg6u…",
+    "keebyc…",
+    "hohgux…",
+    "x4kpky…",
+    "oog2b4…",
+    "jvwhwg…",
+    "czehax…",
+    "mkwinv…",
+    "bkaovf…",
+    "w7t2hx…",
+    "k2ykb2…"
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "poster/fig/v13/f13_one_address.verify.json",
+    "pointer": "facts[*].fact_cid, rehash_equals_cid true, signer_pinned true (777er3yi…), cell_bound and band_bound true for all 16"
+   },
+   "date": "2026-10-02",
+   "value": 16,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f13_one_address.py",
+    "arg": "16 fact_cids re-hash live",
+    "expect": 16
+   },
+   "note": "first 6 base32 characters of each 52-character fact_cid",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.count",
+   "block": "right column figure F13 footer",
+   "print": [
+    "15 products, 16 signed facts, 4 signed absences, 10 m to about 11 km; read live 30 Sep 2026."
+   ],
+   "status": "MEASURED",
+   "layer": "L0",
+   "source": {
+    "file": "repro/v12/data/case_berlin_stack.json",
+    "pointer": "the 16 drawn rows: 15 distinct instruments, 4 with kind absence (soilgrids.soc_0_30cm, chirps.precip_daily_mm, jrc_tmf.deforestation_year, firms.active_fires); 10 m (Sentinel-2, WorldCover, GFC2020) to ~11 km (CAMS) among the stated grids",
+    "v12": "research/should_do/19_V12_CLAIMS_MAP.md row '1 sub'"
+   },
+   "date": "2026-09-30",
+   "value": "15/16/4",
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f13_one_address.py",
+    "arg": "len(SEL) == 16 and 15 products and 4 absences",
+    "expect": [
+     15,
+     16,
+     4
+    ]
+   },
+   "note": "the v12 panel-1 subtitle counts; '10 m to about 11 km' now has a row (v11 review F32)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A13.scope",
+   "block": "right column figure F13 footer scope",
+   "print": [
+    "15 products, 16 signed facts, 4 signed absences, 10 m to about 11 km; read live 30 Sep 2026.",
+    "Shared address, separate pixels; n/s: grid not in our files.",
+    "All 16 re-hash under emem.dev's key, 2 Oct 2026."
+   ],
+   "status": "LIVE",
+   "layer": "L0",
+   "source": {
+    "file": "poster/fig/v13/f13_one_address.verify.json",
+    "pointer": "n_ok 16 of n 16; signer_pinned true for all; pinned_signer 777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka (repro/v12/data/eo_evidence_verification.md)"
+   },
+   "date": "2026-10-02",
+   "value": 16,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f13_one_address.py",
+    "arg": "V['n'] == V['n_ok'] == 16",
+    "expect": 16
+   },
+   "note": "issue #20 wording; the figure wraps these three sentences at 14 pt over at most 3 lines, so the counts of A13.count also appear here",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f13_one_address.py"
+  },
+  {
+   "id": "A14.need",
+   "block": "right column figure F14 data-need column",
+   "print": [
+    "a place",
+    "one value",
+    "nothing there",
+    "an embedding",
+    "a derived value",
+    "a raster",
+    "a raster in time",
+    "rasters for a purpose",
+    "many facts, one id",
+    "a file, one chunk",
+    "a reasoning stage",
+    "a named object",
+    "a device run",
+    "an evidence chain"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "poster/archive/v11-sealed/poster.html",
+    "pointer": "div.fam table rows (14 data needs), corrected per research/v13/00_v11_review_findings.md M2, M10 to M12, M14, M15"
+   },
+   "date": "2026-10-02",
+   "value": 14,
+   "check": {
+    "kind": "figure_assert",
+    "file": "poster/figs_v13/f14_token_family.py",
+    "arg": "len(ROWS) == 14",
+    "expect": 14
+   },
+   "note": "the v11 token-family table, fourteen rows",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": true,
+   "asserted_in": "poster/figs_v13/f14_token_family.py"
+  },
+  {
+   "id": "A14.grammar",
+   "block": "right column figure F14 grammar column (IBM Plex Mono)",
+   "print": [
+    "grammar, after emem:",
+    "cell:<cell64>",
+    "fact:<cell>:<cid>",
+    "fact: · kind absence",
+    "fact: · 128 / 1024 floats",
+    "fact: · op, parents",
+    "raster:<a>:<b>:<t>:<d>",
+    "cube:<a>:<b>:<t0..t1>:<d>",
+    "rasterset:<set>:<d>",
+    "bundle:<cid>",
+    "tree:<file>#row=i",
+    "state:<cid>",
+    "entity:<cid>",
+    "track.v1 note"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v10/algorithms.md",
+    "pointer": "§6 field tokens: raster emem:raster:{aoi_cid}:{band}:{tslot}:{derivation_cid}; cube emem:cube:{aoi_cid}:{band}:{lo}..{hi}:{derivation_cid}; rasterset emem:rasterset:{bundle_cid}:{derivation_cid}; bundle emem:bundle:{bundle_cid}; tree emem:tree:{file_cid}#row=i; track chain (ememdemo client); §15 emem:trace; emem docs/model.md at 18adb67 token table (fact, bundle, entity, cell, tree); 128 / 1024 floats: v11 table row (geotessera 128-D, prithvi_eo2 1024 values per research/v13 claims row F.prithvi), attester_only privacy class",
+    "abbrev": "<a> aoi cid, <b> band, <t> tslot, <d> derivation cid (a fact cid); 'emem:' printed once per row in muted type"
+   },
+   "date": "2026-10-02",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v10/algorithms.md",
+    "arg": "**Cube** `emem:cube:{aoi_cid}:{band}:{lo}..{hi}:{derivation_cid}`",
+    "expect": null
+   },
+   "note": "grammars as coded at emem 18adb67; the figure asserts each rule's source sentence before drawing",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f14_token_family.py"
+  },
+  {
+   "id": "A14.hash",
+   "block": "right column figure F14 'what its id hashes' column",
+   "print": [
+    "the quantised lat/lng; no hash",
+    "BLAKE3(CBOR(fact)), 52 chars",
+    "same; + BLAKE3(reason)[:16]",
+    "same; attester_only",
+    "same; pure ops re-run",
+    "fact d names BLAKE3(grid)",
+    "BLAKE3(CBOR([member d…]))",
+    "BLAKE3(CBOR([d…, purpose]))",
+    "BLAKE3(p, cell|band|t|cid)[:16]",
+    "BLAKE3(note)[:16]; root inside",
+    "BLAKE3(CBOR(state record))",
+    "BLAKE3(anchor)[:16]: a label",
+    "BLAKE3(CBOR(signed trace))",
+    "link = BLAKE3(prev ‖ ref)[:16]"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v10/algorithms.md",
+    "pointer": "§1 fact_cid = b32(H(bytes)), 52 characters; §9 reason_cid = b32(H(utf8(reason_text))[0..16]); §6 artifact_cid = b32(H(EMEMGRD1 grid bytes)) inside the derivation record, cube_cid = b32(H(cbor([member derivation_cid…]))), rasterset bundle_cid = b32(H(cbor([dcid…, 'purpose:'+p]))), memory bundle = b32(H('emem.memory_bundle.v1|' ‖ purpose ‖ newline ‖ cell|band|tslot|fact_cid lines)[0..16]), track linkᵢ = cidOf(linkᵢ₋₁ ‖ refᵢ) with cidOf = b32(H(b)[0..16]); §15 trace_cid = b32(H(cbor(OsTrace incl. signature)))",
+    "findings": "research/v13/00_v11_review_findings.md M2 (bundle preimage), M14 (tree id = BLAKE3(note)[:16], Merkle root inside the note), M15 (state record: schema, kind, derived_from, fn_key, payload, class, does_not_cover, responder key; emem-fact/src/state.rs), M11 (cube and rasterset both hash lists of member derivation cids); entity: emem docs/model.md '16 bytes of a hash over the identity anchor'; cell: 'an address; it names no bytes'"
+   },
+   "date": "2026-10-02",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v10/algorithms.md",
+    "arg": "`fact_cid = b32(H(bytes))`, which is 52 characters",
+    "expect": null
+   },
+   "note": "glyphs: filled square = hashes observed bytes (fact, absence, embedding, derived, raster, tree, trace); three bars = hashes a list of ids (cube, rasterset, bundle, state, track); open diamond = hashes a name (entity); a cell has no glyph",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f14_token_family.py"
+  },
+  {
+   "id": "A14.footer",
+   "block": "right column figure F14 footer",
+   "print": [
+    "An embedding is one row of fourteen.",
+    "Rules as coded at emem 18adb67.",
+    "track.v1 is a note, not a token; no hardware is yet admitted behind a trace token."
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/trace/trace_truth.md",
+    "pointer": "§1 'No satellite is enrolled'; 'All 17 hardware platforms are candidate'; emem checkout /home/user/vortx-ai/emem origin/main 18adb67 (git -C ... show origin/main:docs/model.md)"
+   },
+   "date": "2026-10-02",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/trace/trace_truth.md",
+    "arg": "No satellite is enrolled.",
+    "expect": null
+   },
+   "note": "'An embedding is one row of fourteen' is the v11 table's footer sentence, kept",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f14_token_family.py"
+  },
+  {
+   "id": "A15.headline",
+   "block": "right column figure F15 headline strip",
+   "print": [
+    "SAT-042 is a scripted pass in emem's test harness,",
+    "not a spacecraft; run on 30 Sep 2026.",
+    "emem 04b40c5, deterministic:",
+    "fixed key, clocks, digests, anchor"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "pointer": "header: emem commit 04b40c56…; run window (UTC): 2026-09-30T19:14:15Z to 2026-09-30T19:14:16Z; two runs byte-identical",
+    "truth": "research/repro/v12/trace/trace_truth.md §1 'No satellite is enrolled', §6 'a deterministic simulation that exercises the real gate and verifier code'; issue #14"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "arg": "run window (UTC): 2026-09-30T19:14:15Z",
+    "expect": null
+   },
+   "note": "the sentence the board must carry inside the figure (issue #14); the second strip line reads 'emem 04b40c5' (commit, not a number per the regex)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f15_sat042.py"
+  },
+  {
+   "id": "A15.steps",
+   "block": "right column figure F15 (a) seven steps",
+   "print": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "orbital.satellite.v1 enrolled; 8 layers required",
+    "8 layers chained; 3 NDVI payload digests bound",
+    "digest cyzwak… is not among the trace's outputs",
+    "3 facts under 1 trace, 3arfrn…, 1 bundle",
+    "2 consistent, 1 contradicted; scored after admission",
+    "segment 2 edited after signing: chain broken at seq 3",
+    "Smuggle a 4th fact"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "pointer": "act 1 enrolled spacecraft key mwndc7zc…, profile orbital.satellite.v1 requires 8 trace layers; act 2 'writes require the device's OS execution trace and none was presented'; act 3 'payload digest cyzwaknc… that is not bound in the trace's emitted outputs'; act 4 'admitted: 3 facts under one verified trace', emem:trace:3arfrney…, emem:bundle:sfxaann3…; act 5 two Consistent, one Contradicted; 'tampered segment 2 after signing' / 'reject: chain broken at seq 3'",
+    "findings": "F08 (digest only), F09 (three refusals), F12 (score after admission)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "arg": "reject: chain broken at seq 3",
+    "expect": null
+   },
+   "note": "every value parsed from the stdout by the figure script, which asserts the counts",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f15_sat042.py"
+  },
+  {
+   "id": "A15.layers",
+   "block": "right column figure F15 (b) trace strip",
+   "print": [
+    "the trace: 8 layers, each log digest chained to the previous",
+    "seq 0",
+    "seq 1",
+    "seq 2",
+    "seq 3",
+    "seq 4",
+    "seq 5",
+    "seq 6",
+    "seq 7",
+    "seq 2 rewritten after signing; the verifier: chain broken at seq 3"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "pointer": "[Syscall, Scheduler, Memory, SensorBus, Signal, Energy, Thermal, Storage]; 'tampered segment 2 after signing' and 'reject: chain broken at seq 3'; algorithms.md §15 dᵢ = H(cbor(segᵢ)), segᵢ.prev_digest = b32(dᵢ₋₁)",
+    "truth": "trace_truth.md §6 'The tamper edits segments[2].log_digest (line 215)'"
+   },
+   "date": "2026-09-30",
+   "value": 8,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "arg": "[Syscall, Scheduler, Memory, SensorBus, Signal, Energy, Thermal, Storage]",
+    "expect": null
+   },
+   "note": "segment 2 is drawn harm-tinted; the link into seq 3 carries the break mark",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f15_sat042.py"
+  },
+  {
+   "id": "A15.drift",
+   "block": "right column figure F15 (c) scores",
+   "print": [
+    "0.6431 → 0.05",
+    "0.6512 → 0.15",
+    "0.2103 → 0.88"
+   ],
+   "status": "MEASURED",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "pointer": "act 5: device 0.6431 vs anchor 0.6402 score 0.05 Consistent; 0.6512 score 0.15 Consistent; 0.2103 score 0.88 Contradicted; recomputed in the script from z = |x − 0.6402| / 0.06, s = z/(1+z)"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v12/trace/sat042_run_stdout.txt",
+    "arg": "device 0.2103 vs anchor 0.6402  score 0.88  Contradicted",
+    "expect": null
+   },
+   "note": "the three device NDVI payloads are the three bound digests of act 3 and the three scored claims of act 5",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f15_sat042.py"
+  },
+  {
+   "id": "A15.formula",
+   "block": "right column figure F15 (c) axis and formula",
+   "print": [
+    "drift anchor 0.6402 ± 0.02 (1σ): scored after admission, not a gate",
+    "s = z/(1+z), z = |x − anchor| / 3σ; 3σ scores 0.5, 9σ scores 0.75 (emem-trace tests)"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v10/algorithms.md",
+    "pointer": "§15 drift anchor (drift.rs:50-87): z = |x_dev − x_anchor| / (3σ), score = z/(1+z); verdict < 0.5 Consistent, < 0.75 Tension, else Contradicted; 'not wired into ingest'",
+    "anchor": "trace_truth.md §6 'The drift anchor is a fixed pair (0.6402, 0.02) (line 198)'; §3 'Drift-anchor score: 0.5 at 3 sigma, 0.75 at 9 sigma' tests pinned_points, verdict_thresholds"
+   },
+   "date": "2026-09-30",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "repro/v10/algorithms.md",
+    "arg": "`z = |x_dev − x_anchor| / (3σ)`, `score = z/(1+z)`",
+    "expect": null
+   },
+   "note": "z = 1 gives 0.5 and z = 3 gives 0.75, asserted in the script",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f15_sat042.py"
+  },
+  {
+   "id": "A15.scope",
+   "block": "right column figure F15 footer",
+   "print": [
+    "The gate binds the value digest only; band, cell and tslot are not checked.",
+    "Three refusals shown; no device is enrolled under orbital.satellite.v1."
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v10/algorithms.md",
+    "pointer": "§15 'fact binding: b32(H(cbor(fact.value))) ∈ { outputⱼ.payload_digest } (value only; band/cell not checked)'",
+    "findings": "research/v13/00_v11_review_findings.md F08 (verifier: trace_gate.rs about lines 519-531, band, cell and tslot never compared), F09 (three refusals: no trace, unbound digest, broken chain), F12 (score after admission); trace_truth.md §1 'No satellite is enrolled'"
+   },
+   "date": "2026-10-02",
+   "value": null,
+   "check": {
+    "kind": "grep",
+    "file": "v13/00_v11_review_findings.md",
+    "arg": "SAT-042 exercises three refusals: no trace, unbound output digest, and a broken chain.",
+    "expect": null
+   },
+   "note": "the scope lines issue #14 asks for, inside the figure; 'no device is enrolled' means under orbital.satellite.v1 (the one live device is a Linux host under host.counters.v1)",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f15_sat042.py"
+  },
+  {
+   "id": "A15.kicker",
+   "block": "right column panel kicker above F15 (printed by the board from f15_sat042.labels.json)",
+   "print": [
+    "Extending verification from observations to execution"
+   ],
+   "status": "SPEC",
+   "layer": "n/a",
+   "source": {
+    "file": "repro/v12/trace/trace_truth.md",
+    "pointer": "§1 verdict: 'true as an implemented and tested protocol … not true as a live capability'; §8 title option 1 'with Signed Execution Traces'"
+   },
+   "date": "2026-10-02",
+   "value": null,
+   "check": null,
+   "note": "companion to K.sat042 ('Extending verification to execution: reference harness, no spacecraft enrolled.'); exempt role kicker",
+   "tier": "30cm",
+   "fallback": null,
+   "r5_key": null,
+   "checked": null,
+   "asserted_in": "poster/figs_v13/f15_sat042.py"
+  }
+ ]
+}

@@ -1,0 +1,515 @@
+{
+ "started_utc": "2026-10-01T05:29:07.329Z",
+ "base": "http://127.0.0.1:40697/esa_poster/",
+ "viewport": "390x844 DPR 2",
+ "pages": {
+  "landing": {
+   "url": "",
+   "status": 200,
+   "load_ms": 182,
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "EMEM at Agentic AI for EO 2026",
+   "h1": "Agents hand each other evidence references, not paraphrases.",
+   "errors": [],
+   "external_requests": [],
+   "ctas": [
+    [
+     "VIEW THE DEMO",
+     "./demo/"
+    ],
+    [
+     "TRY A TOKEN",
+     "./t/"
+    ],
+    [
+     "INSPECT THE RECORD",
+     "./r/"
+    ],
+    [
+     "RE-RUN THE TEST",
+     "./test/"
+    ],
+    [
+     "READ THE METHODS",
+     "./methods/"
+    ],
+    [
+     "DISCOVER INTEGRATIONS",
+     "./use/"
+    ]
+   ]
+  },
+  "demo_live": {
+   "url": "demo/",
+   "wall_s": 9.883,
+   "page_s": 9.83609999999986,
+   "board": {
+    "top": 658.375,
+    "bottom": 785.875,
+    "pills": [
+     "prose unchecked",
+     "M3 L0 refused",
+     "M4 L1 refused",
+     "M8 L0 refused",
+     "G0 accepted",
+     "L3 pixel re-read, matches"
+    ]
+   },
+   "lines": [
+    {
+     "id": "prose",
+     "line": "ACCEPTED, unchecked: no layer can be checked, so nothing is refused",
+     "layer": null,
+     "verdict": "ACCEPTED",
+     "checked": false
+    },
+    {
+     "id": "M3",
+     "line": "L0 refused: the bytes do not hash to the name",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M4",
+     "line": "L1 refused: the record is about another cell than the token names",
+     "layer": "L1",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M8",
+     "line": "L0 refused: no batch signed by the pinned key contains these bytes",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "G0",
+     "line": "ACCEPTED, checked at L0, L1, L2: hash, attestation signature, log inclusion and recompute all check",
+     "layer": "L0, L1, L2",
+     "verdict": "ACCEPTED",
+     "checked": true
+    }
+   ],
+   "l3": "L3 re-read: the named pixel of the named files gives the signed value, bit for bit.",
+   "south": "0.3016",
+   "live": {
+    "facts": {
+     "genuine": 200,
+     "same": true,
+     "forged": 404
+    },
+    "src": {
+     "B08": 3502,
+     "B04": 1900,
+     "b3": [
+      true,
+      true
+     ]
+    }
+   },
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "EMEM receiver demo",
+   "h1": "Change one field. The receiver refuses.",
+   "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ],
+   "external_requests": [
+    "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2",
+    "GET https://emem.dev/v1/facts/ylcx42oiamnly5e2dmqry2lfj2de2wgj5aalgpd5bgb5mr6nh52a",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA"
+   ]
+  },
+  "demo_fast": {
+   "url": "demo/?fast",
+   "wall_s": 2.298,
+   "page_s": 2.1955,
+   "board": {
+    "top": 658.375,
+    "bottom": 785.875,
+    "pills": [
+     "prose unchecked",
+     "M3 L0 refused",
+     "M4 L1 refused",
+     "M8 L0 refused",
+     "G0 accepted",
+     "L3 pixel re-read, matches"
+    ]
+   },
+   "lines": [
+    {
+     "id": "prose",
+     "line": "ACCEPTED, unchecked: no layer can be checked, so nothing is refused",
+     "layer": null,
+     "verdict": "ACCEPTED",
+     "checked": false
+    },
+    {
+     "id": "M3",
+     "line": "L0 refused: the bytes do not hash to the name",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M4",
+     "line": "L1 refused: the record is about another cell than the token names",
+     "layer": "L1",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M8",
+     "line": "L0 refused: no batch signed by the pinned key contains these bytes",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "G0",
+     "line": "ACCEPTED, checked at L0, L1, L2: hash, attestation signature, log inclusion and recompute all check",
+     "layer": "L0, L1, L2",
+     "verdict": "ACCEPTED",
+     "checked": true
+    }
+   ],
+   "l3": "L3 re-read: the named pixel of the named files gives the signed value, bit for bit.",
+   "south": "0.3016",
+   "live": {
+    "facts": {
+     "genuine": 200,
+     "same": true,
+     "forged": 404
+    },
+    "src": {
+     "B08": 3502,
+     "B04": 1900,
+     "b3": [
+      true,
+      true
+     ]
+    }
+   },
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "EMEM receiver demo",
+   "h1": "Change one field. The receiver refuses.",
+   "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ],
+   "external_requests": [
+    "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2",
+    "GET https://emem.dev/v1/facts/ylcx42oiamnly5e2dmqry2lfj2de2wgj5aalgpd5bgb5mr6nh52a",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA"
+   ]
+  },
+  "demo_throttled_4g": {
+   "url": "demo/",
+   "wall_s": 10.188,
+   "page_s": 9.782200000000186,
+   "board": {
+    "top": 658.375,
+    "bottom": 785.875,
+    "pills": [
+     "prose unchecked",
+     "M3 L0 refused",
+     "M4 L1 refused",
+     "M8 L0 refused",
+     "G0 accepted",
+     "L3 pixel re-read, matches"
+    ]
+   },
+   "lines": [
+    {
+     "id": "prose",
+     "line": "ACCEPTED, unchecked: no layer can be checked, so nothing is refused",
+     "layer": null,
+     "verdict": "ACCEPTED",
+     "checked": false
+    },
+    {
+     "id": "M3",
+     "line": "L0 refused: the bytes do not hash to the name",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M4",
+     "line": "L1 refused: the record is about another cell than the token names",
+     "layer": "L1",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M8",
+     "line": "L0 refused: no batch signed by the pinned key contains these bytes",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "G0",
+     "line": "ACCEPTED, checked at L0, L1, L2: hash, attestation signature, log inclusion and recompute all check",
+     "layer": "L0, L1, L2",
+     "verdict": "ACCEPTED",
+     "checked": true
+    }
+   ],
+   "l3": "L3 re-read: the named pixel of the named files gives the signed value, bit for bit.",
+   "south": "0.3016",
+   "live": {
+    "facts": {
+     "genuine": 200,
+     "same": true,
+     "forged": 404
+    },
+    "src": {
+     "B08": 3502,
+     "B04": 1900,
+     "b3": [
+      true,
+      true
+     ]
+    }
+   },
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "EMEM receiver demo",
+   "h1": "Change one field. The receiver refuses.",
+   "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ],
+   "external_requests": [
+    "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2",
+    "GET https://emem.dev/v1/facts/ylcx42oiamnly5e2dmqry2lfj2de2wgj5aalgpd5bgb5mr6nh52a",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
+    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA"
+   ]
+  },
+  "demo_offline": {
+   "url": "demo/?offline",
+   "wall_s": 9.871,
+   "page_s": 9.774600000000094,
+   "board": {
+    "top": 658.375,
+    "bottom": 770.875,
+    "pills": [
+     "prose unchecked",
+     "M3 L0 refused",
+     "M4 L1 refused",
+     "M8 L0 refused",
+     "G0 accepted",
+     "L3 pixel not re-read"
+    ]
+   },
+   "lines": [
+    {
+     "id": "prose",
+     "line": "ACCEPTED, unchecked: no layer can be checked, so nothing is refused",
+     "layer": null,
+     "verdict": "ACCEPTED",
+     "checked": false
+    },
+    {
+     "id": "M3",
+     "line": "L0 refused: the bytes do not hash to the name",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M4",
+     "line": "L1 refused: the record is about another cell than the token names",
+     "layer": "L1",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "M8",
+     "line": "L0 refused: no batch signed by the pinned key contains these bytes",
+     "layer": "L0",
+     "verdict": "REFUSED",
+     "checked": false
+    },
+    {
+     "id": "G0",
+     "line": "ACCEPTED, checked at L0, L1, L2: hash, attestation signature, log inclusion and recompute all check",
+     "layer": "L0, L1, L2",
+     "verdict": "ACCEPTED",
+     "checked": true
+    }
+   ],
+   "l3": "L3 not re-read on this device: the committed copy is shown",
+   "south": "0.3016",
+   "live": {
+    "facts": null,
+    "src": null
+   },
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "EMEM receiver demo",
+   "h1": "Change one field. The receiver refuses.",
+   "errors": [],
+   "external_requests": []
+  },
+  "demo_nojs": {
+   "url": "demo/ (JavaScript off)",
+   "summary_has_all_verdicts": true,
+   "errors": [],
+   "external_requests": [],
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "EMEM receiver demo",
+   "h1": "Change one field. The receiver refuses."
+  },
+  "transcript": {
+   "status": 200,
+   "bytes": 4113
+  },
+  "t": {
+   "url": "t/",
+   "ms_to_result": 500,
+   "real": {
+    "state": "ok",
+    "line": "ACCEPTED at L0 (re-hashed) and L1 (cell bound); signature, log, recompute and source not checked here",
+    "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "ms": 436,
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "cell": "defi.zb572.xoso.zb1ec",
+    "tslot": 20721,
+    "captured_at": "2026-09-25T05:42:51.024000Z",
+    "scheme": "sentinel_s2_l2a",
+    "name": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "bytes": 1115
+   },
+   "m4": "L1 refused: the record is about another cell than the token names",
+   "m7": "L0 refused: no record has this name",
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "TRY A TOKEN · EMEM",
+   "h1": "Try a token",
+   "errors": [
+    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+   ],
+   "external_requests": [
+    "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+    "GET https://emem.dev/v1/facts/pj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+   ]
+  },
+  "record": {
+   "url": "r/",
+   "status": 200,
+   "load_ms": 34,
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "INSPECT THE RECORD · EMEM",
+   "h1": "The record Agent A handed over",
+   "errors": [],
+   "external_requests": [],
+   "rows": 40
+  },
+  "test": {
+   "url": "test/",
+   "status": 200,
+   "load_ms": 80,
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "RE-RUN THE TEST · EMEM",
+   "h1": "Re-run the test",
+   "errors": [],
+   "external_requests": []
+  },
+  "methods": {
+   "url": "methods/",
+   "status": 200,
+   "load_ms": 65,
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "READ THE METHODS · EMEM",
+   "h1": "Methods",
+   "errors": [],
+   "external_requests": [],
+   "refs": 23
+  },
+  "use": {
+   "url": "use/",
+   "status": 200,
+   "load_ms": 50,
+   "scrollW": 390,
+   "innerW": 390,
+   "title": "DISCOVER INTEGRATIONS · EMEM",
+   "h1": "Where EMEM runs today",
+   "errors": [],
+   "external_requests": [],
+   "rows": 38,
+   "statuses": [
+    "LIVE",
+    "PROTOCOL",
+    "EXPERIMENTAL",
+    "REGISTRY",
+    "NOT FOUND",
+    "EXAMPLE"
+   ]
+  }
+ },
+ "blocked_writes": [],
+ "requests_external": [],
+ "failures": [],
+ "qr": [
+  {
+   "slug": "demo",
+   "payload": "https://vortx-ai.github.io/esa_poster/demo/",
+   "chromium_render_decoded": "https://vortx-ai.github.io/esa_poster/demo/",
+   "ok": true
+  },
+  {
+   "slug": "t",
+   "payload": "https://vortx-ai.github.io/esa_poster/t/",
+   "chromium_render_decoded": "https://vortx-ai.github.io/esa_poster/t/",
+   "ok": true
+  },
+  {
+   "slug": "r",
+   "payload": "https://vortx-ai.github.io/esa_poster/r/",
+   "chromium_render_decoded": "https://vortx-ai.github.io/esa_poster/r/",
+   "ok": true
+  },
+  {
+   "slug": "test",
+   "payload": "https://vortx-ai.github.io/esa_poster/test/",
+   "chromium_render_decoded": "https://vortx-ai.github.io/esa_poster/test/",
+   "ok": true
+  },
+  {
+   "slug": "methods",
+   "payload": "https://vortx-ai.github.io/esa_poster/methods/",
+   "chromium_render_decoded": "https://vortx-ai.github.io/esa_poster/methods/",
+   "ok": true
+  },
+  {
+   "slug": "use",
+   "payload": "https://vortx-ai.github.io/esa_poster/use/",
+   "chromium_render_decoded": "https://vortx-ai.github.io/esa_poster/use/",
+   "ok": true
+  }
+ ],
+ "posts_to_emem": 0,
+ "finished_utc": "2026-10-01T05:29:50.894Z"
+}

@@ -1,0 +1,52 @@
+{
+ "schema": "deliberate departures from research/v13/12_FINAL_BRIEF.md section B (v13.1 table, 2026-10-02); the block gate prints each with the rendered rectangle",
+ "deviations": {
+  "p1": {
+   "reason": "Spine content measures 183.5 mm (F2 118 mm, agent strip in two lines at 24 pt beside the R5 scope lines at 14 pt); it starts 3 mm under the header (brief 8) and ends 6.5 mm earlier, giving the three columns 18.5 mm."
+  },
+  "p2": {
+   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
+  },
+  "p3": {
+   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
+  },
+  "questions": {
+   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
+  },
+  "threat": {
+   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
+  },
+  "p4": {
+   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
+  },
+  "p5": {
+   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
+  },
+  "p6": {
+   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
+  },
+  "p12": {
+   "reason": "Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt, and (v13.1) the four-line agent-host caption sits above F11; F11 sits at the bottom of the panel."
+  },
+  "p13": {
+   "reason": "Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13, 1 mm higher in v13.1 with the ecosystem caption's fourth line); the F12 credit footnote moved into the footer paragraph to make room for the conclusion."
+  },
+  "conclusion": {
+   "reason": "Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50)."
+  },
+  "footer": {
+   "reason": "The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
+  }
+ },
+ "v13.2_notes": {
+  "date": "2026-10-02",
+  "what": "SAT-042 placed as panel 11 (compact strip F15b); the right column rows are in the brief section B 'v13.2 change' table, so p7 to p11 need no deviation entry",
+  "departures_from_the_plan": [
+   "F8 ladder drawn at 60 mm, not about 110: panels 8 to 10 keep 428 mm with their figures, so panel 7 and panel 11 share 199 mm; the kicker of panel 11 alone takes two lines at 24 pt (200 mm of text in a 193.5 mm column)",
+   "F15b strip 60 mm, not 70: its three rows end at 60 mm at 14 pt; the 10 mm were needed for the column",
+   "panel 7 prints no mechanism line ('Each rung names what it still trusts.' would be false without the trust lines) and no caption (the rungs print the counts; the threat model and the conclusion carry the entity, sensor and decision scope)",
+   "panel 11 headline at 28 pt, one line (32 pt wraps to two: 198 mm)",
+   "the ladder's 'still trusted' lines and the 409 are not printed (one evidence line per rung)"
+  ]
+ }
+}

@@ -7,7 +7,7 @@ cube = json.load(open("../data/cubeK_members.json"))["cube_token"]
 rs = json.load(open("rasterset_mint.json"))["tokens"]["raster_bundle"]
 bundle = json.load(open("bundle_mint.json"))["bundle_token"]
 STEPS = [
- ("the board, seal box blank", N + "en6hzctku7in4bocyazwtimkou.md", "pointer.v1"),
+ ("the board, seal box blank", N + "xu344qmkdclad4wvcanuvf6qgy.md", "pointer.v1"),
  ("Sentinel-2 B08 COG, 292 tiles", N + "khiqtqrddb6jponqn4gv72if7e.md", "pointer.v1"),
  ("Sentinel-2 B04 COG, 292 tiles", N + "h6d7xdoc5b2uzood22lowblbc4.md", "pointer.v1"),
  ("NDVI record, Keylong, 25 Sep 2026", F("ndvi_keylong"), "fact"),
@@ -28,13 +28,15 @@ STEPS = [
  ("sizes and the authors scorecard", N + "eoe5s4arfksqtpd66rczwetviq.md", "pointer.v1"),
  ("the record and 19 withdrawals", N + "izycf6molcl5z53fkolqly57ze.md", "pointer.v1"),
  ("paraphrase-trap value, 17 Jul", F("ndvi_trap_17jul"), "fact"),
- ("the measurements behind the board", N + "67alr3czauetbdatbqs36mr6tq.md", "pointer.v1"),
+ ("the measurements behind the board", N + "6wmlonyq2jy7u24vcyx43afh5q.md", "pointer.v1"),
  ("CHANGELOG line 77, encoders retired", N + "jk7pfvdydjfdf5hxs3uozqaita.md", "pointer.v1"),
  ("memory.md, TESSERA frozen", N + "f5hxjofpbmgzdialjilueeartu.md", "pointer.v1"),
  ("results table and the safety result", N + "ay2lfw4pehm52gjzyn7rnu4szq.md", "pointer.v1"),
  ("README, the device gate", N + "74gntpglvsg466a5vgevbvteme.md", "pointer.v1"),
  ("B04, 23 Sep, containing pixel", "emem:fact:defi.zb572.xoso.zb1ec:aorer7jtgzrjkjospacmula5rd65tev7uyndw3taogg7trmg2a2q", "fact"),
  ("B08, 23 Sep, containing pixel", "emem:fact:defi.zb572.xoso.zb1ec:flf5bk4qry32c3exazagp66gs2gzdhafx7heqqsslsuvn43ad5bq", "fact"),
+ ("the Keylong cell, 13 products", "emem:cell:defi.zb572.xoso.zb1ec", "cell"),
+ ("an ask reasoning stage, scored", "emem:state:ppfjf5temruiwyrmakafsakuiulgh2yqhuuo5g5xy5wibtmnvyrq", "state"),
 ]
 assert all(len(l) <= 40 and ":" not in l for l, _, _ in STEPS)
 link = cid(b""); rows = []

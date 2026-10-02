@@ -1,0 +1,1 @@
+{"t": 1790832883.1644177, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:q22j6noye2dupifnqroyb25o3nrxtisfnyor5u3ohdjxiy3heb3a"}, "is_error": true, "ms": 0.78, "meta": {"verdict": false, "first_fail": "source"}, "text": "refused: source check failed: signed DNs [2720.0, 1923.0] != containing pixel [3502.0, 1900.0] in the source COG"}

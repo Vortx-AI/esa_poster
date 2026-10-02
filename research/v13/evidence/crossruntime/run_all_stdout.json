@@ -1,0 +1,249 @@
+{
+ "ndvi_keylong": {
+  "paths_run": 11,
+  "paths_ok": 11,
+  "distinct_fact_cids": [
+   "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+  ],
+  "distinct_values": [
+   "0.4708994708994709"
+  ],
+  "all_rehash_ok": true,
+  "receipt_verified_paths": 9,
+  "receipt_not_available_paths": [
+   "6a_llamaindex_FunctionTool",
+   "7_independent_blake3_cbor2"
+  ],
+  "matrix": [
+   {
+    "path": "1_raw_rest",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 223.5
+   },
+   {
+    "path": "2_raw_mcp_jsonrpc",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 223.7
+   },
+   {
+    "path": "3_a2a_message_send",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 226.3
+   },
+   {
+    "path": "4_python_sdk_ememdev",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 207.7
+   },
+   {
+    "path": "5_typescript_sdk_@vortxai/emem",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 58.6
+   },
+   {
+    "path": "6a_llamaindex_FunctionTool",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": null,
+    "ms": 300.8
+   },
+   {
+    "path": "6b_langchain_mcp_adapters",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 1176.8
+   },
+   {
+    "path": "6c_official_mcp_python_sdk",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 56.3
+   },
+   {
+    "path": "6d_official_mcp_typescript_sdk",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 58.3
+   },
+   {
+    "path": "7_independent_blake3_cbor2",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": null,
+    "ms": 235.6
+   },
+   {
+    "path": "A->B_isolated_processes",
+    "cid": "oj5ceccile62",
+    "value": 0.4708994708994709,
+    "band": "indices.ndvi",
+    "tslot": 20721,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 772.8
+   }
+  ]
+ },
+ "elev_bengaluru_may": {
+  "paths_run": 10,
+  "paths_ok": 10,
+  "distinct_fact_cids": [
+   "yqbolgeoycqkvj3zkxukb4bjw4odhpwvfzqo3fbgwf4spk45zala"
+  ],
+  "distinct_values": [
+   "918",
+   "918.0"
+  ],
+  "all_rehash_ok": true,
+  "receipt_verified_paths": 8,
+  "receipt_not_available_paths": [
+   "6a_llamaindex_FunctionTool",
+   "7_independent_blake3_cbor2"
+  ],
+  "matrix": [
+   {
+    "path": "1_raw_rest",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 224.6
+   },
+   {
+    "path": "2_raw_mcp_jsonrpc",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 241.7
+   },
+   {
+    "path": "3_a2a_message_send",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 217.6
+   },
+   {
+    "path": "4_python_sdk_ememdev",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 189.7
+   },
+   {
+    "path": "5_typescript_sdk_@vortxai/emem",
+    "cid": "yqbolgeoycqk",
+    "value": 918,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 54
+   },
+   {
+    "path": "6a_llamaindex_FunctionTool",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": null,
+    "ms": 301.0
+   },
+   {
+    "path": "6b_langchain_mcp_adapters",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 1172.4
+   },
+   {
+    "path": "6c_official_mcp_python_sdk",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 52.3
+   },
+   {
+    "path": "6d_official_mcp_typescript_sdk",
+    "cid": "yqbolgeoycqk",
+    "value": 918,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": true,
+    "ms": 59.1
+   },
+   {
+    "path": "7_independent_blake3_cbor2",
+    "cid": "yqbolgeoycqk",
+    "value": 918.0,
+    "band": "copdem30m.elevation_mean",
+    "tslot": 0,
+    "rehash_ok": true,
+    "receipt_ok": null,
+    "ms": 228.0
+   }
+  ]
+ }
+}

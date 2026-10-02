@@ -1,0 +1,18 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+content-type: text/event-stream
+date: Wed, 30 Sep 2026 09:36:24 GMT
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+server: ServerTokens ProductOnly
+cache-control: no-cache, no-transform
+mcp-session-id: 33ef80f27d884f20b3eeb97a7aac5a16
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-request-id: F4MKh7qSa88Pw6qX9VVz7G_4YBE7H3h1QmzBpa11x4gisLuKiX4wfg==
+x-cache: Miss from cloudfront
+via: 1.1 701ed6d11cb535ec9687bbfbe3b14bc0.cloudfront.net (CloudFront)
+x-amz-cf-pop: AMS1-P2
+x-amz-cf-id: F4MKh7qSa88Pw6qX9VVz7G_4YBE7H3h1QmzBpa11x4gisLuKiX4wfg==
+

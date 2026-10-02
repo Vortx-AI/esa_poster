@@ -1,3 +1,28 @@
+# The poster: v13, the final A0 (1 Oct 2026)
+
+| file | what it is |
+|---|---|
+| `emem-poster-A0.pdf` | the print file, 841 × 1189 mm, sha256 `6d0f493b…14a5d`, at commit `e66c3ba` |
+| `emem-poster-preview.png` | 3179 × 4495 px preview; `emem-poster-A0-300dpi.png` for proofing |
+| `src/poster.v13.html`, `src/poster.v13.css` | the source; `build_v13.py` renders it and runs 17 gates (see `AGENTS.md`) |
+| `fig/v13/` | 12 figures and 3 diagrams drawn 1:1 from data files by `figs_v13/*.py`; six QR codes |
+| `build_v13_report.json` | the last build's gates, type deviations and the R5 lines as printed |
+
+Specification: `research/v13/12_FINAL_BRIEF.md`. Every number on the face has a row in `research/v13/12_claims_map*.json`.
+Main result: R5, the pre-registered agent-to-agent handoff (`research/repro/v13/r5/results.md`).
+Reviews applied before print: `research/v13/13_review_fixes.md` (23 confirmed findings from four adversarial reviewers).
+
+The printed board is itself a step of a signed emem track (21 steps: every record the board rests on, then the print
+file as a pointer note). ememdemo checks 21 of 21; head `ct2yz27kkkrh64emgdzs7bybgy`; log entry 2,591,968.
+Link: https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fhepwyxdhiwckwi7qahkuvya2b4.md
+It is reached from the INSPECT THE RECORD page (`docs/r/`), so the board face carries no seal box and no hash cycle.
+Composer: `research/repro/v13/track/make_track_v13.py`.
+
+The QR codes open `https://vortx-ai.github.io/esa_poster/…` (`docs/`, built by `build_site.py`); they work once GitHub
+Pages is enabled on `main` → `/docs` and this branch is merged.
+
+---
+
 # The poster: A0 portrait, print-ready (v11)
 
 | file | what it is |
@@ -57,6 +82,26 @@ Why the board changed, and what is still open before printing:
 - **Editing:** read `../research/should_do/18_V11_PROCESS_AND_HANDOFF.md` first.
 - **Seal:** the QR still opens the v10 evidence track `7n7qogvn…` (28 of 28), whose steps the § marks cite.
   Resealing v11 is listed as open work.
+
+## v11: the token family, one address (30 Sep 2026)
+
+- **Seal track:** `njedkglt/qfkcuqcmhvswbe5slcyoxjkwoe.md`, with 30 of 30 steps checked in ememdemo.
+- **Head:** `sxmlncauzwifezmahgyo7mpkti`. The track is log entry 2,573,960.
+- **Hashed board:** board.jpg with the seal box blank, at commit `6eb27a9` (sha256 `42690cb9…`).
+
+What changed:
+
+- **The token family.** A 14-row table next to the lead shows each data need, the token that addresses it, exactly what its id hashes, and where it appears on the board. The kinds are:
+  - place, one value, absence, embedding, derived value;
+  - raster, cube, rasterset, bundle;
+  - tree (a file, one chunk), state (a reasoning stage);
+  - entity, trace (a device run), track.
+
+  An embedding is one row of fourteen.
+- **One address, every product** (panel 3). One cell, Keylong, `emem:cell:defi.zb572.xoso.zb1ec` (§29), holds 207 signed facts from 13 products: Sentinel-2 B04, B08, SCL, NDVI, NDWI and NBR, Sentinel-1 VV, Copernicus DEM, JRC surface water, DMSP night lights, met.no temperature, and the TESSERA and Prithvi embeddings. The current fact for each product re-hashes, 13 of 13.
+- **Reasoning stages as tokens.** Every stage of an `/v1/ask` answer (located, routed, recalled, scored) carries an `emem:state:` address. All four recompute from the published fields with stock cbor2 + blake3 (`research/repro/data/v11/recompute_state.py`). The scored stage is §30.
+- **Defect 37.** `/v1/ask` read "Keylong" as the town point 597 m away and ignored the coordinates in the question.
+- **Layout.** Panels are renumbered 1–13 in reading order, "integrity elsewhere" was removed, and the zoom went from 1.0 to 0.95.
 
 ## v10: the algorithms on the board (30 Sep 2026)
 

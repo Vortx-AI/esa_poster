@@ -1,0 +1,52 @@
+{
+ "png_size": [
+  981,
+  960
+ ],
+ "square_png_bbox": [
+  476,
+  364,
+  501,
+  390
+ ],
+ "square_png_centre": [
+  488.5,
+  377.0
+ ],
+ "square_centre_in_raster_coords": [
+  225.79603672116252,
+  212.21833457391318
+ ],
+ "square_centre_intended_by_code": [
+  225.9299999999718,
+  212.23050000001234
+ ],
+ "square_pixel_rc": [
+  212,
+  226
+ ],
+ "fact_point_raster_coords": [
+  224.82732190324458,
+  212.07357191108167
+ ],
+ "fact_pixel_rc": [
+  212,
+  225
+ ],
+ "offset_data_px": [
+  0.9687148179179417,
+  0.14476266283151062
+ ],
+ "offset_m_east_south": [
+  9.687148179179417,
+  1.4476266283151062
+ ],
+ "png_px_per_raster_px": 1.7722966887417186,
+ "ndvi_at_fact_pixel": 0.4708994708994709,
+ "ndvi_at_square_pixel": 0.5383280300838877,
+ "nodata_pixel_335_401": {
+  "B04": 0.0,
+  "B08": 243.0,
+  "ndvi": 1.0
+ }
+}

@@ -1,0 +1,1 @@
+{"t": 1790844857.4981105, "name": "resolve_verified", "args": {"token": "emem:fact:defi.zb572.xoso.zb1ec:ezs2hn7psaynfitpzcov4my5vtyxy44re2egie4hmwsupf43mk7q"}, "is_error": true, "ms": 3.342, "meta": {"verdict": false, "first_fail": "binding"}, "text": "refused: binding check failed: record band indices.nbr != question band indices.ndvi"}

@@ -1,0 +1,657 @@
+{
+ "generated_by": "research/repro/v13/eight_answers.py",
+ "generated_utc": "2026-10-01T05:44:41Z",
+ "mode": "live",
+ "question": {
+  "cell": "defi.zb572.xoso.zb1ec",
+  "band": "indices.ndvi",
+  "tslot": 20721,
+  "date": "2026-09-25",
+  "point": [
+   32.57125977099409,
+   77.03447748052537
+  ],
+  "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+ },
+ "rule": {
+  "text": "irrigate iff NDVI <= 0.4705",
+  "threshold": 0.4705,
+  "status": "constructed test rule (pre-registered)"
+ },
+ "all_rederived": true,
+ "summary": {
+  "crosses_rule": 6,
+  "impossible": 1,
+  "right": 1
+ },
+ "answers": [
+  {
+   "key": "right",
+   "claim": "E8.right",
+   "label": "signed record",
+   "value": 0.4708994708994709,
+   "print": "0.4709",
+   "dot": "filled",
+   "check": null,
+   "layer": null,
+   "decision": "hold",
+   "provenance": [
+    {
+     "kind": "committed",
+     "file": "research/repro/v8/proof_bundle_ndvi.cbor",
+     "pointer": "fact bytes",
+     "check": "BLAKE3 of 1115 B = oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+    },
+    {
+     "kind": "committed",
+     "file": "research/repro/v8/proof_bundle_ndvi.cbor",
+     "pointer": "derivation.args DNs + offset",
+     "recomputed": 0.4708994708994709,
+     "equal": true
+    },
+    {
+     "kind": "committed",
+     "file": "research/repro/data/v8/pixel_check.json",
+     "pointer": "S2A ... ndvi_floor_pixel",
+     "value": 0.4708994708994709,
+     "equal": true
+    },
+    {
+     "kind": "live",
+     "source": "Planetary Computer COG (the record's own source files)",
+     "DN_B08_B04": [
+      3502,
+      1900
+     ],
+     "equal_signed_DNs": true
+    },
+    {
+     "kind": "live",
+     "source": "Element84 S2A_43SFS_20260925_1_L2A COG (offset already applied)",
+     "DN_B08_B04": [
+      2502,
+      900
+     ],
+     "ndvi": 0.4708994708994709,
+     "equal": true
+    }
+   ],
+   "rederived": true,
+   "note": ""
+  },
+  {
+   "key": "rounded",
+   "claim": "E8.rounded",
+   "label": "rounded in prose",
+   "value": 0.47,
+   "print": "0.47",
+   "dot": "hollow",
+   "check": "resolve",
+   "layer": "L0",
+   "decision": "irrigate",
+   "provenance": [
+    {
+     "kind": "committed",
+     "file": "research/repro/v11/mutation_suite.py",
+     "pointer": "m_stated_round(genuine())['stated']",
+     "value": "0.47"
+    },
+    {
+     "kind": "committed",
+     "file": "research/repro/data/v8/results.json",
+     "pointer": "b.claude-haiku-4-5.arms.R.decisions",
+     "value": {
+      "IRRIGATE": 5,
+      "HOLD": 0,
+      "DECLINE": 0,
+      "null": 0
+     },
+     "n": 5
+    },
+    {
+     "kind": "committed",
+     "file": "research/repro/data/v8/prereg.md",
+     "pointer": "line 16: 0.4708994708994709 -> \"0.47\""
+    }
+   ],
+   "rederived": true,
+   "note": "value as handed in prose; formatted to 4 decimals only for the axis; printed as 0.47"
+  },
+  {
+   "key": "s2b",
+   "claim": "E8.s2b",
+   "label": "other satellite, same day",
+   "value": 0.43697945585785675,
+   "print": "0.4370",
+   "dot": "filled",
+   "check": "scene id",
+   "layer": "L1",
+   "decision": "irrigate",
+   "provenance": [
+    {
+     "kind": "live",
+     "source": "Element84 S2B_43SFS_20260925_0_L2A COG",
+     "url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2B_43SFS_20260925_0_L2A/B04.tif",
+     "DN_B08_B04": [
+      2588,
+      1014
+     ],
+     "boa_offset_applied": true,
+     "product_uri": "S2B_MSIL2A_20260925T052649_N0513_R105_T43SFS_20260925T092202.SAFE"
+    },
+    {
+     "kind": "reference",
+     "file": "research/v13/05_failure_modes_catastrophe.md",
+     "pointer": "sec. 4.2 (1014/2588)",
+     "equal": true
+    }
+   ],
+   "rederived": true,
+   "note": ""
+  },
+  {
+   "key": "newer",
+   "claim": "E8.newer",
+   "label": "30 Sep record handed as 25 Sep",
+   "value": 0.42369991474850816,
+   "print": "0.4237",
+   "dot": "filled",
+   "check": "date",
+   "layer": "L1",
+   "decision": "irrigate",
+   "provenance": [
+    {
+     "kind": "committed",
+     "file": "research/repro/data/v11/cell_products.json",
+     "pointer": "band=indices.ndvi value",
+     "cid": "3yyaxn5dvvutqukhtycog2y6ab2hfnzlcnf56qlevgnnare3nnsa",
+     "tslot": 20726,
+     "signed_at": "2026-09-30T22:20:02Z"
+    },
+    {
+     "kind": "committed",
+     "file": "research/repro/v13/r5/frozen/3yyaxn5d.cbor",
+     "pointer": "bytes (re-hashed to the token)",
+     "token": "emem:fact:defi.zb572.xoso.zb1ec:3yyaxn5dvvutqukhtycog2y6ab2hfnzlcnf56qlevgnnare3nnsa",
+     "bytes": 1143,
+     "scene": "S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304",
+     "DN_B08_B04": [
+      3505.0,
+      2014.0
+     ],
+     "offset": -1000.0,
+     "recomputed": 0.4236999147485081,
+     "equal": true
+    },
+    {
+     "kind": "live",
+     "source": "Element84 S2C_43SFS_20260930_0_L2A COG",
+     "DN_B08_B04": [
+      2505,
+      1014
+     ],
+     "ndvi": 0.4236999147485081,
+     "equal": true
+    }
+   ],
+   "rederived": true,
+   "note": ""
+  },
+  {
+   "key": "neighbour",
+   "claim": "E8.neighbour",
+   "label": "neighbour pixel",
+   "value": 0.3015512674990541,
+   "print": "0.3016",
+   "dot": "hollow",
+   "check": "re-read pixel",
+   "layer": "L3",
+   "decision": "irrigate",
+   "provenance": [
+    {
+     "kind": "committed",
+     "file": "research/repro/data/v8/pixel_check.json",
+     "pointer": "S2A ... round_DN, ndvi_round_pixel",
+     "recomputed": 0.3015512674990541,
+     "equal": true
+    },
+    {
+     "kind": "live",
+     "source": "Planetary Computer COG, round(row, col)",
+     "DN_B08_B04": [
+      2720,
+      1923
+     ],
+     "ndvi": 0.3015512674990541,
+     "equal": true
+    }
+   ],
+   "rederived": true,
+   "note": ""
+  },
+  {
+   "key": "offset0",
+   "claim": "E8.offset0",
+   "label": "offset left out",
+   "value": 0.29655683080340617,
+   "print": "0.2966",
+   "dot": "hollow",
+   "check": "catalogue offset",
+   "layer": "L3",
+   "decision": "irrigate",
+   "provenance": [
+    {
+     "kind": "committed",
+     "file": "research/repro/v8/proof_bundle_ndvi.cbor",
+     "pointer": "derivation.args DNs",
+     "DN_B08_B04": [
+      3502.0,
+      1900.0
+     ],
+     "formula": "(B08 - B04) / (B08 + B04)"
+    },
+    {
+     "kind": "live",
+     "source": "Planetary Computer COG",
+     "DN_B08_B04": [
+      3502,
+      1900
+     ],
+     "equal_signed_DNs": true
+    }
+   ],
+   "rederived": true,
+   "note": ""
+  },
+  {
+   "key": "place",
+   "claim": "E8.place",
+   "label": "town point 597 m away (30 Sep)",
+   "value": 0.28244274809160314,
+   "print": "0.2824",
+   "dot": "filled",
+   "check": "asked coordinates",
+   "layer": "L1",
+   "decision": "irrigate",
+   "provenance": [
+    {
+     "kind": "committed",
+     "file": "research/repro/data/v11/ask_keylong.json",
+     "pointer": "band_observations_summary indices.ndvi",
+     "fact_cid": "p6ewjnlqo5npzooyrlak7gwtia23s2vlnb435xbxz3ycusv7auta"
+    },
+    {
+     "kind": "committed",
+     "file": "research/repro/data/v11/ask_keylong.json",
+     "pointer": "question vs place_resolved",
+     "asked": [
+      32.57126,
+      77.03448
+     ],
+     "answered": [
+      32.5717891,
+      77.0281479
+     ],
+     "geodesic_m_wgs84": 597.49
+    },
+    {
+     "kind": "committed",
+     "file": "research/repro/v13/r5/frozen/p6ewjnlq.cbor",
+     "pointer": "bytes (re-hashed to the token)",
+     "token": "emem:fact:defi.zb572.xAnI.zb1a2:p6ewjnlqo5npzooyrlak7gwtia23s2vlnb435xbxz3ycusv7auta",
+     "bytes": 1141,
+     "read_point": [
+      32.57177475537051,
+      77.0281260080638
+     ],
+     "scene": "S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304",
+     "DN_B08_B04": [
+      3688.0,
+      2504.0
+     ],
+     "offset": -1000.0,
+     "recomputed": 0.2824427480916031,
+     "equal": true
+    },
+    {
+     "kind": "live",
+     "source": "Planetary Computer COG, S2C 30 Sep, the record's read point",
+     "item": "S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304",
+     "DN_B08_B04": [
+      3688,
+      2504
+     ],
+     "ndvi": 0.2824427480916031,
+     "equal": true
+    }
+   ],
+   "rederived": true,
+   "note": "",
+   "distance_m": 597.4868524395825
+  },
+  {
+   "key": "double",
+   "claim": "E8.double",
+   "label": "offset applied twice",
+   "value": 1.14265335235378,
+   "print": "1.1427",
+   "dot": "hollow",
+   "check": "range",
+   "layer": "L2",
+   "decision": "invalid",
+   "provenance": [
+    {
+     "kind": "live",
+     "source": "Element84 S2A_43SFS_20260925_1_L2A item + COG",
+     "DN_B08_B04": [
+      2502,
+      900
+     ],
+     "raster_bands": {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     },
+     "boa_offset_applied": true
+    },
+    {
+     "kind": "committed",
+     "file": "research/v13/evidence/failure_modes/e84_keylong.json",
+     "pointer": "S2A_43SFS_20260925_1_L2A assets.red raster:bands",
+     "value": {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     },
+     "equal_live": true
+    }
+   ],
+   "rederived": true,
+   "note": ""
+  }
+ ],
+ "live": {
+  "fetched_utc": "2026-10-01T05:44:31Z",
+  "e84_items": {
+   "S2C_43SFS_20260930_0_L2A": {
+    "red": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260930_0_L2A/B04.tif",
+    "nir": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260930_0_L2A/B08.tif",
+    "boa_offset_applied": true,
+    "processing_baseline": "05.13",
+    "red_raster_bands": [
+     {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     }
+    ],
+    "cloud": 28.26654,
+    "product_uri": "S2C_MSIL2A_20260930T052651_N0513_R105_T43SFS_20260930T102304.SAFE"
+   },
+   "S2B_43SFS_20260928_0_L2A": {
+    "red": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2B_43SFS_20260928_0_L2A/B04.tif",
+    "nir": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2B_43SFS_20260928_0_L2A/B08.tif",
+    "boa_offset_applied": true,
+    "processing_baseline": "05.13",
+    "red_raster_bands": [
+     {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     }
+    ],
+    "cloud": 97.325701,
+    "product_uri": "S2B_MSIL2A_20260928T053639_N0513_R005_T43SFS_20260928T093404.SAFE"
+   },
+   "S2A_43SFS_20260925_1_L2A": {
+    "red": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2A_43SFS_20260925_1_L2A/B04.tif",
+    "nir": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2A_43SFS_20260925_1_L2A/B08.tif",
+    "boa_offset_applied": true,
+    "processing_baseline": "05.13",
+    "red_raster_bands": [
+     {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     }
+    ],
+    "cloud": 10.840102,
+    "product_uri": "S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE"
+   },
+   "S2B_43SFS_20260925_0_L2A": {
+    "red": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2B_43SFS_20260925_0_L2A/B04.tif",
+    "nir": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2B_43SFS_20260925_0_L2A/B08.tif",
+    "boa_offset_applied": true,
+    "processing_baseline": "05.13",
+    "red_raster_bands": [
+     {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     }
+    ],
+    "cloud": 1.588229,
+    "product_uri": "S2B_MSIL2A_20260925T052649_N0513_R105_T43SFS_20260925T092202.SAFE"
+   },
+   "S2C_43SFS_20260923_0_L2A": {
+    "red": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260923_0_L2A/B04.tif",
+    "nir": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260923_0_L2A/B08.tif",
+    "boa_offset_applied": true,
+    "processing_baseline": "05.13",
+    "red_raster_bands": [
+     {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     }
+    ],
+    "cloud": 20.023987,
+    "product_uri": "S2C_MSIL2A_20260923T053641_N0513_R005_T43SFS_20260923T101809.SAFE"
+   },
+   "S2C_43SFS_20260920_0_L2A": {
+    "red": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260920_0_L2A/B04.tif",
+    "nir": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260920_0_L2A/B08.tif",
+    "boa_offset_applied": true,
+    "processing_baseline": "05.12",
+    "red_raster_bands": [
+     {
+      "nodata": 0,
+      "data_type": "uint16",
+      "spatial_resolution": 10,
+      "scale": 0.0001,
+      "offset": -0.1
+     }
+    ],
+    "cloud": 28.512567,
+    "product_uri": "S2C_MSIL2A_20260920T052651_N0512_R105_T43SFS_20260920T102311.SAFE"
+   }
+  },
+  "mpc_items": {
+   "S2A_25Sep": {
+    "id": "S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015",
+    "B04": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif",
+    "B08": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+    "processing_baseline": "05.13"
+   },
+   "S2C_30Sep": {
+    "id": "S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304",
+    "B04": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/30/S2C_MSIL2A_20260930T052651_N0513_R105_T43SFS_20260930T102304.SAFE/GRANULE/L2A_T43SFS_A010800_20260930T053540/IMG_DATA/R10m/T43SFS_20260930T052651_B04_10m.tif",
+    "B08": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/30/S2C_MSIL2A_20260930T052651_N0513_R105_T43SFS_20260930T102304.SAFE/GRANULE/L2A_T43SFS_A010800_20260930T053540/IMG_DATA/R10m/T43SFS_20260930T052651_B08_10m.tif",
+    "processing_baseline": "05.13"
+   }
+  },
+  "reads": {
+   "mpc.S2A_25Sep.B08.floor": {
+    "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 3502
+   },
+   "mpc.S2A_25Sep.B04.floor": {
+    "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 1900
+   },
+   "e84.S2A_43SFS_20260925_1_L2A.B08.floor": {
+    "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2A_43SFS_20260925_1_L2A/B08.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 2502
+   },
+   "e84.S2A_43SFS_20260925_1_L2A.B04.floor": {
+    "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2A_43SFS_20260925_1_L2A/B04.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 900
+   },
+   "e84.S2B_43SFS_20260925_0_L2A.B08.floor": {
+    "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2B_43SFS_20260925_0_L2A/B08.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 2588
+   },
+   "e84.S2B_43SFS_20260925_0_L2A.B04.floor": {
+    "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2B_43SFS_20260925_0_L2A/B04.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 1014
+   },
+   "e84.S2C_43SFS_20260930_0_L2A.B08.floor": {
+    "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260930_0_L2A/B08.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 2505
+   },
+   "e84.S2C_43SFS_20260930_0_L2A.B04.floor": {
+    "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/S/FS/2026/9/S2C_43SFS_20260930_0_L2A/B04.tif",
+    "pixel_row_col": [
+     9443,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "floor",
+    "DN": 1014
+   },
+   "mpc.S2A_25Sep.B08.round": {
+    "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B08_10m.tif",
+    "pixel_row_col": [
+     9444,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "round",
+    "DN": 2720
+   },
+   "mpc.S2A_25Sep.B04.round": {
+    "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SAFE/GRANULE/L2A_T43SFS_A058804_20260925T054245/IMG_DATA/R10m/T43SFS_20260925T054251_B04_10m.tif",
+    "pixel_row_col": [
+     9444,
+     9098
+    ],
+    "fractional_row_col": [
+     9443.5736,
+     9098.3273
+    ],
+    "rule": "round",
+    "DN": 1923
+   },
+   "mpc.S2C_30Sep.B08.floor": {
+    "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/30/S2C_MSIL2A_20260930T052651_N0513_R105_T43SFS_20260930T102304.SAFE/GRANULE/L2A_T43SFS_A010800_20260930T053540/IMG_DATA/R10m/T43SFS_20260930T052651_B08_10m.tif",
+    "pixel_row_col": [
+     9439,
+     9038
+    ],
+    "fractional_row_col": [
+     9439.002,
+     9038.5845
+    ],
+    "rule": "floor",
+    "DN": 3688
+   },
+   "mpc.S2C_30Sep.B04.floor": {
+    "href": "https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/30/S2C_MSIL2A_20260930T052651_N0513_R105_T43SFS_20260930T102304.SAFE/GRANULE/L2A_T43SFS_A010800_20260930T053540/IMG_DATA/R10m/T43SFS_20260930T052651_B04_10m.tif",
+    "pixel_row_col": [
+     9439,
+     9038
+    ],
+    "fractional_row_col": [
+     9439.002,
+     9038.5845
+    ],
+    "rule": "floor",
+    "DN": 2504
+   }
+  },
+  "errors": []
+ }
+}

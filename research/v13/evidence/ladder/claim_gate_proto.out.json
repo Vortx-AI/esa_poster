@@ -1,0 +1,218 @@
+[
+ {
+  "where": "fig fig/v12/encoding.svg",
+  "rule": "verified-without-layer",
+  "match": "verified",
+  "context": "nd | attested execution (a reading bound inside a verified device trace)."
+ },
+ {
+  "where": "fig fig/v12/model.svg",
+  "rule": "novelty/absolute",
+  "match": "only",
+  "context": ",\\ t_{\\mathrm{from}},\\ t_{\\mathrm{to}})$ | append-only; a change is a new observation that supersedes, n"
+ },
+ {
+  "where": "fig fig/v12/model.svg",
+  "rule": "absolute",
+  "match": "never",
+  "context": "y; a change is a new observation that supersedes, never an overwrite | recall | $\\mathrm{recall}(M, a, b\\"
+ },
+ {
+  "where": "fig fig/v12/model.svg",
+  "rule": "facts carry no signature",
+  "match": "Ed25519}(\\,\\mathrm{BLAKE3}(\\mathrm{body})",
+  "context": "OR}_{\\mathrm{canonical}}(O)\\,),\\qquad s = \\mathrm{Ed25519}(\\,\\mathrm{BLAKE3}(\\mathrm{body})\\,)$ | equal values give equal bytes give equal na"
+ },
+ {
+  "where": "fig fig/v12/model.svg",
+  "rule": "signer and signed_at are hashed",
+  "match": "equal values give equal",
+  "context": "m{Ed25519}(\\,\\mathrm{BLAKE3}(\\mathrm{body})\\,)$ | equal values give equal bytes give equal names; one changed bit is a new "
+ },
+ {
+  "where": "fig fig/v12/m15.svg",
+  "rule": "novelty/absolute",
+  "match": "Only",
+  "context": "mpute all pass: the signer | signed what it read. Only re-reading the named pixel refuses it. | Seen in "
+ },
+ {
+  "where": "fig fig/v12/m15.svg",
+  "rule": "universal",
+  "match": "all",
+  "context": "| I | hash, binding, signature, log and recompute all pass: the signer | signed what it read. Only re-r"
+ },
+ {
+  "where": "poster.v12.html:5",
+  "rule": "verified-without-layer",
+  "match": "verifiable",
+  "context": "EMEM: a content-addressed, verifiable Earth-memory protocol for AI agents over satellit"
+ },
+ {
+  "where": "poster.v12.html:111",
+  "rule": "verified-without-layer",
+  "match": "Verifiable",
+  "context": "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Earth-Ob"
+ },
+ {
+  "where": "poster.v12.html:113",
+  "rule": "universal",
+  "match": "Every",
+  "context": "Every number an agent cites resolves to signed bytes an"
+ },
+ {
+  "where": "poster.v12.html:116",
+  "rule": "universal",
+  "match": "any",
+  "context": "Check any token emem.dev/verify"
+ },
+ {
+  "where": "poster.v12.html:116",
+  "rule": "verified-without-layer",
+  "match": "verify",
+  "context": "Check any token emem.dev/verify"
+ },
+ {
+  "where": "poster.v12.html:128",
+  "rule": "universal",
+  "match": "all",
+  "context": " Under pressure, the 3 pairs that still agree are all wrong."
+ },
+ {
+  "where": "poster.v12.html:132",
+  "rule": "cid-is-not-a-source-hash",
+  "match": "hash of its bytes",
+  "context": "Name each satellite observation by the hash of its bytes. Pass the name, not a sentence about it."
+ },
+ {
+  "where": "poster.v12.html:145",
+  "rule": "universal",
+  "match": "every",
+  "context": "1 One address, every product One 10 m cell in central Berlin, read liv"
+ },
+ {
+  "where": "poster.v12.html:151",
+  "rule": "universal",
+  "match": "Every",
+  "context": "ws up as \u0394 encoder , not as change on the ground. Every vector emem signed still resolves."
+ },
+ {
+  "where": "poster.v12.html:158",
+  "rule": "universal",
+  "match": "every",
+  "context": " model Six definitions from emem's specification; every panel on this board is an instance of them."
+ },
+ {
+  "where": "poster.v12.html:164",
+  "rule": "verified-without-layer",
+  "match": "verify",
+  "context": " Jun\u201d, emem still answers 918.0, and both answers verify."
+ },
+ {
+  "where": "poster.v12.html:188",
+  "rule": "agency",
+  "match": "decides",
+  "context": "eterministic verifier, with no model in the loop, decides whether B acts."
+ },
+ {
+  "where": "poster.v12.html:197",
+  "rule": "universal",
+  "match": "every",
+  "context": "so read the row below. It signed what it read, so every check up to recompute passes. Before the fix: 162"
+ },
+ {
+  "where": "poster.v12.html:204",
+  "rule": "proof",
+  "match": "prove",
+  "context": "5 How a satellite could prove what it ran SAT-042 is a scripted pass in emem's "
+ },
+ {
+  "where": "poster.v12.html:204",
+  "rule": "spacecraft status",
+  "match": "satellite could prove",
+  "context": "5 How a satellite could prove what it ran SAT-042 is a scripted pass in emem's "
+ },
+ {
+  "where": "poster.v12.html:208",
+  "rule": "universal",
+  "match": "every",
+  "context": "ce : eight layers for orbital.satellite.v1 , with every payload digest bound inside."
+ },
+ {
+  "where": "poster.v12.html:209",
+  "rule": "absolute",
+  "match": "never",
+  "context": "h no trace is refused, and so is a fact the trace never emitted. Rewrite one log segment and the verifier"
+ },
+ {
+  "where": "poster.v12.html:210",
+  "rule": "proof",
+  "match": "proves",
+  "context": "A trace proves what ran, not that the sensor was right. A drift "
+ },
+ {
+  "where": "poster.v12.html:220",
+  "rule": "guarantee",
+  "match": "guarantees",
+  "context": "What a verified token guarantees"
+ },
+ {
+  "where": "poster.v12.html:220",
+  "rule": "verified-without-layer",
+  "match": "verified",
+  "context": "What a verified token guarantees"
+ },
+ {
+  "where": "poster.v12.html:223",
+  "rule": "guarantee",
+  "match": "guaranteed",
+  "context": "the source bytes guaranteed hash, signature, log"
+ },
+ {
+  "where": "poster.v12.html:234",
+  "rule": "truth",
+  "match": "Truth",
+  "context": "Agreed. It fixes which bytes were served. Truth is tested by re-reading the pixel; accuracy comes"
+ },
+ {
+  "where": "poster.v12.html:236",
+  "rule": "facts carry no signature",
+  "match": "signs the one value",
+  "context": "e scene, openEO the process, C2PA the asset. emem signs the one value an agent cites and names the scene and file it ca"
+ },
+ {
+  "where": "poster.v12.html:238",
+  "rule": "universal",
+  "match": "every",
+  "context": "om its one enrolled Linux host; SAT-042 exercises every refusal."
+ },
+ {
+  "where": "poster.v12.html:238",
+  "rule": "universal",
+  "match": "any",
+  "context": "No spacecraft is enrolled. emem.dev re-checks any signed trace from its one enrolled Linux host; SA"
+ },
+ {
+  "where": "poster.v12.html:243",
+  "rule": "universal",
+  "match": "every",
+  "context": "2 One address joins every product, so an EO screen can be re-run fact by fa"
+ },
+ {
+  "where": "poster.v12.html:244",
+  "rule": "novelty/absolute",
+  "match": "Only",
+  "context": "3 Only the full chain refuses all 16; M15 needs the pixe"
+ },
+ {
+  "where": "poster.v12.html:246",
+  "rule": "universal",
+  "match": "every",
+  "context": "Re-run every result. Data, scripts and claims map: research/re"
+ },
+ {
+  "where": "poster.v12.html:253",
+  "rule": "universal",
+  "match": "Every",
+  "context": "40c5; measurements 29 to 30 Sep 2026 on emem.dev. Every number maps to its file and script in research/re"
+ }
+]

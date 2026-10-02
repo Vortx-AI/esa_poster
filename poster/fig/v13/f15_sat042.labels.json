@@ -1,0 +1,341 @@
+{
+ "figure": "f15_sat042",
+ "size_mm": [
+  193.5,
+  118.0
+ ],
+ "kicker": {
+  "text": "Extending verification from observations to execution",
+  "claim": "A15.kicker",
+  "role": "kicker"
+ },
+ "run": "2026-09-30T19:14:15Z",
+ "commit": "04b40c5",
+ "labels": [
+  {
+   "text": "SAT-042 is a scripted pass in emem's test harness,",
+   "pt": 14,
+   "claim": "A15.headline"
+  },
+  {
+   "text": "not a spacecraft; run on 30 Sep 2026.",
+   "pt": 14,
+   "claim": "A15.headline"
+  },
+  {
+   "text": "emem 04b40c5, deterministic:",
+   "pt": 14,
+   "claim": "A15.headline"
+  },
+  {
+   "text": "fixed key, clocks, digests, anchor",
+   "pt": 14,
+   "claim": "A15.headline"
+  },
+  {
+   "text": "a",
+   "pt": 17,
+   "claim": null
+  },
+  {
+   "text": "one scripted pass: two writes refused, one rewrite caught",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "1",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Enrol",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "ENROLLED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "orbital.satellite.v1 enrolled; 8 layers required",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "2",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Write, no trace",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "REFUSED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "no OS execution trace was presented",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "3",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Capture the pass",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "SIGNED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "8 layers chained; 3 NDVI payload digests bound",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "4",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Smuggle a 4th fact",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "REFUSED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "digest cyzwak… is not among the trace's outputs",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "5",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Honest batch",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "ADMITTED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "3 facts under 1 trace, 3arfrn…, 1 bundle",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "6",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Score vs anchor",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "SCORED",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "2 consistent, 1 contradicted; scored after admission",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "7",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "Rewrite one log",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "CAUGHT",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "segment 2 edited after signing: chain broken at seq 3",
+   "pt": 14,
+   "claim": "A15.steps"
+  },
+  {
+   "text": "b",
+   "pt": 17,
+   "claim": null
+  },
+  {
+   "text": "the trace: 8 layers, each log digest chained to the previous",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "syscall",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 0",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "scheduler",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 1",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "memory",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 2",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "×",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "sensor bus",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 3",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "signal",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 4",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "energy",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 5",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "thermal",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 6",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "storage",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "seq 7",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "seq 2 rewritten after signing; the verifier: chain broken at seq 3",
+   "pt": 14,
+   "claim": "A15.layers"
+  },
+  {
+   "text": "c",
+   "pt": 17,
+   "claim": null
+  },
+  {
+   "text": "drift anchor 0.6402 ± 0.02 (1σ): scored after admission, not a gate",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "consistent",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "tension",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "contradicted",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "0.6431 → 0.05",
+   "pt": 14,
+   "claim": "A15.drift"
+  },
+  {
+   "text": "0.6512 → 0.15",
+   "pt": 14,
+   "claim": "A15.drift"
+  },
+  {
+   "text": "0.2103 → 0.88",
+   "pt": 14,
+   "claim": "A15.drift"
+  },
+  {
+   "text": "s = z/(1+z), z = |x − anchor| / 3σ; 3σ scores 0.5, 9σ scores 0.75 (emem-trace tests)",
+   "pt": 14,
+   "claim": "A15.formula"
+  },
+  {
+   "text": "The gate binds the value digest only; band, cell and tslot are not checked.",
+   "pt": 14,
+   "claim": "A15.scope"
+  },
+  {
+   "text": "Three refusals shown; no device is enrolled under orbital.satellite.v1.",
+   "pt": 14,
+   "claim": "A15.scope"
+  }
+ ]
+}
