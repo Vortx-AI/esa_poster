@@ -1,0 +1,34 @@
+{
+  "base_commit": "8257a47981c7f8b2c14b1da1499ad40b2c4828b5",
+  "built_utc": "2026-10-02T19:28:32+00:00",
+  "pdf": {
+    "pages": 1,
+    "w_mm": 840.993972439236,
+    "h_mm": 1188.8892747667098,
+    "title": "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings"
+  },
+  "poster_gates_passed": 18,
+  "evidence_gate_tests_passed": 14,
+  "evidence_rows_rechecked": 415,
+  "figures": 13,
+  "qr_codes": 3,
+  "scientific_measurements_changed": false,
+  "artifacts": {
+    "emem-poster-A0.pdf": {
+      "sha256": "f02d6bd1943aea76174f27cbe930c6107d28055a653380dec96eb652f91328d4",
+      "bytes": 2357147
+    },
+    "emem-poster-preview.png": {
+      "sha256": "d620334ad6c8497ca77b5d72d334d53d4bdc977fc1568245f5470fc956688a6a",
+      "bytes": 3783884
+    },
+    "emem-poster-A0-300dpi.png": {
+      "sha256": "91d833f7d5ba067099382bb8956bdacfc7f627f54db2104f7498c57312b832fe",
+      "bytes": 13949218
+    },
+    "build_v13_report.json": {
+      "sha256": "30649eaabc90d0ac3f640bfd89a187f44c123112146a920f94e39a7b1f8fff07",
+      "bytes": 22956
+    }
+  }
+}
