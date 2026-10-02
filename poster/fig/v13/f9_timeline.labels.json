@@ -1,0 +1,69 @@
+{
+ "figure": "f9_timeline",
+ "size_mm": [
+  193.5,
+  82
+ ],
+ "labels": [
+  {
+   "text": "BENGALURU \u00b7 SAME CELL AND BAND \u00b7 2026",
+   "claim": "MF.example",
+   "pt": 14
+  },
+  {
+   "text": "same place + band",
+   "claim": "MF.example",
+   "pt": 16
+  },
+  {
+   "text": "signed 28 May",
+   "claim": "MF.example",
+   "pt": 14
+  },
+  {
+   "text": "918.0 m",
+   "claim": "MF.example",
+   "pt": 26
+  },
+  {
+   "text": "Open-Meteo / DEM90",
+   "claim": "MF.example",
+   "pt": 14
+  },
+  {
+   "text": "earlier CID",
+   "claim": "MF.example",
+   "pt": 14
+  },
+  {
+   "text": "signed 11 Aug",
+   "claim": "MF.example",
+   "pt": 14
+  },
+  {
+   "text": "915.07 m",
+   "claim": "MF.example",
+   "pt": 26
+  },
+  {
+   "text": "Copernicus DEM30",
+   "claim": "MF.example",
+   "pt": 14
+  },
+  {
+   "text": "later CID",
+   "claim": "MF.example",
+   "pt": 14
+  },
+  {
+   "text": "as of 15 Jun \u2192 918.0 m",
+   "claim": "MF.example",
+   "pt": 20
+  },
+  {
+   "text": "The next agent can recover the earlier citation.",
+   "claim": "MF.example",
+   "pt": 17
+  }
+ ]
+}

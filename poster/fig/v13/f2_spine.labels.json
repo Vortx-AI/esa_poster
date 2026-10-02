@@ -32,11 +32,6 @@
    "pt": 17
   },
   {
-   "text": "source observations",
-   "claim": "U.flow",
-   "pt": 14
-  },
-  {
    "text": "LOCATE",
    "claim": "U.flow",
    "pt": 30
@@ -50,11 +45,6 @@
    "text": "cell \u00b7 product \u00b7 time",
    "claim": "U.flow",
    "pt": 17
-  },
-  {
-   "text": "observation family",
-   "claim": "U.flow",
-   "pt": 14
   },
   {
    "text": "RECORD",
@@ -72,11 +62,6 @@
    "pt": 17
   },
   {
-   "text": "content address",
-   "claim": "U.flow",
-   "pt": 14
-  },
-  {
    "text": "HAND OFF",
    "claim": "U.flow",
    "pt": 30
@@ -90,11 +75,6 @@
    "text": "emem:fact:<cell>:<cid>",
    "claim": "U.flow",
    "pt": 17
-  },
-  {
-   "text": "reference in context",
-   "claim": "U.flow",
-   "pt": 14
   },
   {
    "text": "RESOLVE",
@@ -112,11 +92,6 @@
    "pt": 17
   },
   {
-   "text": "same cited observation",
-   "claim": "U.flow",
-   "pt": 14
-  },
-  {
    "text": "CHECK",
    "claim": "U.flow",
    "pt": 30
@@ -132,11 +107,6 @@
    "pt": 17
   },
   {
-   "text": "checked evidence",
-   "claim": "U.flow",
-   "pt": 14
-  },
-  {
    "text": "CONTINUE",
    "claim": "U.flow",
    "pt": 30
@@ -150,11 +120,6 @@
    "text": "compare \u00b7 reason \u00b7 act",
    "claim": "U.flow",
    "pt": 17
-  },
-  {
-   "text": "next reasoning step",
-   "claim": "U.flow",
-   "pt": 14
   },
   {
    "text": "Lookup identity: where / product / time",
@@ -179,7 +144,7 @@
   {
    "text": "254 / 276",
    "claim": "R5.A.pooled",
-   "pt": 34
+   "pt": 38
   },
   {
    "text": "JSON",
@@ -189,7 +154,7 @@
   {
    "text": "164 / 276",
    "claim": "R5.B.pooled",
-   "pt": 34
+   "pt": 38
   },
   {
    "text": "retrieved text",
@@ -199,7 +164,7 @@
   {
    "text": "220 / 276",
    "claim": "R5.C.pooled",
-   "pt": 34
+   "pt": 38
   },
   {
    "text": "opaque id",
@@ -209,7 +174,7 @@
   {
    "text": "154 / 288",
    "claim": "R5.D.pooled",
-   "pt": 34
+   "pt": 38
   },
   {
    "text": "checked reference",
@@ -219,7 +184,7 @@
   {
    "text": "0 / 300",
    "claim": "R5.E.pooled",
-   "pt": 34
+   "pt": 38
   }
  ]
 }

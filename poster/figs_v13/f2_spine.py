@@ -40,7 +40,6 @@ for i,(verb,action,detail,base) in enumerate(steps):
     T(x+5,22,verb,size=30,color=tc,weight=700)
     T(x+5,36,action,size=20,color=tc,weight=600)
     T(x+5,46,detail,size=17,color=tc)
-    T(x+5,57,base,size=14,color=tc)
     if i<6:
         ax.add_patch(FancyArrowPatch((x+w+.8,37),(x+w+gap-.8,37),arrowstyle='-|>',mutation_scale=16,color=C['emem'],lw=2))
 T(0,73,'Lookup identity: where / product / time',claim='U.identities',size=22,weight=600)
@@ -60,7 +59,7 @@ else:
 T(0,88,'CONTROLLED HANDOFF TEST: ACTED ON CORRUPTED EVIDENCE',claim='U.benchmark',size=14,color=C['ink2'],weight=600)
 for i,(name,v,cid) in enumerate(vals):
     x=i*W/len(vals)
-    T(x+2,100,name,claim='U.benchmark',size=20,weight=600)
-    T(x+101,106,f"{v['k']} / {v['n']}",claim=cid,size=34,weight=700,color=C['emem'] if v['k']==0 else C['harm'])
+    T(x+2,98,name,claim='U.benchmark',size=20,weight=600)
+    T(x+2,110,f"{v['k']} / {v['n']}",claim=cid,size=38,weight=700,color=C['emem'] if v['k']==0 else C['harm'])
 S.save(fig,'f2_spine')
 Path(S.OUT,'f2_spine.labels.json').write_text(json.dumps({'figure':'f2_spine','size_mm':[W,H],'mode':info['mode'],'labels':labels},indent=1)+'\n')

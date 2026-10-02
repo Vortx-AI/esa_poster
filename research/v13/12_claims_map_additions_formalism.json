@@ -1,0 +1,272 @@
+{
+  "purpose": "v13.4 restored formulas and pinned upstream test evidence",
+  "rows": [
+    {
+      "id": "DF.decomposition",
+      "block": "v13.4",
+      "print": [
+        "Δz = Δenv + Δsensor + Δgeo + Δencoder + ε"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/whitepaper-v2.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/docs/whitepaper-v2.md",
+        "arg": "Δz = Δ_env + Δ_sensor + Δ_geo + Δ_encoder + ε",
+        "expect": null
+      },
+      "note": "Conceptual attribution model, not a fitted identity or computed numeric split.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "DF.score",
+      "block": "v13.4",
+      "print": [
+        "u = |x − a| / (3σ)",
+        "s = u / (1 + u)",
+        "0",
+        "0.50",
+        "0.75",
+        "1",
+        "Tests pin 3σ → 0.50 and 9σ → 0.75."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/crates/emem-trace/src/drift.rs",
+          "repro/v12/trace/emem_trace_tests.txt"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/crates/emem-trace/src/drift.rs",
+        "arg": "let z = delta / (3.0 * sigma);",
+        "expect": null
+      },
+      "note": "u renames the implementation z to distinguish it from the observation z above. Threshold boundaries are tension at s>=0.5 and contradicted at s>=0.75. Existing 30 Sep tests, not a fresh Rust run.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "MF.model",
+      "block": "v13.4",
+      "print": [
+        "M = (O*, E*)",
+        "E = (subject, predicate, object, tfrom, tto)"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/docs/model.md",
+        "arg": "M = (O*, E*)",
+        "expect": null
+      },
+      "note": "Set notation from the model document. Its obsolete per-fact signature equation is deliberately not copied; fact attestation remains correctly described by the existing batch-attestation panel.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "MF.identity",
+      "block": "v13.4",
+      "print": [
+        "cid(O) = BLAKE3(CBORcanonical(O))",
+        "Lookup: (cell, band, observation time)"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md",
+          "repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/docs/model.md",
+        "arg": "cid(O) = blake3(canonical_cbor(O))",
+        "expect": null
+      },
+      "note": "Digest over canonical record bytes; O does not contain an individual Ed25519 signature.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "MF.recall",
+      "block": "v13.4",
+      "print": [
+        "recall(M, a, b | t*, τ)"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/crates/emem-primitives/src/recall.rs",
+          "v13/evidence/formalism/source/crates/emem-primitives/tests/bi_temporal.rs"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/crates/emem-primitives/tests/bi_temporal.rs",
+        "arg": "async fn recall_with_both_bounds_intersects()",
+        "expect": null
+      },
+      "note": "Notation summarises both bounds. Transaction-time selection resolves historical versions; valid-time collapse chooses latest per band. No claim that one argmax describes every lookup mode.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "MF.example",
+      "block": "v13.4",
+      "print": [
+        "BENGALURU · SAME CELL AND BAND · 2026",
+        "signed 28 May",
+        "signed 11 Aug",
+        "918.0 m",
+        "915.07 m",
+        "Open-Meteo / DEM90",
+        "Copernicus DEM30",
+        "as of 15 Jun → 918.0 m"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/data/contra_bengaluru.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "figure_assert",
+        "file": "poster/figs_v13/f9_timeline.py",
+        "arg": null,
+        "expect": true
+      },
+      "note": "Figure reselects as-of history and checks provider identity. Signing time, not ground-valid time; provider change does not demonstrate ground movement.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "MF.embeddings",
+      "block": "v13.4",
+      "print": [
+        "Satellite input → encoder → vector → content address"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/critic/cell.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/critic/cell.json",
+        "arg": "model_blake2b_hex",
+        "expect": null
+      },
+      "note": "Archived records. Prithvi has checkpoint metadata; TESSERA only product year/path. Not a promise of current inference.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "DF.ndvi",
+      "block": "v13.4",
+      "print": [
+        "NDVI = (DN8 − DN4) / (DN8 + DN4 + 2o), o = −1000"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/data/v8/pixel_windows.json",
+          "repro/v11/mutation_suite.py"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/data/v8/pixel_windows.json",
+        "arg": "\"offset\": -1000",
+        "expect": null
+      },
+      "note": "The cited Sentinel-2 product offset applied to both DNs; not a universal offset for every satellite product.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "MF.next",
+      "block": "v13.4",
+      "print": [
+        "Validate numeric attribution under controlled scene, pixel and encoder changes. Repeat checked handoffs across independent operators and agent hosts."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md",
+          "repro/data/v8/crossruntime_table.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Proposed experiments, not completed results.",
+      "tier": "30cm",
+      "checked": null
+    },
+    {
+      "id": "MF.tests",
+      "block": "v13.4",
+      "print": [
+        "20 upstream offline tests passed; 0 failed; 0 skipped"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/test_results.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "v13/evidence/formalism/test_results.json",
+        "arg": [
+          "passed"
+        ],
+        "expect": 20
+      },
+      "note": "SDK receipt tests and canonical benchmark encoding only; see raw output and exact command.",
+      "tier": "30cm",
+      "checked": null
+    }
+  ]
+}

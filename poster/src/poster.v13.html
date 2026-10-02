@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</title>
-<!-- v13.3 source. Issue #48 supersedes the face copy in the original brief.
+<!-- v13.4 source. Issue #48 supersedes the face copy in the original brief.
      Figures, measurements and claim rows remain independently checked by build_v13.py. -->
 <link rel="stylesheet" href="src/poster.v13.css">
 </head>
@@ -51,24 +51,28 @@
 </section>
 <section class="panel c3" data-block="p3" data-brief="3 · Different drift, different check">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">3</span>Where did the evidence change?</p>
-  <h2 class="rt" data-role="headline" data-claim="U.drift">Match the drift to the check</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="U.drift">Compare the fields that identify the observation, then follow its derivation and source.</p>
-  <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:190"><!--fig:f4_failure_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="F.caption">These checks address distinct failures seen in the records and handoff tests. The methods link each example to its evidence.</p>
+  <h2 class="rt" data-role="headline" data-claim="DF.decomposition">A changed value needs a cause</h2>
+  <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">Keep the scene, pixel, model and time attached so a change can be investigated.</p>
+  <div class="equation" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub><br><span class="indent">+ Δ<sub>encoder</sub> + ε</span></div>
+  <p class="cap rt" data-role="caption" data-claim="DF.decomposition">World, instrument, alignment, model and noise. This is an attribution model; the numeric split remains open work.</p>
+  <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:100"><!--fig:f4_failure_ladder--></div>
+  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run SAT.gate">The implemented anchor score measures disagreement, not its cause. SAT-042 exercises it in a reference harness; live device-to-anchor wiring remains next work.</p>
 </section>
 <section class="panel c3 addresses" data-block="questions" data-brief="Two identities">
-  <h2 class="rt" data-role="headline" data-claim="U.identities">Two identities, two jobs</h2>
-  <div class="addresscard"><b>LOOKUP IDENTITY</b><p class="rt" data-role="body" data-claim="U.identities">Where · product · observation time</p><p class="cap rt" data-role="caption" data-claim="U.identities">Find the observation family.</p></div>
-  <div class="addresscard blue"><b>CONTENT ADDRESS</b><p class="rt" data-role="body" data-claim="U.identities">The exact canonical record</p><p class="cap rt" data-role="caption" data-claim="U.identities">Recover what the earlier agent cited.</p></div>
-  <p class="token-anatomy mono rt" data-role="body" data-claim="U.token">emem:fact:&lt;cell64&gt;:&lt;fact_cid&gt;</p>
-  <p class="cap rt" data-role="caption" data-claim="U.token">The token carries the cell and record address. Product and observation time are fields inside the record.</p>
+  <h2 class="rt" data-role="headline" data-claim="MF.model">Memory = observations + edges</h2>
+  <div class="equation large" data-claim="MF.model">M = (O*, E*)</div>
+  <p class="body rt" data-role="body" data-claim="MF.model">O* stores observations; E* stores typed temporal relations. Append new records and keep earlier ones.</p>
+  <div class="equation small" data-claim="MF.model">E = (subject, predicate, object, t<sub>from</sub>, t<sub>to</sub>)</div>
+  <p class="cap rt" data-role="caption" data-claim="MF.model">Relations can say supersedes or disagrees_with, with a validity interval.</p>
+  <div class="addresscard blue"><p class="body" data-claim="MF.identity">Lookup: (cell, band, observation time)</p><p class="equation small" data-claim="MF.identity">cid(O) = BLAKE3(CBOR<sub>canonical</sub>(O))</p></div>
+  <div class="equation small" data-claim="MF.recall">recall(M, a, b | t*, τ)</div>
+  <p class="cap rt" data-role="caption" data-claim="MF.recall">At address a and band b, bound observation time by t* and what memory knew by signing time τ.</p>
 </section>
 <section class="panel c3 handoff" data-block="threat" data-brief="Concrete handoff">
-  <h2 class="rt" data-role="headline" data-claim="U.handoff">Carry one reference forward</h2>
-  <div class="handoff-row"><b>AGENT A</b><span>locates and recalls</span></div>
-  <div class="handoff-token mono rt" data-role="body" data-claim="O.84">↓ the 84-character reference ↓</div>
-  <div class="handoff-row blue"><b>AGENT B</b><span>resolves and recomputes</span></div>
-  <p class="cap rt" data-role="caption" data-claim="U.handoff">In the recorded two-process handoff, the reference alone crossed the process boundary. The receiving program re-hashed the record, checked its receipt and reproduced its NDVI exactly.</p>
+  <h2 class="rt" data-role="headline" data-claim="MF.embeddings">Model outputs are records too</h2>
+  <p class="body rt" data-role="body" data-claim="MF.embeddings">Satellite input → encoder → vector record → content address</p>
+  <div class="fig" data-figslot="f16_embeddings" style="--fw:193.5;--fh:53"><!--fig:f16_embeddings--></div>
+  <p class="cap rt" data-role="caption" data-claim="V.prithvi V.tessera V.retired">Archived vectors: Prithvi names a checkpoint digest; TESSERA names a product year. These encoders are retired on the deployment; stored records remain addressable.</p>
 </section>
 </div>
 
@@ -98,7 +102,8 @@
 <section class="panel c6" data-block="p6" data-brief="6 · Source re-read">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">6</span>What does returning to the source add?</p>
   <h2 class="rt" data-role="headline" data-claim="W.vals">A valid record can preserve a wrong source read</h2>
-  <p class="claimline rt" data-role="take" data-claim="W.vals F.pixel">Re-reading the named source lets the receiver test the measurement itself.</p>
+  <p class="claimline rt" data-role="equation" data-claim="DF.ndvi">NDVI = (DN<sub>8</sub> − DN<sub>4</sub>) / (DN<sub>8</sub> + DN<sub>4</sub> + 2o), &nbsp;o = −1000</p>
+  <p class="scope" data-role="scope" data-claim="DF.ndvi">The recorded product offset o is applied to both bands before the ratio.</p>
   <div class="fig" data-figslot="f7_wrong_pixel" style="--fw:396;--fh:128"><!--fig:f7_wrong_pixel--></div>
   <p class="cap rt" data-role="caption" data-claim="W.kx F.pixel">A record from the earlier reader still resolves: 0.3444 recorded, 0.4860 at the containing pixel. The source re-read exposes the pixel-selection difference.</p>
 </section>
@@ -115,7 +120,7 @@
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">8</span>Can a later agent recover the earlier state?</p>
   <h2 class="rt" data-role="headline" data-claim="TM.asof">Memory keeps what was cited</h2>
   <div class="fig" data-figslot="f9_timeline" style="--fw:193.5;--fh:82"><!--fig:f9_timeline--></div>
-  <p class="cap rt" data-role="caption" data-claim="TM.asof TM.915">A later observation does not replace an earlier citation. Asked about 15 Jun, memory returns 918.0 m; the receiver can still resolve and check that record by its content address.</p>
+  <p class="cap rt" data-role="caption" data-claim="MF.example">Asked what memory knew on 15 Jun, recall returns 918.0 m. The later 915.07 m record reflects a provider change; it does not establish ground movement.</p>
 </section>
 <section class="panel c3" data-block="p9" data-brief="9 · Berlin multi-product stack">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">9</span>What does one Berlin location reveal?</p>
@@ -130,9 +135,9 @@
   <p class="cap rt" data-role="caption" data-claim="TF.family">Choose the reference that preserves what the next agent needs to recover.</p>
 </section>
 <section class="panel c3 extension" data-block="p11" data-brief="Execution extension">
-  <p class="extension-label">EXTENSION · REFERENCE HARNESS</p>
-  <h2 class="rt s28" data-role="headline" data-claim="SAT.run">Bind an output to its run</h2>
-  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run SAT.gate">SAT-042 records a test execution trace. Its gate checks the output's value digest; code and model identity are recorded in the trace. Full harness and scope in Reproduce.</p>
+  <p class="extension-label">NEXT EXPERIMENTS</p>
+  <h2 class="rt s28" data-role="headline" data-claim="MF.next">Measure each cause of change</h2>
+  <p class="subtitle rt" data-role="subtitle" data-claim="MF.next">Validate numeric attribution under controlled scene, pixel and encoder changes. Repeat checked handoffs between separately operated agent hosts.</p>
 </section>
 </div>
 

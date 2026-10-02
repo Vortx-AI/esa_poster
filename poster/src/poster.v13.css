@@ -144,3 +144,13 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .extension-label{font-size:14pt;font-weight:600;letter-spacing:.035em;color:var(--emem)}
 .extension h2{margin-top:1mm}
 [data-block="p5"]>.scope{margin-top:2mm}
+
+/* v13.4: equations are selectable text at the same physical scale as the body. */
+.equation{font-size:28pt;line-height:1.18;font-weight:500;color:var(--emem);margin-top:3mm}
+.equation .indent{padding-left:22mm}
+.equation sub,.claimline sub{font-size:17pt;line-height:0;vertical-align:-.25em}
+.equation.large{font-size:36pt;margin-top:3mm}
+.equation.small{font-size:20pt;margin-top:3mm}
+.equation.small sub{font-size:14pt}
+.addresscard .body{font-size:19pt}
+.addresscard .equation{margin-top:1.8mm}

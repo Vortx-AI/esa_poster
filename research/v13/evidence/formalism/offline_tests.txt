@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/scratch/0a402d75c2e0/emem-source/sdks/emem-py
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 20 items
+
+sdks/emem-py/tests/test_verify_offline.py::test_encoders_agree_with_the_rust_signer PASSED [  5%]
+sdks/emem-py/tests/test_verify_offline.py::test_a_genuine_receipt_verifies PASSED [ 10%]
+sdks/emem-py/tests/test_verify_offline.py::test_forgeries_are_refused[content address swapped-<lambda>] PASSED [ 15%]
+sdks/emem-py/tests/test_verify_offline.py::test_forgeries_are_refused[request id rewritten-<lambda>] PASSED [ 20%]
+sdks/emem-py/tests/test_verify_offline.py::test_forgeries_are_refused[clock rewound-<lambda>] PASSED [ 25%]
+sdks/emem-py/tests/test_verify_offline.py::test_forgeries_are_refused[primitive relabelled-<lambda>] PASSED [ 30%]
+sdks/emem-py/tests/test_verify_offline.py::test_forgeries_are_refused[inclusion root flipped-<lambda>] PASSED [ 35%]
+sdks/emem-py/tests/test_verify_offline.py::test_forgeries_are_refused[inclusion proof stripped-<lambda>] PASSED [ 40%]
+sdks/emem-py/tests/test_verify_offline.py::test_a_refusal_never_looks_like_a_pass PASSED [ 45%]
+sdks/emem-py::test_short_text_keys_sort_the_same_under_both_rfcs PASSED  [ 50%]
+sdks/emem-py::test_keys_sort_on_encoded_bytes_not_python_value PASSED    [ 55%]
+sdks/emem-py::test_floats_use_shortest_roundtripping_form PASSED         [ 60%]
+sdks/emem-py::test_we_diverge_from_cbor2_canonical_exactly_where_emem_says_to PASSED [ 65%]
+sdks/emem-py::test_negative_zero_and_nan_fold_to_one_representative PASSED [ 70%]
+sdks/emem-py::test_bool_is_not_encoded_as_int PASSED                     [ 75%]
+sdks/emem-py::test_ints_use_shortest_form_and_negatives_encode PASSED    [ 80%]
+sdks/emem-py::test_run_cid_ignores_the_run_cid_field_itself PASSED       [ 85%]
+sdks/emem-py::test_run_cid_changes_when_any_recorded_byte_changes PASSED [ 90%]
+sdks/emem-py::test_encoder_refuses_types_it_cannot_encode_deterministically PASSED [ 95%]
+sdks/emem-py::test_test_vector_is_stable PASSED                          [100%]
+
+-- generated xml file: /workspace/scratch/0a402d75c2e0/emem-offline-tests.xml --
+============================== 20 passed in 0.11s ==============================

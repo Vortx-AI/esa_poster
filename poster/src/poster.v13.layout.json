@@ -1,20 +1,20 @@
 {
-  "schema": "Documented layout departures for the issue #48 unified-system rewrite, v13.3.",
+  "schema": "Documented v13.4 departures from the original v13 grid.",
   "deviations": {
     "p1": {
       "reason": "Issue #48: seven-stage Earth-to-agent mechanism and measured comparison share the original 183.5 mm spine."
     },
     "p2": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "p3": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "questions": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "threat": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "p4": {
       "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
@@ -32,25 +32,25 @@
       "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
     },
     "conclusion": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "footer": {
       "reason": "The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
     },
     "p7": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "p8": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "p9": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "p10": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     },
     "p11": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
     }
   },
   "v13.2_notes": {

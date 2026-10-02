@@ -1,0 +1,72 @@
+{
+  "repository": "https://github.com/Vortx-AI/emem",
+  "commit": "8e9b401cecae7ab9944d403a2d7840952c6586a6",
+  "retrieved_utc": "2026-10-02T07:33:12.339580+00:00",
+  "files": [
+    {
+      "path": "docs/model.md",
+      "sha256": "3bc8f4b0d5332a3f4d22b2b64941156ddb88985bc7a424c58b0e37c424db96e1",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/docs/model.md"
+    },
+    {
+      "path": "docs/whitepaper-v2.md",
+      "sha256": "89d0ae80beca1df40b4474509012a30b6e2cbbb84082482cb8dc2b45502edb43",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/docs/whitepaper-v2.md"
+    },
+    {
+      "path": "crates/emem-trace/src/drift.rs",
+      "sha256": "ab9655102887a89b82303a91498d53923b2af64de9faa2efbf7caf6a56b6b763",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/crates/emem-trace/src/drift.rs"
+    },
+    {
+      "path": "crates/emem-trace/tests/trace_round_trip.rs",
+      "sha256": "c06692536fff4c7e8ed50d9895c76ef9520e77d2816e3f66445acba3aad572bd",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/crates/emem-trace/tests/trace_round_trip.rs"
+    },
+    {
+      "path": "crates/emem-primitives/tests/bi_temporal.rs",
+      "sha256": "d0b6ede889acac5525615e8d543e79528ce1a7edc861ec1f3103c9bfd307b44c",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/crates/emem-primitives/tests/bi_temporal.rs"
+    },
+    {
+      "path": "crates/emem-primitives/src/recall.rs",
+      "sha256": "4be2e0e2d821a453ff7b60de7d15d5c0500f3b2a349aa63bd622bfd12e301a5f",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/crates/emem-primitives/src/recall.rs"
+    },
+    {
+      "path": "sdks/emem-py/tests/test_verify_offline.py",
+      "sha256": "93683397b67e59e47664005494bf670e061ba4f50bde71f3516c1e6df940a276",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/sdks/emem-py/tests/test_verify_offline.py"
+    },
+    {
+      "path": "bench/test_canonical.py",
+      "sha256": "4d61ca4305c6b97ffdec606c374592ecfb3801ab4e753010998203996ffade23",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/bench/test_canonical.py"
+    },
+    {
+      "path": "sdks/emem-py/src/ememdev/verify.py",
+      "sha256": "2b1b90e0485b933c2ee5728af154a74f9e246d4a3e449cbfd1b2cbda40096fab",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/sdks/emem-py/src/ememdev/verify.py"
+    },
+    {
+      "path": "sdks/emem-py/pyproject.toml",
+      "sha256": "652642dee79d46e1f0b908a176c0776ac61ba1401559fbd1d616f3ef366dbe1d",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/sdks/emem-py/pyproject.toml"
+    },
+    {
+      "path": "web/data/receipt-fixture.json",
+      "sha256": "3939ca584a3e90181fa006d4f680047656bab29b3512a5b3088d0b7ff8a44bb2",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/web/data/receipt-fixture.json"
+    },
+    {
+      "path": "bench/canonical.py",
+      "sha256": "8abfb8d5d92d99c01dcc0a2df11755c54299bb78a19e15684bddac1cddbd78bc",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/bench/canonical.py"
+    },
+    {
+      "path": "crates/emem-fact/src/lib.rs",
+      "sha256": "ffae3f034bb08a4c1912eed47b0e0c6cd22f203f687b565590c4f0df880defd2",
+      "url": "https://github.com/Vortx-AI/emem/blob/8e9b401cecae7ab9944d403a2d7840952c6586a6/crates/emem-fact/src/lib.rs"
+    }
+  ]
+}

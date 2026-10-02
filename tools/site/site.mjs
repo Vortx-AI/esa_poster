@@ -43,6 +43,8 @@ const R5 = fs.existsSync(path.join(ROOT, R5_FILE)) ? rj(R5_FILE) : null;   // fi
 const R5_FINAL = !!(R5 && R5.final === true);
 const kn = (o) => `${o.k}/${o.n}`;
 const knp = (o, w) => `${o.k}/${o.n} (${pct(o.k / o.n)}, ${pct(w[0])} to ${pct(w[1])})`;
+const FORMAL_FILE = 'research/v13/evidence/formalism/test_results.json';
+const FORMAL = rj(FORMAL_FILE);
 const BUILT = new Date().toISOString().slice(0, 10);
 
 // ------------------------------------------------------------------ layout
@@ -336,6 +338,17 @@ w('methods/index.html', page('methods', 'READ THE METHODS · EMEM', 'Methods beh
 <p>The two-process handoff in ${src(XRT_FILE)} passes the reference on stdout to a second program, which re-hashes the record, checks the receipt and recomputes NDVI. This is a measured program-to-program handoff, not a ChatGPT-to-Claude conversation.</p>
 <p>Detailed figures: <a href="${blob('poster/fig/v13/f8_ladder_detail.svg')}">verification layers and measured coverage</a> · <a href="${blob('poster/fig/v13/f14_token_family_detail.svg')}">token grammars and hash rules</a> · <a href="${blob('poster/fig/v13/f15_sat042.svg')}">SAT-042 reference harness</a>.</p>
 <p>SAT-042 is a deterministic test harness, with no spacecraft enrolled. Its admission gate binds the output value digest. Code, model and run fields in the trace do not make that gate a full binding of those identities. The observation handoff does not depend on this extension.</p>
+<h2 id="formalism">Drift, memory and the tests behind them</h2>
+<pre><code>Δz = Δ_env + Δ_sensor + Δ_geo + Δ_encoder + ε
+u = |x − a| / (3σ)     s = u / (1 + u)
+M = (O*, E*)           E = (subject, predicate, object, valid_from, valid_to)
+recall(M, a, b | t*, τ)</code></pre>
+<p>The first line organises possible causes: world, instrument, alignment, encoder and noise. The numeric split is open work. The second line is the implemented drift-anchor score: x is a device output, a an anchor and σ the anchor's stated uncertainty. The score is a disagreement measure, not a probability or a causal attribution. At 3σ it reaches 0.50 (tension); at 9σ it reaches 0.75 (contradicted). Missing or invalid σ requires exact agreement. This normalisation is separate from the observation z in the first line.</p>
+<p>Memory contains immutable observations and typed temporal relations. The lookup identity is cell, band and observation time; the exact record is named by BLAKE3 of its canonical CBOR. Recall can cap observation time (t*) and signing time (τ). Transaction-time selection recovers a historical version; valid-time selection chooses the latest qualifying observation per band. The Bengaluru example returns 918.0 m at a 15 June signing-time bound and 915.07 m after the provider change. Both records remain citable; this does not show ground movement.</p>
+<p>Model-output records preserve the metadata actually present. The archived Prithvi vector has 1,024 values and a checkpoint digest inside the hashed record. TESSERA has 128 values and a product-year path, with no checkpoint digest. These encoder bands are retired on the deployment; the poster shows retained records, not current inference. Evidence: ${src('research/v13/evidence/critic/cell.json')}.</p>
+<p><b>Fresh upstream tests:</b> ${FORMAL.passed} passed, ${FORMAL.failed} failed, ${FORMAL.skipped} skipped on ${FORMAL.date}, at emem <code>${FORMAL.commit.slice(0,7)}</code>. These are the existing SDK offline receipt and benchmark canonical-encoding tests, run without changes. They accept a genuine receipt and reject changed addresses, request ids, clocks, primitives and Merkle proofs; canonical vectors exercise floats, booleans and CID changes. Results: ${src(FORMAL_FILE)}, ${src('research/v13/evidence/formalism/offline_tests.txt')}. Exact source files, hashes and commit links: ${src('research/v13/evidence/formalism/sources.json')}.</p>
+<p><b>Archived Rust tests:</b> the 30 September emem-trace run at <code>04b40c5</code> has 22 passed and one deliberately ignored timing test. It includes drift thresholds, missing uncertainty, trace chaining, output binding and signature rejection. The separately filtered storage run has 23 passed. These are retained results, not fresh executions here: ${src('research/repro/v12/trace/emem_trace_tests.txt')}. The temporal tests at the current pinned commit exercise both time bounds, their intersection, empty results and historical reads. Their source was inspected; Rust is not installed in this build environment, so no new Rust result is claimed.</p>
+<p><b>Next experiments:</b> use controlled scene, pixel and encoder changes to test numeric attribution, wire device outputs to recalled Earth anchors, and repeat checked handoffs between separately operated agent hosts. The current two-process result does not establish a cross-host agent conversation. Restoration decisions and remaining scope: ${src('research/v13/16_FORMALISM_AND_TEST_AUDIT.md')}.</p>
 <h2>Research questions behind the experiments</h2>
 <p>Can a receiver detect altered evidence without trusting the sender? Which changes become visible at each verification depth? How do prose, JSON, retrieval, an opaque id and a checked reference compare? What remains inherited when the cited record is intact? The experiments below separate these questions from the poster's explanatory flow.</p>
 

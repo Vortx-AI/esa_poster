@@ -1,0 +1,96 @@
+{
+  "release": "v13.4",
+  "date": "2026-10-02",
+  "base_commit": "e678ec6e0c3b2d2dc60722db9b1384f2e540aa2b",
+  "primary_issue": 48,
+  "resolved_this_round": [
+    32
+  ],
+  "artifacts": {
+    "poster/emem-poster-A0.pdf": {
+      "bytes": 2576236,
+      "sha256": "d28e7594047be84d5e3b32c5ffc2d4ac50dd5553eb930ccbe2a3de3c9c60d054"
+    },
+    "poster/emem-poster-preview.png": {
+      "bytes": 3852414,
+      "sha256": "1ea0bf8a7d7ee76bfd827b3372eab9ed18310e8d301981f966033567af0f9423"
+    },
+    "poster/emem-poster-A0-300dpi.png": {
+      "bytes": 11746306,
+      "sha256": "80ef39493b79106ef3e00913a31f469c2471c94f6b9f385d3dd31989ba914787"
+    },
+    "poster/build_v13_report.json": {
+      "bytes": 26948,
+      "sha256": "adb0c86766a9a4113af7f65d92473d13e237229acb22788022a761c51c8905e8"
+    },
+    "research/v13/evidence/formalism/test_results.json": {
+      "bytes": 2812,
+      "sha256": "fcfa70fb6f68c5099232198b35390797c101f55227a67fc9c5bd3eea70373614"
+    },
+    "research/v13/evidence/formalism/site_review.json": {
+      "bytes": 1152,
+      "sha256": "2e8bed85cad265add5be54fd7fb3fcc1da9c856673a35673ef05c9012f25e166"
+    },
+    "research/v13/evidence/formalism/sources.json": {
+      "bytes": 3683,
+      "sha256": "cfa2f58281433229b0e031a82ce9313bb2d408d7b7a086a715a2552afca99fb0"
+    }
+  },
+  "validation": {
+    "poster_gates": {
+      "page_fit": "PASS",
+      "footer_clearance": "PASS",
+      "block_rectangles": "PASS",
+      "no_overflow_or_clipping": "PASS",
+      "type_floor": "PASS",
+      "glyph_coverage": "PASS",
+      "prose_and_banned_words": "PASS",
+      "face_hygiene": "PASS",
+      "r5_placeholders": "PASS",
+      "claims_coverage": "PASS",
+      "claims_rows_recheck": "PASS",
+      "qr_decode": "PASS",
+      "assets": "PASS",
+      "fonts_loaded": "PASS",
+      "colour_tokens": "PASS",
+      "imagery": "PASS",
+      "word_budget": "PASS"
+    },
+    "running_words": 655,
+    "printed_claim_rows": 60,
+    "evidence_rows_rechecked": 399,
+    "figure_numbers_checked": 388,
+    "upstream_offline_tests": {
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0,
+      "commit": "8e9b401cecae7ab9944d403a2d7840952c6586a6"
+    },
+    "local_mobile_routes": {
+      "passed": 7,
+      "failed": 0
+    },
+    "live_endpoint_checks": "Not rerun; prior external-fetch failures retained without relabelling",
+    "rust_tests": "Current source inspected; archived execution retained, no fresh run",
+    "proof_lossless_compression": {
+      "optimizer": "pyoxipng 9.1.1, level 3",
+      "pixels_and_dpi_unchanged": true,
+      "decoded": {
+        "size": [
+          9933,
+          14042
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ],
+        "rgb_sha256": "afa45a8e9f0f10bdc2676adb4b546f3adee0e3db9289e499e2c98dfaa897b027"
+      },
+      "bytes_before": 14491521,
+      "bytes_after": 11746306,
+      "seconds": 54.83
+    }
+  },
+  "deployment": "GitHub Pages disabled at last check; repository settings require browser GitHub sign-in before QR destinations are live.",
+  "attestation": "No new signing attestation; previous signed track is archived and identifies its earlier PDF."
+}
