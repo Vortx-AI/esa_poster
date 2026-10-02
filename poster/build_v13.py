@@ -48,7 +48,7 @@ R5_DIR = RES / "repro" / "v13" / "r5"
 CHROME_GLOB = "/opt/pw-browsers"
 TODAY = dt.date.today()
 
-FIGURES = ["f1_scene", "f18_workflow", "f2_spine", "f3_eight_answers", "f5_evidence_object",
+FIGURES = ["f1_scene", "f18_workflow", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object",
            "f6_mutation_matrix", "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem",
            "f14_token_family", "f15b_sat042_strip"]   # restored v12 evidence panels; compact SAT-042 remains panel 11.
 QRS = ["demo", "r", "use"]  # issue #48: three printed tasks; all six web routes remain
@@ -70,7 +70,7 @@ TYPE_DEVIATIONS = [
     "The left column restores the eight-answer handoff example, one-line drift decomposition and verification ladder; model-output prose leaves the face.",
     "Panel 11 restores the SAT-042 execution-verification strip: 28 pt headline, 17 pt subtitle, 14 pt figure text and scope.",
 ]
-HEADLINE_LEN_EXEMPT = {"p11": "v12.1 title kept verbatim; one line at 28 pt for the compact SAT-042 strip."}
+HEADLINE_LEN_EXEMPT = {"p11": "Measured execution-harness result; one line at 28 pt above the compact SAT-042 strip."}
 MOVED = []          # running-text lines that a figure prints itself (dropped from the HTML, still counted)
 REPORT_EXTRA = {}
 
