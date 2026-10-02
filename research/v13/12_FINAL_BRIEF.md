@@ -62,7 +62,6 @@ panel gaps 10 mm; a 0.8 mm ink rule above every panel. y is measured from the to
 | 2 Eight answers to one question | 1 to 3 | 20 | 396 | 193.5 × 118 | 2.3 % | Q1 |
 | 3 Our own errors name the checks (why EMEM) | 1 to 3 | 20 | 524 | 193.5 × 322 | 6.2 % | Q1, Q4 |
 | Questions and hypotheses | 1 to 3 | 20 | 856 | 193.5 × 70 | 1.4 % | navigation to all |
-| Threat model | 1 to 3 | 20 | 936 | 193.5 × 80 | 1.5 % | Q4 |
 | 4 What is handed over (evidence object) | 4 to 9 | 222.5 | 396 | 396 × 156 | 6.2 % | Q2 |
 | 5 Mutation matrix (hero quantitative figure) | 4 to 9 | 222.5 | 562 | 396 × 256 | 10.1 % | Q3 |
 | 6 The right record, the wrong pixel | 4 to 9 | 222.5 | 828 | 396 × 188 | 7.4 % | Q3, Q4 |
@@ -75,6 +74,8 @@ panel gaps 10 mm; a 0.8 mm ink rule above every panel. y is measured from the to
 | 13 Prior-art layers | 9 to 12 | 560 | 1026 | 261 × 82 | 2.1 % | Q5 |
 | Conclusion + READ THE METHODS QR | 9 to 12 | 560 | 1116 | 261 × 50 | 1.3 % | all; Q7 |
 | Footer: references, commit, extension line | 1 to 12 | 20 | 1172 | 801 × 13 | 1.0 % | Q7 |
+
+Reviewed-source update, 2 Oct 2026: the former separate Threat model block is consolidated into panel 7, now in the left column. Its checkable / not-established table retains the scientific scope. The separate right-column repetition is removed; the block rectangles below are historical base positions, with current departures documented in `poster/src/poster.v13.layout.json`.
 
 Main experiment (spine + matrix + wrong pixel) = 32.8 % of the page (v12.1: 11.0 %). Why-EMEM (panels 2 and 3) =
 8.5 %. Implementation detail (formulas, schema bars, token-family table, SAT-042 figure) = 0 %. Content ends at
