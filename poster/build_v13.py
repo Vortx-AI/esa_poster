@@ -48,16 +48,16 @@ CHROME_GLOB = "/opt/pw-browsers"
 TODAY = dt.date.today()
 
 FIGURES = ["f1_scene", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object", "f6_mutation_matrix",
-           "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem", "f12_prior_art",
+           "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem",
            "f13_one_address", "f14_token_family", "f16_embeddings"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; v13.2: SAT-042 as the strip F15b (F15 drawn, not placed)
-QRS = ["demo", "r", "methods"]  # issue #48: three printed tasks; all six web routes remain
+QRS = ["demo", "r", "use"]  # issue #48: three printed tasks; all six web routes remain
 
 # brief section B row label -> data-block id
 BLOCK_ROWS = {"Header text": "header_text", "Header image": "header_image", "1 Spine": "p1", "2 Eight answers": "p2",
               "3 Our own errors": "p3", "Questions and hypotheses": "questions", "Threat model": "threat",
               "4 What is handed over": "p4", "5 Mutation matrix": "p5", "6 The right record": "p6",
               "7 Verification ladder": "p7", "8 Same place": "p8", "9 One address": "p9", "10 Token family": "p10",
-              "11 SAT-042": "p11", "12 Ecosystem": "p12", "13 Prior-art": "p13", "Conclusion": "conclusion",
+              "11 SAT-042": "p11", "12 Ecosystem": "p12", "13 Prior-art": "p13",
               "Footer": "footer"}   # v13.1 rows (section B, "v13.1 change") replace 9 Rondônia, 10 Vectors, 11 What it costs
 # deliberate departures from the section B rectangles; each must carry a reason (printed in the report)
 LAYOUT_DEVIATIONS = json.loads((HERE / "src" / "poster.v13.layout.json").read_text())["deviations"] \
@@ -1102,7 +1102,7 @@ def g_words(claims, r5=False):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
     # cap: brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16 (807 / 853 before them) plus about 1 % slack
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; v13.4 copy brief: see per-panel counts)"]
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)"]
     ok = tot_w <= 830 and tot_t <= 880
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)

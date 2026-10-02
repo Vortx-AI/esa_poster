@@ -1,69 +1,69 @@
 {
- "figure": "f14_token_family",
- "size_mm": [
-  193.5,
-  86
- ],
- "labels": [
-  {
-   "text": "OBSERVATIONS",
-   "claim": "TF.family",
-   "pt": 14
-  },
-  {
-   "text": "fact \u00b7 derived value \u00b7 absence",
-   "claim": "TF.family",
-   "pt": 20
-  },
-  {
-   "text": "Recover a value and its derivation.",
-   "claim": "TF.family",
-   "pt": 15
-  },
-  {
-   "text": "EARTH DATA",
-   "claim": "TF.family",
-   "pt": 14
-  },
-  {
-   "text": "raster \u00b7 cube \u00b7 rasterset",
-   "claim": "TF.family",
-   "pt": 20
-  },
-  {
-   "text": "Recover a field or a series of fields.",
-   "claim": "TF.family",
-   "pt": 15
-  },
-  {
-   "text": "COLLECTIONS",
-   "claim": "TF.family",
-   "pt": 14
-  },
-  {
-   "text": "bundle \u00b7 tree",
-   "claim": "TF.family",
-   "pt": 20
-  },
-  {
-   "text": "Group facts or address file chunks.",
-   "claim": "TF.family",
-   "pt": 15
-  },
-  {
-   "text": "IDENTITY AND PROCESS",
-   "claim": "TF.family",
-   "pt": 14
-  },
-  {
-   "text": "entity \u00b7 state \u00b7 trace \u00b7 track",
-   "claim": "TF.family",
-   "pt": 20
-  },
-  {
-   "text": "Name an object, a reasoning stage or a run.",
-   "claim": "TF.family",
-   "pt": 15
-  }
- ]
+  "figure": "f14_token_family",
+  "size_mm": [
+    193.5,
+    86
+  ],
+  "labels": [
+    {
+      "text": "EARTH DATA",
+      "claim": "TF.family",
+      "pt": 14
+    },
+    {
+      "text": "raster \u2192 cube \u2192 rasterset",
+      "claim": "TF.family",
+      "pt": 20
+    },
+    {
+      "text": "Fields and dated stacks; retain the scene.",
+      "claim": "TF.family",
+      "pt": 15
+    },
+    {
+      "text": "COLLECT EVIDENCE",
+      "claim": "CM.bundle",
+      "pt": 14
+    },
+    {
+      "text": "8 facts \u2192 one bundle handle",
+      "claim": "CM.bundle",
+      "pt": 20
+    },
+    {
+      "text": "38 characters; members resolve separately.",
+      "claim": "CM.bundle",
+      "pt": 15
+    },
+    {
+      "text": "REASONING CHECKPOINTS",
+      "claim": "CM.state",
+      "pt": 14
+    },
+    {
+      "text": "located \u2192 routed \u2192 recalled \u2192 scored",
+      "claim": "CM.state",
+      "pt": 20
+    },
+    {
+      "text": "4 stage addresses re-hashed offline.",
+      "claim": "CM.state",
+      "pt": 15
+    },
+    {
+      "text": "FILES, IDENTITY AND EXECUTION",
+      "claim": "TF.family",
+      "pt": 14
+    },
+    {
+      "text": "tree \u00b7 entity \u00b7 trace \u00b7 track",
+      "claim": "TF.family",
+      "pt": 20
+    },
+    {
+      "text": "Address chunks, subjects and recorded runs.",
+      "claim": "TF.family",
+      "pt": 15
+    }
+  ]
 }

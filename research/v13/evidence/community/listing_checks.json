@@ -1,0 +1,109 @@
+{
+  "checked_utc": "2026-10-02T08:22:19.156381+00:00",
+  "checks": [
+    {
+      "id": "mulesoft",
+      "url": "https://anypoint.mulesoft.com/exchange/68e53915-e89b-4e82-b794-12d37982db4c/vortxAi-asset/",
+      "final_url": "https://anypoint.mulesoft.com/exchange/68e53915-e89b-4e82-b794-12d37982db4c/vortxAi-asset/",
+      "http_status": 200,
+      "title": "Vortx AI MCP Server",
+      "sha256": "f6aec8669243f74fbf330f74beb8e0986776728871806aabbfd4a89b0cfc5227",
+      "text_file": "mulesoft.txt",
+      "original_rendered_text_bytes": 1188,
+      "archived_excerpt": "Vortx AI MCP Server \u00b7 Type MCP \u00b7 Version 2.0.0 \u00b7 Published on Aug 13, 2026",
+      "archived_excerpt_bytes": 78,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    },
+    {
+      "id": "github-mcp",
+      "url": "https://github.com/mcp/Vortx-AI/emem",
+      "final_url": "https://github.com/mcp/Vortx-AI/emem",
+      "http_status": 200,
+      "title": "MCP Registry | emem, the verifiable memory protocol for the physical world \u00b7 GitHub",
+      "sha256": "966f35934050cd3e6651d761ff547ed9fcde8de603895dff4d8711d8f9acfbb6",
+      "text_file": "github-mcp.txt",
+      "original_rendered_text_bytes": 18954,
+      "archived_excerpt": "emem, the verifiable memory protocol for the physical world \u00b7 By Vortx-AI \u00b7 Install MCP server",
+      "archived_excerpt_bytes": 97,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    },
+    {
+      "id": "dify",
+      "url": "https://marketplace.dify.ai/plugin/vortx-ai/emem",
+      "final_url": "https://marketplace.dify.ai/plugin/vortx-ai/emem",
+      "http_status": 200,
+      "title": "emem - Dify Marketplace",
+      "sha256": "f97ed0a5d627f5e5561a43d3f24854b6604aa3067f8fabf1cde95b9652c2c669",
+      "text_file": "dify.txt",
+      "original_rendered_text_bytes": 18149,
+      "archived_excerpt": "emem - Dify Marketplace",
+      "archived_excerpt_bytes": 24,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    },
+    {
+      "id": "dify-lite",
+      "url": "https://marketplace.dify.ai/template/emem/ad67ca26-e875-494b-b98f-23902c9a2017",
+      "final_url": "https://marketplace.dify.ai/template/emem/ad67ca26-e875-494b-b98f-23902c9a2017",
+      "http_status": 200,
+      "title": "emem Referent Lock Lite - Dify Marketplace",
+      "sha256": "e4f41d8d91caea6a6828305b4c2333435079b54e44e361ee0177712eaacb4ff9",
+      "text_file": "dify-lite.txt",
+      "original_rendered_text_bytes": 1770,
+      "archived_excerpt": "emem Referent Lock Lite",
+      "archived_excerpt_bytes": 24,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    },
+    {
+      "id": "dify-full",
+      "url": "https://marketplace.dify.ai/template/emem/6c7b54a5-17f0-4eac-97a2-5d8cb51be381",
+      "final_url": "https://marketplace.dify.ai/template/emem/6c7b54a5-17f0-4eac-97a2-5d8cb51be381",
+      "http_status": 200,
+      "title": "emem Referent Lock Full - Dify Marketplace",
+      "sha256": "2af6b4f17a586e6dd1684a731e4436a4f820b489884a0647c1f52e8f88edad9f",
+      "text_file": "dify-full.txt",
+      "original_rendered_text_bytes": 1747,
+      "archived_excerpt": "emem Referent Lock Full",
+      "archived_excerpt_bytes": 24,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    },
+    {
+      "id": "dify-eudr",
+      "url": "https://marketplace.dify.ai/template/emem/89b63325-acec-4965-ae17-2013ef6f0029",
+      "final_url": "https://marketplace.dify.ai/template/emem/89b63325-acec-4965-ae17-2013ef6f0029",
+      "http_status": 200,
+      "title": "emem EUDR Evidence Studio - Dify Marketplace",
+      "sha256": "8bcc9341f4227d7d34a6c5fd80853221dda1f9519c9258d646efa73e12080c09",
+      "text_file": "dify-eudr.txt",
+      "original_rendered_text_bytes": 2649,
+      "archived_excerpt": "emem EUDR Evidence Studio",
+      "archived_excerpt_bytes": 26,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    },
+    {
+      "id": "chatgpt",
+      "url": "https://chatgpt.com/plugins/plugin_asdk_app_6a6a0832a59081918b19aec0ddf9ec77",
+      "final_url": "https://chatgpt.com/plugins/plugin_asdk_app_6a6a0832a59081918b19aec0ddf9ec77",
+      "http_status": 200,
+      "title": "ChatGPT Plugins | Browse and add plugins to ChatGPT",
+      "sha256": "aaf82f9bf05b872ed3824ccfdfd7c5ca2b08ff46d1d17fb2c01f9b0522f202bc",
+      "text_file": "chatgpt.txt",
+      "original_rendered_text_bytes": 1219,
+      "archived_excerpt": "emem \u00b7 Signed facts about real places \u00b7 Install plugin \u00b7 Developer Vortx.ai \u00b7 Version 1.3.0",
+      "archived_excerpt_bytes": 96,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    },
+    {
+      "id": "clawhub",
+      "url": "https://clawhub.ai/avijeetsingh1/emem",
+      "final_url": "https://clawhub.ai/avijeetsingh1/skills/emem",
+      "http_status": 200,
+      "title": "emem \u2014 ClawHub",
+      "sha256": "974668859c98e0f717564430fe7d9024207b2ef09ccb7b69890d3cf01c37c589",
+      "text_file": "clawhub.txt",
+      "original_rendered_text_bytes": 26,
+      "archived_excerpt": "emem \u2014 ClawHub",
+      "archived_excerpt_bytes": 17,
+      "archive_scope": "Selected title and identity fields; original full-response SHA-256 retained."
+    }
+  ]
+}

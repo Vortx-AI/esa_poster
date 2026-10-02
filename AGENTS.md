@@ -2,7 +2,7 @@
 
 This repository holds the A0 poster for "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents
 over ~~Foundation-Model Embeddings~~ Satellite Observations and Signed Execution Traces" (Agentic AI for Earth
-Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.4 (unified story plus restored formalism and upstream test evidence).
+Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.5 (recovered contributions and usable community routes).
 
 ## Start here
 
@@ -25,7 +25,7 @@ python research/repro/v11/mutation_suite.py   # R1 alone, offline
 ```
 
 Edit `poster/src/poster.v13.html` and `poster/src/poster.v13.css` (never `poster/poster.html`, which is generated).
-The printed face uses three QR tasks (Try it, Inspect, Reproduce); all six web routes remain.
+The printed face uses three QR tasks (Try it, Inspect, Connect & Reproduce); all six web routes remain. Connect opens /use/, which links the methods and tests.
 Colours: `poster/src/tokens.json`. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
 Deliberate departures from the brief's block rectangles, each with its reason: `poster/src/poster.v13.layout.json`.
 R5 lines (`data-mode="r5"`, `{R5.*}` placeholders) print only when `research/repro/v13/r5/results.json` is final; the

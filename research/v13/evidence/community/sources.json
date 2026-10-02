@@ -1,0 +1,9 @@
+{
+  "repository": "Vortx-AI/emem",
+  "commit": "8e9b401cecae7ab9944d403a2d7840952c6586a6",
+  "sha256": {
+    "README.md": "ca829ee60a9003144b06fe833ab48da89a0ecd1dd87a4b49d90fcbd67ef6189e",
+    "docs/integrations.md": "7e92c3e7e0b85b965722ad1c46497f729ce3f7b8ae80ab244d46effb87eb7927",
+    "plugins/emem/README.md": "822b5bf00d11ac8a661837e2748e941ff5924502784d505560daece09d7445aa"
+  }
+}

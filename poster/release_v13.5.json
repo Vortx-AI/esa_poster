@@ -1,0 +1,97 @@
+{
+  "release": "v13.5",
+  "date": "2026-10-02",
+  "base_commit": "693e5861cb36d0e8fbfd0d69554aa36b9d9851f7",
+  "artifacts": {
+    "poster/emem-poster-A0.pdf": {
+      "bytes": 2561918,
+      "sha256": "33edb1f92b84db1786a2afb3729a3961e02a6788ee48b52c7af3a1a3df4de4e1"
+    },
+    "poster/emem-poster-preview.png": {
+      "bytes": 3743563,
+      "sha256": "21dcba4bd8cc0f85d9a7cdcddabea0fa02f64b35dd1fd73c769d3cf56738167d"
+    },
+    "poster/emem-poster-A0-300dpi.png": {
+      "bytes": 11421748,
+      "sha256": "46795b90ed5bc99bd333500db88b69d75f2df8ad07d418d1b164ac5222758e35"
+    },
+    "poster/build_v13_report.json": {
+      "bytes": 25370,
+      "sha256": "6e4cc235b53c26d77161199fc7b19c7d3297f0e767296bbe312849c1dddbfa5d"
+    },
+    "research/v13/evidence/community/recovery_checks.json": {
+      "bytes": 2270,
+      "sha256": "daeca23abc8928b7537e731bf75b796692fdf23ded14ccd14339f9b64e9f91b7"
+    },
+    "research/v13/evidence/community/site_review.json": {
+      "bytes": 50081,
+      "sha256": "afa83f7d90a7bdb0997b7ce5dbe72c90cbea3ed79b69ba1457c97da45356a1c5"
+    },
+    "research/v13/evidence/community/listing_checks.json": {
+      "bytes": 5490,
+      "sha256": "97bb1bcbc6040ff596e5ffb1210baa4936c5c0ebdcee34340f79c04c044e1815"
+    },
+    "research/v13/evidence/community/sources.json": {
+      "bytes": 389,
+      "sha256": "6101bc16ed47aa1ce1d162e81c3869bdb3fe747c746b04d309c41367bb8ebf11"
+    }
+  },
+  "validation": {
+    "poster_gates": {
+      "page_fit": "PASS",
+      "footer_clearance": "PASS",
+      "block_rectangles": "PASS",
+      "no_overflow_or_clipping": "PASS",
+      "type_floor": "PASS",
+      "glyph_coverage": "PASS",
+      "prose_and_banned_words": "PASS",
+      "face_hygiene": "PASS",
+      "r5_placeholders": "PASS",
+      "claims_coverage": "PASS",
+      "claims_rows_recheck": "PASS",
+      "qr_decode": "PASS",
+      "assets": "PASS",
+      "fonts_loaded": "PASS",
+      "colour_tokens": "PASS",
+      "imagery": "PASS",
+      "word_budget": "PASS"
+    },
+    "running_words": 669,
+    "printed_claim_rows": 61,
+    "evidence_rows_rechecked": 406,
+    "figure_numbers_checked": 368,
+    "local_route_viewports": {
+      "passed": 14,
+      "failed": 0,
+      "widths": [
+        390,
+        1440
+      ]
+    },
+    "clipboard_exact": true,
+    "fresh_offline_state_hashes": 4,
+    "fresh_offline_proof_checks": 9,
+    "prior_upstream_tests": "20 passed at emem 8e9b401, unchanged v13.4 run; not re-executed this round",
+    "hosted_agent_results": "No new benchmark successes. ChatGPT directory and connected tool confirmed; resolve calls returned connector errors. Other platform routes are listings/configurations as documented.",
+    "proof_lossless_compression": {
+      "optimizer": "pyoxipng 9.1.1, level 3",
+      "pixels_and_dpi_unchanged": true,
+      "decoded": {
+        "size": [
+          9933,
+          14042
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ],
+        "rgb_sha256": "9b5fa8624f624ff3398f37179d0ab50371283b02c834304a460281b49bab73b3"
+      },
+      "bytes_before": 14076581,
+      "bytes_after": 11421748,
+      "seconds": 53.81
+    }
+  },
+  "deployment": "The push to main runs the committed GitHub Pages workflow. Publication is followed by byte comparisons against this release.",
+  "attestation": "No new signing identity or attestation; the prior signed track identifies its archived PDF."
+}
