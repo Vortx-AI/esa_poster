@@ -50,7 +50,7 @@ TODAY = dt.date.today()
 
 FIGURES = ["f1_scene", "f18_workflow", "f2_spine", "f17_ndvi_history", "f4_failure_ladder", "f6_mutation_matrix",
            "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem",
-           "f13_one_address", "f14_token_family", "f16_embeddings"]   # v13.7: Berlin replaces the generic wire-record schematic; full flow and token family restored.
+           "f13_one_address", "f14_token_family", "f15b_sat042_strip", "f16_embeddings"]   # SAT-042 compact strip restored as panel 11.
 QRS = ["demo", "r", "use"]  # issue #48: three printed tasks; all six web routes remain
 
 # brief section B row label -> data-block id
@@ -68,9 +68,9 @@ GATES = {}          # name -> {"pass": bool, "details": [...]}
 TYPE_DEVIATIONS = [
     "v13.4: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
     "The left column holds complete drift rules, memory operations and archived model outputs; the right holds the observation model.",
-    "The execution extension accompanies the anchor score; the final right-column panel states next experiments.",
+    "Panel 11 restores the SAT-042 execution-verification strip: 28 pt headline, 17 pt subtitle, 14 pt figure text and scope.",
 ]
-HEADLINE_LEN_EXEMPT = {}
+HEADLINE_LEN_EXEMPT = {"p11": "v12.1 title kept verbatim; one line at 28 pt for the compact SAT-042 strip."}
 MOVED = []          # running-text lines that a figure prints itself (dropped from the HTML, still counted)
 REPORT_EXTRA = {}
 
