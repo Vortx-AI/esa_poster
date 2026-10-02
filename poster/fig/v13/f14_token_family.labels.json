@@ -91,7 +91,7 @@
    "claim": "A14.grammar"
   },
   {
-   "text": "same; op(parents) re-run",
+   "text": "same; pure ops re-run",
    "pt": 14,
    "claim": "A14.hash"
   },

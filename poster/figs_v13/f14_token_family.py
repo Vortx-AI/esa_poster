@@ -61,7 +61,7 @@ ROWS = [
     ("one value", "fact:<cell>:<cid>", "BLAKE3(CBOR(fact)), 52 chars", "bytes"),
     ("nothing there", "fact: · kind absence", "same; + BLAKE3(reason)[:16]", "bytes"),
     ("an embedding", "fact: · 128 / 1024 floats", "same; attester_only", "bytes"),
-    ("a derived value", "fact: · op, parents", "same; op(parents) re-run", "bytes"),
+    ("a derived value", "fact: · op, parents", "same; pure ops re-run", "bytes"),
     ("a raster", "raster:<a>:<b>:<t>:<d>", "fact d names BLAKE3(grid)", "bytes"),
     ("a raster in time", "cube:<a>:<b>:<t0..t1>:<d>", "BLAKE3(CBOR([member d…]))", "list"),
     ("a raster set", "rasterset:<set>:<d>", "BLAKE3(CBOR([d…, purpose]))", "list"),

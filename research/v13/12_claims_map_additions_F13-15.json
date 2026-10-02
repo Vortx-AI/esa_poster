@@ -457,7 +457,7 @@
     "BLAKE3(CBOR(fact)), 52 chars",
     "same; + BLAKE3(reason)[:16]",
     "same; attester_only",
-    "same; op(parents) re-run",
+    "same; pure ops re-run",
     "fact d names BLAKE3(grid)",
     "BLAKE3(CBOR([member d…]))",
     "BLAKE3(CBOR([d…, purpose]))",
