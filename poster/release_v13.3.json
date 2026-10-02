@@ -1,0 +1,74 @@
+{
+  "release": "v13.3",
+  "date": "2026-10-02",
+  "base_commit": "d5b9e6e0643c2182ce360e285f827543ce6bb488",
+  "primary_issue": 48,
+  "related_issues": [
+    12,
+    14,
+    20,
+    23,
+    24,
+    28,
+    30,
+    37,
+    38
+  ],
+  "artifacts": {
+    "poster/emem-poster-A0.pdf": {
+      "bytes": 2610610,
+      "sha256": "a9197ab4c2a27d78ebd24a920b02f31ef2a8c465f820d58d0aa368c00fa8a5e7"
+    },
+    "poster/emem-poster-preview.png": {
+      "bytes": 3900147,
+      "sha256": "11634a2e016f99b9597c015bad2ef73b64a278f48d3c4f3ce635f4c35b0cda11"
+    },
+    "poster/emem-poster-A0-300dpi.png": {
+      "bytes": 11934440,
+      "sha256": "f45fa781ecadd8a5baba6f208e4f80325dc582068ce24c0f4e9cd29bc2a9e015"
+    },
+    "poster/build_v13_report.json": {
+      "bytes": 25830,
+      "sha256": "e3f876d14b09c68601651d39ce8c1aa82f8b875d94f1217291c3d58922bdbb63"
+    },
+    "docs/assets/screens/results.json": {
+      "bytes": 12975,
+      "sha256": "cd036d9e423de6a07dc88c732f4fd20dc2b4b95dbadb8c718691252286ba0137"
+    }
+  },
+  "validation": {
+    "poster_gates": {
+      "page_fit": "PASS",
+      "footer_clearance": "PASS",
+      "block_rectangles": "PASS",
+      "no_overflow_or_clipping": "PASS",
+      "type_floor": "PASS",
+      "glyph_coverage": "PASS",
+      "prose_and_banned_words": "PASS",
+      "face_hygiene": "PASS",
+      "r5_placeholders": "PASS",
+      "claims_coverage": "PASS",
+      "claims_rows_recheck": "PASS",
+      "qr_decode": "PASS",
+      "assets": "PASS",
+      "fonts_loaded": "PASS",
+      "colour_tokens": "PASS",
+      "imagery": "PASS",
+      "word_budget": "PASS"
+    },
+    "running_words": 649,
+    "r1_non_timing_results_match_committed": true,
+    "site_results": "docs/assets/screens/results.json",
+    "site_full_suite_exit": 1,
+    "site_local_layout_and_offline_checks": "PASS",
+    "site_live_checks": "UNVERIFIED: external emem.dev and source fetches unavailable in this workspace",
+    "site_live_failures": 12,
+    "all_six_web_qr_payloads_decode": true,
+    "proof_lossless_compression": {
+      "optimizer": "pyoxipng 9.1.1, level 3",
+      "pixels_unchanged": true,
+      "decoded_rgb_sha256": "4c738c187716ad993635d34236cba27cbe724c25c1a88ed46583023c5f9ff4ac"
+    }
+  },
+  "attestation": "No new signing attestation; previous signed board track is archived and identifies its earlier PDF."
+}

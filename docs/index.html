@@ -4,25 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>EMEM at Agentic AI for EO 2026</title>
-<meta name="description" content="Six links from the EMEM poster: demo, token, record, test, methods, integrations.">
+<meta name="description" content="An Earth observation that survives an agent handoff. Try it, inspect the record, reproduce the experiments.">
 <link rel="stylesheet" href="./assets/site.css">
 </head>
 <body>
 <main>
 <nav class="top" aria-label="site"><span>EMEM poster · Agentic AI for EO, Berlin, 19 Oct 2026</span></nav>
 
-<h1>Agents hand each other evidence references, not paraphrases.</h1>
-<p class="lead">EMEM is a content-addressed, verifiable Earth-memory protocol for AI agents. An agent hands over a token that names one signed observation record by the BLAKE3 hash of its bytes. The receiver can re-check it, layer by layer. A paraphrase gives it nothing to check.</p>
-<a class="cta hero" href="./demo/"><b>VIEW THE DEMO →</b><span>Your phone becomes Agent B. A paraphrase passes unchecked. Three corruptions are refused at their ladder level. The genuine record is accepted, and the source pixel is re-read. About 10 s, no sign-in.</span></a>
-<a class="cta" href="./t/"><b>TRY A TOKEN →</b><span>Your browser fetches the bytes behind the Keylong token, re-hashes them and checks the cell. Paste any other emem:fact token.</span></a>
-<a class="cta" href="./r/"><b>INSPECT THE RECORD →</b><span>The 1,115-byte record behind the main example: every field, what its name binds, what the signature covers, and where it sits in the log.</span></a>
-<a class="cta" href="./test/"><b>RE-RUN THE TEST →</b><span>Exact commands for the mutation suite, the agent handoff experiment, the 15-link trace and the offline proof bundle.</span></a>
-<a class="cta" href="./methods/"><b>READ THE METHODS →</b><span>The record, the verification ladder L0 to L5, the threat model, the experiments, the M15 sample, the cost table and the references.</span></a>
-<a class="cta" href="./use/"><b>DISCOVER INTEGRATIONS →</b><span>Where EMEM runs today, each surface labelled by evidence: LIVE, PROTOCOL, REGISTRY, EXAMPLE, EXPERIMENTAL or NOT FOUND, with the date it was checked.</span></a>
-<p class="note">Short address on the poster: <code>vortx-ai.github.io/esa_poster</code>. Source of the poster and of every number on it: <a href="https://github.com/Vortx-AI/esa_poster">github.com/Vortx-AI/esa_poster</a>.</p>
+<h1>An Earth observation that survives an agent handoff.</h1>
+<p class="lead">EMEM gives an observation a lookup identity and a content-addressed record. Agent A passes a compact reference; Agent B resolves the same record and checks it before continuing. Earth data stays upstream while its reference enters the reasoning.</p>
+<p><a class="btn" href="https://github.com/Vortx-AI/esa_poster/raw/refs/heads/main/poster/emem-poster-A0.pdf">Download the A0 poster</a> · <a href="https://github.com/Vortx-AI/esa_poster/blob/main/poster/emem-poster-preview.png">View the poster</a></p>
+<a class="cta hero" href="./demo/"><b>TRY IT →</b><span>Become Agent B in your browser. Resolve a real observation and run its checks. No sign-in.</span></a>
+<a class="cta" href="./r/"><b>INSPECT →</b><span>Open the 1,115-byte observation record, its source references and batch attestation.</span></a>
+<a class="cta" href="./methods/"><b>REPRODUCE →</b><span>Read the methods, run the experiments and find the integration routes.</span></a>
+<p class="note"><a href="./t/">Resolve your own token</a> · <a href="./use/">Find an integration</a> · <a href="./test/">Run the tests</a></p>
+<p class="note">Source and evidence: <a href="https://github.com/Vortx-AI/esa_poster">github.com/Vortx-AI/esa_poster</a>.</p>
 <footer>
 <p>Jaya Kumari, Avijeet Singh · Vortx AI · Poster Session 1, Agentic AI for Earth Observation (ESA Φ-lab and BIFOLD), Berlin, 19 Oct 2026.</p>
-<p>These pages are static files built from the poster repository on 2026-10-01 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
+<p>These pages are static files built from the poster repository on 2026-10-02 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
 </footer>
 </main>
 </body>

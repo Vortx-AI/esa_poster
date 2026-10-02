@@ -76,9 +76,9 @@ async function simplePage(name, rel, fn) {
 // ---- landing
 await simplePage('landing', '', async (page) => {
   const ctas = await page.$$eval('a.cta', (as) => as.map((a) => [a.querySelector('b').textContent.replace(' →', ''), a.getAttribute('href')]));
-  const want = [['VIEW THE DEMO', './demo/'], ['TRY A TOKEN', './t/'], ['INSPECT THE RECORD', './r/'], ['RE-RUN THE TEST', './test/'], ['READ THE METHODS', './methods/'], ['DISCOVER INTEGRATIONS', './use/']];
-  check(JSON.stringify(ctas) === JSON.stringify(want), 'landing: the six CTAs differ: ' + JSON.stringify(ctas));
-  const h1 = await page.textContent('h1'); check(h1 === 'Agents hand each other evidence references, not paraphrases.', 'landing: hero sentence');
+  const want = [['TRY IT', './demo/'], ['INSPECT', './r/'], ['REPRODUCE', './methods/']];
+  check(JSON.stringify(ctas) === JSON.stringify(want), 'landing: the three primary CTAs differ: ' + JSON.stringify(ctas));
+  const h1 = await page.textContent('h1'); check(h1 === 'An Earth observation that survives an agent handoff.', 'landing: hero sentence');
   return { ctas };
 });
 

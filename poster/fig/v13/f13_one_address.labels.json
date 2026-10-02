@@ -2,15 +2,15 @@
  "figure": "f13_one_address",
  "size_mm": [
   193.5,
-  128.0
+  174.0
  ],
  "cell": "defi.zb655.yaka.pUxe",
  "scene": "S2C_MSIL2A_20260927T101801_R065_T33UUU_20260927T153810",
  "reverified": "2026-10-02T04:20:15Z",
  "labels": [
   {
-   "text": "Berlin",
-   "pt": 17,
+   "text": "BERLIN",
+   "pt": 22,
    "claim": "A13.head"
   },
   {
@@ -24,62 +24,12 @@
    "claim": "A13.head"
   },
   {
-   "text": "Sentinel-2C L2A",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "27 Sep 2026",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "1 km",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "true colour,",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "2.24 km across,",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "224 px of 10 m,",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "6.5 % cloud;",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "box: 90 m",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
-   "text": "provenance class",
-   "pt": 14,
-   "claim": null
-  },
-  {
    "text": "direct sensor",
    "pt": 14,
    "claim": null
   },
   {
-   "text": "deterministic",
-   "pt": 14,
-   "claim": null
-  },
-  {
-   "text": "index",
+   "text": "deterministic index",
    "pt": 14,
    "claim": null
   },
@@ -99,9 +49,9 @@
    "claim": null
   },
   {
-   "text": "signed absence",
+   "text": "Sentinel-2C L2A · 27 Sep 2026 · RGB · 2.24 km across; box: 90 m",
    "pt": 14,
-   "claim": null
+   "claim": "A13.chip"
   },
   {
    "text": "product",
@@ -529,17 +479,17 @@
    "claim": "A13.cids"
   },
   {
-   "text": "15 products, 16 signed facts, 4 signed absences, 10 m to about",
+   "text": "15 products, 16 signed facts, 4 signed absences, 10 m to about 11 km; read live 30",
    "pt": 14,
    "claim": "A13.scope"
   },
   {
-   "text": "11 km; read live 30 Sep 2026. Shared address, separate pixels; n/s:",
+   "text": "Sep 2026. Native grids remain distinct; n/s: grid not in source files. 16 records",
    "pt": 14,
    "claim": "A13.scope"
   },
   {
-   "text": "grid not in our files. All 16 re-hash under emem.dev's key, 2 Oct 2026.",
+   "text": "re-hash under emem.dev's key, 2 Oct 2026.",
    "pt": 14,
    "claim": "A13.scope"
   }

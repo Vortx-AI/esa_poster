@@ -1,7 +1,7 @@
 [
  {
   "slug": "demo",
-  "cta": "VIEW THE DEMO",
+  "cta": "TRY IT",
   "payload": "https://vortx-ai.github.io/esa_poster/demo/",
   "ecc": "Q",
   "version": 4,
@@ -12,7 +12,7 @@
   "module_mm": 2.121,
   "raster_px": 1027,
   "raster_dpi": 300,
-  "rasteriser": "cairosvg",
+  "rasteriser": "svg module parser",
   "decoded": "https://vortx-ai.github.io/esa_poster/demo/",
   "decoded_equals_payload": true
  },
@@ -29,13 +29,13 @@
   "module_mm": 1.212,
   "raster_px": 587,
   "raster_dpi": 300,
-  "rasteriser": "cairosvg",
+  "rasteriser": "svg module parser",
   "decoded": "https://vortx-ai.github.io/esa_poster/t/",
   "decoded_equals_payload": true
  },
  {
   "slug": "r",
-  "cta": "INSPECT THE RECORD",
+  "cta": "INSPECT",
   "payload": "https://vortx-ai.github.io/esa_poster/r/",
   "ecc": "Q",
   "version": 4,
@@ -46,7 +46,7 @@
   "module_mm": 1.212,
   "raster_px": 587,
   "raster_dpi": 300,
-  "rasteriser": "cairosvg",
+  "rasteriser": "svg module parser",
   "decoded": "https://vortx-ai.github.io/esa_poster/r/",
   "decoded_equals_payload": true
  },
@@ -63,13 +63,13 @@
   "module_mm": 1.212,
   "raster_px": 587,
   "raster_dpi": 300,
-  "rasteriser": "cairosvg",
+  "rasteriser": "svg module parser",
   "decoded": "https://vortx-ai.github.io/esa_poster/test/",
   "decoded_equals_payload": true
  },
  {
   "slug": "methods",
-  "cta": "READ THE METHODS",
+  "cta": "REPRODUCE",
   "payload": "https://vortx-ai.github.io/esa_poster/methods/",
   "ecc": "Q",
   "version": 4,
@@ -80,7 +80,7 @@
   "module_mm": 1.212,
   "raster_px": 587,
   "raster_dpi": 300,
-  "rasteriser": "cairosvg",
+  "rasteriser": "svg module parser",
   "decoded": "https://vortx-ai.github.io/esa_poster/methods/",
   "decoded_equals_payload": true
  },
@@ -97,7 +97,7 @@
   "module_mm": 1.212,
   "raster_px": 587,
   "raster_dpi": 300,
-  "rasteriser": "cairosvg",
+  "rasteriser": "svg module parser",
   "decoded": "https://vortx-ai.github.io/esa_poster/use/",
   "decoded_equals_payload": true
  }

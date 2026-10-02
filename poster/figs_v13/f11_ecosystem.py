@@ -187,7 +187,7 @@ def arrow(x0, x1, y, col=C["ink2"]):
 # (1) bridge
 LW = 352.0
 BY, BH = 1.5, 17.0
-nodes = [("EMEM signed record", "emem:fact:…", "emem"), ("MCP · A2A", "transport", "tint"),
+nodes = [("EMEM reference", "emem:fact:…", "emem"), ("MCP · A2A", "transport", "tint"),
          ("agent host or client", "carries the reference", "plain"), ("next agent", "resolves, re-hashes, re-reads", "plain")]
 nw, gap = [86, 64, 86, 92], 8.0
 x = 0.0; centres = []
@@ -228,13 +228,13 @@ for g, items in GROUPS:
     fig.canvas.draw()
     xe = max(ax.transData.inverted().transform((t.get_window_extent().x1, 0))[0] for t in texts)
     line([gx, xe], [GY - 3.8, GY - 3.8], 0.35, C["rule"], z=1)
-    gx = xe + 7.0
-assert gx - 7.0 <= 352.0, gx
+    gx = xe + 6.5
+assert gx - 6.5 <= 352.0, gx
 # legend and the held ChatGPT row
 YL = 86.0
 x = 0.0
-for kind, word, desc in (("disc", "LIVE", "connected or published"), ("ring", "PROTOCOL", "open surface, client not run by us"),
-                         ("square", "REGISTRY", "a listing"), ("triangle", "EXAMPLE", "repo code, tool list checked")):
+for kind, word, desc in (("disc", "LIVE", "connected or published"), ("ring", "PROTOCOL", "exposed interface"),
+                         ("square", "REGISTRY", "a listing"), ("triangle", "EXAMPLE", "repository adapter")):
     glyph(kind, x + 2.0, YL, r=1.8)
     t = T(x + 5.6, YL, word, F, C["ink"], weight="semibold")
     fig.canvas.draw(); e = t.get_window_extent(); xe = ax.transData.inverted().transform((e.x1, e.y0))[0]
@@ -242,7 +242,7 @@ for kind, word, desc in (("disc", "LIVE", "connected or published"), ("ring", "P
     fig.canvas.draw(); e = t2.get_window_extent(); x = ax.transData.inverted().transform((e.x1, e.y0))[0] + 6.0
 T(0.0, YL + 7.0, f"checked {CHECKED.day} {CHECKED:%b %Y}", F, C["ink2"])
 if "chatgpt" in HELD:
-    T(64.0, YL + 7.0, "ChatGPT (@emem): listed by its publisher, not confirmed by us; held off the band", F, C["ink2"])
+    T(64.0, YL + 7.0, "ChatGPT (@emem) · PUBLISHER LISTING", F, C["ink2"])
 
 # (3) same-token dot plot
 PX0 = 362.0

@@ -74,18 +74,17 @@ const table = (head, rows, cls = '') => `<div class="tw"><table class="${cls}${h
 
 // ------------------------------------------------------------------ landing
 const CTAS = [
-  ['VIEW THE DEMO', 'demo/', 'Your phone becomes Agent B. A paraphrase passes unchecked. Three corruptions are refused at their ladder level. The genuine record is accepted, and the source pixel is re-read. About 10 s, no sign-in.', true],
-  ['TRY A TOKEN', 't/', 'Your browser fetches the bytes behind the Keylong token, re-hashes them and checks the cell. Paste any other emem:fact token.'],
-  ['INSPECT THE RECORD', 'r/', `The ${int(fact.length)}-byte record behind the main example: every field, what its name binds, what the signature covers, and where it sits in the log.`],
-  ['RE-RUN THE TEST', 'test/', 'Exact commands for the mutation suite, the agent handoff experiment, the 15-link trace and the offline proof bundle.'],
-  ['READ THE METHODS', 'methods/', 'The record, the verification ladder L0 to L5, the threat model, the experiments, the M15 sample, the cost table and the references.'],
-  ['DISCOVER INTEGRATIONS', 'use/', 'Where EMEM runs today, each surface labelled by evidence: LIVE, PROTOCOL, REGISTRY, EXAMPLE, EXPERIMENTAL or NOT FOUND, with the date it was checked.'],
+  ['TRY IT', 'demo/', 'Become Agent B in your browser. Resolve a real observation and run its checks. No sign-in.', true],
+  ['INSPECT', 'r/', `Open the ${int(fact.length)}-byte observation record, its source references and batch attestation.`],
+  ['REPRODUCE', 'methods/', 'Read the methods, run the experiments and find the integration routes.'],
 ];
-w('index.html', page('', 'EMEM at Agentic AI for EO 2026', 'Six links from the EMEM poster: demo, token, record, test, methods, integrations.', '', `
-<h1>Agents hand each other evidence references, not paraphrases.</h1>
-<p class="lead">EMEM is a content-addressed, verifiable Earth-memory protocol for AI agents. An agent hands over a token that names one signed observation record by the BLAKE3 hash of its bytes. The receiver can re-check it, layer by layer. A paraphrase gives it nothing to check.</p>
+w('index.html', page('', 'EMEM at Agentic AI for EO 2026', 'An Earth observation that survives an agent handoff. Try it, inspect the record, reproduce the experiments.', '', `
+<h1>An Earth observation that survives an agent handoff.</h1>
+<p class="lead">EMEM gives an observation a lookup identity and a content-addressed record. Agent A passes a compact reference; Agent B resolves the same record and checks it before continuing. Earth data stays upstream while its reference enters the reasoning.</p>
+<p><a class="btn" href="${GH}/raw/refs/heads/main/poster/emem-poster-A0.pdf">Download the A0 poster</a> · <a href="${blob('poster/emem-poster-preview.png')}">View the poster</a></p>
 ${CTAS.map(([k, u, d, hero]) => `<a class="cta${hero ? ' hero' : ''}" href="./${u}"><b>${k} →</b><span>${esc(d)}</span></a>`).join('\n')}
-<p class="note">Short address on the poster: <code>vortx-ai.github.io/esa_poster</code>. Source of the poster and of every number on it: <a href="${GH}">github.com/Vortx-AI/esa_poster</a>.</p>`));
+<p class="note"><a href="./t/">Resolve your own token</a> · <a href="./use/">Find an integration</a> · <a href="./test/">Run the tests</a></p>
+<p class="note">Source and evidence: <a href="${GH}">github.com/Vortx-AI/esa_poster</a>.</p>`));
 
 // ------------------------------------------------------------------ TRY A TOKEN
 const tjs = await esbuild.build({ entryPoints: [path.join(here, 't.js')], bundle: true, minify: true, format: 'iife', target: ['es2020', 'safari15'], write: false, legalComments: 'none' });
@@ -191,9 +190,10 @@ ${table(['field', 'value', 'in the signed preimage'], attRows)}
 ${table(['object', 'value', 'read-only link'], logRows)}
 <p class="note">These are the proofs the demo checks offline from the committed bundle (signed ${S.signed_at}). The links fetch fresh copies from emem.dev with GET. One organisation runs both the log and its only independent-tier witness today.</p>
 <div class="slot" id="board-track">
-<p><b>BOARD TRACK</b></p>
-<p>The printed board is itself a step of a signed emem track: 21 steps, every record the board rests on in panel order, then the print file (PDF at commit e66c3ba) as a pointer note. ememdemo re-checks all 21 in the browser and recomputes the chain to its head <code>ct2yz27kkkrh64emgdzs7bybgy</code>; the track is log entry 2,591,968.</p>
-<p><a href="https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fhepwyxdhiwckwi7qahkuvya2b4.md">Open the board's track in ememdemo</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/hepwyxdhiwckwi7qahkuvya2b4.md">the track note</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/7jr4zw2tq7slvbsyzbyxxzwwii.md">the print's pointer note</a>. Signed by the poster key njedkglt; composer: <code>research/repro/v13/track/make_track_v13.py</code>.</p>
+<p><b>ARCHIVED BOARD TRACK</b></p>
+<p>The earlier PDF at commit e66c3ba is a step of a signed emem track: 21 steps, every record the board rests on in panel order, then the print file (PDF at commit e66c3ba) as a pointer note. ememdemo re-checks all 21 in the browser and recomputes the chain to its head <code>ct2yz27kkkrh64emgdzs7bybgy</code>; the track is log entry 2,591,968.</p>
+<p><a href="https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fhepwyxdhiwckwi7qahkuvya2b4.md">Open the archived board track in ememdemo</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/hepwyxdhiwckwi7qahkuvya2b4.md">the track note</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/7jr4zw2tq7slvbsyzbyxxzwwii.md">the print's pointer note</a>. Signed by the poster key njedkglt; composer: <code>research/repro/v13/track/make_track_v13.py</code>.</p>
+<p class="note">This track identifies that archived PDF. The current poster has new bytes; its file hash and build report are published in the repository. The archived signature does not attest the revised PDF.</p>
 </div>
 <h2>Check it yourself</h2>
 <ul>
@@ -330,6 +330,15 @@ const pre = PREV.pre, post = PREV.post;
 w('methods/index.html', page('methods', 'READ THE METHODS · EMEM', 'Methods behind the EMEM poster: the record, the verification ladder, the threat model, the experiments, the M15 sample, costs and references.', 'read the methods', `
 <h1>Methods</h1>
 <p class="lead">How the poster's claims were produced, and where each stops. Every number here is read by the build from the file named beside it; the date is the file's measurement or commit date (UTC).</p>
+<p><a class="btn" href="../test/">Run the experiments</a> · <a href="../use/">Find an integration</a> · <a href="../t/">Resolve a token</a></p>
+<h2>The complete system</h2>
+<p>Observe → locate → record → hand off → resolve → check → continue. The lookup identity is cell, product and observation time. The content address identifies the exact canonical record. An <code>emem:fact:&lt;cell64&gt;:&lt;fact_cid&gt;</code> reference carries the cell and content address; the product and time are fields inside the record.</p>
+<p>The two-process handoff in ${src(XRT_FILE)} passes the reference on stdout to a second program, which re-hashes the record, checks the receipt and recomputes NDVI. This is a measured program-to-program handoff, not a ChatGPT-to-Claude conversation.</p>
+<p>Detailed figures: <a href="${blob('poster/fig/v13/f8_ladder_detail.svg')}">verification layers and measured coverage</a> · <a href="${blob('poster/fig/v13/f14_token_family_detail.svg')}">token grammars and hash rules</a> · <a href="${blob('poster/fig/v13/f15_sat042.svg')}">SAT-042 reference harness</a>.</p>
+<p>SAT-042 is a deterministic test harness, with no spacecraft enrolled. Its admission gate binds the output value digest. Code, model and run fields in the trace do not make that gate a full binding of those identities. The observation handoff does not depend on this extension.</p>
+<h2>Research questions behind the experiments</h2>
+<p>Can a receiver detect altered evidence without trusting the sender? Which changes become visible at each verification depth? How do prose, JSON, retrieval, an opaque id and a checked reference compare? What remains inherited when the cited record is intact? The experiments below separate these questions from the poster's explanatory flow.</p>
+
 <p class="note">Contents: <a href="#record">record</a> · <a href="#ladder">ladder</a> · <a href="#threat">threat model</a> · <a href="#r1">R1</a> · <a href="#r5">R5</a> · <a href="#m15">M15 sample</a> · <a href="#demo">demo</a> · <a href="#cost">cost</a> · <a href="#prior">prior art</a> · <a href="#refs">references</a></p>
 
 <h2 id="record">1 · The record and its content address</h2>

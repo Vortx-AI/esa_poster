@@ -152,15 +152,15 @@ def main():
     tx, ty, tw = 8.0, 13.0, 87.0
     n, mods = qr_modules(QR)
     mod = tw / n
-    cap = "Your phone is Agent B: a paraphrase passes unchecked; three corruptions are refused."
-    lines = ["Your phone is Agent B: a", "paraphrase passes unchecked;", "three corruptions are refused."]
+    cap = "Your phone becomes Agent B. Resolve the record and run its checks."
+    lines = ["Your phone becomes Agent B.", "Resolve the record", "and run its checks."]
     assert " ".join(lines) == cap
     th = tw + 12 + 6.4 * len(lines) + 4
     ax.add_patch(FancyBboxPatch((tx, ty), tw, th, boxstyle="round,pad=0,rounding_size=1.2", fc="white", ec="none",
                                 zorder=6))
     ax.add_collection(PatchCollection([Rectangle((tx + a * mod, ty + b * mod), mod, mod) for a, b in mods],
                                       fc="black", ec="none", zorder=7))
-    T(ax, tx + tw / 2, ty + tw + 0.5, "VIEW THE DEMO", "Q.view_demo", fontsize=28, family=S.MONO, fontweight=700,
+    T(ax, tx + tw / 2, ty + tw + 0.5, "TRY IT", "Q.view_demo", fontsize=28, family=S.MONO, fontweight=700,
       color=S.C["ink"], ha="center", va="top", zorder=8)
     for i, ln in enumerate(lines):
         T(ax, tx + tw / 2, ty + tw + 12.5 + 6.4 * i, ln, "Q.view_demo.caption", fontsize=S.PT["caption"],

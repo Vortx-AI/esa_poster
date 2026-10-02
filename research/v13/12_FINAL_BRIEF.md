@@ -1,5 +1,7 @@
 # 12 · FINAL BRIEF for the v13 A0 board
 
+> **Current face: v13.3 (issue #48).** The editorial brief in `14_UNIFIED_POSTER_BRIEF.md` supersedes section C and the narrative hierarchy below. The original composition remains the base grid, with explicit departures in `poster/src/poster.v13.layout.json`. All evidence and claims checks still apply.
+
 Written 2026-10-01 by the lead scientific writer and art director. This file is the build specification for the final
 board: every printed word, every figure, every number's source and status. The build team implements it as written.
 Where the build team finds a conflict with a data file, the data file wins and the build fails until this brief is

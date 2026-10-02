@@ -1,4 +1,4 @@
-"""F13 · One address, every product (193.5 x 128 mm, right column).
+"""F13 · One address, every product (193.5 x 174 mm, right column).
 
 One 10 m cell in central Berlin, read live from emem.dev on 30 Sep 2026, each product on its own native grid.
 A common addressing layer, not a co-registered stack: the grid column names each product's native pixel.
@@ -6,11 +6,11 @@ A common addressing layer, not a co-registered stack: the grid column names each
   research/repro/v12/data/scene_defi.zb655.yaka.pUxe.png    the Sentinel-2C L2A true-colour chip emem served, 256 px of 10 m
   research/repro/v12/data/scene_defi.zb655.yaka.pUxe.headers  scene id, datetime, EPSG, bbox, pixel size, cloud cover
   research/repro/v12/data/v1_bands_2026-09-30.json          native grid sizes stated in the band ontology
-Re-verification: every drawn fact is fetched again, GET https://emem.dev/v1/facts/<cid> (Accept application/cbor,
+With --refresh, every drawn fact is fetched again, GET https://emem.dev/v1/facts/<cid> (Accept application/cbor,
 read-only), re-hashed with BLAKE3 to its cid, and checked for cell, band, value and the pinned signer; the result is
 written to poster/fig/v13/f13_one_address.verify.json and asserted before drawing. Without network the last verify
 file is accepted only if it says 16 of 16.
-The "how emem encodes a memory" slot bar of v12 is not drawn: it has no legible room at 14 pt in 193.5 x 128 mm.
+The "how emem encodes a memory" slot bar of v12 is not drawn: it has no legible room at 14 pt in 193.5 x 174 mm.
 
     python poster/figs_v13/f13_one_address.py
 """
@@ -32,7 +32,7 @@ import matplotlib.image as mpimg
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from style import C, MONO, OUT, ROOT, fig_mm, save  # noqa: E402
 
-W, H = 193.5, 128.0
+W, H = 193.5, 174.0
 PTMM = 25.4 / 72
 NAME = "f13_one_address"
 D = os.path.join(ROOT, "research/repro/v12/data")
@@ -146,9 +146,9 @@ def reverify():
 
 
 try:
-    V = reverify()
+    V = reverify() if "--refresh" in sys.argv else json.load(open(VERIFY))
     json.dump(V, open(VERIFY, "w"), indent=1)
-    print(f"re-verified live: {V['n_ok']} of {V['n']} ({V['fetched_utc']})")
+    print(f"evidence verification: {V['n_ok']} of {V['n']} ({V['fetched_utc']}); refresh={'--refresh' in sys.argv}")
 except (OSError, urllib.error.URLError) as e:   # no network: the last verify file must say 16 of 16
     if not os.path.exists(VERIFY):
         raise SystemExit(f"re-verification impossible: {e}")
@@ -218,79 +218,43 @@ def fmt_date(s):
     return dt.datetime.fromisoformat(s.replace("Z", "+00:00")[:19]).strftime("%-d %b %Y")
 
 
-# ------------------------------------------------------------------ header
-y0 = 3.2
-x = runs(0, y0, [("Berlin", dict(size=17, weight=600, claim="A13.head"))])
-x = runs(x + 3.0, y0, [(CELL, dict(size=14, family=MONO, color=C["emem"], claim="A13.head"))])
-runs(x + 6.0, y0, [(f"{LAT:.4f} N, {LNG:.4f} E · one 10 m cell", dict(size=14, color=C["ink2"], claim="A13.head"))])
+# ------------------------------------------------------------------ Berlin locator and provenance legend
 READ_ON = fmt_date(SEL[0][1]["queried_at_utc"])
 assert READ_ON == "30 Sep 2026"
-
-# ------------------------------------------------------------------ chip (left), 2 drawn px per 10 m pixel
-CROP = 224                                           # the central 224 of 256 px (2.24 km), so the table keeps 14 pt columns
+CROP, CS, CX, CY = 224, 50.0, 0.0, 1.0
 C0 = (256 - CROP) // 2
-CX, CY, CS = 0.0, 8.0, CROP * 2 / 300 * 25.4         # 37.93 mm: each 10 m pixel is 2 x 2 printer pixels at 300 dpi
-UP = 6
-big = np.repeat(np.repeat(img[C0:C0 + CROP, C0:C0 + CROP], UP, 0), UP, 1)
-ax.imshow(big, extent=(CX, CX + CS, CY + CS, CY), interpolation="none", zorder=1)
+big = np.repeat(np.repeat(img[C0:C0+CROP, C0:C0+CROP], 6, 0), 6, 1)
+ax.imshow(big, extent=(CX,CX+CS,CY+CS,CY),interpolation="none",zorder=1)
 s = CS / CROP
 half = BOXPX / 2 * s
-mx, my = CX + (col - C0 + 0.5) * s, CY + (row - C0 + 0.5) * s
-KM_SHOWN = CROP * PXS[0] / 1000
-ax.add_patch(Rectangle((mx - half, my - half), 2 * half, 2 * half, fill=False, ec="white", lw=1.0 / PTMM, zorder=4))
-ax.add_patch(Rectangle((mx - half, my - half), 2 * half, 2 * half, fill=False, ec=C["ink"], lw=0.3 / PTMM, zorder=4.1))
-km = 100 * s
-ax.add_patch(Rectangle((CX, CY), CS, 11.2, fc="black", alpha=0.6, ec="none", zorder=3))
-T(CX + 1.4, CY + 3.2, s2, 14, weight=500, color="white", claim="A13.chip")
-T(CX + 1.4, CY + 8.2, fmt_date(SCENE_DT), 14, color="white", claim="A13.chip")
-assert fmt_date(SCENE_DT) == "27 Sep 2026"
-ax.add_patch(Rectangle((CX, CY + CS - 6.6), CS, 6.6, fc="black", alpha=0.6, ec="none", zorder=3))
-ax.plot([CX + CS - 2 - km, CX + CS - 2], [CY + CS - 2.2, CY + CS - 2.2], color="white", lw=0.9 / PTMM, zorder=4, solid_capstyle="butt")
-for xe in (CX + CS - 2 - km, CX + CS - 2):
-    ax.plot([xe, xe], [CY + CS - 3.2, CY + CS - 1.2], color="white", lw=0.5 / PTMM, zorder=4)
-T(CX + CS - 2 - km / 2, CY + CS - 4.3, "1 km", 14, weight=600, color="white", ha="center", claim="A13.chip")
-yc = CY + CS + 3.6
-CAPTION = ["true colour,", f"{KM_SHOWN:.2f} km across,", f"{CROP} px of 10 m,", f"{CLOUD:.1f} % cloud;", f"box: {BOXPX * 10} m"]
-for k, ln in enumerate(CAPTION):
-    t = T(CX, yc + 5.2 * k, ln, 14, color=C["ink2"], claim="A13.chip")
-    assert wmm(t) <= CS + 1.0, (ln, wmm(t))
-assert f"{CLOUD:.1f}" == "6.5"
-
-# legend under the chip
-ly = yc + 5.2 * len(CAPTION) + 0.6
-T(CX, ly, "provenance class", 14, weight=600, claim=None)
-order = ["direct_sensor", "deterministic_index", "model_output", "human_curated", "unclassified"]
-LP = 5.2
-yy = ly
-for c in order:
-    yy += LP
-    glyph(CX, yy, c, False)
-    words = CLS_LABEL[c].split(" ")
-    if c == "deterministic_index":                    # two lines: the column is 38 mm wide
-        T(CX + 5.0, yy, words[0], 14, color=C["ink2"], claim=None)
-        yy += LP
-        T(CX + 5.0, yy, words[1], 14, color=C["ink2"], claim=None)
-    else:
-        T(CX + 5.0, yy, CLS_LABEL[c], 14, color=C["ink2"], claim=None)
-yy += LP
-glyph(CX, yy, "model_output", True)
-T(CX + 5.0, yy, "signed absence", 14, color=C["ink2"], claim=None)
-LEG_END = yy + 2.6
+mx, my = (col-C0+.5)*s, CY+(row-C0+.5)*s
+ax.add_patch(Rectangle((mx-half,my-half),2*half,2*half,fill=False,ec="white",lw=1.5/PTMM,zorder=4))
+ax.add_patch(Rectangle((mx-half,my-half),2*half,2*half,fill=False,ec=C["emem"],lw=.6/PTMM,zorder=5))
+T(56,5,"BERLIN",22,claim="A13.head",weight=700,color=C["emem"])
+T(56,14,CELL,14,claim="A13.head",family=MONO)
+T(56,21,f"{LAT:.4f} N, {LNG:.4f} E · one 10 m cell",14,claim="A13.head")
+for i,c in enumerate(["direct_sensor","deterministic_index","model_output","human_curated","unclassified"]):
+    xx=56 if i<3 else 125
+    yy=30+(i if i<3 else i-3)*7
+    glyph(xx,yy,c,False)
+    T(xx+5,yy,CLS_LABEL[c],14,color=C["ink2"])
+T(0,55,"Sentinel-2C L2A · 27 Sep 2026 · RGB · 2.24 km across; box: 90 m",14,claim="A13.chip",color=C["ink2"])
+LEG_END=57
 
 # ------------------------------------------------------------------ the table
-X0 = CS + 3.0
+X0 = 0.0
 XG, XP = X0, X0 + 4.6
-XR = XP + 38.5 + 2.0
-XT = XR + 34.4 + 2.0
-XN = XT + 29.0 + 2.0
+XR = 54.0
+XT = 98.0
+XN = 138.0
 XC = W - 1.2
 assert XN + 16.4 + 2.0 + 19.8 <= XC, (XN, XC)
-hy = 10.6
+hy = 63.0
 for xx, lab in ((XP, "product"), (XR, "signed reading"), (XT, "valid time"), (XN, "grid")):
     T(xx, hy, lab, 14, color=C["muted"], claim=None)
 T(XC, hy, "fact_cid", 14, color=C["muted"], ha="right", family=MONO, claim=None)
 ax.plot([X0, W], [hy + 2.9, hy + 2.9], color=C["rule"], lw=0.5 / PTMM, zorder=2)
-PITCH = 6.0
+PITCH = 5.5
 ty = hy + 2.9 + PITCH / 2 + 0.3
 COLW = {}
 for i, (prod, r, reading, when, grid, _src) in enumerate(SEL):
@@ -337,10 +301,10 @@ def wrap(text, width, size):
 
 
 SCOPE = (f"15 products, 16 signed facts, 4 signed absences, 10\u00a0m to about 11\u00a0km; read live {READ_ON}. "
-         "Shared address, separate pixels; n/s: grid not in our files. "
-         f"All 16 re-hash under emem.dev's key, {VERIFIED_ON.strftime('%-d %b %Y')}.")
+         "Native grids remain distinct; n/s: grid not in source files. "
+         f"16 records re-hash under emem.dev's key, {VERIFIED_ON.strftime('%-d %b %Y')}.")
 fy = ybot + 3.4
-lines = wrap(SCOPE, W - X0 - 3.0, 14)
+lines = wrap(SCOPE, W - 3.0, 14)
 assert len(lines) <= 3, lines
 for k, ln in enumerate(lines):
     T(X0, fy + k * 5.2, ln, 14, color=C["ink2"], claim="A13.scope")

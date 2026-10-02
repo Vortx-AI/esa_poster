@@ -18,6 +18,7 @@ import csv
 import datetime as dt
 import html as htmllib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -40,15 +41,16 @@ PNG = HERE / "emem-poster-preview.png"
 PNG300 = HERE / "emem-poster-A0-300dpi.png"
 REPORT = HERE / "build_v13_report.json"
 BRIEF = RES / "v13" / "12_FINAL_BRIEF.md"
+COPY_BRIEF = RES / "v13" / "14_UNIFIED_POSTER_BRIEF.md"
 CLAIMS = RES / "v13" / "12_claims_map.json"
 R5_DIR = RES / "repro" / "v13" / "r5"
 CHROME_GLOB = "/opt/pw-browsers"
 TODAY = dt.date.today()
 
 FIGURES = ["f1_scene", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object", "f6_mutation_matrix",
-           "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem", "f12_prior_art", "d_threat",
-           "f13_one_address", "f14_token_family", "f15b_sat042_strip"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; v13.2: SAT-042 as the strip F15b (F15 drawn, not placed)
-QRS = ["demo", "t", "r", "test", "methods", "use"]
+           "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem", "f12_prior_art",
+           "f13_one_address", "f14_token_family"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; v13.2: SAT-042 as the strip F15b (F15 drawn, not placed)
+QRS = ["demo", "r", "methods"]  # issue #48: three printed tasks; all six web routes remain
 
 # brief section B row label -> data-block id
 BLOCK_ROWS = {"Header text": "header_text", "Header image": "header_image", "1 Spine": "p1", "2 Eight answers": "p2",
@@ -62,17 +64,12 @@ LAYOUT_DEVIATIONS = json.loads((HERE / "src" / "poster.v13.layout.json").read_te
     if (HERE / "src" / "poster.v13.layout.json").exists() else {}
 
 GATES = {}          # name -> {"pass": bool, "details": [...]}
-TYPE_DEVIATIONS = [  # accepted by the coordinator on 2026-10-01; the 14 pt floor and the 24 pt kicker/mechanism/take tier hold
-    "Questions panel: RQ1 to RQ4 and H1 to H3 at 17 pt (brief A.2 body tier 24 pt)",
-    "Threat model paragraph and the panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt); the threat paragraph went from 20 to 17 pt when the R5 lines landed in the spine",
-    "Reason: with the section E figures drawn 1:1 and the section C text verbatim, 24 pt body overfills the side columns by about 40 to 60 mm and the bottom-right block by about 25 mm",
-    "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)",
-    "v13.1: the v12.1 subtitles of panels 9 and 11 at 17 pt (caption tier); the drift block in the header at 17 pt with 14.2 pt subscripts; "
-    "panel 11 keeps the v12.1 headline verbatim (39 characters) at the user's request",
-    "v13.2: panel 11 headline at 28 pt (one line; 32 pt needs two) so the SAT-042 strip fits the right column; panel 7 prints "
-    "no mechanism line or caption (its ladder is compact, one evidence line per rung)",
+TYPE_DEVIATIONS = [
+    "v13.3 issue #48: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
+    "The original layout is retained. Questions and threat blocks now explain two identities and the recorded handoff.",
+    "The execution extension is a short reference-harness note; detailed figures remain in methods.",
 ]
-HEADLINE_LEN_EXEMPT = {"p11": "v12.1 title kept verbatim at the user's request (2026-10-02); one line at 28 pt (v13.2)"}
+HEADLINE_LEN_EXEMPT = {}
 MOVED = []          # running-text lines that a figure prints itself (dropped from the HTML, still counted)
 REPORT_EXTRA = {}
 
@@ -347,10 +344,16 @@ async () => {
 
 
 def chrome():
-    exe = sorted(Path(CHROME_GLOB).glob("chromium-*/chrome-linux/chrome"))
-    if not exe:
-        sys.exit("no Chromium under /opt/pw-browsers")
-    return str(exe[-1])
+    """Use an explicit executable, the project image, or Playwright's installed browser."""
+    explicit = os.environ.get("POSTER_CHROMIUM_EXECUTABLE")
+    if explicit:
+        if not Path(explicit).is_file():
+            sys.exit("POSTER_CHROMIUM_EXECUTABLE does not name a file")
+        return explicit
+    exe = sorted(Path(CHROME_GLOB).glob("chromium-*/chrome-linux*/chrome"))
+    if exe:
+        return str(exe[-1])
+    return None  # Playwright resolves its own installed, version-matched Chromium
 
 
 def render(html):
@@ -1076,7 +1079,7 @@ def g_words(claims, r5=False):
         t, w = count(mv["text"]); tot_t += t; tot_w += w
         per[mv["brief"]][0] += t; per[mv["brief"]][1] += w
     # section C counts
-    c_text = BRIEF.read_text().split("## C. The complete printed text")[1].split("## D. Claims map")[0]
+    c_text = COPY_BRIEF.read_text().split("## C. The complete printed text")[1].split("## D. Claims map")[0]
     sec, bc, r1lines = None, defaultdict(int), defaultdict(list)
     for line in c_text.splitlines():
         if line.startswith("### "):
@@ -1099,7 +1102,7 @@ def g_words(claims, r5=False):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
     # cap: brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16 (807 / 853 before them) plus about 1 % slack
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; brief 823 / 869; v13.1 section C: see the per-panel lines)"]
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; v13.3 copy brief: see per-panel counts)"]
     ok = tot_w <= 830 and tot_t <= 880
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)

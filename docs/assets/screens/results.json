@@ -1,59 +1,47 @@
 {
- "started_utc": "2026-10-01T05:29:07.329Z",
- "base": "http://127.0.0.1:40697/esa_poster/",
+ "started_utc": "2026-10-02T06:57:00.626Z",
+ "base": "http://127.0.0.1:34395/esa_poster/",
  "viewport": "390x844 DPR 2",
  "pages": {
   "landing": {
    "url": "",
    "status": 200,
-   "load_ms": 182,
+   "load_ms": 16,
    "scrollW": 390,
    "innerW": 390,
    "title": "EMEM at Agentic AI for EO 2026",
-   "h1": "Agents hand each other evidence references, not paraphrases.",
+   "h1": "An Earth observation that survives an agent handoff.",
    "errors": [],
    "external_requests": [],
    "ctas": [
     [
-     "VIEW THE DEMO",
+     "TRY IT",
      "./demo/"
     ],
     [
-     "TRY A TOKEN",
-     "./t/"
-    ],
-    [
-     "INSPECT THE RECORD",
+     "INSPECT",
      "./r/"
     ],
     [
-     "RE-RUN THE TEST",
-     "./test/"
-    ],
-    [
-     "READ THE METHODS",
+     "REPRODUCE",
      "./methods/"
-    ],
-    [
-     "DISCOVER INTEGRATIONS",
-     "./use/"
     ]
    ]
   },
   "demo_live": {
    "url": "demo/",
-   "wall_s": 9.883,
-   "page_s": 9.83609999999986,
+   "wall_s": 9.739,
+   "page_s": 9.720399999999907,
    "board": {
     "top": 658.375,
-    "bottom": 785.875,
+    "bottom": 770.875,
     "pills": [
      "prose unchecked",
      "M3 L0 refused",
      "M4 L1 refused",
      "M8 L0 refused",
      "G0 accepted",
-     "L3 pixel re-read, matches"
+     "L3 pixel not re-read"
     ]
    },
    "lines": [
@@ -93,21 +81,14 @@
      "checked": true
     }
    ],
-   "l3": "L3 re-read: the named pixel of the named files gives the signed value, bit for bit.",
+   "l3": "L3 not re-read on this device: the committed copy is shown",
    "south": "0.3016",
    "live": {
     "facts": {
-     "genuine": 200,
-     "same": true,
-     "forged": 404
+     "err": "Failed to fetch"
     },
     "src": {
-     "B08": 3502,
-     "B04": 1900,
-     "b3": [
-      true,
-      true
-     ]
+     "err": "Failed to fetch"
     }
    },
    "scrollW": 390,
@@ -115,32 +96,28 @@
    "title": "EMEM receiver demo",
    "h1": "Change one field. The receiver refuses.",
    "errors": [
-    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+    "console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
    ],
    "external_requests": [
     "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
-    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2",
-    "GET https://emem.dev/v1/facts/ylcx42oiamnly5e2dmqry2lfj2de2wgj5aalgpd5bgb5mr6nh52a",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA"
+    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2"
    ]
   },
   "demo_fast": {
    "url": "demo/?fast",
-   "wall_s": 2.298,
-   "page_s": 2.1955,
+   "wall_s": 10.755,
+   "page_s": 10.719,
    "board": {
     "top": 658.375,
-    "bottom": 785.875,
+    "bottom": 770.875,
     "pills": [
      "prose unchecked",
      "M3 L0 refused",
      "M4 L1 refused",
      "M8 L0 refused",
      "G0 accepted",
-     "L3 pixel re-read, matches"
+     "L3 pixel not re-read"
     ]
    },
    "lines": [
@@ -180,21 +157,14 @@
      "checked": true
     }
    ],
-   "l3": "L3 re-read: the named pixel of the named files gives the signed value, bit for bit.",
+   "l3": "L3 not re-read on this device: the committed copy is shown",
    "south": "0.3016",
    "live": {
     "facts": {
-     "genuine": 200,
-     "same": true,
-     "forged": 404
+     "err": "Failed to fetch"
     },
     "src": {
-     "B08": 3502,
-     "B04": 1900,
-     "b3": [
-      true,
-      true
-     ]
+     "err": "Failed to fetch"
     }
    },
    "scrollW": 390,
@@ -202,32 +172,28 @@
    "title": "EMEM receiver demo",
    "h1": "Change one field. The receiver refuses.",
    "errors": [
-    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    "console: Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+    "console: Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID"
    ],
    "external_requests": [
     "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
-    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2",
-    "GET https://emem.dev/v1/facts/ylcx42oiamnly5e2dmqry2lfj2de2wgj5aalgpd5bgb5mr6nh52a",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA"
+    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2"
    ]
   },
   "demo_throttled_4g": {
    "url": "demo/",
-   "wall_s": 10.188,
-   "page_s": 9.782200000000186,
+   "wall_s": 10.077,
+   "page_s": 9.7215,
    "board": {
     "top": 658.375,
-    "bottom": 785.875,
+    "bottom": 770.875,
     "pills": [
      "prose unchecked",
      "M3 L0 refused",
      "M4 L1 refused",
      "M8 L0 refused",
      "G0 accepted",
-     "L3 pixel re-read, matches"
+     "L3 pixel not re-read"
     ]
    },
    "lines": [
@@ -267,21 +233,14 @@
      "checked": true
     }
    ],
-   "l3": "L3 re-read: the named pixel of the named files gives the signed value, bit for bit.",
+   "l3": "L3 not re-read on this device: the committed copy is shown",
    "south": "0.3016",
    "live": {
     "facts": {
-     "genuine": 200,
-     "same": true,
-     "forged": 404
+     "err": "Failed to fetch"
     },
     "src": {
-     "B08": 3502,
-     "B04": 1900,
-     "b3": [
-      true,
-      true
-     ]
+     "err": "Failed to fetch"
     }
    },
    "scrollW": 390,
@@ -289,22 +248,18 @@
    "title": "EMEM receiver demo",
    "h1": "Change one field. The receiver refuses.",
    "errors": [
-    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    "console: Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+    "console: Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID"
    ],
    "external_requests": [
     "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
-    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2",
-    "GET https://emem.dev/v1/facts/ylcx42oiamnly5e2dmqry2lfj2de2wgj5aalgpd5bgb5mr6nh52a",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA",
-    "GET https://sentinel2l2a01.blob.core.windows.net/sentinel2-l2/43/S/FS/2026/09/25/S2A_MSIL2A_20260925T054251_N0513_R005_T43SFS_20260925T090015.SA"
+    "GET https://planetarycomputer.microsoft.com/api/sas/v1/token/sentinel2l2a01/sentinel2-l2"
    ]
   },
   "demo_offline": {
    "url": "demo/?offline",
-   "wall_s": 9.871,
-   "page_s": 9.774600000000094,
+   "wall_s": 9.74,
+   "page_s": 9.715,
    "board": {
     "top": 658.375,
     "bottom": 770.875,
@@ -383,29 +338,22 @@
   },
   "t": {
    "url": "t/",
-   "ms_to_result": 500,
+   "ms_to_result": 9540,
    "real": {
-    "state": "ok",
-    "line": "ACCEPTED at L0 (re-hashed) and L1 (cell bound); signature, log, recompute and source not checked here",
-    "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
-    "ms": 436,
-    "value": 0.4708994708994709,
-    "band": "indices.ndvi",
-    "cell": "defi.zb572.xoso.zb1ec",
-    "tslot": 20721,
-    "captured_at": "2026-09-25T05:42:51.024000Z",
-    "scheme": "sentinel_s2_l2a",
-    "name": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
-    "bytes": 1115
+    "state": "warn",
+    "line": "Not checked: emem.dev is not reachable from here",
+    "token": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
    },
-   "m4": "L1 refused: the record is about another cell than the token names",
-   "m7": "L0 refused: no record has this name",
+   "m4": "Not checked: emem.dev is not reachable from here",
+   "m7": "Not checked: emem.dev is not reachable from here",
    "scrollW": 390,
    "innerW": 390,
    "title": "TRY A TOKEN · EMEM",
    "h1": "Try a token",
    "errors": [
-    "console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    "console: Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+    "console: Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+    "console: Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID"
    ],
    "external_requests": [
     "GET https://emem.dev/v1/facts/oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
@@ -416,7 +364,7 @@
   "record": {
    "url": "r/",
    "status": 200,
-   "load_ms": 34,
+   "load_ms": 12,
    "scrollW": 390,
    "innerW": 390,
    "title": "INSPECT THE RECORD · EMEM",
@@ -428,7 +376,7 @@
   "test": {
    "url": "test/",
    "status": 200,
-   "load_ms": 80,
+   "load_ms": 13,
    "scrollW": 390,
    "innerW": 390,
    "title": "RE-RUN THE TEST · EMEM",
@@ -439,7 +387,7 @@
   "methods": {
    "url": "methods/",
    "status": 200,
-   "load_ms": 65,
+   "load_ms": 26,
    "scrollW": 390,
    "innerW": 390,
    "title": "READ THE METHODS · EMEM",
@@ -451,7 +399,7 @@
   "use": {
    "url": "use/",
    "status": 200,
-   "load_ms": 50,
+   "load_ms": 24,
    "scrollW": 390,
    "innerW": 390,
    "title": "DISCOVER INTEGRATIONS · EMEM",
@@ -471,7 +419,20 @@
  },
  "blocked_writes": [],
  "requests_external": [],
- "failures": [],
+ "failures": [
+  "demo_live: L3 \"L3 not re-read on this device: the committed copy is shown\"",
+  "demo_live: live facts {\"err\":\"Failed to fetch\"}",
+  "demo_live: live source {\"err\":\"Failed to fetch\"}",
+  "demo_fast: L3 \"L3 not re-read on this device: the committed copy is shown\"",
+  "demo_fast: live facts {\"err\":\"Failed to fetch\"}",
+  "demo_fast: live source {\"err\":\"Failed to fetch\"}",
+  "demo_throttled_4g: L3 \"L3 not re-read on this device: the committed copy is shown\"",
+  "demo_throttled_4g: live facts {\"err\":\"Failed to fetch\"}",
+  "demo_throttled_4g: live source {\"err\":\"Failed to fetch\"}",
+  "t: the real token did not re-hash and bind: {\"state\":\"warn\",\"line\":\"Not checked: emem.dev is not reachable from here\",\"token\":\"emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa\"}",
+  "t: M4 not refused at L1: {\"state\":\"warn\",\"line\":\"Not checked: emem.dev is not reachable from here\",\"token\":\"emem:fact:defi.zb493.xuqA.zcb5f:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa\"}",
+  "t: M7 not refused at L0: {\"state\":\"warn\",\"line\":\"Not checked: emem.dev is not reachable from here\",\"token\":\"emem:fact:defi.zb572.xoso.zb1ec:pj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa\"}"
+ ],
  "qr": [
   {
    "slug": "demo",
@@ -511,5 +472,5 @@
   }
  ],
  "posts_to_emem": 0,
- "finished_utc": "2026-10-01T05:29:50.894Z"
+ "finished_utc": "2026-10-02T06:58:09.544Z"
 }

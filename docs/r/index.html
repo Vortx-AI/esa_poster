@@ -29,9 +29,10 @@
 <div class="tw"><table class=""><thead><tr><th>object</th><th>value</th><th>read-only link</th></tr></thead><tbody><tr><th>log entry</th><td>2,457,078 (leaf = BLAKE3(0x00 ‖ BLAKE3(attestation entry)), entry 1,604 B)</td><td><a href="https://emem.dev/v1/log/entries?start=2457078&end=2457079">GET the entry</a></td></tr><tr><th>signed tree head</th><td>2,556,451 entries, signed 2026-09-30T09:15:54Z by <code>777er3yi…</code>; inclusion path of 20 hashes</td><td><a href="https://emem.dev/v1/log/inclusion?leaf_index=2457078&tree_size=2556451">GET the inclusion proof</a></td></tr><tr><th>witness</th><td>key <code>quunzdv5qymo…</code> co-signed head 2,541,495; consistency proof of 21 hashes to the head above</td><td><a href="https://emem.dev/v1/log/consistency?first=2541495&second=2556451">GET the consistency proof</a></td></tr><tr><th>current head</th><td>the log keeps growing; pin a head and ask for consistency later</td><td><a href="https://emem.dev/v1/log/sth">GET /v1/log/sth</a></td></tr></tbody></table></div>
 <p class="note">These are the proofs the demo checks offline from the committed bundle (signed 2026-09-30T09:15:54Z). The links fetch fresh copies from emem.dev with GET. One organisation runs both the log and its only independent-tier witness today.</p>
 <div class="slot" id="board-track">
-<p><b>BOARD TRACK</b></p>
-<p>The printed board is itself a step of a signed emem track: 21 steps, every record the board rests on in panel order, then the print file (PDF at commit e66c3ba) as a pointer note. ememdemo re-checks all 21 in the browser and recomputes the chain to its head <code>ct2yz27kkkrh64emgdzs7bybgy</code>; the track is log entry 2,591,968.</p>
-<p><a href="https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fhepwyxdhiwckwi7qahkuvya2b4.md">Open the board's track in ememdemo</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/hepwyxdhiwckwi7qahkuvya2b4.md">the track note</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/7jr4zw2tq7slvbsyzbyxxzwwii.md">the print's pointer note</a>. Signed by the poster key njedkglt; composer: <code>research/repro/v13/track/make_track_v13.py</code>.</p>
+<p><b>ARCHIVED BOARD TRACK</b></p>
+<p>The earlier PDF at commit e66c3ba is a step of a signed emem track: 21 steps, every record the board rests on in panel order, then the print file (PDF at commit e66c3ba) as a pointer note. ememdemo re-checks all 21 in the browser and recomputes the chain to its head <code>ct2yz27kkkrh64emgdzs7bybgy</code>; the track is log entry 2,591,968.</p>
+<p><a href="https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fhepwyxdhiwckwi7qahkuvya2b4.md">Open the archived board track in ememdemo</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/hepwyxdhiwckwi7qahkuvya2b4.md">the track note</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/7jr4zw2tq7slvbsyzbyxxzwwii.md">the print's pointer note</a>. Signed by the poster key njedkglt; composer: <code>research/repro/v13/track/make_track_v13.py</code>.</p>
+<p class="note">This track identifies that archived PDF. The current poster has new bytes; its file hash and build report are published in the repository. The archived signature does not attest the revised PDF.</p>
 </div>
 <h2>Check it yourself</h2>
 <ul>
@@ -79,7 +80,7 @@
 <p>A signature fixes these bytes. It does not make the measurement true. Whether the cell is the field you meant (L4), and whether the sensor and a decision taken on the value are right (L5), are outside what this record can show.</p>
 <footer>
 <p>Jaya Kumari, Avijeet Singh · Vortx AI · Poster Session 1, Agentic AI for Earth Observation (ESA Φ-lab and BIFOLD), Berlin, 19 Oct 2026.</p>
-<p>These pages are static files built from the poster repository on 2026-10-01 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
+<p>These pages are static files built from the poster repository on 2026-10-02 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
 </footer>
 </main>
 </body>
