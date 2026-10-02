@@ -43,4 +43,4 @@ The poster build checks page size, layout, typography, glyphs, claim coverage, e
 
 The detailed verification ladder, token grammars and SAT-042 reference harness remain linked from the methods. Earlier posters and signed tracks identify their own archived files; they do not attest this revised PDF.
 
-The companion pages target GitHub Pages `main` → `/docs`; Pages currently requires activation in repository settings. Poster artifacts are committed under `poster/`.
+The companion pages deploy from committed `/docs` through [the Pages workflow](.github/workflows/pages.yml) on pushes to `main`. Poster artifacts are committed under `poster/`.

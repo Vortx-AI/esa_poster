@@ -16,7 +16,7 @@ Build source: `src/poster.v13.html` and `src/poster.v13.css`. Current copy speci
 
 Validation: **17/17 poster gates pass**, **20/20 upstream offline tests pass**, and all seven local mobile page layouts pass. The 300 dpi proof is losslessly compressed with decoded pixels and DPI checked. Raw results, source hashes and scope are in the [release review](../research/v13/17_RELEASE_REVIEW.md). Rust tests were inspected and archived results retained; no fresh Rust or live endpoint result is claimed.
 
-The companion pages are generated under `/docs`. The intended publishing source is GitHub Pages `main` → `/docs`. Pages was disabled when checked; enabling it requires repository-settings access through GitHub sign-in. The QR payloads decode correctly, but their public destinations must be enabled before distributing the poster. The older full browser run retains its external-fetch failures in `docs/assets/screens/results.json`; the fresh local layout review is in `research/v13/evidence/formalism/site_review.json`.
+The companion pages are generated under `/docs` and deployed by [the Pages workflow](../.github/workflows/pages.yml). GitHub reports Pages enabled; the public routes returned 404 before the workflow was added. Deployment status is recorded by GitHub Actions. The workflow publishes the committed static site, without rerunning the scientific measurements. The older full browser run retains its external-fetch failures in `docs/assets/screens/results.json`; the fresh local layout review is in `research/v13/evidence/formalism/site_review.json`.
 
 ## Signed-track history
 

@@ -19,6 +19,6 @@ The 300 dpi proof is losslessly optimised for publication. The compression repor
 
 ## Publication scope
 
-The PDF, previews, source and generated companion pages are ready for `main`. GitHub Pages was disabled at the last repository check. Repository settings require GitHub sign-in in the browser; the connector cannot enable Pages. Until that is completed, the public Pages QR destinations remain unavailable even though the local pages and QR encoding pass.
+The PDF, previews, source and generated companion pages were merged through PR #50. A later repository check reports `has_pages: true`, while the public root and methods routes still return 404. The follow-up Pages workflow uses GitHub's official static-site template to deploy committed `/docs` to the existing Pages site. It does not attempt to enable Pages with elevated credentials. Actual deployment status is recorded in GitHub Actions.
 
 The previous signed track remains archived and does not attest this PDF. This edition publishes hashes and reproducible evidence without implying a new signature.
