@@ -1,32 +1,32 @@
-# v13.4 unified poster and formalism brief
+# v13.5 unified poster, recovered contributions and community brief
 
-Issue #48 establishes the Earth-to-agent story. The next round restores the formal model, implemented drift score, upstream test evidence and archived model outputs. The original grid and fail-closed gates remain.
+Preserve the Earth-to-agent story and restored formalism. Recover useful work across versions, give community entry points space at A0, and provide direct setup and reproduction paths. The original fail-closed gates remain.
 
 ## C. The complete printed text
 
 ### Header
 
-> An Earth observation thatsurvives an agent handoff.
+> An Earth observation that survives an agent handoff.
 > EMEM gives an observation a lookup identity and a content-addressed record. Agent A passes the reference. Agent B resolves the same record and checks it before continuing.
 > Earth data stays in the data layer. Its reference enters the reasoning layer.
 
 ### 1 · Earth to agents
 
-> 1How does Earth data enter an agent workflow?
+> How does Earth data enter an agent workflow?
 > Keep the source data upstream. Pass its reference.
 > Locate an observation, record what was read, and carry its content address into the next agent's reasoning.
 > In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
 
 ### 2 · One question, different records
 
-> 2What can change between agents?
+> What can change between agents?
 > One question, several records
 > Scene, pixel, offset, rounding and stale state can change the value passed on.
 > The same Keylong question yields eight values under these choices. Keeping the cited record makes the differences inspectable.
 
 ### 3 · Different drift, different check
 
-> 3Where did the evidence change?
+> Where did the evidence change?
 > A changed value needs a cause
 > Keep the scene, pixel, model and time attached so a change can be investigated.
 > World, instrument, alignment, model and noise. This is an attribution model; the numeric split remains open work.
@@ -45,69 +45,67 @@ Issue #48 establishes the Earth-to-agent story. The next round restores the form
 > Satellite input → encoder → vector record → content address
 > Archived vectors: Prithvi names a checkpoint digest; TESSERA names a product year. These encoders are retired on the deployment; stored records remain addressable.
 
+### Absence and related layers
+
+> Missing data stays explicit
+> An absence record carries a reason and source. Berlin's CHIRPS record says outside the product's latitude range; it supplies no rainfall value.
+> Where emem fits. STAC finds assets; openEO runs processing; PROV and C2PA carry provenance. EMEM adds the observation reference an agent can resolve and re-check.
+
 ### 4 · Reference to record
 
-> 4What exactly is handed over?
+> What exactly is handed over?
 > A compact reference opens the observation record
 > Resolve the value, place, time, derivation and source references from the record's address.
 > BLAKE3 identifies the exact 1,115-byte record. A batch attestation covers its address. The record names the source files and read location; source checking continues by re-reading them.
 
 ### 5 · Checks back to the source
 
-> 5Which changes can the receiver detect?
+> Which changes can the receiver detect?
 > Checks can continue back to the source
 > Resolve → Re-hash → Bind → Recompute → Re-read
 > Each step answers a different question. The matrix measures which changes become visible at each depth; signatures and log checks establish attestation and publication history.
 
 ### 6 · Source re-read
 
-> 6What does returning to the source add?
+> What does returning to the source add?
 > A valid record can preserve a wrong source read
-> NDVI = (DN8 − DN4) / (DN8 + DN4 + 2o), o = −1000
+> NDVI = (DN 8 − DN 4 ) / (DN 8 + DN 4 + 2o),  o = −1000
 > A record from the earlier reader still resolves: 0.3444 recorded, 0.4860 at the containing pixel. The source re-read exposes the pixel-selection difference.
 
 ### 7 · What checks establish
 
-> 7What has the receiver established?
+> What has the receiver established?
 > Know what was checked
 > Source quality remains inherited. Entity meaning and downstream decisions belong to the application using the evidence.
 
 ### 8 · Memory keeps what was cited
 
-> 8Can a later agent recover the earlier state?
+> Can a later agent recover the earlier state?
 > Memory keeps what was cited
 > Asked what memory knew on 15 Jun, recall returns 918.0 m. The later 915.07 m record reflects a provider change; it does not establish ground movement.
 
 ### 9 · Berlin multi-product stack
 
-> 9What does one Berlin location reveal?
+> What does one Berlin location reveal?
 > One place, many observations
 > Central Berlin: optical, radar, elevation, temperature, water, forest and biomass. One lookup cell organises 15 products, preserving each record and native grid.
 
 ### 10 · Token family
 
-> 10What else can an agent carry?
+> What else can an agent carry?
 > Beyond a single observation
-> Choose the reference that preserves what the next agent needs to recover.
+> Resolve the object and inspect what its address and receipt cover.
 
 ### Execution extension
 
 > Measure each cause of change
 > Validate numeric attribution under controlled scene, pixel and encoder changes. Repeat checked handoffs between separately operated agent hosts.
 
-### 11 · Multiple runtimes
+### 11 · Community routes
 
-> 11The same reference can cross agent runtimes
-> MCP, A2A, REST and SDKs expose the same reference model. One reference returned the same record and value through 11 client paths; receipt signatures were checked on 9 (30 Sep 2026). Surface status is labelled below.
-
-### 12 · Complementary layers
-
-> 12EO data into agent reasoning
-> STAC describes assets; openEO defines processing; PROV and C2PA carry provenance. EMEM adds the observation reference an agent can pass on and resolve again.
-
-### Conclusion
-
-> An observation stays addressable across a handoff. The next agent can recover the cited record, inspect its provenance, recompute a declared recipe and return to its source.
+> Use emem. Carry the evidence forward.
+> Connect a plugin, a workflow or your own code. Public emem reads need no API key; the source is open.
+> Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026). The routes below are plugins, connectors, packages and listings. Their setup links and workflow examples are behind CONNECT.
 
 ## D. Claims map
 
@@ -126,3 +124,8 @@ Existing measured rows remain. `12_claims_map_additions_formalism.json` binds th
 ## Scientific boundaries
 
 Canonical record bytes determine the fact CID; batch attestation covers the address. No individual-fact signature formula is introduced. The conceptual memory tuple is not presented as a full wire schema. Product-year provenance is not called a checkpoint digest. A provider change is not treated as physical ground movement. SAT-042 remains a deterministic reference harness. Archived Rust results and fresh Python results carry different dates and commits. Qwen remains separate from pooled Claude results. The old signed track is not attached to this new PDF.
+
+
+## v13.5 recovery and community
+
+See `18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md` for the history audit. `12_claims_map_additions_community.json` adds typed absence, bundle and reasoning-state examples plus community availability. The community figure is 801 × 91 mm with 28 pt platform names. CONNECT & REPRODUCE opens /use/, linking methods, tests, setup and the restored EO gallery. Related-work context moves to the left column; the central experiments retain their original space.

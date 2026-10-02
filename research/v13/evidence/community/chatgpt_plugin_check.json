@@ -1,0 +1,40 @@
+{
+  "checked_utc": "2026-10-02",
+  "connected_plugins": [
+    {
+      "name": "mcp__codex_apps__emem2_4_0_emem_memory_token_resolve",
+      "description": "Tools for working with emem2.4.0.\n\nParse a `emem:fact:<cell64>:<fact_cid>` citation handle and return the reading it cites. `value`, `unit`, `band` and `kind` are on the response at the TOP level, alongside the full signed `fact` body they were lifted from. Saves the agent from string-splitting the token and chaining `GET /v1/facts/<cid>` manually. Memory algebra: the `resolve` operation (https://emem.dev/docs/model.html).\n\nWhen to use: Call when an agent receives a memory_token from another agent (or out of a previous turn) and wants the value behind it. Read `value` for the reading and `unit` for what it is measured in; both are always present, and an explicit null means the fact genuinely has none (`kind: \"absence\"` has no value, and most index bands including NDVI are dimensionless) rather than that the field is missing. For a scalar, quote `value_verbatim` instead: it is the same number as the exact decimal string it was signed as, and re-typing a JSON number is where measured precision loss comes from. The response also carries the parsed cell + fact_cid, the full `fact` body, and the stable `fact_url` an agent can hand to any other peer. 404 with a typed code if the responder doesn't hold the cid; try /v1/fetch with the cid then, or paste the token at a mirror.\n\nExample arguments: {\"token\":\"emem:fact:defi.zb493.xoso.zcb6a:cxjiu7l54ujzrpnekp24n4534yojpue4mprddbvevnqtti3lh5bq\"}. This tool is part of plugin `emem2.4.0`.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__emem2_4_0_emem_memory_token_resolve(args: {\n  // A `emem:fact:<cell64>:<fact_cid>` citation handle to dereference.\n  token: string;\n}): Promise<CallToolResult>; };\n```"
+    },
+    {
+      "name": "mcp__codex_apps__emem_emem_memory_token_resolve",
+      "description": "Signed facts about real places\n\nParse a `emem:fact:<cell64>:<fact_cid>` citation handle and return the reading it cites. `value`, `unit`, `band` and `kind` are on the response at the TOP level, alongside the full signed `fact` body they were lifted from. Saves the agent from string-splitting the token and chaining `GET /v1/facts/<cid>` manually. Memory algebra: the `resolve` operation (https://emem.dev/docs/model.html).\n\nWhen to use: Call when you hold a memory_token from another agent or an earlier turn and want the value behind it. For a scalar quote `value_verbatim`, the exact decimal string it was signed as. A null `value` or `unit` means the fact has none (an absence; a dimensionless index), not a missing field. A cid this responder does not hold is a typed 404: try /v1/fetch, or resolve at a mirror.\n\nExample arguments: {\"token\":\"emem:fact:defi.zb493.xoso.zcb6a:cxjiu7l54ujzrpnekp24n4534yojpue4mprddbvevnqtti3lh5bq\"}. This tool is part of plugin `emem`.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__emem_emem_memory_token_resolve(args: {\n  // A `emem:fact:<cell64>:<fact_cid>` citation handle to dereference.\n  token: string;\n}): Promise<CallToolResult<{\n  band: string;\n  canonical_token: string;\n  cell: string;\n  fact_cid: string;\n  fact_url?: string;\n  kind: string;\n  receipt: { [key: string]: unknown; };\n  unit?: string | null;\n  // Scalars; a vector is in the text's fact.value.\n  value?: number | string | boolean | null;\n  value_verbatim?: string;\n}>>; };\n```"
+    }
+  ],
+  "attempts": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "tool call error: tool call failed for `codex_apps/emem.emem_memory_token_resolve`\n\nCaused by:\n    Unexpected response type"
+          }
+        ],
+        "isError": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "tool call error: tool call failed for `codex_apps/emem2_4_0.emem_memory_token_resolve`\n\nCaused by:\n    Unexpected response type"
+          }
+        ],
+        "isError": true
+      }
+    }
+  ],
+  "interpretation": "Connected plugin/tool availability is directly observed. Both resolve attempts returned Unexpected response type. Neither is counted as a successful ChatGPT agent run or as a new client-path benchmark."
+}

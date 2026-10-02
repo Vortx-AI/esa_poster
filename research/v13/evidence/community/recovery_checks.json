@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-10-02T08:16:54.476029+00:00",
+  "state_hashes_reproduced": 4,
+  "bundle_members": 8,
+  "bundle_handle_characters": 38,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "research/repro/data/v11/recompute_state.py",
+        "research/repro/data/v11/ask_keylong.json",
+        "research/repro/data/v11/verifier_spec.json"
+      ],
+      "exit_code": 0,
+      "stdout": "located True mps3ysemq7noyiqxqmelbvjo2aj6wvwj7camkh6zkhlk4o4rzoka\nrouted True l3hg7ydhj5mqzoiujtvqduvhd2r3qo43wtxqfoe35wupzeoactia\nrecalled True sz4zbhgol5gw4irnulvlldlvv6hz57x2zuspmvlnnh5rxybwcyyq\nscored True ppfjf5temruiwyrmakafsakuiulgh2yqhuuo5g5xy5wibtmnvyrq\n"
+    },
+    {
+      "command": [
+        "python",
+        "research/repro/v8/verify_bundle.py",
+        "research/repro/v8/proof_bundle_ndvi.cbor"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS  fact bytes inside the logged attestation hash to the token's fact_cid\nPASS  token cell == signed cell\nPASS  batch_root recomputed from the facts\nPASS  attestation signed by the expected key\nPASS  STH signed by the expected key\nPASS  entry 2457078 included under STH 2556451\nPASS  witness quunzdv5qymo... co-signed head 2541495\nPASS  entry included under the witnessed head\nPASS  witnessed head is a prefix of the STH (consistency)\n\nemem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa\n  indices.ndvi = 0.4708994708994709 at tslot 20721, signed 2026-09-28T09:06:56Z, attested 2026-09-28T09:06:56Z\n  re-read upstream: T43SFS_20260925T054251_B08_10m.tif bytes 258936178+477314 blake3 xyzcrqucmzeoavqp... pixel (9098,9443)\n  re-read upstream: T43SFS_20260925T054251_B04_10m.tif bytes 255562078+468566 blake3 nw5nehrmxu553ncf... pixel (9098,9443)\nALL PASS\n"
+    }
+  ],
+  "inputs": {
+    "research/repro/data/v11/ask_keylong.json": "ed749c2715a806d70c88b185e729b9ad3bba99f3cf1e3c17dc5d996f732ba394",
+    "research/repro/data/v11/verifier_spec.json": "b64792a7ea0189467a7025648914239fc3495766496dc9cade61d4e69b9d7b97",
+    "research/repro/v8/bundle_mint.json": "1633839b348b7eaf35caff14d1d9bd1dac56e9eee76aedcd03a7c15db4e49036",
+    "research/repro/v8/proof_bundle_ndvi.cbor": "8335118655b3334ca34381cf716b16b642e83989f77dd07965011c0cd4e26d11"
+  }
+}

@@ -78,7 +78,8 @@ const table = (head, rows, cls = '') => `<div class="tw"><table class="${cls}${h
 const CTAS = [
   ['TRY IT', 'demo/', 'Become Agent B in your browser. Resolve a real observation and run its checks. No sign-in.', true],
   ['INSPECT', 'r/', `Open the ${int(fact.length)}-byte observation record, its source references and batch attestation.`],
-  ['REPRODUCE', 'methods/', 'Read the methods, run the experiments and find the integration routes.'],
+  ['CONNECT', 'use/', 'Use ChatGPT, Claude, Visual Studio Code, Dify or Salesforce MuleSoft. Copy a token and try a handoff.'],
+  ['REPRODUCE', 'methods/', 'Read the methods, run the experiments and explore the recovered demonstrations.'],
 ];
 w('index.html', page('', 'EMEM at Agentic AI for EO 2026', 'An Earth observation that survives an agent handoff. Try it, inspect the record, reproduce the experiments.', '', `
 <h1>An Earth observation that survives an agent handoff.</h1>
@@ -411,6 +412,22 @@ ${table(['operation', '#n', '#median', 'IQR', 'unit'], costRows)}
 ${table(['system', 'question it answers', 'unit it identifies', 'where EMEM sits'], prior)}
 <p class="note">Source: ${src('research/v13/04_prior_art_and_field.md')} §1.3 (versions as checked on 2026-10-01).</p>
 
+<h2 id="recovered">Recovered demonstrations from earlier posters</h2>
+<p>These archived experiments add breadth to the focused handoff test on the A0 poster. Their original evidence and dates stay attached.</p>
+<h3>Two seasons at one field</h3>
+<p>Keylong, India: 141 Sentinel-2 NDVI records from January 2025 to September 2026. The records name the scene and observation time, so a later agent can recover the measurement used in a seasonal comparison. ${src('research/repro/v12/data/case_keylong_ndvi.json', 'Evidence')}.</p>
+<img class="recovered" src="../assets/recovered_keylong.svg" alt="Archived v12 Keylong seasonal NDVI series, with scene and source context">
+<h3>A reproducible forest-loss screen</h3>
+<p>Rondônia, Brazil: 100 sampled point cells and 600 facts, read on 30 September 2026. The screen combines forest status and loss year; it is a sampled evidence workflow, not a determination of legal compliance. The source-pixel audit in the main methods shows why the reading rule still matters.</p>
+<img class="recovered" src="../assets/recovered_rondonia.svg" alt="Archived v12 Rondônia forest and loss-year evidence over sampled cells">
+<p>${src('research/should_do/19_V12_CLAIMS_MAP.md', 'Original v12 claim and evidence map')} · ${src('research/repro/v12/data/case_rondonia_eudr.json', 'Rondônia example records')}.</p>
+<h3>Execution evidence: SAT-042</h3>
+<p>A scripted reference-harness run, not a spacecraft. The trace binds recorded steps and outputs; the drift anchor scores disagreement. Hardware enrolment and live device-to-anchor wiring remain separate work.</p>
+<img class="recovered" src="../assets/recovered_sat042.svg" alt="Archived SAT-042 scripted execution trace and its checks">
+<p>${src('research/repro/v12/trace/trace_truth.md', 'Trace evidence and scope')}.</p>
+<h3>Bundles, state checkpoints and absence</h3>
+<p>The eight-record bundle, four reproduced state hashes and Berlin coverage absences are restored to the poster face. ${src('research/v13/18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md', 'Version-by-version recovery map')} · ${src('research/v13/evidence/community/recovery_checks.json', 'Fresh offline checks')}.</p>
+<style>.recovered{display:block;max-width:100%;height:auto;margin:18px 0;border:1px solid var(--rule)}</style>
 <h2 id="refs">10 · References</h2>
 <ol>${refs.map(([t, u]) => `<li>${esc(t)}. <a href="${esc(u)}">${esc(u.replace(/^https:\/\//, ''))}</a></li>`).join('')}</ol>`));
 
@@ -421,6 +438,7 @@ const GROUPS = [
   ['Discovery', ['registry', 'directory', 'mirror', 'landing page']],
   ['Developer', ['sdk', 'self-host', 'source']],
   ['Frameworks', ['framework example']],
+  ['Workflow templates', ['workflow']],
 ];
 const roles = new Set(GROUPS.flatMap(([, r]) => r));
 for (const r of ECO) if (!roles.has(r.role)) throw new Error('ecosystem row with an unmapped role: ' + r.id + ' ' + r.role);
@@ -432,7 +450,7 @@ const how = (r) => { const t = (r.print && r.print.text) || ''; const i = t.inde
 const item = (r) => {
   const mark = r.id === 'github-repo' ? GHMARK : '';
   const line = how(r);
-  const board = allowed(r) ? 'On the poster' : r.print && typeof r.print.allowed === 'string' ? `Not on the poster: ${r.print.allowed.replace(/ above$/, ' in the caveats')}` : 'Not on the poster';
+  const board = ''; // Print placement is an editorial decision, not a user-facing capability.
   return `<li class="int" id="${esc(r.id)}">
 <p><span class="chip ${r.status.replace(' ', '')}">${esc(r.status)}</span> <b>${mark}${esc(r.platform)}</b></p>
 ${line ? `<pre><code>${esc(line)}</code></pre>` : ''}<p class="note"><a href="${esc(r.url)}">${esc(r.url.replace(/^https:\/\//, '').slice(0, 90))}${r.url.length > 98 ? '…' : ''}</a></p>
@@ -445,17 +463,73 @@ const counts = Object.fromEntries(STATUS.map((s) => [s, ECO.filter((r) => r.stat
 let xrt = '';
 if (XRT && XRT.summary) {
   const sm = XRT.summary.ndvi_keylong || Object.values(XRT.summary)[0];
-  if (sm && sm.paths_run !== undefined) xrt = `<h2>Same token, many runtimes</h2><p>The Keylong token resolved through ${sm.paths_run} client paths (REST, raw MCP, A2A, two SDKs, framework adapters, the official MCP SDKs and an independent blake3 and cbor2 reader): ${sm.paths_ok} of ${sm.paths_run} succeeded, with ${[].concat(sm.distinct_fact_cids).length} distinct record name and ${[].concat(sm.distinct_values).length} distinct value, run ${String(XRT.generated_utc || '').slice(0, 16).replace('T', ' ')} UTC. Model-in-the-loop handoffs between two agent hosts are not shown here. Source: ${src(XRT_FILE)}.</p>`;
+  if (sm && sm.paths_run !== undefined) xrt = `<h2>Same token, many runtimes</h2><p>The Keylong token resolved through ${sm.paths_run} client paths (REST, raw MCP, A2A, two SDKs, framework adapters, the official MCP SDKs and an independent blake3 and cbor2 reader): ${sm.paths_ok} of ${sm.paths_run} succeeded, with ${[].concat(sm.distinct_fact_cids).length} distinct record name and ${[].concat(sm.distinct_values).length} distinct value, run ${String(XRT.generated_utc || '').slice(0, 16).replace('T', ' ')} UTC. Model-in-the-loop handoffs between two agent hosts are not shown here. Source: ${src(XRT_FILE)}.</p>` + table(['Client path', 'Time (ms)', 'Record re-hashed', 'Receipt signature checked'], XRT.rows.ndvi_keylong.map(r => [esc(r.path === 'A->B_isolated_processes' ? 'A to B, isolated processes (one run)' : r.path.replace(/^[0-9][a-z]?_/, '').replaceAll('_', ' ')), String(r.ms_median ?? r.ms), r.rehash_ok ? 'yes' : 'no', r.receipt_sig_ok ? 'yes' : 'not checked here']));
 }
-w('use/index.html', page('use', 'DISCOVER INTEGRATIONS · EMEM', 'Where EMEM runs today, each surface labelled by evidence status and the date it was checked.', 'discover integrations', `
-<h1>Where EMEM runs today</h1>
-<p class="lead">One evidence protocol, reachable from several agent runtimes. Each surface below is labelled by what was checked, not by what was announced. The list is generated from ${src(ECO_FILE, 'ecosystem_manifest.json')} (${ECO.length} rows, file of ${gitDate(ECO_FILE)}).</p>
-<div class="box"><p class="note" style="margin:0"><span class="chip LIVE">LIVE</span> run or confirmed live · <span class="chip PROTOCOL">PROTOCOL</span> an open surface; a client was not run by us · <span class="chip REGISTRY">REGISTRY</span> a listing, not an integration · <span class="chip EXAMPLE">EXAMPLE</span> example code in the emem repo · <span class="chip EXPERIMENTAL">EXPERIMENTAL</span> known to need a fix · <span class="chip NOTFOUND">NOT FOUND</span> looked for and absent.<br>Counts: ${STATUS.filter((s) => counts[s]).map((s) => `${s} ${counts[s]}`).join(', ')}.</p></div>
-${GROUPS.map(([g, rs]) => { const rows = ECO.filter((r) => rs.includes(r.role)).sort((x, y) => (allowed(y) - allowed(x)) || (STATUS.indexOf(x.status) - STATUS.indexOf(y.status))); return `<h2>${esc(g)} <span class="note">(${rows.length})</span></h2><ul class="ints">${rows.map(item).join('\n')}</ul>`; }).join('\n')}
-${xrt}
-<p class="note">Names are used as plain text to state facts; no endorsement by any vendor is implied. The GitHub mark marks the repository link, as GitHub's logo rules allow. Text chips are used for every other platform. The emem.dev hub with copy buttons: <a href="https://emem.dev/#use">emem.dev/#use</a>.</p>`, {
-  head: `<style>.ints{list-style:none;padding:0}.int{border-top:1px solid var(--rule);padding:10px 0 4px}.int p{margin:0 0 6px}.int pre{margin:4px 0 6px}details{font-size:14px;margin:0 0 6px}summary{cursor:pointer;color:var(--ink2)}</style>
-` }));
+const platform = (id) => ECO.find((r) => r.id === id);
+const link = (id, label) => `<a href="${esc(platform(id).url)}">${esc(label || platform(id).platform)}</a>`;
+const prompt = `Resolve this emem token. Return its exact value_verbatim, band, cell, observation date and source references. Check the record hash and receipt using the available verifier; say which checks actually ran. Keep the token unchanged for the next agent.
 
+${TOKEN}`;
+const connectCards = [
+  ['ChatGPT', `${link('chatgpt', 'Open the emem plugin')} and enable it. Mention <b>@emem</b>, then paste the example below.`, 'The connected plugin exposes emem_memory_token_resolve.'],
+  ['Claude', `Add the MCP server in Claude.ai, or install the Claude Code plugin with its procedures. ${link('claude-code-plugin', 'Plugin instructions')}.`, `<pre><code>/plugin marketplace add Vortx-AI/emem
+/plugin install emem@emem</code></pre><p>Direct MCP setup:</p><pre><code>claude mcp add --transport http emem https://emem.dev/mcp</code></pre>`],
+  ['Visual Studio Code', `${link('vscode', 'Install the MCP integration')} for Copilot agent mode, or search <code>@mcp emem</code> in the MCP gallery.`, `<pre><code>code --add-mcp '{"name":"emem","type":"http","url":"https://emem.dev/mcp"}'</code></pre>`],
+  ['Dify', `${link('dify-marketplace', 'Install the Marketplace plugin')}, then import a workflow template.`, `<ul><li>${link('dify-template-lite', 'Referent Lock Lite')}</li><li>${link('dify-template-full', 'Referent Lock Full')}</li><li>${link('dify-template-eudr', 'EUDR Evidence Studio')}</li></ul><p class="note">The EUDR template is an evidence pre-screen; it does not itself establish legal compliance.</p>`],
+  ['Salesforce MuleSoft', `${link('mulesoft-exchange', 'Open Vortx AI MCP Server on Anypoint Exchange')}. The asset describes the emem MCP server for flow builders.`, '<pre><code>https://emem.dev/mcp</code></pre><p class="note">A published MCP asset. A MuleSoft flow was not executed in this study.</p>'],
+];
+w('use/index.html', page('use', 'CONNECT AND BUILD · EMEM', 'Use emem from ChatGPT, Claude, Visual Studio Code, Dify or Salesforce MuleSoft. Copy a token, check the record and try a handoff.', 'connect and build', `
+<h1>Bring the evidence into your workflow.</h1>
+<p class="lead">Choose a plugin, a workflow or your own code. Start with the saved observation below, then hand its reference to another agent. Public emem reads need no API key. The implementation is Apache-2.0.</p>
+<p><a class="btn" href="../demo/">Try the browser demo</a> · <a href="../methods/">Methods and reproduction</a> · <a href="../methods/#recovered">Recovered demonstrations</a></p>
+<h2>1 · Connect your tool</h2>
+<div class="setup-grid">${connectCards.map(([name,how,detail]) => `<section class="setup"><h3>${name}</h3><p>${how}</p><div>${detail}</div></section>`).join('')}</div>
+<h2>2 · Copy a real handoff</h2>
+<p>Paste this into a connected agent. Give the same token to a second agent or a new session. Compare the record identity and the checks performed.</p>
+<label for="handoff" class="note">Prompt and unchanged token</label>
+<textarea id="handoff" rows="8" spellcheck="false">${esc(prompt)}</textarea>
+<p><button id="copy-handoff" class="btn" type="button">Copy prompt and token</button> <span id="copy-status" role="status" aria-live="polite"></span></p>
+${table(['Compare', 'Expected from the saved record'], [
+ ['Exact value', `<code>${esc(String(rec.value))}</code>`],
+ ['Band and unit', `<code>${esc(rec.band)}</code>; dimensionless`],
+ ['Place', `<code>${esc(tok.cell)}</code>; Keylong, Lahaul, India`],
+ ['Observation', '25 Sep 2026; Sentinel-2 L2A'],
+ ['Content identity', `<code>${esc(CID)}</code>`],
+ ['Checks', 'Re-hash the canonical record; bind its place, band and time; verify the receipt or batch under the expected key. A source re-read is a further check.'],
+])}
+<p><b>Success means:</b> the next agent recovers the same record and exact value, preserves the citation and reports the checks it performed. Asking for a new “latest” observation is a different task. If a tool call fails, report that failure; the <a href="../demo/">saved offline demo</a> still lets you inspect and verify the example.</p>
+<details><summary>What was checked in this round?</summary><p>The public ChatGPT emem listing (Developer Vortx.ai), Dify plugin and three templates, GitHub MCP, MuleSoft Exchange and ClawHub pages returned HTTP 200 on 2 October 2026. ChatGPT's plugin and resolve tool are also connected in this workspace; two resolve attempts returned a connector-level “Unexpected response type” error. They are not counted as successful agent runs. VS Code configuration and the Claude plugin install commands were checked against the source. No new VS Code, Claude, Dify or MuleSoft host execution is claimed. ${src('research/v13/evidence/community/listing_checks.json', 'Link checks')} · ${src('research/v13/evidence/community/chatgpt_plugin_check.json', 'Connected plugin check')}.</p></details>
+<h2>3 · Build with the same reference</h2>
+${table(['Route', 'Start here'], [
+ ['MCP', '<code>https://emem.dev/mcp</code>'],
+ ['Agent2Agent', link('a2a', 'Read the A2A agent card')],
+ ['REST', `<a href="https://emem.dev/openapi.json">OpenAPI</a> · <a href="https://emem.dev/v1/facts/${CID}">Read the example record</a>`],
+ ['Python', '<code>pip install ememdev</code>'],
+ ['TypeScript', '<code>npm i @vortxai/emem</code>'],
+ ['LangGraph memory', '<code>pip install emem-langmem</code>'],
+ ['Self-host', '<code>docker run -p 5051:5051 ghcr.io/vortx-ai/emem:latest</code>'],
+ ['Other clients', `${link('cursor', 'Cursor')} · ${link('gemini-cli', 'Gemini CLI')} · <a href="https://github.com/Vortx-AI/emem/tree/main/examples">Framework examples</a>`],
+])}
+<h2>Questions the poster opens</h2>
+<details><summary>What is in the token, and what stays upstream?</summary><p>The fact token carries a lookup cell and a full content identifier. The record behind it contains the value, time, derivation and source references. Large source scenes remain upstream. Cell, product and time find candidate observations; the fact CID identifies the exact record used.</p></details>
+<details><summary>What do a hash, signature and source check establish?</summary><p>The hash checks record identity. Binding checks that the record answers the requested place, product and time. A receipt or batch attestation checks a statement under a particular key. A declared derivation can be recomputed, and the named upstream source can be re-read. These checks do not establish a sensor's accuracy, an entity's meaning or the correctness of a downstream decision.</p></details>
+<details><summary>What happens when data is missing or later changes?</summary><p>A typed absence can name a coverage or quality reason instead of inventing a value. New records can coexist with earlier content addresses. Recall can bound both observation time and signing time. The archived Bengaluru example answers 918.0 m as of 15 June, before a later provider returned 915.07 m; that difference alone is not ground movement.</p></details>
+<details><summary>Can I carry more than one reading or resume an investigation?</summary><p>The archived bundle groups eight fact references in one 38-character handle. The member records have their own identities and checks. Reasoning stages can also carry state addresses: the saved located, routed, recalled and scored states reproduce from their published fields. Signed agent notes can preserve working context separately from source observations. ${src('research/v13/evidence/community/recovery_checks.json', 'Offline reproduction')}.</p></details>
+<details><summary>Can I use the foundation-model embeddings?</summary><p>The poster includes stored Prithvi and TESSERA vectors. Those deployed encoders are retired: the old records remain addressable, while new embedding generation is not demonstrated. Prithvi records a checkpoint digest; the archived TESSERA example records a product year. Preserve that distinction when comparing models.</p></details>
+<details><summary>Can verification work offline? What if the server disappears?</summary><p>Keep the record bytes, expected signer key, receipt or attestation and required log proofs. The saved browser demo checks its retained evidence locally; it does not need the live responder. A content address establishes identity, not future availability. Retain the evidence you need and choose your own storage and trust policy.</p></details>
+<details><summary>Who can write, and how does this relate to other EO tools?</summary><p>Public reads do not grant authority to publish canonical observations. Writes follow signer and admission rules; agent-authored notes remain distinct from observations. STAC discovers assets, openEO describes processing, and PROV/C2PA carry provenance. EMEM adds the observation reference that can pass between agents. The methods explain the verification boundary.</p></details>
+<h2>What the community can test next</h2>
+<ul><li><b>Independent host handoff:</b> run the same saved token through ChatGPT, Claude, Dify and another separately operated host. Record exact values, CIDs, checks, failures and latency.</li><li><b>Attribution:</b> vary the scene, pixel, sensor or encoder separately; compare the drift score with the known cause. The decomposition is a model, not an already fitted numeric split.</li><li><b>Long-lived evidence:</b> retain records, receipts and log proofs; replay them after a context reset, provider update or endpoint outage.</li></ul>
+<p><a class="btn" href="../methods/">Read and reproduce the research</a> · <a href="${GH}">Poster source</a> · <a href="https://github.com/Vortx-AI/emem">Build or contribute to emem</a></p>
+${xrt}
+<h2>Complete integration directory</h2>
+<p class="note">Plugins, connectors, packages, listings and repository examples have different setup paths. Expand a group for its source, current status and compatibility notes. Framework adapters may require the versions or fixes documented there.</p>
+${GROUPS.map(([g,rs])=>{const rows=ECO.filter((r)=>rs.includes(r.role));return `<details><summary>${esc(g)} (${rows.length})</summary><ul class="ints">${rows.map(item).join('')}</ul></details>`}).join('')}
+<script>document.getElementById('copy-handoff').addEventListener('click',async()=>{const t=document.getElementById('handoff');try{await navigator.clipboard.writeText(t.value);document.getElementById('copy-status').textContent='Copied.';}catch{t.focus();t.select();document.getElementById('copy-status').textContent='Select and copy the highlighted prompt.';}});</script>`, {
+  head: `<style>.setup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.setup{border:1px solid var(--rule);border-radius:10px;padding:16px;background:var(--card)}.setup h3{margin-top:0}.setup p{margin:8px 0}.setup pre{white-space:pre-wrap;overflow-wrap:anywhere}#handoff{width:100%;padding:12px;border:1px solid var(--rule);border-radius:8px;font:14px/1.5 var(--mono)}.ints{list-style:none;padding:0}.int{border-top:1px solid var(--rule);padding:12px 0}.int p{margin:0 0 6px}details{padding:10px 0;border-bottom:1px solid var(--rule)}summary{cursor:pointer;font-weight:600}details details{border:0}code{overflow-wrap:anywhere}</style>` }));
+
+for (const [source,name] of [['eo_keylong','keylong'],['eo_rondonia','rondonia'],['sat042','sat042']]) {
+  w(`assets/recovered_${name}.svg`,rd(`poster/fig/v12/${source}.svg`));
+}
 w('.nojekyll', '');
 console.log(JSON.stringify({ wrote: ['index.html', 't/', 'r/', 'test/', 'methods/', 'use/', '.nojekyll'], integrations: ECO.length, status_counts: counts }));

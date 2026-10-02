@@ -7,25 +7,29 @@
   "mechanism": "OpenAI Apps SDK / ChatGPT Directory plugin over emem's MCP endpoint https://emem.dev/mcp (Streamable HTTP); 18 core tools per integrations/chatgpt/README.md",
   "url": "https://chatgpt.com/plugins/plugin_asdk_app_6a6a0832a59081918b19aec0ddf9ec77",
   "status": "LIVE",
-  "evidence_level": "UNVERIFIED (publisher-attested only)",
+  "evidence_level": "PRIMARY DIRECTORY LISTING AND CONNECTED PLUGIN",
   "evidence": [
    "LIVE: GET of the URL -> HTTP 403, body 'Enable JavaScript' (Cloudflare challenge); chatgpt.com/apps also 403, so 403 says nothing either way",
    "LIVE: WebFetch -> HTTP 403",
    "LIVE: web search shows the same URL pattern chatgpt.com/plugins/plugin_asdk_app_* for other directory apps (ElevenLabs, Quizlet)",
    "SPEC: emem README.md:127,135 and web/index.html:1009 ('listed': '2026-09-27') link this URL; vortx.ai says 'Listed in ChatGPT' and 'mention @emem in any chat'",
-   "LIVE: https://emem.dev/.well-known/openai-apps-challenge -> 404 (expected: token only set during a submission, integrations/chatgpt/submission.md)"
+   "LIVE: https://emem.dev/.well-known/openai-apps-challenge -> 404 (expected: token only set during a submission, integrations/chatgpt/submission.md)",
+   "2026-10-02: emem and emem2.4.0 plugins are connected in this ChatGPT workspace; both expose emem_memory_token_resolve. The tool description identifies the token grammar, fields and endpoint.",
+   "2026-10-02: two read-only resolve attempts returned a connector-level Unexpected response type error. These are not successful hosted-agent trials.",
+   "The publisher-linked directory URL is retained as the community installation route. Availability is separate from the 30 September client-path benchmark.",
+   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/chatgpt.txt.",
+   "Direct retrieval body confirms: emem; Signed facts about real places; Install plugin; Developer Vortx.ai; version 1.3.0. Archived chatgpt.txt and listing_checks.json retain the primary identity fields and response hash."
   ],
-  "user_can": "If listed as claimed: enable emem in ChatGPT and ask a place question; answers carry emem:fact: tokens",
+  "user_can": "Enable the emem plugin in ChatGPT and pass an emem:fact token to its resolve tool",
   "caveats": [
-   "Not independently confirmed in this session. Before print, a logged-in human must open the URL on a phone and screenshot the directory page (title, developer, status) into research/v13/.",
-   "OpenAI plugin guidelines (developers.openai.com/plugins/plugin-guidelines, fetched here): 'Do not use discovery, operation selection, or schema fetching with a generic executor to enable operations not individually exposed for review.' emem's MCP initialize instructions say tools/call runs any of 114 tools by name. Never print '114 tools in ChatGPT'; print only what the listing exposes.",
-   "OpenAI plugin guidelines: 'Plugins should not imply that they are made or endorsed by OpenAI.'"
+   "The plugin is connected and its resolve tool is exposed. Resolve attempts in this session returned Unexpected response type; no successful hosted-agent result is claimed.",
+   "The direct public listing and connected plugin are verified. Listed plugin version 1.3.0 is a directory version, not a claim about the responder or tool-count version."
   ],
   "print": {
-   "allowed": "only after the manual check above",
-   "text": "ChatGPT: @emem (ChatGPT Directory)"
+   "allowed": true,
+   "text": "ChatGPT: @emem plugin"
   },
-  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "verified_utc": "2026-10-02T08:30Z",
   "brand": {
    "owner": "OpenAI",
    "marks": "ChatGPT name and logo, OpenAI Blossom",
@@ -269,7 +273,8 @@
    "LIVE: page HTTP 200, title 'emem - Dify Marketplace'",
    "LIVE: https://marketplace.dify.ai/api/v1/plugins/vortx-ai/emem -> status 'active', latest_version '2.4.0', created_at 2026-08-24T08:52:39Z, version_updated_at 2026-09-13T07:12:36Z, verification.authorized_category 'community', install_count 32, repository https://github.com/Vortx-AI/emem, 16 tools",
    "LIVE: versions API -> 2.4.0 (2026-09-13), 2.3.0 (2026-09-03), 2.2.0 (2026-08-24)",
-   "LIVE: Dify template 'emem Referent Lock Lite' https://marketplace.dify.ai/template/emem/ad67ca26-e875-494b-b98f-23902c9a2017 HTTP 200"
+   "LIVE: Dify template 'emem Referent Lock Lite' https://marketplace.dify.ai/template/emem/ad67ca26-e875-494b-b98f-23902c9a2017 HTTP 200",
+   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/dify.txt."
   ],
   "user_can": "Install the plugin in Dify and call the emem tools from Dify apps and workflows",
   "caveats": [
@@ -356,7 +361,8 @@
   "evidence": [
    "LIVE: the README install link -> HTTP 302 to vscode:mcp/install?{\"type\":\"http\",\"url\":\"https://emem.dev/mcp\",\"name\":\"emem\"}",
    "SPEC: VS Code docs (microsoft/vscode-docs agent-customization/mcp-servers.md): '@mcp' gallery; 'code --add-mcp'; workspace key 'servers', type 'http'",
-   "LIVE: emem is in the GitHub MCP Registry (row github-mcp-registry), which search results state backs the @mcp gallery"
+   "LIVE: emem is in the GitHub MCP Registry (row github-mcp-registry), which search results state backs the @mcp gallery",
+   "2026-10-02: GitHub MCP Registry primary listing inspected. emem exposes an Install MCP server route and documents VS Code servers configuration. This is an MCP integration, not a separate VSIX extension."
   ],
   "user_can": "One-click install from a link, or search @mcp emem in the Extensions view",
   "caveats": [
@@ -367,7 +373,7 @@
    "allowed": true,
    "text": "Visual Studio Code: @mcp emem (MCP gallery) or code --add-mcp"
   },
-  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "verified_utc": "2026-10-02T08:30Z",
   "brand": {
    "owner": "Microsoft",
    "marks": "Visual Studio Code name and icon",
@@ -664,7 +670,8 @@
   "evidence": [
    "LIVE: https://api.mcp.github.com/v0.1/servers/io.github.Vortx-AI%2Femem/versions/latest -> HTTP 200, version 2.4.2, isLatest true, publishedAt 2026-09-29T18:47:27Z, publisher-provided github meta: nameWithOwner Vortx-AI/emem, license Apache License 2.0, stargazerCount 63",
    "LIVE: search ?search=emem -> 2 results (io.github.Vortx-AI/emem 2.4.2, md.traveler/mcp)",
-   "UNVERIFIED: the HTML page github.com/mcp/Vortx-AI/emem was not reachable from this session (session proxy refuses non-bound github.com paths); URL taken from server-side docs (/.well-known/mcp.json registries[0])"
+   "UNVERIFIED: the HTML page github.com/mcp/Vortx-AI/emem was not reachable from this session (session proxy refuses non-bound github.com paths); URL taken from server-side docs (/.well-known/mcp.json registries[0])",
+   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/github-mcp.txt."
   ],
   "user_can": "Find emem in GitHub's registry and in VS Code's @mcp gallery",
   "caveats": [
@@ -844,24 +851,26 @@
   "id": "mulesoft-exchange",
   "poster_group": "PROTOCOL/DISCOVERY SURFACES",
   "role": "directory",
-  "platform": "MuleSoft Anypoint Exchange",
+  "platform": "Salesforce MuleSoft Anypoint Exchange",
   "mechanism": "Exchange asset 'Vortx AI MCP Server'",
   "url": "https://anypoint.mulesoft.com/exchange/68e53915-e89b-4e82-b794-12d37982db4c/vortxAi-asset/",
   "status": "REGISTRY",
   "evidence_level": "LIVE",
   "evidence": [
    "LIVE: HTTP 200, title 'Vortx AI MCP Server'",
-   "SPEC: web/index.html surfaces 'Exchange: mcp 2.0.0, published 2026-08-13'"
+   "SPEC: web/index.html surfaces 'Exchange: mcp 2.0.0, published 2026-08-13'",
+   "2026-10-02 primary Exchange page inspected: Vortx AI MCP Server, Type MCP, version 2.0.0, published 13 Aug 2026. Page describes access to content-addressed place memory and verification.",
+   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/mulesoft.txt."
   ],
   "user_can": "MuleSoft users find the server in Exchange",
   "caveats": [
-   "Contents not inspected; version per emem's own site is 2.0.0."
+   "An Exchange MCP asset listing; no MuleSoft flow was executed in this poster study."
   ],
   "print": {
-   "allowed": false,
-   "text": ""
+   "allowed": true,
+   "text": "Salesforce MuleSoft: Vortx AI MCP Server on Anypoint Exchange"
   },
-  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "verified_utc": "2026-10-02T08:30Z",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
   "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
@@ -994,8 +1003,8 @@
    "Published package, not a LangChain-listed integration."
   ],
   "print": {
-   "allowed": false,
-   "text": "(fold into LangChain tile as 'store package on PyPI')"
+   "allowed": true,
+   "text": "LangGraph: pip install emem-langmem"
   },
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
@@ -1272,5 +1281,97 @@
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
   "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+ },
+ {
+  "id": "dify-template-lite",
+  "poster_group": "COMMUNITY WORKFLOWS",
+  "role": "workflow",
+  "platform": "Dify Referent Lock Lite",
+  "mechanism": "Import the published Dify workflow after installing vortx-ai/emem",
+  "url": "https://marketplace.dify.ai/template/emem/ad67ca26-e875-494b-b98f-23902c9a2017",
+  "status": "REGISTRY",
+  "evidence_level": "PRIMARY MARKETPLACE PAGE",
+  "evidence": [
+   "2026-10-02: primary Dify Marketplace listing inspected; title and setup instructions present."
+  ],
+  "user_can": "Import Referent Lock Lite into a Dify workspace and follow its setup instructions",
+  "caveats": [
+   "Listing inspected; workflow execution is outside this poster study."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Referent Lock Lite"
+  },
+  "verified_utc": "2026-10-02T08:30Z",
+  "brand": null
+ },
+ {
+  "id": "dify-template-full",
+  "poster_group": "COMMUNITY WORKFLOWS",
+  "role": "workflow",
+  "platform": "Dify Referent Lock Full",
+  "mechanism": "Import the published Dify workflow after installing vortx-ai/emem",
+  "url": "https://marketplace.dify.ai/template/emem/6c7b54a5-17f0-4eac-97a2-5d8cb51be381",
+  "status": "REGISTRY",
+  "evidence_level": "PRIMARY MARKETPLACE PAGE",
+  "evidence": [
+   "2026-10-02: primary Dify Marketplace listing inspected; title and setup instructions present."
+  ],
+  "user_can": "Import Referent Lock Full into a Dify workspace and follow its setup instructions",
+  "caveats": [
+   "Listing inspected; workflow execution is outside this poster study."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "Referent Lock Full"
+  },
+  "verified_utc": "2026-10-02T08:30Z",
+  "brand": null
+ },
+ {
+  "id": "dify-template-eudr",
+  "poster_group": "COMMUNITY WORKFLOWS",
+  "role": "workflow",
+  "platform": "Dify EUDR Evidence Studio",
+  "mechanism": "Import the published Dify workflow after installing vortx-ai/emem",
+  "url": "https://marketplace.dify.ai/template/emem/89b63325-acec-4965-ae17-2013ef6f0029",
+  "status": "REGISTRY",
+  "evidence_level": "PRIMARY MARKETPLACE PAGE",
+  "evidence": [
+   "2026-10-02: primary Dify Marketplace listing inspected; title and setup instructions present."
+  ],
+  "user_can": "Import EUDR Evidence Studio into a Dify workspace and follow its setup instructions",
+  "caveats": [
+   "Listing inspected; workflow execution is outside this poster study."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "EUDR Evidence Studio"
+  },
+  "verified_utc": "2026-10-02T08:30Z",
+  "brand": null
+ },
+ {
+  "id": "clawhub",
+  "poster_group": "PROTOCOL/DISCOVERY SURFACES",
+  "role": "directory",
+  "platform": "ClawHub",
+  "mechanism": "emem skill listing by avijeetsingh1",
+  "url": "https://clawhub.ai/avijeetsingh1/emem",
+  "status": "REGISTRY",
+  "evidence_level": "PRIMARY DIRECTORY PAGE",
+  "evidence": [
+   "2026-10-02 HTTP 200, title emem — ClawHub; archived page text."
+  ],
+  "user_can": "Open the emem skill listing on ClawHub",
+  "caveats": [
+   "Directory page inspected; skill installation was not exercised."
+  ],
+  "print": {
+   "allowed": true,
+   "text": "ClawHub"
+  },
+  "verified_utc": "2026-10-02T08:30Z",
+  "brand": null
  }
 ]

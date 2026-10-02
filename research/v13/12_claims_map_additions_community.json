@@ -1,0 +1,188 @@
+{
+  "purpose": "v13.5 community availability and recovered worked examples",
+  "rows": [
+    {
+      "id": "CM.routes",
+      "block": "v13.5 community/recovery",
+      "print": [
+        "Use emem. Carry the evidence forward.",
+        "ChatGPT",
+        "@emem plugin",
+        "Visual Studio Code",
+        "Salesforce MuleSoft",
+        "Anypoint Exchange",
+        "MCP \u00b7 A2A \u00b7 REST"
+      ],
+      "status": "SPEC",
+      "layer": "n/a",
+      "source": {
+        "file": "v13/ecosystem_manifest.json"
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "eco",
+        "file": "v13/ecosystem_manifest.json",
+        "arg": "chatgpt",
+        "expect": null
+      },
+      "note": "Community availability: connected ChatGPT tool metadata, primary public listings, publisher integration documentation. Not a claim that every host was experimentally run. Public-read/no-key policy in pinned README and plugin README.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CM.mulesoft",
+      "block": "v13.5 community/recovery",
+      "print": [
+        "Salesforce MuleSoft"
+      ],
+      "status": "SPEC",
+      "layer": "n/a",
+      "source": {
+        "file": "v13/ecosystem_manifest.json"
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "eco",
+        "file": "v13/ecosystem_manifest.json",
+        "arg": "mulesoft-exchange",
+        "expect": null
+      },
+      "note": "Exchange asset page inspected; no executed MuleSoft flow claimed.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CM.scope",
+      "block": "v13.5 community/recovery",
+      "print": [
+        "11 client paths",
+        "9",
+        "30 Sep 2026"
+      ],
+      "status": "MEASURED",
+      "layer": "n/a",
+      "source": {
+        "file": "repro/data/v8/crossruntime_table.json"
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "repro/data/v8/crossruntime_table.json",
+        "arg": [
+          "summary",
+          "ndvi_keylong",
+          "paths_ok"
+        ],
+        "expect": 11
+      },
+      "note": "Archived client-path study, distinct from the platform directory.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CM.exercise",
+      "block": "v13.5 community/recovery",
+      "print": [
+        "CONNECT & REPRODUCE",
+        "Carry the token \u2192 resolve the record \u2192 check the evidence \u2192 continue in another agent."
+      ],
+      "status": "SPEC",
+      "layer": "n/a",
+      "source": {
+        "file": "v13/evidence/community/recovery_checks.json"
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "v13/evidence/community/recovery_checks.json",
+        "arg": "state_hashes_reproduced",
+        "expect": 4
+      },
+      "note": "Proposed community exercise. /use gives a saved token and exact expected CID, value, place and date; no hosted-agent result is implied.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CM.bundle",
+      "block": "v13.5 community/recovery",
+      "print": [
+        "8 facts \u2192 one bundle handle",
+        "38 characters; members resolve separately."
+      ],
+      "status": "MEASURED",
+      "layer": "n/a",
+      "source": {
+        "file": "repro/v8/bundle_mint.json"
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "repro/v8/bundle_mint.json",
+        "arg": "members",
+        "expect": 8
+      },
+      "note": "Figure asserts members == resolved == len(citations) == 8 and len(bundle_token) == 38. The handle is a bundle reference; member records retain separate full fact CIDs.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CM.state",
+      "block": "v13.5 community/recovery",
+      "print": [
+        "4 stage addresses re-hashed offline."
+      ],
+      "status": "MEASURED",
+      "layer": "n/a",
+      "source": {
+        "file": "v13/evidence/community/recovery_checks.json"
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "v13/evidence/community/recovery_checks.json",
+        "arg": "state_hashes_reproduced",
+        "expect": 4
+      },
+      "note": "Fresh offline reproduction of archived located/routed/recalled/scored states. Records name process stages; their identity does not establish reasoning correctness.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CM.absence",
+      "block": "v13.5 community/recovery",
+      "print": [
+        "Missing data stays explicit"
+      ],
+      "status": "MEASURED",
+      "layer": "n/a",
+      "source": {
+        "file": "repro/v12/data/case_berlin_stack.json"
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v12/data/case_berlin_stack.json",
+        "arg": "outside CHIRPS",
+        "expect": null
+      },
+      "note": "Berlin CHIRPS row kind=absence, value=null, out-of-bounds reason; receipt and log were verified in the retained v12 audit. This is not a zero rainfall measurement.",
+      "tier": "1m",
+      "checked": true
+    }
+  ],
+  "extend_print": [
+    {
+      "id": "Q.discover_integrations",
+      "print_add": [
+        "CONNECT & REPRODUCE"
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-02T02:39:16.674367</dc:date>
+    <dc:date>2026-10-02T04:30:34.220020</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ Q 0 58.110236 0 55.275591
 L 0 4.251969 
 Q 0 1.417323 2.834646 1.417323 
 z
-" clip-path="url(#pb8f6531162)" style="fill: #dce8f5"/>
+" clip-path="url(#p94eed2a0bd)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_3">
     <path d="M 2.834646 62.362205 
@@ -53,7 +53,7 @@ Q 0 119.055118 0 116.220472
 L 0 65.19685 
 Q 0 62.362205 2.834646 62.362205 
 z
-" clip-path="url(#pb8f6531162)" style="fill: #f1f0ec"/>
+" clip-path="url(#p94eed2a0bd)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_4">
     <path d="M 2.834646 123.307087 
@@ -66,7 +66,7 @@ Q 0 180 0 177.165354
 L 0 126.141732 
 Q 0 123.307087 2.834646 123.307087 
 z
-" clip-path="url(#pb8f6531162)" style="fill: #dce8f5"/>
+" clip-path="url(#p94eed2a0bd)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_5">
     <path d="M 2.834646 184.251969 
@@ -79,48 +79,48 @@ Q 0 240.944882 0 238.110236
 L 0 187.086614 
 Q 0 184.251969 2.834646 184.251969 
 z
-" clip-path="url(#pb8f6531162)" style="fill: #f1f0ec"/>
+" clip-path="url(#p94eed2a0bd)" style="fill: #f1f0ec"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="15.402047" transform="rotate(-0 11.338583 15.402047)">OBSERVATIONS</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="15.402047" transform="rotate(-0 11.338583 15.402047)">EARTH DATA</text>
    </g>
    <g id="text_2">
-    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="33.746457" transform="rotate(-0 11.338583 33.746457)">fact · derived value · absence</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="33.746457" transform="rotate(-0 11.338583 33.746457)">raster → cube → rasterset</text>
    </g>
    <g id="text_3">
-    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="50.821654" transform="rotate(-0 11.338583 50.821654)">Recover a value and its derivation.</text>
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="50.821654" transform="rotate(-0 11.338583 50.821654)">Fields and dated stacks; retain the scene.</text>
    </g>
    <g id="text_4">
-    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="76.346929" transform="rotate(-0 11.338583 76.346929)">EARTH DATA</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="76.346929" transform="rotate(-0 11.338583 76.346929)">COLLECT EVIDENCE</text>
    </g>
    <g id="text_5">
-    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="94.691339" transform="rotate(-0 11.338583 94.691339)">raster · cube · rasterset</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="94.691339" transform="rotate(-0 11.338583 94.691339)">8 facts → one bundle handle</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="111.766535" transform="rotate(-0 11.338583 111.766535)">Recover a field or a series of fields.</text>
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="111.766535" transform="rotate(-0 11.338583 111.766535)">38 characters; members resolve separately.</text>
    </g>
    <g id="text_7">
-    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="137.291811" transform="rotate(-0 11.338583 137.291811)">COLLECTIONS</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="137.291811" transform="rotate(-0 11.338583 137.291811)">REASONING CHECKPOINTS</text>
    </g>
    <g id="text_8">
-    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="155.63622" transform="rotate(-0 11.338583 155.63622)">bundle · tree</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="155.63622" transform="rotate(-0 11.338583 155.63622)">located → routed → recalled → scored</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="172.711417" transform="rotate(-0 11.338583 172.711417)">Group facts or address file chunks.</text>
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="172.621183" transform="rotate(-0 11.338583 172.621183)">4 stage addresses re-hashed offline.</text>
    </g>
    <g id="text_10">
-    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="198.236693" transform="rotate(-0 11.338583 198.236693)">IDENTITY AND PROCESS</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="198.236693" transform="rotate(-0 11.338583 198.236693)">FILES, IDENTITY AND EXECUTION</text>
    </g>
    <g id="text_11">
-    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="216.640477" transform="rotate(-0 11.338583 216.640477)">entity · state · trace · track</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="216.640477" transform="rotate(-0 11.338583 216.640477)">tree · entity · trace · track</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="233.566065" transform="rotate(-0 11.338583 233.566065)">Name an object, a reasoning stage or a run.</text>
+    <text style="font-size: 15px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="233.656299" transform="rotate(-0 11.338583 233.656299)">Address chunks, subjects and recorded runs.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pb8f6531162">
+  <clipPath id="p94eed2a0bd">
    <rect x="0" y="0" width="548.503937" height="243.779528"/>
   </clipPath>
  </defs>

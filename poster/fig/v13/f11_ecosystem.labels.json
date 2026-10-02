@@ -1,0 +1,134 @@
+{
+  "figure": "f11_ecosystem",
+  "size_mm": [
+    801,
+    91
+  ],
+  "labels": [
+    {
+      "text": "ChatGPT",
+      "pt": 28,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "@emem plugin",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Enable emem; paste a token.",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Claude",
+      "pt": 28,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Code plugin \u00b7 MCP connector",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Resolve from a chat or terminal.",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Visual Studio Code",
+      "pt": 28,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "MCP gallery: @mcp emem",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Install for Copilot agent mode.",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Dify",
+      "pt": 28,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Marketplace plugin",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Referent Lock \u00b7 EUDR workflows",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Salesforce MuleSoft",
+      "pt": 28,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Anypoint Exchange",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Vortx AI MCP Server listing",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "CONNECT",
+      "pt": 17,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "MCP \u00b7 A2A \u00b7 REST",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Cursor \u00b7 Gemini CLI",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "BUILD",
+      "pt": 17,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Python \u00b7 TypeScript \u00b7 self-hosted Docker",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "LangGraph \u00b7 LlamaIndex \u00b7 AutoGen \u00b7 CrewAI \u00b7 Mastra",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "DISCOVER",
+      "pt": 17,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "GitHub MCP \u00b7 Official MCP Registry",
+      "pt": 22,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Glama \u00b7 Smithery \u00b7 Hugging Face \u00b7 Context7 \u00b7 ClawHub",
+      "pt": 18,
+      "claim": "CM.routes"
+    },
+    {
+      "text": "Carry the token \u2192 resolve the record \u2192 check the evidence \u2192 continue in another agent.",
+      "pt": 24,
+      "claim": "CM.exercise"
+    }
+  ]
+}

@@ -1,22 +1,24 @@
-# The poster: v13.4, formulas and memory restored (2 October 2026)
+# The poster: v13.5, community routes and recovered contributions (2 October 2026)
 
 | Artifact | Purpose |
 |---|---|
-| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 file, 841 × 1189 mm |
+| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 file, 841 × 1189 mm; print at actual size |
 | [emem-poster-preview.png](emem-poster-preview.png) | Screen preview |
 | [emem-poster-A0-300dpi.png](emem-poster-A0-300dpi.png) | Full-resolution print proof |
-| [build_v13_report.json](build_v13_report.json) | Fail-closed layout, claim, type and QR checks |
-| [release_v13.4.json](release_v13.4.json) | Artifact SHA-256 hashes and validation summary |
+| [build_v13_report.json](build_v13_report.json) | Layout, claim, type and QR checks |
+| [release_v13.5.json](release_v13.5.json) | Artifact hashes and validation summary |
 
-The unified Earth-to-agent narrative from issue #48 remains. This round restores the drift decomposition and implemented anchor score, memory and temporal-relation model, two-clock recall, source NDVI equation and archived Prithvi/TESSERA vectors. The memory figure now branches from one lookup to two records and shows the historical query that an agent can repeat. The final panel states concrete next experiments.
+The community band now spans the A0 page with prominent ChatGPT, Claude, Visual Studio Code, Dify and Salesforce MuleSoft routes. Protocols, SDKs, frameworks, self-hosting and discovery directories remain visible. CONNECT & REPRODUCE opens a setup guide, three Dify templates, a copyable token and handoff exercise, expected record fields, reader questions and the research methods.
 
-The source audit distinguishes conceptual formulas, implemented behavior, fresh tests and archived results: [formalism and test audit](../research/v13/16_FORMALISM_AND_TEST_AUDIT.md). The prior source-pixel and controlled handoff results are unchanged. The new Python test run uses the existing upstream tests at the pinned EMEM commit, without modifying them.
+The history review recovered the eight-fact bundle, four reproducible reasoning-state addresses and a concrete signed-absence example. The drift formulas, memory model, two-clock recall, foundation-model vectors and central handoff/source experiments remain. Earlier seasonal EO, Rondônia screening and SAT-042 figures are available in the methods gallery with their original dates and scope. See the [recovery map](../research/v13/18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md).
 
-Build source: `src/poster.v13.html` and `src/poster.v13.css`. Current copy specification: [14_UNIFIED_POSTER_BRIEF.md](../research/v13/14_UNIFIED_POSTER_BRIEF.md). Full instructions: [AGENTS.md](../AGENTS.md).
+Build sources: `src/poster.v13.html`, `src/poster.v13.css`, `figs_v13/` and `tools/site/site.mjs`. Copy specification: [14_UNIFIED_POSTER_BRIEF.md](../research/v13/14_UNIFIED_POSTER_BRIEF.md). Instructions: [AGENTS.md](../AGENTS.md).
 
-Validation: **17/17 poster gates pass**, **20/20 upstream offline tests pass**, and all seven local mobile page layouts pass. The 300 dpi proof is losslessly compressed with decoded pixels and DPI checked. Raw results, source hashes and scope are in the [release review](../research/v13/17_RELEASE_REVIEW.md). Rust tests were inspected and archived results retained; no fresh Rust or live endpoint result is claimed.
+Validation: **17/17 poster gates**, **14/14 local route/viewport checks**, clipboard token equality on phone and desktop, and three printed QR decodes. Four archived state addresses reproduce offline; the saved NDVI proof bundle passes nine checks. The earlier **20/20 upstream Python tests** remain pinned to their original v13.4 run. The current round does not claim fresh Rust or hosted-agent benchmark results. The direct ChatGPT emem listing and connected plugin are confirmed; attempted resolve calls returned a connector error, recorded in the evidence.
 
-The companion pages are generated under `/docs` and deployed by [the Pages workflow](../.github/workflows/pages.yml). GitHub reports Pages enabled; the public routes returned 404 before the workflow was added. Deployment status is recorded by GitHub Actions. The workflow publishes the committed static site, without rerunning the scientific measurements. The older full browser run retains its external-fetch failures in `docs/assets/screens/results.json`; the fresh local layout review is in `research/v13/evidence/formalism/site_review.json`.
+[Community guide](https://vortx-ai.github.io/esa_poster/use/) · [Methods and recovered demonstrations](https://vortx-ai.github.io/esa_poster/methods/#recovered) · [Release review](../research/v13/19_RELEASE_REVIEW_V13_5.md).
+
+The [Pages workflow](../.github/workflows/pages.yml) publishes the committed `/docs` files. This publication is checked against the reviewed local PDF and page bytes. Historical external-fetch failures in `docs/assets/screens/results.json` are retained; fresh local review results are in `research/v13/evidence/community/site_review.json`.
 
 ## Signed-track history
 

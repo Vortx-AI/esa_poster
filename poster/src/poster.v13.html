@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</title>
-<!-- v13.4 source. Issue #48 supersedes the face copy in the original brief.
+<!-- v13.5 source. Issue #48 supersedes the face copy in the original brief.
      Figures, measurements and claim rows remain independently checked by build_v13.py. -->
 <link rel="stylesheet" href="src/poster.v13.css">
 </head>
@@ -74,6 +74,11 @@
   <div class="fig" data-figslot="f16_embeddings" style="--fw:193.5;--fh:53"><!--fig:f16_embeddings--></div>
   <p class="cap rt" data-role="caption" data-claim="V.prithvi V.tessera V.retired">Archived vectors: Prithvi names a checkpoint digest; TESSERA names a product year. These encoders are retired on the deployment; stored records remain addressable.</p>
 </section>
+<section class="panel c3" data-block="p13" data-brief="Absence and related layers">
+  <h2 class="rt" data-role="headline" data-claim="CM.absence">Missing data stays explicit</h2>
+  <p class="body s17 rt" data-role="body" data-claim="CM.absence">An absence record carries a reason and source. Berlin's CHIRPS record says outside the product's latitude range; it supplies no rainfall value.</p>
+  <p class="body s17 rt" data-role="body" data-claim="U.layers"><b>Where emem fits.</b> STAC finds assets; openEO runs processing; PROV and C2PA carry provenance. EMEM adds the observation reference an agent can resolve and re-check.</p>
+</section>
 </div>
 
 <div class="col" data-col="centre" style="--gap:4;--x:222.5;--y:377.5;--w:396;--h:639">
@@ -132,7 +137,7 @@
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">10</span>What else can an agent carry?</p>
   <h2 class="rt" data-role="headline" data-claim="TF.family">Beyond a single observation</h2>
   <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:86"><!--fig:f14_token_family--></div>
-  <p class="cap rt" data-role="caption" data-claim="TF.family">Choose the reference that preserves what the next agent needs to recover.</p>
+  <p class="cap rt" data-role="caption" data-claim="TF.family">Resolve the object and inspect what its address and receipt cover.</p>
 </section>
 <section class="panel c3 extension" data-block="p11" data-brief="Execution extension">
   <p class="extension-label">NEXT EXPERIMENTS</p>
@@ -141,25 +146,18 @@
 </section>
 </div>
 
-<section class="blk panel c8" data-block="p12" data-brief="11 · Multiple runtimes" style="--x:20;--y:1019.5;--w:531;--h:147.5">
-  <h2 class="rt" data-role="headline" data-claim="EC.11"><span class="num" data-exempt="panelno">11</span>The same reference can cross agent runtimes</h2>
-  <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 U.ecosystem">MCP, A2A, REST and SDKs expose the same reference model. One reference returned the same record and value through 11 client paths; receipt signatures were checked on 9 (30 Sep 2026). Surface status is labelled below.</p>
-  <div class="fig" data-figslot="f11_ecosystem" style="--fw:531;--fh:100"><!--fig:f11_ecosystem--></div>
-</section>
-<div class="col" data-col="bottomright" style="--gap:3;--x:560;--y:1019.5;--w:261;--h:147.5">
-<section class="panel c4" data-block="p13" data-brief="12 · Complementary layers">
-  <h2 class="rt" data-role="headline" data-claim="PA.critical"><span class="num" data-exempt="panelno">12</span>EO data into agent reasoning</h2>
-  <p class="body s17 rt" data-role="body" data-claim="U.layers">STAC describes assets; openEO defines processing; PROV and C2PA carry provenance. EMEM adds the observation reference an agent can pass on and resolve again.</p>
-  <div class="fig" data-figslot="f12_prior_art" style="--fw:261;--fh:48"><!--fig:f12_prior_art--></div>
-</section>
-<section class="concl" data-block="conclusion" data-brief="Conclusion">
-  <div class="cleft">
-    <div class="ctext"><p class="rt" data-role="conclusion" data-claim="U.conclusion">An observation stays addressable across a handoff. The next agent can recover the cited record, inspect its provenance, recompute a declared recipe and return to its source.</p></div>
-    <div class="qrlabel inl" data-claim="Q.read_methods"><div class="cta">REPRODUCE</div><div class="qcap" data-role="cap">Records, code, experiments and integrations.<br><span class="url mono">vortx-ai.github.io/esa_poster</span></div></div>
+<section class="blk panel c8 community" data-block="p12" data-brief="11 · Community routes" style="--x:20;--y:1019.5;--w:801;--h:147.5">
+  <div class="qrhead">
+    <div class="qrhtext">
+      <h2 class="rt" data-role="headline" data-claim="CM.routes"><span class="num" data-exempt="panelno">11</span>Use emem. Carry the evidence forward.</h2>
+      <p class="mech rt" data-role="mechanism" data-claim="CM.routes">Connect a plugin, a workflow or your own code. Public emem reads need no API key; the source is open.</p>
+      <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope">Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).<br>The routes below are plugins, connectors, packages and listings. Their setup links and workflow examples are behind CONNECT.</p>
+      <div class="qrlabel inl" data-claim="Q.discover_integrations CM.exercise"><span class="cta">CONNECT &amp; REPRODUCE</span> <span class="qcap" data-role="cap">Copy a token, choose your tool, run the checks. &nbsp;<span class="mono community-url">vortx-ai.github.io/esa_poster/use/</span></span></div>
+    </div>
+    <div class="qr inl" data-qr="use" data-claim="Q.discover_integrations"><div class="sym"><!--qr:use--></div></div>
   </div>
-  <div class="cqr"><div class="qr inl" data-qr="methods" data-claim="Q.read_methods"><div class="sym"><!--qr:methods--></div></div></div>
+  <div class="fig" data-figslot="f11_ecosystem" style="--fw:801;--fh:91"><!--fig:f11_ecosystem--></div>
 </section>
-</div>
 </main>
 <footer class="blk foot" data-block="footer" style="--x:20;--y:1169.5;--w:801;--h:18">
   <p><span data-claim="K.commit K.dates">Implementation: emem 8e9b401. Measurements: 29 Sep to 1 Oct 2026.</span>
