@@ -2,7 +2,7 @@
 
 This repository holds the A0 poster for "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents
 over ~~Foundation-Model Embeddings~~ Satellite Observations and Signed Execution Traces" (Agentic AI for Earth
-Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.5 (recovered contributions and usable community routes).
+Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.6 (evidence boundaries, manifest gates and a timed demonstration).
 
 ## Start here
 
@@ -48,3 +48,5 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
   statements. Defect lists, scorecards and withdrawn claims stay in `research/`.
 - Numbers are copied from measurement files, never from prose. Counts carry their units and their date.
 - Never commit signing keys (`.gitignore` covers the usual names).
+
+The ecosystem figure is generated from `research/v13/ecosystem_manifest.json` by `poster/ecosystem.py`. Dates older than 14 days, unqualified statuses and manually added SVG copy fail the build and CI. Run `python -m unittest discover -s poster/tests -v` after changing claim or ecosystem gates.

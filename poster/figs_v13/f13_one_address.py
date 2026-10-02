@@ -237,7 +237,7 @@ for i,c in enumerate(["direct_sensor","deterministic_index","model_output","huma
     xx=56 if i<3 else 125
     yy=30+(i if i<3 else i-3)*7
     glyph(xx,yy,c,False)
-    T(xx+5,yy,CLS_LABEL[c],14,color=C["ink2"])
+    T(xx+5,yy,CLS_LABEL[c],14,color=C["ink2"],claim="V6.berlin_labels")
 T(0,55,"Sentinel-2C L2A · 27 Sep 2026 · RGB · 2.24 km across; box: 90 m",14,claim="A13.chip",color=C["ink2"])
 LEG_END=57
 
@@ -251,8 +251,8 @@ XC = W - 1.2
 assert XN + 16.4 + 2.0 + 19.8 <= XC, (XN, XC)
 hy = 63.0
 for xx, lab in ((XP, "product"), (XR, "signed reading"), (XT, "valid time"), (XN, "grid")):
-    T(xx, hy, lab, 14, color=C["muted"], claim=None)
-T(XC, hy, "fact_cid", 14, color=C["muted"], ha="right", family=MONO, claim=None)
+    T(xx, hy, lab, 14, color=C["muted"], claim="V6.berlin_labels")
+T(XC, hy, "fact_cid", 14, color=C["muted"], ha="right", family=MONO, claim="V6.berlin_labels")
 ax.plot([X0, W], [hy + 2.9, hy + 2.9], color=C["rule"], lw=0.5 / PTMM, zorder=2)
 PITCH = 5.5
 ty = hy + 2.9 + PITCH / 2 + 0.3

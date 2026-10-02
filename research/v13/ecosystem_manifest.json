@@ -46,7 +46,14 @@
    "poster_use": "Text 'ChatGPT' in poster type. No OpenAI logo unless a person reads openai.com/brand in a browser and it permits this use."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "card",
+   "order": 0,
+   "label": "ChatGPT",
+   "mechanism": "@emem plugin",
+   "action": "Enable emem; paste a token."
+  }
  },
  {
   "id": "chatgpt-custom-gpt-action",
@@ -173,7 +180,14 @@
    "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "card",
+   "order": 1,
+   "label": "Claude",
+   "mechanism": "Code plugin / MCP",
+   "action": "Resolve from chat or terminal."
+  }
  },
  {
   "id": "claude-ai-custom-connector",
@@ -304,7 +318,14 @@
    "poster_use": "Official mono Dify logo from the Design Kit is allowed at tile size; keep clear space; no partner lockup."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "card",
+   "order": 3,
+   "label": "Dify",
+   "mechanism": "Marketplace plugin",
+   "action": "Referent Lock / EUDR workflows"
+  }
  },
  {
   "id": "gemini-cli",
@@ -347,7 +368,14 @@
    "poster_use": "Text only: 'Gemini CLI'. No Gemini icon."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "clients",
+   "line": 1,
+   "order": 0,
+   "label": "Gemini CLI"
+  }
  },
  {
   "id": "vscode",
@@ -390,7 +418,14 @@
    "poster_use": "Text only: 'Visual Studio Code' first, 'VS Code' after. No icon."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "card",
+   "order": 2,
+   "label": "Visual Studio Code",
+   "mechanism": "MCP connector",
+   "action": "Copilot agent mode: @mcp emem"
+  }
  },
  {
   "id": "cursor",
@@ -430,7 +465,14 @@
    "poster_use": "Text 'Cursor' (safest). If a mark is used: the official 2D asset in its dark or light variant, unmodified."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "clients",
+   "line": 0,
+   "order": 0,
+   "label": "Cursor"
+  }
  },
  {
   "id": "cline",
@@ -454,7 +496,7 @@
    "Not in the Cline marketplace; a submission is not a listing."
   ],
   "print": {
-   "allowed": "only with the corrected config",
+   "allowed": false,
    "text": "Cline: MCP settings, type streamableHttp"
   },
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
@@ -505,7 +547,14 @@
    "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "protocols",
+   "line": 0,
+   "order": 0,
+   "label": "MCP"
+  }
  },
  {
   "id": "mcp-full",
@@ -591,7 +640,14 @@
    "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "protocols",
+   "line": 0,
+   "order": 1,
+   "label": "A2A"
+  }
  },
  {
   "id": "rest-openapi",
@@ -615,7 +671,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "protocols",
+   "line": 1,
+   "order": 0,
+   "label": "REST / OpenAPI"
+  }
  },
  {
   "id": "official-mcp-registry",
@@ -656,7 +719,14 @@
    "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "discovery",
+   "line": 0,
+   "order": 1,
+   "label": "MCP Registry"
+  }
  },
  {
   "id": "github-mcp-registry",
@@ -698,7 +768,14 @@
    "poster_use": "Black Invertocat next to the repo URL is allowed as a link marker. Not for the MCP Registry tile as a GitHub endorsement."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "discovery",
+   "line": 0,
+   "order": 0,
+   "label": "GitHub MCP"
+  }
  },
  {
   "id": "github-repo",
@@ -739,7 +816,14 @@
    "poster_use": "Black Invertocat next to the repo URL is allowed as a link marker. Not for the MCP Registry tile as a GitHub endorsement."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "developer",
+   "line": 2,
+   "order": 0,
+   "label": "GitHub source"
+  }
  },
  {
   "id": "glama",
@@ -767,7 +851,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "discovery",
+   "line": 1,
+   "order": 0,
+   "label": "Glama"
+  }
  },
  {
   "id": "smithery",
@@ -788,13 +879,20 @@
    "The Smithery route needs a Smithery token; the direct emem.dev/mcp route needs none. Tool count cached at 16."
   ],
   "print": {
-   "allowed": false,
-   "text": "(optional; not in the brief's required set)"
+   "allowed": true,
+   "text": "Smithery"
   },
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "discovery",
+   "line": 1,
+   "order": 1,
+   "label": "Smithery"
+  }
  },
  {
   "id": "huggingface-space",
@@ -814,13 +912,20 @@
    "Stale mirror (1.1.0 vs 2.4.2). Do not print as equivalent to emem.dev."
   ],
   "print": {
-   "allowed": false,
-   "text": ""
+   "allowed": true,
+   "text": "Hugging Face (older mirror)"
   },
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "discovery",
+   "line": 2,
+   "order": 1,
+   "label": "Hugging Face (older mirror)"
+  }
  },
  {
   "id": "context7",
@@ -839,13 +944,20 @@
    "Listing only."
   ],
   "print": {
-   "allowed": false,
-   "text": ""
+   "allowed": true,
+   "text": "Context7"
   },
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "discovery",
+   "line": 2,
+   "order": 0,
+   "label": "Context7"
+  }
  },
  {
   "id": "mulesoft-exchange",
@@ -873,7 +985,14 @@
   "verified_utc": "2026-10-02T08:30Z",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "card",
+   "order": 4,
+   "label": "Salesforce MuleSoft",
+   "mechanism": "Exchange listing",
+   "action": "Open Vortx AI MCP Server"
+  }
  },
  {
   "id": "awesome-mcp-servers",
@@ -926,7 +1045,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "developer",
+   "line": 0,
+   "order": 0,
+   "label": "Python"
+  }
  },
  {
   "id": "ts-sdk",
@@ -954,7 +1080,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "developer",
+   "line": 0,
+   "order": 1,
+   "label": "TypeScript"
+  }
  },
  {
   "id": "docker",
@@ -983,7 +1116,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "developer",
+   "line": 1,
+   "order": 0,
+   "label": "Docker"
+  }
  },
  {
   "id": "emem-langmem",
@@ -1009,7 +1149,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "developer",
+   "line": 1,
+   "order": 1,
+   "label": "LangGraph memory"
+  }
  },
  {
   "id": "llama-index-tools-emem",
@@ -1090,7 +1237,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "examples",
+   "line": 0,
+   "order": 0,
+   "label": "LangChain"
+  }
  },
  {
   "id": "llamaindex",
@@ -1117,7 +1271,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "examples",
+   "line": 0,
+   "order": 1,
+   "label": "LlamaIndex"
+  }
  },
  {
   "id": "crewai",
@@ -1146,7 +1307,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "examples",
+   "line": 1,
+   "order": 1,
+   "label": "CrewAI"
+  }
  },
  {
   "id": "autogen",
@@ -1170,7 +1338,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "examples",
+   "line": 1,
+   "order": 0,
+   "label": "AutoGen"
+  }
  },
  {
   "id": "mastra",
@@ -1199,7 +1374,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "examples",
+   "line": 1,
+   "order": 2,
+   "label": "Mastra"
+  }
  },
  {
   "id": "agno",
@@ -1227,7 +1409,14 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "panel": {
+   "kind": "line",
+   "group": "examples",
+   "line": 2,
+   "order": 0,
+   "label": "Agno (see setup notes)"
+  }
  },
  {
   "id": "semantic-kernel",
@@ -1372,6 +1561,13 @@
    "text": "ClawHub"
   },
   "verified_utc": "2026-10-02T08:30Z",
-  "brand": null
+  "brand": null,
+  "panel": {
+   "kind": "line",
+   "group": "discovery",
+   "line": 1,
+   "order": 2,
+   "label": "ClawHub"
+  }
  }
 ]

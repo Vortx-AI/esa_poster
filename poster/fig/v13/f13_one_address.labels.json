@@ -26,27 +26,27 @@
   {
    "text": "direct sensor",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "deterministic index",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "model output",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "human curated",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "unclassified",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "Sentinel-2C L2A · 27 Sep 2026 · RGB · 2.24 km across; box: 90 m",
@@ -56,27 +56,27 @@
   {
    "text": "product",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "signed reading",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "valid time",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "grid",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "fact_cid",
    "pt": 14,
-   "claim": null
+   "claim": "V6.berlin_labels"
   },
   {
    "text": "Sentinel-2C L2A",

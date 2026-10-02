@@ -63,7 +63,7 @@
   {
    "text": "kind",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "primary",
@@ -73,7 +73,7 @@
   {
    "text": "cell",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "defi.zb572.xoso.zb1ec",
@@ -88,7 +88,7 @@
   {
    "text": "band",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "indices.ndvi",
@@ -103,7 +103,7 @@
   {
    "text": "tslot",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "20721 (25 Sep)",
@@ -118,7 +118,7 @@
   {
    "text": "value",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "0.4708994708994709",
@@ -133,7 +133,7 @@
   {
    "text": "confidence",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "0.95",
@@ -143,7 +143,7 @@
   {
    "text": "privacy",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "public",
@@ -153,7 +153,7 @@
   {
    "text": "schema",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "d24rgwlq…",
@@ -163,7 +163,7 @@
   {
    "text": "signer",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "777er3yi…",
@@ -173,7 +173,7 @@
   {
    "text": "signed",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "2026-09-28T09:06:56Z",
@@ -183,7 +183,7 @@
   {
    "text": "sources",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "sentinel_s2_l2a · …B08_10m.tif ; …B04_10m.tif",
@@ -198,7 +198,7 @@
   {
    "text": "",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "captured 2026-09-25T05:42:51Z",
@@ -208,7 +208,7 @@
   {
    "text": "derivation",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "sentinel2_l2a_indices_ndvi@1 · EPSG 32643",
@@ -218,7 +218,7 @@
   {
    "text": "",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "scene S2A_MSIL2A_20260925T054251_R005_T43SFS…",
@@ -233,7 +233,7 @@
   {
    "text": "",
    "pt": 14,
-   "claim": null
+   "claim": "F5.fields"
   },
   {
    "text": "DNs 3502 / 1900 · offset −1000 · + 9 more args",

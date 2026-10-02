@@ -26,7 +26,7 @@ BASE = "https://vortx-ai.github.io/esa_poster/"
 # (slug, call to action, path, printed symbol size in mm without the quiet zone; research/v13/09_demo_and_qr.md section 2.2)
 QRS = [("demo", "TRY IT", "demo/", 70), ("t", "TRY A TOKEN", "t/", 40), ("r", "INSPECT", "r/", 40),
        ("test", "RE-RUN THE TEST", "test/", 40), ("methods", "REPRODUCE", "methods/", 40),
-       ("use", "DISCOVER INTEGRATIONS", "use/", 40)]
+       ("use", "CONNECT", "use/", 40)]
 FONTS = [("IBMPlexSans-Regular", "IBMPlexSans-Regular"), ("IBMPlexSans-SemiBold", "IBMPlexSans-SemiBold"),
          ("IBMPlexSans-Bold", "IBMPlexSans-Bold"), ("IBMPlexMono-Regular", "IBMPlexMono-Regular"),
          ("IBMPlexMono-SemiBold", "IBMPlexMono-SemiBold"), ("IBMPlexMono-Bold", "IBMPlexMono-Bold")]
@@ -163,6 +163,7 @@ def qrcodes():
 
 
 def main():
+    run([sys.executable, str(ROOT / "poster" / "ecosystem.py")])
     if not (TOOLS / "node_modules" / "@noble" / "hashes").exists():
         fail("run `npm ci --prefix tools/site` first")
     run(["node", str(TOOLS / "build.mjs"), str(ROOT), str(DOCS / "demo")])

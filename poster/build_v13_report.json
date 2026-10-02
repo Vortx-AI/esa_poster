@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-02T08:30:47+00:00",
+ "built_utc": "2026-10-02T09:24:57+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -63,28 +63,28 @@
    "file": "poster/fig/v13/f5_evidence_object.svg",
    "w_mm": 396.0,
    "h_mm": 98.0,
-   "mtime": "2026-10-02T02:25:54"
+   "mtime": "2026-10-02T05:18:34"
   },
   "f6_mutation_matrix": {
    "state": "placed",
    "file": "poster/fig/v13/f6_mutation_matrix.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-02T02:25:54"
+   "mtime": "2026-10-02T05:18:36"
   },
   "f7_wrong_pixel": {
    "state": "placed",
    "file": "poster/fig/v13/f7_wrong_pixel.svg",
    "w_mm": 396.0,
    "h_mm": 128.0,
-   "mtime": "2026-10-02T02:25:54"
+   "mtime": "2026-10-02T05:22:32"
   },
   "f8_ladder": {
    "state": "placed",
    "file": "poster/fig/v13/f8_ladder.svg",
    "w_mm": 193.5,
    "h_mm": 65.0,
-   "mtime": "2026-10-02T02:39:16"
+   "mtime": "2026-10-02T05:12:56"
   },
   "f9_timeline": {
    "state": "placed",
@@ -98,7 +98,7 @@
    "file": "poster/fig/v13/f13_one_address.svg",
    "w_mm": 193.5,
    "h_mm": 174.0,
-   "mtime": "2026-10-02T02:45:57"
+   "mtime": "2026-10-02T05:22:33"
   },
   "f14_token_family": {
    "state": "placed",
@@ -112,10 +112,10 @@
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 801.0,
    "h_mm": 91.0,
-   "mtime": "2026-10-02T04:24:10"
+   "mtime": "2026-10-02T05:12:56"
   }
  },
- "figure_text_tokens": 1694,
+ "figure_text_tokens": 1716,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -141,12 +141,12 @@
     "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,557.9,396.0x263.0), off by 4.1 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
     "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,829.5,396.0x187.0), off by 1.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
     "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,488.7,193.5x128.8), off by 23.0 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
+    "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,486.9,193.5x128.8), off by 21.3 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
     "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,801.0x147.5), off by 270.0 mm; reason: v13.5: full-width community band at the original bottom-row height; 28 pt primary platform names and 18-24 pt actions replace the small directory and latency chart. Measured client-path results remain in the caption and methods. The third QR opens setup, handoff and reproduction routes.",
     "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,967.3,193.5x49.2), off by 607.5 mm; reason: v13.5: prior-art relationships move to the spare left-column space beside a concrete signed-absence example. The source experiments keep their original space.",
     "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
-    "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,623.8,193.5x220.2), off by 71.9 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,850.4,193.5x118.9), off by 74.7 mm; reason: v13.5: same figure size, with concrete eight-fact bundle and four re-hashed reasoning checkpoints recovered from v7/v11; each object retains its own verification rules.",
+    "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,620.4,193.5x220.2), off by 68.4 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
+    "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,845.2,193.5x125.9), off by 70.6 mm; reason: v13.5: same figure size, with concrete eight-fact bundle and four re-hashed reasoning checkpoints recovered from v7/v11; each object retains its own verification rules.",
     "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
    ]
   },
@@ -165,13 +165,13 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (715 text runs)"
+    "every printed code point is in the face that sets it (733 text runs)"
    ]
   },
   "prose_and_banned_words": {
    "pass": true,
    "details": [
-    "no em/en dashes, tell words or unlisted banned words; 8 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
+    "no em/en dashes, tell words or unlisted banned words; 9 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
    ]
   },
   "face_hygiene": {
@@ -189,13 +189,19 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "61 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "146 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+   ]
+  },
+  "ecosystem_manifest": {
+   "pass": true,
+   "details": [
+    "42 evidenced routes; 28 printed; dates, types and exact SVG copy checked"
    ]
   },
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "406 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "409 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -240,14 +246,14 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 669 words containing a letter, 684 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
+    "running text: 676 words containing a letter, 693 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
     "  1 · Earth to agents: 57 tokens (section C: 57)",
-    "  10 · Token family: 21 tokens (section C: 21)",
-    "  11 · Community routes: 63 tokens (section C: 63)",
+    "  10 · Token family: 29 tokens (section C: 29)",
+    "  11 · Community routes: 67 tokens (section C: 67)",
     "  2 · One question, different records: 40 tokens (section C: 40)",
     "  3 · Different drift, different check: 64 tokens (section C: 64)",
     "  4 · Reference to record: 52 tokens (section C: 52)",
-    "  5 · Checks back to the source: 43 tokens (section C: 43)",
+    "  5 · Checks back to the source: 40 tokens (section C: 40)",
     "  6 · Source re-read: 46 tokens (section C: 50)",
     "  7 · What checks establish: 25 tokens (section C: 25)",
     "  8 · Memory keeps what was cited: 39 tokens (section C: 39)",
@@ -271,6 +277,7 @@
   "face_hygiene": "PASS",
   "r5_placeholders": "PASS",
   "claims_coverage": "PASS",
+  "ecosystem_manifest": "PASS",
   "claims_rows_recheck": "PASS",
   "qr_decode": "PASS",
   "assets": "PASS",
@@ -300,12 +307,12 @@
   "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,557.9,396.0x263.0), off by 4.1 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
   "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,829.5,396.0x187.0), off by 1.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
   "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,488.7,193.5x128.8), off by 23.0 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
+  "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,486.9,193.5x128.8), off by 21.3 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
   "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,801.0x147.5), off by 270.0 mm; reason: v13.5: full-width community band at the original bottom-row height; 28 pt primary platform names and 18-24 pt actions replace the small directory and latency chart. Measured client-path results remain in the caption and methods. The third QR opens setup, handoff and reproduction routes.",
   "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,967.3,193.5x49.2), off by 607.5 mm; reason: v13.5: prior-art relationships move to the spare left-column space beside a concrete signed-absence example. The source experiments keep their original space.",
   "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
-  "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,623.8,193.5x220.2), off by 71.9 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,850.4,193.5x118.9), off by 74.7 mm; reason: v13.5: same figure size, with concrete eight-fact bundle and four re-hashed reasoning checkpoints recovered from v7/v11; each object retains its own verification rules.",
+  "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,620.4,193.5x220.2), off by 68.4 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
+  "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,845.2,193.5x125.9), off by 70.6 mm; reason: v13.5: same figure size, with concrete eight-fact bundle and four re-hashed reasoning checkpoints recovered from v7/v11; each object retains its own verification rules.",
   "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
  ],
  "columns": [
@@ -324,11 +331,11 @@
   {
    "id": "right",
    "content_bottom": 1016.5,
-   "natural_mm": 626.4,
+   "natural_mm": 633.3,
    "height": 639.0
   }
  ],
- "allowlist_used": 8,
+ "allowlist_used": 9,
  "allowlist_unused": [
   "Six cross the irrigation line, one is impossible, one is right; each wrong value",
   "Signatures prevented none; the record made each checkable at a named layer, exce",
@@ -368,20 +375,64 @@
   "Reference harness, no spacecraft enrolled; the gate binds the value digest only."
  ],
  "claims_printed": [
+  "A13.chip",
+  "A13.cids",
+  "A13.grids",
+  "A13.head",
+  "A13.products",
+  "A13.readings",
+  "A13.scope",
+  "A13.times",
   "BE.grid",
   "BE.stack",
   "CM.absence",
+  "CM.bundle",
   "CM.exercise",
   "CM.routes",
   "CM.scope",
+  "CM.state",
   "DF.decomposition",
   "DF.ndvi",
   "DF.score",
+  "E8.double",
+  "E8.neighbour",
+  "E8.newer",
+  "E8.offset0",
+  "E8.place",
+  "E8.right",
+  "E8.rounded",
+  "E8.s2b",
   "E8.summary",
   "EC.11",
   "EC.9of11",
   "F.pixel",
+  "F3.chips",
+  "F3.legend",
+  "F3.rule",
+  "F5.fields",
+  "F5.onebit",
+  "F5.read",
+  "F5.tags",
+  "F5.token",
+  "F6.checks",
+  "F6.cumulative",
+  "F6.desc",
+  "F6.family",
+  "F6.first",
+  "F6.ids",
+  "F6.na",
+  "F6.totals_label",
+  "F7.axis",
+  "F7.chips",
+  "F7.named",
+  "F7.same",
+  "F7.scale",
+  "F7.scene",
+  "F7.scope",
+  "F7.window",
   "H.byline",
+  "H.img.grid",
+  "H.img.record",
   "H.session",
   "H.title",
   "K.commit",
@@ -393,45 +444,86 @@
   "MF.next",
   "MF.recall",
   "O.1115",
+  "O.46",
+  "O.84",
   "O.batch",
+  "O.cid",
+  "O.cogs",
+  "O.key",
+  "O.log",
   "O.nohash",
+  "O.pixel",
   "PA.credit",
   "Q.discover_integrations",
   "Q.inspect_record",
+  "Q.view_demo",
+  "Q.view_demo.caption",
   "R5.A.pooled",
   "R5.A.qwen7b",
+  "R5.B.pooled",
+  "R5.C.pooled",
+  "R5.D.pooled",
   "R5.E.pooled",
   "R5.E.qwen7b",
   "R5.F6.scope",
+  "R5.M17.notrun",
   "R5.baseline.catch",
   "R5.block2.M15r",
+  "R5.cell.A.M9.false_accept",
+  "R5.cell.B.M12.false_accept",
+  "R5.cell.D.M1.false_accept",
+  "R5.cell.D.M12.false_accept",
+  "R5.cell.D.M13.false_accept",
+  "R5.cell.D.M15.false_accept",
+  "R5.cell.D.M5.false_accept",
+  "R5.cell.D.M6.false_accept",
+  "R5.cell.D.M7.false_accept",
   "R5.dates",
   "R5.models",
   "REF.footer",
+  "S.R1.B",
+  "S.R1.C",
+  "S.R1.I",
   "S.threshold",
   "SAT.gate",
   "SAT.run",
   "TF.family",
   "TM.asof",
+  "U.benchmark",
   "U.boundary",
   "U.bridge",
   "U.checks",
   "U.drift",
   "U.flow",
   "U.hero",
+  "U.identities",
   "U.layers",
   "U.object",
   "U.poster",
   "V.prithvi",
   "V.retired",
   "V.tessera",
+  "V6.berlin_labels",
+  "V6.bridge",
+  "V6.checkable",
+  "V6.controls",
+  "V6.controls.n",
+  "V6.controls.refused",
+  "V6.limits",
+  "V6.matrix_labels",
+  "V6.objects",
+  "W.err",
   "W.kx",
+  "W.prev",
+  "W.south",
   "W.vals",
+  "X.entity",
   "X.loo",
-  "X.only"
+  "X.only",
+  "X.p123"
  ],
  "figure_numbers_checked": 368,
- "rows_rechecked": 406,
+ "rows_rechecked": 409,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
   "A13.products",
@@ -466,7 +558,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 669,
-  "running_tokens": 684
+  "running_words_with_letter": 676,
+  "running_tokens": 693
  }
 }

@@ -1,358 +1,365 @@
 {
- "schema": "banned-word allowlist for the v13 board (research/v13/10_ladder_threat_invention.md section 5.3)",
- "rule": "an entry is bound to one sentence by BLAKE3 of the normalised text (NFC, lower case, single spaces); editing the sentence voids it; evidence is a claims-map row",
- "entries": [
-  {
-   "word": "impossible",
-   "text_sha": "fe08bf0a817c8a769ab40e09f3f9bc5ab2f4fe048b6ec165497c269288cfaf09",
-   "sentence": "Six cross the irrigation line, one is impossible, one is right; each wrong value needs a different check.",
-   "where": "html:p2:caption",
-   "evidence": "E8.double",
-   "reason": "1.1427 is NDVI above 1, outside the index's range: the offset applied twice"
-  },
-  {
-   "word": "none",
-   "text_sha": "f79c33b9faa8157fb14955d9101831806adc2dea5cd3370d9c83393b606dfb2e",
-   "sentence": "Signatures prevented none; the record made each checkable at a named layer, except the top row.",
-   "where": "html:p3:caption",
-   "evidence": "F.caption",
-   "reason": "brief G.3: 'none' in panel 3 (signatures prevented none of the eight)"
-  },
-  {
-   "word": "only",
-   "text_sha": "abca9457ac3fc57ebe97059c743957c45997960b3beaa2e8971fbe60de80cd94",
-   "sentence": "H2 Only a source re-read catches a signer's wrong pixel.",
-   "where": "html:questions:hypothesis",
-   "evidence": "X.only",
-   "reason": "H2; leave_one_out names I alone for M15"
-  },
-  {
-   "word": "every",
-   "text_sha": "81fd36192f2ce5b18ce089e57ca4e254393473f82bfa59c6f202d4fbb23d3941",
-   "sentence": "The receiver gets 84 characters; everything else it fetches and checks.",
-   "where": "html:p4:mechanism",
-   "evidence": "O.84",
-   "reason": "brief G.3: 'everything else' (O.84)"
-  },
-  {
-   "word": "only",
-   "text_sha": "fe8b9498ed43e480e7ad692085ce9472a065c9e294081af77c65f1de9360e8ed",
-   "sentence": "Binding stops cell, time and band swaps; the signature, re-hashed forgeries; the log, a version shown only to B; recomputing, the signer's arithmetic; only the source re-read, the signer's wrong pixel.",
-   "where": "html:p5:caption",
-   "evidence": "X.only",
-   "reason": "panel 5; leave_one_out I == [M15]; 'shown only to B' is M16's definition (X.loo)"
-  },
-  {
-   "word": "every",
-   "text_sha": "e303ec29148e67fcb5a58a207a675e59daaff7ee9ec06f4a3a93753de6e1a8b9",
-   "sentence": "The entity meant passes every check.",
-   "where": "html:p5:caption",
-   "evidence": "X.entity",
-   "reason": "M17 passes every level of the suite"
-  },
-  {
-   "word": "only",
-   "text_sha": "90ab8355c3cddcd1c4665b9721a38643268b6b2f7ab97b1196ec82fe2114bbfb",
-   "sentence": "Derived representations are addressable too: this cell's Prithvi-EO-2.0 vector names its checkpoint digest inside the hashed record; the TESSERA vector, only a path and year.",
-   "where": "html:p10:body",
-   "evidence": "V.tessera",
-   "reason": "brief G.3: 'only a path and year'"
-  },
-  {
-   "word": "judge",
-   "text_sha": "536ffb23eaf66ec0b6b3dcf6ca52be64359c8b281ab3e7dcb9baa0c31a9fbaef",
-   "sentence": "GeoGuard judges the claim; EMEM fixes the evidence it cites.",
-   "where": "html:p13:body",
-   "evidence": "PA.geoguard_line",
-   "reason": "GeoGuard is a claim-judging system (NASA-IMPACT); 'judge' is about GeoGuard, not EMEM or a satellite"
-  },
-  {
-   "word": "deployment-wording",
-   "text_sha": "14c5e658cadf6bde2618ad0b62ee9f52a17ee801023931fe7099c97c048d95e5",
-   "sentence": "A signed observation reference left the receiver acting on none of the 16 corruptions in our suite; a source re-read exposes a wrong pixel emem signed in production; entity, sensor and decision stay beyond its checks.",
-   "where": "html:conclusion:conclusion",
-   "evidence": "F.pixel",
-   "reason": "'production' is emem.dev's live reader, dated in panel 6 (162 of 200, fixed 28 Sep 2026)"
-  },
-  {
-   "word": "verif-without-layer",
-   "text_sha": "410c2ca56d1f93c9d9c8fe1b9872eace1cd69d6bf8dd4bd3271d5a2964e19718",
-   "sentence": "Extending verification to execution: reference harness, no spacecraft enrolled.",
-   "where": "html:footer:",
-   "evidence": "K.sat042",
-   "reason": "brief G.3: the mandated extension line"
-  },
-  {
-   "word": "true",
-   "text_sha": "27e4892cc2c35b0e016c333a80e7bb1a2aed29a81801e6488ee9072fe06abe67",
-   "sentence": "true colour B04/B03/B02 from signed 10 m grids; linear 1 to 99 % stretch, γ 1/1.35",
-   "where": "fig:f1_scene",
-   "evidence": "H.img.grid",
-   "reason": "'true colour' names the band combination, not a claim about a value"
-  },
-  {
-   "word": "true",
-   "text_sha": "5c1714249dc97b3e6507e6de584ec04e7194d3873dd81790e6af12269c620560",
-   "sentence": "true colour, signed grids",
-   "where": "fig:f2_spine",
-   "evidence": "H.img.grid",
-   "reason": "'true colour' names the band combination"
-  },
-  {
-   "word": "all",
-   "text_sha": "74ae82e0c679c19e6335bb93509ee7229d90c991e6d9fa50e60863a3c67dc04d",
-   "sentence": "receipt, Merkle proof and state chain all valid",
-   "where": "fig:f4_failure_ladder",
-   "evidence": "F.thing",
-   "reason": "brief G.3: 'all valid' (F.thing)"
-  },
-  {
-   "word": "only",
-   "text_sha": "a14ab0faafdeaeaff5f792717f0477154ae31f44a764ea11001bfbf5a2ac48ca",
-   "sentence": "re-read only · L3",
-   "where": "fig:f4_failure_ladder",
-   "evidence": "F.rail.cellmatch",
-   "reason": "brief G.3: the panel 3 rail; 're-read only' is F.pixel"
-  },
-  {
-   "word": "none",
-   "text_sha": "d09d7341d9685332236dab47017bb091898cba7d2a4716ff0a1c345f7230a060",
-   "sentence": "none · L4",
-   "where": "fig:f4_failure_ladder",
-   "evidence": "F.thing",
-   "reason": "the top rung: no check catches the entity (L4)"
-  },
-  {
-   "word": "all",
-   "text_sha": "d4463f6ed8568e5c251f308f2349de83181a7ede1bc505fb8f9af8644660881d",
-   "sentence": "All keys today are one operator's.",
-   "where": "fig:d_threat",
-   "evidence": "T.oneop",
-   "reason": "brief G.3: 'All keys' (T.oneop, independent_operator_count 1)"
-  },
-  {
-   "word": "deployment-wording",
-   "text_sha": "eb6d91304a9b1f821c7e6451e67882aa73a2aac70ede60f86bd58139871891da",
-   "sentence": "seen in production",
-   "where": "fig:f6_mutation_matrix",
-   "evidence": "F.pixel",
-   "reason": "legend: ids seen in emem.dev's live channel (meta.mutations[].real_case)"
-  },
-  {
-   "word": "only",
-   "text_sha": "5dce44b80f0f5dd3983f40bfc56158a63f9a85baff591ece51a6fede68c42375",
-   "sentence": "the only check that stops it",
-   "where": "fig:f6_mutation_matrix",
-   "evidence": "X.only",
-   "reason": "brief G.3: 'the only check that stops it' and 'shown only to B'"
-  },
-  {
-   "word": "first",
-   "text_sha": "a26061e9b266ed4ceace0c2d05e756e96e598e88e16de18a759c11e23fd41546",
-   "sentence": "first check",
-   "where": "fig:f6_mutation_matrix",
-   "evidence": "X.loo",
-   "reason": "brief G.3: 'first check that refuses' is not a novelty claim"
-  },
-  {
-   "word": "never",
-   "text_sha": "8f71f7a8cd80425b70e3b4f75d5f604e4e2c6fac3705f0fbce1e5fc1d640d45f",
-   "sentence": "nothing altered: accepted everywhere, never refused",
-   "where": "fig:f6_mutation_matrix",
-   "evidence": "S.R1.I",
-   "reason": "brief G.3: control row, genuine_refused false"
-  },
-  {
-   "word": "only",
-   "text_sha": "db6fdeaf66a17525fb889509a04f84fd711369479da523500543459880637d43",
-   "sentence": "a second signed version shown only to B",
-   "where": "fig:f6_mutation_matrix",
-   "evidence": "X.only",
-   "reason": "brief G.3: 'the only check that stops it' and 'shown only to B'"
-  },
-  {
-   "word": "none",
-   "text_sha": "8ac49f51d020905227c0bc6d040a035396ec518dbda59d6bb53df3f718fb9f35",
-   "sentence": "none",
-   "where": "fig:f6_mutation_matrix",
-   "evidence": "X.entity",
-   "reason": "M17: no level refuses it"
-  },
-  {
-   "word": "true",
-   "text_sha": "c16bee2c49f65e55ab5f037b681be5769f6e1174818708d044e22909138ed8bb",
-   "sentence": "true colour B04/B03/B02, signed 10 m grids,",
-   "where": "fig:f7_wrong_pixel",
-   "evidence": "H.img.grid",
-   "reason": "'true colour' names the band combination"
-  },
-  {
-   "word": "every",
-   "text_sha": "e10e7fe63111840b112ebeb9aa2defaa47673a922dad5be78b181557c1e106bf",
-   "sentence": "M17 passes every check; “this image”",
-   "where": "fig:f8_ladder",
-   "evidence": "X.entity",
-   "reason": "brief G.3: 'passes every check'"
-  },
-  {
-   "word": "truth",
-   "text_sha": "98f1034404602165876cdabfe902b60f419bae34b41f1bcabbf89680e35823d7",
-   "sentence": "physical truth, decision",
-   "where": "fig:f8_ladder",
-   "evidence": "L.status",
-   "reason": "brief G.3: 'truth' only as the L5 layer name (v13.2 compact ladder: name and status on one plate)"
-  },
-  {
-   "word": "first",
-   "text_sha": "e7e6041a99dae2b80bb01d7bc6b7c47065ff11401d29962dfd6a63570d39699a",
-   "sentence": "915.07 m · first signed 11 Aug · 30 m DEM · signed 7 times",
-   "where": "fig:f9_timeline",
-   "evidence": "TM.915",
-   "reason": "brief G.3: 'first signed 11 Aug'"
-  },
-  {
-   "word": "none",
-   "text_sha": "4e227cd1a2582bd24389a2fe2d8056fc89f373a9a0f7ceaae4163e6d4d135690",
-   "sentence": "1 May: none",
-   "where": "fig:f9_timeline",
-   "evidence": "TM.asof",
-   "reason": "as-of 1 May returns no record"
-  },
-  {
-   "word": "every",
-   "text_sha": "0cf8cea5827d41eefd2a7f31d36aa04c8c7a2a905a609d58139a58cb8e2dd4de",
-   "sentence": "one address, one value on every path",
-   "where": "fig:f11_ecosystem",
-   "evidence": "EC.11",
-   "reason": "brief G.3: 'every path'"
-  },
-  {
-   "word": "independent",
-   "text_sha": "4bf246b6b67a0a13e47e9147c7ce596a93c40d82ebc09518ffbdb297176a488d",
-   "sentence": "independent BLAKE3 + CBOR reader",
-   "where": "fig:f11_ecosystem",
-   "evidence": "EC.ms",
-   "reason": "an independent reader implementation (BLAKE3 + CBOR, not emem's code); not an independent operator"
-  },
-  {
-   "word": "judge",
-   "text_sha": "85019f80e6328962a552fc51399573dac02922f9927487716459c3886b68ba5d",
-   "sentence": "JUDGE",
-   "where": "fig:f12_prior_art",
-   "evidence": "PA.geoguard",
-   "reason": "the JUDGE lane is GeoGuard's role"
-  },
-  {
-   "word": "only",
-   "text_sha": "240779e230a1ca90ee08bebda0bb76dc79a9e5b0507c31b69715282817b56a53",
-   "sentence": "With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3B dropped the cell from all 24 calls and acted 5 of 5: a reference protects only a receiver that keeps it whole and obeys a refusal.",
-   "where": "html:p1:take",
-   "evidence": "S.G2.boundary",
-   "reason": "brief G.3: 'only' in the spine strip; the reference protects a receiver that keeps it whole (Haiku declined 5 of 5, Qwen dropped the cell from all 24 tool calls)"
-  },
-  {
-   "word": "never",
-   "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
-   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
-   "where": "html:p3:scope",
-   "evidence": "F.rail.cellmatch",
-   "reason": "brief G.3: 'never tested' (F.rail.cellmatch); the F4 side rail sentence, set horizontally under the panel 3 caption (review fix 18)"
-  },
-  {
-   "word": "only",
-   "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
-   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
-   "where": "html:p3:scope",
-   "evidence": "F.rail.cellmatch",
-   "reason": "brief G.3: the panel 3 rail sentence (F.rail.cellmatch, F.rail.langchain); 'protects only if it runs'"
-  },
-  {
-   "word": "verif-without-layer",
-   "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
-   "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
-   "where": "html:p3:scope",
-   "evidence": "F.rail.mast",
-   "reason": "brief G.3: 'verification' in the MAST quote (FM-3.2)"
-  },
-  {
-   "word": "cannot",
-   "text_sha": "505a0a39f58767307ac8a32b8d9b8bdc8130538abf3cf2417f586b5db9a4874a",
-   "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read.",
-   "where": "html:threat:body",
-   "evidence": "T.can",
-   "reason": "threat model: Ed25519 under the pinned key and BLAKE3 addresses (RFC 8032; BLAKE3 128-bit); 'match an address' (a relay can mint a valid address for forged bytes, M8 to M12 pass D and stop at F)"
-  },
-  {
-   "word": "only",
-   "text_sha": "505a0a39f58767307ac8a32b8d9b8bdc8130538abf3cf2417f586b5db9a4874a",
-   "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read.",
-   "where": "html:threat:body",
-   "evidence": "X.only",
-   "reason": "threat model; leave_one_out names I alone for M15"
-  },
-  {
-   "word": "only",
-   "text_sha": "fb2dce47fd57fc502c65b2dd94913a87ebde2dea214da5d56471677cd9bd73d6",
-   "sentence": "A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel.",
-   "where": "html:p11:body",
-   "evidence": "X.only",
-   "reason": "brief G.3: panel 11; the re-read is the one check that refuses M15"
-  },
-  {
-   "word": "all",
-   "text_sha": "6d422dd7f3b88de6aeb4f946fc23ee600a460b003728d90c69ff89e509de015a",
-   "sentence": "all offline checks 0.33 ms",
-   "where": "fig:f10_cost",
-   "evidence": "C.cpu",
-   "reason": "brief G.3: 'all offline checks' (level I per decision less the handoff construction, review fix 20)"
-  },
-  {
-   "word": "proof",
-   "text_sha": "61679cc28b41ca3fecec084ef55b5042bd5f518d86599d4529b2d82ca95c4838",
-   "sentence": "offline proof bundle 0.57 ms (4,906 B)",
-   "where": "fig:f10_cost",
-   "evidence": "C.bundle",
-   "reason": "'proof bundle' names the committed artefact research/repro/v8/proof_bundle_ndvi.cbor (cost_measurements.json m2.bundle), not a claim about a value"
-  },
-  {
-   "word": "every",
-   "text_sha": "49437bfbc26b4b779d30fa35c11d10f573ddb1641a9d2f845a0bafc955ff48e9",
-   "sentence": "One address, every product",
-   "where": "html:p9:headline",
-   "evidence": "BE.stack",
-   "reason": "v12.1 panel title kept verbatim (v13.1); 'every product' is bounded by the row: the 15 products of the figure's stack, 16 signed facts, 4 absences"
-  },
-  {
-   "word": "true",
-   "text_sha": "88dad1b42c5a86f3880ce324afeb2697ff100e69f24097d2a4a2bc8094c4bdc0",
-   "sentence": "true colour,",
-   "where": "fig:f13_one_address",
-   "evidence": "A13.chip",
-   "reason": "'true colour' is the composite's name (B04/B03/B02), as in the header strip (H.img.grid); F13 chip caption"
-  },
-  {
-   "word": "verif-without-layer",
-   "text_sha": "d31508a766fc72a895660f86d47bacc8e72a094d155e3a0763ebda7ed15dbba6",
-   "sentence": "11Extending verification from observations to execution",
-   "where": "html:p11:kicker",
-   "evidence": "K.sat042",
-   "reason": "brief G.3 / section C panel 11 (v13.2): the kicker of the SAT-042 strip; the panel number is read as part of the line"
-  },
-  {
-   "word": "prove",
-   "text_sha": "fdd714536c4d1eca044bcf354c48f9f1d64a7aef4cf68a8f35749e061249a3c3",
-   "sentence": "How a satellite could prove what it ran",
-   "where": "html:p11:headline",
-   "evidence": "SAT.run",
-   "reason": "the v12.1 title kept verbatim; 'could prove' is conditional: no spacecraft is enrolled (SAT.run)"
-  },
-  {
-   "word": "only",
-   "text_sha": "0de856af86626aa678169972ae23a40db0d84c058d169a52784d6d5ee7852d71",
-   "sentence": "Reference harness, no spacecraft enrolled; the gate binds the value digest only.",
-   "where": "html:p11:scope",
-   "evidence": "SAT.gate",
-   "reason": "the os_trace gate checks each fact's payload digest against the trace's emitted outputs, not band, cell or tslot (SAT.gate)"
-  }
- ]
+  "schema": "banned-word allowlist for the v13 board (research/v13/10_ladder_threat_invention.md section 5.3)",
+  "rule": "an entry is bound to one sentence by BLAKE3 of the normalised text (NFC, lower case, single spaces); editing the sentence voids it; evidence is a claims-map row",
+  "entries": [
+    {
+      "word": "impossible",
+      "text_sha": "fe08bf0a817c8a769ab40e09f3f9bc5ab2f4fe048b6ec165497c269288cfaf09",
+      "sentence": "Six cross the irrigation line, one is impossible, one is right; each wrong value needs a different check.",
+      "where": "html:p2:caption",
+      "evidence": "E8.double",
+      "reason": "1.1427 is NDVI above 1, outside the index's range: the offset applied twice"
+    },
+    {
+      "word": "none",
+      "text_sha": "f79c33b9faa8157fb14955d9101831806adc2dea5cd3370d9c83393b606dfb2e",
+      "sentence": "Signatures prevented none; the record made each checkable at a named layer, except the top row.",
+      "where": "html:p3:caption",
+      "evidence": "F.caption",
+      "reason": "brief G.3: 'none' in panel 3 (signatures prevented none of the eight)"
+    },
+    {
+      "word": "only",
+      "text_sha": "abca9457ac3fc57ebe97059c743957c45997960b3beaa2e8971fbe60de80cd94",
+      "sentence": "H2 Only a source re-read catches a signer's wrong pixel.",
+      "where": "html:questions:hypothesis",
+      "evidence": "X.only",
+      "reason": "H2; leave_one_out names I alone for M15"
+    },
+    {
+      "word": "every",
+      "text_sha": "81fd36192f2ce5b18ce089e57ca4e254393473f82bfa59c6f202d4fbb23d3941",
+      "sentence": "The receiver gets 84 characters; everything else it fetches and checks.",
+      "where": "html:p4:mechanism",
+      "evidence": "O.84",
+      "reason": "brief G.3: 'everything else' (O.84)"
+    },
+    {
+      "word": "only",
+      "text_sha": "fe8b9498ed43e480e7ad692085ce9472a065c9e294081af77c65f1de9360e8ed",
+      "sentence": "Binding stops cell, time and band swaps; the signature, re-hashed forgeries; the log, a version shown only to B; recomputing, the signer's arithmetic; only the source re-read, the signer's wrong pixel.",
+      "where": "html:p5:caption",
+      "evidence": "X.only",
+      "reason": "panel 5; leave_one_out I == [M15]; 'shown only to B' is M16's definition (X.loo)"
+    },
+    {
+      "word": "every",
+      "text_sha": "e303ec29148e67fcb5a58a207a675e59daaff7ee9ec06f4a3a93753de6e1a8b9",
+      "sentence": "The entity meant passes every check.",
+      "where": "html:p5:caption",
+      "evidence": "X.entity",
+      "reason": "M17 passes every level of the suite"
+    },
+    {
+      "word": "only",
+      "text_sha": "90ab8355c3cddcd1c4665b9721a38643268b6b2f7ab97b1196ec82fe2114bbfb",
+      "sentence": "Derived representations are addressable too: this cell's Prithvi-EO-2.0 vector names its checkpoint digest inside the hashed record; the TESSERA vector, only a path and year.",
+      "where": "html:p10:body",
+      "evidence": "V.tessera",
+      "reason": "brief G.3: 'only a path and year'"
+    },
+    {
+      "word": "judge",
+      "text_sha": "536ffb23eaf66ec0b6b3dcf6ca52be64359c8b281ab3e7dcb9baa0c31a9fbaef",
+      "sentence": "GeoGuard judges the claim; EMEM fixes the evidence it cites.",
+      "where": "html:p13:body",
+      "evidence": "PA.geoguard_line",
+      "reason": "GeoGuard is a claim-judging system (NASA-IMPACT); 'judge' is about GeoGuard, not EMEM or a satellite"
+    },
+    {
+      "word": "deployment-wording",
+      "text_sha": "14c5e658cadf6bde2618ad0b62ee9f52a17ee801023931fe7099c97c048d95e5",
+      "sentence": "A signed observation reference left the receiver acting on none of the 16 corruptions in our suite; a source re-read exposes a wrong pixel emem signed in production; entity, sensor and decision stay beyond its checks.",
+      "where": "html:conclusion:conclusion",
+      "evidence": "F.pixel",
+      "reason": "'production' is emem.dev's live reader, dated in panel 6 (162 of 200, fixed 28 Sep 2026)"
+    },
+    {
+      "word": "verif-without-layer",
+      "text_sha": "410c2ca56d1f93c9d9c8fe1b9872eace1cd69d6bf8dd4bd3271d5a2964e19718",
+      "sentence": "Extending verification to execution: reference harness, no spacecraft enrolled.",
+      "where": "html:footer:",
+      "evidence": "K.sat042",
+      "reason": "brief G.3: the mandated extension line"
+    },
+    {
+      "word": "true",
+      "text_sha": "27e4892cc2c35b0e016c333a80e7bb1a2aed29a81801e6488ee9072fe06abe67",
+      "sentence": "true colour B04/B03/B02 from signed 10 m grids; linear 1 to 99 % stretch, \u03b3 1/1.35",
+      "where": "fig:f1_scene",
+      "evidence": "H.img.grid",
+      "reason": "'true colour' names the band combination, not a claim about a value"
+    },
+    {
+      "word": "true",
+      "text_sha": "5c1714249dc97b3e6507e6de584ec04e7194d3873dd81790e6af12269c620560",
+      "sentence": "true colour, signed grids",
+      "where": "fig:f2_spine",
+      "evidence": "H.img.grid",
+      "reason": "'true colour' names the band combination"
+    },
+    {
+      "word": "all",
+      "text_sha": "74ae82e0c679c19e6335bb93509ee7229d90c991e6d9fa50e60863a3c67dc04d",
+      "sentence": "receipt, Merkle proof and state chain all valid",
+      "where": "fig:f4_failure_ladder",
+      "evidence": "F.thing",
+      "reason": "brief G.3: 'all valid' (F.thing)"
+    },
+    {
+      "word": "only",
+      "text_sha": "a14ab0faafdeaeaff5f792717f0477154ae31f44a764ea11001bfbf5a2ac48ca",
+      "sentence": "re-read only \u00b7 L3",
+      "where": "fig:f4_failure_ladder",
+      "evidence": "F.rail.cellmatch",
+      "reason": "brief G.3: the panel 3 rail; 're-read only' is F.pixel"
+    },
+    {
+      "word": "none",
+      "text_sha": "d09d7341d9685332236dab47017bb091898cba7d2a4716ff0a1c345f7230a060",
+      "sentence": "none \u00b7 L4",
+      "where": "fig:f4_failure_ladder",
+      "evidence": "F.thing",
+      "reason": "the top rung: no check catches the entity (L4)"
+    },
+    {
+      "word": "all",
+      "text_sha": "d4463f6ed8568e5c251f308f2349de83181a7ede1bc505fb8f9af8644660881d",
+      "sentence": "All keys today are one operator's.",
+      "where": "fig:d_threat",
+      "evidence": "T.oneop",
+      "reason": "brief G.3: 'All keys' (T.oneop, independent_operator_count 1)"
+    },
+    {
+      "word": "deployment-wording",
+      "text_sha": "eb6d91304a9b1f821c7e6451e67882aa73a2aac70ede60f86bd58139871891da",
+      "sentence": "seen in production",
+      "where": "fig:f6_mutation_matrix",
+      "evidence": "F.pixel",
+      "reason": "legend: ids seen in emem.dev's live channel (meta.mutations[].real_case)"
+    },
+    {
+      "word": "only",
+      "text_sha": "5dce44b80f0f5dd3983f40bfc56158a63f9a85baff591ece51a6fede68c42375",
+      "sentence": "the only check that stops it",
+      "where": "fig:f6_mutation_matrix",
+      "evidence": "X.only",
+      "reason": "brief G.3: 'the only check that stops it' and 'shown only to B'"
+    },
+    {
+      "word": "first",
+      "text_sha": "a26061e9b266ed4ceace0c2d05e756e96e598e88e16de18a759c11e23fd41546",
+      "sentence": "first check",
+      "where": "fig:f6_mutation_matrix",
+      "evidence": "X.loo",
+      "reason": "brief G.3: 'first check that refuses' is not a novelty claim"
+    },
+    {
+      "word": "never",
+      "text_sha": "8f71f7a8cd80425b70e3b4f75d5f604e4e2c6fac3705f0fbce1e5fc1d640d45f",
+      "sentence": "nothing altered: accepted everywhere, never refused",
+      "where": "fig:f6_mutation_matrix",
+      "evidence": "S.R1.I",
+      "reason": "brief G.3: control row, genuine_refused false"
+    },
+    {
+      "word": "only",
+      "text_sha": "db6fdeaf66a17525fb889509a04f84fd711369479da523500543459880637d43",
+      "sentence": "a second signed version shown only to B",
+      "where": "fig:f6_mutation_matrix",
+      "evidence": "X.only",
+      "reason": "brief G.3: 'the only check that stops it' and 'shown only to B'"
+    },
+    {
+      "word": "none",
+      "text_sha": "8ac49f51d020905227c0bc6d040a035396ec518dbda59d6bb53df3f718fb9f35",
+      "sentence": "none",
+      "where": "fig:f6_mutation_matrix",
+      "evidence": "X.entity",
+      "reason": "M17: no level refuses it"
+    },
+    {
+      "word": "true",
+      "text_sha": "c16bee2c49f65e55ab5f037b681be5769f6e1174818708d044e22909138ed8bb",
+      "sentence": "true colour B04/B03/B02, signed 10 m grids,",
+      "where": "fig:f7_wrong_pixel",
+      "evidence": "H.img.grid",
+      "reason": "'true colour' names the band combination"
+    },
+    {
+      "word": "every",
+      "text_sha": "e10e7fe63111840b112ebeb9aa2defaa47673a922dad5be78b181557c1e106bf",
+      "sentence": "M17 passes every check; \u201cthis image\u201d",
+      "where": "fig:f8_ladder",
+      "evidence": "X.entity",
+      "reason": "brief G.3: 'passes every check'"
+    },
+    {
+      "word": "truth",
+      "text_sha": "98f1034404602165876cdabfe902b60f419bae34b41f1bcabbf89680e35823d7",
+      "sentence": "physical truth, decision",
+      "where": "fig:f8_ladder",
+      "evidence": "L.status",
+      "reason": "brief G.3: 'truth' only as the L5 layer name (v13.2 compact ladder: name and status on one plate)"
+    },
+    {
+      "word": "first",
+      "text_sha": "e7e6041a99dae2b80bb01d7bc6b7c47065ff11401d29962dfd6a63570d39699a",
+      "sentence": "915.07 m \u00b7 first signed 11 Aug \u00b7 30 m DEM \u00b7 signed 7 times",
+      "where": "fig:f9_timeline",
+      "evidence": "TM.915",
+      "reason": "brief G.3: 'first signed 11 Aug'"
+    },
+    {
+      "word": "none",
+      "text_sha": "4e227cd1a2582bd24389a2fe2d8056fc89f373a9a0f7ceaae4163e6d4d135690",
+      "sentence": "1 May: none",
+      "where": "fig:f9_timeline",
+      "evidence": "TM.asof",
+      "reason": "as-of 1 May returns no record"
+    },
+    {
+      "word": "every",
+      "text_sha": "0cf8cea5827d41eefd2a7f31d36aa04c8c7a2a905a609d58139a58cb8e2dd4de",
+      "sentence": "one address, one value on every path",
+      "where": "fig:f11_ecosystem",
+      "evidence": "EC.11",
+      "reason": "brief G.3: 'every path'"
+    },
+    {
+      "word": "independent",
+      "text_sha": "4bf246b6b67a0a13e47e9147c7ce596a93c40d82ebc09518ffbdb297176a488d",
+      "sentence": "independent BLAKE3 + CBOR reader",
+      "where": "fig:f11_ecosystem",
+      "evidence": "EC.ms",
+      "reason": "an independent reader implementation (BLAKE3 + CBOR, not emem's code); not an independent operator"
+    },
+    {
+      "word": "judge",
+      "text_sha": "85019f80e6328962a552fc51399573dac02922f9927487716459c3886b68ba5d",
+      "sentence": "JUDGE",
+      "where": "fig:f12_prior_art",
+      "evidence": "PA.geoguard",
+      "reason": "the JUDGE lane is GeoGuard's role"
+    },
+    {
+      "word": "only",
+      "text_sha": "240779e230a1ca90ee08bebda0bb76dc79a9e5b0507c31b69715282817b56a53",
+      "sentence": "With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3B dropped the cell from all 24 calls and acted 5 of 5: a reference protects only a receiver that keeps it whole and obeys a refusal.",
+      "where": "html:p1:take",
+      "evidence": "S.G2.boundary",
+      "reason": "brief G.3: 'only' in the spine strip; the reference protects a receiver that keeps it whole (Haiku declined 5 of 5, Qwen dropped the cell from all 24 tool calls)"
+    },
+    {
+      "word": "never",
+      "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
+      "sentence": "A check protects only if it runs: emem\u2019s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+      "where": "html:p3:scope",
+      "evidence": "F.rail.cellmatch",
+      "reason": "brief G.3: 'never tested' (F.rail.cellmatch); the F4 side rail sentence, set horizontally under the panel 3 caption (review fix 18)"
+    },
+    {
+      "word": "only",
+      "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
+      "sentence": "A check protects only if it runs: emem\u2019s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+      "where": "html:p3:scope",
+      "evidence": "F.rail.cellmatch",
+      "reason": "brief G.3: the panel 3 rail sentence (F.rail.cellmatch, F.rail.langchain); 'protects only if it runs'"
+    },
+    {
+      "word": "verif-without-layer",
+      "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
+      "sentence": "A check protects only if it runs: emem\u2019s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+      "where": "html:p3:scope",
+      "evidence": "F.rail.mast",
+      "reason": "brief G.3: 'verification' in the MAST quote (FM-3.2)"
+    },
+    {
+      "word": "cannot",
+      "text_sha": "505a0a39f58767307ac8a32b8d9b8bdc8130538abf3cf2417f586b5db9a4874a",
+      "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read.",
+      "where": "html:threat:body",
+      "evidence": "T.can",
+      "reason": "threat model: Ed25519 under the pinned key and BLAKE3 addresses (RFC 8032; BLAKE3 128-bit); 'match an address' (a relay can mint a valid address for forged bytes, M8 to M12 pass D and stop at F)"
+    },
+    {
+      "word": "only",
+      "text_sha": "505a0a39f58767307ac8a32b8d9b8bdc8130538abf3cf2417f586b5db9a4874a",
+      "sentence": "A relay can rewrite what it carries but cannot sign under the pinned key or match an address; a signer's misread pixel is caught only by a re-read.",
+      "where": "html:threat:body",
+      "evidence": "X.only",
+      "reason": "threat model; leave_one_out names I alone for M15"
+    },
+    {
+      "word": "only",
+      "text_sha": "fb2dce47fd57fc502c65b2dd94913a87ebde2dea214da5d56471677cd9bd73d6",
+      "sentence": "A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel.",
+      "where": "html:p11:body",
+      "evidence": "X.only",
+      "reason": "brief G.3: panel 11; the re-read is the one check that refuses M15"
+    },
+    {
+      "word": "all",
+      "text_sha": "6d422dd7f3b88de6aeb4f946fc23ee600a460b003728d90c69ff89e509de015a",
+      "sentence": "all offline checks 0.33 ms",
+      "where": "fig:f10_cost",
+      "evidence": "C.cpu",
+      "reason": "brief G.3: 'all offline checks' (level I per decision less the handoff construction, review fix 20)"
+    },
+    {
+      "word": "proof",
+      "text_sha": "61679cc28b41ca3fecec084ef55b5042bd5f518d86599d4529b2d82ca95c4838",
+      "sentence": "offline proof bundle 0.57 ms (4,906 B)",
+      "where": "fig:f10_cost",
+      "evidence": "C.bundle",
+      "reason": "'proof bundle' names the committed artefact research/repro/v8/proof_bundle_ndvi.cbor (cost_measurements.json m2.bundle), not a claim about a value"
+    },
+    {
+      "word": "every",
+      "text_sha": "49437bfbc26b4b779d30fa35c11d10f573ddb1641a9d2f845a0bafc955ff48e9",
+      "sentence": "One address, every product",
+      "where": "html:p9:headline",
+      "evidence": "BE.stack",
+      "reason": "v12.1 panel title kept verbatim (v13.1); 'every product' is bounded by the row: the 15 products of the figure's stack, 16 signed facts, 4 absences"
+    },
+    {
+      "word": "true",
+      "text_sha": "88dad1b42c5a86f3880ce324afeb2697ff100e69f24097d2a4a2bc8094c4bdc0",
+      "sentence": "true colour,",
+      "where": "fig:f13_one_address",
+      "evidence": "A13.chip",
+      "reason": "'true colour' is the composite's name (B04/B03/B02), as in the header strip (H.img.grid); F13 chip caption"
+    },
+    {
+      "word": "verif-without-layer",
+      "text_sha": "d31508a766fc72a895660f86d47bacc8e72a094d155e3a0763ebda7ed15dbba6",
+      "sentence": "11Extending verification from observations to execution",
+      "where": "html:p11:kicker",
+      "evidence": "K.sat042",
+      "reason": "brief G.3 / section C panel 11 (v13.2): the kicker of the SAT-042 strip; the panel number is read as part of the line"
+    },
+    {
+      "word": "prove",
+      "text_sha": "fdd714536c4d1eca044bcf354c48f9f1d64a7aef4cf68a8f35749e061249a3c3",
+      "sentence": "How a satellite could prove what it ran",
+      "where": "html:p11:headline",
+      "evidence": "SAT.run",
+      "reason": "the v12.1 title kept verbatim; 'could prove' is conditional: no spacecraft is enrolled (SAT.run)"
+    },
+    {
+      "word": "only",
+      "text_sha": "0de856af86626aa678169972ae23a40db0d84c058d169a52784d6d5ee7852d71",
+      "sentence": "Reference harness, no spacecraft enrolled; the gate binds the value digest only.",
+      "where": "html:p11:scope",
+      "evidence": "SAT.gate",
+      "reason": "the os_trace gate checks each fact's payload digest against the trace's emitted outputs, not band, cell or tslot (SAT.gate)"
+    },
+    {
+      "word": "truth",
+      "text_sha": "a18b5a34fc8c6a1456aa25eb27c32bd783d793781f84ec1a4f3e67dc4582c551",
+      "sentence": "Physical truth",
+      "evidence": "V6.limits",
+      "reason": "Explicit NOT ESTABLISHED column of the record guarantee boundary."
+    }
+  ]
 }

@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src https://emem.dev https://planetarycomputer.microsoft.com https://sentinel2l2a01.blob.core.windows.net; base-uri 'none'; form-action 'none'">
 <link rel="stylesheet" href="../assets/site.css">
 <title>EMEM receiver demo</title>
-<meta name="description" content="Agent B checks one Sentinel-2 observation handed over by Agent A: a paraphrase is accepted unchecked, three corruptions are refused, the genuine record is accepted, and the source pixel is re-read.">
+<meta name="description" content="Agent B checks one Sentinel-2 observation handed over by Agent A: a paraphrase is accepted unchecked, three corruptions are refused, the genuine record is accepted, with an optional source pixel re-read.">
 <style>
 .obs{display:grid;grid-template-columns:132px 1fr;gap:12px;align-items:start;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:10px;margin:12px 0}
 .obs figure{margin:0;position:relative;width:132px;height:132px}
@@ -48,6 +48,10 @@ details{margin:8px 0;font-size:14px}summary{cursor:pointer;color:var(--ink2)}
 pre{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:8px;max-height:260px;overflow:auto;white-space:pre-wrap}
 footer li{margin:4px 0}
 #done{font:12px var(--mono);color:var(--mute)}
+#tour{padding:16px;border:2px solid var(--blue);border-radius:10px;background:var(--card);margin:18px 0}
+#tour h2{margin-top:0}#tour-output{min-height:130px;font:14px/1.45 var(--mono);overflow-wrap:anywhere;white-space:pre-wrap}
+#tour-progress{width:100%;height:10px}#tour button{font:inherit;padding:8px 12px;cursor:pointer}
+#tour-log{padding-left:24px}#tour-log li{margin:12px 0;overflow-wrap:anywhere;white-space:pre-wrap}
 @media (min-width:640px){h1{font-size:38px}#board{grid-template-columns:repeat(6,1fr)}}
 @media (prefers-reduced-motion:reduce){.card{transition:none}}
 </style>
@@ -56,7 +60,17 @@ footer li{margin:4px 0}
 <main>
 <nav class="top" aria-label="site"><a href="../">EMEM poster</a><span>·</span><span>view the demo</span></nav>
 <h1>Change one field. The receiver refuses.</h1>
-<p class="lead">This page is <b>Agent B</b>. Agent A hands it evidence about one 10 m cell near Keylong, India. The page trusts nothing it is handed. It re-hashes the record, checks the attestation signature and the public log, recomputes the value, and re-reads the source pixel. It uses BLAKE3, Ed25519 and CBOR, and no emem code. It writes nothing anywhere.</p>
+<p class="lead">Your browser is the receiver. Watch a real observation become a reference, a changed value get refused, and the genuine record pass its checks. No account or API key.</p>
+<section id="tour" aria-label="12-second evidence handoff">
+ <h2>One observation. Two outcomes.</h2>
+ <p id="tour-step" role="status" aria-live="polite">Preparing the saved record</p>
+ <p id="tour-output"></p><progress id="tour-progress" max="6" value="0" aria-label="Demonstration progress"></progress>
+ <p><button id="tour-replay" type="button">Replay 12-second demo</button></p>
+ <p class="legend" id="tour-time">Runs locally from the saved record and proofs.</p>
+ <details><summary>Exact steps and outputs</summary><ol id="tour-log"></ol></details>
+ <p><a href="./transcript.txt">Read the text version</a> · <a href="?live#l3">Also try a live source re-read</a></p>
+</section>
+<p>This scripted receiver re-hashes the record, checks its attestation and log proofs, binds its declared identity and recomputes its value. It uses BLAKE3, Ed25519 and CBOR, and no emem code. The following cases expose the exact evidence and each check.</p>
 
 <div class="obs" aria-label="the observation">
  <figure><img alt="Sentinel-2 true colour, 1.92 km across, centred on the cell; the ring marks the 10 m cell and is about 200 m wide" src="{{IMG}}"></figure>
@@ -81,7 +95,7 @@ footer li{margin:4px 0}
 
 <h2>L3 · Re-read the named pixel</h2>
 <section id="l3" class="card wait">
- <p class="sub">The record names its source files and its pixel. It carries no hash of those files, so L3 is a re-read, not a hash check. The browser fetches the two 512 × 512 tiles from Planetary Computer and decodes them itself.</p>
+ <p class="sub">The record names its source files and its pixel. It carries no hash of those files. The default demonstration shows the saved source window. Choose the live source option to fetch the two 512 × 512 tiles from Planetary Computer and decode them here.</p>
  <ol class="steps" id="l3steps"><li class="na"><i>·</i><span class="ly">L3</span><span>waiting</span></li></ol>
  <div id="grid" aria-label="NDVI of the 5 by 5 pixels around the cell"></div>
  <p class="legend"><span id="gridfrom"></span>. Solid blue: the pixel the record names. Dashed red: the pixel 10 m south, NDVI <b id="south">{{SOUTH}}</b>.</p>
@@ -105,7 +119,7 @@ footer li{margin:4px 0}
 <li>Text version of this run: <a href="./transcript.txt">transcript.txt</a> (written by the same receiver code at build time).</li>
 <li>Paste any token: <a href="../t/">TRY A TOKEN</a>. Every field of this record: <a href="../r/">INSPECT THE RECORD</a>. The 16-mutation suite: <a href="../test/">RE-RUN THE TEST</a>.</li>
 <li>Embedded data: proof bundle {{BUNDLE_LEN}} B, sha256 <code>{{BUNDLE_SHA}}</code> (<code>research/repro/v8/proof_bundle_ndvi.cbor</code>); image from the committed grids <code>research/repro/data/keylong_B0{2,3,4}.bin</code>.</li>
-<li>Pinned key <code>777er3yi…</code> (emem.dev, published in DNS, did.json and jwks.json). Crypto: @noble/hashes 1.5.0, @noble/curves 1.6.0. Live calls, all GET: emem.dev/v1/facts twice, the Planetary Computer token API, and four byte-range reads. No POST, no sign-in. With <code>?offline</code> the page uses its inline data only.</li>
+<li>Pinned key <code>777er3yi…</code> (emem.dev, published in DNS, did.json and jwks.json). Crypto: @noble/hashes 1.5.0, @noble/curves 1.6.0. The default page needs no network after loading. With <code>?live</code>, optional GET calls read emem.dev/v1/facts, the Planetary Computer token API, and source byte ranges. No POST, no sign-in.</li>
 <li>This is a scripted harness written by the authors. The receiver is code, not a language model. The mutations are authored and named as in R1. The record, its signature, its log proofs and the source pixels are real. Tested on Chromium; Safari needs version 16.4 or later.</li>
 </ul>
 <p>Jaya Kumari, Avijeet Singh · Vortx AI · Agentic AI for Earth Observation, Berlin, 19 Oct 2026 · <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">source of this page</a></p>
