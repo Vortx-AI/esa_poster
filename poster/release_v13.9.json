@@ -1,0 +1,105 @@
+{
+  "release": "v13.9",
+  "date": "2026-10-02",
+  "base_commit": "5d3de8aa9cf41899635d7c0851b6d4317697cbc1",
+  "research_review": "research/v13/24_WORKFLOW_AND_COMPACT_COMMUNITY.md",
+  "artifacts": {
+    "poster/emem-poster-A0.pdf": {
+      "bytes": 2001658,
+      "sha256": "a6e77d456ccbb44b3bc08d99c12e6c006db76535faf70d39e46cbc04762ce981"
+    },
+    "poster/emem-poster-preview.png": {
+      "bytes": 3992464,
+      "sha256": "f2617df8498df2db4c255eb5f4af50b38873e89c91fd99edc595bb97afade885"
+    },
+    "poster/emem-poster-A0-300dpi.png": {
+      "bytes": 11594170,
+      "sha256": "ee9d7e8beeedb5f7d0aefe06a4f4c27b83b5406020812bad5e346d0795bf4487"
+    },
+    "poster/poster.html": {
+      "bytes": 2868851,
+      "sha256": "dd6118ad1d3277c236da3db45f19056966084ff37d03d112b01d26cdb9265efe"
+    },
+    "poster/build_v13_report.json": {
+      "bytes": 32296,
+      "sha256": "693bf4bb0f3d8f16ed61a5c6c0cfa250cc117a0bb65c2163392bc02b48cc7454"
+    },
+    "poster/src/poster.v13.html": {
+      "bytes": 18011,
+      "sha256": "869faa2d33a44af74f5441acf816ca825629308279411109d6b5b46eb3f576bb"
+    },
+    "poster/src/poster.v13.css": {
+      "bytes": 11778,
+      "sha256": "b8b4e696fd0516b47df3156234862fc9d8be62adcfd75935b8dacec207c2342f"
+    },
+    "poster/fig/v13/f18_workflow.svg": {
+      "bytes": 10707,
+      "sha256": "b679499395ebf7e590a00a77704ea7a5e4c0a4d3130e3045652fc2557091b931"
+    },
+    "poster/fig/v13/f11_ecosystem.svg": {
+      "bytes": 10725,
+      "sha256": "e3214be527cf648f6ba301069f14b1e0cca0e1f7ce12c1bddcc7d4fdcf9bb18b"
+    },
+    "research/v13/evidence/v139/layout_review.json": {
+      "bytes": 3854,
+      "sha256": "b94f4f5c28b4b0b64826418f5cdb80f6a98fcba5ade8a8492476d84d47d8d0f4"
+    },
+    "research/v13/evidence/v139/gate_tests.txt": {
+      "bytes": 1307,
+      "sha256": "6e8e372ddc98691e7e75a50b4f908195d8de5d86cb319778d47e9fe45171fa2c"
+    },
+    "poster/compression_v13.9.json": {
+      "bytes": 357,
+      "sha256": "333f841c6fd669bf49648a999d6a442d3a7d3f737a1cc92a94abe0f137268153"
+    }
+  },
+  "validation": {
+    "poster_gates": {
+      "page_fit": "PASS",
+      "footer_clearance": "PASS",
+      "block_rectangles": "PASS",
+      "no_overflow_or_clipping": "PASS",
+      "type_floor": "PASS",
+      "glyph_coverage": "PASS",
+      "prose_and_banned_words": "PASS",
+      "face_hygiene": "PASS",
+      "r5_placeholders": "PASS",
+      "claims_coverage": "PASS",
+      "ecosystem_manifest": "PASS",
+      "claims_rows_recheck": "PASS",
+      "qr_decode": "PASS",
+      "assets": "PASS",
+      "fonts_loaded": "PASS",
+      "colour_tokens": "PASS",
+      "imagery": "PASS",
+      "word_budget": "PASS"
+    },
+    "evidence_rows_rechecked": 415,
+    "evidence_gate_tests": 14,
+    "scientific_figures_preserved": 11,
+    "community_labels_preserved": 33,
+    "qr_decodes": 3,
+    "space_recovered_mm": 56,
+    "visual_review": "Full A0 overview and final workflow/community crops inspected; no overlap or clipping.",
+    "companion_site": "Unchanged; earlier 16 route/viewport results retain their original v13.8 run.",
+    "proof_lossless_compression": {
+      "optimizer": "pyoxipng 9.1.1, level 3",
+      "pixels_and_dpi_unchanged": true,
+      "decoded": {
+        "size": [
+          9933,
+          14042
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ],
+        "rgb_sha256": "b880588dba2481f9fc6b07c511fb104f9df6adbec24d448efef2170fc99f4993"
+      },
+      "bytes_before": 14260840,
+      "bytes_after": 11594170,
+      "seconds": 55.58
+    }
+  },
+  "scope": "Editorial layout revision only. No new scientific measurements, model trials, hosted-agent result or signed track."
+}

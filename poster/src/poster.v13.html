@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</title>
-<!-- v13.8 source. Issue #48 supersedes the face copy in the original brief.
+<!-- v13.9 source. Issue #48 supersedes the face copy in the original brief.
      Figures, measurements and claim rows remain independently checked by build_v13.py. -->
 <link rel="stylesheet" href="src/poster.v13.css">
 </head>
@@ -25,7 +25,10 @@
 </div>
 </header>
 <main>
-<section class="blk panel spine c12" data-block="p1" data-brief="1 · Earth to agents" style="--x:20;--y:191;--w:801;--h:183.5">
+<section class="blk panel workflow" data-block="workflow" data-brief="Observation to the next agent" style="--x:20;--y:191;--w:801;--h:53">
+  <div class="fig" data-figslot="f18_workflow" style="--fw:801;--fh:49"><!--fig:f18_workflow--></div>
+</section>
+<section class="blk panel spine c12" data-block="p1" data-brief="1 · Earth to agents" style="--x:20;--y:247;--w:801;--h:183.5">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">1</span>What survives an agent handoff?</p>
   <h2 class="rt" data-role="headline" data-claim="U.bridge">The same observation, carried through receiver checks.</h2>
   <p class="mech rt" data-role="mechanism" data-claim="U.flow">Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.</p>
@@ -41,7 +44,7 @@
   </div>
 </section>
 
-<div class="col" data-col="left" style="--gap:5;--x:20;--y:377.5;--w:193.5;--h:639">
+<div class="col" data-col="left" style="--gap:5;--x:20;--y:433.5;--w:193.5;--h:639">
 <section class="panel c3" data-block="p2" data-brief="2 · Traceable observation history">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>Can a time series retain its evidence?</p>
   <h2 class="rt" data-role="headline" data-claim="V8.history">NDVI history, with citations</h2>
@@ -83,7 +86,7 @@
 </section>
 </div>
 
-<div class="col" data-col="centre" style="--gap:4;--x:222.5;--y:377.5;--w:396;--h:639">
+<div class="col" data-col="centre" style="--gap:4;--x:222.5;--y:433.5;--w:396;--h:639">
 <section class="panel c6" data-block="p4" data-brief="Berlin source-to-record fanout">
   <div class="qrhead">
     <div class="qrhtext">
@@ -113,7 +116,7 @@
 </section>
 </div>
 
-<div class="col" data-col="right" style="--gap:4;--x:627.5;--y:377.5;--w:193.5;--h:639">
+<div class="col" data-col="right" style="--gap:4;--x:627.5;--y:433.5;--w:193.5;--h:639">
 <section class="panel c3" data-block="p7" data-brief="7 · What checks establish">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What has the receiver established?</p>
   <h2 class="rt" data-role="headline" data-claim="U.boundary">Know what was checked</h2>
@@ -151,17 +154,15 @@
 </section>
 </div>
 
-<section class="blk panel c8 community" data-block="p12" data-brief="11 · Community routes" style="--x:20;--y:1019.5;--w:801;--h:147.5">
-  <div class="qrhead">
-    <div class="qrhtext">
-      <h2 class="rt" data-role="headline" data-claim="CM.routes"><span class="num" data-exempt="panelno">11</span>Use emem. Carry the evidence forward.</h2>
-      <p class="mech rt" data-role="mechanism" data-claim="CM.routes V8.workflow">Start with an EO question, connect your tool, then pass the cited observations onward. Public emem reads need no API key.</p>
-      <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope">Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).<br>The routes below are plugins, connectors, packages and listings. One evidence protocol, multiple agent runtimes. Setup and compatibility notes are behind CONNECT.</p>
-      <div class="qrlabel inl" data-claim="Q.discover_integrations CM.exercise"><span class="cta">CONNECT</span> <span class="qcap" data-role="cap">Choose an EO task, copy a reference, run the checks. &nbsp;<span class="mono community-url">vortx-ai.github.io/esa_poster/use/</span></span></div>
-    </div>
+<section class="blk panel c8 community" data-block="p12" data-brief="11 · Community routes" style="--x:20;--y:1075.5;--w:801;--h:91.5">
+  <h2 class="rt" data-role="headline" data-claim="CM.routes"><span class="num" data-exempt="panelno">11</span>Use emem. Carry the evidence forward.</h2>
+  <p class="cap rt community-result" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope">Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).</p>
+  <div class="fig" data-figslot="f11_ecosystem" style="--fw:726;--fh:65"><!--fig:f11_ecosystem--></div>
+  <div class="community-connect">
+    <div class="qrlabel inl" data-claim="Q.discover_integrations"><span class="cta">CONNECT</span></div>
     <div class="qr inl" data-qr="use" data-claim="Q.discover_integrations"><div class="sym"><!--qr:use--></div></div>
+    <p class="scope" data-role="scope" data-claim="V9.connect">Setup · EO tasks<br>Reproduce</p>
   </div>
-  <div class="fig" data-figslot="f11_ecosystem" style="--fw:801;--fh:91"><!--fig:f11_ecosystem--></div>
 </section>
 </main>
 <footer class="blk foot" data-block="footer" style="--x:20;--y:1169.5;--w:801;--h:18">

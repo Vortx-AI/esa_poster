@@ -1,0 +1,205 @@
+{
+  "figure": "f18_workflow",
+  "size_mm": [
+    801,
+    49
+  ],
+  "labels": [
+    {
+      "text": "From observation to the next agent",
+      "claim": "V9.workflow",
+      "x_mm": 0,
+      "y_mm": 5,
+      "pt": 24
+    },
+    {
+      "text": "Observe",
+      "claim": "V9.workflow",
+      "x_mm": 4.0,
+      "y_mm": 21,
+      "pt": 28
+    },
+    {
+      "text": "Satellite or sensor",
+      "claim": "V9.workflow",
+      "x_mm": 4.0,
+      "y_mm": 32,
+      "pt": 17
+    },
+    {
+      "text": "Keep the source scene.",
+      "claim": "V9.workflow",
+      "x_mm": 4.0,
+      "y_mm": 41,
+      "pt": 17
+    },
+    {
+      "text": "\u2192",
+      "claim": "V9.workflow",
+      "x_mm": 108.57142857142857,
+      "y_mm": 29,
+      "pt": 20
+    },
+    {
+      "text": "Locate",
+      "claim": "V9.workflow",
+      "x_mm": 119.57142857142857,
+      "y_mm": 21,
+      "pt": 28
+    },
+    {
+      "text": "Location \u00b7 product \u00b7 time",
+      "claim": "V9.workflow",
+      "x_mm": 119.57142857142857,
+      "y_mm": 32,
+      "pt": 17
+    },
+    {
+      "text": "Lookup identity",
+      "claim": "V9.workflow",
+      "x_mm": 119.57142857142857,
+      "y_mm": 41,
+      "pt": 17
+    },
+    {
+      "text": "\u2192",
+      "claim": "V9.workflow",
+      "x_mm": 224.14285714285714,
+      "y_mm": 29,
+      "pt": 20
+    },
+    {
+      "text": "Record",
+      "claim": "V9.workflow",
+      "x_mm": 235.14285714285714,
+      "y_mm": 21,
+      "pt": 28
+    },
+    {
+      "text": "Canonical record \u2192 CID",
+      "claim": "V9.workflow",
+      "x_mm": 235.14285714285714,
+      "y_mm": 32,
+      "pt": 17
+    },
+    {
+      "text": "Batch attestation",
+      "claim": "V9.workflow",
+      "x_mm": 235.14285714285714,
+      "y_mm": 41,
+      "pt": 17
+    },
+    {
+      "text": "\u2192",
+      "claim": "V9.workflow",
+      "x_mm": 339.7142857142857,
+      "y_mm": 29,
+      "pt": 20
+    },
+    {
+      "text": "Hand off",
+      "claim": "V9.workflow",
+      "x_mm": 350.7142857142857,
+      "y_mm": 21,
+      "pt": 28
+    },
+    {
+      "text": "Pass the reference",
+      "claim": "V9.workflow",
+      "x_mm": 350.7142857142857,
+      "y_mm": 32,
+      "pt": 17
+    },
+    {
+      "text": "MCP \u00b7 REST \u00b7 A2A",
+      "claim": "V9.workflow",
+      "x_mm": 350.7142857142857,
+      "y_mm": 41,
+      "pt": 17
+    },
+    {
+      "text": "\u2192",
+      "claim": "V9.workflow",
+      "x_mm": 455.2857142857143,
+      "y_mm": 29,
+      "pt": 20
+    },
+    {
+      "text": "Resolve",
+      "claim": "V9.workflow",
+      "x_mm": 466.2857142857143,
+      "y_mm": 21,
+      "pt": 28
+    },
+    {
+      "text": "Retrieve the same record",
+      "claim": "V9.workflow",
+      "x_mm": 466.2857142857143,
+      "y_mm": 32,
+      "pt": 17
+    },
+    {
+      "text": "Recover its provenance.",
+      "claim": "V9.workflow",
+      "x_mm": 466.2857142857143,
+      "y_mm": 41,
+      "pt": 17
+    },
+    {
+      "text": "\u2192",
+      "claim": "V9.workflow",
+      "x_mm": 570.8571428571429,
+      "y_mm": 29,
+      "pt": 20
+    },
+    {
+      "text": "Check",
+      "claim": "V9.workflow",
+      "x_mm": 581.8571428571429,
+      "y_mm": 21,
+      "pt": 28
+    },
+    {
+      "text": "Hash \u00b7 binding \u00b7 signature",
+      "claim": "V9.workflow",
+      "x_mm": 581.8571428571429,
+      "y_mm": 32,
+      "pt": 17
+    },
+    {
+      "text": "Re-read source if needed.",
+      "claim": "V9.workflow",
+      "x_mm": 581.8571428571429,
+      "y_mm": 41,
+      "pt": 17
+    },
+    {
+      "text": "\u2192",
+      "claim": "V9.workflow",
+      "x_mm": 686.4285714285714,
+      "y_mm": 29,
+      "pt": 20
+    },
+    {
+      "text": "Continue",
+      "claim": "V9.workflow",
+      "x_mm": 697.4285714285714,
+      "y_mm": 21,
+      "pt": 28
+    },
+    {
+      "text": "Reason with cited evidence",
+      "claim": "V9.workflow",
+      "x_mm": 697.4285714285714,
+      "y_mm": 32,
+      "pt": 17
+    },
+    {
+      "text": "Carry the reference onward.",
+      "claim": "V9.workflow",
+      "x_mm": 697.4285714285714,
+      "y_mm": 41,
+      "pt": 17
+    }
+  ]
+}

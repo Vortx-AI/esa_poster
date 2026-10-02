@@ -1,0 +1,70 @@
+{
+  "purpose": "Restore the seven-step workflow and compact section 11",
+  "rows": [
+    {
+      "id": "V9.workflow",
+      "block": "v13.9 restored workflow",
+      "print": [
+        "From observation to the next agent",
+        "Observe",
+        "Satellite or sensor",
+        "Keep the source scene.",
+        "\u2192",
+        "Locate",
+        "Location \u00b7 product \u00b7 time",
+        "Lookup identity",
+        "Record",
+        "Canonical record \u2192 CID",
+        "Batch attestation",
+        "Hand off",
+        "Pass the reference",
+        "MCP \u00b7 REST \u00b7 A2A",
+        "Resolve",
+        "Retrieve the same record",
+        "Recover its provenance.",
+        "Check",
+        "Re-hash \u00b7 bind \u00b7 verify",
+        "Re-read source if needed.",
+        "Continue",
+        "Reason with cited evidence",
+        "Carry the reference onward."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md",
+          "repro/v8/proof_bundle_ndvi.cbor",
+          "v13/14_UNIFIED_POSTER_BRIEF.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "A reading guide for the existing protocol. Location/product/time lookup is distinct from the canonical record content address. The batch attestation covers record addresses; source re-reading is an additional verification step. No new measurement or model trial.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V9.connect",
+      "block": "v13.9 restored workflow",
+      "print": [
+        "Setup \u00b7 EO tasks",
+        "Reproduce"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/23_EO_GOLD_AND_USABILITY.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "The existing /use/ route contains setup, EO tasks and links to reproducible methods.",
+      "tier": "30cm",
+      "checked": true
+    }
+  ]
+}

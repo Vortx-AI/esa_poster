@@ -1,26 +1,22 @@
-# The poster: v13.8, traceable observations and practical EO workflows (2 October 2026)
+# The poster: v13.9, complete EO workflow and compact community routes (2 October 2026)
 
 | Artifact | Purpose |
 |---|---|
-| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 file, 841 × 1189 mm; print at actual size |
+| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 print file; print at actual size |
 | [emem-poster-preview.png](emem-poster-preview.png) | Screen preview |
 | [emem-poster-A0-300dpi.png](emem-poster-A0-300dpi.png) | Full-resolution print proof |
 | [build_v13_report.json](build_v13_report.json) | Layout, claim, type and QR checks |
-| [release_v13.8.json](release_v13.8.json) | Artifact hashes and validation summary |
+| [release_v13.9.json](release_v13.9.json) | Artifact hashes and validation summary |
 
-The community guide now opens with vegetation history, forest-product comparison and historical replay, each linked to steps and retained evidence. The community band spans the A0 page with prominent ChatGPT, Claude, Visual Studio Code, Dify and Salesforce MuleSoft routes. Protocols, SDKs, frameworks, self-hosting and discovery directories remain visible. CONNECT opens a setup guide, three Dify templates, a copyable token and handoff exercise, expected record fields, reader questions and the research methods.
+The seven-step Observe → Locate → Record → Hand off → Resolve → Check → Continue workflow sits between the introduction and the full handoff experiment. Location/product/time lookup is separate from the record's content address. Receiver checks name hash, binding and signature; source re-reading is a further step.
 
-The face recovers 141 dated Sentinel-2 NDVI records at Keylong, highlighting the same observation used in the handoff and source-pixel experiments. Cloud/snow screening and processing harmonisation were not applied to this archived series, so no physical trend is claimed. EO task labels explain how to use the memory operations. The derived-token wording now reflects conditional recomputation.
+Section 11 removes repeated prose and the redundant four-stage bridge. The compact community band retains the measured client-path result, five platform cards, all 33 remaining community labels at their existing type sizes, and a dedicated Connect QR. It releases 56 mm without reducing the 11 existing scientific figures. The full token table, Berlin fanout, NDVI history, drift equations, observation tuple and temporal memory remain.
 
-The full five-lane handoff experiment, 14-row token grammar table and Berlin image-to-record fanout return from the two requested historical versions. The drift rule includes invalid uncertainty, memory includes all observation terms, and latest-as-of recall shows both time-selection stages. Memory operations and a contribution box replace repeated prose. The eight-fact bundle, four reproducible reasoning-state addresses and explicit absence remain. The drift formulas, memory model, two-clock recall, foundation-model vectors and central handoff/source experiments remain. The earlier full Keylong, Rondônia sampled-product and SAT-042 figures are available in the methods gallery with their original dates and scope. See the [recovery map](../research/v13/18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md).
+Validation: **18/18 poster gates**, **14/14 evidence-gate tests**, **415 evidence-row checks** and **three printed QR decodes**. Final A0, workflow and community-band renders were inspected. [Layout evidence](../research/v13/evidence/v139/layout_review.json) records preserved figure sizes and community labels. The companion site is unchanged; this revision does not claim a new run of its earlier 16 route/viewport checks or any new scientific/model benchmark.
 
-Build sources: `src/poster.v13.html`, `src/poster.v13.css`, `figs_v13/` and `tools/site/site.mjs`. Copy specification: [14_UNIFIED_POSTER_BRIEF.md](../research/v13/14_UNIFIED_POSTER_BRIEF.md). Instructions: [AGENTS.md](../AGENTS.md).
+Build sources: `src/poster.v13.html`, `src/poster.v13.css`, `figs_v13/f18_workflow.py` and the manifest-generated community figure. [Copy specification](../research/v13/14_UNIFIED_POSTER_BRIEF.md) · [Release review](../research/v13/24_WORKFLOW_AND_COMPACT_COMMUNITY.md) · [Instructions](../AGENTS.md).
 
-Validation: **18/18 poster gates**, **16/16 local route/viewport checks**, **14/14 evidence-gate tests**, clipboard token equality and all three EO task links on phone and desktop, and three printed QR decodes. The default guided demo completes in about 12 seconds, with no external requests; reduced-motion and no-script paths also pass. Four archived state addresses and nine offline proof checks retain their v13.5 evidence. The earlier **20/20 upstream Python tests** remain pinned to their original v13.4 run. The current round does not claim fresh Rust or hosted-agent benchmark results. The direct ChatGPT emem listing and connected plugin are confirmed; attempted resolve calls returned a connector error, recorded in the evidence.
-
-[Community guide](https://vortx-ai.github.io/esa_poster/use/) · [Methods and recovered demonstrations](https://vortx-ai.github.io/esa_poster/methods/#recovered) · [Release review](../research/v13/23_EO_GOLD_AND_USABILITY.md).
-
-The [Pages workflow](../.github/workflows/pages.yml) publishes the committed `/docs` files. This publication is checked against the reviewed local PDF and page bytes. Historical external-fetch failures in `docs/assets/screens/results.json` are retained; fresh local review results are in `research/v13/evidence/v138/site_review.json`.
+[Community guide](https://vortx-ai.github.io/esa_poster/use/) · [Methods](https://vortx-ai.github.io/esa_poster/methods/). The existing companion download link serves the committed main-branch PDF.
 
 ## Signed-track history
 

@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import style as S
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import ecosystem as E
-W, H = 801, 91
+W, H = 726, 65
 rows = E.read_manifest()
 errors = E.validate(rows)
 assert not errors, '\n'.join(errors)
@@ -14,7 +14,7 @@ labels = E.labels_for(rows)
 fig=S.fig_mm(W,H); ax=fig.add_axes([0,0,1,1]); ax.set(xlim=(0,W),ylim=(H,0)); ax.axis('off')
 cards = sorted((r for r in rows if r.get('panel', {}).get('kind') == 'card'), key=lambda r: r['panel']['order'])
 for i,r in enumerate(cards):
-    ax.add_patch(FancyBboxPatch((i*161.2,18),156.2,34,boxstyle='round,pad=0,rounding_size=1.5',
+    ax.add_patch(FancyBboxPatch((i*146,0),142,30,boxstyle='round,pad=0,rounding_size=1.5',
         fc=S.C['oos_bg' if r['status']=='REGISTRY' else 'emem_tint'],ec='none'))
 for label in labels:
     ax.text(label['x'],label['y'],label['text'],fontsize=label['pt'],fontweight=label['weight'],color=S.C[label['color']],va='center')

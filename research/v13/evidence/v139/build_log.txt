@@ -1,0 +1,49 @@
+
+v13 build: mode r5; PDF 1 page 841.0 x 1188.9 mm
+  PASS  page_fit
+        PDF pages 1, page 840.99 x 1188.89 mm
+  PASS  footer_clearance
+        content ends 1167.3 mm, footer top 1169.5 mm, clearance 2.2 mm (need >= 2)
+  PASS  block_rectangles
+        DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged.
+        DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,433.5,193.5x120.2), off by 39.7 mm; reason: v13.8 recovers a compact 141-record Keylong NDVI history: the highlighted observation is the same record used in the handoff and source-pixel experiments. Source-scene dates remain explicit; no cloud/snow harmonisation or physical trend is claimed. The eight-answer diagnostic remains in the methods. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged.
+        DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,560.7,193.5x240.1), off by 45.2 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged.
+  PASS  no_overflow_or_clipping
+        no box larger than its parent; no text outside its block or the page; no QR over text
+  PASS  type_floor
+        no text below 14 pt (HTML and figure SVG, effective size); kicker, mechanism and take lines >= 24 pt; captions >= 17 pt; headline lengths
+  PASS  glyph_coverage
+        every printed code point is in the face that sets it (748 text runs)
+  PASS  prose_and_banned_words
+        no em/en dashes, tell words or unlisted banned words; 9 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row
+  PASS  face_hygiene
+        no version numbers, defect ids, scorecards, placeholders or R5 tokens on the face; PDF title is the programme title
+  PASS  r5_placeholders
+        mode: r5 (results final)
+  PASS  claims_coverage
+        142 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold
+  PASS  ecosystem_manifest
+        42 evidenced routes; 28 printed; dates, types and exact SVG copy checked
+  PASS  claims_rows_recheck
+        415 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)
+  PASS  qr_decode
+        qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'
+        qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'
+        qr_use at (766.0,1095.4) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'
+  PASS  assets
+        all 13 figures and diagrams placed as SVG; fonts, CSS and tokens present
+  PASS  fonts_loaded
+        9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: loaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: unloaded, IBM Plex Mono 600: loaded, IBM Plex Mono 700: loaded
+  PASS  colour_tokens
+        board and figure colours checked against poster/src/tokens.json; 25 pixel-cell fills in imagery figures (f1_scene, f2_spine, f7_wrong_pixel)
+        palette_check.py (CVD, FOGRA39): present in the repo; not re-run by this build (needs the non-redistributable FOGRA39 profile)
+  PASS  imagery
+        f1_scene: 2658x2309 px over 216.5 mm = 312 ppi
+        f2_spine: 600x600 px over 50.0 mm = 305 ppi
+        f16_embeddings: 3072x72 px over 193.5 mm = 403 ppi
+  PASS  word_budget
+        running text: 631 words containing a letter, 646 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)
+          1 · Earth to agents: 56 tokens (section C: 56)
+          10 · Token family: 29 tokens (section C: 29)
+
+all gates pass; report: poster/build_v13_report.json

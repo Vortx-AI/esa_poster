@@ -1,4 +1,4 @@
-# v13.8 unified poster and community brief
+# v13.9 unified poster and community brief
 
 Keep the complete handoff, token family, Berlin fanout and exact memory formalism restored in v13.7. Recover the dated NDVI history and explain memory operations through EO tasks. Make community entry points usable while preserving the scope of the scientific evidence. See `23_EO_GOLD_AND_USABILITY.md` for the recovery decisions and `22_RECOVERED_DESIGN_AND_FORMALISM.md` for the preceding restoration.
 
@@ -104,8 +104,7 @@ Keep the complete handoff, token family, Berlin fanout and exact memory formalis
 ### 11 · Community routes
 
 > Use emem. Carry the evidence forward.
-> Start with an EO question, connect your tool, then pass the cited observations onward. Public emem reads need no API key.
-> Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).The routes below are plugins, connectors, packages and listings. One evidence protocol, multiple agent runtimes. Setup and compatibility notes are behind CONNECT.
+> Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).
 
 ## D. Claims map
 
@@ -134,3 +133,10 @@ See `18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md` for the history audit. `12_cla
 ## v13.7 restoration
 
 The current placement, complete model and claim taxonomy supersede the earlier layout decisions above. Berlin now occupies the central source-record panel, the full model is on the right, and the full token table and experimental flow are restored. Duplicate prose made room; print sizes were not reduced.
+
+
+## v13.9 workflow and community layout
+
+A seven-step diagram now precedes section 1: Observe → Locate → Record → Hand off → Resolve → Check → Continue. Locate states location/product/time lookup; Record names the canonical record CID and batch attestation. Checks name hash, binding and signature, with source re-reading as a further step. The full controlled handoff experiment follows immediately.
+
+Section 11 removes repeated explanatory prose and its redundant four-stage bridge. It retains the measured client-path result, five platform cards, all 33 remaining community labels at their existing sizes, and a dedicated 50 mm Connect QR. The community band is 91.5 mm high rather than 147.5 mm, releasing 56 mm. The handoff and all three columns move down by 56 mm; all 11 existing scientific figures retain their dimensions and content. No scientific evidence, measurements, claim status or integration evidence changes. The companion site's existing download link picks up the new PDF when main is updated.
