@@ -1,0 +1,312 @@
+{
+  "purpose": "Issue #48 v13.3 editorial synthesis; existing measurement rows retained",
+  "rows": [
+    {
+      "id": "U.hero",
+      "block": "v13.3",
+      "print": [
+        "An Earth observation that survives an agent handoff."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v10/algorithms.md",
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Resolve/check behaviour; availability depends on a reachable resolver or retained evidence bytes.",
+      "tier": "1m"
+    },
+    {
+      "id": "U.bridge",
+      "block": "v13.3",
+      "print": [
+        "Earth data stays in the data layer. Its reference enters the reasoning layer."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v10/algorithms.md",
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.flow",
+      "block": "v13.3",
+      "print": [
+        "Observe, locate, record, hand off, resolve, check, continue."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v10/algorithms.md",
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.benchmark",
+      "block": "v13.3",
+      "print": [
+        "Controlled handoff test: acted on corrupted evidence."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v13/r5/results.json",
+          "research/repro/v11/out/mutation_matrix.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.drift",
+      "block": "v13.3",
+      "print": [
+        "Place, time, product, source selection, derivation, representation and referent require distinct comparisons."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/v13/12_claims_map.json",
+          "research/repro/v13/eight_answers.json",
+          "research/v13/evidence/failure_modes/CHANGELOG_18adb67.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Taxonomy of checks; the referent row is an application responsibility, not a measured solution to entity identity.",
+      "tier": "1m"
+    },
+    {
+      "id": "U.identities",
+      "block": "v13.3",
+      "print": [
+        "Lookup identity: cell, product and time. Content address: exact canonical record."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v10/algorithms.md",
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.token",
+      "block": "v13.3",
+      "print": [
+        "emem:fact:<cell64>:<fact_cid> carries cell and CID; band and tslot are inside the record."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v10/algorithms.md",
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.handoff",
+      "block": "v13.3",
+      "print": [
+        "The reference alone crossed between two programs; the receiver re-hashed, verified its receipt and recomputed NDVI exactly."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/data/v8/crossruntime_table.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "rows.ndvi_keylong path A->B_isolated_processes; program-to-program, not a ChatGPT-to-Claude trial.",
+      "tier": "1m"
+    },
+    {
+      "id": "U.object",
+      "block": "v13.3",
+      "print": [
+        "The reference resolves to value, cell, band, time, derivation and named source references."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v10/algorithms.md",
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.checks",
+      "block": "v13.3",
+      "print": [
+        "Resolve, re-hash, bind, recompute and re-read; signatures and logs establish attestation and publication."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v11/out/mutation_matrix.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.boundary",
+      "block": "v13.3",
+      "print": [
+        "Record bytes; requested identity; signature under the pinned key; declared derivation; named source read. Source quality inherited; application owns referent and decision."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/v13/10_ladder_threat_invention.md",
+          "research/repro/v11/out/mutation_matrix.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.ecosystem",
+      "block": "v13.3",
+      "print": [
+        "MCP, A2A, REST and SDKs expose the same reference model."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/v13/ecosystem_manifest.json",
+          "research/repro/data/v8/crossruntime_table.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.layers",
+      "block": "v13.3",
+      "print": [
+        "STAC assets; openEO processing; PROV and C2PA provenance; EMEM observation reference."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/v13/12_claims_map.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Additive summary of PA.critical; no novelty or substitution claim.",
+      "tier": "1m"
+    },
+    {
+      "id": "U.conclusion",
+      "block": "v13.3",
+      "print": [
+        "Recover a cited record, inspect provenance, recompute declared derivations and return to the source."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v10/algorithms.md",
+          "research/repro/v11/mutation_suite.py",
+          "research/repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    },
+    {
+      "id": "U.poster",
+      "block": "v13.3",
+      "print": [
+        "The linked methods connect the figures to records, source data and reproducible checks."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "tools/site/site.mjs",
+          "research/v13/12_claims_map.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m"
+    }
+  ],
+  "extend_print": []
+}

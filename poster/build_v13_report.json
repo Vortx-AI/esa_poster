@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-02T04:54:07+00:00",
+ "built_utc": "2026-10-02T06:49:58+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -23,116 +23,99 @@
   "title": "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings"
  },
  "figures": {
-  "NAME": {
-   "state": "placeholder"
-  },
   "f1_scene": {
    "state": "placed",
    "file": "poster/fig/v13/f1_scene.svg",
    "w_mm": 216.5,
    "h_mm": 188.0,
-   "mtime": "2026-10-01T06:07:58"
+   "mtime": "2026-10-02T02:39:17"
   },
   "f2_spine": {
    "state": "placed",
    "file": "poster/fig/v13/f2_spine.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-01T09:51:16"
+   "mtime": "2026-10-02T02:39:14"
   },
   "f3_eight_answers": {
    "state": "placed",
    "file": "poster/fig/v13/f3_eight_answers.svg",
    "w_mm": 193.5,
    "h_mm": 62.0,
-   "mtime": "2026-10-01T06:07:40"
+   "mtime": "2026-10-02T02:25:54"
   },
   "f4_failure_ladder": {
    "state": "placed",
    "file": "poster/fig/v13/f4_failure_ladder.svg",
    "w_mm": 193.5,
-   "h_mm": 254.2,
-   "mtime": "2026-10-01T08:54:37"
-  },
-  "d_threat": {
-   "state": "placed",
-   "file": "poster/fig/v13/d_threat.svg",
-   "w_mm": 193.5,
-   "h_mm": 30.0,
-   "mtime": "2026-10-01T06:03:24"
+   "h_mm": 190.0,
+   "mtime": "2026-10-02T02:39:15"
   },
   "f5_evidence_object": {
    "state": "placed",
    "file": "poster/fig/v13/f5_evidence_object.svg",
    "w_mm": 396.0,
    "h_mm": 98.0,
-   "mtime": "2026-10-01T06:01:56"
+   "mtime": "2026-10-02T02:25:54"
   },
   "f6_mutation_matrix": {
    "state": "placed",
    "file": "poster/fig/v13/f6_mutation_matrix.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-01T10:00:19"
+   "mtime": "2026-10-02T02:25:54"
   },
   "f7_wrong_pixel": {
    "state": "placed",
    "file": "poster/fig/v13/f7_wrong_pixel.svg",
    "w_mm": 396.0,
    "h_mm": 128.0,
-   "mtime": "2026-10-01T08:50:05"
+   "mtime": "2026-10-02T02:25:54"
   },
   "f8_ladder": {
    "state": "placed",
    "file": "poster/fig/v13/f8_ladder.svg",
    "w_mm": 193.5,
-   "h_mm": 60.0,
-   "mtime": "2026-10-02T04:51:07"
+   "h_mm": 65.0,
+   "mtime": "2026-10-02T02:39:16"
   },
   "f9_timeline": {
    "state": "placed",
    "file": "poster/fig/v13/f9_timeline.svg",
    "w_mm": 193.5,
    "h_mm": 82.0,
-   "mtime": "2026-10-01T08:50:09"
+   "mtime": "2026-10-02T02:25:54"
   },
   "f13_one_address": {
    "state": "placed",
    "file": "poster/fig/v13/f13_one_address.svg",
    "w_mm": 193.5,
-   "h_mm": 128.0,
-   "mtime": "2026-10-02T04:20:19"
+   "h_mm": 174.0,
+   "mtime": "2026-10-02T02:45:57"
   },
   "f14_token_family": {
    "state": "placed",
    "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
-   "h_mm": 100.0,
-   "mtime": "2026-10-02T04:35:40"
-  },
-  "f15b_sat042_strip": {
-   "state": "placed",
-   "file": "poster/fig/v13/f15b_sat042_strip.svg",
-   "w_mm": 193.5,
-   "h_mm": 60.0,
-   "mtime": "2026-10-02T04:51:00"
+   "h_mm": 86.0,
+   "mtime": "2026-10-02T02:39:16"
   },
   "f11_ecosystem": {
    "state": "placed",
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 531.0,
    "h_mm": 100.0,
-   "mtime": "2026-10-01T08:50:12"
+   "mtime": "2026-10-02T02:41:16"
   },
   "f12_prior_art": {
    "state": "placed",
    "file": "poster/fig/v13/f12_prior_art.svg",
    "w_mm": 261.0,
    "h_mm": 48.0,
-   "mtime": "2026-10-01T06:03:23"
+   "mtime": "2026-10-02T02:25:54"
   }
  },
- "figure_text_tokens": 2503,
+ "figure_text_tokens": 1930,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -143,24 +126,29 @@
   "footer_clearance": {
    "pass": true,
    "details": [
-    "content ends 1167.1 mm, footer top 1169.5 mm, clearance 2.4 mm (need >= 2)"
+    "content ends 1167.0 mm, footer top 1169.5 mm, clearance 2.5 mm (need >= 2)"
    ]
   },
   "block_rectangles": {
    "pass": true,
    "details": [
-    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Spine content measures 183.5 mm (F2 118 mm, agent strip in two lines at 24 pt beside the R5 scope lines at 14 pt); it starts 3 mm under the header (brief 8) and ends 6.5 mm earlier, giving the three columns 18.5 mm.",
-    "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x130.8), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,511.8,193.5x348.1), off by 13.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,863.4,193.5x76.3), off by 13.8 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,943.3,193.5x73.2), off by 7.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x168.3), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,552.0,396.0x275.0), off by 10.0 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,531.0x147.5), off by 6.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt, and (v13.1) the four-line agent-host caption sits above F11; F11 sits at the bottom of the panel.",
-    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1019.5,261.0x78.0), off by 10.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13, 1 mm higher in v13.1 with the ecosystem caption's fourth line); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
-    "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1103.0,261.0x64.0), off by 13.0 mm; reason: Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50).",
-    "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
+    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Issue #48: seven-stage Earth-to-agent mechanism and measured comparison share the original 183.5 mm spine.",
+    "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x121.5), off by 18.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,524.6,193.5x249.5), off by 71.9 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,799.7,193.5x108.2), off by 56.3 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,933.5,193.5x82.9), off by 2.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x171.9), off by 18.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,560.9,396.0x263.0), off by 5.9 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,835.5,396.0x181.0), off by 7.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,486.9,193.5x128.8), off by 21.3 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,531.0x147.5), off by 6.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1019.5,261.0x78.0), off by 10.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1104.9,261.0x62.1), off by 11.1 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
+    "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,620.4,193.5x220.2), off by 68.4 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,845.2,193.5x125.9), off by 70.6 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+    "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
    ]
   },
   "no_overflow_or_clipping": {
@@ -172,19 +160,19 @@
   "type_floor": {
    "pass": true,
    "details": [
-    "DEVIATION p11: headline 39 characters; reason: v12.1 title kept verbatim at the user's request (2026-10-02); one line at 28 pt (v13.2)"
+    "no text below 14 pt (HTML and figure SVG, effective size); kicker, mechanism and take lines >= 24 pt; captions >= 17 pt; headline lengths"
    ]
   },
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (1018 text runs)"
+    "every printed code point is in the face that sets it (796 text runs)"
    ]
   },
   "prose_and_banned_words": {
    "pass": true,
    "details": [
-    "no em/en dashes, tell words or unlisted banned words; 39 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
+    "no em/en dashes, tell words or unlisted banned words; 13 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
    ]
   },
   "face_hygiene": {
@@ -202,7 +190,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "79 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "54 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "claims_rows_recheck": {
@@ -215,29 +203,26 @@
    "pass": true,
    "details": [
     "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
-    "qr_t at (20.0,230.3) 801.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/t/' == payload 'https://vortx-ai.github.io/esa_poster/t/'",
     "qr_r at (568.5,381.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
-    "qr_test at (568.5,777.0) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/test/' == payload 'https://vortx-ai.github.io/esa_poster/test/'",
-    "qr_use at (501.0,1023.3) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'",
     "qr_methods at (771.0,1117.0) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/methods/' == payload 'https://vortx-ai.github.io/esa_poster/methods/'"
    ]
   },
   "assets": {
    "pass": true,
    "details": [
-    "all 15 figures and diagrams placed as SVG; fonts, CSS and tokens present"
+    "all 13 figures and diagrams placed as SVG; fonts, CSS and tokens present"
    ]
   },
   "fonts_loaded": {
    "pass": true,
    "details": [
-    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: loaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: loaded, IBM Plex Mono 600: loaded, IBM Plex Mono 700: loaded"
+    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: loaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: loaded, IBM Plex Mono 600: unloaded, IBM Plex Mono 700: loaded"
    ]
   },
   "colour_tokens": {
    "pass": true,
    "details": [
-    "board and figure colours checked against poster/src/tokens.json; 26 pixel-cell fills in imagery figures (f1_scene, f2_spine, f5_evidence_object, f7_wrong_pixel)",
+    "board and figure colours checked against poster/src/tokens.json; 25 pixel-cell fills in imagery figures (f1_scene, f2_spine, f5_evidence_object, f7_wrong_pixel)",
     "palette_check.py (CVD, FOGRA39): present in the repo; not re-run by this build (needs the non-redistributable FOGRA39 profile)"
    ]
   },
@@ -245,35 +230,33 @@
    "pass": true,
    "details": [
     "f1_scene: 2658x2309 px over 216.5 mm = 312 ppi",
-    "f2_spine: 600x600 px over 50.0 mm = 305 ppi",
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
     "f7_wrong_pixel: 2658x2316 px over 112.5 mm = 600 ppi",
-    "f13_one_address: 1344x1344 px over 37.9 mm = 900 ppi"
+    "f13_one_address: 1344x1344 px over 50.0 mm = 683 ppi"
    ]
   },
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 814 words containing a letter, 863 tokens with numerals (cap 830 / 880; brief 823 / 869; v13.1 section C: see the per-panel lines)",
-    "  1 · Spine: 91 tokens (section C: 87)",
-    "  10 · One token family: 9 tokens (section C: 9)",
-    "  11 · How a satellite could prove what it ran (v13.2): 43 tokens (section C: 43)",
-    "  12 · One evidence protocol, multiple agent runtimes (v13.1): 79 tokens (section C: 79)",
-    "  13 · EMEM relies on these layers: 34 tokens (section C: 34)",
-    "  2 · Eight answers; one is right: 51 tokens (section C: 51)",
-    "  3 · Our own errors name the checks: 49 tokens (section C: 49)",
-    "  4 · The address names the record, not the pixel: 66 tokens (section C: 66)",
-    "  5 · Each of five checks alone stops a corruption: 50 tokens (section C: 50)",
-    "  6 · The right record, the wrong pixel: 56 tokens (section C: 56)",
-    "  7 · Checks stop at the source (v13.2): 11 tokens (section C: 11)",
-    "  8 · Memory keeps what was cited: 48 tokens (section C: 48)",
-    "  9 · One address, every product: 44 tokens (section C: 44)",
-    "  Conclusion: 36 tokens (section C: 34)",
-    "  Drift: 44 tokens (section C: 44)",
-    "  Header: 27 tokens (section C: 28)",
-    "  Questions: 77 tokens (section C: 77)",
-    "  Threat model: 48 tokens (section C: 48)"
+    "running text: 649 words containing a letter, 662 tokens with numerals (cap 830 / 880; v13.3 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 57 tokens (section C: 57)",
+    "  10 · Token family: 22 tokens (section C: 22)",
+    "  11 · Multiple runtimes: 43 tokens (section C: 43)",
+    "  12 · Complementary layers: 29 tokens (section C: 29)",
+    "  2 · One question, different records: 40 tokens (section C: 40)",
+    "  3 · Different drift, different check: 44 tokens (section C: 44)",
+    "  4 · Reference to record: 52 tokens (section C: 52)",
+    "  5 · Checks back to the source: 43 tokens (section C: 43)",
+    "  6 · Source re-read: 49 tokens (section C: 49)",
+    "  7 · What checks establish: 25 tokens (section C: 25)",
+    "  8 · Memory keeps what was cited: 43 tokens (section C: 43)",
+    "  9 · Berlin multi-product stack: 32 tokens (section C: 32)",
+    "  Conclusion: 27 tokens (section C: 27)",
+    "  Concrete handoff: 33 tokens (section C: 33)",
+    "  Execution extension: 34 tokens (section C: 34)",
+    "  Header: 47 tokens (section C: 47)",
+    "  Two identities: 42 tokens (section C: 42)"
    ]
   }
  },
@@ -298,150 +281,151 @@
  },
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
-  "Handed prose, agents acted on 254 of 276 corruptions; handed a reference they check, on 0 of 300.",
-  "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026; n per lane from the results file; adversary simulated; threshold constructed. Per model, prose → checked reference: Haiku 4.5 138 of 138 → 0 of 150; Sonnet 5.5 97 of 115 → 0 of 125; Opus 5.5 19 of 23 → 0 of 25; Qwen2.5-7B (open weights, one run) 22 of 23 → 2 of 25.",
-  "RQ3 Does a reference beat prose, JSON, retrieval or an opaque id? → 1, 5",
-  "JSON and an opaque id caught about half by reading their fields (112 of 276 and 134 of 288). Haiku with the tool but no instruction acted on 2 of 150, both M24, bound to the handoff's cell, not its question. Live, agents acted on the pre-fix record 4 of 4 uninstructed, 2 of 4 told to resolve and bind, 0 of 4 with a source re-read. 771 rows with no model output (a CLI rate limit) were excluded and re-run; the second model family is Qwen alone.",
-  "A signed observation reference left the receiver acting on none of the 16 corruptions in our suite, and agents with a checked reference acted on 0 of 300; entity, sensor and decision stay beyond its checks."
+  "In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.",
+  "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026. Pooled results above are the Claude runs; Qwen is reported separately. Qwen2.5-7B: prose 22 of 23; checked reference 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.",
+  "Agent bars: 12 runs per item, across 23 items. JSON and an opaque id caught some changes from their fields. In the live pre-fix record case, agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
-  "Questions panel: RQ1 to RQ4 and H1 to H3 at 17 pt (brief A.2 body tier 24 pt)",
-  "Threat model paragraph and the panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt); the threat paragraph went from 20 to 17 pt when the R5 lines landed in the spine",
-  "Reason: with the section E figures drawn 1:1 and the section C text verbatim, 24 pt body overfills the side columns by about 40 to 60 mm and the bottom-right block by about 25 mm",
-  "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)",
-  "v13.1: the v12.1 subtitles of panels 9 and 11 at 17 pt (caption tier); the drift block in the header at 17 pt with 14.2 pt subscripts; panel 11 keeps the v12.1 headline verbatim (39 characters) at the user's request",
-  "v13.2: panel 11 headline at 28 pt (one line; 32 pt needs two) so the SAT-042 strip fits the right column; panel 7 prints no mechanism line or caption (its ladder is compact, one evidence line per rung)"
+  "v13.3 issue #48: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
+  "The original layout is retained. Questions and threat blocks now explain two identities and the recorded handoff.",
+  "The execution extension is a short reference-harness note; detailed figures remain in methods."
  ],
  "layout_deviations": [
-  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Spine content measures 183.5 mm (F2 118 mm, agent strip in two lines at 24 pt beside the R5 scope lines at 14 pt); it starts 3 mm under the header (brief 8) and ends 6.5 mm earlier, giving the three columns 18.5 mm.",
-  "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x130.8), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,511.8,193.5x348.1), off by 13.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,863.4,193.5x76.3), off by 13.8 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,943.3,193.5x73.2), off by 7.3 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x168.3), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,552.0,396.0x275.0), off by 10.0 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,531.0x147.5), off by 6.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt, and (v13.1) the four-line agent-host caption sits above F11; F11 sits at the bottom of the panel.",
-  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1019.5,261.0x78.0), off by 10.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13, 1 mm higher in v13.1 with the ecosystem caption's fourth line); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
-  "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1103.0,261.0x64.0), off by 13.0 mm; reason: Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50).",
-  "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
+  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Issue #48: seven-stage Earth-to-agent mechanism and measured comparison share the original 183.5 mm spine.",
+  "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x121.5), off by 18.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,524.6,193.5x249.5), off by 71.9 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,799.7,193.5x108.2), off by 56.3 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,933.5,193.5x82.9), off by 2.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x171.9), off by 18.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,560.9,396.0x263.0), off by 5.9 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,835.5,396.0x181.0), off by 7.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,486.9,193.5x128.8), off by 21.3 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,531.0x147.5), off by 6.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1019.5,261.0x78.0), off by 10.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1104.9,261.0x62.1), off by 11.1 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
+  "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,620.4,193.5x220.2), off by 68.4 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,845.2,193.5x125.9), off by 70.6 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
+  "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
  ],
  "columns": [
   {
    "id": "left",
    "content_bottom": 1016.5,
-   "natural_mm": 635.0,
+   "natural_mm": 574.9,
    "height": 639.0
   },
   {
    "id": "centre",
    "content_bottom": 1016.5,
-   "natural_mm": 630.7,
+   "natural_mm": 621.8,
    "height": 639.0
   },
   {
    "id": "right",
    "content_bottom": 1016.5,
-   "natural_mm": 633.2,
+   "natural_mm": 633.3,
    "height": 639.0
   },
   {
    "id": "bottomright",
    "content_bottom": 1167.0,
-   "natural_mm": 143.5,
+   "natural_mm": 141.6,
    "height": 147.5
   }
  ],
- "allowlist_used": 39,
+ "allowlist_used": 13,
  "allowlist_unused": [
+  "Six cross the irrigation line, one is impossible, one is right; each wrong value",
+  "Signatures prevented none; the record made each checkable at a named layer, exce",
+  "H2 Only a source re-read catches a signer's wrong pixel.",
+  "The receiver gets 84 characters; everything else it fetches and checks.",
+  "Binding stops cell, time and band swaps; the signature, re-hashed forgeries; the",
+  "The entity meant passes every check.",
   "Derived representations are addressable too: this cell's Prithvi-EO-2.0 vector n",
+  "GeoGuard judges the claim; EMEM fixes the evidence it cites.",
   "A signed observation reference left the receiver acting on none of the 16 corrup",
+  "Extending verification to execution: reference harness, no spacecraft enrolled.",
+  "true colour, signed grids",
+  "receipt, Merkle proof and state chain all valid",
+  "re-read only · L3",
+  "none · L4",
+  "All keys today are one operator's.",
+  "M17 passes every check; “this image”",
+  "physical truth, decision",
+  "With a model as B and a forged cell, Claude Haiku 4.5 declined 5 of 5; Qwen2.5-3",
+  "A check protects only if it runs: emem’s resolver once reported a cell match it ",
+  "A check protects only if it runs: emem’s resolver once reported a cell match it ",
+  "A check protects only if it runs: emem’s resolver once reported a cell match it ",
+  "A relay can rewrite what it carries but cannot sign under the pinned key or matc",
+  "A relay can rewrite what it carries but cannot sign under the pinned key or matc",
   "A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s,",
   "all offline checks 0.33 ms",
-  "offline proof bundle 0.57 ms (4,906 B)"
+  "offline proof bundle 0.57 ms (4,906 B)",
+  "One address, every product",
+  "true colour,",
+  "11Extending verification from observations to execution",
+  "How a satellite could prove what it ran",
+  "Reference harness, no spacecraft enrolled; the gate binds the value digest only."
  ],
  "claims_printed": [
   "BE.grid",
   "BE.stack",
-  "D.dz",
-  "D.names",
-  "D.values",
   "E8.summary",
   "EC.11",
   "EC.9of11",
-  "EC.chatgpt.publisher",
-  "EC.notrun",
-  "EC.plugin",
-  "EC.plugin.skills",
-  "EC.plugin.tokens",
   "F.caption",
   "F.pixel",
-  "F4.rail",
   "H.byline",
-  "H.hero",
-  "H.img.record",
   "H.session",
-  "H.sub.boundary",
-  "H.sub.mechanism",
   "H.title",
   "K.commit",
-  "K.concl",
   "K.dates",
-  "K.sat042",
-  "L.reread0",
-  "L.status",
   "O.1115",
   "O.84",
   "O.batch",
   "O.nohash",
-  "O.sevenaddr",
   "PA.credit",
   "PA.critical",
-  "PA.geoguard_line",
-  "PA.munir",
-  "Q.discover_integrations",
   "Q.inspect_record",
-  "Q.re-run_test",
   "Q.read_methods",
-  "R5.A.haiku",
-  "R5.A.opus",
   "R5.A.pooled",
   "R5.A.qwen7b",
-  "R5.A.sonnet",
-  "R5.E.haiku",
-  "R5.E.opus",
   "R5.E.pooled",
   "R5.E.qwen7b",
-  "R5.E.sonnet",
-  "R5.E0.haiku.M24",
+  "R5.F6.scope",
   "R5.baseline.catch",
   "R5.block2.M15r",
   "R5.dates",
-  "R5.excluded",
   "R5.models",
-  "R5.qwen.alone",
   "REF.footer",
-  "S.16",
-  "S.G2.boundary",
-  "S.G2.haiku.F",
-  "S.G2.qwen.F",
-  "S.G2.qwen.bare",
-  "S.R1.I",
   "S.threshold",
   "SAT.gate",
   "SAT.run",
-  "T.can",
   "TF.family",
   "TM.915",
   "TM.asof",
-  "TM.keylong",
+  "U.boundary",
+  "U.bridge",
+  "U.checks",
+  "U.conclusion",
+  "U.drift",
+  "U.ecosystem",
+  "U.flow",
+  "U.handoff",
+  "U.hero",
+  "U.identities",
+  "U.layers",
+  "U.object",
+  "U.poster",
+  "U.token",
   "W.kx",
   "W.vals",
-  "X.entity",
   "X.loo",
   "X.only"
  ],
- "figure_numbers_checked": 509,
+ "figure_numbers_checked": 402,
  "rows_rechecked": 390,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
@@ -476,7 +460,7 @@
   "F8.trust"
  ],
  "words": {
-  "running_words_with_letter": 814,
-  "running_tokens": 863
+  "running_words_with_letter": 649,
+  "running_tokens": 662
  }
 }

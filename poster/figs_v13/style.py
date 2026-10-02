@@ -68,6 +68,12 @@ def check_text(fig, floor=FLOOR):
 
 
 def save(fig, name):
+    # Numeric font weights are accepted by Agg but not by older SVG backends.
+    # Preserve the exact requested weight using its named equivalent.
+    weights = {400: "normal", 500: "medium", 600: "semibold", 700: "bold"}
+    for t in fig.findobj(matplotlib.text.Text):
+        if t.get_fontweight() in weights:
+            t.set_fontweight(weights[t.get_fontweight()])
     check_text(fig)
     for ext in ("svg", "png"):
         fig.savefig(os.path.join(OUT, f"{name}.{ext}"), dpi=300)   # 300 also for SVG so embedded rasters are not resampled to 72 ppi

@@ -128,3 +128,19 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 /* ---------- footer ---------- */
 .foot{border-top:.35mm solid var(--rule);padding-top:1.1mm;font-size:14pt;line-height:1.12;color:var(--ink2)}
 .foot .sep{color:var(--muted)}
+
+/* v13.3: the unified system precedes its measurements (issue #48). */
+.headtext .hero{top:57mm;line-height:1.02}
+.headtext .subhero{top:132mm;font-size:28pt;line-height:1.12}
+.headtext .bridge{position:absolute;left:20mm;top:158mm;width:600mm;font-size:24pt;line-height:1.1;font-weight:600;color:#FFFFFF}
+.addresscard{margin-top:3mm;padding:3mm 4mm;background:var(--oos-bg);border-left:1.2mm solid var(--ink2);font-size:20pt;line-height:1.14}
+.addresscard.blue{background:var(--emem-tint);border-color:var(--emem)}
+.addresscard b{font-size:17pt;letter-spacing:.035em}
+.token-anatomy{font-size:20pt;margin-top:4mm;color:var(--emem)}
+.handoff-row{margin-top:3mm;padding:3mm 4mm;display:flex;gap:5mm;align-items:center;background:var(--oos-bg);font-size:20pt;line-height:1.1}
+.handoff-row.blue{background:var(--emem-tint)}
+.handoff-token{padding:3mm 0;text-align:center;font-size:17pt;color:var(--emem)}
+.extension{border-color:var(--rule)}
+.extension-label{font-size:14pt;font-weight:600;letter-spacing:.035em;color:var(--emem)}
+.extension h2{margin-top:1mm}
+[data-block="p5"]>.scope{margin-top:2mm}

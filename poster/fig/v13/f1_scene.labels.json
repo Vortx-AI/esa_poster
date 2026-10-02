@@ -57,28 +57,28 @@
    "pt": 14
   },
   {
-   "text": "VIEW THE DEMO",
+   "text": "TRY IT",
    "claim": "Q.view_demo",
    "x_mm": 51.5,
    "y_mm": 100.5,
    "pt": 28
   },
   {
-   "text": "Your phone is Agent B: a",
+   "text": "Your phone becomes Agent B.",
    "claim": "Q.view_demo.caption",
    "x_mm": 51.5,
    "y_mm": 112.5,
    "pt": 17
   },
   {
-   "text": "paraphrase passes unchecked;",
+   "text": "Resolve the record",
    "claim": "Q.view_demo.caption",
    "x_mm": 51.5,
    "y_mm": 118.9,
    "pt": 17
   },
   {
-   "text": "three corruptions are refused.",
+   "text": "and run its checks.",
    "claim": "Q.view_demo.caption",
    "x_mm": 51.5,
    "y_mm": 125.3,

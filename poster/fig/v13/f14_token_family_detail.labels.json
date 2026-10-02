@@ -1,0 +1,264 @@
+{
+ "figure": "f14_token_family_detail",
+ "size_mm": [
+  201.0,
+  100.0
+ ],
+ "labels": [
+  {
+   "text": "data need",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "grammar, after emem:",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "what its id hashes",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "a place",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "cell:<cell64>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "the quantised lat/lng; no hash",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "one value",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact:<cell>:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR(fact)), 52 chars",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "nothing there",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact: · kind absence",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "same; + BLAKE3(reason)[:16]",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "an embedding",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact: · 128 / 1024 floats",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "same; attester_only",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a derived value",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact: · op, parents",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "same; pure ops re-run",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a raster",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "raster:<a>:<b>:<t>:<d>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "fact d names BLAKE3(grid)",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a raster in time",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "cube:<a>:<b>:<t0..t1>:<d>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR([member d…]))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a raster set",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "rasterset:<set>:<d>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR([d…, purpose]))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "many facts, one id",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "bundle:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(p, cell|band|t|cid)[:16]",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a file, one chunk",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "tree:<file>#row=i",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(note)[:16]; root inside",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a reasoning stage",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "state:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR(state record))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a named object",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "entity:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(anchor)[:16]: a label",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a device run",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "trace:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR(signed trace))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "an evidence chain",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "track.v1 note",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "link = BLAKE3(prev, ref)[:16]",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "hashes observed bytes",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "hashes a list of ids",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "hashes a name",
+   "pt": 14,
+   "claim": null
+  },
+  {
+   "text": "An embedding is one row of fourteen.",
+   "pt": 14,
+   "claim": "A14.footer"
+  },
+  {
+   "text": "Rules as coded at emem 18adb67.",
+   "pt": 14,
+   "claim": "A14.footer"
+  },
+  {
+   "text": "track.v1 is a note, not a token; no hardware is yet admitted behind a trace token.",
+   "pt": 14,
+   "claim": "A14.footer"
+  }
+ ]
+}

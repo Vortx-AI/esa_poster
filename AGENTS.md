@@ -2,11 +2,11 @@
 
 This repository holds the A0 poster for "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents
 over ~~Foundation-Model Embeddings~~ Satellite Observations and Signed Execution Traces" (Agentic AI for Earth
-Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.
+Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.3 (issue #48 unified-system rewrite).
 
 ## Start here
 
-1. `research/v13/12_FINAL_BRIEF.md`: the v13 build specification (composition, every printed word, figures, gates).
+1. `research/v13/14_UNIFIED_POSTER_BRIEF.md`: current narrative and printed copy. `research/v13/12_FINAL_BRIEF.md` retains the base grid, original evidence specification and gates.
 2. `research/v13/12_claims_map.json` plus `research/v13/12_claims_map_additions_*.json`: every number on the v13 board
    and its source (no row, no number; `extend_print` entries add printed forms of existing rows).
 3. `poster/build_v13_report.json`: the last build's gate results, layout deviations from the brief and word counts.
@@ -25,6 +25,7 @@ python research/repro/v11/mutation_suite.py   # R1 alone, offline
 ```
 
 Edit `poster/src/poster.v13.html` and `poster/src/poster.v13.css` (never `poster/poster.html`, which is generated).
+The printed face uses three QR tasks (Try it, Inspect, Reproduce); all six web routes remain.
 Colours: `poster/src/tokens.json`. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
 Deliberate departures from the brief's block rectangles, each with its reason: `poster/src/poster.v13.layout.json`.
 R5 lines (`data-mode="r5"`, `{R5.*}` placeholders) print only when `research/repro/v13/r5/results.json` is final; the

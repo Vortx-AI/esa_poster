@@ -2,500 +2,123 @@
  "figure": "f4_failure_ladder",
  "size_mm": [
   193.5,
-  254.2
- ],
- "rungs": [
-  {
-   "n": 1,
-   "title": "Lost in the handoff",
-   "y": 226.5503125,
-   "h": 27.649687499999995,
-   "status": "test rule"
-  },
-  {
-   "n": 2,
-   "title": "Wrong date",
-   "y": 190.49229166666666,
-   "h": 35.05802083333333,
-   "status": "open"
-  },
-  {
-   "n": 3,
-   "title": "Wrong place",
-   "y": 161.84260416666666,
-   "h": 27.649687499999995,
-   "status": "fix unconfirmed"
-  },
-  {
-   "n": 4,
-   "title": "Wrong version",
-   "y": 133.19291666666666,
-   "h": 27.649687499999995,
-   "status": "both kept"
-  },
-  {
-   "n": 5,
-   "title": "Wrong scale or offset",
-   "y": 97.13489583333333,
-   "h": 35.05802083333333,
-   "status": "fixed"
-  },
-  {
-   "n": 6,
-   "title": "Missing data signed as 0",
-   "y": 68.48520833333333,
-   "h": 27.649687499999995,
-   "status": "fixed"
-  },
-  {
-   "n": 7,
-   "title": "Wrong pixel, signed",
-   "y": 34.649687500000006,
-   "h": 32.83552083333333,
-   "status": "fixed 28 Sep 2026"
-  },
-  {
-   "n": 8,
-   "title": "Wrong thing",
-   "y": 6.000000000000011,
-   "h": 27.649687499999995,
-   "status": "fixed 30 Sep 2026"
-  }
+  190
  ],
  "labels": [
   {
-   "text": "each rung happened, in emem or in our tests",
-   "claim": "F4.legend",
-   "x_mm": 5.0,
-   "y_mm": 3.9,
+   "text": "WHAT MOVED",
+   "claim": "U.drift",
    "pt": 14
   },
   {
-   "text": "↑ passes more checks",
-   "claim": "F4.order",
-   "x_mm": 190.0,
-   "y_mm": 3.9,
+   "text": "WHAT TO CHECK",
+   "claim": "U.drift",
    "pt": 14
   },
   {
-   "text": "1",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 233.19,
+   "text": "PLACE",
+   "claim": "U.drift",
    "pt": 17
   },
   {
-   "text": "Lost in the handoff",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 233.19,
+   "text": "Compare the requested cell",
+   "claim": "U.drift",
+   "pt": 20
+  },
+  {
+   "text": "Coordinates keep the question anchored.",
+   "claim": "U.drift",
+   "pt": 15
+  },
+  {
+   "text": "TIME",
+   "claim": "U.drift",
    "pt": 17
   },
   {
-   "text": "test rule",
-   "claim": "F4.status.1",
-   "x_mm": 174.84,
-   "y_mm": 230.5,
-   "pt": 14
+   "text": "Bind the observation time",
+   "claim": "U.drift",
+   "pt": 20
   },
   {
-   "text": "resolve the reference · L0",
-   "claim": "F4.chips",
-   "x_mm": 131.82,
-   "y_mm": 230.5,
-   "pt": 14
+   "text": "Requested day and returned day remain visible.",
+   "claim": "U.drift",
+   "pt": 15
   },
   {
-   "text": "0.47 for 0.4709",
+   "text": "PRODUCT",
+   "claim": "U.drift",
+   "pt": 17
+  },
+  {
+   "text": "Inspect the band and convention",
+   "claim": "U.drift",
+   "pt": 20
+  },
+  {
+   "text": "Keep the product, grid and units explicit.",
+   "claim": "U.drift",
+   "pt": 15
+  },
+  {
+   "text": "SOURCE PIXEL / SCENE",
+   "claim": "U.drift",
+   "pt": 17
+  },
+  {
+   "text": "Re-read the named source",
+   "claim": "U.drift",
+   "pt": 20
+  },
+  {
+   "text": "Test the scene and the containing pixel.",
+   "claim": "U.drift",
+   "pt": 15
+  },
+  {
+   "text": "DERIVATION",
+   "claim": "U.drift",
+   "pt": 17
+  },
+  {
+   "text": "Recompute from the recipe",
+   "claim": "U.drift",
+   "pt": 20
+  },
+  {
+   "text": "Check inputs, parameters and offset rules.",
+   "claim": "U.drift",
+   "pt": 15
+  },
+  {
+   "text": "VALUE REPRESENTATION",
+   "claim": "U.drift",
+   "pt": 17
+  },
+  {
+   "text": "Resolve the exact record",
+   "claim": "U.drift",
+   "pt": 20
+  },
+  {
+   "text": "0.47 and 0.4709 lead to different test decisions.",
    "claim": "F.lost",
-   "x_mm": 6.0,
-   "y_mm": 238.78,
    "pt": 15
   },
   {
-   "text": "5 of 5 receivers irrigated",
-   "claim": "F.lost",
-   "x_mm": 6.0,
-   "y_mm": 245.93,
+   "text": "REFERENT",
+   "claim": "U.drift",
+   "pt": 17
+  },
+  {
+   "text": "Retain the application identity",
+   "claim": "U.drift",
    "pt": 20
   },
   {
-   "text": "Perez et al., ICLR 2025: LLM transmission chains drift",
-   "claim": "F.lost.out",
-   "x_mm": 6.0,
-   "y_mm": 251.46,
-   "pt": 14
-  },
-  {
-   "text": "2",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 197.13,
-   "pt": 17
-  },
-  {
-   "text": "Wrong date",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 197.13,
-   "pt": 17
-  },
-  {
-   "text": "open",
-   "claim": "F4.status.2",
-   "x_mm": 178.24,
-   "y_mm": 194.44,
-   "pt": 14
-  },
-  {
-   "text": "bind the date · L1",
-   "claim": "F4.chips",
-   "x_mm": 147.82,
-   "y_mm": 194.44,
-   "pt": 14
-  },
-  {
-   "text": "asked 23 Sep, served 25 Sep",
-   "claim": "F.date",
-   "x_mm": 6.0,
-   "y_mm": 202.72,
+   "text": "The place record accompanies the object meant.",
+   "claim": "U.drift",
    "pt": 15
-  },
-  {
-   "text": "10 of 10 agents saw one scene twice;",
-   "claim": "F.date",
-   "x_mm": 6.0,
-   "y_mm": 209.87,
-   "pt": 20
-  },
-  {
-   "text": "3 said no 23 Sep scene existed",
-   "claim": "F.date",
-   "x_mm": 6.0,
-   "y_mm": 217.28,
-   "pt": 20
-  },
-  {
-   "text": "STAC item search defines no default order",
-   "claim": "F.date.out",
-   "x_mm": 6.0,
-   "y_mm": 222.81,
-   "pt": 14
-  },
-  {
-   "text": "3",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 168.48,
-   "pt": 17
-  },
-  {
-   "text": "Wrong place",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 168.48,
-   "pt": 17
-  },
-  {
-   "text": "fix unconfirmed",
-   "claim": "F4.status.3",
-   "x_mm": 166.57,
-   "y_mm": 165.79,
-   "pt": 14
-  },
-  {
-   "text": "asked coordinates · L1",
-   "claim": "F4.chips",
-   "x_mm": 118.72,
-   "y_mm": 165.79,
-   "pt": 14
-  },
-  {
-   "text": "coordinates given, town point answered",
-   "claim": "F.place",
-   "x_mm": 6.0,
-   "y_mm": 174.07,
-   "pt": 15
-  },
-  {
-   "text": "597 m; NDVI 0.28 for the field's 0.42",
-   "claim": "F.place",
-   "x_mm": 6.0,
-   "y_mm": 181.22,
-   "pt": 20
-  },
-  {
-   "text": "GDAL 3 follows CRS axis order (RFC 73)",
-   "claim": "F.place.out",
-   "x_mm": 6.0,
-   "y_mm": 186.75,
-   "pt": 14
-  },
-  {
-   "text": "4",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 139.83,
-   "pt": 17
-  },
-  {
-   "text": "Wrong version",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 139.83,
-   "pt": 17
-  },
-  {
-   "text": "both kept",
-   "claim": "F4.status.4",
-   "x_mm": 173.34,
-   "y_mm": 137.14,
-   "pt": 14
-  },
-  {
-   "text": "source + as-of · L1",
-   "claim": "F4.chips",
-   "x_mm": 136.88,
-   "y_mm": 137.14,
-   "pt": 14
-  },
-  {
-   "text": "918.0 m, then 915.07 m, one band name",
-   "claim": "F.version",
-   "x_mm": 6.0,
-   "y_mm": 145.42,
-   "pt": 15
-  },
-  {
-   "text": "an earlier citation looks wrong",
-   "claim": "F4.version.consequence",
-   "x_mm": 6.0,
-   "y_mm": 152.57,
-   "pt": 20
-  },
-  {
-   "text": "GFC2020 V3 cut forest cover by more than 20 % in the Cerrado",
-   "claim": "F.version.out",
-   "x_mm": 6.0,
-   "y_mm": 158.1,
-   "pt": 14
-  },
-  {
-   "text": "5",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 103.77,
-   "pt": 17
-  },
-  {
-   "text": "Wrong scale or offset",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 103.77,
-   "pt": 17
-  },
-  {
-   "text": "fixed",
-   "claim": "F4.status.5",
-   "x_mm": 178.4,
-   "y_mm": 101.08,
-   "pt": 14
-  },
-  {
-   "text": "catalogue · L3",
-   "claim": "F4.chips",
-   "x_mm": 151.56,
-   "y_mm": 101.08,
-   "pt": 14
-  },
-  {
-   "text": "recompute · L2",
-   "claim": "F4.chips",
-   "x_mm": 113.5,
-   "y_mm": 101.08,
-   "pt": 14
-  },
-  {
-   "text": "WorldPop signed per pixel, not per km²: 1.77× low",
-   "claim": "F.worldpop",
-   "x_mm": 6.0,
-   "y_mm": 109.37,
-   "pt": 15
-  },
-  {
-   "text": "one pixel: 0.4709, 0.2966, 1.1427 under three offset",
-   "claim": "F.scale",
-   "x_mm": 6.0,
-   "y_mm": 116.51,
-   "pt": 20
-  },
-  {
-   "text": "rules",
-   "claim": "F.scale",
-   "x_mm": 6.0,
-   "y_mm": 123.92,
-   "pt": 20
-  },
-  {
-   "text": "Element84 items say \"offset applied\" and \"apply −0.1\"",
-   "claim": "F.scale.out",
-   "x_mm": 6.0,
-   "y_mm": 129.45,
-   "pt": 14
-  },
-  {
-   "text": "6",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 75.12,
-   "pt": 17
-  },
-  {
-   "text": "Missing data signed as 0",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 75.12,
-   "pt": 17
-  },
-  {
-   "text": "fixed",
-   "claim": "F4.status.6",
-   "x_mm": 178.4,
-   "y_mm": 72.44,
-   "pt": 14
-  },
-  {
-   "text": "re-read · L3",
-   "claim": "F4.chips",
-   "x_mm": 154.34,
-   "y_mm": 72.44,
-   "pt": 14
-  },
-  {
-   "text": "off-tile pixels signed as 0",
-   "claim": "F.missing",
-   "x_mm": 6.0,
-   "y_mm": 80.72,
-   "pt": 15
-  },
-  {
-   "text": "a forest-loss screen passes",
-   "claim": "F.missing",
-   "x_mm": 6.0,
-   "y_mm": 87.87,
-   "pt": 20
-  },
-  {
-   "text": "Hansen lossyear 0 means no loss",
-   "claim": "F.missing.out",
-   "x_mm": 6.0,
-   "y_mm": 93.39,
-   "pt": 14
-  },
-  {
-   "text": "7",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 41.29,
-   "pt": 17
-  },
-  {
-   "text": "Wrong pixel, signed",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 41.29,
-   "pt": 17
-  },
-  {
-   "text": "fixed 28 Sep 2026",
-   "claim": "F4.status.7",
-   "x_mm": 164.43,
-   "y_mm": 38.6,
-   "pt": 14
-  },
-  {
-   "text": "re-read only · L3",
-   "claim": "F4.chips",
-   "x_mm": 121.08,
-   "y_mm": 38.6,
-   "pt": 14
-  },
-  {
-   "text": "the reader rounded the pixel index",
-   "claim": "F4.pixel.what",
-   "x_mm": 6.0,
-   "y_mm": 46.88,
-   "pt": 15
-  },
-  {
-   "text": "162 of 200 sampled records",
-   "claim": "F.pixel",
-   "x_mm": 6.0,
-   "y_mm": 54.03,
-   "pt": 20
-  },
-  {
-   "text": "GDAL RFC 33: half-pixel shift; one-pixel misregistration: error > 50 % of NDVI",
-   "claim": "F.pixel.out",
-   "x_mm": 6.0,
-   "y_mm": 59.56,
-   "pt": 14
-  },
-  {
-   "text": "differences (Townshend 1992)",
-   "claim": "F.pixel.out",
-   "x_mm": 6.0,
-   "y_mm": 64.74,
-   "pt": 14
-  },
-  {
-   "text": "8",
-   "claim": "F4.titles",
-   "x_mm": 6.0,
-   "y_mm": 12.64,
-   "pt": 17
-  },
-  {
-   "text": "Wrong thing",
-   "claim": "F4.titles",
-   "x_mm": 11.6,
-   "y_mm": 12.64,
-   "pt": 17
-  },
-  {
-   "text": "fixed 30 Sep 2026",
-   "claim": "F4.status.8",
-   "x_mm": 164.43,
-   "y_mm": 9.95,
-   "pt": 14
-  },
-  {
-   "text": "none · L4",
-   "claim": "F4.chips",
-   "x_mm": 129.19,
-   "y_mm": 9.95,
-   "pt": 14
-  },
-  {
-   "text": "\"this image\" resolved to a hair salon in Ontario",
-   "claim": "F.thing",
-   "x_mm": 6.0,
-   "y_mm": 18.23,
-   "pt": 15
-  },
-  {
-   "text": "receipt, Merkle proof and state chain all valid",
-   "claim": "F.thing",
-   "x_mm": 6.0,
-   "y_mm": 25.38,
-   "pt": 20
-  },
-  {
-   "text": "toponym ambiguity (Gritta et al. 2018)",
-   "claim": "F.thing.out",
-   "x_mm": 6.0,
-   "y_mm": 30.91,
-   "pt": 14
   }
  ]
 }

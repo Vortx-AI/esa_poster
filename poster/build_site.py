@@ -24,8 +24,8 @@ QR_DIR = ROOT / "poster" / "fig" / "v13"
 FONT_SRC = ROOT / "poster" / "fonts" / "plex-full"
 BASE = "https://vortx-ai.github.io/esa_poster/"
 # (slug, call to action, path, printed symbol size in mm without the quiet zone; research/v13/09_demo_and_qr.md section 2.2)
-QRS = [("demo", "VIEW THE DEMO", "demo/", 70), ("t", "TRY A TOKEN", "t/", 40), ("r", "INSPECT THE RECORD", "r/", 40),
-       ("test", "RE-RUN THE TEST", "test/", 40), ("methods", "READ THE METHODS", "methods/", 40),
+QRS = [("demo", "TRY IT", "demo/", 70), ("t", "TRY A TOKEN", "t/", 40), ("r", "INSPECT", "r/", 40),
+       ("test", "RE-RUN THE TEST", "test/", 40), ("methods", "REPRODUCE", "methods/", 40),
        ("use", "DISCOVER INTEGRATIONS", "use/", 40)]
 FONTS = [("IBMPlexSans-Regular", "IBMPlexSans-Regular"), ("IBMPlexSans-SemiBold", "IBMPlexSans-SemiBold"),
          ("IBMPlexSans-Bold", "IBMPlexSans-Bold"), ("IBMPlexMono-Regular", "IBMPlexMono-Regular"),
