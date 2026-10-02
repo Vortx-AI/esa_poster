@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-01T10:06:40+00:00",
+ "built_utc": "2026-10-02T04:22:01+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -96,26 +96,19 @@
    "h_mm": 82.0,
    "mtime": "2026-10-01T08:50:09"
   },
-  "d_rondonia": {
+  "f13_one_address": {
    "state": "placed",
-   "file": "poster/fig/v13/d_rondonia.svg",
+   "file": "poster/fig/v13/f13_one_address.svg",
    "w_mm": 193.5,
-   "h_mm": 56.0,
-   "mtime": "2026-10-01T08:50:14"
+   "h_mm": 128.0,
+   "mtime": "2026-10-02T04:20:19"
   },
-  "d_vectors": {
+  "f14_token_family": {
    "state": "placed",
-   "file": "poster/fig/v13/d_vectors.svg",
+   "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
-   "h_mm": 24.0,
-   "mtime": "2026-10-01T06:17:18"
-  },
-  "f10_cost": {
-   "state": "placed",
-   "file": "poster/fig/v13/f10_cost.svg",
-   "w_mm": 193.5,
-   "h_mm": 50.0,
-   "mtime": "2026-10-01T08:51:40"
+   "h_mm": 100.0,
+   "mtime": "2026-10-02T04:21:38"
   },
   "f11_ecosystem": {
    "state": "placed",
@@ -132,7 +125,7 @@
    "mtime": "2026-10-01T06:03:23"
   }
  },
- "figure_text_tokens": 2199,
+ "figure_text_tokens": 2451,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -143,7 +136,7 @@
   "footer_clearance": {
    "pass": true,
    "details": [
-    "content ends 1167.0 mm, footer top 1169.5 mm, clearance 2.5 mm (need >= 2)"
+    "content ends 1167.1 mm, footer top 1169.5 mm, clearance 2.4 mm (need >= 2)"
    ]
   },
   "block_rectangles": {
@@ -158,12 +151,9 @@
     "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,552.0,396.0x275.0), off by 10.0 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
     "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
     "DEVIATION p7: brief (627.5,396.0,193.5x188.0) rendered (627.5,377.5,193.5x202.1), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,584.8,193.5x128.8), off by 9.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p9: brief (627.5,730.0,193.5x106.0) rendered (627.5,718.8,193.5x95.9), off by 21.4 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p10: brief (627.5,846.0,193.5x64.0) rendered (627.5,819.8,193.5x76.1), off by 26.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p11: brief (627.5,920.0,193.5x96.0) rendered (627.5,901.1,193.5x115.4), off by 18.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1020.5,531.0x146.5), off by 5.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt; F11 sits at the bottom of the panel.",
-    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1020.5,261.0x78.0), off by 9.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
+    "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,582.6,193.5x128.8), off by 11.4 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,531.0x147.5), off by 6.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt, and (v13.1) the four-line agent-host caption sits above F11; F11 sits at the bottom of the panel.",
+    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1019.5,261.0x78.0), off by 10.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13, 1 mm higher in v13.1 with the ecosystem caption's fourth line); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
     "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1103.0,261.0x64.0), off by 13.0 mm; reason: Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50).",
     "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
    ]
@@ -183,13 +173,13 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (860 text runs)"
+    "every printed code point is in the face that sets it (974 text runs)"
    ]
   },
   "prose_and_banned_words": {
    "pass": true,
    "details": [
-    "no em/en dashes, tell words or unlisted banned words; 39 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
+    "no em/en dashes, tell words or unlisted banned words; 37 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
    ]
   },
   "face_hygiene": {
@@ -207,13 +197,13 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "82 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "79 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "355 rows with a check re-run against their files: all pass (24 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "390 rows with a check re-run against their files: all pass (30 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -223,7 +213,7 @@
     "qr_t at (20.0,230.3) 801.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/t/' == payload 'https://vortx-ai.github.io/esa_poster/t/'",
     "qr_r at (568.5,381.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
     "qr_test at (568.5,777.0) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/test/' == payload 'https://vortx-ai.github.io/esa_poster/test/'",
-    "qr_use at (501.0,1024.3) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'",
+    "qr_use at (501.0,1023.3) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'",
     "qr_methods at (771.0,1117.0) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/methods/' == payload 'https://vortx-ai.github.io/esa_poster/methods/'"
    ]
   },
@@ -236,7 +226,7 @@
   "fonts_loaded": {
    "pass": true,
    "details": [
-    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: unloaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: loaded, IBM Plex Mono 600: loaded, IBM Plex Mono 700: loaded"
+    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: loaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: loaded, IBM Plex Mono 600: loaded, IBM Plex Mono 700: loaded"
    ]
   },
   "colour_tokens": {
@@ -254,18 +244,16 @@
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
     "f7_wrong_pixel: 2658x2316 px over 112.5 mm = 600 ppi",
-    "d_vectors: 3072x40 px over 88.2 mm = 884 ppi",
-    "d_vectors: 2304x40 px over 88.2 mm = 663 ppi"
+    "f13_one_address: 1344x1344 px over 37.9 mm = 900 ppi"
    ]
   },
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 822 words containing a letter, 871 tokens with numerals (cap 830 / 880; brief 823 / 869)",
+    "running text: 815 words containing a letter, 867 tokens with numerals (cap 830 / 880; brief 823 / 869; v13.1 section C: see the per-panel lines)",
     "  1 · Spine: 91 tokens (section C: 87)",
-    "  10 · Vectors are records too: 43 tokens (section C: 43)",
-    "  11 · The source re-read costs most: 53 tokens (section C: 53)",
-    "  12 · One evidence protocol, multiple agent runtimes: 44 tokens (section C: 44)",
+    "  10 · One token family: 9 tokens (section C: 9)",
+    "  12 · One evidence protocol, multiple agent runtimes (v13.1): 79 tokens (section C: 79)",
     "  13 · EMEM relies on these layers: 34 tokens (section C: 34)",
     "  2 · Eight answers; one is right: 51 tokens (section C: 51)",
     "  3 · Our own errors name the checks: 49 tokens (section C: 49)",
@@ -274,8 +262,9 @@
     "  6 · The right record, the wrong pixel: 56 tokens (section C: 56)",
     "  7 · Checks stop at the source: 58 tokens (section C: 58)",
     "  8 · Memory keeps what was cited: 48 tokens (section C: 48)",
-    "  9 · An auditor re-runs each input: 40 tokens (section C: 40)",
+    "  9 · One address, every product: 44 tokens (section C: 44)",
     "  Conclusion: 36 tokens (section C: 34)",
+    "  Drift: 44 tokens (section C: 44)",
     "  Header: 27 tokens (section C: 28)",
     "  Questions: 77 tokens (section C: 77)",
     "  Threat model: 48 tokens (section C: 48)"
@@ -301,13 +290,7 @@
   "imagery": "PASS",
   "word_budget": "PASS"
  },
- "running_lines_printed_by_figures": [
-  {
-   "figure": "d_rondonia",
-   "text": "Point samples, not parcel polygons; not a regulatory determination.",
-   "brief": "9 · An auditor re-runs each input"
-  }
- ],
+ "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
   "Handed prose, agents acted on 254 of 276 corruptions; handed a reference they check, on 0 of 300.",
   "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026; n per lane from the results file; adversary simulated; threshold constructed. Per model, prose → checked reference: Haiku 4.5 138 of 138 → 0 of 150; Sonnet 5.5 97 of 115 → 0 of 125; Opus 5.5 19 of 23 → 0 of 25; Qwen2.5-7B (open weights, one run) 22 of 23 → 2 of 25.",
@@ -319,7 +302,8 @@
   "Questions panel: RQ1 to RQ4 and H1 to H3 at 17 pt (brief A.2 body tier 24 pt)",
   "Threat model paragraph and the panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt); the threat paragraph went from 20 to 17 pt when the R5 lines landed in the spine",
   "Reason: with the section E figures drawn 1:1 and the section C text verbatim, 24 pt body overfills the side columns by about 40 to 60 mm and the bottom-right block by about 25 mm",
-  "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)"
+  "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)",
+  "v13.1: the v12.1 subtitles of panels 9 and 11 at 17 pt (caption tier); the drift block in the header at 17 pt with 14.2 pt subscripts; panel 11 keeps the v12.1 headline verbatim (39 characters, two lines at 32 pt) at the user's request"
  ],
  "layout_deviations": [
   "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Spine content measures 183.5 mm (F2 118 mm, agent strip in two lines at 24 pt beside the R5 scope lines at 14 pt); it starts 3 mm under the header (brief 8) and ends 6.5 mm earlier, giving the three columns 18.5 mm.",
@@ -331,12 +315,9 @@
   "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,552.0,396.0x275.0), off by 10.0 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
   "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,833.2,396.0x183.3), off by 5.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
   "DEVIATION p7: brief (627.5,396.0,193.5x188.0) rendered (627.5,377.5,193.5x202.1), off by 18.5 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,584.8,193.5x128.8), off by 9.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p9: brief (627.5,730.0,193.5x106.0) rendered (627.5,718.8,193.5x95.9), off by 21.4 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p10: brief (627.5,846.0,193.5x64.0) rendered (627.5,819.8,193.5x76.1), off by 26.2 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p11: brief (627.5,920.0,193.5x96.0) rendered (627.5,901.1,193.5x115.4), off by 18.9 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
-  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1020.5,531.0x146.5), off by 5.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt; F11 sits at the bottom of the panel.",
-  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1020.5,261.0x78.0), off by 9.5 mm; reason: Bottom band starts 1020.5 mm (brief 1026); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
+  "DEVIATION p8: brief (627.5,594.0,193.5x126.0) rendered (627.5,582.6,193.5x128.8), off by 11.4 mm; reason: Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width.",
+  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,531.0x147.5), off by 6.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt, and (v13.1) the four-line agent-host caption sits above F11; F11 sits at the bottom of the panel.",
+  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (560.0,1019.5,261.0x78.0), off by 10.5 mm; reason: Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13, 1 mm higher in v13.1 with the ecosystem caption's fourth line); the F12 credit footnote moved into the footer paragraph to make room for the conclusion.",
   "DEVIATION conclusion: brief (560.0,1116.0,261.0x50.0) rendered (560.0,1103.0,261.0x64.0), off by 13.0 mm; reason: Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50).",
   "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
  ],
@@ -356,31 +337,38 @@
   {
    "id": "right",
    "content_bottom": 1016.5,
-   "natural_mm": 626.9,
+   "natural_mm": 635.8,
    "height": 639.0
   },
   {
    "id": "bottomright",
    "content_bottom": 1167.0,
    "natural_mm": 143.5,
-   "height": 146.5
+   "height": 147.5
   }
  ],
- "allowlist_used": 39,
+ "allowlist_used": 37,
  "allowlist_unused": [
-  "A signed observation reference left the receiver acting on none of the 16 corrup"
+  "Derived representations are addressable too: this cell's Prithvi-EO-2.0 vector n",
+  "A signed observation reference left the receiver acting on none of the 16 corrup",
+  "A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s,",
+  "all offline checks 0.33 ms",
+  "offline proof bundle 0.57 ms (4,906 B)"
  ],
  "claims_printed": [
-  "B.costscope",
-  "C.cpu",
-  "C.g2tok",
-  "C.g2wall",
-  "C.reread",
-  "C.tok",
+  "BE.grid",
+  "BE.stack",
+  "D.dz",
+  "D.names",
+  "D.values",
   "E8.summary",
   "EC.11",
   "EC.9of11",
+  "EC.chatgpt.publisher",
   "EC.notrun",
+  "EC.plugin",
+  "EC.plugin.skills",
+  "EC.plugin.tokens",
   "F.caption",
   "F.pixel",
   "F4.rail",
@@ -400,7 +388,6 @@
   "L.reread0",
   "L.status",
   "O.1115",
-  "O.46",
   "O.84",
   "O.batch",
   "O.nohash",
@@ -431,8 +418,6 @@
   "R5.models",
   "R5.qwen.alone",
   "REF.footer",
-  "RO.grid",
-  "RO.tmf",
   "S.16",
   "S.G2.boundary",
   "S.G2.haiku.F",
@@ -441,22 +426,25 @@
   "S.R1.I",
   "S.threshold",
   "T.can",
+  "TF.family",
   "TM.915",
   "TM.asof",
   "TM.keylong",
-  "V.prithvi",
-  "V.resolve",
-  "V.retired",
-  "V.tessera",
   "W.kx",
   "W.vals",
   "X.entity",
   "X.loo",
   "X.only"
  ],
- "figure_numbers_checked": 455,
- "rows_rechecked": 355,
+ "figure_numbers_checked": 490,
+ "rows_rechecked": 390,
  "rows_delegated_to_figure_asserts": [
+  "A13.dates",
+  "A13.products",
+  "A13.cids",
+  "A13.count",
+  "A13.scope",
+  "A14.need",
   "F5.fields",
   "F5.onebit",
   "F5.read",
@@ -483,7 +471,7 @@
   "F8.trust"
  ],
  "words": {
-  "running_words_with_letter": 822,
-  "running_tokens": 871
+  "running_words_with_letter": 815,
+  "running_tokens": 867
  }
 }

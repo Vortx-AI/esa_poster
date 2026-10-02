@@ -1,5 +1,5 @@
 {
- "schema": "deliberate departures from research/v13/12_FINAL_BRIEF.md section B; the block gate prints each with the rendered rectangle",
+ "schema": "deliberate departures from research/v13/12_FINAL_BRIEF.md section B (v13.1 table, 2026-10-02); the block gate prints each with the rendered rectangle",
  "deviations": {
   "p1": {
    "reason": "Spine content measures 183.5 mm (F2 118 mm, agent strip in two lines at 24 pt beside the R5 scope lines at 14 pt); it starts 3 mm under the header (brief 8) and ends 6.5 mm earlier, giving the three columns 18.5 mm."
@@ -31,20 +31,11 @@
   "p8": {
    "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
   },
-  "p9": {
-   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
-  },
-  "p10": {
-   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
-  },
-  "p11": {
-   "reason": "Section B gives this panel less height than its section C text needs at the section A.2 sizes with its section E figure drawn 1:1, so the panels of its column are stacked by content with 3 mm gaps; the column runs 377.5 to 1016.5 mm (brief 396 to 1016) and every panel keeps its column, order and width."
-  },
   "p12": {
-   "reason": "Bottom band starts 1020.5 mm (brief 1026) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt; F11 sits at the bottom of the panel."
+   "reason": "Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13) and ends 1167 mm so the conclusion, its 40 mm QR and the methods label fit at 24 pt, and (v13.1) the four-line agent-host caption sits above F11; F11 sits at the bottom of the panel."
   },
   "p13": {
-   "reason": "Bottom band starts 1020.5 mm (brief 1026); the F12 credit footnote moved into the footer paragraph to make room for the conclusion."
+   "reason": "Bottom band starts 1019.5 mm (brief 1026; 1020.5 in v13, 1 mm higher in v13.1 with the ecosystem caption's fourth line); the F12 credit footnote moved into the footer paragraph to make room for the conclusion."
   },
   "conclusion": {
    "reason": "Conclusion at 24 pt SemiBold needs five lines beside the 50 mm QR box plus the READ THE METHODS label: 65 mm (brief 50)."

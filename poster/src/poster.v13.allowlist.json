@@ -321,6 +321,22 @@
    "where": "fig:f10_cost",
    "evidence": "C.bundle",
    "reason": "'proof bundle' names the committed artefact research/repro/v8/proof_bundle_ndvi.cbor (cost_measurements.json m2.bundle), not a claim about a value"
+  },
+  {
+   "word": "every",
+   "text_sha": "49437bfbc26b4b779d30fa35c11d10f573ddb1641a9d2f845a0bafc955ff48e9",
+   "sentence": "One address, every product",
+   "where": "html:p9:headline",
+   "evidence": "BE.stack",
+   "reason": "v12.1 panel title kept verbatim (v13.1); 'every product' is bounded by the row: the 15 products of the figure's stack, 16 signed facts, 4 absences"
+  },
+  {
+   "word": "true",
+   "text_sha": "88dad1b42c5a86f3880ce324afeb2697ff100e69f24097d2a4a2bc8094c4bdc0",
+   "sentence": "true colour,",
+   "where": "fig:f13_one_address",
+   "evidence": "A13.chip",
+   "reason": "'true colour' is the composite's name (B04/B03/B02), as in the header strip (H.img.grid); F13 chip caption"
   }
  ]
 }

@@ -21,6 +21,11 @@
   <h1 class="title rt" data-role="title" data-claim="H.title">EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol<br>for AI Agents over Foundation-Model Embeddings</h1>
   <p class="hero rt" data-role="hero" data-claim="H.hero">Agents hand each other evidence<br>references, not paraphrases.</p>
   <p class="subhero rt" data-role="subhero" data-claim="H.sub.mechanism H.sub.boundary">The receiver resolves the reference, re-hashes the record, re-reads the source. A signature fixes the record's bytes, not the measurement.</p>
+  <!-- v13.1: the drift idea block of the v12.1 board ("THE IDEA"), set in the sub-hero area -->
+  <div class="drift" data-brief="Drift">
+    <p class="rt" data-role="drift" data-claim="D.names D.values"><b>Names move:</b> “the north field” drifts; a 64-bit cell id of about 10 m does not. <b>Values move:</b> 0.4709 becomes “about 0.47”; a fact_cid breaks if one bit changes.</p>
+    <p class="rt" data-role="drift" data-claim="D.dz"><span class="dz">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub> + Δ<sub>encoder</sub> + ε</span>: world, instrument, misregistration, model, noise; change at one pinned address.</p>
+  </div>
   <div class="byline" data-role="byline" data-claim="H.byline H.session">
     <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai</div>
     <div>Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026 · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)</div>
@@ -155,32 +160,38 @@
   <div class="fig" data-figslot="f9_timeline" style="--fw:193.5;--fh:82"><!--fig:f9_timeline--></div>
   <p class="cap rt" data-role="caption" data-claim="TM.asof TM.915 TM.keylong">Asked about 15 Jun, the memory returns 918.0 m; the August record does not overwrite it, and the receiver checks the cited state by its address; at Keylong the newer record would flip the decision.</p>
 </section>
-<section class="panel c3" data-block="p9" data-brief="9 · An auditor re-runs each input">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">9</span>Can a screen be re-checked input by input?</p>
-  <h2 class="rt" data-role="headline" data-claim="RO.grid">An auditor re-runs each input</h2>
-  <p class="must rt" data-unless-figtext="d_rondonia|Point samples, not parcel polygons" data-brief-sec="9 · An auditor re-runs each input" data-role="mandatory" data-claim="RO.must">Point samples, not parcel polygons; not a regulatory determination.</p>
-  <div class="fig" data-figslot="d_rondonia" style="--fw:193.5;--fh:56"><!--fig:d_rondonia--></div>
-  <p class="cap rt" data-role="caption" data-claim="RO.grid RO.tmf">100 point samples 740 m apart, 600 signed records, each re-hashed; TMF agrees on 1 of 3 flags.</p>
+<!-- v13.1: panels 9 to 11 (Rondônia, vectors, cost) replaced by three panels of the v12.1 board: one address, token family, SAT-042 -->
+<section class="panel c3" data-block="p9" data-brief="9 · One address, every product">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">9</span>Which products does one address reach?</p>
+  <h2 class="rt" data-role="headline" data-claim="BE.stack">One address, every product</h2>
+  <p class="subtitle rt" data-role="subtitle" data-claim="BE.stack BE.grid">One 10 m cell in central Berlin, read live on 30 Sep 2026 from each product's native grid (10 m to about 11 km): 15 products, 16 signed facts, 4 of them signed absences.</p>
+  <div class="fig" data-figslot="f13_one_address" style="--fw:193.5;--fh:128"><!--fig:f13_one_address--></div>
 </section>
-<section class="panel c3" data-block="p10" data-brief="10 · Vectors are records too">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">10</span>Where are the foundation-model embeddings?</p>
-  <h2 class="rt" data-role="headline" data-claim="V.prithvi V.tessera">Vectors are records too</h2>
-  <p class="body s17 rt" data-role="body" data-claim="V.prithvi V.tessera V.resolve V.retired">Derived representations are addressable too: this cell's Prithvi-EO-2.0 vector names its checkpoint digest inside the hashed record; the TESSERA vector, only a path and year. Both still resolve; emem.dev lists its encoders as retired.</p>
-  <div class="fig" data-figslot="d_vectors" style="--fw:193.5;--fh:24"><!--fig:d_vectors--></div>
+<section class="panel c3" data-block="p10" data-brief="10 · One token family">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">10</span>What else can a token name?</p>
+  <h2 class="rt" data-role="headline" data-claim="TF.family">One token family</h2>
+  <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:100"><!--fig:f14_token_family--></div>
 </section>
-<section class="panel c3 " data-block="p11" data-brief="11 · The source re-read costs most">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>What does checking cost?</p>
-  <h2 class="rt" data-role="headline" data-claim="C.reread">The source re-read costs most</h2>
-  <p class="body s17 rt" data-role="body" data-claim="C.cpu C.reread X.only C.tok O.46 C.g2tok">A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel. A reference costs 46 tokens, the value 8; a model receiver read 2.1× the tokens prose costs, same decisions.</p>
-  <div class="fig" data-figslot="f10_cost" style="--fw:193.5;--fh:50"><!--fig:f10_cost--></div>
-  <p class="scope figscope" data-unless-figtext="f10_cost|One 2.8 GHz" data-role="scope" data-claim="B.costscope C.cpu C.g2wall">One 2.8 GHz Xeon core; network through our TLS proxy; tokens cl100k; Claude Haiku 4.5 receiver, 10 runs per arm, +1.75 s.</p>
+<!-- v13.1, SAT-042 panel: prepared but NOT placed. The right column (639 mm) holds the ladder (202.1), the timeline (128.8)
+     and two of the three v12.1 panels; with this one (206.9 mm at 1:1, F15 118 mm) it would need 849 mm. To place it, move
+     the <section> out of this <template>, change fig_off to fig, add f15_sat042 to FIGURES in the build and allowlist its
+     kicker (verif-without-layer, evidence K.sat042), headline (prove, SAT.run) and caption (only, SAT.gate); see
+     research/v13/12_FINAL_BRIEF.md section B "v13.1 change". Rows SAT.* in 12_claims_map_additions_board2.json are ready. -->
+<template id="p11-sat042-off">
+<section class="panel c3" data-block="p11" data-brief="11 · How a satellite could prove what it ran">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>Extending verification from observations to execution</p>
+  <h2 class="rt" data-role="headline" data-claim="SAT.run">How a satellite could prove what it ran</h2>
+  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run">SAT-042 is a scripted pass in emem's test harness, not a spacecraft; run on 30 Sep 2026.</p>
+  <div class="fig" data-figslot="f15_sat042" style="--fw:193.5;--fh:118"><!--fig_off:f15_sat042--></div>
+  <p class="cap rt" data-role="caption" data-claim="SAT.refused SAT.admitted SAT.tamper SAT.gate K.sat042">A write with no trace and a fact the trace did not emit are refused; 3 facts are admitted under one trace; a rewritten segment is named. Reference harness, no spacecraft enrolled; the gate binds the value digest only.</p>
 </section>
+</template>
 </div>
 
 <!-- ================= BOTTOM BAND ================= -->
-<section class="blk panel c8" data-block="p12" data-brief="12 · One evidence protocol, multiple agent runtimes" style="--x:20;--y:1020.5;--w:531;--h:146.5">
+<section class="blk panel c8" data-block="p12" data-brief="12 · One evidence protocol, multiple agent runtimes (v13.1)" style="--x:20;--y:1019.5;--w:531;--h:147.5">
   <h2 class="rt" data-role="headline" data-claim="EC.11"><span class="num" data-exempt="panelno">12</span>One evidence protocol, multiple agent runtimes.</h2>
-  <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 EC.notrun" style="width:350mm">One reference resolved to one address and one value through 11 client paths, with receipt signatures checked on 9 (30 Sep 2026). A listing is not an integration. Not run by us: ChatGPT, claude.ai, Dify, VS Code, Cursor.</p>
+  <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 EC.plugin EC.plugin.skills EC.plugin.tokens EC.chatgpt.publisher EC.notrun" style="width:356mm">One reference resolved to one address and one value through 11 client paths, with receipt signatures checked on 9 (30 Sep 2026). Agent hosts: emem is a Claude Code plugin (marketplace emem@emem 2.4.2, 19 skills, 3,672 tokens a session: LIVE, installed by us) and a ChatGPT app (@emem: listed by its publisher, not re-checked by us). A listing is not an integration. Not run by us: ChatGPT, claude.ai, Dify, VS Code, Cursor.</p>
   <div class="fig" data-figslot="f11_ecosystem" style="--fw:531;--fh:100"><!--fig:f11_ecosystem--></div>
   <div class="qr" data-qr="use" data-claim="Q.discover_integrations" style="right:0;top:3mm"><div class="sym"><!--qr:use--></div></div>
   <div class="qrlabel r" data-claim="Q.discover_integrations" style="right:54mm;top:19mm;width:118mm">
@@ -189,7 +200,7 @@
   </div>
 </section>
 
-<div class="col" data-col="bottomright" style="--gap:3;--x:560;--y:1020.5;--w:261;--h:146.5">
+<div class="col" data-col="bottomright" style="--gap:3;--x:560;--y:1019.5;--w:261;--h:147.5">
 <section class="panel c4" data-block="p13" data-brief="13 · EMEM relies on these layers">
   <h2 class="rt" data-role="headline" data-claim="PA.critical"><span class="num" data-exempt="panelno">13</span>EMEM relies on these layers</h2>
   <p class="body s17 rt" data-role="body" data-claim="PA.critical PA.geoguard_line">A STAC item identifies a file; EMEM identifies the observation an agent cited, for the next agent to re-check. GeoGuard judges the claim; EMEM fixes the evidence it cites.</p>

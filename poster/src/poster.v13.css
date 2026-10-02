@@ -47,6 +47,7 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .body{font-size:20pt;line-height:1.12;color:var(--ink);margin-top:1.0mm}
 .body.s17{font-size:17pt;line-height:1.1}
 .cap{font-size:17pt;line-height:1.16;color:var(--ink2);margin-top:1.2mm}
+.subtitle{font-size:17pt;line-height:1.16;color:var(--ink2);margin-top:.6mm}   /* v13.1: the v12.1 panel subtitles, caption tier */
 .must{font-size:17pt;line-height:1.2;font-weight:700;color:var(--ink);margin-top:1.0mm}
 .scope{font-size:14pt;line-height:1.22;color:var(--ink2)}
 .figscope{margin-top:1.2mm}
@@ -59,10 +60,15 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 
 /* ---------- header ---------- */
 .headtext{background:var(--navy);color:#FFFFFF}
-.headtext .title{position:absolute;left:20mm;top:12mm;width:600mm;font-size:56pt;line-height:1.06;font-weight:600;letter-spacing:-.01em;color:#FFFFFF}
-.headtext .hero{position:absolute;left:20mm;top:60mm;width:604mm;font-size:100pt;line-height:.98;font-weight:700;letter-spacing:-.018em;color:#FFFFFF}
-.headtext .subhero{position:absolute;left:20mm;top:137mm;width:596mm;font-size:32pt;line-height:1.1;font-weight:500;color:var(--emem-light)}
-.headtext .byline{position:absolute;left:20mm;top:167.5mm;width:600mm;font-size:17pt;line-height:1.24;color:rgba(255,255,255,.85)}
+.headtext .title{position:absolute;left:20mm;top:9mm;width:600mm;font-size:56pt;line-height:1.06;font-weight:600;letter-spacing:-.01em;color:#FFFFFF}
+.headtext .hero{position:absolute;left:20mm;top:54mm;width:604mm;font-size:100pt;line-height:.98;font-weight:700;letter-spacing:-.018em;color:#FFFFFF}
+.headtext .subhero{position:absolute;left:20mm;top:126mm;width:596mm;font-size:32pt;line-height:1.1;font-weight:500;color:var(--emem-light)}
+/* v13.1: drift block (v12.1 "THE IDEA") in the sub-hero area; two lines at 17 pt */
+.headtext .drift{position:absolute;left:20mm;top:152.5mm;width:600mm;font-size:17pt;line-height:1.2;color:rgba(255,255,255,.92)}
+.headtext .drift b{color:#FFFFFF;font-weight:600}
+.headtext .drift .dz{font-weight:500;color:var(--emem-light)}
+.headtext .drift sub{font-size:14.2pt;line-height:0;vertical-align:-0.25em}
+.headtext .byline{position:absolute;left:20mm;top:171mm;width:600mm;font-size:17pt;line-height:1.24;color:rgba(255,255,255,.85)}
 .headtext .byline b{color:#FFFFFF;font-weight:600}
 .headimg{overflow:visible;background:var(--navy)}
 .headimg .scene{position:absolute;left:0;top:0;width:calc(var(--fw)*1mm);height:calc(var(--fh)*1mm)}

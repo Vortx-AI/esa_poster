@@ -46,17 +46,17 @@ CHROME_GLOB = "/opt/pw-browsers"
 TODAY = dt.date.today()
 
 FIGURES = ["f1_scene", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object", "f6_mutation_matrix",
-           "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f10_cost", "f11_ecosystem", "f12_prior_art",
-           "d_threat", "d_rondonia", "d_vectors"]
+           "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem", "f12_prior_art", "d_threat",
+           "f13_one_address", "f14_token_family"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; F15 (SAT-042) is drawn but not placed (no room: see the brief, section B v13.1)
 QRS = ["demo", "t", "r", "test", "methods", "use"]
 
 # brief section B row label -> data-block id
 BLOCK_ROWS = {"Header text": "header_text", "Header image": "header_image", "1 Spine": "p1", "2 Eight answers": "p2",
               "3 Our own errors": "p3", "Questions and hypotheses": "questions", "Threat model": "threat",
               "4 What is handed over": "p4", "5 Mutation matrix": "p5", "6 The right record": "p6",
-              "7 Verification ladder": "p7", "8 Same place": "p8", "9 Rondônia": "p9", "10 Vectors": "p10",
-              "11 What it costs": "p11", "12 Ecosystem": "p12", "13 Prior-art": "p13", "Conclusion": "conclusion",
-              "Footer": "footer"}
+              "7 Verification ladder": "p7", "8 Same place": "p8", "9 One address": "p9", "10 Token family": "p10",
+              "11 SAT-042": "p11", "12 Ecosystem": "p12", "13 Prior-art": "p13", "Conclusion": "conclusion",
+              "Footer": "footer"}   # v13.1 rows (section B, "v13.1 change") replace 9 Rondônia, 10 Vectors, 11 What it costs
 # deliberate departures from the section B rectangles; each must carry a reason (printed in the report)
 LAYOUT_DEVIATIONS = json.loads((HERE / "src" / "poster.v13.layout.json").read_text())["deviations"] \
     if (HERE / "src" / "poster.v13.layout.json").exists() else {}
@@ -67,7 +67,10 @@ TYPE_DEVIATIONS = [  # accepted by the coordinator on 2026-10-01; the 14 pt floo
     "Threat model paragraph and the panel 10, 11 and 13 paragraphs at 17 pt (brief A.2 body tier 24 pt); the threat paragraph went from 20 to 17 pt when the R5 lines landed in the spine",
     "Reason: with the section E figures drawn 1:1 and the section C text verbatim, 24 pt body overfills the side columns by about 40 to 60 mm and the bottom-right block by about 25 mm",
     "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)",
+    "v13.1: the v12.1 subtitles of panels 9 and 11 at 17 pt (caption tier); the drift block in the header at 17 pt with 14.2 pt subscripts; "
+    "panel 11 keeps the v12.1 headline verbatim (39 characters, two lines at 32 pt) at the user's request",
 ]
+HEADLINE_LEN_EXEMPT = {"p11": "v12.1 title kept verbatim at the user's request (2026-10-02); two lines at 32 pt"}
 MOVED = []          # running-text lines that a figure prints itself (dropped from the HTML, still counted)
 REPORT_EXTRA = {}
 
@@ -539,10 +542,14 @@ def g_type(meas, claims):
             cls = next((b for b in ("c3", "c4", "c6", "c8") if c["block"] in BLOCK_CLASS.get(b, ())), None)
             txt = c["text_noexempt"]
             if cls in ("c3", "c4") and len(txt) > 30:
-                d.append(f"three/four-column headline over 30 characters ({len(txt)}): {txt!r}")
+                if c["block"] in HEADLINE_LEN_EXEMPT:
+                    d.append(f"DEVIATION {c['block']}: headline {len(txt)} characters; reason: {HEADLINE_LEN_EXEMPT[c['block']]}")
+                else:
+                    d.append(f"three/four-column headline over 30 characters ({len(txt)}): {txt!r}")
             if cls in ("c6", "c8") and len(txt) > 50:
                 d.append(f"six/eight-column headline over 50 characters ({len(txt)}): {txt!r}")
-    return not d, d or ["no text below 14 pt (HTML and figure SVG, effective size); kicker, mechanism and take lines >= 24 pt; captions >= 17 pt; headline lengths"]
+    bad = [x for x in d if not x.startswith("DEVIATION")]
+    return not bad, d or ["no text below 14 pt (HTML and figure SVG, effective size); kicker, mechanism and take lines >= 24 pt; captions >= 17 pt; headline lengths"]
 
 
 BLOCK_CLASS = {"c3": ("p2", "p3", "questions", "threat", "p7", "p8", "p9", "p10", "p11"), "c4": ("p13",),
@@ -783,6 +790,8 @@ def g_claims(meas, claims, rows, r5):
 # port of the checks in the brief's Appendix I generator (re-run every row that has one)
 def _rp(p):
     p = str(p)
+    if p.startswith("poster/"):          # figure-side files (verify.json, labels) live under poster/
+        return REPO / p
     return RES / (p[len("research/"):] if p.startswith("research/") else p)
 
 
@@ -874,6 +883,24 @@ def run_check(c, rows_list, rid=None):
     if kind == "eco":
         m = {r["id"]: r for r in _J(f)}[p]
         return m["print"]["allowed"] is True and m["status"] in ("LIVE", "PROTOCOL", "REGISTRY", "EXAMPLE")
+    if kind == "eco_field":   # arg [manifest id, field, substring]: the manifest row's field holds the substring
+        m = {r["id"]: r for r in _J(f)}[p[0]]
+        return p[2] in json.dumps(m[p[1]])
+    if kind == "berlin":   # v13.1 panel 9: the v12.1 selection (poster/make_figures_v12.py fig_berlin) re-applied to the live file
+        rows = _J(f)["rows"]
+        def pick(inst, qty, date=None):
+            return next(r for r in rows if inst in r["instrument"] and qty in r["quantity"]
+                        and (date is None or (r["observed_at"] or "").startswith(date)))
+        sel = [("S2", pick("Sentinel-2", "B08", "2026-09-27")), ("S2", pick("Sentinel-2", "NDVI", "2026-09-27")),
+               ("S1", pick("Sentinel-1", "VV", "2026-09-28")), ("DEM", pick("Copernicus DEM", "elevation")),
+               ("MOD11A2", pick("MOD11A2", "temperature")), ("WorldCover", pick("WorldCover", "class")),
+               ("CCI", pick("CCI Biomass", "biomass")), ("GSW", pick("Surface Water", "occurrence")),
+               ("Hansen", pick("Hansen", "tree cover")), ("GFC2020", pick("Forest Cover 2020", "forest")),
+               ("CAMS", pick("Copernicus Atmosphere", "NO2", "2026-09-30")), ("Overture", pick("Overture", "building")),
+               ("SoilGrids", pick("SoilGrids", "organic carbon")), ("CHIRPS", pick("CHIRPS", "precip")),
+               ("TMF", pick("Tropical Moist", "deforestation")), ("FIRMS", pick("FIRMS", "fire"))]
+        got = [len({a for a, _ in sel}), len(sel), sum(1 for _, r in sel if r["kind"] == "absence")]
+        return got == list(exp) and all(r["verified"] in (True, "PASS", "pass") for _, r in sel)
     if kind == "count":   # figure additions: two argument forms are understood; anything else is unknown (a failure)
         J = _J(f)
         m = re.fullmatch(r"attestations value ([\d.]+)", p)
@@ -1070,7 +1097,7 @@ def g_words(claims, r5=False):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
     # cap: brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16 (807 / 853 before them) plus about 1 % slack
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; brief 823 / 869)"]
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; brief 823 / 869; v13.1 section C: see the per-panel lines)"]
     ok = tot_w <= 830 and tot_t <= 880
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)

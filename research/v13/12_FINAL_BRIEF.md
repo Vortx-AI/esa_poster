@@ -90,6 +90,29 @@ failure is general) → panel 4 (the exact invention) → panels 5 and 6 (the ex
 panel 7 and the threat model (what it proves and does not) → panels 8 to 11 (time, a real screen, vectors, cost) →
 panel 12 (it works across runtimes) → panel 13 and the conclusion (where it sits; reproduce it).
 
+### v13.1 change (2026-10-02): panels 9 to 11 replaced by two v12.1 panels; the drift block in the header
+
+At the authors' request the v13 panels 9 (Rondônia screen), 10 (vectors) and 11 (what it costs) leave the face, and
+four things from the v12.1 board come back: the drift idea block (header, sub-hero area), panel 9 "One address, every
+product" (F13, 193.5 × 128 mm, drawn 1:1), panel 10 "One token family" (F14, 193.5 × 100 mm, drawn 1:1) and the agent-host
+sentence in panel 12 (Claude Code plugin, ChatGPT app, each with its manifest status). The SAT-042 panel "How a satellite
+could prove what it ran" (F15, 193.5 × 118 mm) was prepared but could not be placed: with its kicker (two lines at 24 pt),
+its v12.1 headline (two lines at 32 pt), subtitle and caption it measures 206.9 mm, and the right column (639 mm) already
+holds the ladder (202.1), the timeline (128.8) and the two panels above (174.6 and 124.7, total 639.2 with gaps);
+the left (635.0) and centre (630.7) columns have no slack, and F13 to F15 set most text at the 14 pt floor, so they
+cannot be scaled. Its markup stays in `poster/src/poster.v13.html` inside `<template id="p11-sat042-off">`; its text
+is below under section C "v13.1 change". The footer's extension line (K.sat042) remains the face's SAT-042 statement.
+
+Rows that change (everything else as in the table above; the column stacks by content with 3 mm gaps, as before):
+
+| block | cols | x (mm) | y (mm) | w × h (mm) | share of page | answers MASTER §28 question |
+|---|---|---|---|---|---|---|
+| 9 One address, every product (F13) | 10 to 12 | 627.5 | 714.5 | 193.5 × 174.5 | 3.4 % | Q2, Q3 |
+| 10 Token family (F14) | 10 to 12 | 627.5 | 892 | 193.5 × 124.5 | 2.4 % | Q2 |
+
+Header internals in v13.1: title y 9 to 51; hero y 54 to 123; sub-hero y 126 to 151; drift block y 152.5 to 167 (two
+lines, 17 pt, white at 92 %, formula in Medium `emem-light`, subscripts 14.2 pt); byline y 171 to 186.
+
 ---
 
 ## C. The complete printed text
@@ -433,6 +456,60 @@ Line 2 (references): `Sentinel-2 Products Specification (ESA) · Copernicus DEM 
 Not on the face (move to `/methods/`): the token-family table, the formulas, SAT-042's figure, the Berlin stack, the
 encoding bar, the compaction study, version history, defect numbers, scorecards, traffic counts, the witnessed flag,
 star and install counts, the 209-record count at the Keylong address.
+
+### v13.1 change (2026-10-02)
+
+The sections below replace "9 · An auditor re-runs each input", "10 · Vectors are records too", "11 · The source
+re-read costs most" and the panel 12 caption; the header gains the drift block. Counted by the Appendix I counter like
+every other section.
+
+### Drift (v13.1)
+
+Header, sub-hero area (17 pt, two lines, white at 92 %; "Names move" and "Values move" in SemiBold; the formula in Medium
+`emem-light` with 14.2 pt subscripts):
+
+> Names move: “the north field” drifts; a 64-bit cell id of about 10 m does not. Values move: 0.4709 becomes “about 0.47”; a fact_cid breaks if one bit changes.
+> Δz = Δenv + Δsensor + Δgeo + Δencoder + ε: world, instrument, misregistration, model, noise; change at one pinned address.
+
+### 9 · One address, every product (193.5 × 174.5 mm)
+
+> Which products does one address reach?
+
+Headline (32 pt SemiBold; "every" allowlisted against BE.stack):
+
+> One address, every product
+
+Subtitle (17 pt, the v12.1 subtitle verbatim):
+
+> One 10 m cell in central Berlin, read live on 30 Sep 2026 from each product's native grid (10 m to about 11 km): 15 products, 16 signed facts, 4 of them signed absences.
+
+Figure text (F13): see `research/v13/12_claims_map_additions_F13-15.json` (rows A13.*).
+
+### 10 · One token family (193.5 × 124.5 mm)
+
+> What else can a token name?
+
+Headline (32 pt SemiBold):
+
+> One token family
+
+Figure text (F14): rows A14.* of the same file.
+
+### 12 · One evidence protocol, multiple agent runtimes (v13.1)
+
+Headline unchanged. Caption (17 pt; the agent-host sentence is new, each host with its manifest status):
+
+> One evidence protocol, multiple agent runtimes.
+
+> One reference resolved to one address and one value through 11 client paths, with receipt signatures checked on 9 (30 Sep 2026). Agent hosts: emem is a Claude Code plugin (marketplace emem@emem 2.4.2, 19 skills, 3,672 tokens a session: LIVE, installed by us) and a ChatGPT app (@emem: listed by its publisher, not re-checked by us). A listing is not an integration. Not run by us: ChatGPT, claude.ai, Dify, VS Code, Cursor.
+
+### 11 · How a satellite could prove what it ran (prepared, not placed; not counted)
+
+Kicker `Extending verification from observations to execution`; headline `How a satellite could prove what it ran`;
+subtitle `SAT-042 is a scripted pass in emem's test harness, not a spacecraft; run on 30 Sep 2026.`; figure F15;
+caption `A write with no trace and a fact the trace did not emit are refused; 3 facts are admitted under one trace; a
+rewritten segment is named. Reference harness, no spacecraft enrolled; the gate binds the value digest only.`
+Allowlist it needs if placed: kicker (verif-without-layer, K.sat042), headline (prove, SAT.run), caption (only, SAT.gate).
 
 ---
 
