@@ -1,190 +1,526 @@
 {
  "figure": "f2_spine",
  "size_mm": [
-  801,
-  118
+  801.0,
+  118.0
  ],
- "mode": "r5",
+ "mode": "R5",
+ "lanes": [
+  "prose",
+  "json",
+  "rag",
+  "opaque",
+  "emem"
+ ],
+ "numerals": {
+  "prose": [
+   254,
+   276
+  ],
+  "json": [
+   164,
+   276
+  ],
+  "rag": [
+   220,
+   276
+  ],
+  "opaque": [
+   154,
+   288
+  ],
+  "emem": [
+   0,
+   300
+  ]
+ },
+ "snippets": {
+  "prose": "The Sentinel-2 L2A NDVI for the 10 m cell at Keylong, Lahaul (32.57126 N, 77.03448 E) was 0.4708994708994709, from the 25 September 2026 Sentinel-2A scene (tile T43SFS).",
+  "json": "{\"about\": {\"field\": \"Keylong, Lahaul (32.57126 N, 77.03448 E)\", \"cell\": \"defi.zb572.xoso.zb1ec\", \"question_date\": \"2026-09-25\"}, \"observation\": {\"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-25\", \"tslot\": 20721, \"value\": 0.4708994708994709, \"unit\": null, \"source_scene\": \"S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015\", \"derivation\": {\"fn_key\": \"sentinel2_l2a_indices_ndvi@1\", \"B08_DN\": 3502.0, \"B04_DN\": 1900.0, \"boa_offset\": -1000.0}, \"signer\": \"777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka\", \"signed_at\": \"2026-09-28T09:06:56Z\"}}",
+  "rag": "Field log, Keylong, Lahaul (32.57126 N, 77.03448 E), cell defi.zb572.xoso.zb1ec, 25 Sep 2026: Sentinel-2 L2A NDVI = 0.4708994708994709 (scene S2A_MSIL2A_20260925T054251_R005_T43SFS_20260925T090015, fn sentinel2_l2a_indices_ndvi@1, signed 2026-09-28T09:06:56Z).",
+  "opaque": "record ref obs-7d1c44",
+  "emem": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
+ },
+ "r5": {
+  "A": [
+   254,
+   276,
+   null
+  ],
+  "B": [
+   164,
+   276,
+   null
+  ],
+  "C": [
+   220,
+   276,
+   null
+  ],
+  "D": [
+   154,
+   288,
+   null
+  ],
+  "E0": [
+   2,
+   300,
+   null
+  ],
+  "E": [
+   0,
+   300,
+   null
+  ],
+  "Eplus": [
+   0,
+   300,
+   null
+  ],
+  "models": "claude-haiku-4-5-20251001, claude-sonnet-5-5, claude-opus-5-5, qwen2.5-7b-instruct-q4_k_m",
+  "dates": "{'prereg_hashed_utc': '2026-10-01T05:22:03Z', 'first_trial_utc': '2026-10-01T05:29:31Z', 'last_trial_utc': '2026-10-01T09:41:18Z', 'analysed_utc': '2026-10-01T09:46:29Z'}"
+ },
  "labels": [
   {
-   "text": "EARTH DATA",
-   "claim": "U.flow",
+   "text": "Agent A cites",
+   "claim": "F2.heads",
+   "x_mm": 0,
+   "y_mm": 11,
    "pt": 17
   },
   {
-   "text": "AGENT REASONING",
-   "claim": "U.flow",
+   "text": "handoff",
+   "claim": "F2.heads",
+   "x_mm": 112,
+   "y_mm": 11,
    "pt": 17
   },
   {
-   "text": "OBSERVE",
-   "claim": "U.flow",
-   "pt": 30
-  },
-  {
-   "text": "Read the source",
-   "claim": "U.flow",
-   "pt": 20
-  },
-  {
-   "text": "Optical \u00b7 radar \u00b7 terrain",
-   "claim": "U.flow",
+   "text": "relay",
+   "claim": "F2.heads",
+   "x_mm": 355,
+   "y_mm": 11,
    "pt": 17
   },
   {
-   "text": "LOCATE",
-   "claim": "U.flow",
-   "pt": 30
-  },
-  {
-   "text": "Name the lookup",
-   "claim": "U.flow",
-   "pt": 20
-  },
-  {
-   "text": "cell \u00b7 product \u00b7 time",
-   "claim": "U.flow",
+   "text": "Agent B",
+   "claim": "F2.heads",
+   "x_mm": 400,
+   "y_mm": 11,
    "pt": 17
   },
   {
-   "text": "RECORD",
-   "claim": "U.flow",
-   "pt": 30
-  },
-  {
-   "text": "Canonicalise the record",
-   "claim": "U.flow",
-   "pt": 20
-  },
-  {
-   "text": "value \u00b7 derivation \u00b7 sources",
-   "claim": "U.flow",
+   "text": "B acted on",
+   "claim": "F2.heads",
+   "x_mm": 690,
+   "y_mm": 4.9,
    "pt": 17
   },
   {
-   "text": "HAND OFF",
-   "claim": "U.flow",
-   "pt": 30
-  },
-  {
-   "text": "Agent A passes a reference",
-   "claim": "U.flow",
-   "pt": 20
-  },
-  {
-   "text": "emem:fact:<cell>:<cid>",
-   "claim": "U.flow",
+   "text": "corrupted evidence",
+   "claim": "F2.heads",
+   "x_mm": 690,
+   "y_mm": 11,
    "pt": 17
   },
   {
-   "text": "RESOLVE",
-   "claim": "U.flow",
-   "pt": 30
-  },
-  {
-   "text": "Agent B retrieves it",
-   "claim": "U.flow",
-   "pt": 20
-  },
-  {
-   "text": "the exact addressed record",
-   "claim": "U.flow",
+   "text": "no check reaches",
+   "claim": "F2.heads",
+   "x_mm": 749.5,
+   "y_mm": 11,
    "pt": 17
   },
   {
-   "text": "CHECK",
-   "claim": "U.flow",
-   "pt": 30
-  },
-  {
-   "text": "Bind and re-hash",
-   "claim": "U.flow",
-   "pt": 20
-  },
-  {
-   "text": "attestation \u00b7 recipe \u00b7 source",
-   "claim": "U.flow",
-   "pt": 17
-  },
-  {
-   "text": "CONTINUE",
-   "claim": "U.flow",
-   "pt": 30
-  },
-  {
-   "text": "Use the checked record",
-   "claim": "U.flow",
-   "pt": 20
-  },
-  {
-   "text": "compare \u00b7 reason \u00b7 act",
-   "claim": "U.flow",
-   "pt": 17
-  },
-  {
-   "text": "Lookup identity: where / product / time",
-   "claim": "U.identities",
-   "pt": 22
-  },
-  {
-   "text": "Content address: BLAKE3 of the canonical record",
-   "claim": "U.identities",
-   "pt": 22
-  },
-  {
-   "text": "CONTROLLED HANDOFF TEST: ACTED ON CORRUPTED EVIDENCE",
-   "claim": "U.benchmark",
+   "text": "agents, pooled Claude",
+   "claim": "F2.mode",
+   "x_mm": 690,
+   "y_mm": 16.4,
    "pt": 14
   },
   {
-   "text": "prose",
-   "claim": "U.benchmark",
+   "text": "A",
+   "claim": "F2.agents",
+   "x_mm": 69.0,
+   "y_mm": 28.3,
+   "pt": 28
+  },
+  {
+   "text": "Agent A reads",
+   "claim": "F2.agentA",
+   "x_mm": 0,
+   "y_mm": 76.0,
    "pt": 20
   },
   {
-   "text": "254 / 276",
+   "text": "NDVI 0.4709 and cites it",
+   "claim": "F2.agentA",
+   "x_mm": 0,
+   "y_mm": 84.0,
+   "pt": 20
+  },
+  {
+   "text": "Sentinel-2A L2A, 25 Sep 2026",
+   "claim": "H.img.record",
+   "x_mm": 0,
+   "y_mm": 94.0,
+   "pt": 14
+  },
+  {
+   "text": "outlined: the 10 m pixel the record names",
+   "claim": "F2.agentA.px",
+   "x_mm": 0,
+   "y_mm": 100.0,
+   "pt": 14
+  },
+  {
+   "text": "RGB from recorded grids",
+   "claim": "V7.flow",
+   "x_mm": 0,
+   "y_mm": 106.0,
+   "pt": 14
+  },
+  {
+   "text": "relay or faulty",
+   "claim": "V7.flow",
+   "x_mm": 337,
+   "y_mm": 23.5,
+   "pt": 15
+  },
+  {
+   "text": "signer changes:",
+   "claim": "V7.flow",
+   "x_mm": 337,
+   "y_mm": 32.45,
+   "pt": 15
+  },
+  {
+   "text": "value",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 41.4,
+   "pt": 15
+  },
+  {
+   "text": "cell",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 50.35,
+   "pt": 15
+  },
+  {
+   "text": "time",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 59.3,
+   "pt": 15
+  },
+  {
+   "text": "band",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 68.25,
+   "pt": 15
+  },
+  {
+   "text": "source",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 77.2,
+   "pt": 15
+  },
+  {
+   "text": "derivation",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 86.15,
+   "pt": 15
+  },
+  {
+   "text": "stale state",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 95.1,
+   "pt": 15
+  },
+  {
+   "text": "signature",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 104.05,
+   "pt": 15
+  },
+  {
+   "text": "pixel",
+   "claim": "F2.relay",
+   "x_mm": 337,
+   "y_mm": 113.0,
+   "pt": 15
+  },
+  {
+   "text": "prose",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 20.6,
+   "pt": 20
+  },
+  {
+   "text": "The Sentinel-2 L2A NDVI for the 10 m cell at Keylong, Lahaul…",
+   "claim": "F2.snippets",
+   "x_mm": 112,
+   "y_mm": 31.8,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 27.8,
+   "pt": 17
+  },
+  {
+   "text": "reads the text",
+   "claim": "F2.actions",
+   "x_mm": 418,
+   "y_mm": 27.5,
+   "pt": 20
+  },
+  {
+   "text": "254 / 276",
    "claim": "R5.A.pooled",
-   "pt": 38
+   "x_mm": 690,
+   "y_mm": 28.1,
+   "pt": 48
   },
   {
    "text": "JSON",
-   "claim": "U.benchmark",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 40.6,
    "pt": 20
   },
   {
-   "text": "164 / 276",
+   "text": "{\"about\": {\"field\": \"Keylong, Lahaul (32.57126 N, 77.03448 E…",
+   "claim": "F2.snippets",
+   "x_mm": 112,
+   "y_mm": 51.8,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 47.8,
+   "pt": 17
+  },
+  {
+   "text": "reads the fields",
+   "claim": "F2.actions",
+   "x_mm": 418,
+   "y_mm": 47.5,
+   "pt": 20
+  },
+  {
+   "text": "164 / 276",
    "claim": "R5.B.pooled",
-   "pt": 38
+   "x_mm": 690,
+   "y_mm": 48.1,
+   "pt": 48
   },
   {
-   "text": "retrieved text",
-   "claim": "U.benchmark",
+   "text": "retrieved text (RAG)",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 60.6,
    "pt": 20
   },
   {
-   "text": "220 / 276",
+   "text": "Field log, Keylong, Lahaul (32.57126 N, 77.03448 E), cell de…",
+   "claim": "F2.snippets",
+   "x_mm": 112,
+   "y_mm": 71.8,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 67.8,
+   "pt": 17
+  },
+  {
+   "text": "retrieves a passage",
+   "claim": "F2.actions",
+   "x_mm": 418,
+   "y_mm": 67.5,
+   "pt": 20
+  },
+  {
+   "text": "220 / 276",
    "claim": "R5.C.pooled",
-   "pt": 38
+   "x_mm": 690,
+   "y_mm": 68.1,
+   "pt": 48
   },
   {
    "text": "opaque id",
-   "claim": "U.benchmark",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 80.6,
    "pt": 20
   },
   {
-   "text": "154 / 288",
+   "text": "record ref obs-7d1c44",
+   "claim": "F2.snippets",
+   "x_mm": 112,
+   "y_mm": 91.8,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 87.8,
+   "pt": 17
+  },
+  {
+   "text": "fetches the sender’s record",
+   "claim": "F2.actions",
+   "x_mm": 418,
+   "y_mm": 87.5,
+   "pt": 20
+  },
+  {
+   "text": "154 / 288",
    "claim": "R5.D.pooled",
-   "pt": 38
+   "x_mm": 690,
+   "y_mm": 88.1,
+   "pt": 48
   },
   {
-   "text": "checked reference",
-   "claim": "U.benchmark",
+   "text": "EMEM reference",
+   "claim": "F2.lanes",
+   "x_mm": 112,
+   "y_mm": 100.6,
    "pt": 20
   },
   {
-   "text": "0 / 300",
+   "text": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67c…",
+   "claim": "O.cid",
+   "x_mm": 114.5,
+   "y_mm": 111.8,
+   "pt": 15
+  },
+  {
+   "text": "B",
+   "claim": "F2.agents",
+   "x_mm": 407.5,
+   "y_mm": 107.8,
+   "pt": 17
+  },
+  {
+   "text": "resolve",
+   "claim": "F2.chips",
+   "x_mm": 429.53,
+   "y_mm": 103.92,
+   "pt": 15
+  },
+  {
+   "text": "re-hash",
+   "claim": "F2.chips",
+   "x_mm": 455.26,
+   "y_mm": 103.92,
+   "pt": 15
+  },
+  {
+   "text": "bind",
+   "claim": "F2.chips",
+   "x_mm": 477.43,
+   "y_mm": 103.92,
+   "pt": 15
+  },
+  {
+   "text": "signature",
+   "claim": "F2.chips",
+   "x_mm": 501.69,
+   "y_mm": 103.92,
+   "pt": 15
+  },
+  {
+   "text": "log",
+   "claim": "F2.chips",
+   "x_mm": 424.23,
+   "y_mm": 111.48,
+   "pt": 15
+  },
+  {
+   "text": "recompute",
+   "claim": "F2.chips",
+   "x_mm": 448.51,
+   "y_mm": 111.48,
+   "pt": 15
+  },
+  {
+   "text": "source re-read",
+   "claim": "F2.chips",
+   "x_mm": 487.16,
+   "y_mm": 111.48,
+   "pt": 15
+  },
+  {
+   "text": "0 / 300",
    "claim": "R5.E.pooled",
+   "x_mm": 690,
+   "y_mm": 108.1,
+   "pt": 48
+  },
+  {
+   "text": "the entity meant (M17)",
+   "claim": "S.boundary_wall",
+   "x_mm": 711,
+   "y_mm": 30.5,
+   "pt": 20
+  },
+  {
+   "text": "sensor accuracy",
+   "claim": "S.boundary_wall",
+   "x_mm": 711,
+   "y_mm": 43.0,
+   "pt": 20
+  },
+  {
+   "text": "the decision",
+   "claim": "S.boundary_wall",
+   "x_mm": 711,
+   "y_mm": 55.5,
+   "pt": 20
+  },
+  {
+   "text": "GENUINE CONTROLS",
+   "claim": "V7.flow",
+   "x_mm": 711,
+   "y_mm": 80,
+   "pt": 14
+  },
+  {
+   "text": "71 / 72",
+   "claim": "V6.controls",
+   "x_mm": 711,
+   "y_mm": 93,
    "pt": 38
+  },
+  {
+   "text": "expected decisions",
+   "claim": "V7.flow",
+   "x_mm": 711,
+   "y_mm": 105,
+   "pt": 17
+  },
+  {
+   "text": "checked reference · pooled Claude",
+   "claim": "V7.flow",
+   "x_mm": 711,
+   "y_mm": 112,
+   "pt": 14
   }
  ]
 }

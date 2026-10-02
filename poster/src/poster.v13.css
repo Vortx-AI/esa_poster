@@ -159,3 +159,13 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .community .qrhtext{max-width:745mm}
 .community .mech{font-size:24pt}
 .community .community-url{font-size:14pt}
+
+/* v13.7: recovered experimental flow; fuller model at unchanged print floors. */
+.algebra{margin-top:2mm;font-size:19pt;line-height:1.3}
+.algebra b{color:var(--emem)}
+.invention{padding:3mm 4mm;background:var(--emem-tint);border-color:var(--emem)}
+.memory .equation{font-size:25pt;margin-top:2mm}
+.memory .equation.small{font-size:19pt}
+.memory .addresscard{padding:2mm 3mm;margin-top:2mm}
+.temporal-equation{font-size:22pt;line-height:1.25;color:var(--emem);margin-top:2mm}
+.temporal-equation sub{font-size:14pt;line-height:0;vertical-align:-.25em}

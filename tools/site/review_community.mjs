@@ -3,7 +3,7 @@
 import { chromium } from 'playwright-core';
 import fs from 'fs';import path from 'path';import http from 'http';
 const root=path.resolve(new URL('../..',import.meta.url).pathname);
-const docs=path.join(root,'docs');const out=path.join(root,'research/v13/evidence/v136');
+const docs=path.join(root,'docs');const out=path.join(root,'research/v13/evidence',process.env.POSTER_REVIEW_RELEASE||'v136');
 fs.mkdirSync(out,{recursive:true});
 const server=http.createServer((req,res)=>{
   const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);

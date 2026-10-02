@@ -48,9 +48,9 @@ R5_DIR = RES / "repro" / "v13" / "r5"
 CHROME_GLOB = "/opt/pw-browsers"
 TODAY = dt.date.today()
 
-FIGURES = ["f1_scene", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object", "f6_mutation_matrix",
+FIGURES = ["f1_scene", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f6_mutation_matrix",
            "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem",
-           "f13_one_address", "f14_token_family", "f16_embeddings"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; v13.2: SAT-042 as the strip F15b (F15 drawn, not placed)
+           "f13_one_address", "f14_token_family", "f16_embeddings"]   # v13.7: Berlin replaces the generic wire-record schematic; full flow and token family restored.
 QRS = ["demo", "r", "use"]  # issue #48: three printed tasks; all six web routes remain
 
 # brief section B row label -> data-block id
@@ -67,7 +67,7 @@ LAYOUT_DEVIATIONS = json.loads((HERE / "src" / "poster.v13.layout.json").read_te
 GATES = {}          # name -> {"pass": bool, "details": [...]}
 TYPE_DEVIATIONS = [
     "v13.4: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
-    "The left column restores the memory model, drift equations and archived foundation-model outputs.",
+    "The left column holds complete drift rules, memory operations and archived model outputs; the right holds the observation model.",
     "The execution extension accompanies the anchor score; the final right-column panel states next experiments.",
 ]
 HEADLINE_LEN_EXEMPT = {}
@@ -1012,7 +1012,7 @@ def g_fonts(meas):
                                            ", ".join(f"{f['family']} {f['weight']}: {f['status']}" for f in meas["fonts"])]
 
 
-IMAGERY_FIGS = {"f1_scene", "f2_spine", "f5_evidence_object", "f7_wrong_pixel"}   # figures that draw real pixels as cells
+IMAGERY_FIGS = {"f1_scene", "f2_spine", "f7_wrong_pixel"}   # figures that draw real pixels as cells
 
 
 def _hexes(text):

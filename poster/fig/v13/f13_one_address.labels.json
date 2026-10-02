@@ -1,8 +1,8 @@
 {
  "figure": "f13_one_address",
  "size_mm": [
-  193.5,
-  174.0
+  396.0,
+  142.0
  ],
  "cell": "defi.zb655.yaka.pUxe",
  "scene": "S2C_MSIL2A_20260927T101801_R065_T33UUU_20260927T153810",
@@ -10,7 +10,7 @@
  "labels": [
   {
    "text": "BERLIN",
-   "pt": 22,
+   "pt": 24,
    "claim": "A13.head"
   },
   {
@@ -19,9 +19,19 @@
    "claim": "A13.head"
   },
   {
-   "text": "52.5243 N, 13.4105 E · one 10 m cell",
+   "text": "Sentinel-2C L2A · 27 Sep 2026",
    "pt": 14,
-   "claim": "A13.head"
+   "claim": "A13.chip"
+  },
+  {
+   "text": "RGB · 2.24 km across; box: 90 m",
+   "pt": 14,
+   "claim": "A13.chip"
+  },
+  {
+   "text": "Marker locates the shared lookup cell.",
+   "pt": 14,
+   "claim": "V7.berlin"
   },
   {
    "text": "direct sensor",
@@ -49,29 +59,24 @@
    "claim": "V6.berlin_labels"
   },
   {
-   "text": "Sentinel-2C L2A · 27 Sep 2026 · RGB · 2.24 km across; box: 90 m",
-   "pt": 14,
-   "claim": "A13.chip"
-  },
-  {
    "text": "product",
    "pt": 14,
-   "claim": "V6.berlin_labels"
+   "claim": "V7.berlin"
   },
   {
-   "text": "signed reading",
+   "text": "attested reading",
    "pt": 14,
-   "claim": "V6.berlin_labels"
+   "claim": "V7.berlin"
   },
   {
-   "text": "valid time",
+   "text": "time / absent at",
    "pt": 14,
-   "claim": "V6.berlin_labels"
+   "claim": "V7.berlin"
   },
   {
-   "text": "grid",
+   "text": "native grid",
    "pt": 14,
-   "claim": "V6.berlin_labels"
+   "claim": "V7.berlin"
   },
   {
    "text": "fact_cid",
@@ -80,417 +85,417 @@
   },
   {
    "text": "Sentinel-2C L2A",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "NIR 0.0475",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "27 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "10 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "wtqd64…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "Sentinel-2C L2A",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "NDVI 0.195",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "27 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "10 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "y2k2ti…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "Sentinel-1C RTC",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "VV −2.82 dB",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "28 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "n/s",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "2x2enx…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "GLO-30 DEM",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "36.6 m DSM",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "2021",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "30 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "sdu3gf…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "MODIS MOD11A2",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "297.4 K day LST",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "29 Aug 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "1 km",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "yqhihm…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "ESA WorldCover",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "built-up (50)",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "2021",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "10 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "xicg6u…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "ESA CCI Biomass",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "0 t/ha",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "2022",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "100 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "keebyc…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "JRC GSW v1.4",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "0 % water",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "1984 to 2021",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "30 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "hohgux…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "Hansen v1.13",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "0 % tree cover",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "2000",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "n/s",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "x4kpky…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "JRC GFC2020 V4",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "not forest",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "2020",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "10 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "oog2b4…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "Copernicus CAMS",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "NO₂ 12.3 µg/m³",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "30 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "~11 km",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "jvwhwg…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "Overture, not EO",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "0 buildings",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "Aug 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "vector",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "czehax…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "ISRIC SoilGrids",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "no data, null",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "30 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "250 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "mkwinv…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "CHIRPS v2.0",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "outside ±50°",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "30 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "0.05°",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "bkaovf…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "JRC TMF",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "outside ±30°",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "30 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "30 m",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "w7t2hx…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
    "text": "NASA FIRMS",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.products"
   },
   {
    "text": "no fire in 24 h",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.readings"
   },
   {
    "text": "30 Sep 2026",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.times"
   },
   {
    "text": "points",
-   "pt": 14,
+   "pt": 17,
    "claim": "A13.grids"
   },
   {
    "text": "k2ykb2…",
-   "pt": 14,
+   "pt": 16,
    "claim": "A13.cids"
   },
   {
-   "text": "15 products, 16 signed facts, 4 signed absences, 10 m to about 11 km; read live 30",
-   "pt": 14,
+   "text": "15 products · 16 attested records · 4 signed absences · read 30 Sep 2026",
+   "pt": 16,
    "claim": "A13.scope"
   },
   {
-   "text": "Sep 2026. Native grids remain distinct; n/s: grid not in source files. 16 records",
-   "pt": 14,
-   "claim": "A13.scope"
+   "text": "Shared address, distinct native grids. Hatched: absence. n/s: grid not stated.",
+   "pt": 15,
+   "claim": "V7.berlin"
   },
   {
-   "text": "re-hash under emem.dev's key, 2 Oct 2026.",
-   "pt": 14,
+   "text": "All 16 records re-hashed to their CIDs on 2 Oct 2026.",
+   "pt": 15,
    "claim": "A13.scope"
   }
  ]

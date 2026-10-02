@@ -2,72 +2,82 @@
  "figure": "f4_failure_ladder",
  "size_mm": [
   193.5,
-  100
+  116
  ],
  "labels": [
   {
    "text": "IMPLEMENTED \u00b7 DRIFT-ANCHOR SCORE",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 14
   },
   {
-   "text": "u = |x \u2212 a| / (3\u03c3)",
-   "claim": "DF.score",
+   "text": "d = |x \u2212 a|",
+   "claim": "V7.score",
    "pt": 26
   },
   {
-   "text": "s = u / (1 + u)",
-   "claim": "DF.score",
-   "pt": 30
+   "text": "r = d / (3\u03c3);  s = r / (1 + r)",
+   "claim": "V7.score",
+   "pt": 26
+  },
+  {
+   "text": "for finite x, a and 0 < \u03c3 < \u221e",
+   "claim": "V7.score",
+   "pt": 17
+  },
+  {
+   "text": "Invalid \u03c3: s = 0 if d = 0; otherwise s = 1.",
+   "claim": "V7.score",
+   "pt": 17
   },
   {
    "text": "x: output \u00b7 a: anchor \u00b7 \u03c3: anchor uncertainty",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 16
   },
   {
    "text": "consistent",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
    "text": "tension",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
    "text": "contradicted",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
    "text": "0",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
    "text": "0.50",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
    "text": "0.75",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
    "text": "1",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
    "text": "Tests pin 3\u03c3 \u2192 0.50 and 9\u03c3 \u2192 0.75.",
-   "claim": "DF.score",
+   "claim": "V7.score",
    "pt": 17
   },
   {
-   "text": "Missing or invalid \u03c3: exact agreement required.",
-   "claim": "DF.score",
+   "text": "Score boundaries: consistent < 0.50; tension < 0.75.",
+   "claim": "V7.score",
    "pt": 15
   }
  ]

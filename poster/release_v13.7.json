@@ -1,0 +1,91 @@
+{
+  "release": "v13.7",
+  "date": "2026-10-02",
+  "base_commit": "5d23f93dde8065a5a2fe91b3d7a90f9b60dcc233",
+  "historical_design_sources": [
+    "2686b27a9947613b72c4690c4dc524839c6fbcd2",
+    "57a48a6a350dc61c221f01531c86ca795d82a07a"
+  ],
+  "artifacts": {
+    "poster/emem-poster-A0.pdf": {
+      "bytes": 1997757,
+      "sha256": "23e197848ceee44301f9c12b08b8e69df86e11283f2b38a0a17d1f0bd00a0483"
+    },
+    "poster/emem-poster-preview.png": {
+      "bytes": 4025579,
+      "sha256": "773527bfac8a0d226c7c1fcac6651063501b67185b0c5c10c7e6ac101d4ec908"
+    },
+    "poster/emem-poster-A0-300dpi.png": {
+      "bytes": 11685016,
+      "sha256": "2b4f61d442b44d32560f9bcef56bd532836c5a751523ae5c0327726af76a5ea0"
+    },
+    "poster/build_v13_report.json": {
+      "bytes": 28976,
+      "sha256": "94478abd7e9a57bc0a8fb81d6903eb4b9213202a2364a0a3900d05fed1160489"
+    },
+    "research/v13/evidence/v137/site_review.json": {
+      "bytes": 58247,
+      "sha256": "34856e206b7ee2bf43132d65f2cf13f77adbc008e8c7d4aca6c096da2573ac0a"
+    },
+    "research/v13/evidence/v137/gate_tests.txt": {
+      "bytes": 1307,
+      "sha256": "2de4af6c0a0b68f2df86c588192fdd51983f848a52519c92f31ecb7486dc9c7f"
+    }
+  },
+  "validation": {
+    "poster_gates": {
+      "page_fit": "PASS",
+      "footer_clearance": "PASS",
+      "block_rectangles": "PASS",
+      "no_overflow_or_clipping": "PASS",
+      "type_floor": "PASS",
+      "glyph_coverage": "PASS",
+      "prose_and_banned_words": "PASS",
+      "face_hygiene": "PASS",
+      "r5_placeholders": "PASS",
+      "claims_coverage": "PASS",
+      "ecosystem_manifest": "PASS",
+      "claims_rows_recheck": "PASS",
+      "qr_decode": "PASS",
+      "assets": "PASS",
+      "fonts_loaded": "PASS",
+      "colour_tokens": "PASS",
+      "imagery": "PASS",
+      "word_budget": "PASS"
+    },
+    "running_words": 681,
+    "printed_claim_rows": 152,
+    "evidence_rows_rechecked": 414,
+    "local_route_viewports": {
+      "passed": 16,
+      "failed": 0
+    },
+    "evidence_gate_tests": 14,
+    "visual_review": "Full A0 and final Berlin panel rendered from the PDF and inspected; no overlap or clipping.",
+    "proof_lossless_compression": {
+      "optimizer": "pyoxipng 9.1.1, level 3",
+      "pixels_and_dpi_unchanged": true,
+      "decoded": {
+        "size": [
+          9933,
+          14042
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ],
+        "rgb_sha256": "944f7726d612d5e3d5b222af350e4cce77a9abfd34b693b6a159147a4e17241b"
+      },
+      "bytes_before": 14417587,
+      "bytes_after": 11685016,
+      "seconds": 54.6
+    }
+  },
+  "issues_resolved": [
+    11,
+    13,
+    26,
+    31
+  ],
+  "scope": "No new model trials, fresh Rust run or hosted-agent successes. Existing scientific evidence retains its original dates and limitations."
+}

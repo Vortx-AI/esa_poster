@@ -1,0 +1,270 @@
+{
+  "purpose": "Recover full historical visual flow and token grammar; complete model and score with implementation boundaries.",
+  "rows": [
+    {
+      "id": "V7.flow",
+      "block": "v13.7 recovery",
+      "print": [
+        "relay or faulty",
+        "signer changes:",
+        "RGB from recorded grids",
+        "GENUINE CONTROLS",
+        "expected decisions",
+        "checked reference · pooled Claude",
+        "No agent results"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/v13/r5/results.json",
+          "repro/v11/out/mutation_matrix.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Restored source to mutation to receiver flow. Primary corruptions and genuine controls are separate outcomes. No additional model trial was run.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.token_labels",
+      "block": "v13.7 recovery",
+      "print": [
+        "data need",
+        "grammar, after emem:",
+        "what its id hashes",
+        "14 data needs; embedding and absence share the fact grammar.",
+        "Hash rules: emem 18adb67. A name, a set and bytes differ.",
+        "track.v1 is a note. Trace evidence here is a reference harness."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/v10/algorithms.md",
+          "v13/00_v11_review_findings.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Full historical table scoped to the inspected hash rules. Removed glyph legend that misleadingly classified a state-record hash as a list hash; third column gives each actual preimage.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.score",
+      "block": "v13.7 recovery",
+      "print": [
+        "IMPLEMENTED · DRIFT-ANCHOR SCORE",
+        "d = |x − a|",
+        "s = d / (3σ + d)",
+        "for finite x, a and 0 < σ < ∞",
+        "Invalid σ: s = 0 if d = 0; otherwise s = 1.",
+        "x: output · a: anchor · σ: anchor uncertainty",
+        "consistent",
+        "tension",
+        "contradicted",
+        "0",
+        "0.50",
+        "0.75",
+        "1",
+        "Tests pin 3σ → 0.50 and 9σ → 0.75.",
+        "Score boundaries: consistent < 0.50; tension < 0.75.",
+        "r = d / (3σ); s = r / (1 + r)"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/crates/emem-trace/src/drift.rs",
+          "repro/v12/trace/emem_trace_tests.txt"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/crates/emem-trace/src/drift.rs",
+        "arg": "return if delta == 0.0 { 0.0 } else { 1.0 };",
+        "expect": null
+      },
+      "note": "The implementation uses z=d/(3σ), then z/(1+z); r renames its local z to distinguish it from the readout in the decomposition. Invalid-uncertainty branch and threshold equality are explicit. Archived Rust evidence; no probability interpretation.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.berlin",
+      "block": "v13.7 recovery",
+      "print": [
+        "Marker locates the shared lookup cell.",
+        "attested reading",
+        "time / absent at",
+        "native grid",
+        "Shared address, distinct native grids. Hatched: absence. n/s: grid not stated."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/v12/data/case_berlin_stack.json",
+          "repro/v12/data/scene_defi.zb655.yaka.pUxe.headers"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Recovered v12 fanout. The RGB chip locates the address; connectors are lookup associations, not co-registration or measurements from that RGB scene. Absence dates use signed_at; positive records show valid time.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.attribution",
+      "block": "v13.7 recovery",
+      "print": [
+        "Δz is the later readout minus the earlier one.",
+        "The attribution ledger links evidence to each term; the numeric split remains open."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/whitepaper-v2.md",
+          "v13/evidence/formalism/source/docs/model.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/docs/model.md",
+        "arg": "`split` is null",
+        "expect": null
+      },
+      "note": "Two kinds of drift: changing a reference in language versus changes in readout at a stable address. change_attribution@1 returns signed per-term evidence; split is null.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.algebra",
+      "block": "v13.7 recovery",
+      "print": [
+        "Compute over the memory",
+        "recall · diff",
+        "merge · trace",
+        "competing · evolve",
+        "ensure · valid",
+        "recover a state; compare visits",
+        "cite a set; follow its recipe",
+        "keep disagreement; append",
+        "fill a missing read; assess age",
+        "Typed memory operations retain the evidence behind an answer. Single-hop materialisation is implemented; multi-hop planning remains open."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/docs/model.md",
+        "arg": "Multi-hop targets are open work",
+        "expect": null
+      },
+      "note": "Operations are source-defined surfaces, not a new benchmark or a machine-checked algebra. Merge forms a set, not a fused physical estimate. Valid is product-dependent staleness, not truth.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.observation",
+      "block": "v13.7 recovery",
+      "print": [
+        "O = (a, b, t, v, u, p, s)",
+        "a: cell · b: band · t: valid time · v: value",
+        "u: uncertainty · p: provenance, recipe, signing time",
+        "s: attestation associated with the observation",
+        "Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.",
+        "cid(record) = BLAKE3(CBORcanonical(record))"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md",
+          "v13/16_FORMALISM_AND_TEST_AUDIT.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/docs/model.md",
+        "arg": "O = (a, b, t, v, u, p, s)",
+        "expect": null
+      },
+      "note": "Conceptual observation tuple restored with all terms. Corrects model.md obsolete individual signature description: signature/attestation is associated with the observation, not part of the 1115-byte fact wire schema. Missing fields in a particular record remain missing.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.recall",
+      "block": "v13.7 recovery",
+      "print": [
+        "Cτ = TxAsOf(O*, a, b, τ)",
+        "recall = max(t, cid) {O in Cτ : t ≤ t*}",
+        "Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.",
+        "Temporal storage is established; the handoff adds a portable citation to the exact earlier record."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/crates/emem-primitives/src/recall.rs",
+          "v13/evidence/formalism/source/crates/emem-primitives/tests/bi_temporal.rs",
+          "repro/data/contra_bengaluru.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/formalism/source/crates/emem-primitives/src/recall.rs",
+        "arg": "k.tslot == existing_k.tslot && c.as_str() > existing_c.as_str()",
+        "expect": null
+      },
+      "note": "Operational notation for latest-as-of query only, with no exact tslot. TxAsOf resolves transaction-time versions per (cell,band,tslot), bounded by τ; then latest valid slot ≤ t* selected with lexicographic CID tie-break. This is not a formula for every endpoint/mode.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V7.invention",
+      "block": "v13.7 recovery",
+      "print": [
+        "THE CONTRIBUTION",
+        "Checkable observation handoff",
+        "An agent passes a reference to a specific physical observation; the receiver resolves it and checks the evidence.",
+        "Built with standard BLAKE3, Ed25519, CBOR and Merkle logs. STAC, openEO, PROV, C2PA, RAG and temporal storage provide complementary layers."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/10_ladder_threat_invention.md",
+          "v13/22_RECOVERED_DESIGN_AND_FORMALISM.md"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Invention taxonomy: contribution = physical-observation evidence handoff with receiver checks; standard enablers = BLAKE3, Ed25519, canonical CBOR, Merkle logs and content addressing; complementary = RAG, STAC, openEO, PROV, C2PA, generic provenance, temporal databases/event sourcing, generic agent memory and EO-agent orchestration. No priority/first-in-world claim.",
+      "tier": "30cm",
+      "checked": true
+    }
+  ]
+}

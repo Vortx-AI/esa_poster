@@ -1,18 +1,11 @@
-"""F13 · One address, every product (193.5 x 174 mm, right column).
+"""F13: Berlin image-to-record fanout, 396 x 142 mm at A0 print size.
 
-One 10 m cell in central Berlin, read live from emem.dev on 30 Sep 2026, each product on its own native grid.
-A common addressing layer, not a co-registered stack: the grid column names each product's native pixel.
-  research/repro/v12/data/case_berlin_stack.json            the 25 live facts; 16 drawn (15 products, 4 signed absences)
-  research/repro/v12/data/scene_defi.zb655.yaka.pUxe.png    the Sentinel-2C L2A true-colour chip emem served, 256 px of 10 m
-  research/repro/v12/data/scene_defi.zb655.yaka.pUxe.headers  scene id, datetime, EPSG, bbox, pixel size, cloud cover
-  research/repro/v12/data/v1_bands_2026-09-30.json          native grid sizes stated in the band ontology
-With --refresh, every drawn fact is fetched again, GET https://emem.dev/v1/facts/<cid> (Accept application/cbor,
-read-only), re-hashed with BLAKE3 to its cid, and checked for cell, band, value and the pinned signer; the result is
-written to poster/fig/v13/f13_one_address.verify.json and asserted before drawing. Without network the last verify
-file is accepted only if it says 16 of 16.
-The "how emem encodes a memory" slot bar of v12 is not drawn: it has no legible room at 14 pt in 193.5 x 174 mm.
-
-    python poster/figs_v13/f13_one_address.py
+Restores the connected evidence view from v12 at the user's request. The
+marked RGB cell is a lookup locator, not a co-registration claim. Products
+retain their native grids and valid times; absence rows show signing time.
+Data, selection and 16-record verification remain unchanged. --refresh
+performs read-only record fetches and re-hashes them; signer-field equality
+is not signature verification. No numeric attribution is inferred.
 """
 import base64
 import datetime as dt
@@ -26,13 +19,14 @@ import urllib.request
 import blake3
 import cbor2
 import numpy as np
-from matplotlib.patches import Rectangle, Polygon
+from matplotlib.patches import Rectangle, Polygon, PathPatch
+from matplotlib.path import Path as MPath
 import matplotlib.image as mpimg
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from style import C, MONO, OUT, ROOT, fig_mm, save  # noqa: E402
 
-W, H = 193.5, 174.0
+W, H = 396.0, 142.0
 PTMM = 25.4 / 72
 NAME = "f13_one_address"
 D = os.path.join(ROOT, "research/repro/v12/data")
@@ -218,10 +212,11 @@ def fmt_date(s):
     return dt.datetime.fromisoformat(s.replace("Z", "+00:00")[:19]).strftime("%-d %b %Y")
 
 
-# ------------------------------------------------------------------ Berlin locator and provenance legend
+# A single, visibly located cell fans out to records with distinct products,
+# valid times and native grids. Connections express lookup identity, not pixel alignment.
 READ_ON = fmt_date(SEL[0][1]["queried_at_utc"])
 assert READ_ON == "30 Sep 2026"
-CROP, CS, CX, CY = 224, 50.0, 0.0, 1.0
+CROP, CS, CX, CY = 224, 87.0, 0.0, 15.0
 C0 = (256 - CROP) // 2
 big = np.repeat(np.repeat(img[C0:C0+CROP, C0:C0+CROP], 6, 0), 6, 1)
 ax.imshow(big, extent=(CX,CX+CS,CY+CS,CY),interpolation="none",zorder=1)
@@ -229,91 +224,56 @@ s = CS / CROP
 half = BOXPX / 2 * s
 mx, my = (col-C0+.5)*s, CY+(row-C0+.5)*s
 ax.add_patch(Rectangle((mx-half,my-half),2*half,2*half,fill=False,ec="white",lw=1.5/PTMM,zorder=4))
-ax.add_patch(Rectangle((mx-half,my-half),2*half,2*half,fill=False,ec=C["emem"],lw=.6/PTMM,zorder=5))
-T(56,5,"BERLIN",22,claim="A13.head",weight=700,color=C["emem"])
-T(56,14,CELL,14,claim="A13.head",family=MONO)
-T(56,21,f"{LAT:.4f} N, {LNG:.4f} E · one 10 m cell",14,claim="A13.head")
-for i,c in enumerate(["direct_sensor","deterministic_index","model_output","human_curated","unclassified"]):
-    xx=56 if i<3 else 125
-    yy=30+(i if i<3 else i-3)*7
-    glyph(xx,yy,c,False)
-    T(xx+5,yy,CLS_LABEL[c],14,color=C["ink2"],claim="V6.berlin_labels")
-T(0,55,"Sentinel-2C L2A · 27 Sep 2026 · RGB · 2.24 km across; box: 90 m",14,claim="A13.chip",color=C["ink2"])
-LEG_END=57
-
-# ------------------------------------------------------------------ the table
-X0 = 0.0
-XG, XP = X0, X0 + 4.6
-XR = 54.0
-XT = 98.0
-XN = 138.0
-XC = W - 1.2
-assert XN + 16.4 + 2.0 + 19.8 <= XC, (XN, XC)
-hy = 63.0
-for xx, lab in ((XP, "product"), (XR, "signed reading"), (XT, "valid time"), (XN, "grid")):
-    T(xx, hy, lab, 14, color=C["muted"], claim="V6.berlin_labels")
-T(XC, hy, "fact_cid", 14, color=C["muted"], ha="right", family=MONO, claim="V6.berlin_labels")
-ax.plot([X0, W], [hy + 2.9, hy + 2.9], color=C["rule"], lw=0.5 / PTMM, zorder=2)
-PITCH = 5.5
-ty = hy + 2.9 + PITCH / 2 + 0.3
-COLW = {}
-for i, (prod, r, reading, when, grid, _src) in enumerate(SEL):
-    yy = ty + i * PITCH
-    absent = r["kind"] == "absence"
-    if i % 2 == 1:
-        ax.add_patch(Rectangle((X0, yy - PITCH / 2), W - X0, PITCH, fc=C["oos_bg"], ec="none", zorder=1.5))
-    glyph(XG, yy, r["provenance_class"], absent)
-    COLW["product"] = max(COLW.get("product", 0), wmm(T(XP, yy, prod, 14, weight=400, claim="A13.products")))
-    COLW["reading"] = max(COLW.get("reading", 0), wmm(T(XR, yy, reading(r), 14, color=C["ink2"] if absent else C["ink"], style="italic" if absent else "normal", claim="A13.readings")))
-    o = r["observed_at"] or ""
-    if when == "date":
-        tt = fmt_date(o)
-    elif when == "year":
-        tt = o[:4]
-    elif when == "release":
-        tt = dt.datetime.strptime(o[:10], "%Y-%m-%d").strftime("%b %Y")
-    elif when == "signed":
-        tt = fmt_date(r["signed_at"])
-    else:
-        tt = when
-    COLW["time"] = max(COLW.get("time", 0), wmm(T(XT, yy, tt, 14, color=C["ink2"], claim="A13.times")))
-    COLW["grid"] = max(COLW.get("grid", 0), wmm(T(XN, yy, grid, 14, color=C["muted"] if grid == NOT_STATED else C["ink2"], claim="A13.grids")))
-    COLW["cid"] = max(COLW.get("cid", 0), wmm(T(XC, yy, r["fact_cid"][:6] + "…", 14, family=MONO, color=C["ink2"], ha="right", claim="A13.cids")))
-ybot = ty + 15 * PITCH + PITCH / 2
-assert COLW["product"] <= XR - XP - 1.0 and COLW["reading"] <= XT - XR - 1.0 and COLW["time"] <= XN - XT - 1.0, COLW
-assert COLW["grid"] <= XC - COLW["cid"] - XN - 1.0, COLW
-print("column max widths mm", {k: round(v, 1) for k, v in COLW.items()}, "starts", dict(product=XP, reading=XR, time=XT, grid=XN, cid_right=XC))
-ax.plot([X0, W], [ybot, ybot], color=C["rule"], lw=0.5 / PTMM, zorder=2)
-
-# ------------------------------------------------------------------ footer: scope (full width, wrapped at 14 pt)
-def wrap(text, width, size):
-    words, lines, cur = text.split(" "), [], ""
-    probe = ax.text(0, 0, "", fontsize=size, family="IBM Plex Sans")
-    for w_ in words:
-        cand = (cur + " " + w_).strip()
-        probe.set_text(cand)
-        if wmm(probe) > width and cur:
-            lines.append(cur); cur = w_
-        else:
-            cur = cand
-    lines.append(cur); probe.remove()
-    return lines
-
-
-SCOPE = (f"15 products, 16 signed facts, 4 signed absences, 10\u00a0m to about 11\u00a0km; read live {READ_ON}. "
-         "Native grids remain distinct; n/s: grid not in source files. "
-         f"16 records re-hash under emem.dev's key, {VERIFIED_ON.strftime('%-d %b %Y')}.")
-fy = ybot + 3.4
-lines = wrap(SCOPE, W - 3.0, 14)
-assert len(lines) <= 3, lines
-for k, ln in enumerate(lines):
-    T(X0, fy + k * 5.2, ln, 14, color=C["ink2"], claim="A13.scope")
-assert LEG_END <= H
-assert fy + (len(lines) - 1) * 5.2 + 2.6 <= H, fy
+ax.add_patch(Rectangle((mx-half,my-half),2*half,2*half,fill=False,ec=C["incident"],lw=.65/PTMM,zorder=5))
+ax.plot([mx+half,87,110],[my,my,my],color=C["incident"],lw=.5/PTMM,zorder=4)
+T(0,5,"BERLIN",24,claim="A13.head",weight=700,color=C["emem"])
+T(0,109,CELL,14,claim="A13.head",family=MONO)
+T(0,116,"Sentinel-2C L2A · 27 Sep 2026",14,claim="A13.chip",color=C["ink2"])
+T(0,123,"RGB · 2.24 km across; box: 90 m",14,claim="A13.chip",color=C["ink2"])
+T(0,128.5,"Marker locates the shared lookup cell.",14,claim="V7.berlin",color=C["ink2"])
+# Colour has the same role as in v12: declared provenance, with hatching for absence.
+for xx,c in zip([116,174,247,300,356],["direct_sensor","deterministic_index","model_output","human_curated","unclassified"]):
+    glyph(xx,5,c,False)
+    T(xx+5,5,CLS_LABEL[c],14,color=C["ink2"],claim="V6.berlin_labels")
+X0,XG,XP,XR,XT,XN,XC=124,124,129,210,275,326,395
+hy=14.0
+for xx,lab in ((XP,"product"),(XR,"attested reading"),(XT,"time / absent at"),(XN,"native grid")):
+    T(xx,hy,lab,14,color=C["muted"],claim="V7.berlin")
+T(XC,hy,"fact_cid",14,color=C["muted"],ha="right",family=MONO,claim="V6.berlin_labels")
+ax.plot([X0,W],[17,17],color=C["rule"],lw=.5/PTMM,zorder=2)
+PITCH=6.3;ty=20.2;COLW={}
+for i,(prod,r,reading,when,grid,_src) in enumerate(SEL):
+    yy=ty+i*PITCH; absent=r["kind"]=="absence"
+    if i%2:
+        ax.add_patch(Rectangle((X0,yy-PITCH/2),W-X0,PITCH,fc=C["oos_bg"],ec="none",zorder=1.5))
+    color=CLS[r["provenance_class"]]
+    path=MPath([(110,my),(116,my),(115,yy),(122,yy)],[MPath.MOVETO,MPath.CURVE4,MPath.CURVE4,MPath.CURVE4])
+    ax.add_patch(PathPatch(path,fc="none",ec=color,lw=.38/PTMM,zorder=2))
+    glyph(XG,yy,r["provenance_class"],absent)
+    COLW["product"]=max(COLW.get("product",0),wmm(T(XP,yy,prod,17,claim="A13.products")))
+    COLW["reading"]=max(COLW.get("reading",0),wmm(T(XR,yy,reading(r),17,color=C["ink2"] if absent else C["ink"],style="italic" if absent else "normal",claim="A13.readings")))
+    o=r["observed_at"] or ""
+    if when=="date": tt=fmt_date(o)
+    elif when=="year": tt=o[:4]
+    elif when=="release": tt=dt.datetime.strptime(o[:10],"%Y-%m-%d").strftime("%b %Y")
+    elif when=="signed": tt=fmt_date(r["signed_at"])
+    else: tt=when
+    COLW["time"]=max(COLW.get("time",0),wmm(T(XT,yy,tt,17,color=C["ink2"],claim="A13.times")))
+    COLW["grid"]=max(COLW.get("grid",0),wmm(T(XN,yy,grid,17,color=C["muted"] if grid==NOT_STATED else C["ink2"],claim="A13.grids")))
+    COLW["cid"]=max(COLW.get("cid",0),wmm(T(XC,yy,r["fact_cid"][:6]+"…",16,family=MONO,color=C["ink2"],ha="right",claim="A13.cids")))
+assert COLW["product"]<XR-XP-1 and COLW["reading"]<XT-XR-1 and COLW["time"]<XN-XT-1, COLW
+assert COLW["grid"]<XC-COLW["cid"]-XN-1, COLW
+ax.plot([X0,W],[118.2,118.2],color=C["rule"],lw=.5/PTMM,zorder=2)
+T(X0,124,"15 products · 16 attested records · 4 signed absences · read 30 Sep 2026",16,claim="A13.scope",weight=600,color=C["emem"])
+T(X0,131,"Shared address, distinct native grids. Hatched: absence. n/s: grid not stated.",15,claim="V7.berlin",color=C["ink2"])
+T(X0,138,f"All 16 records re-hashed to their CIDs on {VERIFIED_ON.strftime('%-d %b %Y')}.",15,claim="A13.scope",color=C["ink2"])
 
 # ------------------------------------------------------------------ labels must be covered by claims rows
 CM = json.load(open(os.path.join(ROOT, "research/v13/12_claims_map_additions_F13-15.json")))
 ROWS = {r["id"]: r for r in CM["rows"]}
+from pathlib import Path
+for add in Path(ROOT,"research/v13").glob("12_claims_map_additions_*.json"):
+    ROWS.update({r["id"]:r for r in json.loads(add.read_text()).get("rows",[])})
 NUM_RE = re.compile(r"(?<![\w.\-])[−+]?\d+(?:[.,]\d+)*(?!\w)")
 nums = lambda s_: [m.group(0).lstrip("−+") for m in NUM_RE.finditer(s_)]
 for L in LABELS:

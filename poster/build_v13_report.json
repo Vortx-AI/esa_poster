@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-02T09:24:57+00:00",
+ "built_utc": "2026-10-02T10:07:50+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -35,7 +35,7 @@
    "file": "poster/fig/v13/f2_spine.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-02T03:40:38"
+   "mtime": "2026-10-02T06:02:12"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -48,8 +48,8 @@
    "state": "placed",
    "file": "poster/fig/v13/f4_failure_ladder.svg",
    "w_mm": 193.5,
-   "h_mm": 100.0,
-   "mtime": "2026-10-02T03:42:43"
+   "h_mm": 116.0,
+   "mtime": "2026-10-02T05:58:58"
   },
   "f16_embeddings": {
    "state": "placed",
@@ -58,12 +58,12 @@
    "h_mm": 53.0,
    "mtime": "2026-10-02T03:40:37"
   },
-  "f5_evidence_object": {
+  "f13_one_address": {
    "state": "placed",
-   "file": "poster/fig/v13/f5_evidence_object.svg",
+   "file": "poster/fig/v13/f13_one_address.svg",
    "w_mm": 396.0,
-   "h_mm": 98.0,
-   "mtime": "2026-10-02T05:18:34"
+   "h_mm": 142.0,
+   "mtime": "2026-10-02T06:07:37"
   },
   "f6_mutation_matrix": {
    "state": "placed",
@@ -93,19 +93,12 @@
    "h_mm": 82.0,
    "mtime": "2026-10-02T03:48:27"
   },
-  "f13_one_address": {
-   "state": "placed",
-   "file": "poster/fig/v13/f13_one_address.svg",
-   "w_mm": 193.5,
-   "h_mm": 174.0,
-   "mtime": "2026-10-02T05:22:33"
-  },
   "f14_token_family": {
    "state": "placed",
    "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
-   "h_mm": 86.0,
-   "mtime": "2026-10-02T04:30:34"
+   "h_mm": 118.0,
+   "mtime": "2026-10-02T05:58:59"
   },
   "f11_ecosystem": {
    "state": "placed",
@@ -115,7 +108,7 @@
    "mtime": "2026-10-02T05:12:56"
   }
  },
- "figure_text_tokens": 1716,
+ "figure_text_tokens": 1731,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -132,22 +125,22 @@
   "block_rectangles": {
    "pass": true,
    "details": [
-    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Issue #48: seven-stage Earth-to-agent mechanism and measured comparison share the original 183.5 mm spine.",
-    "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x121.5), off by 18.5 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,508.5,193.5x207.9), off by 129.6 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,726.0,193.5x122.5), off by 130.0 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,858.0,193.5x99.7), off by 78.0 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x171.9), off by 18.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
-    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,557.9,396.0x263.0), off by 4.1 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
-    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,829.5,396.0x187.0), off by 1.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
-    "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,486.9,193.5x128.8), off by 21.3 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
+    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x121.5), off by 18.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,505.7,193.5x240.1), off by 100.2 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,752.5,193.5x81.2), off by 103.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,840.4,193.5x99.7), off by 95.6 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x208.9), off by 34.4 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,591.5,396.0x263.0), off by 36.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,859.6,396.0x156.9), off by 31.6 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,492.6,193.5x172.3), off by 70.4 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
     "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,801.0x147.5), off by 270.0 mm; reason: v13.5: full-width community band at the original bottom-row height; 28 pt primary platform names and 18-24 pt actions replace the small directory and latency chart. Measured client-path results remain in the caption and methods. The third QR opens setup, handoff and reproduction routes.",
-    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,967.3,193.5x49.2), off by 607.5 mm; reason: v13.5: prior-art relationships move to the spare left-column space beside a concrete signed-absence example. The source experiments keep their original space.",
+    "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,946.8,193.5x69.7), off by 607.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
     "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
-    "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,620.4,193.5x220.2), off by 68.4 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-    "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,845.2,193.5x125.9), off by 70.6 mm; reason: v13.5: same figure size, with concrete eight-fact bundle and four re-hashed reasoning checkpoints recovered from v7/v11; each object retains its own verification rules.",
-    "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+    "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,675.1,193.5x122.1), off by 77.1 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,807.5,193.5x157.9), off by 65.0 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+    "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
    ]
   },
   "no_overflow_or_clipping": {
@@ -165,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (733 text runs)"
+    "every printed code point is in the face that sets it (744 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -189,7 +182,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "146 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "152 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -201,7 +194,7 @@
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "409 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "414 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -215,19 +208,19 @@
   "assets": {
    "pass": true,
    "details": [
-    "all 13 figures and diagrams placed as SVG; fonts, CSS and tokens present"
+    "all 12 figures and diagrams placed as SVG; fonts, CSS and tokens present"
    ]
   },
   "fonts_loaded": {
    "pass": true,
    "details": [
-    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: loaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: loaded, IBM Plex Mono 600: unloaded, IBM Plex Mono 700: loaded"
+    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: loaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: unloaded, IBM Plex Mono 600: loaded, IBM Plex Mono 700: loaded"
    ]
   },
   "colour_tokens": {
    "pass": true,
    "details": [
-    "board and figure colours checked against poster/src/tokens.json; 25 pixel-cell fills in imagery figures (f1_scene, f2_spine, f5_evidence_object, f7_wrong_pixel)",
+    "board and figure colours checked against poster/src/tokens.json; 25 pixel-cell fills in imagery figures (f1_scene, f2_spine, f7_wrong_pixel)",
     "palette_check.py (CVD, FOGRA39): present in the repo; not re-run by this build (needs the non-redistributable FOGRA39 profile)"
    ]
   },
@@ -235,34 +228,33 @@
    "pass": true,
    "details": [
     "f1_scene: 2658x2309 px over 216.5 mm = 312 ppi",
+    "f2_spine: 600x600 px over 50.0 mm = 305 ppi",
     "f16_embeddings: 3072x72 px over 193.5 mm = 403 ppi",
     "f16_embeddings: 2304x72 px over 193.5 mm = 302 ppi",
-    "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
-    "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
-    "f7_wrong_pixel: 2658x2316 px over 112.5 mm = 600 ppi",
-    "f13_one_address: 1344x1344 px over 50.0 mm = 683 ppi"
+    "f13_one_address: 1344x1344 px over 87.0 mm = 392 ppi",
+    "f7_wrong_pixel: 2658x2316 px over 112.5 mm = 600 ppi"
    ]
   },
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 676 words containing a letter, 693 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
-    "  1 · Earth to agents: 57 tokens (section C: 57)",
+    "running text: 681 words containing a letter, 696 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 56 tokens (section C: 56)",
     "  10 · Token family: 29 tokens (section C: 29)",
     "  11 · Community routes: 67 tokens (section C: 67)",
     "  2 · One question, different records: 40 tokens (section C: 40)",
-    "  3 · Different drift, different check: 64 tokens (section C: 64)",
-    "  4 · Reference to record: 52 tokens (section C: 52)",
+    "  3 · Different drift, different check: 76 tokens (section C: 76)",
     "  5 · Checks back to the source: 40 tokens (section C: 40)",
-    "  6 · Source re-read: 46 tokens (section C: 50)",
+    "  6 · Source re-read: 19 tokens (section C: 19)",
     "  7 · What checks establish: 25 tokens (section C: 25)",
-    "  8 · Memory keeps what was cited: 39 tokens (section C: 39)",
-    "  9 · Berlin multi-product stack: 32 tokens (section C: 32)",
-    "  Absence and related layers: 51 tokens (section C: 51)",
+    "  8 · Memory keeps what was cited: 67 tokens (section C: 67)",
+    "  Berlin source-to-record fanout: 45 tokens (section C: 45)",
+    "  Complete observation and memory model: 53 tokens (section C: 53)",
     "  Concrete handoff: 35 tokens (section C: 35)",
-    "  Execution extension: 23 tokens (section C: 23)",
-    "  Header: 47 tokens (section C: 48)",
-    "  Two identities: 46 tokens (section C: 46)"
+    "  Contribution and prior art: 41 tokens (section C: 41)",
+    "  Execution extension: 28 tokens (section C: 28)",
+    "  Header: 47 tokens (section C: 47)",
+    "  Memory operations: 28 tokens (section C: 28)"
    ]
   }
  },
@@ -294,44 +286,44 @@
  ],
  "type_deviations_from_brief": [
   "v13.4: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
-  "The left column restores the memory model, drift equations and archived foundation-model outputs.",
+  "The left column holds complete drift rules, memory operations and archived model outputs; the right holds the observation model.",
   "The execution extension accompanies the anchor score; the final right-column panel states next experiments."
  ],
  "layout_deviations": [
-  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: Issue #48: seven-stage Earth-to-agent mechanism and measured comparison share the original 183.5 mm spine.",
-  "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x121.5), off by 18.5 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,508.5,193.5x207.9), off by 129.6 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,726.0,193.5x122.5), off by 130.0 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,858.0,193.5x99.7), off by 78.0 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x171.9), off by 18.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
-  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,557.9,396.0x263.0), off by 4.1 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
-  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,829.5,396.0x187.0), off by 1.5 mm; reason: Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods.",
-  "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,486.9,193.5x128.8), off by 21.3 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
+  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,191.0,801.0x183.5), off by 11.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,377.5,193.5x121.5), off by 18.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,505.7,193.5x240.1), off by 100.2 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (20.0,752.5,193.5x81.2), off by 103.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION threat: brief (20.0,936.0,193.5x80.0) rendered (20.0,840.4,193.5x99.7), off by 95.6 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,377.5,396.0x208.9), off by 34.4 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,591.5,396.0x263.0), off by 36.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,859.6,396.0x156.9), off by 31.6 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (627.5,377.5,193.5x104.9), off by 20.2 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,492.6,193.5x172.3), off by 70.4 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
   "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1019.5,801.0x147.5), off by 270.0 mm; reason: v13.5: full-width community band at the original bottom-row height; 28 pt primary platform names and 18-24 pt actions replace the small directory and latency chart. Measured client-path results remain in the caption and methods. The third QR opens setup, handoff and reproduction routes.",
-  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,967.3,193.5x49.2), off by 607.5 mm; reason: v13.5: prior-art relationships move to the spare left-column space beside a concrete signed-absence example. The source experiments keep their original space.",
+  "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,946.8,193.5x69.7), off by 607.5 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
   "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
-  "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,620.4,193.5x220.2), off by 68.4 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score.",
-  "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,845.2,193.5x125.9), off by 70.6 mm; reason: v13.5: same figure size, with concrete eight-fact bundle and four re-hashed reasoning checkpoints recovered from v7/v11; each object retains its own verification rules.",
-  "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+  "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,675.1,193.5x122.1), off by 77.1 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,807.5,193.5x157.9), off by 65.0 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged.",
+  "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,975.6,193.5x40.9), off by 71.7 mm; reason: v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
  ],
  "columns": [
   {
    "id": "left",
    "content_bottom": 1016.5,
-   "natural_mm": 618.0,
+   "natural_mm": 629.1,
    "height": 639.0
   },
   {
    "id": "centre",
    "content_bottom": 1016.5,
-   "natural_mm": 627.9,
+   "natural_mm": 634.5,
    "height": 639.0
   },
   {
    "id": "right",
    "content_bottom": 1016.5,
-   "natural_mm": 633.3,
+   "natural_mm": 610.8,
    "height": 639.0
   }
  ],
@@ -383,6 +375,9 @@
   "A13.readings",
   "A13.scope",
   "A13.times",
+  "A14.grammar",
+  "A14.hash",
+  "A14.need",
   "BE.grid",
   "BE.stack",
   "CM.absence",
@@ -405,15 +400,19 @@
   "E8.summary",
   "EC.11",
   "EC.9of11",
-  "F.pixel",
+  "F2.actions",
+  "F2.agentA",
+  "F2.agentA.px",
+  "F2.agents",
+  "F2.chips",
+  "F2.heads",
+  "F2.lanes",
+  "F2.mode",
+  "F2.relay",
+  "F2.snippets",
   "F3.chips",
   "F3.legend",
   "F3.rule",
-  "F5.fields",
-  "F5.onebit",
-  "F5.read",
-  "F5.tags",
-  "F5.token",
   "F6.checks",
   "F6.cumulative",
   "F6.desc",
@@ -442,17 +441,10 @@
   "MF.identity",
   "MF.model",
   "MF.next",
-  "MF.recall",
+  "MF.tests",
   "O.1115",
-  "O.46",
-  "O.84",
   "O.batch",
   "O.cid",
-  "O.cogs",
-  "O.key",
-  "O.log",
-  "O.nohash",
-  "O.pixel",
   "PA.credit",
   "Q.discover_integrations",
   "Q.inspect_record",
@@ -484,21 +476,18 @@
   "S.R1.B",
   "S.R1.C",
   "S.R1.I",
+  "S.boundary_wall",
   "S.threshold",
   "SAT.gate",
   "SAT.run",
   "TF.family",
   "TM.asof",
-  "U.benchmark",
   "U.boundary",
   "U.bridge",
   "U.checks",
   "U.drift",
   "U.flow",
   "U.hero",
-  "U.identities",
-  "U.layers",
-  "U.object",
   "U.poster",
   "V.prithvi",
   "V.retired",
@@ -512,6 +501,15 @@
   "V6.limits",
   "V6.matrix_labels",
   "V6.objects",
+  "V7.algebra",
+  "V7.attribution",
+  "V7.berlin",
+  "V7.flow",
+  "V7.invention",
+  "V7.observation",
+  "V7.recall",
+  "V7.score",
+  "V7.token_labels",
   "W.err",
   "W.kx",
   "W.prev",
@@ -522,8 +520,8 @@
   "X.only",
   "X.p123"
  ],
- "figure_numbers_checked": 368,
- "rows_rechecked": 409,
+ "figure_numbers_checked": 361,
+ "rows_rechecked": 414,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
   "A13.products",
@@ -558,7 +556,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 676,
-  "running_tokens": 693
+  "running_words_with_letter": 681,
+  "running_tokens": 696
  }
 }

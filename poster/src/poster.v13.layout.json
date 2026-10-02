@@ -1,53 +1,53 @@
 {
-  "schema": "Documented v13.5 departures from the original v13 grid.",
+  "schema": "Documented v13.7 departures from the original v13 grid.",
   "deviations": {
     "p1": {
-      "reason": "Issue #48: seven-stage Earth-to-agent mechanism and measured comparison share the original 183.5 mm spine."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p2": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p3": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "questions": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "threat": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p4": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p5": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p6": {
-      "reason": "Issue #48 (v13.3): same columns and reading order; shortened copy, mechanism-first spine, three QR tasks, taxonomy and identity/handoff blocks replace research questions and threat prose. Panels stack at full type sizes; quantitative evidence remains in the matrix and methods."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p12": {
       "reason": "v13.5: full-width community band at the original bottom-row height; 28 pt primary platform names and 18-24 pt actions replace the small directory and latency chart. Measured client-path results remain in the caption and methods. The third QR opens setup, handoff and reproduction routes."
     },
     "p13": {
-      "reason": "v13.5: prior-art relationships move to the spare left-column space beside a concrete signed-absence example. The source experiments keep their original space."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "footer": {
       "reason": "The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
     },
     "p7": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p8": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p9": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p10": {
-      "reason": "v13.5: same figure size, with concrete eight-fact bundle and four re-hashed reasoning checkpoints recovered from v7/v11; each object retains its own verification rules."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p11": {
-      "reason": "v13.4 keeps the three-column grid at full type sizes. Drift equations replace the taxonomy; memory formalism and archived embeddings replace duplicate identity/handoff prose; the temporal figure shows one provider-change example; next experiments replace the short execution note, now beside the anchor score."
+      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     }
   },
   "v13.2_notes": {
