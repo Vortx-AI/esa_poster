@@ -1,4 +1,4 @@
-# The poster: v13.9, complete EO workflow and compact community routes (2 October 2026)
+# The poster: reviewed v13 source, A0 portrait
 
 | Artifact | Purpose |
 |---|---|
@@ -6,17 +6,17 @@
 | [emem-poster-preview.png](emem-poster-preview.png) | Screen preview |
 | [emem-poster-A0-300dpi.png](emem-poster-A0-300dpi.png) | Full-resolution print proof |
 | [build_v13_report.json](build_v13_report.json) | Layout, claim, type and QR checks |
-| [release_v13.9.json](release_v13.9.json) | Artifact hashes and validation summary |
+| [release_reviewed.json](release_reviewed.json) | Artifact hashes and validation summary |
 
-The seven-step Observe → Locate → Record → Hand off → Resolve → Check → Continue workflow sits between the introduction and the full handoff experiment. Location/product/time lookup is separate from the record's content address. Receiver checks name hash, binding and signature; source re-reading is a further step.
+The build now renders the latest figure sources. It restores the eight-value NDVI diagnostic, complete decoded evidence object, single-line change decomposition, implemented drift score, and SAT-042 execution strip. The checked-reference boundary appears once, as section 7. Future-work prose and the generic SDK test-count line leave the face. The scientific measurements are unchanged.
 
-Section 11 removes repeated prose and the redundant four-stage bridge. The compact community band retains the measured client-path result, five platform cards, all 33 remaining community labels at their existing type sizes, and a dedicated Connect QR. It releases 56 mm without reducing the 11 existing scientific figures. The full token table, Berlin fanout, NDVI history, drift equations, observation tuple and temporal memory remain.
+Validation: **18/18 poster gates**, **14/14 evidence-gate tests**, **415 evidence-row checks**, **13 placed SVG figures** and **three printed QR decodes**. The final full-page render and the revised panels were inspected at print resolution. Fonts are embedded. SAT-042 remains explicitly a reference harness with no spacecraft enrolled.
 
-Validation: **18/18 poster gates**, **14/14 evidence-gate tests**, **415 evidence-row checks** and **three printed QR decodes**. Final A0, workflow and community-band renders were inspected. [Layout evidence](../research/v13/evidence/v139/layout_review.json) records preserved figure sizes and community labels. The companion site is unchanged; this revision does not claim a new run of its earlier 16 route/viewport checks or any new scientific/model benchmark.
+Build sources: `src/poster.v13.html`, `src/poster.v13.css`, and `figs_v13/`. The compact handoff stack has corrected digest-line spacing; the execution strip has claim mappings for its layer and score labels. Build with `python poster/build_v13.py --figures`.
 
-Build sources: `src/poster.v13.html`, `src/poster.v13.css`, `figs_v13/f18_workflow.py` and the manifest-generated community figure. [Copy specification](../research/v13/14_UNIFIED_POSTER_BRIEF.md) · [Release review](../research/v13/24_WORKFLOW_AND_COMPACT_COMMUNITY.md) · [Instructions](../AGENTS.md).
+[Copy specification](../research/v13/14_UNIFIED_POSTER_BRIEF.md) · [Review and validation](../research/v13/25_REVIEWED_SOURCE_AND_A0.md) · [Instructions](../AGENTS.md).
 
-[Community guide](https://vortx-ai.github.io/esa_poster/use/) · [Methods](https://vortx-ai.github.io/esa_poster/methods/). The existing companion download link serves the committed main-branch PDF.
+The companion download link serves the committed main-branch PDF. Local regeneration does not publish the reviewed artifacts or change the archived signed-track identity.
 
 ## Signed-track history
 
