@@ -432,16 +432,16 @@
    "pt": 15
   },
   {
-   "text": "bind",
+   "text": "place / time / band",
    "claim": "F2.chips",
-   "x_mm": 477.43,
+   "x_mm": 495.22,
    "y_mm": 103.92,
    "pt": 15
   },
   {
    "text": "signature",
    "claim": "F2.chips",
-   "x_mm": 501.69,
+   "x_mm": 537.29,
    "y_mm": 103.92,
    "pt": 15
   },

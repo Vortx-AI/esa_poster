@@ -83,7 +83,7 @@ const CTAS = [
 ];
 w('index.html', page('', 'EMEM at Agentic AI for EO 2026', 'An Earth observation that survives an agent handoff. Try it, inspect the record, reproduce the experiments.', '', `
 <h1>An Earth observation that survives an agent handoff.</h1>
-<p class="lead">EMEM gives an observation a lookup identity and a content-addressed record. Agent A passes a compact reference; Agent B resolves the same record and checks it before continuing. Earth data stays upstream while its reference enters the reasoning.</p>
+<p class="lead">EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, time and processing recipe, then checks the evidence. Start with an EO question and carry its cited observations through the analysis.</p>
 <p><a class="btn" href="${GH}/raw/refs/heads/main/poster/emem-poster-A0.pdf">Download the A0 poster</a> · <a href="${blob('poster/emem-poster-preview.png')}">View the poster</a></p>
 ${CTAS.map(([k, u, d, hero]) => `<a class="cta${hero ? ' hero' : ''}" href="./${u}"><b>${k} →</b><span>${esc(d)}</span></a>`).join('\n')}
 <p class="note"><a href="./t/">Resolve your own token</a> · <a href="./use/">Find an integration</a> · <a href="./test/">Run the tests</a></p>
@@ -422,13 +422,24 @@ ${table(['system', 'question it answers', 'unit it identifies', 'where EMEM sits
 
 <h2 id="recovered">Recovered demonstrations from earlier posters</h2>
 <p>These archived experiments add breadth to the focused handoff test on the A0 poster. Their original evidence and dates stay attached.</p>
-<h3>Two seasons at one field</h3>
-<p>Keylong, India: 141 Sentinel-2 NDVI records from January 2025 to September 2026. The records name the scene and observation time, so a later agent can recover the measurement used in a seasonal comparison. ${src('research/repro/v12/data/case_keylong_ndvi.json', 'Evidence')}.</p>
+<div id="eo-workflows"></div>
+<h3 id="eo-vegetation">Trace the observations behind a vegetation comparison</h3>
+<p>Keylong, India: 141 retained Sentinel-2 NDVI records from January 2025 to September 2026. Each point has a scene, acquisition time and content identifier. This is a stored observation history: cloud/snow screening and processing harmonisation were not applied to this series. Its shape alone does not establish vegetation change. ${src('research/repro/v12/data/case_keylong_ndvi.json', 'Evidence')}.</p>
+<ol><li>Choose the acquisition dates and retain the matching fact references.</li><li>Inspect the scene, native pixel, cloud/snow quality, processing recipe and uncertainty before interpreting a difference.</li><li>Pass the selected references with your comparison. The receiver should recover those records and state which checks were performed.</li></ol>
+<p>The A0 highlights the same <a href="../r/">25 September 2026 record</a> used in the handoff and pixel experiments. ${src('research/v13/evidence/v138/eo_history.json', 'Figure selection and source hash')}.</p>
 <img class="recovered" src="../assets/recovered_keylong.svg" alt="Archived v12 Keylong seasonal NDVI series, with scene and source context">
-<h3>A reproducible forest-loss screen</h3>
-<p>Rondônia, Brazil: 100 sampled point cells and 600 facts, read on 30 September 2026. The screen combines forest status and loss year; it is a sampled evidence workflow, not a determination of legal compliance. The source-pixel audit in the main methods shows why the reading rule still matters.</p>
+<h3 id="eo-forest">Compare forest products at a shared location</h3>
+<p>Rondônia, Brazil: 100 sampled point cells and 600 facts, read on 30 September 2026. The screen combines JRC forest status, Hansen loss year and other source products while preserving their individual citations. The grid consists of point samples roughly 740 m apart, not parcel coverage or area means. The source-pixel audit in the main methods shows why the reading rule still matters. No legal-compliance determination follows from this screen.</p>
+<ol><li>Select a sampled location and retain the forest, loss-year and biomass references separately.</li><li>Compare product definitions, observation periods and native resolution; keep conflicting estimates visible.</li><li>Hand the evidence set to the next analyst or agent, with the sampled extent and unresolved questions attached.</li></ol>
 <img class="recovered" src="../assets/recovered_rondonia.svg" alt="Archived v12 Rondônia forest and loss-year evidence over sampled cells">
 <p>${src('research/should_do/19_V12_CLAIMS_MAP.md', 'Original v12 claim and evidence map')} · ${src('research/repro/v12/data/case_rondonia_eudr.json', 'Rondônia example records')}.</p>
+<h3 id="eo-replay">Recover the evidence available before a provider change</h3>
+<p>The Bengaluru elevation example preserves 918.0 m from the earlier provider and 915.07 m from the later one. A 15 June 2026 signing-time bound selects the earlier citation. This demonstrates historical evidence selection; it does not establish ground movement.</p>
+<ol><li>Keep the original fact reference and the observation/attestation time bounds used in your analysis.</li><li>Recover the cited record, or repeat the bounded recall with the same cell and variable.</li><li>Compare record identity and source metadata. Treat a changed provider or processing version as a potential explanation before interpreting physical change.</li></ol>
+<p>${src('research/repro/data/contra_bengaluru.json', 'Retained observations')} · ${src('research/repro/verify_bitemporal.py', 'Replay and re-hash script')} · <a href="#formalism">Two-clock model and exact mode limits</a>.</p>
+<h3>Processing-choice diagnostic retained from earlier posters</h3>
+<p>The earlier eight-answer Keylong figure remains useful when auditing a changed value: scene, pixel, rounding, offset and old/current selection can produce different answers. <a href="${blob('poster/fig/v13/f3_eight_answers.svg')}">Inspect the eight-answer diagnostic</a>. It moved to the methods so the A0 can introduce the actual dated observation history.</p>
+<p><b>Derived-record scope:</b> pure operations are re-runnable under the supported code/algorithm conditions. A stored derivation is not automatically recomputed: the inspected implementation requires a pinned code identity and a supported pure scalar operation or registered algorithm AST. A failed verification does not by itself prevent storing the caller's claim. ${src('research/v13/00_v11_review_findings.md', 'Reviewed implementation conditions')}.</p>
 <h3>Execution evidence: SAT-042</h3>
 <p>A scripted reference-harness run, not a spacecraft. The trace binds recorded steps and outputs; the drift anchor scores disagreement. Hardware enrolment and live device-to-anchor wiring remain separate work.</p>
 <img class="recovered" src="../assets/recovered_sat042.svg" alt="Archived SAT-042 scripted execution trace and its checks">
@@ -490,6 +501,14 @@ w('use/index.html', page('use', 'CONNECT AND BUILD · EMEM', 'Use emem from Chat
 <h1>Bring the evidence into your workflow.</h1>
 <p class="lead">Choose a plugin, a workflow or your own code. Start with the saved observation below, then hand its reference to another agent. Public emem reads need no API key. The implementation is Apache-2.0.</p>
 <p><a class="btn" href="../demo/">Try the browser demo</a> · <a href="../methods/">Methods and reproduction</a> · <a href="../methods/#recovered">Recovered demonstrations</a></p>
+<h2>Choose an Earth-observation question</h2>
+<div class="eo-workflows">
+<article class="eo-task"><h3>Vegetation history</h3><p>Inspect dated NDVI observations at Keylong. Carry the exact records used in a comparison into the next analysis.</p><a href="../methods/#eo-vegetation">Trace the observations</a></article>
+<article class="eo-task"><h3>Forest-product comparison</h3><p>Compare forest status, loss year and biomass at the same sampled locations. Preserve disagreement and source scale.</p><a href="../methods/#eo-forest">Inspect the sampled evidence</a></article>
+<article class="eo-task"><h3>Historical replay</h3><p>Recover the observation cited before a provider changed. Separate acquisition time from what the system knew.</p><a href="../methods/#eo-replay">Replay an earlier citation</a></article>
+</div>
+<p class="note">These are evidence workflows. Physical interpretation still needs product-specific quality control, uncertainty and spatial support.</p>
+<style>.eo-workflows{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.eo-task{padding:16px;border:1px solid var(--rule);border-top:4px solid var(--blue);border-radius:8px}.eo-task h3{margin-top:0}</style>
 <h2>1 · Connect your tool</h2>
 <div class="setup-grid">${connectCards.map(([name,how,detail]) => `<section class="setup"><h3>${name}</h3><p>${how}</p><div>${detail}</div></section>`).join('')}</div>
 <h2>2 · Copy a real handoff</h2>

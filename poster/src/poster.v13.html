@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</title>
-<!-- v13.7 source. Issue #48 supersedes the face copy in the original brief.
+<!-- v13.8 source. Issue #48 supersedes the face copy in the original brief.
      Figures, measurements and claim rows remain independently checked by build_v13.py. -->
 <link rel="stylesheet" href="src/poster.v13.css">
 </head>
@@ -12,8 +12,8 @@
 <div class="blk headtext" data-block="header_text" style="--x:0;--y:0;--w:627.5;--h:188">
   <h1 class="title rt" data-role="title" data-claim="H.title">EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol<br>for AI Agents over Foundation-Model Embeddings</h1>
   <p class="hero rt" data-role="hero" data-claim="U.hero">An Earth observation that<br>survives an agent handoff.</p>
-  <p class="subhero rt" data-role="subhero" data-claim="U.hero">EMEM gives an observation a lookup identity and a content-addressed record. Agent A passes the reference. Agent B resolves the same record and checks it before continuing.</p>
-  <p class="bridge rt" data-role="bridge" data-claim="U.bridge">Earth data stays in the data layer. Its reference enters the reasoning layer.</p>
+  <p class="subhero rt" data-role="subhero" data-claim="V8.language">EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.</p>
+  <p class="bridge rt" data-role="bridge" data-claim="V8.language">A compact citation keeps the observation traceable across agents and time.</p>
   <div class="byline" data-role="byline" data-claim="H.byline H.session">
     <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai</div>
     <div>Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026 · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)</div>
@@ -42,31 +42,31 @@
 </section>
 
 <div class="col" data-col="left" style="--gap:5;--x:20;--y:377.5;--w:193.5;--h:639">
-<section class="panel c3" data-block="p2" data-brief="2 · One question, different records">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>What can change between agents?</p>
-  <h2 class="rt" data-role="headline" data-claim="U.drift">One question, several records</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="E8.summary">Scene, pixel, offset, rounding and stale state can change the value passed on.</p>
-  <div class="fig" data-figslot="f3_eight_answers" style="--fw:193.5;--fh:62"><!--fig:f3_eight_answers--></div>
-  <p class="cap rt" data-role="caption" data-claim="E8.summary">The same Keylong question yields eight values under these choices. Keeping the cited record makes the differences inspectable.</p>
+<section class="panel c3" data-block="p2" data-brief="2 · Traceable observation history">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>Can a time series retain its evidence?</p>
+  <h2 class="rt" data-role="headline" data-claim="V8.history">NDVI history, with citations</h2>
+  <p class="mech rt" data-role="mechanism" data-claim="V8.history">Each value retains its dated record.</p>
+  <div class="fig" data-figslot="f17_ndvi_history" style="--fw:193.5;--fh:70"><!--fig:f17_ndvi_history--></div>
+  <p class="cap rt" data-role="caption" data-claim="V8.history">Cloud/snow screening and processing harmonisation were not applied; physical interpretation needs both.</p>
 </section>
 <section class="panel c3" data-block="p3" data-brief="3 · Different drift, different check">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">3</span>Where did the evidence change?</p>
   <h2 class="rt" data-role="headline" data-claim="DF.decomposition">A changed value needs a cause</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">References can drift during a handoff; readouts can change between visits. Keep both questions separate.</p>
+  <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">A cited value can change during a handoff. Between acquisitions, the surface, sensor or processing may also change.</p>
   <div class="equation" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub><br><span class="indent">+ Δ<sub>encoder</sub> + ε</span></div>
-  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">World, instrument, alignment, model and noise. Δz is the later readout minus the earlier one. The attribution ledger links evidence to each term; the numeric split remains open.</p>
+  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Surface change, instrument, registration, encoder and residual. Δz is the later value minus the earlier one. The attribution ledger links evidence to each term; the numeric split remains open.</p>
   <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:116"><!--fig:f4_failure_ladder--></div>
   <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run SAT.gate">The implemented anchor score measures disagreement, not its cause. SAT-042 exercises it in a reference harness; live device-to-anchor wiring remains next work.</p>
 </section>
 <section class="panel c3 addresses" data-block="questions" data-brief="Memory operations">
-  <h2 class="rt" data-role="headline" data-claim="V7.algebra">Compute over the memory</h2>
-  <div class="algebra" data-claim="V7.algebra">
-    <p><b>recall · diff</b> recover a state; compare visits</p>
-    <p><b>merge · trace</b> cite a set; follow its recipe</p>
-    <p><b>competing · evolve</b> keep disagreement; append</p>
-    <p><b>ensure · valid</b> fill a missing read; assess age</p>
+  <h2 class="rt" data-role="headline" data-claim="V7.algebra V8.workflow">Use it in an EO workflow</h2>
+  <div class="algebra" data-claim="V7.algebra V8.workflow">
+    <p><b>Compare dates</b> · recall, diff</p>
+    <p><b>Assemble evidence</b> · merge, trace</p>
+    <p><b>Retain conflicts</b> · competing, evolve</p>
+    <p><b>Refresh inputs</b> · ensure, valid</p>
   </div>
-  <p class="cap rt" data-role="caption" data-claim="V7.algebra">Typed memory operations retain the evidence behind an answer. Single-hop materialisation is implemented; multi-hop planning remains open.</p>
+  <p class="cap rt" data-role="caption" data-claim="V7.algebra V8.workflow">Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.</p>
   <p class="cap rt" data-role="caption" data-claim="MF.tests">20 upstream offline SDK / encoding tests passed.</p>
 </section>
 <section class="panel c3 handoff" data-block="threat" data-brief="Concrete handoff">
@@ -95,7 +95,7 @@
     <div class="qr inl" data-qr="r" data-claim="Q.inspect_record"><div class="sym"><!--qr:r--></div></div>
   </div>
   <div class="fig" data-figslot="f13_one_address" style="--fw:396;--fh:142"><!--fig:f13_one_address--></div>
-  <p class="cap rt" data-role="caption" data-claim="CM.absence BE.grid">Absence is citable too: CHIRPS reports outside its latitude range. A common cell does not make these products co-registered.</p>
+  <p class="cap rt" data-role="caption" data-claim="CM.absence BE.grid V8.language">An EMEM cell indexes a location. Products retain their native pixels; CHIRPS records an out-of-coverage absence.</p>
 </section>
 <section class="panel c6" data-block="p5" data-brief="5 · Checks back to the source">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">5</span>Which changes can the receiver detect?</p>
@@ -120,9 +120,9 @@
   <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:65"><!--fig:f8_ladder--></div>
   <p class="cap rt" data-role="caption" data-claim="U.boundary">Checks establish properties of the cited record. A source re-read adds evidence; sensor accuracy remains inherited.</p>
 </section>
-<section class="panel c3" data-block="p8" data-brief="8 · Memory keeps what was cited">
+<section class="panel c3" data-block="p8" data-brief="8 · Revisit the earlier evidence">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">8</span>Can a later agent recover the earlier state?</p>
-  <h2 class="rt" data-role="headline" data-claim="TM.asof">Memory keeps what was cited</h2>
+  <h2 class="rt" data-role="headline" data-claim="TM.asof">Revisit the earlier evidence</h2>
   <div class="temporal-equation" data-claim="V7.recall">C<sub>τ</sub> = TxAsOf(O*, a, b, τ)<br>recall = max<sub>(t, cid)</sub> {O in C<sub>τ</sub> : t ≤ t*}</div>
   <p class="cap rt" data-role="caption" data-claim="V7.recall">Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.</p>
   <div class="fig" data-figslot="f9_timeline" style="--fw:193.5;--fh:82"><!--fig:f9_timeline--></div>
@@ -132,7 +132,7 @@
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">9</span>What does the memory contain?</p>
   <h2 class="rt" data-role="headline" data-claim="MF.model">Observations + temporal edges</h2>
   <div class="equation" data-claim="MF.model V7.observation">M = (O*, E*) &nbsp; O = (a, b, t, v, u, p, s)</div>
-  <p class="cap rt" data-role="caption" data-claim="V7.observation">a: cell · b: band · t: valid time · v: value<br>u: uncertainty · p: provenance, recipe, signing time<br>s: attestation associated with the observation</p>
+  <p class="cap rt" data-role="caption" data-claim="V7.observation V8.language">a: location cell · b: variable · t: valid time · v: value<br>u: uncertainty · p: provenance, recipe, signing time<br>s: attestation associated with the observation</p>
   <p class="cap rt" data-role="caption" data-claim="V7.observation O.batch">Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.</p>
   <div class="equation small" data-claim="MF.model">E = (subject, predicate, object, t<sub>from</sub>, t<sub>to</sub>)</div>
   <p class="cap rt" data-role="caption" data-claim="MF.model">Append observations and supersedes / disagrees_with edges; keep earlier records.</p>
@@ -155,9 +155,9 @@
   <div class="qrhead">
     <div class="qrhtext">
       <h2 class="rt" data-role="headline" data-claim="CM.routes"><span class="num" data-exempt="panelno">11</span>Use emem. Carry the evidence forward.</h2>
-      <p class="mech rt" data-role="mechanism" data-claim="CM.routes">Connect a plugin, a workflow or your own code. Public emem reads need no API key; the source is open.</p>
+      <p class="mech rt" data-role="mechanism" data-claim="CM.routes V8.workflow">Start with an EO question, connect your tool, then pass the cited observations onward. Public emem reads need no API key.</p>
       <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope">Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).<br>The routes below are plugins, connectors, packages and listings. One evidence protocol, multiple agent runtimes. Setup and compatibility notes are behind CONNECT.</p>
-      <div class="qrlabel inl" data-claim="Q.discover_integrations CM.exercise"><span class="cta">CONNECT</span> <span class="qcap" data-role="cap">Copy a token, choose your tool, run the checks. &nbsp;<span class="mono community-url">vortx-ai.github.io/esa_poster/use/</span></span></div>
+      <div class="qrlabel inl" data-claim="Q.discover_integrations CM.exercise"><span class="cta">CONNECT</span> <span class="qcap" data-role="cap">Choose an EO task, copy a reference, run the checks. &nbsp;<span class="mono community-url">vortx-ai.github.io/esa_poster/use/</span></span></div>
     </div>
     <div class="qr inl" data-qr="use" data-claim="Q.discover_integrations"><div class="sym"><!--qr:use--></div></div>
   </div>

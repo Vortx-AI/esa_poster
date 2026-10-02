@@ -1,0 +1,99 @@
+{
+  "release": "v13.8",
+  "date": "2026-10-02",
+  "base_commit": "f8745dba5a7e9d38da943dbfb3a6312808c9bace",
+  "research_review": "research/v13/23_EO_GOLD_AND_USABILITY.md",
+  "historical_design_sources": [
+    "57a48a6a350dc61c221f01531c86ca795d82a07a",
+    "2686b27a9947613b72c4690c4dc524839c6fbcd2"
+  ],
+  "upstream_implementation_commit": "8e9b401cecae7ab9944d403a2d7840952c6586a6",
+  "artifacts": {
+    "poster/emem-poster-A0.pdf": {
+      "bytes": 1996463,
+      "sha256": "cd32677e982f8e2afef5c556a4f2e3fa4443f0ec027770f60c31cc67c7c47c1e"
+    },
+    "poster/emem-poster-preview.png": {
+      "bytes": 2753045,
+      "sha256": "5d2e7d932d6a5d0ffea443d88038b7617258c1a4afe28dbac0ac1040f7ea5502"
+    },
+    "poster/emem-poster-A0-300dpi.png": {
+      "bytes": 11543345,
+      "sha256": "053fa246ee3d904edd72529148497dc0844478e639923633f4c8afe2aae98408"
+    },
+    "poster/build_v13_report.json": {
+      "bytes": 28325,
+      "sha256": "d4ac47ce404fd0eb8ebf22d8088bdd81bb5685aa282969dcd5764848c4a94eac"
+    },
+    "research/v13/evidence/v138/site_review.json": {
+      "bytes": 59337,
+      "sha256": "cf227b106ab7c13817a695b1433247312712823dd8905e5afa88a25944c869dd"
+    },
+    "research/v13/evidence/v138/gate_tests.txt": {
+      "bytes": 1307,
+      "sha256": "21498a8d367b84cd73c9416ee3721002bd8bcaeac0342efa4df546ec730652fe"
+    },
+    "research/v13/evidence/v138/eo_history.json": {
+      "bytes": 699,
+      "sha256": "bdad40fddb43019dae8b1884aaf3bc28b7860489881998c402d98f0f23041674"
+    },
+    "research/v13/evidence/v138/public_source_checks.json": {
+      "bytes": 2176,
+      "sha256": "1be383919dde3e7095d934bcf86fd4c18083c95424c9a7d8d761f3b88f989fee"
+    }
+  },
+  "validation": {
+    "poster_gates": {
+      "page_fit": "PASS",
+      "footer_clearance": "PASS",
+      "block_rectangles": "PASS",
+      "no_overflow_or_clipping": "PASS",
+      "type_floor": "PASS",
+      "glyph_coverage": "PASS",
+      "prose_and_banned_words": "PASS",
+      "face_hygiene": "PASS",
+      "r5_placeholders": "PASS",
+      "claims_coverage": "PASS",
+      "ecosystem_manifest": "PASS",
+      "claims_rows_recheck": "PASS",
+      "qr_decode": "PASS",
+      "assets": "PASS",
+      "fonts_loaded": "PASS",
+      "colour_tokens": "PASS",
+      "imagery": "PASS",
+      "word_budget": "PASS"
+    },
+    "running_words": 675,
+    "printed_claim_rows": 142,
+    "evidence_rows_rechecked": 415,
+    "local_route_viewports": {
+      "passed": 16,
+      "failed": 0
+    },
+    "eo_task_links": 6,
+    "evidence_gate_tests": 14,
+    "visual_review": "Full A0 PDF render, NDVI figure and community desktop view inspected; no overlap or clipping.",
+    "proof_lossless_compression": {
+      "optimizer": "pyoxipng 9.1.1, level 3",
+      "pixels_and_dpi_unchanged": true,
+      "decoded": {
+        "size": [
+          9933,
+          14042
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ],
+        "rgb_sha256": "1f9c5671430a310c067f8aa608962b3c7c8d3d552f6d3055b5b7b594a4db0d52"
+      },
+      "bytes_before": 14233769,
+      "bytes_after": 11543345,
+      "seconds": 54.12
+    }
+  },
+  "issues_resolved": [
+    19
+  ],
+  "scope": "Restored 141 retained NDVI records and practical EO workflows. No new model trials, fresh Rust run, hosted-agent success or ecological trend inference. Existing scientific evidence retains its original dates and limitations."
+}

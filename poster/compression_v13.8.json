@@ -1,0 +1,18 @@
+{
+  "optimizer": "pyoxipng 9.1.1, level 3",
+  "pixels_and_dpi_unchanged": true,
+  "decoded": {
+    "size": [
+      9933,
+      14042
+    ],
+    "dpi": [
+      299.9994,
+      299.9994
+    ],
+    "rgb_sha256": "1f9c5671430a310c067f8aa608962b3c7c8d3d552f6d3055b5b7b594a4db0d52"
+  },
+  "bytes_before": 14233769,
+  "bytes_after": 11543345,
+  "seconds": 54.12
+}
