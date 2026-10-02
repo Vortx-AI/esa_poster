@@ -45,21 +45,19 @@
 </section>
 
 <div class="col" data-col="left" style="--gap:5;--x:20;--y:433.5;--w:193.5;--h:639">
-<section class="panel c3" data-block="p2" data-brief="2 · Traceable observation history">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>Can a time series retain its evidence?</p>
-  <h2 class="rt" data-role="headline" data-claim="V8.history">NDVI history, with citations</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="V8.history">Each value retains its dated record.</p>
-  <div class="fig" data-figslot="f17_ndvi_history" style="--fw:193.5;--fh:70"><!--fig:f17_ndvi_history--></div>
-  <p class="cap rt" data-role="caption" data-claim="V8.history">Cloud/snow screening and processing harmonisation were not applied; physical interpretation needs both.</p>
+<section class="panel c3" data-block="p2" data-brief="2 · Eight answers; one is right">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>What can one NDVI become between agents?</p>
+  <h2 class="rt" data-role="headline" data-claim="E8.summary">Eight answers; one is right</h2>
+  <p class="mech rt" data-role="mechanism" data-claim="E8.summary H.img.record">One question, NDVI at the Keylong field on 25 Sep 2026; real records, archive pixels and handling rules give eight values.</p>
+  <div class="fig" data-figslot="f3_eight_answers" style="--fw:193.5;--fh:62"><!--fig:f3_eight_answers--></div>
+  <p class="cap rt" data-role="caption" data-claim="E8.summary">Six cross the irrigation line, one is impossible, one is right; each wrong value needs a different check.</p>
 </section>
-<section class="panel c3" data-block="p3" data-brief="3 · Different drift, different check">
+<section class="panel c3 drift-panel" data-block="p3" data-brief="3 · Different drift, different check">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">3</span>Where did the evidence change?</p>
   <h2 class="rt" data-role="headline" data-claim="DF.decomposition">A changed value needs a cause</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">A cited value can change during a handoff. Between acquisitions, the surface, sensor or processing may also change.</p>
-  <div class="equation" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub><br><span class="indent">+ Δ<sub>encoder</sub> + ε</span></div>
-  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Surface change, instrument, registration, encoder and residual. Δz is the later value minus the earlier one. The attribution ledger links evidence to each term; the numeric split remains open.</p>
-  <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:116"><!--fig:f4_failure_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run SAT.gate">The implemented anchor score measures disagreement, not its cause. SAT-042 exercises it in a reference harness; live device-to-anchor wiring remains next work.</p>
+  <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">A different value implies a change in one or more components of the chain.</p>
+  <div class="equation drift-one-line" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub> + Δ<sub>encoder</sub> + ε</div>
+  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution DF.score">Environment · sensor · geolocation · encoding · residual. The implemented anchor score measures disagreement, not its cause; the attribution ledger keeps evidence for each term.</p>
 </section>
 <section class="panel c3 addresses" data-block="questions" data-brief="Memory operations">
   <h2 class="rt" data-role="headline" data-claim="V7.algebra V8.workflow">Use it in an EO workflow</h2>
@@ -72,11 +70,11 @@
   <p class="cap rt" data-role="caption" data-claim="V7.algebra V8.workflow">Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.</p>
   <p class="cap rt" data-role="caption" data-claim="MF.tests">20 upstream offline SDK / encoding tests passed.</p>
 </section>
-<section class="panel c3 handoff" data-block="threat" data-brief="Concrete handoff">
-  <h2 class="rt" data-role="headline" data-claim="MF.embeddings">Model outputs are records too</h2>
-  <p class="body rt" data-role="body" data-claim="MF.embeddings">Satellite input → encoder → vector record → content address</p>
-  <div class="fig" data-figslot="f16_embeddings" style="--fw:193.5;--fh:53"><!--fig:f16_embeddings--></div>
-  <p class="cap rt" data-role="caption" data-claim="V.prithvi V.tessera V.retired">Archived vectors: Prithvi names a checkpoint digest; TESSERA names a product year. These encoders are retired on the deployment; stored records remain addressable.</p>
+<section class="panel c3 handoff" data-block="threat" data-brief="Threat model · what checks establish">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
+  <h2 class="rt" data-role="headline" data-claim="U.boundary">Checks stop at the source</h2>
+  <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:65"><!--fig:f8_ladder--></div>
+  <p class="cap rt" data-role="caption" data-claim="U.boundary">Record bytes and identity are checkable; derivation can be recomputed; source checks are partial. Entity, sensor accuracy and the decision remain outside the reference.</p>
 </section>
 <section class="panel c3 invention" data-block="p13" data-brief="Contribution and prior art">
   <p class="extension-label" data-claim="V7.invention">THE CONTRIBUTION</p>
@@ -87,18 +85,18 @@
 </div>
 
 <div class="col" data-col="centre" style="--gap:4;--x:222.5;--y:433.5;--w:396;--h:639">
-<section class="panel c6" data-block="p4" data-brief="Berlin source-to-record fanout">
+<section class="panel c6" data-block="p4" data-brief="4 · The address names the record, not the pixel">
   <div class="qrhead">
     <div class="qrhtext">
-      <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">4</span>What does one Berlin location reveal?</p>
-      <h2 class="rt" data-role="headline" data-claim="BE.stack">One cell, many source records</h2>
-      <p class="mech rt" data-role="mechanism" data-claim="BE.stack BE.grid">One lookup joins the evidence; each product keeps its own time, provenance and native grid.</p>
-      <div class="qrlabel inl" data-claim="Q.inspect_record O.1115"><span class="cta">INSPECT</span> <span class="qcap" data-role="cap">Open the Keylong record and its 1,115 bytes.</span></div>
+      <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">4</span>What exactly is handed over?</p>
+      <h2 class="rt" data-role="headline" data-claim="O.nohash">The address names the record, not the pixel.</h2>
+      <p class="mech rt" data-role="mechanism" data-claim="O.84">The receiver gets 84 characters; everything else it fetches and checks.</p>
+      <div class="qrlabel inl" data-claim="Q.inspect_record O.1115"><span class="cta">INSPECT THE RECORD</span> <span class="qcap" data-role="cap">The 1,115 bytes behind the main example, decoded.</span></div>
     </div>
     <div class="qr inl" data-qr="r" data-claim="Q.inspect_record"><div class="sym"><!--qr:r--></div></div>
   </div>
-  <div class="fig" data-figslot="f13_one_address" style="--fw:396;--fh:142"><!--fig:f13_one_address--></div>
-  <p class="cap rt" data-role="caption" data-claim="CM.absence BE.grid V8.language">An EMEM cell indexes a location. Products retain their native pixels; CHIRPS records an out-of-coverage absence.</p>
+  <div class="fig" data-figslot="f5_evidence_object" style="--fw:396;--fh:98"><!--fig:f5_evidence_object--></div>
+  <p class="cap rt" data-role="caption" data-claim="O.1115 O.batch O.nohash O.sevenaddr">The address is the BLAKE3 hash of the 1,115-byte record, which names its source files and the point it read but holds no hash of them; a batch signature covers such addresses. Re-signing makes a new record: one Bengaluru value has seven.</p>
 </section>
 <section class="panel c6" data-block="p5" data-brief="5 · Checks back to the source">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">5</span>Which changes can the receiver detect?</p>
@@ -117,11 +115,15 @@
 </div>
 
 <div class="col" data-col="right" style="--gap:4;--x:627.5;--y:433.5;--w:193.5;--h:639">
-<section class="panel c3" data-block="p7" data-brief="7 · What checks establish">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What has the receiver established?</p>
-  <h2 class="rt" data-role="headline" data-claim="U.boundary">Know what was checked</h2>
-  <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:65"><!--fig:f8_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="U.boundary">Checks establish properties of the cited record. A source re-read adds evidence; sensor accuracy remains inherited.</p>
+<section class="panel c3 boundary" data-block="p7" data-brief="7 · Verification boundary">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>Where does verification stop?</p>
+  <h2 class="rt" data-role="headline" data-claim="U.boundary">Beyond the checked reference</h2>
+  <div class="addresscard">
+    <p class="body" data-claim="U.boundary"><b>Entity meant</b> · out of scope</p>
+    <p class="body" data-claim="U.boundary"><b>Sensor accuracy</b> · inherited</p>
+    <p class="body" data-claim="U.boundary"><b>Decision</b> · out of scope</p>
+  </div>
+  <p class="cap rt" data-role="caption" data-claim="U.boundary">A source re-read adds evidence about the source read. It does not establish physical truth or decide what an agent should do.</p>
 </section>
 <section class="panel c3" data-block="p8" data-brief="8 · Revisit the earlier evidence">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">8</span>Can a later agent recover the earlier state?</p>
