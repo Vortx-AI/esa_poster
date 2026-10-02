@@ -47,7 +47,7 @@
       "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
     },
     "p11": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "Panel 11 restores the compact SAT-042 execution-verification strip (F15b): seven harness steps, the chained 8-layer trace with a rewritten segment caught, and drift-anchor scoring. The run is explicitly a reference harness with no spacecraft enrolled; the gate binds the value digest only."
     }
   },
   "v13.2_notes": {
@@ -69,11 +69,11 @@
       53
     ],
     "space_recovered_mm": 56,
-    "retained_scientific_figures": 11,
+    "retained_scientific_figures": 12,
     "community_figure_mm": [
       726,
       65
     ],
-    "reason": "The complete seven-step workflow is read before the controlled handoff experiment."
+    "reason": "The complete seven-step workflow is read before the controlled handoff experiment; panel 11 now carries the compact SAT-042 execution-verification strip instead of a next-experiments prose block."
   }
 }
