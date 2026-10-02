@@ -1,110 +1,145 @@
-# v13.9 unified poster and community brief
+# Reviewed v13 poster and community brief
 
 Keep the complete handoff, token family, Berlin fanout and exact memory formalism restored in v13.7. Recover the dated NDVI history and explain memory operations through EO tasks. Make community entry points usable while preserving the scope of the scientific evidence. See `23_EO_GOLD_AND_USABILITY.md` for the recovery decisions and `22_RECOVERED_DESIGN_AND_FORMALISM.md` for the preceding restoration.
 
+Review of 2 Oct 2026: restore the source-driven eight-value example and complete evidence object, keep the drift decomposition on one line with the implemented score below it, consolidate the checked-reference scope into panel 7, and print the demonstrated SAT-042 execution harness. Remove future-work prose and generic test-count copy from the face.
+
 ## C. The complete printed text
+
+Rendered running copy for the reviewed source. Figure labels, equations outside running text, scope metadata and references retain their claim rows.
 
 ### Header
 
-> An Earth observation thatsurvives an agent handoff.
+> An Earth observation that survives an agent handoff.
+
 > EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
+
 > A compact citation keeps the observation traceable across agents and time.
 
 ### 1 · Earth to agents
 
 > What survives an agent handoff?
+
 > The same observation, carried through receiver checks.
+
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
+
 > In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
 
-### 2 · Eight answers; one is right
+### 2 · One NDVI, eight values
 
-> What can one NDVI become between agents?
-> Eight answers; one is right
-> One question, NDVI at the Keylong field on 25 Sep 2026; real records, archive pixels and handling rules give eight values.
-> Six cross the irrigation line, one is impossible, one is right; each wrong value needs a different check.
+> How does a value change between agents?
+
+> One NDVI, eight values
+
+> At Keylong on 25 Sep 2026, scene, date, pixel and arithmetic choices change the reported NDVI.
+
+> Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.
 
 ### 3 · Different drift, different check
 
 > Where did the evidence change?
+
 > A changed value needs a cause
-> A different value implies a change in one or more components of the chain.
-> Δz = Δenv + Δsensor + Δgeo + Δencoder + ε
-> Environment · sensor · geolocation · encoding · residual. The implemented anchor score measures disagreement, not its cause; the attribution ledger keeps evidence for each term.
+
+> Between acquisitions, the surface, sensor, location or processing can change.
+
+> Δz: change in readout. Environment · sensor · geolocation · encoder · residual. The attribution ledger links evidence to these terms.
+
+> The implemented score measures disagreement with an anchor. SAT-042 applies it to a fixed reference in the execution harness.
 
 ### Memory operations
 
 > Use it in an EO workflow
-> Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.
-> 20 upstream offline SDK / encoding tests passed.
 
-### Threat model · what checks establish
+> Compare vegetation observations, retain conflicting estimates and pass their references onward. Single-hop retrieval materialises the requested observation.
+
+### 7 · What checks establish
 
 > What does a checked reference establish?
-> Checks stop at the source
-> Record bytes and identity are checkable; derivation can be recomputed; source checks are partial. Entity, sensor accuracy and the decision remain outside the reference.
+
+> Know what was checked
+
+> Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.
 
 ### Contribution and prior art
 
 > Checkable observation handoff
+
 > An agent passes a reference to a specific physical observation; the receiver resolves it and checks the evidence.
+
 > Built with standard BLAKE3, Ed25519, CBOR and Merkle logs. STAC, openEO, PROV, C2PA, RAG and temporal storage provide complementary layers.
 
-### 4 · The address names the record, not the pixel
+### 4 · What exactly is handed over
 
 > What exactly is handed over?
-> The address names the record, not the pixel.
-> The receiver gets 84 characters; everything else it fetches and checks.
-> The address is the BLAKE3 hash of the 1,115-byte record, which names its source files and the point it read but holds no hash of them; a batch signature covers such addresses. Re-signing makes a new record: one Bengaluru value has seven.
+
+> A compact reference to an exact record
+
+> The receiver uses an 84-character reference to fetch the record and its evidence.
+
+> BLAKE3 identifies the 1,115-byte record. Its fields name the source files, sampled point and derivation; a batch signature covers the record address. Source-file hashes are absent from this record.
 
 ### 5 · Checks back to the source
 
 > Which changes can the receiver detect?
+
 > Checks can continue back to the source
+
 > Resolve → Re-hash → Bind → Recompute → Re-read
+
 > Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).
 
 ### 6 · Source re-read
 
 > A valid record can preserve a wrong source read
+
 > NDVI = (DN8 − DN4) / (DN8 + DN4 + 2o), o = −1000 (product offset)
-
-### 7 · Verification boundary
-
-> Where does verification stop?
-> Beyond the checked reference
-> Entity meant · out of scope. Sensor accuracy · inherited. Decision · out of scope.
-> A source re-read adds evidence about the source read. It does not establish physical truth or decide what an agent should do.
 
 ### 8 · Revisit the earlier evidence
 
 > Can a later agent recover the earlier state?
+
 > Revisit the earlier evidence
+
 > Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.
-> As of 15 Jun → 918.0 m. The later 915.07 m is a provider change. Temporal storage is established; the handoff adds a portable citation to the exact earlier record.
+
+> The later 915.07 m reflects a provider change. The earlier citation still resolves to the earlier estimate.
 
 ### Complete observation and memory model
 
 > What does the memory contain?
+
 > Observations + temporal edges
-> a: location cell · b: variable · t: valid time · v: valueu: uncertainty · p: provenance, recipe, signing times: attestation associated with the observation
+
+> a: location cell · b: variable · t: valid time · v: value u: uncertainty · p: provenance, recipe, signing time s: attestation associated with the observation
+
 > Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.
+
 > Append observations and supersedes / disagrees_with edges; keep earlier records.
 
 ### 10 · Token family
 
 > What else can an agent carry?
+
 > Beyond a single observation
+
 > Eight facts resolve through one bundle; four checkpoint hashes reproduce. These object checks do not validate an agent's reasoning.
 
-### Execution extension
+### 11 · Satellite execution evidence
 
-> Measure each cause of change
-> Control scene, pixel and encoder changes to test numeric attribution. Connect device outputs to separately recalled anchors. Repeat handoffs across separately operated hosts.
+> Satellite execution evidence
 
-### 11 · Community routes
+> A signed trace binds the reported run
+
+> SAT-042 scripted pass · reference harness · 30 Sep 2026.
+
+> Reference harness, no spacecraft enrolled. The admission gate binds output value digests; band, cell and time are outside this check.
+
+### 12 · Community routes
 
 > Use emem. Carry the evidence forward.
+
 > Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).
 
 ## D. Claims map
