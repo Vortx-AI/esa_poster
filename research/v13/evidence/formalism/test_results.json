@@ -1,0 +1,93 @@
+{
+  "commit": "8e9b401cecae7ab9944d403a2d7840952c6586a6",
+  "date": "2026-10-02",
+  "command": "PYTHONPATH=sdks/emem-py/src:bench GITHUB_ACTIONS=true python -m pytest sdks/emem-py/tests/test_verify_offline.py bench/test_canonical.py -v --junitxml=offline_tests.xml",
+  "tests": 20,
+  "passed": 20,
+  "failed": 0,
+  "skipped": 0,
+  "cases": [
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_encoders_agree_with_the_rust_signer"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_a_genuine_receipt_verifies"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_forgeries_are_refused[content address swapped-<lambda>]"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_forgeries_are_refused[request id rewritten-<lambda>]"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_forgeries_are_refused[clock rewound-<lambda>]"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_forgeries_are_refused[primitive relabelled-<lambda>]"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_forgeries_are_refused[inclusion root flipped-<lambda>]"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_forgeries_are_refused[inclusion proof stripped-<lambda>]"
+    },
+    {
+      "class": "tests.test_verify_offline",
+      "name": "test_a_refusal_never_looks_like_a_pass"
+    },
+    {
+      "class": "",
+      "name": "test_short_text_keys_sort_the_same_under_both_rfcs"
+    },
+    {
+      "class": "",
+      "name": "test_keys_sort_on_encoded_bytes_not_python_value"
+    },
+    {
+      "class": "",
+      "name": "test_floats_use_shortest_roundtripping_form"
+    },
+    {
+      "class": "",
+      "name": "test_we_diverge_from_cbor2_canonical_exactly_where_emem_says_to"
+    },
+    {
+      "class": "",
+      "name": "test_negative_zero_and_nan_fold_to_one_representative"
+    },
+    {
+      "class": "",
+      "name": "test_bool_is_not_encoded_as_int"
+    },
+    {
+      "class": "",
+      "name": "test_ints_use_shortest_form_and_negatives_encode"
+    },
+    {
+      "class": "",
+      "name": "test_run_cid_ignores_the_run_cid_field_itself"
+    },
+    {
+      "class": "",
+      "name": "test_run_cid_changes_when_any_recorded_byte_changes"
+    },
+    {
+      "class": "",
+      "name": "test_encoder_refuses_types_it_cannot_encode_deterministically"
+    },
+    {
+      "class": "",
+      "name": "test_test_vector_is_stable"
+    }
+  ],
+  "scope": "Upstream offline SDK receipt verifier and benchmark canonical encoder. Not the whole Rust workspace.",
+  "rust_scope": "Rust unavailable in this workspace; source inspected. Archived emem-trace run at 04b40c5 has 22 passed, 1 deliberately ignored timing test (30 Sep 2026)."
+}

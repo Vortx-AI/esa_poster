@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-02T07:48:54.668Z",
+  "scope": "Local static mobile layout for all routes and updated formalism content; external requests blocked. Does not certify live emem.dev or GitHub Pages.",
+  "pages": [
+    {
+      "route": "",
+      "width": 390,
+      "scrollWidth": 390,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "route": "demo/",
+      "width": 390,
+      "scrollWidth": 390,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "route": "t/",
+      "width": 390,
+      "scrollWidth": 390,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "route": "r/",
+      "width": 390,
+      "scrollWidth": 390,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "route": "test/",
+      "width": 390,
+      "scrollWidth": 390,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "route": "methods/",
+      "width": 390,
+      "scrollWidth": 390,
+      "errors": [],
+      "pass": true,
+      "formulas": true,
+      "freshTests": true,
+      "scope": true
+    },
+    {
+      "route": "use/",
+      "width": 390,
+      "scrollWidth": 390,
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "pass": true
+}

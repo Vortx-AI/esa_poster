@@ -1,0 +1,39 @@
+{
+ "figure": "f16_embeddings",
+ "size_mm": [
+  193.5,
+  53
+ ],
+ "labels": [
+  {
+   "text": "Prithvi",
+   "claim": "V.prithvi",
+   "pt": 20
+  },
+  {
+   "text": "1,024 values",
+   "claim": "V.prithvi",
+   "pt": 17
+  },
+  {
+   "text": "checkpoint digest inside the record",
+   "claim": "V.prithvi",
+   "pt": 14
+  },
+  {
+   "text": "TESSERA",
+   "claim": "V.tessera",
+   "pt": 20
+  },
+  {
+   "text": "128 values",
+   "claim": "V.tessera",
+   "pt": 17
+  },
+  {
+   "text": "product year 2024; no checkpoint digest",
+   "claim": "V.tessera",
+   "pt": 14
+  }
+ ]
+}

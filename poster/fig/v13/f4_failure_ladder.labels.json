@@ -2,122 +2,72 @@
  "figure": "f4_failure_ladder",
  "size_mm": [
   193.5,
-  190
+  100
  ],
  "labels": [
   {
-   "text": "WHAT MOVED",
-   "claim": "U.drift",
+   "text": "IMPLEMENTED \u00b7 DRIFT-ANCHOR SCORE",
+   "claim": "DF.score",
    "pt": 14
   },
   {
-   "text": "WHAT TO CHECK",
-   "claim": "U.drift",
-   "pt": 14
+   "text": "u = |x \u2212 a| / (3\u03c3)",
+   "claim": "DF.score",
+   "pt": 26
   },
   {
-   "text": "PLACE",
-   "claim": "U.drift",
+   "text": "s = u / (1 + u)",
+   "claim": "DF.score",
+   "pt": 30
+  },
+  {
+   "text": "x: output \u00b7 a: anchor \u00b7 \u03c3: anchor uncertainty",
+   "claim": "DF.score",
+   "pt": 16
+  },
+  {
+   "text": "consistent",
+   "claim": "DF.score",
    "pt": 17
   },
   {
-   "text": "Compare the requested cell",
-   "claim": "U.drift",
-   "pt": 20
-  },
-  {
-   "text": "Coordinates keep the question anchored.",
-   "claim": "U.drift",
-   "pt": 15
-  },
-  {
-   "text": "TIME",
-   "claim": "U.drift",
+   "text": "tension",
+   "claim": "DF.score",
    "pt": 17
   },
   {
-   "text": "Bind the observation time",
-   "claim": "U.drift",
-   "pt": 20
-  },
-  {
-   "text": "Requested day and returned day remain visible.",
-   "claim": "U.drift",
-   "pt": 15
-  },
-  {
-   "text": "PRODUCT",
-   "claim": "U.drift",
+   "text": "contradicted",
+   "claim": "DF.score",
    "pt": 17
   },
   {
-   "text": "Inspect the band and convention",
-   "claim": "U.drift",
-   "pt": 20
-  },
-  {
-   "text": "Keep the product, grid and units explicit.",
-   "claim": "U.drift",
-   "pt": 15
-  },
-  {
-   "text": "SOURCE PIXEL / SCENE",
-   "claim": "U.drift",
+   "text": "0",
+   "claim": "DF.score",
    "pt": 17
   },
   {
-   "text": "Re-read the named source",
-   "claim": "U.drift",
-   "pt": 20
-  },
-  {
-   "text": "Test the scene and the containing pixel.",
-   "claim": "U.drift",
-   "pt": 15
-  },
-  {
-   "text": "DERIVATION",
-   "claim": "U.drift",
+   "text": "0.50",
+   "claim": "DF.score",
    "pt": 17
   },
   {
-   "text": "Recompute from the recipe",
-   "claim": "U.drift",
-   "pt": 20
-  },
-  {
-   "text": "Check inputs, parameters and offset rules.",
-   "claim": "U.drift",
-   "pt": 15
-  },
-  {
-   "text": "VALUE REPRESENTATION",
-   "claim": "U.drift",
+   "text": "0.75",
+   "claim": "DF.score",
    "pt": 17
   },
   {
-   "text": "Resolve the exact record",
-   "claim": "U.drift",
-   "pt": 20
-  },
-  {
-   "text": "0.47 and 0.4709 lead to different test decisions.",
-   "claim": "F.lost",
-   "pt": 15
-  },
-  {
-   "text": "REFERENT",
-   "claim": "U.drift",
+   "text": "1",
+   "claim": "DF.score",
    "pt": 17
   },
   {
-   "text": "Retain the application identity",
-   "claim": "U.drift",
-   "pt": 20
+   "text": "Tests pin 3\u03c3 \u2192 0.50 and 9\u03c3 \u2192 0.75.",
+   "claim": "DF.score",
+   "pt": 17
   },
   {
-   "text": "The place record accompanies the object meant.",
-   "claim": "U.drift",
+   "text": "Missing or invalid \u03c3: exact agreement required.",
+   "claim": "DF.score",
    "pt": 15
   }
  ]

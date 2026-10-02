@@ -49,7 +49,7 @@ TODAY = dt.date.today()
 
 FIGURES = ["f1_scene", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object", "f6_mutation_matrix",
            "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem", "f12_prior_art",
-           "f13_one_address", "f14_token_family"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; v13.2: SAT-042 as the strip F15b (F15 drawn, not placed)
+           "f13_one_address", "f14_token_family", "f16_embeddings"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; v13.2: SAT-042 as the strip F15b (F15 drawn, not placed)
 QRS = ["demo", "r", "methods"]  # issue #48: three printed tasks; all six web routes remain
 
 # brief section B row label -> data-block id
@@ -65,9 +65,9 @@ LAYOUT_DEVIATIONS = json.loads((HERE / "src" / "poster.v13.layout.json").read_te
 
 GATES = {}          # name -> {"pass": bool, "details": [...]}
 TYPE_DEVIATIONS = [
-    "v13.3 issue #48: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
-    "The original layout is retained. Questions and threat blocks now explain two identities and the recorded handoff.",
-    "The execution extension is a short reference-harness note; detailed figures remain in methods.",
+    "v13.4: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
+    "The left column restores the memory model, drift equations and archived foundation-model outputs.",
+    "The execution extension accompanies the anchor score; the final right-column panel states next experiments.",
 ]
 HEADLINE_LEN_EXEMPT = {}
 MOVED = []          # running-text lines that a figure prints itself (dropped from the HTML, still counted)
@@ -1102,7 +1102,7 @@ def g_words(claims, r5=False):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
     # cap: brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16 (807 / 853 before them) plus about 1 % slack
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; v13.3 copy brief: see per-panel counts)"]
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; v13.4 copy brief: see per-panel counts)"]
     ok = tot_w <= 830 and tot_t <= 880
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)
