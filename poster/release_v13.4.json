@@ -91,6 +91,6 @@
       "seconds": 54.83
     }
   },
-  "deployment": "GitHub Pages disabled at last check; repository settings require browser GitHub sign-in before QR destinations are live.",
+  "deployment": "GitHub reports has_pages=true; root and methods returned 404 before the follow-up Pages workflow. .github/workflows/pages.yml deploys committed /docs; consult GitHub Actions for the deployment result.",
   "attestation": "No new signing attestation; previous signed track is archived and identifies its earlier PDF."
 }
