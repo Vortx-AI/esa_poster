@@ -335,15 +335,15 @@ def main():
     px, pw_ = wx + 7, ww - 14
 
     # What actually crosses the handoff: the address, not a copied pixel or prose blob.
-    ay, ah = ys[0] + 1.8, 33.5
+    ay, ah = ys[0] + 1.8, 36.5
     ax.add_patch(FancyBboxPatch((px, ay), pw_, ah, boxstyle="round,pad=0,rounding_size=1.5",
                                 fc=C["emem"], ec="none", zorder=3))
-    T(ax, px + 5, ay + 6.5, "ADDRESS", "O.84", fontsize=14, fontweight=700, color="white", va="center", zorder=4)
+    T(ax, px + 5, ay + 6.5, "REFERENCE", "O.84", fontsize=14, fontweight=700, color="white", va="center", zorder=4)
     T(ax, px + 5, ay + 14.0, "84 characters", "O.84", fontsize=22, fontweight=700, color="white", va="center", zorder=4)
-    T(ax, px + 5, ay + 21.0, "BLAKE3(record)", "O.nohash", fontsize=15, color="white", va="center", zorder=4)
+    T(ax, px + 5, ay + 21.0, "record CID = BLAKE3(record)", "O.cid", fontsize=15, color="white", va="center", zorder=4)
     cid = TOKEN.split(":")[-1]
-    T(ax, px + 5, ay + 27.6, cid[:26], "O.cid", family=S.MONO, fontsize=14, fontweight=600, color="white", va="center", zorder=4)
-    T(ax, px + 5, ay + 32.0, cid[26:], "O.cid", family=S.MONO, fontsize=14, fontweight=600, color="white", va="center", zorder=4)
+    T(ax, px + 5, ay + 27.2, cid[:26], "O.cid", family=S.MONO, fontsize=14, fontweight=600, color="white", va="center", zorder=4)
+    T(ax, px + 5, ay + 33.4, cid[26:], "O.cid", family=S.MONO, fontsize=14, fontweight=600, color="white", va="center", zorder=4)
 
     # Everything below is recovered from that address and independently checked by the receiver.
     items = [
