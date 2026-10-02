@@ -1,69 +1,249 @@
 {
-  "figure": "f14_token_family",
-  "size_mm": [
-    193.5,
-    86
-  ],
-  "labels": [
-    {
-      "text": "EARTH DATA",
-      "claim": "TF.family",
-      "pt": 14
-    },
-    {
-      "text": "raster \u2192 cube \u2192 rasterset",
-      "claim": "TF.family",
-      "pt": 20
-    },
-    {
-      "text": "Fields and dated stacks; retain the scene.",
-      "claim": "TF.family",
-      "pt": 15
-    },
-    {
-      "text": "COLLECT EVIDENCE",
-      "claim": "CM.bundle",
-      "pt": 14
-    },
-    {
-      "text": "8 facts \u2192 one bundle handle",
-      "claim": "CM.bundle",
-      "pt": 20
-    },
-    {
-      "text": "38 characters; members resolve separately.",
-      "claim": "CM.bundle",
-      "pt": 15
-    },
-    {
-      "text": "REASONING CHECKPOINTS",
-      "claim": "CM.state",
-      "pt": 14
-    },
-    {
-      "text": "located \u2192 routed \u2192 recalled \u2192 scored",
-      "claim": "CM.state",
-      "pt": 20
-    },
-    {
-      "text": "4 stage addresses re-hashed offline.",
-      "claim": "CM.state",
-      "pt": 15
-    },
-    {
-      "text": "FILES, IDENTITY AND EXECUTION",
-      "claim": "TF.family",
-      "pt": 14
-    },
-    {
-      "text": "tree \u00b7 entity \u00b7 trace \u00b7 track",
-      "claim": "TF.family",
-      "pt": 20
-    },
-    {
-      "text": "Address chunks, subjects and recorded runs.",
-      "claim": "TF.family",
-      "pt": 15
-    }
-  ]
+ "figure": "f14_token_family",
+ "size_mm": [
+  193.5,
+  118.0
+ ],
+ "labels": [
+  {
+   "text": "data need",
+   "pt": 14,
+   "claim": "V7.token_labels"
+  },
+  {
+   "text": "grammar, after emem:",
+   "pt": 14,
+   "claim": "V7.token_labels"
+  },
+  {
+   "text": "what its id hashes",
+   "pt": 14,
+   "claim": "V7.token_labels"
+  },
+  {
+   "text": "a place",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "cell:<cell64>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "the quantised lat/lng; no hash",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "one value",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact:<cell>:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR(fact)), 52 chars",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "nothing there",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact: · kind absence",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "same; + BLAKE3(reason)[:16]",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "an embedding",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact: · 128 / 1024 floats",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "same; attester_only",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a derived value",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "fact: · op, parents",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "same; pure ops re-run",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a raster",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "raster:<a>:<b>:<t>:<d>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "fact d names BLAKE3(grid)",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a raster in time",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "cube:<a>:<b>:<t0..t1>:<d>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR([member d…]))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a raster set",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "rasterset:<set>:<d>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR([d…, purpose]))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "many facts, one id",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "bundle:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(p, cell|band|t|cid)[:16]",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a file, one chunk",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "tree:<file>#row=i",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(note)[:16]; root inside",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a reasoning stage",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "state:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR(state record))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a named object",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "entity:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(anchor)[:16]: a label",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "a device run",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "trace:<cid>",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "BLAKE3(CBOR(signed trace))",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "an evidence chain",
+   "pt": 14,
+   "claim": "A14.need"
+  },
+  {
+   "text": "track.v1 note",
+   "pt": 14,
+   "claim": "A14.grammar"
+  },
+  {
+   "text": "link = BLAKE3(prev, ref)[:16]",
+   "pt": 14,
+   "claim": "A14.hash"
+  },
+  {
+   "text": "14 data needs; embedding and absence share the fact grammar.",
+   "pt": 14,
+   "claim": "V7.token_labels"
+  },
+  {
+   "text": "Hash rules: emem 18adb67. A name, a set and bytes differ.",
+   "pt": 14,
+   "claim": "V7.token_labels"
+  },
+  {
+   "text": "track.v1 is a note. Trace evidence here is a reference harness.",
+   "pt": 14,
+   "claim": "V7.token_labels"
+  }
+ ]
 }

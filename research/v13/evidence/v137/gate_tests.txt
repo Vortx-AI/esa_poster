@@ -1,0 +1,19 @@
+test_missing_status (test_claims.ClaimGate.test_missing_status) ... ok
+test_novelty_and_unqualified_guarantees (test_claims.ClaimGate.test_novelty_and_unqualified_guarantees) ... ok
+test_operational_spacecraft_claim (test_claims.ClaimGate.test_operational_spacecraft_claim) ... ok
+test_scoped_statement_passes (test_claims.ClaimGate.test_scoped_statement_passes) ... ok
+test_unknown_status (test_claims.ClaimGate.test_unknown_status) ... ok
+test_unmapped_figure_claim (test_claims.ClaimGate.test_unmapped_figure_claim) ... ok
+test_committed_panel (test_ecosystem.EvidenceGate.test_committed_panel) ... ok
+test_example_promoted_to_developer (test_ecosystem.EvidenceGate.test_example_promoted_to_developer) ... ok
+test_missing_mechanism (test_ecosystem.EvidenceGate.test_missing_mechanism) ... ok
+test_stale_date (test_ecosystem.EvidenceGate.test_stale_date) ... ok
+test_unknown_status (test_ecosystem.EvidenceGate.test_unknown_status) ... ok
+test_unlabelled_directory (test_ecosystem.EvidenceGate.test_unlabelled_directory) ... ok
+test_unready_promoted_to_card (test_ecosystem.EvidenceGate.test_unready_promoted_to_card) ... ok
+test_unsupported_copy (test_ecosystem.EvidenceGate.test_unsupported_copy) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.018s
+
+OK

@@ -6,9 +6,9 @@ EMEM gives an observation a lookup identity and a content-addressed record. An a
 
 Jaya Kumari and Avijeet Singh, Vortx AI. Agentic AI for Earth Observation, BIFOLD and ESA Φ-lab, Berlin, 19 October 2026.
 
-## Current poster: v13.6
+## Current poster: v13.7
 
-This round clarifies the two-sided evidence boundary, adds the genuine-control result, makes the community map fully manifest-driven, and delivers a 12-second offline demonstration and sourced conference answers. Drift and memory formulas, recovered examples and community routes remain visible. [Issue acceptance review](research/v13/21_ISSUE_ACCEPTANCE_V13_6.md).
+The full handoff experiment and 14-row token table return from the requested historical versions. Berlin now connects its marked cell to 16 dated records in the wider centre column. The observation tuple, two-clock recall, invalid-uncertainty drift rule and memory operations are complete, with implementation boundaries and source tests. [Recovery and issue review](research/v13/22_RECOVERED_DESIGN_AND_FORMALISM.md).
 
 - [Print-ready A0 PDF](poster/emem-poster-A0.pdf)
 - [Preview](poster/emem-poster-preview.png) and [300 dpi proof](poster/emem-poster-A0-300dpi.png)
