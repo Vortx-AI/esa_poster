@@ -113,6 +113,30 @@ Rows that change (everything else as in the table above; the column stacks by co
 Header internals in v13.1: title y 9 to 51; hero y 54 to 123; sub-hero y 126 to 151; drift block y 152.5 to 167 (two
 lines, 17 pt, white at 92 %, formula in Medium `emem-light`, subscripts 14.2 pt); byline y 171 to 186.
 
+### v13.2 change (2026-10-02): SAT-042 placed as a compact strip; the ladder drawn compact
+
+At the authors' decision the SAT-042 panel goes on the face after all, as panel 11 of the right column, below the token
+family: kicker `Extending verification from observations to execution` (24 pt, two lines), the v12.1 headline `How a
+satellite could prove what it ran` (28 pt, one line; 32 pt needs two), the subtitle (17 pt, two lines), the strip F15b
+(193.5 × 60 mm: the seven harness steps as one row of chips with their verdict words, the 8-layer trace in one row with
+the rewritten segment marked, the three drift-anchor scores on a number line) and one 14 pt scope line. The room comes
+from panel 7: F8 is drawn compact at 193.5 × 60 mm (`f8_ladder.py --height 60`; six rungs, one evidence line each at
+14 pt, the status words and the two-sided hatch kept, the grey "still trusted" lines and the 409 dropped), and the panel's
+mechanism line and caption leave (the rungs print the counts; the threat model and the conclusion carry the entity,
+sensor and decision scope). The column's arithmetic allowed nothing else: panels 8 to 10 keep 428 mm with their figures,
+so panel 7 and panel 11 share 199 mm. The strip is 60 mm, not the 70 first planned, and the ladder 60 mm, not about 110:
+the kicker alone needs 18 mm, and every other line of panel 11 sits at its minimum tier. The full F15 stays drawn in
+`poster/fig/v13/` for the methods site. Rows (rendered rectangles, 2026-10-02; the column still stacks by content with
+3 mm gaps plus 0.5 mm of distributed slack):
+
+| block | cols | x (mm) | y (mm) | w × h (mm) | share of page | answers MASTER §28 question |
+|---|---|---|---|---|---|---|
+| 7 Verification ladder L0 to L5 (F8 compact) | 10 to 12 | 627.5 | 377.5 | 193.5 × 84.7 | 1.6 % | Q4 |
+| 8 Same place, different time | 10 to 12 | 627.5 | 465.7 | 193.5 × 128.8 | 2.5 % | Q3 |
+| 9 One address, every product (F13) | 10 to 12 | 627.5 | 598 | 193.5 × 174.2 | 3.4 % | Q2, Q3 |
+| 10 Token family (F14) | 10 to 12 | 627.5 | 775.7 | 193.5 × 124.7 | 2.4 % | Q2 |
+| 11 SAT-042 strip (F15b) | 10 to 12 | 627.5 | 903.9 | 193.5 × 112.6 | 2.2 % | Q2 (extension to execution) |
+
 ---
 
 ## C. The complete printed text
@@ -511,6 +535,51 @@ caption `A write with no trace and a fact the trace did not emit are refused; 3 
 rewritten segment is named. Reference harness, no spacecraft enrolled; the gate binds the value digest only.`
 Allowlist it needs if placed: kicker (verif-without-layer, K.sat042), headline (prove, SAT.run), caption (only, SAT.gate).
 
+### v13.2 change (2026-10-02)
+
+The two sections below replace "7 · Checks stop at the source" and place "11 · How a satellite could prove what it ran";
+everything else stands. Counted by the Appendix I counter like every other section.
+
+### 7 · Checks stop at the source (v13.2) (193.5 × 84.7 mm)
+
+> What does a checked reference establish?
+
+Headline (32 pt SemiBold):
+
+> Checks stop at the source
+
+No mechanism line and no caption (v13.2): the compact F8 prints the counts, the threat model and the conclusion carry the
+entity, sensor and decision scope. Figure text (F8 compact, 193.5 × 60 mm), rungs bottom to top: `L0 record bytes
+CHECKABLE · 780 of 780: hash, signature, log` / `L1 identity CHECKABLE · cell and band bound in 780 of 780` /
+`L2 derivation RECOMPUTABLE · 266 of 780 recompute from a recipe` / `L3 source PARTIAL · named, not hashed: 0 of 215
+hashed` / `L4 entity OUT OF SCOPE · M17 passes every check; "this image" became a hair salon` / `L5 physical truth,
+decision · INHERITED / OUT OF SCOPE · GFC2020 V3 forest commission error 13.1 %`.
+
+### 11 · How a satellite could prove what it ran (v13.2) (193.5 × 112.6 mm)
+
+Kicker (24 pt, two lines; "verification" allowlisted against K.sat042):
+
+> Extending verification from observations to execution
+
+Headline (28 pt SemiBold, one line; "prove" allowlisted against SAT.run):
+
+> How a satellite could prove what it ran
+
+Subtitle (17 pt):
+
+> SAT-042 is a scripted pass in emem's test harness, not a spacecraft; run on 30 Sep 2026.
+
+Figure F15b (193.5 × 60 mm): chips `Enrol ENROLLED` · `Write, no trace REFUSED` · `Capture the pass SIGNED` · `Smuggle a
+4th fact REFUSED` · `Honest batch ADMITTED` · `Score vs anchor SCORED` · `Rewrite one log CAUGHT`; trace row `8 trace
+layers, each log digest chained;` · `seq 2 rewritten after signing: broken at seq 3` · `syscall seq 0` to `storage seq 7`;
+number line `drift anchor 0.6402 ± 0.02 (1σ): scored after admission, not a gate` · bands `consistent` `0.5` `tension`
+`0.75` `contradicted` · `0.6431 → 0.05` · `0.6512 → 0.15` · `0.2103 → 0.88` (rows A15.* of
+`research/v13/12_claims_map_additions_F13-15.json`).
+
+Scope (14 pt, one line; "only" allowlisted against SAT.gate):
+
+> Reference harness, no spacecraft enrolled; the gate binds the value digest only.
+
 ---
 
 ## D. Claims map
@@ -863,6 +932,22 @@ pixel also dashed 2.2/1.2 mm. Every caption is generated from the data file it c
 - Stunning: the colour drains as the ladder climbs toward the world: the boundary of the claim is a visible edge.
 - Asserts: counts from the CSV; status words from the claims vocabulary.
 - Reuse: report 10 §3.2 and §3.6; report 07 §3.4 residual-trust column.
+- v13.2: the board draws F8 compact, 193.5 × 60 mm (`python poster/figs_v13/f8_ladder.py --height 60`; the default
+  stays 138): one row per rung with the badge, name (16 pt) and status word (14 pt) on the left plate and one 14 pt
+  evidence line on the right; L4 and L5 take two lines; the "still trusted" lines and the 409 are not printed.
+  Running the script without `--height` restores the 138 mm figure and the right column no longer fits.
+
+### F15b · SAT-042 as a compact strip (193.5 × 60 mm; v13.2, panel 11)
+
+- Claim: the harness refuses a write with no trace and a smuggled fact, admits an honest batch, scores it against the
+  drift anchor after admission, and names a rewritten log segment.
+- Data: `research/repro/v12/trace/sat042_run_stdout.txt` (every value parsed, readers shared with F15 in
+  `poster/figs_v13/sat042_data.py`), `trace_truth.md` (anchor, tampered segment), `repro/v10/algorithms.md` §15.
+- Encoding: row (a) seven chips, name in 14 pt Medium over a verdict band (emem tint ENROLLED, SIGNED, ADMITTED; harm
+  tint REFUSED, CAUGHT; incident SCORED); row (b) the eight layers as boxes with `seq k` in mono, seq 2 in harm tint with
+  the 2 to 3 link crossed; row (c) the verdict bands 0 to 0.5 / 0.75 / 1 and the three scores as dots on a number line,
+  each labelled `device → score`.
+- Asserts: the shared readers' asserts, chip and caption widths, every printed number in its A15.* row.
 
 ### F9 · Memory keeps what was cited: branching timeline (193.5 × 82 mm)
 

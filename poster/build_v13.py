@@ -47,7 +47,7 @@ TODAY = dt.date.today()
 
 FIGURES = ["f1_scene", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object", "f6_mutation_matrix",
            "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem", "f12_prior_art", "d_threat",
-           "f13_one_address", "f14_token_family"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; F15 (SAT-042) is drawn but not placed (no room: see the brief, section B v13.1)
+           "f13_one_address", "f14_token_family", "f15b_sat042_strip"]   # v13.1: F10, D2 and D4 left the face with panels 9 to 11; v13.2: SAT-042 as the strip F15b (F15 drawn, not placed)
 QRS = ["demo", "t", "r", "test", "methods", "use"]
 
 # brief section B row label -> data-block id
@@ -68,9 +68,11 @@ TYPE_DEVIATIONS = [  # accepted by the coordinator on 2026-10-01; the 14 pt floo
     "Reason: with the section E figures drawn 1:1 and the section C text verbatim, 24 pt body overfills the side columns by about 40 to 60 mm and the bottom-right block by about 25 mm",
     "Leading tightened: kicker 1.06, headlines 1.0, mechanism 1.1, captions 1.16, footer 1.12; panel gaps 3 mm (brief 10 mm)",
     "v13.1: the v12.1 subtitles of panels 9 and 11 at 17 pt (caption tier); the drift block in the header at 17 pt with 14.2 pt subscripts; "
-    "panel 11 keeps the v12.1 headline verbatim (39 characters, two lines at 32 pt) at the user's request",
+    "panel 11 keeps the v12.1 headline verbatim (39 characters) at the user's request",
+    "v13.2: panel 11 headline at 28 pt (one line; 32 pt needs two) so the SAT-042 strip fits the right column; panel 7 prints "
+    "no mechanism line or caption (its ladder is compact, one evidence line per rung)",
 ]
-HEADLINE_LEN_EXEMPT = {"p11": "v12.1 title kept verbatim at the user's request (2026-10-02); two lines at 32 pt"}
+HEADLINE_LEN_EXEMPT = {"p11": "v12.1 title kept verbatim at the user's request (2026-10-02); one line at 28 pt (v13.2)"}
 MOVED = []          # running-text lines that a figure prints itself (dropped from the HTML, still counted)
 REPORT_EXTRA = {}
 
@@ -982,7 +984,7 @@ def g_assets(figs):
     for f in [CSS, TOKENS] + [HERE / "fonts" / "plex-full-woff2" / v.replace(".ttf", ".woff2") for v in FONTFILES.values()]:
         if not f.exists():
             d.append(f"missing {f.relative_to(REPO)}")
-    return not d, d or ["all 15 figures and diagrams placed as SVG; fonts, CSS and tokens present"]
+    return not d, d or [f"all {len(FIGURES)} figures and diagrams placed as SVG; fonts, CSS and tokens present"]
 
 
 @gate("fonts_loaded")

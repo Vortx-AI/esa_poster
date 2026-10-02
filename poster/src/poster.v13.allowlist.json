@@ -196,11 +196,11 @@
   },
   {
    "word": "truth",
-   "text_sha": "8f1984003174d9c2885c547a689dc32e4ec874cf8d754a392f67a4a9870b41fb",
-   "sentence": "physical truth,",
+   "text_sha": "98f1034404602165876cdabfe902b60f419bae34b41f1bcabbf89680e35823d7",
+   "sentence": "physical truth, decision",
    "where": "fig:f8_ladder",
    "evidence": "L.status",
-   "reason": "brief G.3: 'truth' only as the L5 layer name"
+   "reason": "brief G.3: 'truth' only as the L5 layer name (v13.2 compact ladder: name and status on one plate)"
   },
   {
    "word": "first",
@@ -291,14 +291,6 @@
    "reason": "threat model; leave_one_out names I alone for M15"
   },
   {
-   "word": "all",
-   "text_sha": "de8cf01ec93da3054b55901761202549d34e9ad787224f1fd2be76d90ff7c712",
-   "sentence": "Of 780 records pulled on 30 Sep 2026, 780 pass L0 and L1; the 266 with a recipe all recompute at L2; their source files are named, not hashed.",
-   "where": "html:p7:caption",
-   "evidence": "L.266",
-   "reason": "eo_evidence_per_fact_checks.csv: recompute pass 266, n/a 514, fail 0; every record with a recipe recomputes (review fix 9)"
-  },
-  {
    "word": "only",
    "text_sha": "fb2dce47fd57fc502c65b2dd94913a87ebde2dea214da5d56471677cd9bd73d6",
    "sentence": "A record check takes 0.33 ms of CPU; a pixel re-read moves 1.18 MB in about 7 s, and only it refuses the wrong pixel.",
@@ -337,6 +329,30 @@
    "where": "fig:f13_one_address",
    "evidence": "A13.chip",
    "reason": "'true colour' is the composite's name (B04/B03/B02), as in the header strip (H.img.grid); F13 chip caption"
+  },
+  {
+   "word": "verif-without-layer",
+   "text_sha": "d31508a766fc72a895660f86d47bacc8e72a094d155e3a0763ebda7ed15dbba6",
+   "sentence": "11Extending verification from observations to execution",
+   "where": "html:p11:kicker",
+   "evidence": "K.sat042",
+   "reason": "brief G.3 / section C panel 11 (v13.2): the kicker of the SAT-042 strip; the panel number is read as part of the line"
+  },
+  {
+   "word": "prove",
+   "text_sha": "fdd714536c4d1eca044bcf354c48f9f1d64a7aef4cf68a8f35749e061249a3c3",
+   "sentence": "How a satellite could prove what it ran",
+   "where": "html:p11:headline",
+   "evidence": "SAT.run",
+   "reason": "the v12.1 title kept verbatim; 'could prove' is conditional: no spacecraft is enrolled (SAT.run)"
+  },
+  {
+   "word": "only",
+   "text_sha": "0de856af86626aa678169972ae23a40db0d84c058d169a52784d6d5ee7852d71",
+   "sentence": "Reference harness, no spacecraft enrolled; the gate binds the value digest only.",
+   "where": "html:p11:scope",
+   "evidence": "SAT.gate",
+   "reason": "the os_trace gate checks each fact's payload digest against the trace's emitted outputs, not band, cell or tslot (SAT.gate)"
   }
  ]
 }

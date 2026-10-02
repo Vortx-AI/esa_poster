@@ -147,12 +147,12 @@
 
 <!-- ================= RIGHT COLUMN (cols 10 to 12) ================= -->
 <div class="col" data-col="right" style="--gap:3;--x:627.5;--y:377.5;--w:193.5;--h:639">
-<section class="panel c3" data-block="p7" data-brief="7 · Checks stop at the source">
+<!-- v13.2: the ladder is drawn compact (F8 at 62 mm, one evidence line per rung) and the mechanism line and caption leave:
+     the rungs print the counts, the threat model and the conclusion carry the entity, sensor and decision scope -->
+<section class="panel c3" data-block="p7" data-brief="7 · Checks stop at the source (v13.2)">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
   <h2 class="rt" data-role="headline" data-claim="L.reread0">Checks stop at the source</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="L.status">Each rung names what it still trusts.</p>
-  <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:138"><!--fig:f8_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="L.780 L.266 L.reread0 X.entity">Of 780 records pulled on 30 Sep 2026, 780 pass L0 and L1; the 266 with a recipe all recompute at L2; their source files are named, not hashed. No reference establishes the entity, the sensor's accuracy or the decision.</p>
+  <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:60"><!--fig:f8_ladder--></div>
 </section>
 <section class="panel c3" data-block="p8" data-brief="8 · Memory keeps what was cited">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">8</span>What did the agent know on 15 Jun?</p>
@@ -172,20 +172,14 @@
   <h2 class="rt" data-role="headline" data-claim="TF.family">One token family</h2>
   <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:100"><!--fig:f14_token_family--></div>
 </section>
-<!-- v13.1, SAT-042 panel: prepared but NOT placed. The right column (639 mm) holds the ladder (202.1), the timeline (128.8)
-     and two of the three v12.1 panels; with this one (206.9 mm at 1:1, F15 118 mm) it would need 849 mm. To place it, move
-     the <section> out of this <template>, change fig_off to fig, add f15_sat042 to FIGURES in the build and allowlist its
-     kicker (verif-without-layer, evidence K.sat042), headline (prove, SAT.run) and caption (only, SAT.gate); see
-     research/v13/12_FINAL_BRIEF.md section B "v13.1 change". Rows SAT.* in 12_claims_map_additions_board2.json are ready. -->
-<template id="p11-sat042-off">
-<section class="panel c3" data-block="p11" data-brief="11 · How a satellite could prove what it ran">
+<!-- v13.2 (2026-10-02): SAT-042 placed as a compact strip (F15b, 193.5 x 60 mm); the full F15 stays drawn in fig/v13 -->
+<section class="panel c3" data-block="p11" data-brief="11 · How a satellite could prove what it ran (v13.2)">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>Extending verification from observations to execution</p>
-  <h2 class="rt" data-role="headline" data-claim="SAT.run">How a satellite could prove what it ran</h2>
-  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run">SAT-042 is a scripted pass in emem's test harness, not a spacecraft; run on 30 Sep 2026.</p>
-  <div class="fig" data-figslot="f15_sat042" style="--fw:193.5;--fh:118"><!--fig_off:f15_sat042--></div>
-  <p class="cap rt" data-role="caption" data-claim="SAT.refused SAT.admitted SAT.tamper SAT.gate K.sat042">A write with no trace and a fact the trace did not emit are refused; 3 facts are admitted under one trace; a rewritten segment is named. Reference harness, no spacecraft enrolled; the gate binds the value digest only.</p>
+  <h2 class="rt s28" data-role="headline" data-claim="SAT.run" style="margin-top:0">How a satellite could prove what it ran</h2>
+  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm">SAT-042 is a scripted pass in emem's test harness, not a spacecraft; run on 30 Sep 2026.</p>
+  <div class="fig" data-figslot="f15b_sat042_strip" style="--fw:193.5;--fh:60"><!--fig:f15b_sat042_strip--></div>
+  <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled; the gate binds the value digest only.</p>
 </section>
-</template>
 </div>
 
 <!-- ================= BOTTOM BAND ================= -->

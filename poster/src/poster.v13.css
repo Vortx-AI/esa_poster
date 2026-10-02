@@ -40,6 +40,7 @@ svg{display:block}
 .num{font-weight:700;color:var(--emem);margin-right:2.6mm}
 h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margin-top:.3mm}
 .c3 h2,.c4 h2{font-size:32pt}
+.c3 h2.s28{font-size:28pt}   /* v13.2: panel 11 headline, one line (two at 32 pt) */
 .c6 h2,.c8 h2{font-size:40pt}
 .spine h2{font-size:44pt}
 .mech{font-size:24pt;line-height:1.1;color:var(--ink);margin-top:1.0mm}
