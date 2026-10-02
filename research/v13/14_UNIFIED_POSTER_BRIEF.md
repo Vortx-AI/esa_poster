@@ -17,20 +17,20 @@ Keep the complete handoff, token family, Berlin fanout and exact memory formalis
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
 > In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
 
-### 2 · Traceable observation history
+### 2 · Eight answers; one is right
 
-> Can a time series retain its evidence?
-> NDVI history, with citations
-> Each value retains its dated record.
-> Cloud/snow screening and processing harmonisation were not applied; physical interpretation needs both.
+> What can one NDVI become between agents?
+> Eight answers; one is right
+> One question, NDVI at the Keylong field on 25 Sep 2026; real records, archive pixels and handling rules give eight values.
+> Six cross the irrigation line, one is impossible, one is right; each wrong value needs a different check.
 
 ### 3 · Different drift, different check
 
 > Where did the evidence change?
 > A changed value needs a cause
-> A cited value can change during a handoff. Between acquisitions, the surface, sensor or processing may also change.
-> Surface change, instrument, registration, encoder and residual. Δz is the later value minus the earlier one. The attribution ledger links evidence to each term; the numeric split remains open.
-> The implemented anchor score measures disagreement, not its cause. SAT-042 exercises it in a reference harness; live device-to-anchor wiring remains next work.
+> A different value implies a change in one or more components of the chain.
+> Δz = Δenv + Δsensor + Δgeo + Δencoder + ε
+> Environment · sensor · geolocation · encoding · residual. The implemented anchor score measures disagreement, not its cause; the attribution ledger keeps evidence for each term.
 
 ### Memory operations
 
@@ -38,11 +38,11 @@ Keep the complete handoff, token family, Berlin fanout and exact memory formalis
 > Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.
 > 20 upstream offline SDK / encoding tests passed.
 
-### Concrete handoff
+### Threat model · what checks establish
 
-> Model outputs are records too
-> Satellite input → encoder → vector record → content address
-> Archived vectors: Prithvi names a checkpoint digest; TESSERA names a product year. These encoders are retired on the deployment; stored records remain addressable.
+> What does a checked reference establish?
+> Checks stop at the source
+> Record bytes and identity are checkable; derivation can be recomputed; source checks are partial. Entity, sensor accuracy and the decision remain outside the reference.
 
 ### Contribution and prior art
 
@@ -50,12 +50,12 @@ Keep the complete handoff, token family, Berlin fanout and exact memory formalis
 > An agent passes a reference to a specific physical observation; the receiver resolves it and checks the evidence.
 > Built with standard BLAKE3, Ed25519, CBOR and Merkle logs. STAC, openEO, PROV, C2PA, RAG and temporal storage provide complementary layers.
 
-### Berlin source-to-record fanout
+### 4 · The address names the record, not the pixel
 
-> What does one Berlin location reveal?
-> One cell, many source records
-> One lookup joins the evidence; each product keeps its own time, provenance and native grid.
-> An EMEM cell indexes a location. Products retain their native pixels; CHIRPS records an out-of-coverage absence.
+> What exactly is handed over?
+> The address names the record, not the pixel.
+> The receiver gets 84 characters; everything else it fetches and checks.
+> The address is the BLAKE3 hash of the 1,115-byte record, which names its source files and the point it read but holds no hash of them; a batch signature covers such addresses. Re-signing makes a new record: one Bengaluru value has seven.
 
 ### 5 · Checks back to the source
 
@@ -69,11 +69,12 @@ Keep the complete handoff, token family, Berlin fanout and exact memory formalis
 > A valid record can preserve a wrong source read
 > NDVI = (DN8 − DN4) / (DN8 + DN4 + 2o), o = −1000 (product offset)
 
-### 7 · What checks establish
+### 7 · Verification boundary
 
-> What has the receiver established?
-> Know what was checked
-> Checks establish properties of the cited record. A source re-read adds evidence; sensor accuracy remains inherited.
+> Where does verification stop?
+> Beyond the checked reference
+> Entity meant · out of scope. Sensor accuracy · inherited. Decision · out of scope.
+> A source re-read adds evidence about the source read. It does not establish physical truth or decide what an agent should do.
 
 ### 8 · Revisit the earlier evidence
 
@@ -115,10 +116,10 @@ Existing measured rows remain. `12_claims_map_additions_formalism.json` binds th
 - Preserve the Earth-to-agent spine and the central verification/source experiments.
 - Replace the repeated taxonomy with the drift equations, score thresholds and plain-language meanings.
 - Use the left identity panel for the memory model, temporal relations and two-clock recall notation.
-- Restore actual archived foundation-model vectors in place of the duplicate handoff panel.
+- Restore the L0 to L5 verification ladder in the left story flow; remove the archived-vector detour from the face.
 - Replace the crowded memory timeline with one worked transaction-time example.
 - Show the source NDVI formula and name its product-specific offset.
-- State concrete next experiments: numeric attribution and independent-host handoffs.
+- Keep the drift decomposition on one line and restore the SAT-042 execution-verification strip instead of a next-experiments prose block.
 
 ## Scientific boundaries
 
