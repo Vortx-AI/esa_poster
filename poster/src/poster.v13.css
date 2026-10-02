@@ -169,3 +169,12 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .memory .addresscard{padding:2mm 3mm;margin-top:2mm}
 .temporal-equation{font-size:22pt;line-height:1.25;color:var(--emem);margin-top:2mm}
 .temporal-equation sub{font-size:14pt;line-height:0;vertical-align:-.25em}
+
+/* v13.9: the workflow uses space released by the community prose. */
+.workflow .fig{margin-top:0}
+.community.blk{justify-content:flex-start}
+.community h2,.community-result{max-width:726mm}
+.community-connect{position:absolute;right:0;top:7mm;width:60mm;text-align:center}
+.community-connect .qr{margin:2mm auto 1mm}
+.community-connect .qrlabel{margin-top:0}
+.community-connect .scope{line-height:1.2}

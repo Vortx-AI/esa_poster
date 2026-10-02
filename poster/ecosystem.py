@@ -12,10 +12,9 @@ REQUIRED = {'chatgpt', 'claude-code-plugin', 'dify-marketplace', 'a2a', 'mcp-cor
             'vscode', 'cursor', 'cline', 'gemini-cli', 'python-sdk', 'ts-sdk',
             'rest-openapi', 'docker', 'langchain', 'llamaindex', 'crewai', 'autogen',
             'mastra', 'agno', 'semantic-kernel'}
-GROUPS = [('clients', 'MORE CLIENTS', 0), ('protocols', 'PROTOCOLS', 151),
-          ('developer', 'DEVELOPER', 296), ('examples', 'FRAMEWORK EXAMPLES', 459),
-          ('discovery', 'DISCOVERY / MIRRORS', 641)]
-BRIDGE = ['Attested observation', 'MCP / A2A', 'Agent host / client', 'Next agent / application']
+GROUPS = [('clients', 'MORE CLIENTS', 0), ('protocols', 'PROTOCOLS', 116),
+          ('developer', 'DEVELOPER', 248), ('examples', 'FRAMEWORK EXAMPLES', 410),
+          ('discovery', 'DISCOVERY / MIRRORS', 562)]
 
 
 def read_manifest():
@@ -27,22 +26,18 @@ def labels_for(rows):
     def add(text, x, y, pt, weight=400, color='ink', ids=(), claim='CM.routes'):
         labels.append(dict(text=text, x=x, y=y, pt=pt, weight=weight, color=color,
                            integrations=list(ids), claim=claim))
-    for i, text in enumerate(BRIDGE):
-        add(text, i * 204, 7, 22, 600, 'emem', claim='V6.bridge')
-        if i < 3:
-            add('→', i * 204 + 187, 7, 22, color='emem', claim='V6.bridge')
     cards = sorted((r for r in rows if r.get('panel', {}).get('kind') == 'card'), key=lambda r: r['panel']['order'])
     for i, r in enumerate(cards):
-        p = r['panel']; x = i * 161.2 + 5
-        add(p['label'], x, 26, 28, 600, ids=[r['id']])
-        add(p['mechanism'], x, 37, 20, 500, 'emem' if r['status'] != 'REGISTRY' else 'ink2', [r['id']])
-        add(p['action'], x, 46, 17, 400, 'ink2', [r['id']])
+        p = r['panel']; x = i * 146 + 4
+        add(p['label'], x, 7, 28, 600, ids=[r['id']])
+        add(p['mechanism'], x, 17, 20, 500, 'emem' if r['status'] != 'REGISTRY' else 'ink2', [r['id']])
+        add(p['action'], x, 25, 17, 400, 'ink2', [r['id']])
     for group, title, x in GROUPS:
-        add(title, x, 60, 17, 600, 'emem')
+        add(title, x, 34.5, 17, 600, 'emem')
         for line in (0, 1, 2):
             rs = sorted((r for r in rows if r.get('panel', {}).get('group') == group and r['panel']['line'] == line), key=lambda r: r['panel']['order'])
             if rs:
-                add(' · '.join(r['panel']['label'] for r in rs), x, 69 + 9 * line,
+                add(' · '.join(r['panel']['label'] for r in rs), x, 43 + 8.5 * line,
                     16 if group == 'discovery' else 18, ids=[r['id'] for r in rs])
     return labels
 

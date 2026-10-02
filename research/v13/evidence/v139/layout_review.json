@@ -1,0 +1,220 @@
+{
+  "base_commit": "5d3de8aa9cf41899635d7c0851b6d4317697cbc1",
+  "space_recovered_mm": 56,
+  "community_band_height_mm": {
+    "before": 147.5,
+    "after": 91.5
+  },
+  "scientific_figures_unchanged": {
+    "f1_scene": [
+      216.5,
+      188.0
+    ],
+    "f2_spine": [
+      801.0,
+      118.0
+    ],
+    "f17_ndvi_history": [
+      193.5,
+      70.0
+    ],
+    "f4_failure_ladder": [
+      193.5,
+      116.0
+    ],
+    "f16_embeddings": [
+      193.5,
+      53.0
+    ],
+    "f13_one_address": [
+      396.0,
+      142.0
+    ],
+    "f6_mutation_matrix": [
+      396.0,
+      196.0
+    ],
+    "f7_wrong_pixel": [
+      396.0,
+      128.0
+    ],
+    "f8_ladder": [
+      193.5,
+      65.0
+    ],
+    "f9_timeline": [
+      193.5,
+      82.0
+    ],
+    "f14_token_family": [
+      193.5,
+      118.0
+    ]
+  },
+  "community_labels_unchanged": 33,
+  "community_labels": [
+    {
+      "text": "ChatGPT",
+      "pt": 28
+    },
+    {
+      "text": "@emem plugin",
+      "pt": 20
+    },
+    {
+      "text": "Enable emem; paste a token.",
+      "pt": 17
+    },
+    {
+      "text": "Claude",
+      "pt": 28
+    },
+    {
+      "text": "Code plugin / MCP",
+      "pt": 20
+    },
+    {
+      "text": "Resolve from chat or terminal.",
+      "pt": 17
+    },
+    {
+      "text": "Visual Studio Code",
+      "pt": 28
+    },
+    {
+      "text": "MCP connector",
+      "pt": 20
+    },
+    {
+      "text": "Copilot agent mode: @mcp emem",
+      "pt": 17
+    },
+    {
+      "text": "Dify",
+      "pt": 28
+    },
+    {
+      "text": "Marketplace plugin",
+      "pt": 20
+    },
+    {
+      "text": "Referent Lock / EUDR workflows",
+      "pt": 17
+    },
+    {
+      "text": "Salesforce MuleSoft",
+      "pt": 28
+    },
+    {
+      "text": "Exchange listing",
+      "pt": 20
+    },
+    {
+      "text": "Open Vortx AI MCP Server",
+      "pt": 17
+    },
+    {
+      "text": "MORE CLIENTS",
+      "pt": 17
+    },
+    {
+      "text": "Cursor",
+      "pt": 18
+    },
+    {
+      "text": "Gemini CLI",
+      "pt": 18
+    },
+    {
+      "text": "PROTOCOLS",
+      "pt": 17
+    },
+    {
+      "text": "MCP \u00b7 A2A",
+      "pt": 18
+    },
+    {
+      "text": "REST / OpenAPI",
+      "pt": 18
+    },
+    {
+      "text": "DEVELOPER",
+      "pt": 17
+    },
+    {
+      "text": "Python \u00b7 TypeScript",
+      "pt": 18
+    },
+    {
+      "text": "Docker \u00b7 LangGraph memory",
+      "pt": 18
+    },
+    {
+      "text": "GitHub source",
+      "pt": 18
+    },
+    {
+      "text": "FRAMEWORK EXAMPLES",
+      "pt": 17
+    },
+    {
+      "text": "LangChain \u00b7 LlamaIndex",
+      "pt": 18
+    },
+    {
+      "text": "AutoGen \u00b7 CrewAI \u00b7 Mastra",
+      "pt": 18
+    },
+    {
+      "text": "Agno (see setup notes)",
+      "pt": 18
+    },
+    {
+      "text": "DISCOVERY / MIRRORS",
+      "pt": 17
+    },
+    {
+      "text": "GitHub MCP \u00b7 MCP Registry",
+      "pt": 16
+    },
+    {
+      "text": "Glama \u00b7 Smithery \u00b7 ClawHub",
+      "pt": 16
+    },
+    {
+      "text": "Context7 \u00b7 Hugging Face (older mirror)",
+      "pt": 16
+    }
+  ],
+  "workflow_steps": [
+    "Observe",
+    "Locate",
+    "Record",
+    "Hand off",
+    "Resolve",
+    "Check",
+    "Continue"
+  ],
+  "qr_count": 3,
+  "poster_gates": {
+    "page_fit": "PASS",
+    "footer_clearance": "PASS",
+    "block_rectangles": "PASS",
+    "no_overflow_or_clipping": "PASS",
+    "type_floor": "PASS",
+    "glyph_coverage": "PASS",
+    "prose_and_banned_words": "PASS",
+    "face_hygiene": "PASS",
+    "r5_placeholders": "PASS",
+    "claims_coverage": "PASS",
+    "ecosystem_manifest": "PASS",
+    "claims_rows_recheck": "PASS",
+    "qr_decode": "PASS",
+    "assets": "PASS",
+    "fonts_loaded": "PASS",
+    "colour_tokens": "PASS",
+    "imagery": "PASS",
+    "word_budget": "PASS"
+  },
+  "visual_review": "Reviewed final A0 overview and final workflow/community crops. No overlap or clipped labels."
+}

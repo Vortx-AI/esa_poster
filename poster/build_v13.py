@@ -48,7 +48,7 @@ R5_DIR = RES / "repro" / "v13" / "r5"
 CHROME_GLOB = "/opt/pw-browsers"
 TODAY = dt.date.today()
 
-FIGURES = ["f1_scene", "f2_spine", "f17_ndvi_history", "f4_failure_ladder", "f6_mutation_matrix",
+FIGURES = ["f1_scene", "f18_workflow", "f2_spine", "f17_ndvi_history", "f4_failure_ladder", "f6_mutation_matrix",
            "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem",
            "f13_one_address", "f14_token_family", "f16_embeddings"]   # v13.7: Berlin replaces the generic wire-record schematic; full flow and token family restored.
 QRS = ["demo", "r", "use"]  # issue #48: three printed tasks; all six web routes remain
