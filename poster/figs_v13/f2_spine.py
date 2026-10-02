@@ -352,16 +352,16 @@ def main():
         ("SOURCE FILES", "named, not hashed", "O.nohash", "L3"),
     ]
     iy = ay + ah + 3.0
-    ih = 20.5
+    ih = 17.5
     for j, (title, sub, claim, layer) in enumerate(items):
-        y = iy + j * (ih + 2.2)
+        y = iy + j * (ih + 1.8)
         fc = C["emem_tint"] if j < 2 else C["oos_bg"]
         ec = C["emem"] if j < 2 else C["oos"]
         ax.add_patch(FancyBboxPatch((px, y), pw_, ih, boxstyle="round,pad=0,rounding_size=1.4",
                                     fc=fc, ec=ec, lw=0.35 * MMPT, zorder=3))
         T(ax, px + 5, y + 6.5, title, claim, fontsize=16, fontweight=700,
           color=C["emem"] if j < 2 else C["ink"], va="center", zorder=4)
-        T(ax, px + 5, y + 14.2, sub, claim, fontsize=14, color=C["ink2"], va="center", zorder=4)
+        T(ax, px + 5, y + 12.6, sub, claim, fontsize=14, color=C["ink2"], va="center", zorder=4)
         if j < len(items) - 1:
             ax.add_patch(FancyArrowPatch((px + pw_/2, y + ih), (px + pw_/2, y + ih + 2.0),
                                          arrowstyle="-|>,head_length=1.8,head_width=1.0", mutation_scale=MMPT,
