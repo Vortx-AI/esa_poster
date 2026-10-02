@@ -52,9 +52,9 @@ def box(x, y, w, h, fc, ec="none", lw=0.0, r=0.8, z=3):
 # ------------------------------------------------------------------ (a) seven steps as chips
 OK, BAD, AMB = ("emem", "emem_tint"), ("harm_text", "harm_tint"), ("incident_text", "na")
 STEPS = [(["Enrol"], "ENROLLED", OK), (["Write,", "no trace"], "REFUSED", BAD), (["Capture", "the pass"], "SIGNED", OK),
-         (["Smuggle a", "4th fact"], "REFUSED", BAD), (["Honest", "batch"], "ADMITTED", OK),
-         (["Score vs", "anchor"], "SCORED", AMB), (["Rewrite", "one log"], "CAUGHT", BAD)]
-assert sum(v == "REFUSED" for _, v, _ in STEPS) == 2 and len(STEPS) == 7
+         (["Unbound", "fact"], "REFUSED", BAD), (["Bound", "batch"], "ADMITTED", OK),
+         (["Score vs", "anchor"], "SCORED", AMB), (["Rewrite", "one log"], "REFUSED", BAD)]
+assert sum(v == "REFUSED" for _, v, _ in STEPS) == 3 and len(STEPS) == 7
 G = 1.4
 CW = (W - 6 * G) / 7
 NH, VH = 11.0, 5.8                      # name plate, verdict band
@@ -86,7 +86,7 @@ for k, lay in enumerate(V["layers"]):
     x = k * (BW + GAP)
     bad = k == SEG
     box(x, by0, BW, BH, C["harm_tint"] if bad else C["emem_tint"], ec=C["harm"] if bad else "none", lw=1.2 if bad else 0, r=1.0)
-    T(x + BW / 2, by0 + 2.9, names.get(lay, lay.lower()), 14, ha="center", color=C["harm_text"] if bad else C["ink"], claim=None)
+    T(x + BW / 2, by0 + 2.9, names.get(lay, lay.lower()), 14, ha="center", color=C["harm_text"] if bad else C["ink"], claim="A15.layers")
     T(x + BW / 2, by0 + 8.2, f"seq {k}", 14, ha="center", family=MONO, color=C["harm_text"] if bad else C["ink2"], claim="A15.layers")
     if k < 7:
         broken = k + 1 == SEQ
@@ -94,7 +94,7 @@ for k, lay in enumerate(V["layers"]):
         ax.plot([xa, xb], [by0 + BH / 2] * 2, color=C["harm"] if broken else C["ink2"], lw=(1.4 if broken else 0.8) / PTMM, zorder=4)
         if broken:
             ax.add_patch(Circle(((xa + xb) / 2, by0 + 8.2), 2.2, fc="white", ec=C["harm"], lw=0.9 / PTMM, zorder=5))
-            T((xa + xb) / 2, by0 + 8.3, "×", 14, weight=700, color=C["harm"], ha="center", claim=None, z=6)
+            T((xa + xb) / 2, by0 + 8.3, "×", 14, weight=700, color=C["harm"], ha="center", claim="A15.layers", z=6)
 b_end = by0 + BH
 
 # ------------------------------------------------------------------ (c) drift anchor number line
@@ -108,7 +108,7 @@ X = lambda v: SX0 + v * (SX1 - SX0)   # noqa: E731
 for a_, b_, fc, lab, col in ((0, .5, "emem_tint", "consistent", "emem"), (.5, .75, "na", "tension", "incident_text"),
                              (.75, 1, "harm_tint", "contradicted", "harm_text")):
     ax.add_patch(Rectangle((X(a_), sy0), X(b_) - X(a_), sy1 - sy0, fc=C[fc], ec="none", zorder=1.5))
-    T((X(a_) + X(b_)) / 2, (sy0 + sy1) / 2 + 0.1, lab, 14, color=C[col], ha="center", claim=None)
+    T((X(a_) + X(b_)) / 2, (sy0 + sy1) / 2 + 0.1, lab, 14, color=C[col], ha="center", claim="A15.formula")
 for v in (0.5, 0.75):
     ax.plot([X(v), X(v)], [sy0, sy1 + 1.2], color=C["ink2"], lw=0.5 / PTMM, zorder=2.5)
     T(X(v), sy1 + 3.6, f"{v:g}", 14, color=C["ink2"], ha="center", family=MONO, claim="A15.formula")
