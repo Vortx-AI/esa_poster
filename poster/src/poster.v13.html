@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</title>
-<!-- v13.5 source. Issue #48 supersedes the face copy in the original brief.
+<!-- v13.6 source. Issue #48 supersedes the face copy in the original brief.
      Figures, measurements and claim rows remain independently checked by build_v13.py. -->
 <link rel="stylesheet" href="src/poster.v13.css">
 </head>
@@ -100,7 +100,7 @@
   <h2 class="rt" data-role="headline" data-claim="U.checks">Checks can continue back to the source</h2>
   <p class="mech rt" data-role="mechanism" data-claim="U.checks">Resolve → Re-hash → Bind → Recompute → Re-read</p>
   <div class="fig" data-figslot="f6_mutation_matrix" style="--fw:396;--fh:196"><!--fig:f6_mutation_matrix--></div>
-  <p class="cap rt" data-role="caption" data-claim="X.only X.loo">Each step answers a different question. The matrix measures which changes become visible at each depth; signatures and log checks establish attestation and publication history.</p>
+  <p class="cap rt" data-role="caption" data-claim="V6.controls V6.controls.n V6.controls.refused X.loo">Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).</p>
   <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.F6.scope R5.baseline.catch R5.block2.M15r">Agent bars: 12 runs per item, across 23 items. JSON and an opaque id caught some changes from their fields. In the live pre-fix record case, agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, and 0 of 4 with a source re-read.</p>
   <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope X.p123">One record, one band, deterministic receiver; signer-error rows use a test key. Additional offset, scene and unit cases are documented in Reproduce.</p>
 </section>
@@ -119,7 +119,7 @@
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What has the receiver established?</p>
   <h2 class="rt" data-role="headline" data-claim="U.boundary">Know what was checked</h2>
   <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:65"><!--fig:f8_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="U.boundary">Source quality remains inherited. Entity meaning and downstream decisions belong to the application using the evidence.</p>
+  <p class="cap rt" data-role="caption" data-claim="U.boundary">Checks establish properties of the cited record. A source re-read adds evidence; sensor accuracy remains inherited.</p>
 </section>
 <section class="panel c3" data-block="p8" data-brief="8 · Memory keeps what was cited">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">8</span>Can a later agent recover the earlier state?</p>
@@ -137,7 +137,7 @@
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">10</span>What else can an agent carry?</p>
   <h2 class="rt" data-role="headline" data-claim="TF.family">Beyond a single observation</h2>
   <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:86"><!--fig:f14_token_family--></div>
-  <p class="cap rt" data-role="caption" data-claim="TF.family">Resolve the object and inspect what its address and receipt cover.</p>
+  <p class="cap rt" data-role="caption" data-claim="CM.bundle CM.state V6.objects">Eight facts resolve through one bundle; four checkpoint hashes reproduce. These object checks do not validate an agent's reasoning.</p>
 </section>
 <section class="panel c3 extension" data-block="p11" data-brief="Execution extension">
   <p class="extension-label">NEXT EXPERIMENTS</p>
@@ -151,8 +151,8 @@
     <div class="qrhtext">
       <h2 class="rt" data-role="headline" data-claim="CM.routes"><span class="num" data-exempt="panelno">11</span>Use emem. Carry the evidence forward.</h2>
       <p class="mech rt" data-role="mechanism" data-claim="CM.routes">Connect a plugin, a workflow or your own code. Public emem reads need no API key; the source is open.</p>
-      <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope">Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).<br>The routes below are plugins, connectors, packages and listings. Their setup links and workflow examples are behind CONNECT.</p>
-      <div class="qrlabel inl" data-claim="Q.discover_integrations CM.exercise"><span class="cta">CONNECT &amp; REPRODUCE</span> <span class="qcap" data-role="cap">Copy a token, choose your tool, run the checks. &nbsp;<span class="mono community-url">vortx-ai.github.io/esa_poster/use/</span></span></div>
+      <p class="cap rt" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope">Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).<br>The routes below are plugins, connectors, packages and listings. One evidence protocol, multiple agent runtimes. Setup and compatibility notes are behind CONNECT.</p>
+      <div class="qrlabel inl" data-claim="Q.discover_integrations CM.exercise"><span class="cta">CONNECT</span> <span class="qcap" data-role="cap">Copy a token, choose your tool, run the checks. &nbsp;<span class="mono community-url">vortx-ai.github.io/esa_poster/use/</span></span></div>
     </div>
     <div class="qr inl" data-qr="use" data-claim="Q.discover_integrations"><div class="sym"><!--qr:use--></div></div>
   </div>

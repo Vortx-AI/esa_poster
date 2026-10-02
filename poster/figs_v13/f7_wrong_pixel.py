@@ -187,7 +187,7 @@ half = 12.5 * s                             # 25 px = 250 m box
 ax.add_patch(Rectangle((cx - half, cy - half), 2 * half, 2 * half, fill=False, ec="white", lw=0.9 / PTMM, zorder=4))
 # top strip: place, sensor, date
 ax.add_patch(Rectangle((0, 0), SC_W, 13.0, fc="black", alpha=0.62, ec="none", zorder=3))
-T(1.6, 3.9, "a", 17, weight=700, color="white", claim=None)
+T(1.6, 3.9, "a", 17, weight=700, color="white", claim="F7.scene")
 T(6.0, 3.6, "Keylong, Lahaul", 17, weight=600, color="white", claim="F7.scene")
 T(6.0, 9.6, "Sentinel-2A L2A · 25 Sep 2026", 14, color="white", claim="F7.scene")
 # bottom strip: scale bar and processing line
@@ -203,7 +203,7 @@ T(1.6, SC_H - 3.4, "linear 1 to 99 % stretch, γ 1/1.35", 14, color="white", cla
 # ------------------------------------------------------------------ (b) the 5 x 5 window, one square per 10 m pixel
 BX, BY, BW = 120.5, 7.0, 95.0
 P = BW / 5
-T(BX, 3.2, "b", 17, weight=700)
+T(BX, 3.2, "b", 17, weight=700, claim="F7.window")
 T(BX + 4.6, 3.2, "NDVI of each 10 m pixel", 15, color=C["ink2"], claim="F7.window")
 for i in range(5):
     for j in range(5):
@@ -220,7 +220,7 @@ for (ya, yb) in ((cy - half, BY), (cy + half, BY + BW)):
 
 # ------------------------------------------------------------------ (c) what the receiver decides
 XC = 228.0
-T(XC, 3.2, "c", 17, weight=700)
+T(XC, 3.2, "c", 17, weight=700, claim="F7.scope")
 T(XC + 4.6, 3.2, f"test rule: irrigate if NDVI ≤ {RULE}", 17, color=C["ink2"], claim="S.threshold")
 yy = 14.0
 box(XC, yy - 3.6, 7.2, 7.2, "none", ec=C["emem"], lw=1.4, r=0.01)

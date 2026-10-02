@@ -1,0 +1,97 @@
+{
+  "release": "v13.6",
+  "date": "2026-10-02",
+  "base_commit": "b47f2746fd752bea688f759d803a1e3940bdefb4",
+  "artifacts": {
+    "poster/emem-poster-A0.pdf": {
+      "bytes": 2568093,
+      "sha256": "62c75457cb6dda2a131131d97a95de34b6fa360ddd6506d3d726c71029439a52"
+    },
+    "poster/emem-poster-preview.png": {
+      "bytes": 3775826,
+      "sha256": "d3c93da2b628dd0318d49675c51280570203dd060004ab6788feae6a462df3e6"
+    },
+    "poster/emem-poster-A0-300dpi.png": {
+      "bytes": 11517133,
+      "sha256": "54be092ec98a1c06d724512abfb59937bca476ffcec1fadb3c3398d8e9b71b79"
+    },
+    "poster/build_v13_report.json": {
+      "bytes": 26974,
+      "sha256": "77ab1b7f992e164922a55b746d7eed09d708773b6d6359b823aebb89580ac709"
+    },
+    "research/v13/evidence/v136/site_review.json": {
+      "bytes": 58247,
+      "sha256": "4604eddff7def763f704d3f9130701ca348f08a662343def1500f8b3e7a8946f"
+    },
+    "research/v13/evidence/v136/gate_tests.txt": {
+      "bytes": 1307,
+      "sha256": "6e8e372ddc98691e7e75a50b4f908195d8de5d86cb319778d47e9fe45171fa2c"
+    }
+  },
+  "validation": {
+    "poster_gates": {
+      "page_fit": "PASS",
+      "footer_clearance": "PASS",
+      "block_rectangles": "PASS",
+      "no_overflow_or_clipping": "PASS",
+      "type_floor": "PASS",
+      "glyph_coverage": "PASS",
+      "prose_and_banned_words": "PASS",
+      "face_hygiene": "PASS",
+      "r5_placeholders": "PASS",
+      "claims_coverage": "PASS",
+      "ecosystem_manifest": "PASS",
+      "claims_rows_recheck": "PASS",
+      "qr_decode": "PASS",
+      "assets": "PASS",
+      "fonts_loaded": "PASS",
+      "colour_tokens": "PASS",
+      "imagery": "PASS",
+      "word_budget": "PASS"
+    },
+    "running_words": 676,
+    "printed_claim_rows": 146,
+    "evidence_rows_rechecked": 409,
+    "local_route_viewports": {
+      "passed": 16,
+      "failed": 0
+    },
+    "evidence_gate_tests": 14,
+    "demo_seconds": [
+      12.001800000000745,
+      12.001800000000745
+    ],
+    "proof_lossless_compression": {
+      "optimizer": "pyoxipng 9.1.1, level 3",
+      "pixels_and_dpi_unchanged": true,
+      "decoded": {
+        "size": [
+          9933,
+          14042
+        ],
+        "dpi": [
+          299.9994,
+          299.9994
+        ],
+        "rgb_sha256": "e904532de01f786cb1c81b23aa4c5ca7720203e734cab149a980a829869e2a81"
+      },
+      "bytes_before": 14206824,
+      "bytes_after": 11517133,
+      "seconds": 55.15
+    }
+  },
+  "issues_resolved": [
+    15,
+    21,
+    22,
+    25,
+    29,
+    34,
+    35,
+    36,
+    41,
+    42,
+    45
+  ],
+  "scope": "No new model runs or new hosted-agent successes; earlier evidence retains its original date and limitations."
+}

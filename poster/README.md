@@ -1,4 +1,4 @@
-# The poster: v13.5, community routes and recovered contributions (2 October 2026)
+# The poster: v13.6, evidence boundaries and reproducible community paths (2 October 2026)
 
 | Artifact | Purpose |
 |---|---|
@@ -6,19 +6,19 @@
 | [emem-poster-preview.png](emem-poster-preview.png) | Screen preview |
 | [emem-poster-A0-300dpi.png](emem-poster-A0-300dpi.png) | Full-resolution print proof |
 | [build_v13_report.json](build_v13_report.json) | Layout, claim, type and QR checks |
-| [release_v13.5.json](release_v13.5.json) | Artifact hashes and validation summary |
+| [release_v13.6.json](release_v13.6.json) | Artifact hashes and validation summary |
 
-The community band now spans the A0 page with prominent ChatGPT, Claude, Visual Studio Code, Dify and Salesforce MuleSoft routes. Protocols, SDKs, frameworks, self-hosting and discovery directories remain visible. CONNECT & REPRODUCE opens a setup guide, three Dify templates, a copyable token and handoff exercise, expected record fields, reader questions and the research methods.
+The community band now spans the A0 page with prominent ChatGPT, Claude, Visual Studio Code, Dify and Salesforce MuleSoft routes. Protocols, SDKs, frameworks, self-hosting and discovery directories remain visible. CONNECT opens a setup guide, three Dify templates, a copyable token and handoff exercise, expected record fields, reader questions and the research methods.
 
 The history review recovered the eight-fact bundle, four reproducible reasoning-state addresses and a concrete signed-absence example. The drift formulas, memory model, two-clock recall, foundation-model vectors and central handoff/source experiments remain. Earlier seasonal EO, Rondônia screening and SAT-042 figures are available in the methods gallery with their original dates and scope. See the [recovery map](../research/v13/18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md).
 
 Build sources: `src/poster.v13.html`, `src/poster.v13.css`, `figs_v13/` and `tools/site/site.mjs`. Copy specification: [14_UNIFIED_POSTER_BRIEF.md](../research/v13/14_UNIFIED_POSTER_BRIEF.md). Instructions: [AGENTS.md](../AGENTS.md).
 
-Validation: **17/17 poster gates**, **14/14 local route/viewport checks**, clipboard token equality on phone and desktop, and three printed QR decodes. Four archived state addresses reproduce offline; the saved NDVI proof bundle passes nine checks. The earlier **20/20 upstream Python tests** remain pinned to their original v13.4 run. The current round does not claim fresh Rust or hosted-agent benchmark results. The direct ChatGPT emem listing and connected plugin are confirmed; attempted resolve calls returned a connector error, recorded in the evidence.
+Validation: **18/18 poster gates**, **16/16 local route/viewport checks**, **14/14 evidence-gate tests**, clipboard token equality on phone and desktop, and three printed QR decodes. The default guided demo completes in about 12 seconds, with no external requests; reduced-motion and no-script paths also pass. Four archived state addresses and nine offline proof checks retain their v13.5 evidence. The earlier **20/20 upstream Python tests** remain pinned to their original v13.4 run. The current round does not claim fresh Rust or hosted-agent benchmark results. The direct ChatGPT emem listing and connected plugin are confirmed; attempted resolve calls returned a connector error, recorded in the evidence.
 
-[Community guide](https://vortx-ai.github.io/esa_poster/use/) · [Methods and recovered demonstrations](https://vortx-ai.github.io/esa_poster/methods/#recovered) · [Release review](../research/v13/19_RELEASE_REVIEW_V13_5.md).
+[Community guide](https://vortx-ai.github.io/esa_poster/use/) · [Methods and recovered demonstrations](https://vortx-ai.github.io/esa_poster/methods/#recovered) · [Release review](../research/v13/21_ISSUE_ACCEPTANCE_V13_6.md).
 
-The [Pages workflow](../.github/workflows/pages.yml) publishes the committed `/docs` files. This publication is checked against the reviewed local PDF and page bytes. Historical external-fetch failures in `docs/assets/screens/results.json` are retained; fresh local review results are in `research/v13/evidence/community/site_review.json`.
+The [Pages workflow](../.github/workflows/pages.yml) publishes the committed `/docs` files. This publication is checked against the reviewed local PDF and page bytes. Historical external-fetch failures in `docs/assets/screens/results.json` are retained; fresh local review results are in `research/v13/evidence/v136/site_review.json`.
 
 ## Signed-track history
 

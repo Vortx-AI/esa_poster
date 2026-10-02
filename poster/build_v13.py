@@ -26,6 +26,7 @@ import traceback
 import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
+import ecosystem
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
@@ -712,6 +713,10 @@ def g_claims(meas, claims, rows, r5):
         for p in r["print"]:
             alldates |= date_nums(p)
     printed_ids = set()
+    valid_statuses = {"SPEC", "LIVE", "MEASURED", "PRE-REGISTERED", "INFERRED", "OUT-OF-SCOPE", "EXTERNAL"}
+    for rid, row in rows.items():
+        if row.get("status") not in valid_statuses:
+            d.append(f"{rid}: missing or unknown claim status {row.get('status')!r}")
     exempt_roles = {"kicker", "question"}
     for c in claims:
         ids = (c["claim"] or "").split()
@@ -764,6 +769,12 @@ def g_claims(meas, claims, rows, r5):
     for t in meas["texts"]:
         if t["tick"] or t["exempt"] or (t["fig"] or "").startswith("qr_"):
             continue
+        if t["inSvg"]:
+            cid = labels.get((t["fig"], t["text"].strip()))
+            if not cid or cid not in rows:
+                d.append(f"fig {t['fig']}: text without a valid claim/status: {t['text'][:80]!r}")
+            else:
+                printed_ids.add(cid)
         for x in nums(t["text"]):
             xn = norm_num(x)
             if t["inSvg"]:
@@ -823,6 +834,9 @@ def run_check(c, rows_list, rid=None):
         return ok
     if kind == "json":
         return _ptr(_J(f), p) == exp
+    if kind == "json_sum":
+        data = _J(f)
+        return sum(_ptr(data, path) for path in p) == exp
     if kind == "json_contains":
         return exp in str(_ptr(_J(f), p))
     if kind == "approx":
@@ -1138,6 +1152,7 @@ def main():
     g_hygiene(meas, pdfinfo, doc_title)
     g_r5(html, info)
     g_claims(meas, claims, rows, r5)
+    gate("ecosystem_manifest")(lambda: (True, [ecosystem.check_release()]))()
     g_recheck(rows)
     g_qr(meas, big)
     g_assets(figs)

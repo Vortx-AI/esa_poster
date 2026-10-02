@@ -123,7 +123,7 @@ ax.set_xlim(0, W); ax.set_ylim(H, 0); ax.axis("off")
 LABELS = []
 
 
-def T(x, y, s, size=14, claim=None, weight=400, color=None, family=None, ha="left", va="center", **kw):
+def T(x, y, s, size=14, claim="V6.matrix_labels", weight=400, color=None, family=None, ha="left", va="center", **kw):
     t = ax.text(x, y, s, fontsize=size, fontweight=weight, color=color or C["ink"], ha=ha, va=va,
                 family=family or "IBM Plex Sans", **kw)
     LABELS.append({"text": s, "pt": size, "claim": claim})

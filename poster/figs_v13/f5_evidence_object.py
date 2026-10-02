@@ -153,7 +153,7 @@ KX2, VX2 = X2 + 126, X2 + 144.5
 
 
 def field(kx, vx, y, key, val, claim, tags=()):
-    T(kx, y, key, 14, color=C["muted"], claim=None)
+    T(kx, y, key, 14, color=C["muted"], claim="F5.fields")
     t = T(vx, y, val, 15, family=MONO, color=C["ink"], claim=claim)
     x = vx + wmm(t) + 2.0
     for s, kind, cl in tags:

@@ -399,7 +399,7 @@ ${R5_FINAL ? `<h3>Results (final, ${R5.dates.analysed_utc.slice(0, 10)})</h3>
 <ul>
 <li>It is a scripted harness written by the authors. The receiver is code, not a language model. The mutations are authored and named as in R1. The record, its signature, its log proofs and the source pixels are real.</li>
 <li>It covers one record, one cell and one band. It is not the 16-mutation suite.</li>
-<li>M8 is refused because the page holds the signed batch for this observation. A real receiver would look the forged name up and get a 404; the page shows that live.</li>
+<li>M8 is refused because the page holds the signed batch for this observation. A real receiver would look the forged name up and get a 404; the optional live mode checks that response.</li>
 <li>The L3 tile hashes it compares come from the poster team's trace of 30 Sep 2026, not from the signer: the record carries no source hash.</li>
 </ul>
 
@@ -408,6 +408,7 @@ ${table(['operation', '#n', '#median', 'IQR', 'unit'], costRows)}
 <p class="note">Measured ${esc(COST.measured_on)} on ${esc(COST.environment.client_host)}. Network rows pass through a TLS-re-terminating egress proxy, so a phone will differ. Source: ${src(COST_FILE)}; method: ${src('research/v13/08_cost_overhead.md')}.</p>
 
 <h2 id="prior">9 · Prior art: what each layer answers</h2>
+<p><a href="../questions/">Short reviewer answers with evidence</a></p>
 <p>Adjacent systems find files, run workflows, record lineage, sign files, retrieve context, carry calls and judge claims. EMEM names the one observation an agent cited and lets the next agent re-check it. It relies on those layers and replaces none.</p>
 ${table(['system', 'question it answers', 'unit it identifies', 'where EMEM sits'], prior)}
 <p class="note">Source: ${src('research/v13/04_prior_art_and_field.md')} §1.3 (versions as checked on 2026-10-01).</p>
@@ -508,9 +509,10 @@ ${table(['Route', 'Start here'], [
  ['TypeScript', '<code>npm i @vortxai/emem</code>'],
  ['LangGraph memory', '<code>pip install emem-langmem</code>'],
  ['Self-host', '<code>docker run -p 5051:5051 ghcr.io/vortx-ai/emem:latest</code>'],
- ['Other clients', `${link('cursor', 'Cursor')} · ${link('gemini-cli', 'Gemini CLI')} · <a href="https://github.com/Vortx-AI/emem/tree/main/examples">Framework examples</a>`],
+ ['Other clients', `${link('cursor', 'Cursor')} · <a href="#gemini-cli">Gemini CLI setup</a> · <a href="https://github.com/Vortx-AI/emem/tree/main/examples">Framework examples</a>`],
 ])}
 <h2>Questions the poster opens</h2>
+<p><a href="../questions/">Read the conference Q&amp;A</a>: invention, prior art, trust, model scope and next experiments.</p>
 <details><summary>What is in the token, and what stays upstream?</summary><p>The fact token carries a lookup cell and a full content identifier. The record behind it contains the value, time, derivation and source references. Large source scenes remain upstream. Cell, product and time find candidate observations; the fact CID identifies the exact record used.</p></details>
 <details><summary>What do a hash, signature and source check establish?</summary><p>The hash checks record identity. Binding checks that the record answers the requested place, product and time. A receipt or batch attestation checks a statement under a particular key. A declared derivation can be recomputed, and the named upstream source can be re-read. These checks do not establish a sensor's accuracy, an entity's meaning or the correctness of a downstream decision.</p></details>
 <details><summary>What happens when data is missing or later changes?</summary><p>A typed absence can name a coverage or quality reason instead of inventing a value. New records can coexist with earlier content addresses. Recall can bound both observation time and signing time. The archived Bengaluru example answers 918.0 m as of 15 June, before a later provider returned 915.07 m; that difference alone is not ground movement.</p></details>
@@ -527,6 +529,22 @@ ${xrt}
 ${GROUPS.map(([g,rs])=>{const rows=ECO.filter((r)=>rs.includes(r.role));return `<details><summary>${esc(g)} (${rows.length})</summary><ul class="ints">${rows.map(item).join('')}</ul></details>`}).join('')}
 <script>document.getElementById('copy-handoff').addEventListener('click',async()=>{const t=document.getElementById('handoff');try{await navigator.clipboard.writeText(t.value);document.getElementById('copy-status').textContent='Copied.';}catch{t.focus();t.select();document.getElementById('copy-status').textContent='Select and copy the highlighted prompt.';}});</script>`, {
   head: `<style>.setup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.setup{border:1px solid var(--rule);border-radius:10px;padding:16px;background:var(--card)}.setup h3{margin-top:0}.setup p{margin:8px 0}.setup pre{white-space:pre-wrap;overflow-wrap:anywhere}#handoff{width:100%;padding:12px;border:1px solid var(--rule);border-radius:8px;font:14px/1.5 var(--mono)}.ints{list-style:none;padding:0}.int{border-top:1px solid var(--rule);padding:12px 0}.int p{margin:0 0 6px}details{padding:10px 0;border-bottom:1px solid var(--rule)}summary{cursor:pointer;font-weight:600}details details{border:0}code{overflow-wrap:anywhere}</style>` }));
+
+const QA = rj('research/v13/conference_questions.json');
+for (const q of QA.questions) {
+  if (!q.status || !q.sources.length) throw new Error('Reviewer answer without status/source: '+q.question);
+  for (const s of q.sources) {
+    const prefix='https://github.com/Vortx-AI/esa_poster/blob/main/';
+    if (s.url.startsWith(prefix) && !fs.existsSync(path.join(ROOT,s.url.slice(prefix.length)))) throw new Error('Missing reviewer evidence: '+s.url);
+  }
+}
+w('questions/index.html', page('questions', 'Conference questions · EMEM', 'Short answers about evidence handoffs, prior art and the limits of the EMEM experiments.', 'conference questions', `
+<h1>What does this result establish?</h1>
+<p class="lead">EMEM preserves the cited observation across an agent handoff and gives the receiver concrete checks. These short answers connect the contribution, comparisons and limitations to their evidence.</p>
+<p><a class="btn" href="../demo/">Try the 12-second demonstration</a> · <a href="../methods/#prior">Compare the layers</a> · <a href="../use/">Connect your tool</a></p>
+<p><b>The quick comparison:</b> STAC finds assets. C2PA carries media provenance. GeoGuard checks claims against external evidence. EMEM carries the addressable observation an agent cited. The approaches can be composed; composition is not claimed as an experiment here.</p>
+${QA.questions.map((q,i)=>`<section id="q${i+1}"><h2>${esc(q.question)}</h2><p>${esc(q.answer)}</p><p class="note">${esc(q.status)} · ${q.sources.map(s=>`<a href="${esc(s.url)}">${esc(s.label)}</a>`).join(' · ')}</p></section>`).join('')}
+<p class="note">Evidence reviewed ${esc(QA.date)}. ${src('research/v13/20_CONFERENCE_QUESTIONS.md','Printable rehearsal text')}.</p>`));
 
 for (const [source,name] of [['eo_keylong','keylong'],['eo_rondonia','rondonia'],['sat042','sat042']]) {
   w(`assets/recovered_${name}.svg`,rd(`poster/fig/v12/${source}.svg`));

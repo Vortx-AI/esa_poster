@@ -6,54 +6,69 @@
  ],
  "labels": [
   {
-   "text": "RECORD",
-   "claim": "U.boundary",
-   "pt": 14
-  },
-  {
-   "text": "Exact addressed bytes",
-   "claim": "U.boundary",
+   "text": "CHECKABLE",
+   "claim": "V6.checkable",
    "pt": 17
   },
   {
-   "text": "BINDING",
-   "claim": "U.boundary",
-   "pt": 14
+   "text": "Record bytes + content identity",
+   "claim": "V6.checkable",
+   "pt": 16
   },
   {
-   "text": "Requested place, time and product",
-   "claim": "U.boundary",
+   "text": "Declared cell, band, time",
+   "claim": "V6.checkable",
+   "pt": 16
+  },
+  {
+   "text": "Attestation signature",
+   "claim": "V6.checkable",
+   "pt": 16
+  },
+  {
+   "text": "Declared derivation",
+   "claim": "V6.checkable",
+   "pt": 16
+  },
+  {
+   "text": "Recorded history / as-of",
+   "claim": "V6.checkable",
+   "pt": 16
+  },
+  {
+   "text": "NOT ESTABLISHED",
+   "claim": "V6.limits",
    "pt": 17
   },
   {
-   "text": "ATTESTATION",
-   "claim": "U.boundary",
+   "text": "Sensor accuracy",
+   "claim": "V6.limits",
+   "pt": 16
+  },
+  {
+   "text": "Entity identity",
+   "claim": "V6.limits",
+   "pt": 16
+  },
+  {
+   "text": "Physical truth",
+   "claim": "V6.limits",
+   "pt": 16
+  },
+  {
+   "text": "Decision correctness",
+   "claim": "V6.limits",
+   "pt": 16
+  },
+  {
+   "text": "Source quality: inherited",
+   "claim": "V6.limits",
+   "pt": 16
+  },
+  {
+   "text": "Run the corresponding checks; a content address alone is insufficient.",
+   "claim": "V6.checkable",
    "pt": 14
-  },
-  {
-   "text": "Signature under the pinned key",
-   "claim": "U.boundary",
-   "pt": 17
-  },
-  {
-   "text": "DERIVATION",
-   "claim": "U.boundary",
-   "pt": 14
-  },
-  {
-   "text": "Declared computation reproduces",
-   "claim": "U.boundary",
-   "pt": 17
-  },
-  {
-   "text": "SOURCE READ",
-   "claim": "U.boundary",
-   "pt": 14
-  },
-  {
-   "text": "Named source supports the value",
-   "claim": "U.boundary",
-   "pt": 17
   }
  ]
 }

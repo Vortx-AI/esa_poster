@@ -1,4 +1,4 @@
-# v13.5 unified poster, recovered contributions and community brief
+# v13.6 unified poster and community brief
 
 Preserve the Earth-to-agent story and restored formalism. Recover useful work across versions, give community entry points space at A0, and provide direct setup and reproduction paths. The original fail-closed gates remain.
 
@@ -63,7 +63,7 @@ Preserve the Earth-to-agent story and restored formalism. Recover useful work ac
 > Which changes can the receiver detect?
 > Checks can continue back to the source
 > Resolve → Re-hash → Bind → Recompute → Re-read
-> Each step answers a different question. The matrix measures which changes become visible at each depth; signatures and log checks establish attestation and publication history.
+> Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).
 
 ### 6 · Source re-read
 
@@ -76,7 +76,7 @@ Preserve the Earth-to-agent story and restored formalism. Recover useful work ac
 
 > What has the receiver established?
 > Know what was checked
-> Source quality remains inherited. Entity meaning and downstream decisions belong to the application using the evidence.
+> Checks establish properties of the cited record. A source re-read adds evidence; sensor accuracy remains inherited.
 
 ### 8 · Memory keeps what was cited
 
@@ -94,7 +94,7 @@ Preserve the Earth-to-agent story and restored formalism. Recover useful work ac
 
 > What else can an agent carry?
 > Beyond a single observation
-> Resolve the object and inspect what its address and receipt cover.
+> Eight facts resolve through one bundle; four checkpoint hashes reproduce. These object checks do not validate an agent's reasoning.
 
 ### Execution extension
 
@@ -105,7 +105,7 @@ Preserve the Earth-to-agent story and restored formalism. Recover useful work ac
 
 > Use emem. Carry the evidence forward.
 > Connect a plugin, a workflow or your own code. Public emem reads need no API key; the source is open.
-> Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026). The routes below are plugins, connectors, packages and listings. Their setup links and workflow examples are behind CONNECT.
+> Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026). The routes below are plugins, connectors, packages and listings. One evidence protocol, multiple agent runtimes. Setup and compatibility notes are behind CONNECT.
 
 ## D. Claims map
 
@@ -128,4 +128,4 @@ Canonical record bytes determine the fact CID; batch attestation covers the addr
 
 ## v13.5 recovery and community
 
-See `18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md` for the history audit. `12_claims_map_additions_community.json` adds typed absence, bundle and reasoning-state examples plus community availability. The community figure is 801 × 91 mm with 28 pt platform names. CONNECT & REPRODUCE opens /use/, linking methods, tests, setup and the restored EO gallery. Related-work context moves to the left column; the central experiments retain their original space.
+See `18_RECOVERED_CONTRIBUTIONS_AND_COMMUNITY.md` for the history audit. `12_claims_map_additions_community.json` adds typed absence, bundle and reasoning-state examples plus community availability. The community figure is 801 × 91 mm with 28 pt platform names. CONNECT opens /use/, linking methods, tests, setup and the restored EO gallery. Related-work context moves to the left column; the central experiments retain their original space.

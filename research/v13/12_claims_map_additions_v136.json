@@ -1,0 +1,312 @@
+{
+  "purpose": "v13.6 record boundary, control result and deployment path",
+  "rows": [
+    {
+      "block": "v13.6 issue closure",
+      "layer": "n/a",
+      "date": "2026-10-02",
+      "value": null,
+      "tier": "1m",
+      "checked": true,
+      "id": "V6.bridge",
+      "print": [
+        "Attested observation",
+        "MCP / A2A",
+        "Agent host / client",
+        "Next agent / application"
+      ],
+      "status": "SPEC",
+      "source": {
+        "files": [
+          "research/v13/ecosystem_manifest.json",
+          "research/repro/data/v8/crossruntime_table.json"
+        ]
+      },
+      "note": "Protocol path, not a measured multi-host LLM result. Attestation covers the observation address through a batch.",
+      "check": null
+    },
+    {
+      "block": "v13.6 issue closure",
+      "layer": "n/a",
+      "date": "2026-10-02",
+      "value": null,
+      "tier": "1m",
+      "checked": true,
+      "id": "V6.checkable",
+      "print": [
+        "CHECKABLE",
+        "Record bytes + content identity",
+        "Declared cell, band, time",
+        "Attestation signature",
+        "Declared derivation",
+        "Recorded history / as-of",
+        "Run the corresponding checks; a content address alone is insufficient."
+      ],
+      "status": "SPEC",
+      "source": {
+        "files": [
+          "research/v13/10_ladder_threat_invention.md",
+          "research/v13/16_FORMALISM_AND_TEST_AUDIT.md"
+        ]
+      },
+      "note": "L0/L1 record properties, L2 recomputation when inputs available, and recorded two-clock state; these checks must actually run.",
+      "check": null
+    },
+    {
+      "block": "v13.6 issue closure",
+      "layer": "n/a",
+      "date": "2026-10-02",
+      "value": null,
+      "tier": "1m",
+      "checked": true,
+      "id": "V6.limits",
+      "print": [
+        "NOT ESTABLISHED",
+        "Sensor accuracy",
+        "Entity identity",
+        "Physical truth",
+        "Decision correctness",
+        "Source quality: inherited"
+      ],
+      "status": "OUT-OF-SCOPE",
+      "source": {
+        "files": [
+          "research/v13/10_ladder_threat_invention.md",
+          "research/repro/v11/out/mutation_matrix.json"
+        ]
+      },
+      "note": "Explicit unestablished properties. Source quality is inherited from the product; no operational decision guarantee.",
+      "check": null
+    },
+    {
+      "block": "v13.6 issue closure",
+      "layer": "n/a",
+      "date": "2026-10-02",
+      "value": null,
+      "tier": "1m",
+      "checked": true,
+      "id": "V6.controls",
+      "print": [
+        "71 of 72",
+        "one was refused"
+      ],
+      "status": "MEASURED",
+      "source": {
+        "files": [
+          "research/repro/v13/r5/results.json"
+        ]
+      },
+      "note": "Pooled Claude Block 1 genuine-control decisions, E arm; control correctness is distinct from corruption false acceptance.",
+      "check": {
+        "kind": "json_sum",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "decision_accuracy",
+            "claude-haiku-4-5-20251001",
+            "E",
+            "decision_accuracy_controls",
+            "k"
+          ],
+          [
+            "decision_accuracy",
+            "claude-sonnet-5-5",
+            "E",
+            "decision_accuracy_controls",
+            "k"
+          ],
+          [
+            "decision_accuracy",
+            "claude-opus-5-5",
+            "E",
+            "decision_accuracy_controls",
+            "k"
+          ]
+        ],
+        "expect": 71
+      }
+    },
+    {
+      "block": "v13.6 issue closure",
+      "layer": "n/a",
+      "date": "2026-10-02",
+      "value": null,
+      "tier": "1m",
+      "checked": true,
+      "id": "V6.controls.refused",
+      "print": [
+        "71 of 72",
+        "one was refused"
+      ],
+      "status": "MEASURED",
+      "source": {
+        "files": [
+          "research/repro/v13/r5/results.json"
+        ]
+      },
+      "note": "Pooled Claude Block 1 genuine-control decisions, E arm; control correctness is distinct from corruption false acceptance.",
+      "check": {
+        "kind": "json_sum",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "decision_accuracy",
+            "claude-haiku-4-5-20251001",
+            "E",
+            "false_refusal_controls",
+            "k"
+          ],
+          [
+            "decision_accuracy",
+            "claude-sonnet-5-5",
+            "E",
+            "false_refusal_controls",
+            "k"
+          ],
+          [
+            "decision_accuracy",
+            "claude-opus-5-5",
+            "E",
+            "false_refusal_controls",
+            "k"
+          ]
+        ],
+        "expect": 1
+      }
+    },
+    {
+      "block": "v13.6 issue closure",
+      "layer": "n/a",
+      "date": "2026-10-02",
+      "value": null,
+      "tier": "1m",
+      "checked": true,
+      "id": "V6.controls.n",
+      "print": [
+        "72"
+      ],
+      "status": "MEASURED",
+      "source": {
+        "files": [
+          "research/repro/v13/r5/results.json"
+        ]
+      },
+      "note": "Control denominator: 36 + 30 + 6; unequal model repetition counts.",
+      "check": {
+        "kind": "json_sum",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "decision_accuracy",
+            "claude-haiku-4-5-20251001",
+            "E",
+            "decision_accuracy_controls",
+            "n"
+          ],
+          [
+            "decision_accuracy",
+            "claude-sonnet-5-5",
+            "E",
+            "decision_accuracy_controls",
+            "n"
+          ],
+          [
+            "decision_accuracy",
+            "claude-opus-5-5",
+            "E",
+            "decision_accuracy_controls",
+            "n"
+          ]
+        ],
+        "expect": 72
+      }
+    },
+    {
+      "block": "v13.6 issue closure",
+      "layer": "n/a",
+      "date": "2026-10-02",
+      "value": null,
+      "tier": "1m",
+      "checked": true,
+      "id": "V6.objects",
+      "print": [
+        "These object checks do not validate an agent's reasoning."
+      ],
+      "status": "OUT-OF-SCOPE",
+      "source": {
+        "files": [
+          "research/v13/evidence/community/recovery_checks.json",
+          "research/v13/10_ladder_threat_invention.md"
+        ]
+      },
+      "note": "Reproducing object/state identity is distinct from evaluating the reasoning that produced it.",
+      "check": null
+    },
+    {
+      "id": "V6.matrix_labels",
+      "block": "v13.6 issue closure",
+      "print": [
+        "B acted on corrupted evidence",
+        "unaffected",
+        "refused",
+        "not applicable",
+        "seen in production",
+        "flips the decision",
+        "prose",
+        "JSON",
+        "RAG",
+        "opaque id",
+        "EMEM, full check",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "research/repro/v11/out/mutation_matrix.json",
+          "research/repro/v13/r5/results.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Legend and column labels, and first-refusal letters from the plotted mutation outcomes. Production means observed source-reading cases in this suite, not spacecraft deployment.",
+      "tier": "30cm"
+    },
+    {
+      "id": "V6.berlin_labels",
+      "block": "Berlin table",
+      "print": [
+        "direct sensor",
+        "deterministic index",
+        "model output",
+        "human curated",
+        "unclassified",
+        "product",
+        "signed reading",
+        "valid time",
+        "grid",
+        "fact_cid"
+      ],
+      "status": "SPEC",
+      "layer": "L1",
+      "source": {
+        "files": [
+          "research/repro/v12/data/case_berlin_stack.json",
+          "poster/figs_v13/f13_one_address.py"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "Declared provenance classes and column headings for the Berlin records. A class does not certify product accuracy.",
+      "tier": "30cm"
+    }
+  ]
+}

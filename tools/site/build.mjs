@@ -6,6 +6,7 @@ import * as esbuild from 'esbuild';
 import { blake3 } from '@noble/hashes/blake3';
 import { ed25519 } from '@noble/curves/ed25519';
 import * as V from './verify.mjs';
+import { tourSteps } from './tour.mjs';
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const ROOT = path.resolve(process.argv[2] || path.join(here, '../..'));
@@ -47,6 +48,9 @@ L.push(`Agent A hands over: ${bundle.token}`);
 L.push(`It names ${fact.length} bytes of CBOR by their BLAKE3-256 hash. Receiver: Agent B, using BLAKE3, Ed25519 and CBOR only; pinned key ${V.PINNED_KEY_B32}.`);
 L.push('Ladder: L0 record integrity (hash, attestation signature, log), L1 observation identity, L2 derivation, L3 source re-read, L4 entity, L5 truth and decision.');
 L.push('');
+L.push('12-second guided handoff (saved evidence; no network required):');
+for (const [i, s] of tourSteps({V, blake3, receive, rec, fact, bundle, M}).entries()) L.push(`${i+1}. ${s.title}: ${s.text}`);
+L.push('');
 for (const [id, title, got, h, [ev, ec, el]] of cases) {
   const r = receive(h);
   if (r.verdict !== ev || (ec !== undefined && !!r.checked !== ec) || (r.layer || null) !== el) throw new Error(`${id}: expected ${ev}/${el}, got ${r.verdict}/${r.layer}`);
@@ -66,7 +70,7 @@ L.push('Not checkable here: L4 whether this cell is the field Agent A meant (out
 L.push('A signature fixes the bytes. It does not make the measurement true.');
 L.push(''); L.push(`Embedded data: research/repro/v8/proof_bundle_ndvi.cbor (${bundleBytes.length} B, sha256 ${sha}); research/repro/data/v8/pixel_windows.json ["${wkey}"].`);
 fs.writeFileSync(path.join(out, 'transcript.txt'), L.join('\n') + '\n');
-S.push(`<li><b>L3</b> the committed 5 × 5 window gives B08 ${w.B08[2][2]}, B04 ${w.B04[2][2]} at the named pixel, NDVI ${named}, equal to the signed value; the pixel 10 m south gives ${south.toFixed(4)}. A browser with JavaScript re-reads it live.</li>`);
+S.push(`<li><b>L3</b> the committed 5 × 5 window gives B08 ${w.B08[2][2]}, B04 ${w.B04[2][2]} at the named pixel, NDVI ${named}, equal to the signed value; the pixel 10 m south gives ${south.toFixed(4)}. A browser with JavaScript can optionally re-read it live.</li>`);
 const STATIC = `<ul>${S.join('')}</ul><p>L4 (is this the field A meant) and L5 (is the sensor right, is the decision right) are not checkable from the record.</p>`;
 
 // ---- the page

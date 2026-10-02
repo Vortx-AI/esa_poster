@@ -8,7 +8,7 @@
   {
    "text": "a",
    "pt": 17,
-   "claim": null
+   "claim": "F7.scene"
   },
   {
    "text": "Keylong, Lahaul",
@@ -38,7 +38,7 @@
   {
    "text": "b",
    "pt": 17,
-   "claim": null
+   "claim": "F7.window"
   },
   {
    "text": "NDVI of each 10 m pixel",
@@ -173,7 +173,7 @@
   {
    "text": "c",
    "pt": 17,
-   "claim": null
+   "claim": "F7.scope"
   },
   {
    "text": "test rule: irrigate if NDVI ≤ 0.4705",
@@ -331,17 +331,17 @@
    "claim": "W.kx"
   },
   {
-   "text": "Sample: 200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; 192 Element84, 8 Planetary",
+   "text": "Sample: 200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; 192 Element84, 8",
    "pt": 14,
    "claim": "F7.scope"
   },
   {
-   "text": "Computer. After the fix, 0 of 54 (Planetary Computer, two days). On a 100-point Rondônia grid the old rule changed 7 loss",
+   "text": "Planetary Computer. After the fix, 0 of 54 (Planetary Computer, two days). On a 100-point Rondônia grid the old rule",
    "pt": 14,
    "claim": "F7.scope"
   },
   {
-   "text": "years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.",
+   "text": "changed 7 loss years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.",
    "pt": 14,
    "claim": "F7.scope"
   }

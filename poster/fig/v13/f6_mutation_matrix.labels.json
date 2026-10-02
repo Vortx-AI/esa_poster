@@ -14,22 +14,22 @@
   {
    "text": "B acted on corrupted evidence",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "unaffected",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "refused",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "not applicable",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "M2",
@@ -39,7 +39,7 @@
   {
    "text": "seen in production",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "the only check that stops it",
@@ -49,62 +49,62 @@
   {
    "text": "flips the decision",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "prose",
    "pt": 18,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "JSON",
    "pt": 18,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "RAG",
    "pt": 18,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "opaque id",
    "pt": 18,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "EMEM, full check",
    "pt": 18,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "D",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "E",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "G",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "H",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "I",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "first check",
@@ -244,7 +244,7 @@
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "F",
@@ -294,7 +294,7 @@
   {
    "text": "E",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "E",
@@ -339,7 +339,7 @@
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "F",
@@ -389,7 +389,7 @@
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "F",
@@ -439,7 +439,7 @@
   {
    "text": "E",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "E",
@@ -489,7 +489,7 @@
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "F",
@@ -539,7 +539,7 @@
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "F",
@@ -584,7 +584,7 @@
   {
    "text": "H",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "H",
@@ -634,7 +634,7 @@
   {
    "text": "E",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "E",
@@ -679,7 +679,7 @@
   {
    "text": "G",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "G",
@@ -729,7 +729,7 @@
   {
    "text": "D",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "D",
@@ -774,7 +774,7 @@
   {
    "text": "D",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "C",
@@ -819,7 +819,7 @@
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "F",
@@ -869,7 +869,7 @@
   {
    "text": "I",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "I",
@@ -974,7 +974,7 @@
   {
    "text": "C",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "resolve L0",
@@ -984,7 +984,7 @@
   {
    "text": "D",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "hash L0",
@@ -994,7 +994,7 @@
   {
    "text": "E",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "binding L1",
@@ -1004,7 +1004,7 @@
   {
    "text": "F",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "signature L0",
@@ -1014,7 +1014,7 @@
   {
    "text": "G",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "log L0",
@@ -1024,7 +1024,7 @@
   {
    "text": "H",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "recompute L2",
@@ -1034,7 +1034,7 @@
   {
    "text": "I",
    "pt": 14,
-   "claim": null
+   "claim": "V6.matrix_labels"
   },
   {
    "text": "re-read L3",

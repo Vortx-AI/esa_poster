@@ -2,6 +2,7 @@
 import { blake3 } from '@noble/hashes/blake3';
 import { ed25519 } from '@noble/curves/ed25519';
 import * as V from './verify.mjs';
+import { tourSteps } from './tour.mjs';
 
 const D = window.__DEMO__;
 const $ = (s) => document.querySelector(s);
@@ -9,8 +10,8 @@ const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls)
 const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 const q = new URLSearchParams(location.search);
 const FAST = q.has('fast') || matchMedia('(prefers-reduced-motion: reduce)').matches;
-const OFFLINE = q.has('offline');
-const STEP = FAST ? 0 : 1500;
+const OFFLINE = q.has('offline') || !q.has('live');
+const STEP = FAST ? 0 : 1000;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const T0 = performance.now(); const el = () => ((performance.now() - T0) / 1000).toFixed(1) + ' s';
 const say = (t) => { $('#live').textContent = t; };
@@ -24,9 +25,30 @@ const fact = V.factsRaw(V.bytesOf(bundle.entry)).find((x) => V.b32e(blake3(x)) =
 const M = V.mutations(fact, bundle.token);
 const rec = V.cbor(fact);
 
+const tour = tourSteps({V, blake3, receive, rec, fact, bundle, M});
+async function runTour() {
+  const start = performance.now(), sequence = [];
+  $('#tour-replay').disabled = true;
+  $('#tour-log').replaceChildren();
+  window.__TOUR__ = {complete:false};
+  for (const [i, step] of tour.entries()) {
+    $('#tour-step').textContent = `${i+1} / ${tour.length} · ${step.title}`;
+    $('#tour-output').textContent = step.text;
+    $('#tour-progress').value = i+1;
+    const entry = mk('li'); entry.append(mk('b','',step.title+': '),document.createTextNode(step.text));
+    $('#tour-log').append(entry); sequence.push(step);
+    if (!FAST) await sleep(2000);
+  }
+  window.__TOUR__ = {complete:true,seconds:(performance.now()-start)/1000,sequence,network_required:false};
+  $('#tour-replay').disabled = false;
+  $('#tour-time').textContent = `Completed in ${window.__TOUR__.seconds.toFixed(1)} s. All checks used the saved bytes on this device.`;
+}
+$('#tour-replay').addEventListener('click',runTour);
+
 // self-test before anything is reported (a broken hash library must not call a genuine record forged)
 const emptyHex = V.hex(blake3(new Uint8Array(0)));
 if (emptyHex !== 'af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262') { say('self-test failed: this browser\'s BLAKE3 is wrong, so this page checks nothing'); throw new Error('blake3 self-test'); }
+runTour();
 
 // ---------------------------------------------------------------- the handoffs (R1 names)
 const otherTok = `emem:fact:${M.otherCell}:${tok.cid}`;
@@ -72,7 +94,7 @@ async function play(r) {
   for (const s of res.steps) {
     const li = mk('li', s.ok === null ? 'na' : s.ok ? 'ok' : 'no');
     li.append(mk('i', '', s.ok === null ? '·' : s.ok ? '✓' : '✕'), mk('span', 'ly', s.layer === 'none' ? '' : s.layer), mk('span', '', s.text));
-    r.ol.append(li); if (!FAST) await sleep(180);
+    r.ol.append(li); if (!FAST) await sleep(100);
   }
   const cls = res.verdict === 'REFUSED' ? 'no' : res.checked ? 'ok' : 'warn';
   const word = res.verdict === 'REFUSED' ? res.layer + ' refused' : res.checked ? 'ACCEPTED, checked' : 'ACCEPTED, unchecked';
@@ -87,9 +109,10 @@ const live = {};
 async function liveFacts() {
   if (OFFLINE) return null;
   try {
-    const g = await fetch(`https://emem.dev/v1/facts/${tok.cid}`, { headers: { accept: 'application/cbor' } });
+    const signal = AbortSignal.timeout(8000);
+    const g = await fetch(`https://emem.dev/v1/facts/${tok.cid}`, { signal, headers: { accept: 'application/cbor' } });
     const gb = new Uint8Array(await g.arrayBuffer());
-    const f = await fetch(`https://emem.dev/v1/facts/${m8cid}`, { headers: { accept: 'application/cbor' } });
+    const f = await fetch(`https://emem.dev/v1/facts/${m8cid}`, { signal, headers: { accept: 'application/cbor' } });
     return { genuine: g.status, same: V.eq(gb, fact), forged: f.status };
   } catch (e) { return { err: String(e.message || e) }; }
 }
