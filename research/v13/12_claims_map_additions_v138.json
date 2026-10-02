@@ -1,0 +1,102 @@
+{
+  "purpose": "EO language, traceable NDVI history and practical community tasks",
+  "rows": [
+    {
+      "id": "V8.history",
+      "block": "v13.8 EO usability",
+      "print": [
+        "KEYLONG · SENTINEL-2 L2A · 141 RECORDS",
+        "S2A",
+        "S2B",
+        "S2C",
+        "0.4709: handoff record",
+        "0.0",
+        "0.4",
+        "0.8",
+        "Jan 2025",
+        "Jul",
+        "Jan 2026",
+        "Sep",
+        "NDVI history, with citations",
+        "Each value retains its dated record.",
+        "Cloud/snow screening and processing harmonisation were not applied; physical interpretation needs both."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/v12/data/case_keylong_ndvi.json",
+          "v13/evidence/v138/eo_history.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "v13/evidence/v138/eo_history.json",
+        "arg": [
+          "records"
+        ],
+        "expect": 141
+      },
+      "note": "141 retained records (87 in 2025 and 54 in 2026), originally read 30 Sep. Lines show time order, not a fitted trend. No cloud/snow mask or harmonisation was applied. The highlighted CID is the same 25 Sep 2026 record used in the handoff experiment. No new live measurement or fresh signature check.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V8.language",
+      "block": "v13.8 EO usability",
+      "print": [
+        "EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.",
+        "A compact citation keeps the observation traceable across agents and time.",
+        "An EMEM cell indexes a location. Products retain their native pixels; CHIRPS records an out-of-coverage absence.",
+        "a: location cell · b: variable · t: valid time · v: value"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md",
+          "repro/v12/data/case_berlin_stack.json",
+          "repro/v8/proof_bundle_ndvi.cbor"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "EO-language translation, preserving record/content/reference distinctions. A lookup cell is not the native pixel of every product. Typed bands include derived variables and model outputs. Describes the cited EO records, not a guarantee that all possible records have complete provenance.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "V8.workflow",
+      "block": "v13.8 EO usability",
+      "print": [
+        "Use it in an EO workflow",
+        "Compare dates",
+        "Assemble evidence",
+        "Retain conflicts",
+        "Refresh inputs",
+        "Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.",
+        "Start with an EO question, connect your tool, then pass the cited observations onward. Public emem reads need no API key.",
+        "Choose an EO task, copy a reference, run the checks."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "v13/evidence/formalism/source/docs/model.md",
+          "repro/v12/data/case_keylong_ndvi.json",
+          "repro/v12/data/case_rondonia_eudr.json",
+          "repro/data/contra_bengaluru.json"
+        ]
+      },
+      "date": "2026-10-02",
+      "value": null,
+      "check": null,
+      "note": "EO task labels map to existing operations; user-facing recipes are demonstrator workflows, not validation of ecological causality, legal compliance or independent hosted-agent operation.",
+      "tier": "30cm",
+      "checked": true
+    }
+  ]
+}

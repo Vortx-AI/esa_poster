@@ -43,7 +43,17 @@ try{
     const copied=await page.evaluate(()=>navigator.clipboard.readText());const prompt=await page.locator('#handoff').inputValue();
     if(copied!==prompt||!copied.includes('emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa')) result.failures.push('Clipboard did not preserve exact token');
     const urls=await page.locator('.setup a').evaluateAll(els=>els.map(e=>({text:e.textContent,url:e.href})));
-    result.community[width]={cards,copy_matches:copied===prompt,links:urls};
+    const tasks=await page.locator('.eo-task a').evaluateAll(els=>els.map(e=>({text:e.textContent,url:e.href})));
+    const taskChecks=[];
+    for(const task of tasks){
+     const target=new URL(task.url);await page.goto(task.url,{waitUntil:'networkidle'});
+     const found=await page.locator(target.hash).count();
+     taskChecks.push({...task,target_exists:found===1});
+     if(found!==1)result.failures.push({eo_task:task.text,width,missing:target.hash});
+    }
+    if(tasks.length!==3)result.failures.push('Missing EO starting task');
+    await page.goto(base+'use/',{waitUntil:'networkidle'});
+    result.community[width]={cards,copy_matches:copied===prompt,links:urls,eo_tasks:taskChecks};
     await page.screenshot({path:path.join(out,`community_${width}.png`),fullPage:width===390});
     await page.getByRole('link',{name:'Methods and reproduction',exact:true}).click();
     if(!(await page.locator('h1').innerText()).includes('Methods'))result.failures.push('Community-to-methods link failed');

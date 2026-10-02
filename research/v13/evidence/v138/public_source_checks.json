@@ -1,0 +1,62 @@
+{
+  "sources": [
+    {
+      "url": "https://emem.dev/",
+      "retrieved_utc": "2026-10-02T10:32:39.757398+00:00",
+      "http_success": true,
+      "bytes": 277453,
+      "sha256": "aa95cbb1c7a40b5287767a8a4588585b0b79526a65bd06a7c3745b9eddd6b2da",
+      "error": null
+    },
+    {
+      "url": "https://emem.dev/the-long-version",
+      "retrieved_utc": "2026-10-02T10:32:39.776999+00:00",
+      "http_success": true,
+      "bytes": 215382,
+      "sha256": "ec8d98b73faf852205514ec64af6d4b3b9f88e04923b80ad05f992e40272dbcd",
+      "error": null
+    },
+    {
+      "url": "https://emem.dev/solutions",
+      "retrieved_utc": "2026-10-02T10:32:39.760881+00:00",
+      "http_success": true,
+      "bytes": 77315,
+      "sha256": "de0f6866a827f53360746f5d5325490cea2474a7342d5a8b5c6940e5994783d5",
+      "error": null
+    },
+    {
+      "url": "https://emem.dev/docs/model.html",
+      "retrieved_utc": "2026-10-02T10:32:39.497349+00:00",
+      "http_success": true,
+      "bytes": 46499,
+      "sha256": "6000dbd1fc116d59d37ebc49cbed47488b87ee6dc86a7bad2dbc308abb26b09a",
+      "error": null
+    },
+    {
+      "url": "https://emem.dev/docs/quickstart.html",
+      "retrieved_utc": "2026-10-02T10:32:47.483795+00:00",
+      "http_success": true,
+      "bytes": 37716,
+      "sha256": "4bebe5c1a838223bfd23909c11c9fa9b181e4e5ae4c8d0c8ac724a1dc8008a60",
+      "error": null
+    },
+    {
+      "url": "https://stacspec.org/en/about/stac-spec/",
+      "retrieved_utc": "2026-10-02T10:32:45.063360+00:00",
+      "http_success": true,
+      "bytes": 33724,
+      "sha256": "c9e8f9a0634e2b20d25e53f5a56d009883ebd3b40bb1014c4875e9a72ec2998c",
+      "error": null
+    },
+    {
+      "url": "https://api.openeo.org/",
+      "retrieved_utc": "2026-10-02T10:32:47.888136+00:00",
+      "http_success": true,
+      "bytes": 2632548,
+      "sha256": "058d326acf38c22dff32b2b1ea49f6b9aaebcb14ccf4c9be3ca66a91a517628c",
+      "error": null
+    }
+  ],
+  "upstream_commit": "8e9b401cecae7ab9944d403a2d7840952c6586a6",
+  "scope": "Read-only public pages, used for discovery and interface context. Capability and measurement claims were checked against pinned implementation and retained data."
+}

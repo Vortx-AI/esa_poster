@@ -310,7 +310,7 @@ def main():
         # Agent B and what it does
         glyph(ax, 402, cy - 5.5, 11, "B", letter_pt=17)
         if em:
-            chain = [("resolve", "L0"), ("re-hash", "L0"), ("bind", "L1"), ("signature", "L0"),
+            chain = [("resolve", "L0"), ("re-hash", "L0"), ("place / time / band", "L1"), ("signature", "L0"),
                      ("log", "L0"), ("recompute", "L2"), ("source re-read", "L3")]
             x = 418
             ch = min(8.0, (lh - 4.5) / 2)

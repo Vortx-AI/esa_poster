@@ -1,17 +1,17 @@
 {
-  "schema": "Documented v13.7 departures from the original v13 grid.",
+  "schema": "Documented v13.8 departures from the original v13 grid.",
   "deviations": {
     "p1": {
       "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "p2": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
+      "reason": "v13.8 recovers a compact 141-record Keylong NDVI history: the highlighted observation is the same record used in the handoff and source-pixel experiments. Source-scene dates remain explicit; no cloud/snow harmonisation or physical trend is claimed. The eight-answer diagnostic remains in the methods."
     },
     "p3": {
       "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
     },
     "questions": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."
+      "reason": "v13.8 gives the memory operations EO task names while retaining all eight operations, source tests and the single-hop boundary."
     },
     "threat": {
       "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged."

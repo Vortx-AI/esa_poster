@@ -1,0 +1,15 @@
+{
+  "source": "research/repro/v12/data/case_keylong_ndvi.json",
+  "source_sha256": "c8c8c01c0d6c3eda16bae7614e59317258cb22a74c6e865b3b7a723bf6bf0cce",
+  "records": 141,
+  "platform_counts": {
+    "S2A": 15,
+    "S2B": 61,
+    "S2C": 65
+  },
+  "first_observation": "2025-01-28T05:40:21.394000Z",
+  "last_observation": "2026-09-25T05:42:51.024000Z",
+  "highlighted_cid": "oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa",
+  "highlighted_value": 0.4708994708994709,
+  "scope": "Retained records read on 30 September 2026. No new acquisition, cloud/snow mask, processing harmonisation or vegetation-trend attribution. Existing verified flags are retained evidence, not a fresh verification run."
+}

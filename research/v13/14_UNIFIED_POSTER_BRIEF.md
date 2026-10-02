@@ -1,14 +1,14 @@
-# v13.7 unified poster and community brief
+# v13.8 unified poster and community brief
 
-Recover the complete handoff experiment, full token table and Berlin fanout from the two requested historical commits. Complete the formalism from pinned implementation sources. Preserve the current results, community routes and fail-closed A0 gates. See `22_RECOVERED_DESIGN_AND_FORMALISM.md` for the restoration and scientific review.
+Keep the complete handoff, token family, Berlin fanout and exact memory formalism restored in v13.7. Recover the dated NDVI history and explain memory operations through EO tasks. Make community entry points usable while preserving the scope of the scientific evidence. See `23_EO_GOLD_AND_USABILITY.md` for the recovery decisions and `22_RECOVERED_DESIGN_AND_FORMALISM.md` for the preceding restoration.
 
 ## C. The complete printed text
 
 ### Header
 
 > An Earth observation thatsurvives an agent handoff.
-> EMEM gives an observation a lookup identity and a content-addressed record. Agent A passes the reference. Agent B resolves the same record and checks it before continuing.
-> Earth data stays in the data layer. Its reference enters the reasoning layer.
+> EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
+> A compact citation keeps the observation traceable across agents and time.
 
 ### 1 · Earth to agents
 
@@ -17,25 +17,25 @@ Recover the complete handoff experiment, full token table and Berlin fanout from
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
 > In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
 
-### 2 · One question, different records
+### 2 · Traceable observation history
 
-> What can change between agents?
-> One question, several records
-> Scene, pixel, offset, rounding and stale state can change the value passed on.
-> The same Keylong question yields eight values under these choices. Keeping the cited record makes the differences inspectable.
+> Can a time series retain its evidence?
+> NDVI history, with citations
+> Each value retains its dated record.
+> Cloud/snow screening and processing harmonisation were not applied; physical interpretation needs both.
 
 ### 3 · Different drift, different check
 
 > Where did the evidence change?
 > A changed value needs a cause
-> References can drift during a handoff; readouts can change between visits. Keep both questions separate.
-> World, instrument, alignment, model and noise. Δz is the later readout minus the earlier one. The attribution ledger links evidence to each term; the numeric split remains open.
+> A cited value can change during a handoff. Between acquisitions, the surface, sensor or processing may also change.
+> Surface change, instrument, registration, encoder and residual. Δz is the later value minus the earlier one. The attribution ledger links evidence to each term; the numeric split remains open.
 > The implemented anchor score measures disagreement, not its cause. SAT-042 exercises it in a reference harness; live device-to-anchor wiring remains next work.
 
 ### Memory operations
 
-> Compute over the memory
-> Typed memory operations retain the evidence behind an answer. Single-hop materialisation is implemented; multi-hop planning remains open.
+> Use it in an EO workflow
+> Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.
 > 20 upstream offline SDK / encoding tests passed.
 
 ### Concrete handoff
@@ -55,7 +55,7 @@ Recover the complete handoff experiment, full token table and Berlin fanout from
 > What does one Berlin location reveal?
 > One cell, many source records
 > One lookup joins the evidence; each product keeps its own time, provenance and native grid.
-> Absence is citable too: CHIRPS reports outside its latitude range. A common cell does not make these products co-registered.
+> An EMEM cell indexes a location. Products retain their native pixels; CHIRPS records an out-of-coverage absence.
 
 ### 5 · Checks back to the source
 
@@ -75,10 +75,10 @@ Recover the complete handoff experiment, full token table and Berlin fanout from
 > Know what was checked
 > Checks establish properties of the cited record. A source re-read adds evidence; sensor accuracy remains inherited.
 
-### 8 · Memory keeps what was cited
+### 8 · Revisit the earlier evidence
 
 > Can a later agent recover the earlier state?
-> Memory keeps what was cited
+> Revisit the earlier evidence
 > Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.
 > As of 15 Jun → 918.0 m. The later 915.07 m is a provider change. Temporal storage is established; the handoff adds a portable citation to the exact earlier record.
 
@@ -86,7 +86,7 @@ Recover the complete handoff experiment, full token table and Berlin fanout from
 
 > What does the memory contain?
 > Observations + temporal edges
-> a: cell · b: band · t: valid time · v: valueu: uncertainty · p: provenance, recipe, signing times: attestation associated with the observation
+> a: location cell · b: variable · t: valid time · v: valueu: uncertainty · p: provenance, recipe, signing times: attestation associated with the observation
 > Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.
 > Append observations and supersedes / disagrees_with edges; keep earlier records.
 
@@ -104,7 +104,7 @@ Recover the complete handoff experiment, full token table and Berlin fanout from
 ### 11 · Community routes
 
 > Use emem. Carry the evidence forward.
-> Connect a plugin, a workflow or your own code. Public emem reads need no API key; the source is open.
+> Start with an EO question, connect your tool, then pass the cited observations onward. Public emem reads need no API key.
 > Measured separately: the same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).The routes below are plugins, connectors, packages and listings. One evidence protocol, multiple agent runtimes. Setup and compatibility notes are behind CONNECT.
 
 ## D. Claims map
