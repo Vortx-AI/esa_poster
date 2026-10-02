@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings</title>
-<!-- v13.9 source. Issue #48 supersedes the face copy in the original brief.
+<!-- Reviewed v13 source. Issue #48 supersedes the face copy in the original brief.
      Figures, measurements and claim rows remain independently checked by build_v13.py. -->
 <link rel="stylesheet" href="src/poster.v13.css">
 </head>
@@ -45,19 +45,22 @@
 </section>
 
 <div class="col" data-col="left" style="--gap:5;--x:20;--y:433.5;--w:193.5;--h:639">
-<section class="panel c3" data-block="p2" data-brief="2 · Eight answers; one is right">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>What can one NDVI become between agents?</p>
-  <h2 class="rt" data-role="headline" data-claim="E8.summary">Eight answers; one is right</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="E8.summary H.img.record">One question, NDVI at the Keylong field on 25 Sep 2026; real records, archive pixels and handling rules give eight values.</p>
+<section class="panel c3" data-block="p2" data-brief="2 · One NDVI, eight values">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>How does a value change between agents?</p>
+  <h2 class="rt" data-role="headline" data-claim="E8.summary">One NDVI, eight values</h2>
+  <p class="mech rt" data-role="mechanism" data-claim="E8.summary H.img.record">At Keylong on 25 Sep 2026, scene, date, pixel and arithmetic choices change the reported NDVI.</p>
   <div class="fig" data-figslot="f3_eight_answers" style="--fw:193.5;--fh:62"><!--fig:f3_eight_answers--></div>
-  <p class="cap rt" data-role="caption" data-claim="E8.summary">Six cross the irrigation line, one is impossible, one is right; each wrong value needs a different check.</p>
+  <p class="cap rt" data-role="caption" data-claim="E8.summary E8.double">Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.</p>
 </section>
 <section class="panel c3 drift-panel" data-block="p3" data-brief="3 · Different drift, different check">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">3</span>Where did the evidence change?</p>
   <h2 class="rt" data-role="headline" data-claim="DF.decomposition">A changed value needs a cause</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">A different value implies a change in one or more components of the chain.</p>
+  <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">Between acquisitions, the surface, sensor, location or processing can change.</p>
+  <p class="extension-label" data-claim="DF.decomposition" style="margin-top:2mm">CONCEPTUAL CHANGE MODEL</p>
   <div class="equation drift-one-line" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub> + Δ<sub>encoder</sub> + ε</div>
-  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution DF.score">Environment · sensor · geolocation · encoding · residual. The implemented anchor score measures disagreement, not its cause; the attribution ledger keeps evidence for each term.</p>
+  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Δz: change in readout. Environment · sensor · geolocation · encoder · residual. The attribution ledger links evidence to these terms.</p>
+  <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:116"><!--fig:f4_failure_ladder--></div>
+  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run">The implemented score measures disagreement with an anchor. SAT-042 applies it to a fixed reference in the execution harness.</p>
 </section>
 <section class="panel c3 addresses" data-block="questions" data-brief="Memory operations">
   <h2 class="rt" data-role="headline" data-claim="V7.algebra V8.workflow">Use it in an EO workflow</h2>
@@ -67,14 +70,13 @@
     <p><b>Retain conflicts</b> · competing, evolve</p>
     <p><b>Refresh inputs</b> · ensure, valid</p>
   </div>
-  <p class="cap rt" data-role="caption" data-claim="V7.algebra V8.workflow">Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.</p>
-  <p class="cap rt" data-role="caption" data-claim="MF.tests">20 upstream offline SDK / encoding tests passed.</p>
+  <p class="cap rt" data-role="caption" data-claim="V7.algebra V8.workflow">Compare vegetation observations, retain conflicting estimates and pass their references onward. Single-hop retrieval materialises the requested observation.</p>
 </section>
-<section class="panel c3 handoff" data-block="threat" data-brief="Threat model · what checks establish">
+<section class="panel c3 handoff" data-block="p7" data-brief="7 · What checks establish">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
-  <h2 class="rt" data-role="headline" data-claim="U.boundary">Checks stop at the source</h2>
+  <h2 class="rt" data-role="headline" data-claim="U.boundary">Know what was checked</h2>
   <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:65"><!--fig:f8_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="U.boundary">Record bytes and identity are checkable; derivation can be recomputed; source checks are partial. Entity, sensor accuracy and the decision remain outside the reference.</p>
+  <p class="cap rt" data-role="caption" data-claim="U.boundary">Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.</p>
 </section>
 <section class="panel c3 invention" data-block="p13" data-brief="Contribution and prior art">
   <p class="extension-label" data-claim="V7.invention">THE CONTRIBUTION</p>
@@ -85,18 +87,18 @@
 </div>
 
 <div class="col" data-col="centre" style="--gap:4;--x:222.5;--y:433.5;--w:396;--h:639">
-<section class="panel c6" data-block="p4" data-brief="4 · The address names the record, not the pixel">
+<section class="panel c6" data-block="p4" data-brief="4 · What exactly is handed over">
   <div class="qrhead">
     <div class="qrhtext">
       <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">4</span>What exactly is handed over?</p>
-      <h2 class="rt" data-role="headline" data-claim="O.nohash">The address names the record, not the pixel.</h2>
-      <p class="mech rt" data-role="mechanism" data-claim="O.84">The receiver gets 84 characters; everything else it fetches and checks.</p>
+      <h2 class="rt" data-role="headline" data-claim="O.cid">A compact reference to an exact record</h2>
+      <p class="mech rt" data-role="mechanism" data-claim="O.84">The receiver uses an 84-character reference to fetch the record and its evidence.</p>
       <div class="qrlabel inl" data-claim="Q.inspect_record O.1115"><span class="cta">INSPECT THE RECORD</span> <span class="qcap" data-role="cap">The 1,115 bytes behind the main example, decoded.</span></div>
     </div>
     <div class="qr inl" data-qr="r" data-claim="Q.inspect_record"><div class="sym"><!--qr:r--></div></div>
   </div>
   <div class="fig" data-figslot="f5_evidence_object" style="--fw:396;--fh:98"><!--fig:f5_evidence_object--></div>
-  <p class="cap rt" data-role="caption" data-claim="O.1115 O.batch O.nohash O.sevenaddr">The address is the BLAKE3 hash of the 1,115-byte record, which names its source files and the point it read but holds no hash of them; a batch signature covers such addresses. Re-signing makes a new record: one Bengaluru value has seven.</p>
+  <p class="cap rt" data-role="caption" data-claim="O.1115 O.batch O.nohash">BLAKE3 identifies the 1,115-byte record. Its fields name the source files, sampled point and derivation; a batch signature covers the record address. Source-file hashes are absent from this record.</p>
 </section>
 <section class="panel c6" data-block="p5" data-brief="5 · Checks back to the source">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">5</span>Which changes can the receiver detect?</p>
@@ -115,23 +117,13 @@
 </div>
 
 <div class="col" data-col="right" style="--gap:4;--x:627.5;--y:433.5;--w:193.5;--h:639">
-<section class="panel c3 boundary" data-block="p7" data-brief="7 · Verification boundary">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>Where does verification stop?</p>
-  <h2 class="rt" data-role="headline" data-claim="U.boundary">Beyond the checked reference</h2>
-  <div class="addresscard">
-    <p class="body" data-claim="U.boundary"><b>Entity meant</b> · out of scope</p>
-    <p class="body" data-claim="U.boundary"><b>Sensor accuracy</b> · inherited</p>
-    <p class="body" data-claim="U.boundary"><b>Decision</b> · out of scope</p>
-  </div>
-  <p class="cap rt" data-role="caption" data-claim="U.boundary">A source re-read adds evidence about the source read. It does not establish physical truth or decide what an agent should do.</p>
-</section>
 <section class="panel c3" data-block="p8" data-brief="8 · Revisit the earlier evidence">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">8</span>Can a later agent recover the earlier state?</p>
   <h2 class="rt" data-role="headline" data-claim="TM.asof">Revisit the earlier evidence</h2>
   <div class="temporal-equation" data-claim="V7.recall">C<sub>τ</sub> = TxAsOf(O*, a, b, τ)<br>recall = max<sub>(t, cid)</sub> {O in C<sub>τ</sub> : t ≤ t*}</div>
   <p class="cap rt" data-role="caption" data-claim="V7.recall">Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.</p>
   <div class="fig" data-figslot="f9_timeline" style="--fw:193.5;--fh:82"><!--fig:f9_timeline--></div>
-  <p class="cap rt" data-role="caption" data-claim="MF.example V7.recall">As of 15 Jun → 918.0 m. The later 915.07 m is a provider change. Temporal storage is established; the handoff adds a portable citation to the exact earlier record.</p>
+  <p class="cap rt" data-role="caption" data-claim="MF.example V7.recall">The later 915.07 m reflects a provider change. The earlier citation still resolves to the earlier estimate.</p>
 </section>
 <section class="panel c3 memory" data-block="p9" data-brief="Complete observation and memory model">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">9</span>What does the memory contain?</p>
@@ -149,12 +141,12 @@
   <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:118"><!--fig:f14_token_family--></div>
   <p class="cap rt" data-role="caption" data-claim="CM.bundle CM.state V6.objects">Eight facts resolve through one bundle; four checkpoint hashes reproduce. These object checks do not validate an agent's reasoning.</p>
 </section>
-<section class="panel c3 extension" data-block="p11" data-brief="11 · How a satellite could prove what it ran">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>Extending verification from observations to execution</p>
-  <h2 class="rt s28" data-role="headline" data-claim="SAT.run" style="margin-top:0">How a satellite could prove what it ran</h2>
-  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm">SAT-042 is a scripted pass in emem's test harness, not a spacecraft; run on 30 Sep 2026.</p>
+<section class="panel c3 extension" data-block="p11" data-brief="11 · Satellite execution evidence">
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>Satellite execution evidence</p>
+  <h2 class="rt s28" data-role="headline" data-claim="SAT.run" style="margin-top:0">A signed trace binds the reported run</h2>
+  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm">SAT-042 scripted pass · reference harness · 30 Sep 2026.</p>
   <div class="fig" data-figslot="f15b_sat042_strip" style="--fw:193.5;--fh:60"><!--fig:f15b_sat042_strip--></div>
-  <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled; the gate binds the value digest only.</p>
+  <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled. The admission gate binds output value digests; band, cell and time are outside this check.</p>
 </section>
 </div>
 
