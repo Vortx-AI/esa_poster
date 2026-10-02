@@ -1,53 +1,50 @@
 {
-  "schema": "Documented v13.9 departures from the original v13 grid.",
+  "schema": "Documented departures for the reviewed v13 source, 2 Oct 2026.",
   "deviations": {
     "p1": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "Complete handoff experiment below the seven-step workflow. The right stack now states the address, record, attestation and named sources; digest lines have sufficient spacing at 14 pt."
     },
     "p2": {
-      "reason": "v13.8 recovers a compact 141-record Keylong NDVI history: the highlighted observation is the same record used in the handoff and source-pixel experiments. Source-scene dates remain explicit; no cloud/snow harmonisation or physical trend is claimed. The eight-answer diagnostic remains in the methods. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment."
     },
     "p3": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size."
     },
     "questions": {
-      "reason": "v13.8 gives the memory operations EO task names while retaining all eight operations, source tests and the single-hop boundary. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
-    },
-    "threat": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face."
     },
     "p4": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The decoded evidence object replaces the Berlin fanout, restoring the complete source-record-address-attestation flow at 396 by 98 mm."
     },
     "p5": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The central mutation matrix retains its 396 by 196 mm print size and measured outcomes; the centre column distributes the space released by replacing the Berlin panel."
     },
     "p6": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column."
     },
     "p12": {
       "reason": "v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains."
     },
     "p13": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The contribution remains in the left column, after the consolidated evidence boundary."
     },
     "footer": {
       "reason": "The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172)."
     },
     "p7": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed."
     },
     "p8": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged."
     },
     "p9": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The complete observation and memory model stays in the right column at its existing type sizes."
     },
     "p10": {
-      "reason": "v13.7 restores the full handoff flow and token grammar table. Berlin moves to the wide central column in place of the generic wire-record schematic; the right column now holds the full observation tuple and two-clock recall. Complete drift-score branches and memory operations replace repeated prose. All type and fit gates remain unchanged. v13.9 moves this block down 56 mm to put the complete workflow before the handoff experiment; scientific figure sizes remain unchanged."
+      "reason": "The full token-family table stays in the right column at its existing 193.5 by 118 mm size."
     },
     "p11": {
-      "reason": "Panel 11 restores the compact SAT-042 execution-verification strip (F15b): seven harness steps, the chained 8-layer trace with a rewritten segment caught, and drift-anchor scoring. The run is explicitly a reference harness with no spacecraft enrolled; the gate binds the value digest only."
+      "reason": "The SAT-042 execution strip prints the existing reference-harness run, its three refusals, chained trace and anchor scores. The headline concerns the reported run; no spacecraft deployment is claimed."
     }
   },
   "v13.2_notes": {
@@ -75,5 +72,13 @@
       65
     ],
     "reason": "The complete seven-step workflow is read before the controlled handoff experiment; panel 11 now carries the compact SAT-042 execution-verification strip instead of a next-experiments prose block."
+  },
+  "reviewed_source_notes": {
+    "consolidated_blocks": {
+      "threat": "p7"
+    },
+    "scientific_figures": 13,
+    "unchanged_measurements": true,
+    "figure_floor_pt": 14
   }
 }
