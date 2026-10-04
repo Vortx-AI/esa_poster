@@ -1,0 +1,66 @@
+{
+ "release": "v13.10",
+ "date": "2026-10-04",
+ "base_commit": "2e5cb033954af058af0064d396553fdeac556c3e",
+ "research_review": "research/v13/26_V13_10_REVIEW.md",
+ "artifacts": {
+  "poster/emem-poster-A0.pdf": {
+   "bytes": 2413252,
+   "sha256": "a7407da4ce9f5181bb14857b0c4a7759471a14daf327057406b7a1cc10a7d349"
+  },
+  "poster/emem-poster-preview.png": {
+   "bytes": 4714007,
+   "sha256": "02843e23fdafcc54537f546a61257143f5c57ad849d5f47865bbd06e4d0f6d54"
+  },
+  "poster/emem-poster-A0-300dpi.png": {
+   "bytes": 16866834,
+   "sha256": "8d38b9c31fe1bac93fa28a130af91e517bafcca9292e1429aa9ae328165c2ba2"
+  },
+  "poster/poster.html": {
+   "bytes": 3341441,
+   "sha256": "ecff1af89980fdf26316f530f17bdd6aea78d400cf532e44ac2151991951ca13"
+  },
+  "poster/build_v13_report.json": {
+   "bytes": 24490,
+   "sha256": "32f5474bf722a5fe0f08faaffe5dd95462df41f88ec353e6b1f22b7556ce611d"
+  },
+  "poster/src/poster.v13.html": {
+   "bytes": 22995,
+   "sha256": "2763d3612d5472fe85dd6dd15dd549932484e2cc97d9ded54d4c255125eab7fb"
+  },
+  "poster/src/poster.v13.css": {
+   "bytes": 14973,
+   "sha256": "65bd007134a24ec2cea174c54338372844fca6f5d2363d6c3b68be1b1a12d24c"
+  }
+ },
+ "pdf_blake3": "b0609b89e9811af16c4c9c863564080a57a53b03fdb2a62ca816e0548f792b54",
+ "pointer_body": "research/repro/v13/track/board_body_2e5cb03.md",
+ "gates": {
+  "page_fit": "PASS",
+  "footer_clearance": "PASS",
+  "block_rectangles": "PASS",
+  "no_overflow_or_clipping": "PASS",
+  "type_floor": "PASS",
+  "glyph_coverage": "PASS",
+  "prose_and_banned_words": "PASS",
+  "face_hygiene": "PASS",
+  "r5_placeholders": "PASS",
+  "claims_coverage": "PASS",
+  "ecosystem_manifest": "PASS",
+  "claims_rows_recheck": "PASS",
+  "qr_decode": "PASS",
+  "assets": "PASS",
+  "fonts_loaded": "PASS",
+  "colour_tokens": "PASS",
+  "imagery": "PASS",
+  "word_budget": "PASS"
+ },
+ "rows_rechecked": 530,
+ "claims_printed": 165,
+ "qr": [
+  "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
+  "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
+  "qr_use at (766.0,1095.4) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'"
+ ],
+ "seal": "not signed in this release: emem.dev was unreachable from the build environment; the pointer body is ready to publish"
+}

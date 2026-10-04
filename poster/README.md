@@ -7,6 +7,7 @@
 | [emem-poster-A0-300dpi.png](emem-poster-A0-300dpi.png) | Full-resolution print proof |
 | [build_v13_report.json](build_v13_report.json) | Layout, claim, type and QR checks |
 | [release_reviewed.json](release_reviewed.json) | Artifact hashes and validation summary |
+| [release_v13.10.json](release_v13.10.json) | v13.10 print: artifact hashes, PDF BLAKE3, gate summary, QR decodes |
 
 The build now renders the latest figure sources. It restores the eight-value NDVI diagnostic, complete decoded evidence object, single-line change decomposition, implemented drift score, and SAT-042 execution strip. The checked-reference boundary appears once, as section 7. Future-work prose and the generic SDK test-count line leave the face. The scientific measurements are unchanged.
 
@@ -17,6 +18,20 @@ Build sources: `src/poster.v13.html`, `src/poster.v13.css`, and `figs_v13/`. The
 [Copy specification](../research/v13/14_UNIFIED_POSTER_BRIEF.md) · [Review and validation](../research/v13/25_REVIEWED_SOURCE_AND_A0.md) · [Instructions](../AGENTS.md).
 
 The companion download link serves the committed main-branch PDF. Local regeneration does not publish the reviewed artifacts or change the archived signed-track identity.
+
+## v13.10 print (4 Oct 2026)
+
+- **Print:** `emem-poster-A0.pdf`, one page, 841 x 1189 mm, fonts embedded. Print at 100 % (actual size), no fit-to-page.
+- **Validation:** 18/18 poster gates, 530 evidence rows re-checked, 165 claim rows printed, 0 text overlaps across the
+  rendered page, all figure imagery at 300 ppi or more.
+- **QR codes (decoded from the 300 dpi render):** TRY IT (header, 87 mm) opens `/demo/`; INSPECT THE RECORD (panel 4,
+  40 mm symbol) opens `/r/`; CONNECT (panel 12, 40 mm symbol) opens `/use/`. All three are pages in `docs/`, served by
+  GitHub Pages from `main`. Scan each from 1 m on the proof before the event.
+- **Ememify (seal):** not signed yet. The build environment could not reach emem.dev. The pointer.v1 body for this
+  print is ready and reproducible offline: `python research/repro/v13/track/pointer_body.py <commit>` writes it (it
+  reproduces the published v13.0 body byte for byte). To seal, from a machine that reaches emem.dev: publish that body
+  with the poster key (`research/repro/v8/publish_note.py`), run `research/repro/v13/track/make_track_v13.py
+  <board_note_cid>`, publish the track, check it in ememdemo, then point `docs/r/` at the new track.
 
 ## Signed-track history
 
