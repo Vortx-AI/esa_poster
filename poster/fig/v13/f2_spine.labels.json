@@ -110,7 +110,7 @@
    "pt": 17
   },
   {
-   "text": "B acted on",
+   "text": "B declined to act on",
    "claim": "F2.heads",
    "x_mm": 690,
    "y_mm": 4.9,
@@ -124,8 +124,8 @@
    "pt": 17
   },
   {
-   "text": "no check reaches",
-   "claim": "F2.heads",
+   "text": "what is handed over?",
+   "claim": "O.84",
    "x_mm": 749.5,
    "y_mm": 11,
    "pt": 17
@@ -264,7 +264,7 @@
    "pt": 20
   },
   {
-   "text": "The Sentinel-2 L2A NDVI for the 10 m cell at Keylong, Lahaul…",
+   "text": "The Sentinel-2 L2A NDVI for the 10 m cell at Keylong, Laha…",
    "claim": "F2.snippets",
    "x_mm": 112,
    "y_mm": 31.8,
@@ -285,8 +285,8 @@
    "pt": 20
   },
   {
-   "text": "254 / 276",
-   "claim": "R5.A.pooled",
+   "text": "22 / 276",
+   "claim": "R5.A.declined",
    "x_mm": 690,
    "y_mm": 28.1,
    "pt": 48
@@ -299,7 +299,7 @@
    "pt": 20
   },
   {
-   "text": "{\"about\": {\"field\": \"Keylong, Lahaul (32.57126 N, 77.03448 E…",
+   "text": "{\"about\": {\"field\": \"Keylong, Lahaul (32.57126 N, 77.03448…",
    "claim": "F2.snippets",
    "x_mm": 112,
    "y_mm": 51.8,
@@ -320,8 +320,8 @@
    "pt": 20
   },
   {
-   "text": "164 / 276",
-   "claim": "R5.B.pooled",
+   "text": "112 / 276",
+   "claim": "R5.B.declined",
    "x_mm": 690,
    "y_mm": 48.1,
    "pt": 48
@@ -334,7 +334,7 @@
    "pt": 20
   },
   {
-   "text": "Field log, Keylong, Lahaul (32.57126 N, 77.03448 E), cell de…",
+   "text": "Field log, Keylong, Lahaul (32.57126 N, 77.03448 E), cell …",
    "claim": "F2.snippets",
    "x_mm": 112,
    "y_mm": 71.8,
@@ -355,8 +355,8 @@
    "pt": 20
   },
   {
-   "text": "220 / 276",
-   "claim": "R5.C.pooled",
+   "text": "56 / 276",
+   "claim": "R5.C.declined",
    "x_mm": 690,
    "y_mm": 68.1,
    "pt": 48
@@ -390,8 +390,8 @@
    "pt": 20
   },
   {
-   "text": "154 / 288",
-   "claim": "R5.D.pooled",
+   "text": "134 / 288",
+   "claim": "R5.D.declined",
    "x_mm": 690,
    "y_mm": 88.1,
    "pt": 48
@@ -404,7 +404,7 @@
    "pt": 20
   },
   {
-   "text": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67c…",
+   "text": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk6…",
    "claim": "O.cid",
    "x_mm": 114.5,
    "y_mm": 111.8,
@@ -420,106 +420,134 @@
   {
    "text": "resolve",
    "claim": "F2.chips",
-   "x_mm": 429.53,
+   "x_mm": 429.46,
    "y_mm": 103.92,
    "pt": 15
   },
   {
    "text": "re-hash",
    "claim": "F2.chips",
-   "x_mm": 455.26,
+   "x_mm": 455.04,
    "y_mm": 103.92,
    "pt": 15
   },
   {
    "text": "place / time / band",
    "claim": "F2.chips",
-   "x_mm": 495.22,
+   "x_mm": 495.38,
    "y_mm": 103.92,
    "pt": 15
   },
   {
    "text": "signature",
    "claim": "F2.chips",
-   "x_mm": 537.29,
+   "x_mm": 537.85,
    "y_mm": 103.92,
    "pt": 15
   },
   {
    "text": "log",
    "claim": "F2.chips",
-   "x_mm": 424.23,
+   "x_mm": 424.18,
    "y_mm": 111.48,
    "pt": 15
   },
   {
    "text": "recompute",
    "claim": "F2.chips",
-   "x_mm": 448.51,
+   "x_mm": 448.62,
    "y_mm": 111.48,
    "pt": 15
   },
   {
    "text": "source re-read",
    "claim": "F2.chips",
-   "x_mm": 487.16,
+   "x_mm": 487.5,
    "y_mm": 111.48,
    "pt": 15
   },
   {
-   "text": "0 / 300",
-   "claim": "R5.E.pooled",
+   "text": "300 / 300",
+   "claim": "R5.E.declined",
    "x_mm": 690,
    "y_mm": 108.1,
    "pt": 48
   },
   {
-   "text": "the entity meant (M17)",
-   "claim": "S.boundary_wall",
-   "x_mm": 711,
-   "y_mm": 30.5,
-   "pt": 20
-  },
-  {
-   "text": "sensor accuracy",
-   "claim": "S.boundary_wall",
-   "x_mm": 711,
-   "y_mm": 43.0,
-   "pt": 20
-  },
-  {
-   "text": "the decision",
-   "claim": "S.boundary_wall",
-   "x_mm": 711,
-   "y_mm": 55.5,
-   "pt": 20
-  },
-  {
-   "text": "GENUINE CONTROLS",
-   "claim": "V7.flow",
-   "x_mm": 711,
-   "y_mm": 80,
+   "text": "REFERENCE",
+   "claim": "O.84",
+   "x_mm": 710,
+   "y_mm": 27.3,
    "pt": 14
   },
   {
-   "text": "71 / 72",
-   "claim": "V6.controls",
-   "x_mm": 711,
-   "y_mm": 93,
-   "pt": 38
+   "text": "84 characters",
+   "claim": "O.84",
+   "x_mm": 710,
+   "y_mm": 34.8,
+   "pt": 22
   },
   {
-   "text": "expected decisions",
-   "claim": "V7.flow",
-   "x_mm": 711,
-   "y_mm": 105,
-   "pt": 17
+   "text": "record CID = BLAKE3(record)",
+   "claim": "O.cid",
+   "x_mm": 710,
+   "y_mm": 41.8,
+   "pt": 15
   },
   {
-   "text": "checked reference · pooled Claude",
-   "claim": "V7.flow",
-   "x_mm": 711,
-   "y_mm": 112,
+   "text": "oj5ceccile62uvm6hedpuk67cj",
+   "claim": "O.cid",
+   "x_mm": 710,
+   "y_mm": 48.0,
+   "pt": 14
+  },
+  {
+   "text": "t2pqc7z33mtsyuffgakxbxmyaa",
+   "claim": "O.cid",
+   "x_mm": 710,
+   "y_mm": 54.2,
+   "pt": 14
+  },
+  {
+   "text": "RECORD · 1,115 B",
+   "claim": "O.1115",
+   "x_mm": 710,
+   "y_mm": 66.8,
+   "pt": 16
+  },
+  {
+   "text": "fetch + re-hash",
+   "claim": "O.1115",
+   "x_mm": 710,
+   "y_mm": 72.9,
+   "pt": 14
+  },
+  {
+   "text": "ATTESTATION + LOG",
+   "claim": "O.batch",
+   "x_mm": 710,
+   "y_mm": 86.1,
+   "pt": 16
+  },
+  {
+   "text": "signature + inclusion",
+   "claim": "O.batch",
+   "x_mm": 710,
+   "y_mm": 92.2,
+   "pt": 14
+  },
+  {
+   "text": "SOURCE FILES",
+   "claim": "O.nohash",
+   "x_mm": 710,
+   "y_mm": 105.4,
+   "pt": 16
+  },
+  {
+   "text": "named, not hashed",
+   "claim": "O.nohash",
+   "x_mm": 710,
+   "y_mm": 111.5,
    "pt": 14
   }
  ]

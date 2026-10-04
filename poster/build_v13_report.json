@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T09:05:39+00:00",
+ "built_utc": "2026-10-04T09:12:50+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -42,7 +42,7 @@
    "file": "poster/fig/v13/f2_spine.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T08:39:53"
+   "mtime": "2026-10-04T09:11:23"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -115,7 +115,7 @@
    "mtime": "2026-10-04T08:39:53"
   }
  },
- "figure_text_tokens": 1771,
+ "figure_text_tokens": 1780,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -164,7 +164,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (838 text runs)"
+    "every printed code point is in the face that sets it (842 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -188,7 +188,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "164 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "168 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -200,7 +200,7 @@
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "428 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "433 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -243,8 +243,8 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 772 words containing a letter, 791 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
-    "  1 · Earth to agents: 79 tokens (section C: 79)",
+    "running text: 775 words containing a letter, 795 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 83 tokens (section C: 83)",
     "  10 · Token family: 55 tokens (section C: 55)",
     "  11 · Satellite execution evidence: 38 tokens (section C: 38)",
     "  12 · Community routes: 24 tokens (section C: 24)",
@@ -285,8 +285,8 @@
  },
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
-  "In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.",
-  "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026. Pooled results above are the Claude runs; Qwen is reported separately. Qwen2.5-7B: prose 22 of 23; checked reference 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.",
+  "In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).",
+  "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026. Pooled results above are the Claude runs; Qwen is reported separately. Qwen2.5-7B acted on corruptions with prose 22 of 23 times; with the checked reference, 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.",
   "Agent bars: 12 runs per item, across 23 items. JSON and an opaque id caught some changes from their fields. In the live pre-fix record case, agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
@@ -462,11 +462,16 @@
   "Q.inspect_record",
   "Q.view_demo",
   "Q.view_demo.caption",
+  "R5.A.declined",
   "R5.A.pooled",
   "R5.A.qwen7b",
+  "R5.B.declined",
   "R5.B.pooled",
+  "R5.C.declined",
   "R5.C.pooled",
+  "R5.D.declined",
   "R5.D.pooled",
+  "R5.E.declined",
   "R5.E.pooled",
   "R5.E.qwen7b",
   "R5.F6.scope",
@@ -488,7 +493,6 @@
   "S.R1.B",
   "S.R1.C",
   "S.R1.I",
-  "S.boundary_wall",
   "S.threshold",
   "SAT.gate",
   "SAT.run",
@@ -538,7 +542,7 @@
   "X.p123"
  ],
  "figure_numbers_checked": 337,
- "rows_rechecked": 428,
+ "rows_rechecked": 433,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
   "A13.products",
@@ -573,7 +577,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 772,
-  "running_tokens": 791
+  "running_words_with_letter": 775,
+  "running_tokens": 795
  }
 }

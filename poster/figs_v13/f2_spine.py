@@ -237,7 +237,7 @@ def main():
     T(ax, 112, 11, "handoff", "F2.heads", **hk)
     T(ax, 355, 11, "relay", "F2.heads", ha="center", **hk)
     T(ax, 400, 11, "Agent B", "F2.heads", **hk)
-    T(ax, 690, 4.9, "B acted on", "F2.heads", ha="right", **hk)
+    T(ax, 690, 4.9, "B declined to act on" if MODE == "R5" else "B acted on", "F2.heads", ha="right", **hk)
     T(ax, 690, 11, "corrupted evidence", "F2.heads", ha="right", **hk)
     T(ax, 698 + 103 / 2, 11, "what is handed over?", "O.84", ha="center", **hk)
     mode = "deterministic receiver, no model" if MODE == "fallback" else "agents, pooled Claude"
@@ -322,11 +322,13 @@ def main():
         else:
             T(ax, 418, cy, does, "F2.actions", fontsize=PT["label"], color=C["ink"], va="center", zorder=4)
         # outcome numeral
-        col = C["emem"] if k == 0 else C["harm"]
+        # v13.10: the outcome reads as protection (corruptions declined = applicable - acted on); higher is better
+        dk = nn - k if MODE == "R5" else k
+        col = C["emem"] if (dk == nn if MODE == "R5" else k == 0) else C["harm"]
         r1id = {"prose": "S.R1.A", "json": "S.R1.B", "opaque": "S.R1.C", "emem": "S.R1.I"}
-        r5id = {"prose": "R5.A.pooled", "json": "R5.B.pooled", "rag": "R5.C.pooled", "opaque": "R5.D.pooled",
-                "emem": "R5.E.pooled"}
-        T(ax, 690, cy + 0.6, fmt_frac(k, nn), r1id[key] if MODE == "fallback" else r5id[key],
+        r5id = {"prose": "R5.A.declined", "json": "R5.B.declined", "rag": "R5.C.declined", "opaque": "R5.D.declined",
+                "emem": "R5.E.declined"}
+        T(ax, 690, cy + 0.6, fmt_frac(dk, nn), r1id[key] if MODE == "fallback" else r5id[key],
           fontsize=PT["numeral"] if lh >= 20 else 48, fontweight=700, color=col, ha="right", va="center", zorder=4)
     # The former boundary wall now answers the handoff question directly.
     # It is deliberately compact: the full decoded object is restored as panel 4.

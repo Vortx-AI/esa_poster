@@ -57,7 +57,8 @@
     "Agent B",
     "B acted on",
     "corrupted evidence",
-    "no check reaches"
+    "no check reaches",
+    "B declined to act on"
    ],
    "status": "SPEC",
    "layer": "n/a",

@@ -12,7 +12,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > An Earth observation that survives an agent handoff.
 
-> EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
+> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
 
 > Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
 
@@ -28,7 +28,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
 
-> In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
+> In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).
 
 > Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).
 

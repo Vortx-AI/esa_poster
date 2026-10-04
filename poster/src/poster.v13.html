@@ -12,7 +12,7 @@
 <div class="blk headtext" data-block="header_text" style="--x:0;--y:0;--w:627.5;--h:188">
   <h1 class="title rt" data-role="title" data-claim="H.title">EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol<br>for AI Agents over Foundation-Model Embeddings</h1>
   <p class="hero rt" data-role="hero" data-claim="U.hero">An Earth observation that<br>survives an agent <span class="hl">handoff.</span></p>
-  <p class="subhero rt" data-role="subhero" data-claim="V8.language">EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.</p>
+  <p class="subhero rt" data-role="subhero" data-claim="V8.language">emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.</p>
   <div class="lead">
     <p class="leadq rt" data-role="question">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</p>
     <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
@@ -40,13 +40,13 @@
   <div class="fig" data-figslot="f2_spine" style="--fw:801;--fh:118"><!--fig:f2_spine--></div>
   <div class="spinefoot">
     <div class="spineleft">
-    <p class="agentstrip rt" data-mode="r5" data-role="take" data-claim="R5.A.pooled R5.E.pooled">In the controlled handoff test, prose led agents to act on {R5.A.pooled.false_accept} corruptions; a reference with explicit checking instructions, {R5.E.pooled.false_accept}.</p>
+    <p class="agentstrip rt" data-mode="r5" data-role="take" data-claim="R5.E.declined R5.A.declined R5.A.pooled">In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).</p>
     <p class="agentstrip rt" data-mode="r1" data-role="take" data-claim="S.R1.A S.R1.I">In our suite, the deterministic receiver accepted 15 of 15 corruptions carried by prose and 0 of 16 with the checked reference.</p>
     <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).</p>
     </div>
     <div class="scope" data-mode="r5">
       <p data-role="scope" data-claim="R5.models R5.dates">{R5.models}; {R5.dates}. Pooled results above are the Claude runs; Qwen is reported separately.</p>
-      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b S.threshold">Qwen2.5-7B: prose 22 of 23; checked reference 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.</p>
+      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b S.threshold">Qwen2.5-7B acted on corruptions with prose 22 of 23 times; with the checked reference, 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.</p>
     </div>
     <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope S.threshold">Deterministic receiver, one record and one band. The 0.4705 threshold makes rounding change the decision. Token-copy mutation M7 has no prose form.</p>
   </div>
