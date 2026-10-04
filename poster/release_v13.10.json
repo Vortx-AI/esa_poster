@@ -1,62 +1,62 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "ea33ecf40fe224a62c3eb625c5346e039017fc78",
+ "base_commit": "4fe45a3d792acd660ea3d8424c54dac99fb30108",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2416338,
-   "sha256": "53b2d1dde6d56e62583ddc19b3dbc7d7edbecacb3e32903e06a78b3e967e4546"
+   "bytes": 2415613,
+   "sha256": "f9579427005b0abfdc0f4a57f4122b110630822f89dd211a5f7ddc46e3f59370"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4703747,
-   "sha256": "e185f90669e7d2957f3087669b690bdbbd867a61a8f701100c5956b716a1232a"
+   "bytes": 4681735,
+   "sha256": "07b6b9a0eda5b1a691a3080c01c33fa3716b76ac302bb90ceb5d716da61bd04c"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17149142,
-   "sha256": "519843b10843670e8bae5d8e8aab86289d95ba9f4949967376956354ca11c54d"
+   "bytes": 17031732,
+   "sha256": "ac19a3020e2823db7c797e8297cc33c57fb0ee368afb1689f580498a22b7048e"
   },
   "poster/poster.html": {
-   "bytes": 3325595,
-   "sha256": "a3add462770f28d991d5439384079d060b7269fe6758ef3fb2fbc3d0221bed71"
+   "bytes": 3325400,
+   "sha256": "2f74e048db8d720187c59090aad1ac6f5f43ebadac7875f1290dfcda86b39790"
   },
   "poster/build_v13_report.json": {
-   "bytes": 26409,
-   "sha256": "6b4d6ba4ab28d317fa5c0a23473ce09b6f472eaf9cf4238e0a5fbd2c5e9b5298"
+   "bytes": 26351,
+   "sha256": "62206255e53b91cd887b2a2eee93d08997365af81ececf6d37a2d041ee21b7be"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 24503,
-   "sha256": "5527f795cfd36d37211b3dd252846f33076d8646eceb772d8f1243fb7dd14bdc"
+   "bytes": 24206,
+   "sha256": "a4955f6230784b73193c9c4dde73bf0bf462f046e3e8296e03f15cc7d4f2885a"
   },
   "poster/src/poster.v13.css": {
-   "bytes": 15810,
-   "sha256": "bd2e0fa43460550e2c6797cab925f43fb4fc028c79eddf364c7ed8d3417a96b0"
+   "bytes": 15912,
+   "sha256": "27d8838207cdac202efa38abf26d269578bd8a06e5111b03aeb9d4e4ad5229d2"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2416352,
-   "sha256": "d9940f9526512b2831c627e5876d8a04979130caed7dc823ff731e5fb26be0a4"
+   "bytes": 2415627,
+   "sha256": "826ca5d5f3a71de2672b951daff94ad14772b926c09f7f72693581e965581a7a"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4709705,
-   "sha256": "a0011b8ceb051f303d1a823853e6d88e2b3a45c60ab95cda4c68fab32e0a99b5"
+   "bytes": 4687924,
+   "sha256": "4ebb1781f53666d421bcbaf16c1f68240b25abbc50f59b4a87366479b28e6533"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 17151489,
-   "sha256": "e5239dabf43a7b24adf9ee6be041bcf0819f5f870effc645de1e56999a133c79"
+   "bytes": 17034023,
+   "sha256": "e94e7b040d9a03f6352adc25da8c9d2a529b08022c0a7738e715584147819b35"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3325595,
-   "sha256": "a4b1529ac910049e4fa12c965863c09c78d7038471bbf72397e55f3352858da5"
+   "bytes": 3325400,
+   "sha256": "2f0b6cef1aeae98395303ce8fe164c4f401191be53b10ef3871ef9df4a3ef5f7"
   },
   "poster/build_v13_report-300of300.json": {
-   "bytes": 26527,
-   "sha256": "e6780598f0a30181e70e1a6f8a0a8a5fcedeff6de951f773f09ffa97e1869913"
+   "bytes": 26469,
+   "sha256": "c084138cccc27cb2b6c636ad1d43979d7649faf30c1767d79e6ff0f6c4092a7a"
   }
  },
- "pdf_blake3": "5d455460a8e77d1df56bbd130e4656ec37db4c03d76b1195b2b8e09d3109e5a6",
- "pointer_body": "research/repro/v13/track/board_body_ea33ecf.md",
+ "pdf_blake3": "d052f4bf8116f5ff80ea10aae2e0451784e0961d32d7612e206468b4a8cb9268",
+ "pointer_body": "research/repro/v13/track/board_body_4fe45a3.md",
  "rows_rechecked": 557,
- "claims_printed": 182,
+ "claims_printed": 178,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
   "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
@@ -71,8 +71,8 @@
   "top_text": 9.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "5743332356a67f07974117ecdf8bdf133beaeadebc7283a599900d20b6abe800",
- "pointer_body_300of300": "research/repro/v13/track/board_body_ea33ecf-300of300.md",
+ "pdf_blake3_300of300": "adf191dfd09c67e5aff5d0012f70b3da7846e27f4e8f55c227fbb40022794a0d",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_4fe45a3-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
@@ -120,13 +120,14 @@
   }
  },
  "eo_review": "research/v13/26_V13_10_REVIEW.md section 10",
- "claims_printed_300of300": 184,
+ "claims_printed_300of300": 180,
  "versions": "no service or code commit on the face (authors' rule, 4 Oct 2026); the claims rows keep them; face_hygiene fails on a commit hash",
  "final_pass": "research/v13/26_V13_10_REVIEW.md section 12",
  "byline": "no DOIs on the face (authors, 4 Oct 2026); panel 12 and the QR codes carry the routes",
  "scientific_wording": "research/v13/26_V13_10_REVIEW.md section 13",
  "running_words": {
-  "running_words_with_letter": 854,
-  "running_tokens": 878
- }
+  "running_words_with_letter": 830,
+  "running_tokens": 849
+ },
+ "panel12": "client-path line moved to /use/ (research/v13/26_V13_10_REVIEW.md section 14)"
 }
