@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T18:24:31+00:00",
+ "built_utc": "2026-10-04T19:13:07+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -158,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (834 text runs)"
+    "every printed code point is in the face that sets it (837 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -237,7 +237,7 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 803 words containing a letter, 822 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
+    "running text: 799 words containing a letter, 818 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
     "  1 · Earth to agents: 105 tokens (section C: 105)",
     "  10 · Token family: 53 tokens (section C: 53)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
@@ -252,7 +252,7 @@
     "  Complete observation and memory model: 39 tokens (section C: 41)",
     "  Contribution and prior art: 53 tokens (section C: 53)",
     "  Full trace: 32 tokens (section C: 34)",
-    "  Header: 166 tokens (section C: 167)",
+    "  Header: 162 tokens (section C: 163)",
     "  Memory operations: 31 tokens (section C: 31)"
    ]
   }
@@ -583,7 +583,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 803,
-  "running_tokens": 822
+  "running_words_with_letter": 799,
+  "running_tokens": 818
  }
 }

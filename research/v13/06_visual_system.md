@@ -175,6 +175,9 @@ Colour encodes **evidence state only**. Agents, systems and sections never get a
 | `ink2` / `muted` / `rule` | secondary text / labels / hairlines | `#4A4D55` / `#7A7D85` / `#D5D6DA` | | 0.58 / 0.55 / 1.02 | 8.45 / 4.12 / 1.45 | `muted` only ≥ 17 pt |
 | `navy` | header band | `#203045` | 100 83 46 55 (TAC 284 %) | 1.69 | 13.37 (white on it) | the one dark area; v12's `#0E1A2B` is out of gamut (ΔE00 8.33) |
 | `paper` | page | `#FFFFFF` | 0 0 0 0 | 0 | | v12's `#FBFBF8` prints as a 1–2 % tint over 1 m²; use paper white |
+| `brand` | the emem identity: the wordmark's dash and the tagline's "decode with AI." (added 4 Oct 2026) | `#E86424` | not measured (`palette_check.py` predates it) | | 3.34; 4.00 on `navy` | the navy header only: the wordmark and the tagline, text ≥ 24 pt; never evidence state |
+
+`brand` is the one hue that does not encode evidence state. It marks the emem identity (the wordmark's drawn dash and the tagline's decode phrase) and stays on the navy header. It shares harm's hue family (CIEDE2000 9.1 from `harm`, 15.4 from `harm-text`, computed from sRGB), so it never appears on white panels, in figures or in data.
 
 Verification-depth ramp (ordinal, one hue, deeper toward the source = darker), used for check chips, the ladder and the
 failure stair: L0 `#8FB5E0` · L1 `#5B8FCB` · L2 `#0F5FA8` · L3 `#0B4A86`. The dataviz validator in `--ordinal` mode passes

@@ -23,7 +23,7 @@
   --emem:#0F5FA8;--emem-tint:#DCE8F5;--emem-light:#7FB3E6;
   --harm:#D2481E;--harm-text:#B5401A;--harm-tint:#FADDD2;
   --incident:#E8A317;--incident-text:#8A5A00;--oos:#9C9A92;--oos-bg:#F1F0EC;
-  --ink:#222428;--ink2:#4A4D55;--muted:#7A7D85;--rule:#D5D6DA;--navy:#203045;--paper:#FFFFFF;
+  --ink:#222428;--ink2:#4A4D55;--muted:#7A7D85;--rule:#D5D6DA;--navy:#203045;--brand:#E86424;--paper:#FFFFFF;
   --L0:#8FB5E0;--L1:#5B8FCB;--L2:#0F5FA8;--L3:#0B4A86;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -77,7 +77,7 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .headtext .drift b{color:#FFFFFF;font-weight:600}
 .headtext .drift .dz{font-weight:500;color:var(--emem-light)}
 .headtext .drift sub{font-size:14.2pt;line-height:0;vertical-align:-0.25em}
-.headtext .byline{position:absolute;left:20mm;top:171mm;width:600mm;font-size:17pt;line-height:1.24;color:rgba(255,255,255,.85)}
+.headtext .byline{position:absolute;left:20mm;top:169.5mm;width:600mm;font-size:17pt;line-height:1.24;color:rgba(255,255,255,.85)}
 .headtext .byline b{color:#FFFFFF;font-weight:600}
 .headimg{overflow:visible;background:var(--navy)}
 .headimg .scene{position:absolute;left:0;top:0;width:calc(var(--fw)*1mm);height:calc(var(--fh)*1mm)}
@@ -215,6 +215,10 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .headtext .leada b{font-weight:600}
 .headtext .leadtrace{font-size:14pt;line-height:1.2;font-weight:600;color:var(--emem-light);margin-top:1.2mm;letter-spacing:.01em}
 .headtext .bridge .orbit{color:var(--emem-light)}
+/* identity marks only (the wordmark's dash and the tagline's decode phrase); data never uses the brand orange */
+.headtext .bridge .brand{color:var(--brand)}
+.headtext .wordmark{position:absolute;right:7.5mm;top:166.85mm;display:flex;align-items:baseline;font-size:52pt;line-height:1;font-weight:700;letter-spacing:-.015em;color:#FFFFFF;white-space:nowrap}
+.headtext .wordmark i{display:inline-block;width:.9em;height:.12em;margin:0 .07em;border-radius:.06em;background:var(--brand);transform:translateY(-.2em)}
 .spinefoot .spineleft{flex:none;width:468mm}
 .spinefoot .spineleft .agentstrip{width:auto;line-height:1.04}
 .spinefoot .orbitline{font-size:17pt;line-height:1.05;color:var(--emem);font-weight:500;margin-top:.2mm}
@@ -269,11 +273,12 @@ h2.steps>span:last-child{background:var(--emem);color:#FFFFFF;border-color:var(-
     <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes satellite observations, raw or derived, <b>addressable by place, band and time</b>. Each is a record named by the <b>BLAKE3 hash of its bytes</b> and signed in a batch. The exact evidence A cites survives a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.</p>
     <p class="leadtrace steps" data-claim="TRACE.chain"><b>Trace</b><span>token</span><span>record bytes</span><span>cell</span><span>pixel</span><span>receipt</span><span>log</span><span>key</span></p>
   </div>
-  <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Design goal: encode in orbit, decode in AI’s reasoning with emem.</span></p>
+  <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Design goal: encode in orbit, <span class="brand">decode with AI.</span></span></p>
   <div class="byline" data-role="byline" data-claim="H.byline H.session">
     <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)</div>
     <div>Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026</div>
   </div>
+  <div class="wordmark" data-role="brand" role="img" aria-label="emem"><span>em</span><i aria-hidden="true"></i><span>em</span></div>
 </div>
 <div class="blk headimg" data-bleed="right" data-block="header_image" style="--x:627.5;--y:0;--w:213.5;--h:188">
   <div class="scene" data-figslot="f1_scene" style="--fw:216.5;--fh:188.0"><svg data-fig="f1_scene" xmlns:xlink="http://www.w3.org/1999/xlink" width="613.700787pt" height="532.913386pt" viewBox="0 0 613.700787 532.913386" xmlns="http://www.w3.org/2000/svg" version="1.1">

@@ -2,7 +2,7 @@
 
 This repository holds the A0 poster "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol" (the programme lists it
 with "for AI Agents over Foundation-Model Embeddings"; Agentic AI for Earth Observation, Berlin, Poster Session 1,
-19 Oct 2026), and all the research behind it. The current board is v13.10 (v13.9 plus the recovered v10 lead, memory-as-coded box and full trace, handoff emphasis and the orbit design lines; see `poster/src/poster.v13.layout.json` v13.10_notes).
+19 Oct 2026), and all the research behind it. The current board is v13.10 (v13.9 plus the recovered v10 lead, memory-as-coded box and full trace, handoff emphasis, the orbit design lines and the emem wordmark; see `poster/src/poster.v13.layout.json` v13.10_notes).
 
 ## Start here
 
@@ -28,7 +28,7 @@ python research/repro/v11/mutation_suite.py   # R1 alone, offline
 
 Edit `poster/src/poster.v13.html` and `poster/src/poster.v13.css` (never `poster/poster.html`, which is generated).
 The printed face uses three QR tasks (Try it, Inspect, Connect & Reproduce); all six web routes remain. Connect opens /use/, which links the methods and tests.
-Colours: `poster/src/tokens.json`. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
+Colours: `poster/src/tokens.json`. The `brand` orange marks the emem identity (the wordmark's dash, the tagline's "decode with AI.") on the navy header only, never data: `harm`, a near hue, means corrupted evidence. The wordmark's dash is drawn in CSS because the face bans the em dash character. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
 Deliberate departures from the brief's block rectangles, each with its reason: `poster/src/poster.v13.layout.json`.
 Two print variants of the handoff result (`data-variant="0of300"` / `"300of300"`): 0of300 prints the pre-registered
 false acceptance (B acted on corrupted evidence, 0 of 300); 300of300 prints the same trials as "did not act on" with the

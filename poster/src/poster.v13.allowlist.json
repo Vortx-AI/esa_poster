@@ -371,8 +371,8 @@
     },
     {
       "word": "deployment-wording",
-      "text_sha": "792f238de2530891cd8480c72e1f3f043b6280cb435e206497fbe51b9d7309f8",
-      "sentence": "Design goal: encode in orbit, decode in AI’s reasoning with emem.",
+      "text_sha": "8a319bde59442cb43e37c0b34ea845d96cd904ea86271fc3a82048118abb5c3f",
+      "sentence": "Design goal: encode in orbit, decode with AI.",
       "where": "html:header_text:bridge",
       "evidence": "ORBIT.tagline",
       "reason": "stated as a design goal (4 Oct 2026); panel 1 and panel 11 print the reference-harness scope (no spacecraft enrolled)"
