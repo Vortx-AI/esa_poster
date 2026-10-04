@@ -23,16 +23,18 @@ def read_manifest():
 
 def labels_for(rows):
     labels = []
-    def add(text, x, y, pt, weight=400, color='ink', ids=(), claim='CM.routes'):
+    def add(text, x, y, pt, weight=400, color='ink', ids=(), claim='CM.routes', style='normal'):
         labels.append(dict(text=text, x=x, y=y, pt=pt, weight=weight, color=color,
-                           integrations=list(ids), claim=claim))
+                           integrations=list(ids), claim=claim, style=style))
     cards = sorted((r for r in rows if r.get('panel', {}).get('kind') == 'card'), key=lambda r: r['panel']['order'])
     for i, r in enumerate(cards):
-        # v13.10: each card carries the real listing as a cropped screenshot (research/v13/evidence/listings/);
-        # the printed copy below it is one name line and one action line
-        p = r['panel']; x = i * 146 + 3
-        add(f"{p['label']} · {p['mechanism']}", x, 28.8, 17, 600, 'emem' if r['status'] != 'REGISTRY' else 'ink', [r['id']])
-        add(p['action'], x, 34.6, 14, 400, 'ink2', [r['id']])
+        # v13.10: each card quotes the listing's own words (verbatim from the screenshots in
+        # research/v13/evidence/listings/, which stay as evidence), then the action
+        p = r['panel']; x = i * 146 + 4
+        add(f"{p['label']} · {p['mechanism']}", x, 6.2, 20, 600, 'emem' if r['status'] != 'REGISTRY' else 'ink', [r['id']])
+        for k, q in enumerate(p.get('quote', [])):
+            add(q, x, 15.0 + 6.6 * k, 17, 400, 'ink', [r['id']], style='italic')
+        add(p['action'], x, 31.6, 14, 400, 'ink2', [r['id']])
     for group, title, x in GROUPS:
         add(title, x, 42.8, 17, 600, 'emem')
         for line in (0, 1, 2):

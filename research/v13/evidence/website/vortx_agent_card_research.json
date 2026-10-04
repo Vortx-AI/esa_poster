@@ -1,0 +1,15 @@
+{
+  "source": "github.com/Vortx-AI/vortxwebsite @ e6251066b5bdaf11f6570f53124d14a79c1c29bd, file .well-known/agent-card.json (served at https://vortx.ai/.well-known/agent-card.json)",
+  "copied": "2026-10-04",
+  "x-research": {
+    "whitepaper": {
+      "title": "emem: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings",
+      "doi": "https://doi.org/10.5281/zenodo.20706317"
+    },
+    "companionStudy": {
+      "doi": "https://doi.org/10.5281/zenodo.20706893"
+    },
+    "openModels": "https://huggingface.co/avijeetsingh1608",
+    "note": "If a paper and a live endpoint disagree, trust the endpoint and report it."
+  }
+}

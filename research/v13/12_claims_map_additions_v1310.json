@@ -4421,6 +4421,32 @@
       "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
       "tier": "30cm",
       "checked": true
+    },
+    {
+      "id": "H.doi",
+      "block": "v13.10 header byline",
+      "print": [
+        "whitepaper doi.org/10.5281/zenodo.20706317 · study doi.org/10.5281/zenodo.20706893"
+      ],
+      "status": "EXTERNAL",
+      "layer": "n/a",
+      "source": {
+        "files": [
+          "v13/evidence/website/vortx_agent_card_research.json",
+          "v13/00_v11_review_findings.json"
+        ],
+        "pointer": "vortx.ai agent card x-research: whitepaper (the poster's exact title) = 10.5281/zenodo.20706317, companion study = 10.5281/zenodo.20706893; the v11 review resolved 20706893 (v0.1.0, 2026-06-15, CC-BY-4.0, Kumari and Singh)"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/website/vortx_agent_card_research.json",
+        "arg": "https://doi.org/10.5281/zenodo.20706317"
+      },
+      "note": "emem's CITATION.cff names 20706893 (titled 'emem: A research on ...') as its preferred citation; the board prints both, labelled as the authors' site labels them. 20706317 was not resolved from this build environment (doi.org blocked).",
+      "tier": "1m",
+      "checked": true
     }
   ]
 }
