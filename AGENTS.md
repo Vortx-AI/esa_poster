@@ -27,6 +27,9 @@ python research/repro/v11/mutation_suite.py   # R1 alone, offline
 ```
 
 Edit `poster/src/poster.v13.html` and `poster/src/poster.v13.css` (never `poster/poster.html`, which is generated).
+`docs/` is deployed to GitHub Pages as committed. Its pages were edited by hand in v13.10; `tools/site/site.mjs` predates
+those edits (it still says 24 corruptions), so do not regenerate `docs/` with it before porting them. Visitor pages state
+results, not revision history.
 The printed face uses three QR tasks (Try it, Inspect, Connect & Reproduce); all six web routes remain. Connect opens /use/, which links the methods and tests.
 Colours: `poster/src/tokens.json`. The `brand` orange marks the emem identity (the wordmark's dash, the tagline's "decode with AI.") on the navy header only, never data: `harm`, a near hue, means corrupted evidence. The wordmark's dash is drawn in CSS because the face bans the em dash character. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
 Deliberate departures from the brief's block rectangles, each with its reason: `poster/src/poster.v13.layout.json`.
@@ -48,7 +51,8 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
 
 ## Rules the build enforces (it fails, never warns)
 
-- one page, 841 × 1189 mm; content ends at least 2 mm above the footer; no box overflows its block or column;
+- one page, 841 × 1189 mm; content ends at least 2 mm above the footer; no box overflows its block or column; no figure
+  text runs past its figure's edge (matplotlib measures Plex about 3 % narrower than Chromium sets it, so wrap with margin);
 - no text below 14 pt (computed in the browser, figure SVG included); kicker, mechanism and take lines at 24 pt, captions 17;
 - no em or en dashes, no tell words, no banned word (report 10 section 5.3) without an allowlist entry; no board version
   or commit hash on the face;

@@ -261,16 +261,16 @@ for k in range(N):
                            ec="none", zorder=3))
 XR = XC + 20 * PITCH + 4.0
 T(XR, WY + 3.0, f"{K} of {N}", 30, weight=700, color=C["harm"], claim="W.prev")
-T(XR, WY + 11.6, "sampled pre-fix records", 15, color=C["ink"], claim="W.prev")
+T(XR, WY + 11.6, "records read by rounding", 15, color=C["ink"], claim="W.prev")
 T(XR, WY + 17.6, "carry a neighbour's values", 15, color=C["ink"], claim="W.prev")
 T(XR, WY + 23.4, f"Wilson 95 %: {wlo * 100:.0f} to {whi * 100:.0f} %", 14, color=C["ink2"], claim="W.prev")
 ax.add_patch(Rectangle((XR, WY + 31.4 - SQ / 2), SQ, SQ, fc=C["unaffected"], ec=C["rule"], lw=0.3 / PTMM, zorder=3))
-T(XR + SQ + 1.8, WY + 31.4, f"{SAME}: both rules agree", 14, color=C["ink2"], claim="F7.same")
+T(XR + SQ + 1.8, WY + 31.4, f"{SAME}: round and floor agree", 14, color=C["ink2"], claim="F7.same")
 assert f"{wlo * 100:.0f} to {whi * 100:.0f}" == "75 to 86"
 
 # ------------------------------------------------------------------ bottom-left: the error distribution (n 121: indices.* records of the 162 where the rules differ)
 y0 = SC_H + 3.4
-T(0.3, y0, "spectral-index error where the rules differ", 14, color=C["ink2"], claim="W.err")   # the 121 are the index-band records of the 162 (41 reflectance bands excluded)
+T(0.3, y0, "spectral-index error, round vs floor", 14, color=C["ink2"], claim="W.err")   # the 121 are the index-band records of the 162 (41 reflectance bands excluded)
 t = T(SC_W, y0, f"n {E['n']}", 14, color=C["ink2"], ha="right", claim="W.err")
 LMIN, LMAX = -5.0, math.log10(0.5)          # log axis: errors span four decades
 assert ERR[0] > 10 ** LMIN and ERR[-1] < 10 ** LMAX
@@ -313,11 +313,12 @@ n_ro = len(RO["lossyear"])
 ly_changed = sum(r["floor"] != r["round"] for r in RO["lossyear"])
 flag = lambda rule: {i for i, (l, g) in enumerate(zip(RO["lossyear"], RO["gfc2020"])) if g[rule] == 1 and l[rule] > 20}
 assert (n_ro, ly_changed) == (100, 7) and flag("floor") == flag("round"), "no EUDR flag changed"
-scope = (f"Sample: {N} pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; "
-         f"{pre['providers']['E84']} Element84, {pre['providers']['PC']} Planetary Computer. After the fix, "
-         f"{post['matches_round_not_floor']} of {post['n']} (Planetary Computer, two days; not a matched sample). On a {n_ro}-point Rondônia "
-         f"grid the old rule changed {ly_changed} loss years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.")
-lines = wrap(scope, W - XS - 5.0, 14)
+scope = (f"Sample: {N} records from emem.dev's public channel, one per cell, seeded ({pre['providers']['E84']} Element84, "
+         f"{pre['providers']['PC']} Planetary Computer), read with a rounded pixel position; GDAL floors it. With floor, "
+         f"{post['matches_round_not_floor']} of {post['n']} (Planetary Computer, two days; not a matched sample). On a {n_ro}-point "
+         f"Rondônia grid, rounding changed {ly_changed} loss years and no EUDR flag.")
+# 12 mm margin: Chromium sets Plex about 3 % wider than matplotlib measures it, and the slot clips at the figure edge
+lines = wrap(scope, W - XS - 12.0, 14)
 assert len(lines) <= 3, lines
 for k, ln in enumerate(lines):
     T(XS, yr + 6.4 + k * 5.4, ln, 14, color=C["ink2"], claim="F7.scope")

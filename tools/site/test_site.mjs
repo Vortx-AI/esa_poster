@@ -76,8 +76,8 @@ async function simplePage(name, rel, fn) {
 // ---- landing
 await simplePage('landing', '', async (page) => {
   const ctas = await page.$$eval('a.cta', (as) => as.map((a) => [a.querySelector('b').textContent.replace(' →', ''), a.getAttribute('href')]));
-  const want = [['TRY IT', './demo/'], ['INSPECT', './r/'], ['REPRODUCE', './methods/']];
-  check(JSON.stringify(ctas) === JSON.stringify(want), 'landing: the three primary CTAs differ: ' + JSON.stringify(ctas));
+  const want = [['TRY IT', './demo/'], ['INSPECT', './r/'], ['CONNECT', './use/'], ['REPRODUCE', './methods/']];
+  check(JSON.stringify(ctas) === JSON.stringify(want), 'landing: the primary CTAs differ: ' + JSON.stringify(ctas));
   const h1 = await page.textContent('h1'); check(h1 === 'An Earth observation that survives an agent handoff.', 'landing: hero sentence');
   return { ctas };
 });
@@ -159,7 +159,7 @@ await demo('demo_offline', '?offline', { offline: true });
 // ---- the other pages
 await simplePage('record', 'r/', async (page) => {
   const t = await page.evaluate(() => document.body.innerText);
-  check(t.includes('BOARD TRACK') && t.includes('no hash') && t.includes('No signature of its own') && t.includes('oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa'), 'record: a required statement is missing');
+  check(t.includes('Layers, as in the methods') && t.includes('no hash') && t.includes('No signature of its own') && t.includes('oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa'), 'record: a required statement is missing');
   return { rows: await page.$$eval('tbody tr', (r) => r.length) };
 });
 await simplePage('test', 'test/', async (page) => { const t = await page.evaluate(() => document.body.innerText); check(t.includes('mutation_suite.py') && t.includes('research/repro/v13/r5') && t.includes('trace_fact.py') && t.includes('verify_bundle.py'), 'test: a command is missing'); return {}; });

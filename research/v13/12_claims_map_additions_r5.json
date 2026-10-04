@@ -10476,7 +10476,7 @@
     "2 of 4",
     "0 of 4",
     "Live pre-fix record: agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, 0 of 4 with a source re-read.",
-    "On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
+    "On panel 5’s real record, read live, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
    ],
    "status": "MEASURED",
    "layer": "L3",

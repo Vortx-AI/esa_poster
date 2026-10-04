@@ -38,7 +38,7 @@ The companion download link serves the committed main-branch PDF. Local regenera
 
 ## Signed-track history
 
-The existing 21-step track identifies the earlier PDF at commit `e66c3ba`. It remains accessible from the record page as an **archived board track**. Its signature does not attest the revised PDF. This edition publishes file hashes and the build report; no new signing identity or attestation is implied.
+The existing 21-step track identifies the earlier PDF at commit `e66c3ba`; its signature does not attest the print PDF. The visitor pages no longer link it (pre-print pass, 4 Oct 2026: a conference page should not describe earlier prints); the track note stays on emem.dev under the poster key njedkglt. This edition publishes file hashes and the build report; no new signing identity or attestation is implied.
 
 ## Earlier editions
 

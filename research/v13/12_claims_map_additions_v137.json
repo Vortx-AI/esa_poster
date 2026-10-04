@@ -39,7 +39,7 @@
         "Hash rules: emem 18adb67. A name, a set and bytes differ.",
         "track.v1 is a note. Trace evidence here is a reference harness.",
         "Names, sets and records hash differently.",
-        "Grey: encoders retired; device runs in a reference harness."
+        "Grey: archived embeddings; device runs in a reference harness."
       ],
       "status": "SPEC",
       "layer": "L0-L3",

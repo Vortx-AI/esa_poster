@@ -3060,7 +3060,7 @@
    "id": "W.prev",
    "block": "P6",
    "print": [
-    "162 of 200 sampled pre-fix records",
+    "162 of 200 records read by rounding",
     "Wilson 95 %: 75 to 86 %"
    ],
    "status": "MEASURED",

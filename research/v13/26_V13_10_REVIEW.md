@@ -499,3 +499,47 @@ Not changed, as the review advised: the layout. Its other points are scope alrea
 integrated evidence protocol and its evaluation, not content addressing alone (the matched ablation strip); 300 trials
 are repeated corruption tests on two constructed tasks, not 300 independent EO applications; the satellite section is
 a scripted harness. Both variants pass the 18 gates; running text 800 words (801 in 300of300), 0 text overlaps.
+
+## 24. Pre-print pass (4 Oct 2026)
+
+The authors asked for a print-ready board: no vague text, no AI tells, no revision history on the face or the pages its
+QR codes open, and working QR codes. Every visible text run of both variants (HTML and 597 figure labels) was read and
+scanned for tell words, hedges and changelog wording; the eight docs pages were scanned the same way and the three QR
+landing pages read in full.
+
+| Where | Before | After | Why |
+|---|---|---|---|
+| Panel 1 orbit line | "...are downlinked, so no source re-read" | "...are downlinked, so the source is not re-read" | elliptical; "cannot" is a banned word |
+| Panel 2 caption | "Each calls for a different check." | "Each of these seven needs a different check." | the eighth value is the genuine one |
+| Panel 5 figure | "sampled pre-fix records", "both rules", "the old rule", "After the fix" | "records read by rounding", "round and floor", "rounding", "With floor"; the caption defines the rule: "read with a rounded pixel position; GDAL floors it" | the face never said what the fix was |
+| Panel 6 caption | "Deeper checks expose different corruptions." | "Each added check refuses a corruption that the checks before it pass." | stated from the first-refusal column (C to I) |
+| Panel 6 scope | "JSON and an opaque id caught some changes from their fields. On the live pre-fix record, ..." | "Reading the fields they carry, agents did not act on 112 of 276 corrupted JSON handoffs and 134 of 288 with an opaque id. On panel 5's real record, read live, ..." | "some" and "pre-fix" |
+| Panel 10 | headline "Beyond a single observation"; "In emem, the token family is how agents read Earth observation: ..." | "From a place to a device run"; "emem's tokens share one grammar." | a tell-word headline and a slogan |
+| Panel 10 figure | "Grey: encoders retired; ..." | "Grey: archived embeddings; ..." | status wording |
+
+Two figure lines ran past their figure's edge and were clipped in print. The panel 5 caption ran 4.2 mm over; its wrap
+now keeps a 12 mm margin and the caption drops its last sentence. The 300of300 bar note in panel 6 ran 13.5 mm over
+(the label change of section 23 lengthened it); it is shorter, and f6 now asserts that its notes fit. Matplotlib
+measures IBM Plex about 3 % narrower than Chromium sets it, and the build did not check figure text against the
+figure's edge. `no_overflow_or_clipping` now does, horizontally with 0.6 mm tolerance and vertically beyond the
+1.5 mm ascent box; a synthetic 13.5 mm overflow fails the gate.
+
+Visitor pages: the methods page's R5 note, its Rust note ("this build environment"), "restoration decisions", "Original
+v12", the eight-answer paragraph (which said the figure had moved off the board; it is panel 2) and the bundles
+paragraph (which said Berlin coverage absences are on the face; they are not) state results only. The record page
+drops the archived board track of the e66c3ba PDF and defines L0 to L5 under its table. The use page says "What was
+checked?", "One token, 11 client paths" and names panel 3's change in readout instead of the removed drift score.
+`docs/` is deployed as committed; `tools/site/site.mjs` predates the v13.10 page edits (AGENTS.md says so).
+
+QR codes, decoded with OpenCV from the print PDFs rasterised at 300 dpi (pdftoppm): all three decode in both variants.
+Degraded copies: the 50 mm tiles (INSPECT, CONNECT; version 4, level Q, 40 mm symbol, 1.22 mm per module) decode down
+to about 2.2 px/mm with blur, JPEG and a 12 degree tilt, which a 1080p phone stream reaches within about 0.6 m; the
+TRY IT code (69.7 mm symbol, 2.11 mm per module) decodes down to 1.0 px/mm, about 1.2 m. The site's phone test
+(`tools/site/test_site.mjs` on a copy of docs/) passes except where it needs emem.dev or Planetary Computer, which this
+environment blocks, and its fold check (the demo card's height depends on the step on screen; the page is unchanged
+since 2 Oct). The record and landing tests now match the pages. The Pages deploy of main after PR #71 succeeded.
+
+Print PDF: exact A0, one page, 39 font objects all embedded (IBM Plex subsets), vector text, five raster images at 305
+to 600 ppi with an ICC profile, RGB. No bleed is included; the navy header runs to the top and side edges, so a print
+shop that trims needs either borderless printing or a bleed version. Both variants pass the 18 gates; running text 793
+words (794 in 300of300), 0 text overlaps, no figure text past its edge.
