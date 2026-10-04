@@ -1,0 +1,350 @@
+{
+  "purpose": "v13.10: recovered v10 lead, memory-as-coded box and full trace; handoff emphasis; orbit design lines; token-family context; header strip",
+  "rows": [
+    {
+      "id": "LEAD.answer",
+      "block": "v13.10 header lead (recovered from the v10 board, 5143fac)",
+      "print": [
+        "Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?",
+        "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/v10/algorithms.md",
+          "repro/v8/trace_fact_output.txt",
+          "v13/00_v11_review_findings.json"
+        ],
+        "pointer": "key (cell, band, tslot) and fact_cid = b32(BLAKE3(CBOR)) in algorithms.md sections 1 to 3; offline receipt check (link 10) and log checks (links 12 to 14) in trace_fact_output.txt; 'FACT PLANE IS CLOSED BY DEFAULT' (lib.rs:33194 at 18adb67) recorded in the v11 review findings"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v8/trace_fact_output.txt",
+        "arg": "verified offline with the responder key"
+      },
+      "note": "The record is covered by a signed batch attestation (code box, sign row). 'Cannot write' holds by default: /v1/attest is closed to agents and open to the responder key, enrolled devices and operator-listed keys; a caller's derived value is kept only after emem recomputes it.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "TRACE.chain",
+      "block": "v13.10 header trace line",
+      "print": [
+        "Trace: token → bytes → cell → pixel → receipt → log → key"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "repro/v8/trace_fact_output.txt",
+        "pointer": "CHAIN OF CUSTODY: links 1 to 15 VERIFIED"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v8/trace_fact_output.txt",
+        "arg": "[15] VERIFIED        signer key -> domain"
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "ORBIT.tagline",
+      "block": "v13.10 header bridge",
+      "print": [
+        "Encode in orbit, decode in AI’s reasoning with emem."
+      ],
+      "status": "SPEC",
+      "layer": "L5",
+      "source": {
+        "files": [
+          "repro/v12/trace/trace_truth.md",
+          "repro/v12/trace/sat042_run_stdout.txt"
+        ],
+        "pointer": "orbital.satellite.v1 substrate profile (candidate) and the SAT-042 satellite_downlink reference run: the device encodes and attests facts under its trace; agents resolve the downlinked tokens"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v12/trace/sat042_run_stdout.txt",
+        "arg": "act 4  admitted: 3 facts under one verified trace"
+      },
+      "note": "Design statement. No spacecraft is enrolled (trace_truth.md section 1); panel 11 and the p1 orbit line print the reference-harness scope.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "ORBIT.design",
+      "block": "v13.10 panel 1 handoff line",
+      "print": [
+        "Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness)."
+      ],
+      "status": "SPEC",
+      "layer": "L5",
+      "source": {
+        "files": [
+          "repro/v12/trace/trace_truth.md",
+          "repro/v12/trace/sat042_run_stdout.txt"
+        ],
+        "pointer": "SAT-042: an enrolled device key admits 3 facts under one verified trace and prints their emem:fact tokens; raw frames are not part of the record"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v12/trace/sat042_run_stdout.txt",
+        "arg": "emem:trace:3arfrney6ieeugzekzqfufwoayvqj3edhc6fbwaqzhydxn2hbogq"
+      },
+      "note": "Design, exercised in a reference harness; no spacecraft enrolled.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "TRACE.run",
+      "block": "v13.10 full trace panel (recovered from the v10 board)",
+      "print": [
+        "FULL TRACE · 30 SEP 2026",
+        "Token → record → source pixel",
+        "Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked 15 links (17 checks) in 17.9 s, all verified. Grey: what must still be trusted after each check."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/v8/trace_fact.py",
+          "repro/v8/trace_fact_output.txt"
+        ],
+        "pointer": "run 2026-09-30T09:15:45Z; 17 rows VERIFIED (links 1 to 15 with 9b and 9c); 'written final_ndvi/chain.json  (17.9 s)'; wc -l trace_fact.py = 698"
+      },
+      "date": "2026-09-30",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v8/trace_fact_output.txt",
+        "arg": "written final_ndvi/chain.json  (17.9 s)"
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "TRACE.accept",
+      "block": "v13.10 full trace acceptance rule",
+      "print": [
+        "accept if BLAKE3(b) = cid & cell(b) = cell(token) & NDVI(DN(b)) = value & COG[row, col] = DN(b) & Ed25519(σ) & leaf in STH & STHgeo.qa prefix of STH"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "file": "repro/v8/trace_fact_output.txt",
+        "pointer": "links 3, 4, 7, 9, 10, 13 and 14"
+      },
+      "date": "2026-09-30",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v8/trace_fact_output.txt",
+        "arg": "consistency 2541495 -> 2556451: True"
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "TRACE.links",
+      "block": "v13.10 full trace links",
+      "print": [
+        "1-3 bytes → name 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks…",
+        "4-5 cell binding",
+        "6-7 derivation",
+        "8-9 upstream the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900",
+        "10-11 server signature",
+        "12-14 public log entry 2,457,078 is in the 2,556,451-entry log",
+        "15 key → domain"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "repro/v8/trace_fact_output.txt",
+        "pointer": "[3] mantissa flip -> mu5x2cks...; [9] col=9098 row=9443 DN=3502 / DN=1900; [12] leaf_index=2457078; [13] STH tree_size=2556451"
+      },
+      "date": "2026-09-30",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v8/trace_fact_output.txt",
+        "arg": "found at leaf_index=2457078"
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "TRACE.offline",
+      "block": "v13.10 full trace offline file",
+      "print": [
+        "Links 1-5 and 12-14 fit in a 4,906-byte file that repeats 9 checks with networking disabled (unshare -rn); a 1-bit tamper, a wrong cell or a wrong key fails it."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "files": [
+          "repro/v13/trace/offline_bundle_check.py",
+          "repro/v13/trace/offline_bundle_log.txt",
+          "repro/v8/verify_bundle.py"
+        ],
+        "pointer": "genuine: 9 PASS under unshare -rn; 1-bit tamper, wrong cell and wrong key each exit 1"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v13/trace/offline_bundle_log.txt",
+        "arg": "RESULT: all four cases as expected"
+      },
+      "note": "Closes audit item A33 (research/audit_v11): the unshare -rn run and the three negative cases now have a committed log.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CODE.commit",
+      "block": "v13.10 memory-as-coded box label",
+      "print": [
+        "THE MEMORY, AS CODED · emem 18adb67 · fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "file": "repro/v10/algorithms.md",
+        "pointer": "line 3: origin/main = 18adb67895d33c8b64d3b091a90af1f708315123"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v10/algorithms.md",
+        "arg": "18adb67895d33c8b64d3b091a90af1f708315123"
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CODE.lines",
+      "block": "v13.10 memory-as-coded box",
+      "print": [
+        "f = (kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key, args}, privacy, schema_cid, signer, signed_at)",
+        "b = CBOR(f), declaration order, NaN → f9 7e00, −0 → +0; fact_cid = base32(BLAKE3-256(b)); token emem:fact:<cell>:<fact_cid>",
+        "lat_q = round((lat+90)/180·(2²¹−1)), lng_q = round((lng+180)/360·(2²²−1)); pitch 8.583e-5° = 9.52 × 8.06 m here",
+        "tslot = floor(unix / 86 400) (20721 = 25 Sep 2026); key (cell, band, tslot); as of t: argmax (signed_at, cid) over signed_at ≤ t",
+        "R = Merkle(sorted fact_cids); attestation = Ed25519(PreimageV1(“attestation”){R, registry, schema}); a fact carries no signature",
+        "leaf = BLAKE3(0x00 || BLAKE3(CBOR(attestation))), node = BLAKE3(0x01 || l || r); RFC 6962 shape",
+        "sig = Ed25519(BLAKE3(“emem.preimage.v1\\0” || request_id || served_at || primitive || cells || fact_cids || merkle))"
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "file": "repro/v10/algorithms.md",
+        "pointer": "sections 1 (fact, canonical bytes, fact_cid, key), 2 (cell64; 9.518 x 8.060 m at 32.57 N), 3 (tslot 86400; 20721 = 2026-09-25), 4 (recall argmax), 7 (receipt preimage), 8 (log leaf/node, attestation signature)"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v10/algorithms.md",
+        "arg": "`s2.* 20721` = 2026-09-25"
+      },
+      "note": "Streamlined from the v10 box: bytes and name share a row; time and recall share a row; the caption's 'a fact carries no signature' moves into the sign row.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "TF.reads",
+      "block": "v13.10 panel 10 context line",
+      "print": [
+        "The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run."
+      ],
+      "status": "SPEC",
+      "layer": "L0",
+      "source": {
+        "file": "poster/fig/v13/f14_token_family.labels.json",
+        "pointer": "cell:, fact:, raster:, cube:, trace: rows of the token-family table"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "poster/fig/v13/f14_token_family.labels.json",
+        "arg": "trace:<cid>"
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "WOW.scene",
+      "block": "v13.10 header image strip",
+      "print": [
+        "2.02 GB scene → 84 characters"
+      ],
+      "status": "MEASURED",
+      "layer": "n/a",
+      "source": {
+        "files": [
+          "repro/data/v8/scene_sizes.json",
+          "repro/data/v8/token_counts.json"
+        ],
+        "pointer": "total_scene_bytes_all_blob_assets 2,023,818,762 B; fact_token_ndvi.chars 84"
+      },
+      "date": "2026-09-30",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "repro/data/v8/scene_sizes.json",
+        "arg": [
+          "total_scene_bytes_all_blob_assets"
+        ],
+        "expect": 2023818762
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "WOW.sms",
+      "block": "v13.10 header image strip",
+      "print": [
+        "This pixel’s NDVI record, handed off in one text message.",
+        "84 characters, 46 tokens; one SMS holds 160."
+      ],
+      "status": "EXTERNAL",
+      "layer": "n/a",
+      "source": {
+        "files": [
+          "repro/data/v8/token_counts.json",
+          "3GPP TS 23.038 (GSM 7-bit default alphabet: 160 characters per single SMS)"
+        ],
+        "pointer": "fact_token_ndvi: 84 chars, 46 cl100k; the token uses lower-case letters, digits, '.' and ':' only, all in the GSM 7-bit alphabet"
+      },
+      "date": "2026-09-30",
+      "value": null,
+      "check": {
+        "kind": "json",
+        "file": "repro/data/v8/token_counts.json",
+        "arg": [
+          "fact_token_ndvi",
+          "cl100k"
+        ],
+        "expect": 46
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    }
+  ]
+}

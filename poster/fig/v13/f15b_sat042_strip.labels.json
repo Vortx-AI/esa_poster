@@ -53,12 +53,12 @@
    "claim": "A15.steps"
   },
   {
-   "text": "Smuggle a",
+   "text": "Unbound",
    "pt": 14,
    "claim": "A15.steps"
   },
   {
-   "text": "4th fact",
+   "text": "fact",
    "pt": 14,
    "claim": "A15.steps"
   },
@@ -68,7 +68,7 @@
    "claim": "A15.steps"
   },
   {
-   "text": "Honest",
+   "text": "Bound",
    "pt": 14,
    "claim": "A15.steps"
   },
@@ -108,7 +108,7 @@
    "claim": "A15.steps"
   },
   {
-   "text": "CAUGHT",
+   "text": "REFUSED",
    "pt": 14,
    "claim": "A15.steps"
   },
@@ -125,7 +125,7 @@
   {
    "text": "syscall",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 0",
@@ -135,7 +135,7 @@
   {
    "text": "scheduler",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 1",
@@ -145,7 +145,7 @@
   {
    "text": "memory",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 2",
@@ -155,12 +155,12 @@
   {
    "text": "×",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "sensor bus",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 3",
@@ -170,7 +170,7 @@
   {
    "text": "signal",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 4",
@@ -180,7 +180,7 @@
   {
    "text": "energy",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 5",
@@ -190,7 +190,7 @@
   {
    "text": "thermal",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 6",
@@ -200,7 +200,7 @@
   {
    "text": "storage",
    "pt": 14,
-   "claim": null
+   "claim": "A15.layers"
   },
   {
    "text": "seq 7",
@@ -230,17 +230,17 @@
   {
    "text": "consistent",
    "pt": 14,
-   "claim": null
+   "claim": "A15.formula"
   },
   {
    "text": "tension",
    "pt": 14,
-   "claim": null
+   "claim": "A15.formula"
   },
   {
    "text": "contradicted",
    "pt": 14,
-   "claim": null
+   "claim": "A15.formula"
   },
   {
    "text": "0.5",

@@ -2,7 +2,7 @@
  "figure": "f4_failure_ladder",
  "size_mm": [
   193.5,
-  116
+  90
  ],
  "labels": [
   {
@@ -16,14 +16,14 @@
    "pt": 26
   },
   {
-   "text": "r = d / (3\u03c3);  s = r / (1 + r)",
-   "claim": "V7.score",
-   "pt": 26
-  },
-  {
    "text": "for finite x, a and 0 < \u03c3 < \u221e",
    "claim": "V7.score",
    "pt": 17
+  },
+  {
+   "text": "r = d / (3\u03c3);  s = r / (1 + r)",
+   "claim": "V7.score",
+   "pt": 26
   },
   {
    "text": "Invalid \u03c3: s = 0 if d = 0; otherwise s = 1.",

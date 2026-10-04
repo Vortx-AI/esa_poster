@@ -29,24 +29,24 @@
  ],
  "labels": [
   {
-   "text": "The record this board follows: NDVI 0.4709",
-   "claim": "H.img.record",
+   "text": "2.02 GB scene → 84 characters",
+   "claim": "WOW.scene",
    "x_mm": 8.0,
-   "y_mm": 163.6,
+   "y_mm": 163.0,
+   "pt": 24
+  },
+  {
+   "text": "This pixel’s NDVI record, handed off in one text message.",
+   "claim": "WOW.sms",
+   "x_mm": 8.0,
+   "y_mm": 172.4,
    "pt": 17
   },
   {
-   "text": "Sentinel-2A L2A · Keylong, Lahaul, India · 25 Sep 2026",
-   "claim": "H.img.record",
+   "text": "84 characters, 46 tokens; one SMS holds 160.",
+   "claim": "WOW.sms",
    "x_mm": 8.0,
-   "y_mm": 170.6,
-   "pt": 17
-  },
-  {
-   "text": "true colour B04/B03/B02 from signed 10 m grids; linear 1 to 99 % stretch, γ 1/1.35",
-   "claim": "H.img.grid",
-   "x_mm": 8.0,
-   "y_mm": 178.4,
+   "y_mm": 179.8,
    "pt": 14
   },
   {

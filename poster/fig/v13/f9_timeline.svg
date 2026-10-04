@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="548.503937pt" height="232.440945pt" viewBox="0 0 548.503937 232.440945" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="548.503937pt" height="212.598425pt" viewBox="0 0 548.503937 212.598425" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-02T03:48:27.691865</dc:date>
+    <dc:date>2026-10-04T08:57:16.921941</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -21,8 +21,8 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 232.440945 
-L 548.503937 232.440945 
+   <path d="M 0 212.598425 
+L 548.503937 212.598425 
 L 548.503937 0 
 L 0 0 
 z
@@ -32,88 +32,88 @@ z
    <g id="patch_2">
     <path d="M 272.262232 46.947219 
 Q 201.967864 53.149663 132.898575 59.244012 
-" clip-path="url(#pf4a4ad2d9a)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pfb61515297)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
     <path d="M 137.058882 60.884696 
 L 132.898575 59.244012 
 L 136.707306 56.900177 
 z
-" clip-path="url(#pf4a4ad2d9a)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pfb61515297)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
     <path d="M 276.241705 46.947219 
 Q 346.536073 53.149663 415.605362 59.244012 
-" clip-path="url(#pf4a4ad2d9a)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pfb61515297)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
     <path d="M 411.796631 56.900177 
 L 415.605362 59.244012 
 L 411.445055 60.884696 
 z
-" clip-path="url(#pf4a4ad2d9a)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#pfb61515297)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_4">
-    <path d="M 0 62.362205 
-L 259.370079 62.362205 
-L 259.370079 155.905512 
-L 0 155.905512 
+    <path d="M 0 59.527559 
+L 259.370079 59.527559 
+L 259.370079 141.732283 
+L 0 141.732283 
 z
-" clip-path="url(#pf4a4ad2d9a)" style="fill: #f1f0ec"/>
+" clip-path="url(#pfb61515297)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_5">
-    <path d="M 289.133858 62.362205 
-L 548.503937 62.362205 
-L 548.503937 155.905512 
-L 289.133858 155.905512 
+    <path d="M 289.133858 59.527559 
+L 548.503937 59.527559 
+L 548.503937 141.732283 
+L 289.133858 141.732283 
 z
-" clip-path="url(#pf4a4ad2d9a)" style="fill: #dce8f5"/>
+" clip-path="url(#pfb61515297)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_6">
-    <path d="M 0 167.244094 
-L 548.503937 167.244094 
-L 548.503937 201.259843 
-L 0 201.259843 
+    <path d="M 0 147.401575 
+L 548.503937 147.401575 
+L 548.503937 178.582677 
+L 0 178.582677 
 z
-" clip-path="url(#pf4a4ad2d9a)" style="fill: #dce8f5"/>
+" clip-path="url(#pfb61515297)" style="fill: #dce8f5"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="15.118583" transform="rotate(-0 0 15.118583)">BENGALURU · SAME CELL AND BAND · 2026</text>
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="15.258583" transform="rotate(-0 0 15.258583)">BENGALURU · SAME CELL AND BAND · 2026</text>
    </g>
    <g id="text_2">
-    <text style="font-weight: 600; font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #0f5fa8" x="274.251969" y="41.170394" transform="rotate(-0 274.251969 41.170394)">same place + band</text>
+    <text style="font-weight: 600; font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #0f5fa8" x="274.251969" y="41.330394" transform="rotate(-0 274.251969 41.330394)">same place + band</text>
    </g>
    <g id="text_3">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="80.231214" transform="rotate(-0 11.338583 80.231214)">signed 28 May</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="74.786142" transform="rotate(-0 11.338583 74.786142)">signed 28 May</text>
    </g>
    <g id="text_4">
-    <text style="font-weight: 600; font-size: 26px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="111.90189" transform="rotate(-0 11.338583 111.90189)">918.0 m</text>
+    <text style="font-weight: 600; font-size: 26px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="100.256378" transform="rotate(-0 11.338583 100.256378)">918.0 m</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="134.173701" transform="rotate(-0 11.338583 134.173701)">Open-Meteo / DEM90</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="120.140472" transform="rotate(-0 11.338583 120.140472)">Open-Meteo / DEM90</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="151.181575" transform="rotate(-0 11.338583 151.181575)">earlier CID</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="134.313701" transform="rotate(-0 11.338583 134.313701)">earlier CID</text>
    </g>
    <g id="text_7">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="300.472441" y="80.231214" transform="rotate(-0 300.472441 80.231214)">signed 11 Aug</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="300.472441" y="74.786142" transform="rotate(-0 300.472441 74.786142)">signed 11 Aug</text>
    </g>
    <g id="text_8">
-    <text style="font-weight: 600; font-size: 26px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="300.472441" y="111.90189" transform="rotate(-0 300.472441 111.90189)">915.07 m</text>
+    <text style="font-weight: 600; font-size: 26px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="300.472441" y="100.256378" transform="rotate(-0 300.472441 100.256378)">915.07 m</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="300.472441" y="134.173701" transform="rotate(-0 300.472441 134.173701)">Copernicus DEM30</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="300.472441" y="120.140472" transform="rotate(-0 300.472441 120.140472)">Copernicus DEM30</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="300.472441" y="151.181575" transform="rotate(-0 300.472441 151.181575)">later CID</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="300.472441" y="134.313701" transform="rotate(-0 300.472441 134.313701)">later CID</text>
    </g>
    <g id="text_11">
-    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="189.651969" transform="rotate(-0 11.338583 189.651969)">as of 15 Jun → 918.0 m</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="168.592126" transform="rotate(-0 11.338583 168.592126)">as of 15 Jun → 918.0 m</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="225.590097" transform="rotate(-0 0 225.590097)">The next agent can recover the earlier citation.</text>
+    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="204.60252" transform="rotate(-0 0 204.60252)">The next agent can recover the earlier citation.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pf4a4ad2d9a">
-   <rect x="0" y="0" width="548.503937" height="232.440945"/>
+  <clipPath id="pfb61515297">
+   <rect x="0" y="0" width="548.503937" height="212.598425"/>
   </clipPath>
  </defs>
 </svg>

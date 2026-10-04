@@ -39,9 +39,9 @@ P_LO, P_HI, GAMMA = 1.0, 99.0, 1.35
 NAME = "f1_scene"
 LABELS = []
 CLAIMS = {r["id"]: r for r in json.loads((ROOT / "research/v13/12_claims_map.json").read_text())["rows"]}
-ADD = ROOT / "research/v13/12_claims_map_additions_F1-4.json"
-if ADD.exists():
-    CLAIMS.update({r["id"]: r for r in json.loads(ADD.read_text())["rows"]})
+for ADD in sorted((ROOT / "research/v13").glob("12_claims_map_additions_*.json")):
+    _d = json.loads(ADD.read_text())
+    CLAIMS.update({r["id"]: r for r in (_d["rows"] if isinstance(_d, dict) else _d)})
 
 
 def claimed(s, cid):
@@ -132,14 +132,16 @@ def main():
     ax.plot([cx, cx], [cy + 3.4, y0], color="white", lw=0.9, zorder=3, path_effects=halo, solid_capstyle="butt")
     ax.plot([cx], [y0], marker="o", ms=3.2, color="white", zorder=5)
     xs = 8.0
-    v = f"NDVI {VALUE:.4f}"
-    T(ax, xs, y0 + 3.6, claimed(f"The record this board follows: {v}", "H.img.record"), "H.img.record",
-      fontsize=S.PT["caption"], fontweight=600, color="white", va="top", zorder=6)
-    T(ax, xs, y0 + 10.6, claimed(f"{SENSOR} · Keylong, Lahaul, India · {DATE_S}", "H.img.record"), "H.img.record",
+    # v13.10: the strip states what the marked pixel becomes; the record itself is identified in panels 1, 2 and 4.
+    scene = json.loads((DATA / "v8/scene_sizes.json").read_text())["total_scene_bytes_all_blob_assets"]
+    tok = json.loads((DATA / "v8/token_counts.json").read_text())["fact_token_ndvi"]
+    assert f"{scene / 1e9:.2f}" == "2.02" and tok["chars"] == 84 and tok["cl100k"] == 46
+    T(ax, xs, y0 + 3.0, claimed(f"{scene / 1e9:.2f} GB scene → {tok['chars']} characters", "WOW.scene"), "WOW.scene",
+      fontsize=S.PT["body"], fontweight=700, color="white", va="top", zorder=6)
+    T(ax, xs, y0 + 12.4, claimed("This pixel’s NDVI record, handed off in one text message.", "WOW.sms"), "WOW.sms",
       fontsize=S.PT["caption"], color="white", va="top", zorder=6)
-    T(ax, xs, y0 + 18.4, claimed(f"true colour B04/B03/B02 from signed 10 m grids; linear {P_LO:.0f} to {P_HI:.0f} % "
-                                 f"stretch, γ 1/{GAMMA}", "H.img.grid"), "H.img.grid",
-      fontsize=S.FLOOR, color=(1, 1, 1, 0.88), va="top", zorder=6)
+    T(ax, xs, y0 + 19.8, claimed(f"{tok['chars']} characters, {tok['cl100k']} tokens; one SMS holds 160.", "WOW.sms"),
+      "WOW.sms", fontsize=S.FLOOR, color=(1, 1, 1, 0.88), va="top", zorder=6)
 
     # scale bar: 1 km = 100 pixels of 10 m
     km = 100 * PX

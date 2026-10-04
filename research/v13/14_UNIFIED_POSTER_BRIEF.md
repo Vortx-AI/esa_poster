@@ -14,7 +14,11 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
 
-> A compact citation keeps the observation traceable across agents and time.
+> Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
+
+> emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
+
+> A compact citation keeps the observation traceable across agents and time. Encode in orbit, decode in AI’s reasoning with emem.
 
 ### 1 · Earth to agents
 
@@ -25,6 +29,8 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
 
 > In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
+
+> Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).
 
 ### 2 · One NDVI, eight values
 
@@ -61,6 +67,12 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 > Know what was checked
 
 > Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.
+
+### Full trace
+
+> Token → record → source pixel
+
+> Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked 15 links (17 checks) in 17.9 s, all verified. Grey: what must still be trusted after each check.
 
 ### Contribution and prior art
 
@@ -123,6 +135,8 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 > What else can an agent carry?
 
 > Beyond a single observation
+
+> The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.
 
 > Eight facts resolve through one bundle; four checkpoint hashes reproduce. These object checks do not validate an agent's reasoning.
 

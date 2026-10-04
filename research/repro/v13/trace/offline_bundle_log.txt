@@ -1,0 +1,48 @@
+offline_bundle_check.py  run 2026-10-04T08:55:04+00:00
+bundle proof_bundle_ndvi.cbor: 4906 bytes; every case runs under 'unshare -rn' (no network)
+
+[genuine] exit 0; 9 PASS, 0 FAIL; expected accept: as expected
+    PASS  fact bytes inside the logged attestation hash to the token's fact_cid
+    PASS  token cell == signed cell
+    PASS  batch_root recomputed from the facts
+    PASS  attestation signed by the expected key
+    PASS  STH signed by the expected key
+    PASS  entry 2457078 included under STH 2556451
+    PASS  witness quunzdv5qymo... co-signed head 2541495
+    PASS  entry included under the witnessed head
+    PASS  witnessed head is a prefix of the STH (consistency)
+
+[1-bit tamper] exit 1; 4 PASS, 5 FAIL; expected reject: as expected
+    FAIL  fact bytes inside the logged attestation hash to the token's fact_cid
+    FAIL  token cell == signed cell
+    FAIL  batch_root recomputed from the facts
+    PASS  attestation signed by the expected key
+    PASS  STH signed by the expected key
+    FAIL  entry 2457078 included under STH 2556451
+    PASS  witness quunzdv5qymo... co-signed head 2541495
+    FAIL  entry included under the witnessed head
+    PASS  witnessed head is a prefix of the STH (consistency)
+
+[wrong cell] exit 1; 8 PASS, 1 FAIL; expected reject: as expected
+    PASS  fact bytes inside the logged attestation hash to the token's fact_cid
+    FAIL  token cell == signed cell
+    PASS  batch_root recomputed from the facts
+    PASS  attestation signed by the expected key
+    PASS  STH signed by the expected key
+    PASS  entry 2457078 included under STH 2556451
+    PASS  witness quunzdv5qymo... co-signed head 2541495
+    PASS  entry included under the witnessed head
+    PASS  witnessed head is a prefix of the STH (consistency)
+
+[wrong key] exit 1; 7 PASS, 2 FAIL; expected reject: as expected
+    PASS  fact bytes inside the logged attestation hash to the token's fact_cid
+    PASS  token cell == signed cell
+    PASS  batch_root recomputed from the facts
+    FAIL  attestation signed by the expected key
+    FAIL  STH signed by the expected key
+    PASS  entry 2457078 included under STH 2556451
+    PASS  witness quunzdv5qymo... co-signed head 2541495
+    PASS  entry included under the witnessed head
+    PASS  witnessed head is a prefix of the STH (consistency)
+
+RESULT: all four cases as expected

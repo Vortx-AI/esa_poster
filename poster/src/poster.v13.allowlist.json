@@ -85,7 +85,7 @@
     {
       "word": "true",
       "text_sha": "27e4892cc2c35b0e016c333a80e7bb1a2aed29a81801e6488ee9072fe06abe67",
-      "sentence": "true colour B04/B03/B02 from signed 10 m grids; linear 1 to 99 % stretch, \u03b3 1/1.35",
+      "sentence": "true colour B04/B03/B02 from signed 10 m grids; linear 1 to 99 % stretch, γ 1/1.35",
       "where": "fig:f1_scene",
       "evidence": "H.img.grid",
       "reason": "'true colour' names the band combination, not a claim about a value"
@@ -109,7 +109,7 @@
     {
       "word": "only",
       "text_sha": "a14ab0faafdeaeaff5f792717f0477154ae31f44a764ea11001bfbf5a2ac48ca",
-      "sentence": "re-read only \u00b7 L3",
+      "sentence": "re-read only · L3",
       "where": "fig:f4_failure_ladder",
       "evidence": "F.rail.cellmatch",
       "reason": "brief G.3: the panel 3 rail; 're-read only' is F.pixel"
@@ -117,7 +117,7 @@
     {
       "word": "none",
       "text_sha": "d09d7341d9685332236dab47017bb091898cba7d2a4716ff0a1c345f7230a060",
-      "sentence": "none \u00b7 L4",
+      "sentence": "none · L4",
       "where": "fig:f4_failure_ladder",
       "evidence": "F.thing",
       "reason": "the top rung: no check catches the entity (L4)"
@@ -189,7 +189,7 @@
     {
       "word": "every",
       "text_sha": "e10e7fe63111840b112ebeb9aa2defaa47673a922dad5be78b181557c1e106bf",
-      "sentence": "M17 passes every check; \u201cthis image\u201d",
+      "sentence": "M17 passes every check; “this image”",
       "where": "fig:f8_ladder",
       "evidence": "X.entity",
       "reason": "brief G.3: 'passes every check'"
@@ -205,7 +205,7 @@
     {
       "word": "first",
       "text_sha": "e7e6041a99dae2b80bb01d7bc6b7c47065ff11401d29962dfd6a63570d39699a",
-      "sentence": "915.07 m \u00b7 first signed 11 Aug \u00b7 30 m DEM \u00b7 signed 7 times",
+      "sentence": "915.07 m · first signed 11 Aug · 30 m DEM · signed 7 times",
       "where": "fig:f9_timeline",
       "evidence": "TM.915",
       "reason": "brief G.3: 'first signed 11 Aug'"
@@ -253,7 +253,7 @@
     {
       "word": "never",
       "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
-      "sentence": "A check protects only if it runs: emem\u2019s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+      "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
       "where": "html:p3:scope",
       "evidence": "F.rail.cellmatch",
       "reason": "brief G.3: 'never tested' (F.rail.cellmatch); the F4 side rail sentence, set horizontally under the panel 3 caption (review fix 18)"
@@ -261,7 +261,7 @@
     {
       "word": "only",
       "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
-      "sentence": "A check protects only if it runs: emem\u2019s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+      "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
       "where": "html:p3:scope",
       "evidence": "F.rail.cellmatch",
       "reason": "brief G.3: the panel 3 rail sentence (F.rail.cellmatch, F.rail.langchain); 'protects only if it runs'"
@@ -269,7 +269,7 @@
     {
       "word": "verif-without-layer",
       "text_sha": "8c6020b580ab9bbc52e0712f0e2a0b2a13c3779bfa634140871bacc9620897ea",
-      "sentence": "A check protects only if it runs: emem\u2019s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
+      "sentence": "A check protects only if it runs: emem’s resolver once reported a cell match it never tested; one framework adapter returns a refusal as plain text; MAST: no or incomplete verification (FM-3.2).",
       "where": "html:p3:scope",
       "evidence": "F.rail.mast",
       "reason": "brief G.3: 'verification' in the MAST quote (FM-3.2)"
@@ -360,6 +360,54 @@
       "sentence": "Physical truth",
       "evidence": "V6.limits",
       "reason": "Explicit NOT ESTABLISHED column of the record guarantee boundary."
+    },
+    {
+      "word": "hash of",
+      "text_sha": "62d78542ee22734fc7c0887b194208e3794f8f1fb32d31c06467f039fd5c7e06",
+      "sentence": "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes.",
+      "where": "html:header_text:body",
+      "evidence": "LEAD.answer",
+      "reason": "the subject is the record ('a signed record named by the BLAKE3 hash of its bytes'), not the observation or a pixel; the code box prints fact_cid = base32(BLAKE3-256(b)) with b = CBOR(f)"
+    },
+    {
+      "word": "verif-without-layer",
+      "text_sha": "e6581eed2790f563a78b56d01ad65e9740e3f09d10a5aaa9f7084bd417edc2b7",
+      "sentence": "The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel.",
+      "where": "html:header_text:body",
+      "evidence": "LEAD.answer",
+      "reason": "the log entry and receipt checks are trace links 10 to 14 (L0-L3); the receipt is Ed25519-checked offline with the responder key (trace_fact_output.txt link 10)"
+    },
+    {
+      "word": "cannot",
+      "text_sha": "de95443b6fb013bcf03e8caeca410c12a5e44db483cf935f0f336c0dc02d75b0",
+      "sentence": "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
+      "where": "html:header_text:body",
+      "evidence": "LEAD.answer",
+      "reason": "holds by default: /v1/attest is closed to agents (FACT PLANE IS CLOSED BY DEFAULT, lib.rs:33194 at 18adb67); caller derivatives are kept only after emem recomputes them"
+    },
+    {
+      "word": "deployment-wording",
+      "text_sha": "d6e83c9ea47d9db7fac4f8026e409ace87cc4f00526114fb18651c0c67198f73",
+      "sentence": "Encode in orbit, decode in AI’s reasoning with emem.",
+      "where": "html:header_text:bridge",
+      "evidence": "ORBIT.tagline",
+      "reason": "design tagline; panel 1 and panel 11 print the reference-harness scope (no spacecraft enrolled)"
+    },
+    {
+      "word": "all",
+      "text_sha": "2b276c502f7e9ae2bbe000917f5ad571b5e6fb450467c541ddbbbe5d833dd906",
+      "sentence": "Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked 15 links (17 checks) in 17.9 s, all verified.",
+      "where": "html:trace:body",
+      "evidence": "TRACE.run",
+      "reason": "17 of 17 rows VERIFIED in the committed chain-of-custody output"
+    },
+    {
+      "word": "verif-without-layer",
+      "text_sha": "2b276c502f7e9ae2bbe000917f5ad571b5e6fb450467c541ddbbbe5d833dd906",
+      "sentence": "Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked 15 links (17 checks) in 17.9 s, all verified.",
+      "where": "html:trace:body",
+      "evidence": "TRACE.run",
+      "reason": "the fifteen links are named in the panel rows, layers L0 to L3"
     }
   ]
 }

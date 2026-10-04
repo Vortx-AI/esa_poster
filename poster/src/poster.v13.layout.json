@@ -2,16 +2,16 @@
   "schema": "Documented departures for the reviewed v13 source, 2 Oct 2026.",
   "deviations": {
     "p1": {
-      "reason": "Complete handoff experiment below the seven-step workflow. The right stack now states the address, record, attestation and named sources; digest lines have sufficient spacing at 14 pt."
+      "reason": "Complete handoff experiment below the seven-step workflow. The right stack now states the address, record, attestation and named sources; digest lines have sufficient spacing at 14 pt. v13.10: a 17 pt line under the handoff result states the orbit design and its reference-harness scope."
     },
     "p2": {
       "reason": "The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment."
     },
     "p3": {
-      "reason": "The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size."
+      "reason": "The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace."
     },
     "questions": {
-      "reason": "The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face."
+      "reason": "The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace."
     },
     "p4": {
       "reason": "The decoded evidence object replaces the Berlin fanout, restoring the complete source-record-address-attestation flow at 396 by 98 mm."
@@ -35,13 +35,13 @@
       "reason": "The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed."
     },
     "p8": {
-      "reason": "The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged."
+      "reason": "The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82)."
     },
     "p9": {
       "reason": "The complete observation and memory model stays in the right column at its existing type sizes."
     },
     "p10": {
-      "reason": "The full token-family table stays in the right column at its existing 193.5 by 118 mm size."
+      "reason": "The full token-family table stays in the right column at its existing 193.5 by 118 mm size. v13.10: one 17 pt line states what the token family is for agents; the table and caption are unchanged."
     },
     "p11": {
       "reason": "The SAT-042 execution strip prints the existing reference-harness run, its three refusals, chained trace and anchor scores. The headline concerns the reported run; no spacecraft deployment is claimed."
@@ -80,5 +80,9 @@
     "scientific_figures": 13,
     "unchanged_measurements": true,
     "figure_floor_pt": 14
+  },
+  "v13.10_notes": {
+    "date": "2026-10-04",
+    "what": "Recovered from the v10 board (5143fac): the lead question and answer (header, beside the hero), the memory-as-coded box (centre, after panel 4, streamlined to seven rows) and the full trace (left, after panel 7, condensed; the ten-client-path sentence is left out because panel 12 prints the later 11-path measurement). Column gaps: left 4, centre 1, right 3 mm. The header image strip states the scene-to-token reduction instead of the location credit, which panels 1, 2 and 4 already carry. The 'Hand off' workflow step carries the strongest fill."
   }
 }
