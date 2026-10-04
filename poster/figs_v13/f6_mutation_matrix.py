@@ -235,12 +235,14 @@ def cell(xc, y, w, h, r, letter=None):
 def r5_cell(xc, y, w, h, cond, mid, r1row):
     """R5 mode: bar of the agents' false-acceptance rate, k / n, with the R1 verdict as a 3 mm square."""
     kn = R5D["cells"][cond].get(mid)
+    if kn is None and mid == "M17":
+        # M17 was not run with agents (out of scope, results.md section 10): a plain grey cell, the legend's
+        # "not applicable", with no deterministic square, so nothing in the row reads as "acted on"
+        box(xc + 4.5, y + 1.0, w - 4.5, h - 2.0, C["na"], r=0.4)
+        return
     box(xc, y + h / 2 - 1.5, 3.0, 3.0, FILL[r1row["outcome"]] if r1row else C["na"], r=0.3)
-    if kn is None:   # M17 was not run with agents (results.md section 10); M7 has no prose, JSON or RAG form
-        if mid == "M17":
-            T(xc + 5, y + h / 2, "not run", 14, color=C["muted"], claim="R5.M17.notrun")
-        else:
-            T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
+    if kn is None:   # M7 has no prose, JSON or RAG form
+        T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
         return
     k, n = kn
     dk = n - k   # v13.10: bars show corruptions declined (n - acted on), the same reading as panel 1
