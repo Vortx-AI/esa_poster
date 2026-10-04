@@ -295,7 +295,8 @@ def main():
                                      mutation_scale=MMPT, lw=0.5 * MMPT, color=C["ink2"], zorder=3, shrinkA=0, shrinkB=0))
     ax.add_patch(Rectangle((rx, ys[0] - 1.5), rw, ys[-1] + lh - ys[0] + 3, fc=C["harm_tint"], ec=C["harm"],
                            lw=0.55 * MMPT, zorder=2))
-    # v13.10 (4 Oct): one change per trial from the same set on each lane. The families wrap as one list,
+    # v13.10 (4 Oct): one change per trial, from corruption families the lanes share (item sets differ: 23 prose,
+    # JSON and RAG; 24 opaque id; 25 emem; review 4 Oct). The families wrap as one list,
     # centred in the box, so none of them sits beside a lane and reads as that lane's corruption.
     fams = FAMILIES_R5 if MODE == "R5" else FAMILIES.split(" · ")
     cl = "F2.relay.r5" if MODE == "R5" else "F2.relay"
@@ -310,7 +311,7 @@ def main():
             cur = f
     wrapped.append(cur)
     rows = [("relay or faulty signer", 16, 700, C["harm_text"], 7.2),
-            ("one change per trial,", 15, 400, C["ink2"], 6.4), ("same set on each lane:", 15, 400, C["ink2"], 9.0)]
+            ("one change per trial,", 15, 400, C["ink2"], 6.4), ("shared corruption families:", 15, 400, C["ink2"], 9.0)]
     rows += [(w_, 15, 400, C["ink"], 6.6) for w_ in wrapped]
     box_top, box_h = ys[0] - 1.5, ys[-1] + lh - ys[0] + 3
     block = sum(r_[4] for r_ in rows[:-1])

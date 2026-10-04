@@ -1,0 +1,36 @@
+{
+ "trial": "t148ec",
+ "attempts": [
+  {
+   "agent_file": "agent-a1b575497cb39f33a.jsonl",
+   "started": "2026-10-04T16:24:26.508Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py t148ec verify_evidence '{\"token\": \"emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa\", \"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-25\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"signature\": {\"result\": \"pass\", \"detail\": \"Ed25519 attestation verifies under the pinned key\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the signed DNs\"}, \"source\": {\"result\": \"pass\", \"detail\": \"signed DNs equal the containing pixel of the source COG\"}}, \"verdict\": \"PASS\", \"value_verbatim\": \"0.4708994708994709\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=HOLD VALUE=0.4708994708994709 REASON=NDVI exceeds 0.4705 threshold, vegetation sufficient"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=HOLD VALUE=0.4708994708994709 REASON=NDVI exceeds 0.4705 threshold, vegetation sufficient",
+   "report_via": "handback"
+  }
+ ]
+}

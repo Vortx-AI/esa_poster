@@ -360,3 +360,39 @@ which miss two of the R5 families (unit, stale history). It now prints "relay or
 same set on each lane:" and the R5 families as one wrapped list in dark ink, centred in the box: value, unit, cell,
 time, band, source, derivation, pixel, stale record, signature / id (prereg section 4; row F2.relay.r5). The lane
 markers sit on the box edge. Both variants pass every gate, with 0 text overlaps.
+
+## 19. Third ChatGPT review (a8ad558, 8.2/10) and the matched baseline (4 Oct 2026)
+
+The review raised the score from 8.0 to 8.2 (presentation 7.5, novelty 7.5) and asked for one wording fix. The relay
+box's "one change per trial, same set on each lane" implied equal item sets; the sets are 23 (prose, JSON, RAG), 24
+(opaque id) and 25 (emem). It now reads "one change per trial, shared corruption families" (row F2.relay.r5). The
+shared-item comparison in the take line was already correct.
+
+Its first open limitation was the treatment confound: the emem condition adds a verifier and an instruction, and "a
+matched baseline with equivalent evidence access, verification and instructions is still the experiment most likely to
+change my scientific score". That baseline is now run, without paid calls, under a pre-registration pushed before it was
+computed (`research/repro/v13/r5/prereg_addendum2.md`, 0cf0424; results in `results_addendum2.md`):
+
+| receiver on the 23 items with a JSON form | false acceptance |
+|---|---|
+| JSON without a verifier | 23 of 23 |
+| JSON with emem's checks minus hash, signature and log (binding, as-of, recompute, source re-read) | 8 of 23 |
+| the same plus four consistency checks (scene date, tile band, BOA offset, unit) | 3 of 23 |
+| emem's verifier | 0 of 23 |
+
+The eight are records that stay self-consistent after a forger re-hashed or relabelled them (cell, date, scene, offset,
+unit), an unlogged second version, and an elevation no recipe recomputes. In 53 in-session Haiku subagent trials (one per
+arm and item, exploratory), agents given the matched verifier and instruction acted on the same 8 and declined the other
+15; agents in condition E acted on 0 of 25, as in the 150 headless Haiku E trials. Twelve trials stopped on an account
+usage limit and were re-run once after the reset, as the addendum provides; the audit found no tool use outside the trial
+tool and no exclusion.
+
+Panel 1's scope now prints the matched result in place of "no equal-tool baseline yet". To keep the scope at four lines,
+the treatment sentence became "The emem lane adds a verifier and an instruction." and "Claude" left the model list (the
+figure head says "agents, pooled Claude"). New rows: R5.matched.ceiling, .n, .hardened, .emem and .agents, each re-checked
+against `out/addendum2_ceiling.json` or `out/addendum2_s.json`.
+
+Unchanged, and stated where the review asked: the orbit design does not inherit the ground source re-read, SAT-042 is a
+scripted harness, two constructed tasks are narrow, agent compliance needs enforcement outside the model, and the board
+is dense. The review's presentation advice, to lead with panel 5's wrong-pixel result and then show how the handoff
+checks expose it, is for the talk at the board; the layout is unchanged.

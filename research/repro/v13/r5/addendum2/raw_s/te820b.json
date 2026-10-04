@@ -1,0 +1,36 @@
+{
+ "trial": "te820b",
+ "attempts": [
+  {
+   "agent_file": "agent-a612d2fd3b25b5fea.jsonl",
+   "started": "2026-10-04T16:24:26.522Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py te820b verify_observation '{\"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-30\", \"as_of\": \"2026-09-30T22:44:26Z\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"binding\": {\"result\": \"fail\", \"detail\": \"observation cell defi.zb572.xAnI.zb1a2 != question cell defi.zb572.xoso.zb1ec\"}, \"asof\": {\"result\": \"pass\", \"detail\": \"signed 2026-09-30T22:44:26Z <= as-of 2026-09-30T22:44:26Z\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the DNs\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed COG window for scene S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304\"}}, \"verdict\": \"FAIL (first failed check: binding)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Binding check failed: observation from different cell"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Binding check failed: observation from different cell",
+   "report_via": "handback"
+  }
+ ]
+}

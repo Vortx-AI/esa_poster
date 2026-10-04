@@ -1,0 +1,37 @@
+{
+ "trial": "ta19af",
+ "attempts": [
+  {
+   "agent_file": "agent-a2a116c1e6d605995.jsonl",
+   "started": "2026-10-04T13:49:37.796Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py ta19af verify_evidence '{\"token\": \"emem:fact:defi.zb572.xoso.zb1ec:zewkvccpbpgtosrast342htuvlvfejiy4dy5nkj6id3t5tp2fklq\", \"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-30\"}'",
+      "description": "Verify the emem evidence token for NDVI on 30 Sep 2026"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"signature\": {\"result\": \"fail\", \"detail\": \"the fact bytes are not in the attestation\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the signed DNs\"}, \"source\": {\"result\": \"pass\", \"detail\": \"signed DNs equal the containing pixel of the source COG\"}}, \"verdict\": \"FAIL (first failed check: signature)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Evidence signature verification failed"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Evidence signature verification failed",
+   "report_via": "handback"
+  }
+ ]
+}

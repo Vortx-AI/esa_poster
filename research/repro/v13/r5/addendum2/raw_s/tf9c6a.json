@@ -1,0 +1,36 @@
+{
+ "trial": "tf9c6a",
+ "attempts": [
+  {
+   "agent_file": "agent-ae7095b6816a618a3.jsonl",
+   "started": "2026-10-04T13:46:35.916Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py tf9c6a verify_evidence '{\"token\": \"emem:fact:defi.zb572.xoso.zb1ec:3yyaxn5dvvutqukhtycog2y6ab2hfnzlcnf56qlevgnnare3nnsa\", \"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-25\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"fail\", \"detail\": \"record date 2026-09-30 != question date 2026-09-25\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"signature\": {\"result\": \"pass\", \"detail\": \"Ed25519 attestation verifies under the pinned key\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the signed DNs\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed COG window for scene S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304\"}}, \"verdict\": \"FAIL (first failed check: binding)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Record date 2026-09-30 does not match question date 2026-09-25"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Record date 2026-09-30 does not match question date 2026-09-25",
+   "report_via": "handback"
+  }
+ ]
+}

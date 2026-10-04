@@ -1,0 +1,36 @@
+{
+ "trial": "ta9ace",
+ "attempts": [
+  {
+   "agent_file": "agent-acd847c3eb6481558.jsonl",
+   "started": "2026-10-04T13:46:35.908Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py ta9ace verify_evidence '{\"token\": \"emem:fact:defi.zb493.xuqA.zcb5f:dysxg4yvsimwr75xfj2w5fzsppwcz3xqj3k3ecwasteplsidzf5a\", \"cell\": \"defi.zb493.xuqA.zcb5f\", \"band\": \"copdem30m.elevation_mean\", \"date\": \"2026-06-15\", \"as_of\": \"2026-06-15T23:59:59Z\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"pass\", \"detail\": \"signed 2026-05-28T19:54:32Z <= as-of 2026-06-15T23:59:59Z\"}, \"signature\": {\"result\": \"fail\", \"detail\": \"the fact bytes are not in the attestation\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"n/a\", \"detail\": \"no recipe for open_meteo_copdem90m@1 (not recomputable)\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed source window for this band\"}}, \"verdict\": \"FAIL (first failed check: signature)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Evidence signature verification failed, cannot validate"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Evidence signature verification failed, cannot validate",
+   "report_via": "handback"
+  }
+ ]
+}

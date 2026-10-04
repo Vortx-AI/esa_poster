@@ -1,0 +1,36 @@
+{
+ "trial": "tca097",
+ "attempts": [
+  {
+   "agent_file": "agent-a2c9458cd585a334a.jsonl",
+   "started": "2026-10-04T16:24:26.474Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py tca097 verify_observation '{\"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-25\", \"as_of\": \"2026-09-28T09:06:56Z\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"pass\", \"detail\": \"signed 2026-09-28T09:06:56Z <= as-of 2026-09-28T09:06:56Z\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the DNs\"}, \"source\": {\"result\": \"pass\", \"detail\": \"the DNs equal the containing pixel of the source COG\"}}, \"verdict\": \"PASS\", \"value_verbatim\": \"0.29655683080340617\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=IRRIGATE VALUE=0.29655683080340617 REASON=NDVI 0.297 verified and <= 0.4705 threshold"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=IRRIGATE VALUE=0.29655683080340617 REASON=NDVI 0.297 verified and <= 0.4705 threshold",
+   "report_via": "handback"
+  }
+ ]
+}

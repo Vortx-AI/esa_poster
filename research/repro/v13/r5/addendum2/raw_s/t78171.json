@@ -1,0 +1,36 @@
+{
+ "trial": "t78171",
+ "attempts": [
+  {
+   "agent_file": "agent-a510425a0b12eb8c3.jsonl",
+   "started": "2026-10-04T13:48:01.459Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py t78171 verify_observation '{\"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-30\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"binding\": {\"result\": \"fail\", \"detail\": \"observation date 2026-09-25 != question date 2026-09-30\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the DNs\"}, \"source\": {\"result\": \"pass\", \"detail\": \"the DNs equal the containing pixel of the source COG\"}}, \"verdict\": \"FAIL (first failed check: binding)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Observation date mismatch: 2026-09-25 vs 2026-09-30 required"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Observation date mismatch: 2026-09-25 vs 2026-09-30 required",
+   "report_via": "handback"
+  }
+ ]
+}

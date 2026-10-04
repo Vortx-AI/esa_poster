@@ -1,0 +1,1808 @@
+{
+ "generated_by": "research/repro/v13/r5/addendum2/matched.py",
+ "prereg": "research/repro/v13/r5/prereg_addendum2.md",
+ "items": 25,
+ "primary": 23,
+ "controls": [
+  "G0",
+  "G0-B"
+ ],
+ "summary": {
+  "B": {
+   "fa": 23,
+   "n": 23,
+   "fa_items": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M5b",
+    "M6",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16",
+    "M15r",
+    "M23",
+    "M24",
+    "M25",
+    "M2-B",
+    "M18",
+    "M20"
+   ],
+   "controls_accepted": 2,
+   "n_controls": 2,
+   "correct_primary": 1
+  },
+  "B+": {
+   "fa": 8,
+   "n": 23,
+   "fa_items": [
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M16",
+    "M23",
+    "M2-B",
+    "M18"
+   ],
+   "controls_accepted": 2,
+   "n_controls": 2,
+   "correct_primary": 13
+  },
+  "B++": {
+   "fa": 3,
+   "n": 23,
+   "fa_items": [
+    "M11",
+    "M23",
+    "M2-B"
+   ],
+   "controls_accepted": 2,
+   "n_controls": 2,
+   "correct_primary": 18
+  },
+  "E+": {
+   "fa": 0,
+   "n": 23,
+   "fa_items": [],
+   "controls_accepted": 2,
+   "n_controls": 2,
+   "correct_primary": 23
+  }
+ },
+ "rows": [
+  {
+   "item": "G0",
+   "family": "control",
+   "threat": "-",
+   "primary": false,
+   "desc": "genuine handoff",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "HOLD",
+    "acted_value": 0.4708994708994709,
+    "fa": null,
+    "correct": true
+   },
+   "B++": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "HOLD",
+    "acted_value": 0.4708994708994709,
+    "fa": null,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": null,
+    "correct": true
+   },
+   "E+": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": null,
+    "correct": true
+   }
+  },
+  {
+   "item": "M1",
+   "family": "value",
+   "threat": "T1",
+   "primary": true,
+   "desc": "stated value moved 1 ULP; bytes intact",
+   "B+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.47089947089947093",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": false
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.47089947089947093",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": false
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": true
+   },
+   "E+": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M2",
+   "family": "value",
+   "threat": "T1",
+   "primary": true,
+   "desc": "stated value \"0.47\"; bytes intact",
+   "B+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.47",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": false
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.47",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": false
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M3",
+   "family": "signature/cid",
+   "threat": "T1",
+   "primary": true,
+   "desc": "1 ULP inside the served bytes, token kept",
+   "B+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.47089947089947093",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.47089947089947093",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "hash",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M4",
+   "family": "cell",
+   "threat": "T1",
+   "primary": true,
+   "desc": "Keylong record cited for the Bengaluru field (relabelled)",
+   "B+": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "observation cell defi.zb572.xoso.zb1ec != question cell defi.zb493.xuqA.zcb5f",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "fail",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "observation cell defi.zb572.xoso.zb1ec != question cell defi.zb493.xuqA.zcb5f",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 12.9719 is in band P, the scene's tile is in band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "binding",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M5",
+   "family": "stale/current",
+   "threat": "T1",
+   "primary": true,
+   "desc": "real 25 Sep record handed as the 30 Sep answer",
+   "B+": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "observation date 2026-09-25 != question date 2026-09-30",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "observation date 2026-09-25 != question date 2026-09-30",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "binding",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M5b",
+   "family": "stale/current",
+   "threat": "T1",
+   "primary": true,
+   "desc": "real 30 Sep record (0.4237) handed as the 25 Sep record A cited",
+   "B+": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "observation date 2026-09-30 != question date 2026-09-25",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "observation date 2026-09-30 != question date 2026-09-25",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304",
+     "scene_date": "scene acquired 2026-09-30, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "binding",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M6",
+   "family": "band",
+   "threat": "T1",
+   "primary": true,
+   "desc": "real NBR record (0.2726, same cell and scene) handed as NDVI",
+   "B+": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "observation band indices.nbr != question band indices.ndvi",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed source window for this band"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "observation band indices.nbr != question band indices.ndvi",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed source window for this band",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "binding",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M8",
+   "family": "value",
+   "threat": "T1",
+   "primary": true,
+   "desc": "value 0.45, re-encoded and re-hashed, no key",
+   "B+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.45",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.45",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M9",
+   "family": "cell",
+   "threat": "T1",
+   "primary": true,
+   "desc": "cell changed inside the record, re-hashed",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "committed windows cover the Keylong field cell only"
+    },
+    "decision": "HOLD",
+    "acted_value": 0.4708994708994709,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "tile_band",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a",
+     "scene_date": "pass",
+     "tile_band": "fail",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "committed windows cover the Keylong field cell only",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 12.9719 is in band P, the scene's tile is in band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M10",
+   "family": "time",
+   "threat": "T1",
+   "primary": true,
+   "desc": "tslot changed to 30 Sep inside the record, re-hashed",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "HOLD",
+    "acted_value": 0.4708994708994709,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "scene_date",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass",
+     "scene_date": "fail",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, observation dated 2026-09-30",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M11",
+   "family": "source",
+   "threat": "T1",
+   "primary": true,
+   "desc": "source scene id changed to the real same-day S2B scene, re-hashed",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2B_MSIL2A_20260925T052649_R105_T43SFS_20260925T092202"
+    },
+    "decision": "HOLD",
+    "acted_value": 0.4708994708994709,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2B_MSIL2A_20260925T052649_R105_T43SFS_20260925T092202",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "HOLD",
+    "acted_value": 0.4708994708994709,
+    "fa": true,
+    "correct": false
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M12",
+   "family": "derivation",
+   "threat": "T1",
+   "primary": true,
+   "desc": "BOA offset set to 0, value recomputed (0.2966), re-hashed",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "IRRIGATE",
+    "acted_value": 0.29655683080340617,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "offset",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "fail",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset 0.0, baseline 04.00 requires -1000",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M13",
+   "family": "signature/cid",
+   "threat": "T1",
+   "primary": true,
+   "desc": "value 0.45 signed and logged under the forger's own key",
+   "B+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.45",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.45",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M14",
+   "family": "derivation",
+   "threat": "T2",
+   "primary": true,
+   "desc": "trusted signer's value (0.46) disagrees with its own signed DNs",
+   "B+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.46",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 0.46",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M15",
+   "family": "source (pixel)",
+   "threat": "T2",
+   "primary": true,
+   "desc": "trusted signer read the pixel 10 m south (0.3016)",
+   "B+": {
+    "accept": false,
+    "first_fail": "source",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "fail"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs [2720.0, 1923.0] != containing pixel [3502.0, 1900.0] in the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "source",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "fail",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs [2720.0, 1923.0] != containing pixel [3502.0, 1900.0] in the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "source",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M16",
+   "family": "stale/current",
+   "threat": "T2",
+   "primary": true,
+   "desc": "a second signed version for 30 Sep, not in the log",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "HOLD",
+    "acted_value": 0.4708994708994709,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "scene_date",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "pass",
+     "scene_date": "fail",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, observation dated 2026-09-30",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "log",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M15r",
+   "family": "source (pixel)",
+   "threat": "real",
+   "primary": true,
+   "desc": "real signed pre-fix record kxjvfwpa (neighbour pixel, 0.3444) for the 23 Sep question",
+   "B+": {
+    "accept": false,
+    "first_fail": "source",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "fail"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs [2993.0, 1972.0] != containing pixel [3605.0, 1901.0] in the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "source",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "fail",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "the DNs [2993.0, 1972.0] != containing pixel [3605.0, 1901.0] in the source COG",
+     "scene_date": "scene acquired 2026-09-23, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "source",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M23",
+   "family": "source",
+   "threat": "T1",
+   "primary": true,
+   "desc": "forged record for the same-day S2B scene (0.4370), re-hashed, no key",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2B_MSIL2A_20260925T052649_R105_T43SFS_20260925T092202"
+    },
+    "decision": "IRRIGATE",
+    "acted_value": 0.43697945585785675,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2B_MSIL2A_20260925T052649_R105_T43SFS_20260925T092202",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "IRRIGATE",
+    "acted_value": 0.43697945585785675,
+    "fa": true,
+    "correct": false
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M24",
+   "family": "cell",
+   "threat": "real",
+   "primary": true,
+   "desc": "real /v1/ask town-point record (596 m away, 0.2824) handed as the field's 30 Sep NDVI",
+   "B+": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "observation cell defi.zb572.xAnI.zb1a2 != question cell defi.zb572.xoso.zb1ec",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "binding",
+    "checks": {
+     "binding": "fail",
+     "asof": "n/a",
+     "recompute": "pass",
+     "source": "n/a",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "observation cell defi.zb572.xAnI.zb1a2 != question cell defi.zb572.xoso.zb1ec",
+     "asof": "no as-of time asked",
+     "recompute": "value recomputes bit-for-bit from the DNs",
+     "source": "no committed COG window for scene S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304",
+     "scene_date": "scene acquired 2026-09-30, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "IRRIGATE",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "binding",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M25",
+   "family": "derivation",
+   "threat": "T1",
+   "primary": true,
+   "desc": "offset applied twice (1.1427), re-hashed, no key",
+   "B+": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 1.1427",
+     "source": "the DNs equal the containing pixel of the source COG"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "recompute",
+    "checks": {
+     "binding": "pass",
+     "asof": "n/a",
+     "recompute": "fail",
+     "source": "pass",
+     "scene_date": "pass",
+     "tile_band": "pass",
+     "offset": "pass",
+     "unit": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "no as-of time asked",
+     "recompute": "the DNs give 0.4708994708994709, the observation says 1.1427",
+     "source": "the DNs equal the containing pixel of the source COG",
+     "scene_date": "scene acquired 2026-09-25, the observation's date",
+     "tile_band": "field latitude 32.57126 lies in tile band S",
+     "offset": "BOA offset -1000, as baseline 04.00 requires",
+     "unit": "not an elevation"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "HOLD",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "G0-B",
+   "family": "control",
+   "threat": "-",
+   "primary": false,
+   "desc": "genuine May record, 918.0 m",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "pass",
+     "recompute": "n/a",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-05-28T19:54:32Z <= as-of 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for open_meteo_copdem90m@1 (not recomputable)",
+     "source": "no committed source window for this band"
+    },
+    "decision": "CONSISTENT",
+    "acted_value": 918.0,
+    "fa": null,
+    "correct": true
+   },
+   "B++": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "pass",
+     "recompute": "n/a",
+     "source": "n/a",
+     "scene_date": "n/a",
+     "tile_band": "n/a",
+     "offset": "n/a",
+     "unit": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-05-28T19:54:32Z <= as-of 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for open_meteo_copdem90m@1 (not recomputable)",
+     "source": "no committed source window for this band",
+     "scene_date": "no scene id with an acquisition date",
+     "tile_band": "no MGRS tile in the scene id",
+     "offset": "no BOA offset in the observation",
+     "unit": "elevation in m"
+    },
+    "decision": "CONSISTENT",
+    "acted_value": 918.0,
+    "fa": null,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "CONSISTENT",
+    "fa": null,
+    "correct": true
+   },
+   "E+": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "CONSISTENT",
+    "fa": null,
+    "correct": true
+   }
+  },
+  {
+   "item": "M2-B",
+   "family": "value",
+   "threat": "T1",
+   "primary": true,
+   "desc": "stated \"about 916 m\"; bytes intact",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "pass",
+     "recompute": "n/a",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-05-28T19:54:32Z <= as-of 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for open_meteo_copdem90m@1 (not recomputable)",
+     "source": "no committed source window for this band"
+    },
+    "decision": "INCONSISTENT",
+    "acted_value": 916.0,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "pass",
+     "recompute": "n/a",
+     "source": "n/a",
+     "scene_date": "n/a",
+     "tile_band": "n/a",
+     "offset": "n/a",
+     "unit": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-05-28T19:54:32Z <= as-of 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for open_meteo_copdem90m@1 (not recomputable)",
+     "source": "no committed source window for this band",
+     "scene_date": "no scene id with an acquisition date",
+     "tile_band": "no MGRS tile in the scene id",
+     "offset": "no BOA offset in the observation",
+     "unit": "elevation in m"
+    },
+    "decision": "INCONSISTENT",
+    "acted_value": 916.0,
+    "fa": true,
+    "correct": false
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "INCONSISTENT",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "CONSISTENT",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M18",
+   "family": "unit",
+   "threat": "T1",
+   "primary": true,
+   "desc": "unit relabelled m -> ft inside the record, re-hashed",
+   "B+": {
+    "accept": true,
+    "first_fail": null,
+    "checks": {
+     "binding": "pass",
+     "asof": "pass",
+     "recompute": "n/a",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-05-28T19:54:32Z <= as-of 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for open_meteo_copdem90m@1 (not recomputable)",
+     "source": "no committed source window for this band"
+    },
+    "decision": "CONSISTENT",
+    "acted_value": 918.0,
+    "fa": true,
+    "correct": false
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "unit",
+    "checks": {
+     "binding": "pass",
+     "asof": "pass",
+     "recompute": "n/a",
+     "source": "n/a",
+     "scene_date": "n/a",
+     "tile_band": "n/a",
+     "offset": "n/a",
+     "unit": "fail"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-05-28T19:54:32Z <= as-of 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for open_meteo_copdem90m@1 (not recomputable)",
+     "source": "no committed source window for this band",
+     "scene_date": "no scene id with an acquisition date",
+     "tile_band": "no MGRS tile in the scene id",
+     "offset": "no BOA offset in the observation",
+     "unit": "elevation in 'ft', not m"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "CONSISTENT",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "signature",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  },
+  {
+   "item": "M20",
+   "family": "stale/history",
+   "threat": "real",
+   "primary": true,
+   "desc": "the real Sep record (915.07 m, signed 28 Sep) handed as what A cited on 15 Jun",
+   "B+": {
+    "accept": false,
+    "first_fail": "asof",
+    "checks": {
+     "binding": "pass",
+     "asof": "fail",
+     "recompute": "n/a",
+     "source": "n/a"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-09-28T09:05:19Z is after the as-of time 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for copernicus_dem_30m_aws_pixel@1 (not recomputable)",
+     "source": "no committed source window for this band"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B++": {
+    "accept": false,
+    "first_fail": "asof",
+    "checks": {
+     "binding": "pass",
+     "asof": "fail",
+     "recompute": "n/a",
+     "source": "n/a",
+     "scene_date": "n/a",
+     "tile_band": "n/a",
+     "offset": "n/a",
+     "unit": "pass"
+    },
+    "detail": {
+     "binding": "cell, band and date match the question",
+     "asof": "signed 2026-09-28T09:05:19Z is after the as-of time 2026-06-15T23:59:59Z",
+     "recompute": "no recipe for copernicus_dem_30m_aws_pixel@1 (not recomputable)",
+     "source": "no committed source window for this band",
+     "scene_date": "no scene id with an acquisition date",
+     "tile_band": "no MGRS tile in the scene id",
+     "offset": "no BOA offset in the observation",
+     "unit": "elevation in m"
+    },
+    "decision": "DECLINE",
+    "acted_value": null,
+    "fa": false,
+    "correct": true
+   },
+   "B": {
+    "accept": true,
+    "first_fail": null,
+    "decision": "INCONSISTENT",
+    "fa": true,
+    "correct": false
+   },
+   "E+": {
+    "accept": false,
+    "first_fail": "asof",
+    "decision": "DECLINE",
+    "fa": false,
+    "correct": true
+   }
+  }
+ ]
+}
