@@ -499,3 +499,79 @@ Not changed, as the review advised: the layout. Its other points are scope alrea
 integrated evidence protocol and its evaluation, not content addressing alone (the matched ablation strip); 300 trials
 are repeated corruption tests on two constructed tasks, not 300 independent EO applications; the satellite section is
 a scripted harness. Both variants pass the 18 gates; running text 800 words (801 in 300of300), 0 text overlaps.
+
+## 24. Pre-print pass (4 Oct 2026)
+
+The authors asked for a print-ready board: no vague text, no AI tells, no revision history on the face or the pages its
+QR codes open, and working QR codes. Every visible text run of both variants (HTML and 597 figure labels) was read and
+scanned for tell words, hedges and changelog wording; the eight docs pages were scanned the same way and the three QR
+landing pages read in full.
+
+| Where | Before | After | Why |
+|---|---|---|---|
+| Panel 1 orbit line | "...are downlinked, so no source re-read" | "...are downlinked, so the source is not re-read" | elliptical; "cannot" is a banned word |
+| Panel 2 caption | "Each calls for a different check." | "Each of these seven needs a different check." | the eighth value is the genuine one |
+| Panel 5 figure | "sampled pre-fix records", "both rules", "the old rule", "After the fix" | "records read by rounding", "round and floor", "rounding", "With floor"; the caption defines the rule: "read with a rounded pixel position; GDAL floors it" | the face never said what the fix was |
+| Panel 6 caption | "Deeper checks expose different corruptions." | "Each added check refuses a corruption that the checks before it pass." | stated from the first-refusal column (C to I) |
+| Panel 6 scope | "JSON and an opaque id caught some changes from their fields. On the live pre-fix record, ..." | "Reading the fields they carry, agents did not act on 112 of 276 corrupted JSON handoffs and 134 of 288 with an opaque id. On panel 5's real record, read live, ..." | "some" and "pre-fix" |
+| Panel 10 | headline "Beyond a single observation"; "In emem, the token family is how agents read Earth observation: ..." | "From a place to a device run"; "emem's tokens share one grammar." | a tell-word headline and a slogan |
+| Panel 10 figure | "Grey: encoders retired; ..." | "Grey: archived embeddings; ..." | status wording |
+
+Two figure lines ran past their figure's edge and were clipped in print. The panel 5 caption ran 4.2 mm over; its wrap
+now keeps a 12 mm margin and the caption drops its last sentence. The 300of300 bar note in panel 6 ran 13.5 mm over
+(the label change of section 23 lengthened it); it is shorter, and f6 now asserts that its notes fit. Matplotlib
+measures IBM Plex about 3 % narrower than Chromium sets it, and the build did not check figure text against the
+figure's edge. `no_overflow_or_clipping` now does, horizontally with 0.6 mm tolerance and vertically beyond the
+1.5 mm ascent box; a synthetic 13.5 mm overflow fails the gate.
+
+Visitor pages: the methods page's R5 note, its Rust note ("this build environment"), "restoration decisions", "Original
+v12", the eight-answer paragraph (which said the figure had moved off the board; it is panel 2) and the bundles
+paragraph (which said Berlin coverage absences are on the face; they are not) state results only. The record page
+drops the archived board track of the e66c3ba PDF and defines L0 to L5 under its table. The use page says "What was
+checked?", "One token, 11 client paths" and names panel 3's change in readout instead of the removed drift score.
+`docs/` is deployed as committed; `tools/site/site.mjs` predates the v13.10 page edits (AGENTS.md says so).
+
+QR codes, decoded with OpenCV from the print PDFs rasterised at 300 dpi (pdftoppm): all three decode in both variants.
+Degraded copies: the 50 mm tiles (INSPECT, CONNECT; version 4, level Q, 40 mm symbol, 1.22 mm per module) decode down
+to about 2.2 px/mm with blur, JPEG and a 12 degree tilt, which a 1080p phone stream reaches within about 0.6 m; the
+TRY IT code (69.7 mm symbol, 2.11 mm per module) decodes down to 1.0 px/mm, about 1.2 m. The site's phone test
+(`tools/site/test_site.mjs` on a copy of docs/) passes except where it needs emem.dev or Planetary Computer, which this
+environment blocks, and its fold check (the demo card's height depends on the step on screen; the page is unchanged
+since 2 Oct). The record and landing tests now match the pages. The Pages deploy of main after PR #71 succeeded.
+
+Print PDF: exact A0, one page, 39 font objects all embedded (IBM Plex subsets), vector text, five raster images at 305
+to 600 ppi with an ICC profile, RGB. No bleed is included; the navy header runs to the top and side edges, so a print
+shop that trims needs either borderless printing or a bleed version. Both variants pass the 18 gates; running text 793
+words (794 in 300of300), 0 text overlaps, no figure text past its edge.
+
+## 25. Footer references and panel 12, against emem's current work (4 Oct 2026)
+
+The authors asked that the board credit only what it shows and what emem runs now, not retired components or names
+from the conference programme. Each reference was checked against the face (where it is used) and against emem's
+main at 320a1d5 (`/home/user/vortx-ai/emem`, read-only).
+
+| Reference | On the face | In emem now | Decision |
+|---|---|---|---|
+| Prithvi-EO-2.0, TESSERA | grey token row only (archived embeddings) | retired: `EMEM_RETIRED_BANDS=geotessera,clay_v1,prithvi_eo2,galileo` (deploy/systemd/emem-server.service; "Retired here: the Clay, Prithvi, Galileo and JEPA-v2 models, and new Tessera embeddings", web/how-it-works.html) | dropped |
+| GeoGuard (NASA-IMPACT) | no | a paper title in docs/collaboration-log.md only | dropped |
+| TMF, ESA CCI Biomass v7, openEO 1.3, C2PA 2.4 | no | not on the board | dropped |
+| Sigstore, ARC (Dang et al. 2026), Perez et al. 2025, Munir et al. 2026, Cemri et al. 2025 (MAST), Townshend et al. 1992 | no | related literature, not named on the board | dropped |
+| JRC GFC2020 "V3/V4" | "no EUDR flag" (panel 5) | V4 current; V3 superseded (emem CHANGELOG at 18adb67) | "JRC GFC2020 V4", the version the Rondônia read used (05_failure_modes_catastrophe.md section 6) |
+| Hansen et al. 2013, GFC v1.13 | loss years (panel 5) | v1.13 current | kept |
+| Sentinel-2 Products Specification; Copernicus DEM GLO-30/90 | panels 1 to 5; panel 8 (DEM30, Open-Meteo DEM90) | yes | kept |
+| Reg. (EU) 2023/1115 (EUDR) | "EUDR" in panels 5 and 12 | EUDR workflows | added |
+| BLAKE3, Ed25519 (RFC 8032), RFC 6962/9162 | throughout | yes | kept |
+| CBOR (RFC 8949) | "CBOR(f)" in the coded record, panel 10 | yes | added (was missing) |
+| STAC "1.1" | the trace's STAC item | the items read carry stac_version 1.0.0 | "STAC 1.0" |
+| MCP 2025-11-25, A2A 1.0 | panel 12, workflow | MCP_LATEST_VERSION "2025-11-25", A2A_PROTOCOL_VERSION "1.0" (crates/emem-api-rest/src/lib.rs) | kept |
+| IPFS, SCITT (RFC 9943), W3C PROV-DM | named in panel 13's contribution | related work | "Related work: IPFS CIDs (multiformats), SCITT (RFC 9943), W3C PROV-DM"; IPFS was named but not credited |
+
+The footer now reads "Related work: ... · Data: ... · Standards: ...", with each item kept on one line.
+"Measurements: 29 Sep to 4 Oct 2026." is correct (row K.dates: the earliest printed measurement is 29 Sep, the matched
+baseline 4 Oct) and stays: it dates the evidence in one place.
+
+Panel 12: the Hugging Face Space pins an older emem image by digest (emem huggingface-space/Dockerfile: "Bump it
+deliberately when you want the next release pulled"; it answered as 1.1.0 on 30 Sep, against 2.4.2). Printing it
+unqualified would present a stale server as current, so it leaves the face (manifest: print not allowed, with the
+reason); the group title becomes "DISCOVERY", since none of the five remaining routes is a mirror. The companion
+directory on the use page still lists it with its caveat. Both variants pass the 18 gates; 27 printed routes.

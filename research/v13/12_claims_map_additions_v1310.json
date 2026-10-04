@@ -118,7 +118,7 @@
         "Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).",
         "Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (SAT-042 harness, not flown).",
         "By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (SAT-042 harness, not flown).",
-        "By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so no source re-read (SAT-042 harness, not flown)."
+        "By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so the source is not re-read (SAT-042 harness, not flown)."
       ],
       "status": "SPEC",
       "layer": "L5",
@@ -307,7 +307,7 @@
       "block": "v13.10 panel 10 context line",
       "print": [
         "The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.",
-        "In emem, the token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run."
+        "emem’s tokens share one grammar."
       ],
       "status": "SPEC",
       "layer": "L0",
@@ -5478,7 +5478,7 @@
       "id": "E8.summary",
       "op": "extend_print",
       "print_add": [
-        "Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each calls for a different check."
+        "Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each of these seven needs a different check."
       ],
       "note": "Panel 2 caption, 4 Oct 2026: NDVI is bounded to [-1, 1]; 1.1427 is outside it."
     },
@@ -5486,7 +5486,7 @@
       "id": "R5.F6.scope",
       "op": "extend_print",
       "print_add": [
-        "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026."
+        "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5); squares: deterministic ceiling. Totals: 23 to 25 items, 1 Oct 2026."
       ],
       "figures": [
         "f6_mutation_matrix.300of300"
@@ -5548,6 +5548,30 @@
         "2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item."
       ],
       "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
+    },
+    {
+      "id": "TF.family",
+      "op": "extend_print",
+      "print_add": [
+        "From a place to a device run"
+      ],
+      "note": "Panel 10 headline (pre-print pass, 4 Oct 2026): the range of the token table, from a place to a device run."
+    },
+    {
+      "id": "R5.baseline.catch",
+      "op": "extend_print",
+      "print_add": [
+        "Reading the fields they carry, agents did not act on 112 of 276 corrupted JSON handoffs and 134 of 288 with an opaque id."
+      ],
+      "note": "Panel 6 scope: the complements of 164 of 276 and 154 of 288 (pooled Claude, primary items), stated as counts."
+    },
+    {
+      "id": "X.loo",
+      "op": "extend_print",
+      "print_add": [
+        "Each added check refuses a corruption that the checks before it pass."
+      ],
+      "note": "Panel 6 caption: in the cumulative order C to I, each depth is the first to refuse at least one corruption (the 'first check that refuses' column: C, D, E, F, G, H, I)."
     }
   ]
 }

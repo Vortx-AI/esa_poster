@@ -32,7 +32,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > [variant:300of300] Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 acted on the genuine value); with an opaque id, 122 of 276; in prose, 22 of 276.
 
-> By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so no source re-read (SAT-042 harness, not flown).
+> By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so the source is not re-read (SAT-042 harness, not flown).
 
 ### 2 · One NDVI, eight values
 
@@ -42,7 +42,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > We varied one Keylong NDVI by scene, date, place, pixel and arithmetic.
 
-> Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each calls for a different check.
+> Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each of these seven needs a different check.
 
 ### 3 · Different drift, different check
 
@@ -106,7 +106,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Resolve · Re-hash · Bind · Signature · Log · Recompute · Re-read
 
-> Deeper checks expose different corruptions. Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one.
+> Each added check refuses a corruption that the checks before it pass. Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one.
 
 ### 8 · Revisit the earlier evidence
 
@@ -132,9 +132,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > What else can an agent carry?
 
-> Beyond a single observation
+> From a place to a device run
 
-> In emem, the token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.
+> emem’s tokens share one grammar.
 
 > One bundle resolves to eight facts; four reasoning-state addresses re-hash. Neither check validates an agent's reasoning.
 

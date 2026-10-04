@@ -932,23 +932,17 @@
   ],
   "user_can": "Try an old emem build in a browser",
   "caveats": [
-   "Stale mirror (1.1.0 vs 2.4.2). Do not print as equivalent to emem.dev."
+   "Stale mirror (1.1.0 vs 2.4.2). Do not print as equivalent to emem.dev.",
+   "Not printed on the poster (authors, 4 Oct 2026): the Space pins an older emem image by digest (huggingface-space/Dockerfile; 1.1.0 measured on 30 Sep). Print it again as 'Hugging Face' once that digest is bumped to the current release."
   ],
   "print": {
-   "allowed": true,
-   "text": "Hugging Face (older mirror)"
+   "allowed": false,
+   "text": ""
   },
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
-  "panel": {
-   "kind": "line",
-   "group": "discovery",
-   "line": 1,
-   "order": 1,
-   "label": "Hugging Face (older mirror)"
-  }
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
  },
  {
   "id": "context7",

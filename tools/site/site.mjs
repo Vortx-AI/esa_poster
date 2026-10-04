@@ -192,12 +192,6 @@ ${table(['field', 'value', 'in the signed preimage'], attRows)}
 <h2>3 · The public log</h2>
 ${table(['object', 'value', 'read-only link'], logRows)}
 <p class="note">These are the proofs the demo checks offline from the committed bundle (signed ${S.signed_at}). The links fetch fresh copies from emem.dev with GET. One organisation runs both the log and its only independent-tier witness today.</p>
-<div class="slot" id="board-track">
-<p><b>ARCHIVED BOARD TRACK</b></p>
-<p>The earlier PDF at commit e66c3ba is a step of a signed emem track: 21 steps, every record the board rests on in panel order, then the print file (PDF at commit e66c3ba) as a pointer note. ememdemo re-checks all 21 in the browser and recomputes the chain to its head <code>ct2yz27kkkrh64emgdzs7bybgy</code>; the track is log entry 2,591,968.</p>
-<p><a href="https://vortx-ai.github.io/ememdemo/?s=https%3A%2F%2Femem.dev%2Fmemories%2Fby_attester%2Fnjedkglt%2Fhepwyxdhiwckwi7qahkuvya2b4.md">Open the archived board track in ememdemo</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/hepwyxdhiwckwi7qahkuvya2b4.md">the track note</a> · <a href="https://emem.dev/memories/by_attester/njedkglt/7jr4zw2tq7slvbsyzbyxxzwwii.md">the print's pointer note</a>. Signed by the poster key njedkglt; composer: <code>research/repro/v13/track/make_track_v13.py</code>.</p>
-<p class="note">This track identifies that archived PDF. The current poster has new bytes; its file hash and build report are published in the repository. The archived signature does not attest the revised PDF.</p>
-</div>
 <h2>Check it yourself</h2>
 <ul>
 <li><a href="../demo/">VIEW THE DEMO</a>: your browser re-hashes these bytes, checks the attestation and the log, recomputes NDVI and re-reads the pixel.</li>

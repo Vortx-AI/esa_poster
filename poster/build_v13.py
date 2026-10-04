@@ -518,6 +518,17 @@ def g_overflow(meas):
             bx, by, bw, bh = blocks[bid]["rect"]
             if x < bx - 0.6 or y < by - 0.6 or x + w > bx + bw + 0.6 or y + h > by + bh + 0.6:
                 d.append(f"{bid}: text outside its block: {t['text'][:60]!r} at y {y:.1f} to {y + h:.1f} (block {by:.1f} to {by + bh:.1f})")
+    # figure text must stay inside its figure horizontally: the slot clips at the figure's edge, and matplotlib measures
+    # Plex about 3 % narrower than Chromium sets it (a vertical overshoot of up to 1.5 mm is the font's ascent box)
+    slots = {f["name"]: f["rect"] for f in meas["figs"]}
+    for t in meas["texts"]:
+        if not t["inSvg"] or t["fig"] not in slots or t["rect"][2] <= 0:
+            continue
+        sx, sy, sw, sh = slots[t["fig"]]
+        x, y, w, h = t["rect"]
+        over = max(sx - x, x + w - sx - sw, sy - y - 1.5, y + h - sy - sh - 1.5)
+        if over > 0.6:
+            d.append(f"{t['fig']}: figure text past the figure's edge by {over:.1f} mm: {t['text'][:60]!r}")
     for f in meas["figs"]:
         if f["block"] and f["block"] in blocks and blocks[f["block"]].get("bleed") != "right":
             bx, by, bw, bh = blocks[f["block"]]["rect"]
@@ -543,7 +554,7 @@ def g_overflow(meas):
             ov_x = min(x + w, qx + qw) - max(x, qx); ov_y = min(y + h, qy + qh) - max(y, qy)
             if ov_x > 0.5 and ov_y > 0.5:
                 d.append(f"QR {q['slug']} covers text {t['text'][:50]!r}")
-    return not d, d or ["no box larger than its parent; no text outside its block or the page; no QR over text"]
+    return not d, d or ["no box larger than its parent; no text outside its block or the page; no figure text past its figure's edge; no QR over text"]
 
 
 @gate("type_floor")

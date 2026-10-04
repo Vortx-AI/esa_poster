@@ -393,14 +393,16 @@ if MODE == "R5":
     reps = reps.replace("haiku", "Haiku 4.5").replace("sonnet", "Sonnet 5.5").replace("opus", "Opus 5.5")
     NI = f"{min(R5D['n_items'].values())} to {max(R5D['n_items'].values())}"   # 23 (A, B, RAG), 24 (opaque id), 25 (emem)
     if NOT_ACTED:
-        scope = (f"Bars: B did not act on it (declined, or acted on the genuine value), n {R5D['per_cell']} ({reps} runs); "
-                 f"squares: deterministic ceiling. Totals pool {NI} items, {R5D['date']}.")
+        scope = (f"Bars: B did not act on it (declined, or acted on the genuine value), n {R5D['per_cell']} ({reps}); "
+                 f"squares: deterministic ceiling. Totals: {NI} items, {R5D['date']}.")
     else:
         scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
                  f"squares: the deterministic ceiling. Totals pool {NI} items, {R5D['date']}.")
     scope_claim = "R5.F6.scope"
-T(0, yl + 5.9, scope, 14, color=C["ink2"], claim=scope_claim)
-T(0, yl + 11.2, scope2, 14, color=C["ink2"], claim="X.p123")
+for _y, _s, _c in ((yl + 5.9, scope, scope_claim), (yl + 11.2, scope2, "X.p123")):
+    _t = T(0, _y, _s, 14, color=C["ink2"], claim=_c)
+    # Chromium sets Plex about 3 % wider than matplotlib measures it, and the slot clips at the figure edge
+    assert wmm(_t) * 1.04 <= W, f"note runs past the figure edge: {_s[:60]!r} ({wmm(_t):.1f} mm)"
 
 assert y_end < 170, y_end
 save(fig, NAME)
