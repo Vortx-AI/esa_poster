@@ -230,7 +230,6 @@ h2.steps>span{padding:0 1.6mm;line-height:1.02}
 h2.steps{gap:1.2mm;margin-top:.6mm}
 h2.steps>span:last-child{background:var(--emem);color:#FFFFFF;border-color:var(--emem)}
 .mech.steps>span{border-color:var(--emem);color:var(--emem);background:var(--emem-tint);font-weight:500}
-.mech.steps .ly{font-style:normal;font-weight:400;color:var(--ink2)}   /* layer key for the L0 to L3 tags in panels 2, 4 and 5 */
 
 .nw{white-space:nowrap}
 /* v13.10: boxed steps read as one chain: a short rule joins neighbouring boxes */

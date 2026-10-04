@@ -8,7 +8,9 @@
         "Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?",
         "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
         "emem makes satellite observations, raw or derived, addressable by place, band and time: records named by the BLAKE3 hash of their bytes, signed in batches. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
-        "emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name."
+        "emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
+        "Agent A cites a satellite observation. What can agent B check without trusting A or A’s model?",
+        "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -88,7 +90,8 @@
       "print": [
         "Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).",
         "Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (SAT-042 harness, not flown).",
-        "By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (SAT-042 harness, not flown)."
+        "By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (SAT-042 harness, not flown).",
+        "By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so no source re-read (SAT-042 harness, not flown)."
       ],
       "status": "SPEC",
       "layer": "L5",
@@ -106,7 +109,7 @@
         "file": "repro/v12/trace/sat042_run_stdout.txt",
         "arg": "emem:trace:3arfrney6ieeugzekzqfufwoayvqj3edhc6fbwaqzhydxn2hbogq"
       },
-      "note": "Design, exercised in a reference harness; no spacecraft enrolled.",
+      "note": "Design, exercised in a reference harness; no spacecraft enrolled. 4 Oct 2026 (two reviews): states what crosses the space-ground boundary; an orbit-only observation has no source re-read, its ground checks are the signed trace and an archive anchor (panel 11; trace_truth.md: device profiles require a signed execution trace).",
       "tier": "1m",
       "checked": true
     },
@@ -171,7 +174,9 @@
         "8-9 upstream the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900",
         "10-11 server signature",
         "12-14 public log entry 2,457,078 is in the 2,556,451-entry log",
-        "15 signing key"
+        "15 signing key",
+        "8-9 upstream the STAC item matches the scene; the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900 · this STAC item carries no checksum",
+        "12-14 public log entry 2,457,078 is in the 2,556,451-entry log, consistent with the signed tree head (STH) geo.qa co-signed"
       ],
       "status": "MEASURED",
       "layer": "L0-L3",
@@ -273,7 +278,8 @@
       "id": "TF.reads",
       "block": "v13.10 panel 10 context line",
       "print": [
-        "The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run."
+        "The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.",
+        "In emem, the token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run."
       ],
       "status": "SPEC",
       "layer": "L0",
@@ -5042,7 +5048,8 @@
       "block": "v13.10 P1 scope",
       "print": [
         "Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run.",
-        "The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet."
+        "The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet.",
+        "Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5167,7 +5174,8 @@
       "id": "R5.design",
       "block": "v13.10 P1 headline",
       "print": [
-        "The same corruptions, handed over five ways."
+        "The same corruptions, handed over five ways.",
+        "The same corruptions, five handoff conditions."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5209,6 +5217,29 @@
         "arg": "255 signed as an Absence (open sea or no valid observation)"
       },
       "note": "From the list of unprinted items (26_V13_10_REVIEW.md sections 8 and 13): the only one with an in-repo source that fits the subhero.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.tasks",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "2,794 scored trials of 25 items from two constructed tasks, 1 Oct 2026"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "n/a",
+      "source": {
+        "file": "research/repro/v13/r5/prereg.md",
+        "pointer": "section 2: Task K (Keylong irrigation rule) and Task B (Bengaluru as-of audit); primary item set 25 items (23 in A, B and C; 24 in D); n_trials_scored 2794 in results.json"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v13/r5/prereg.md",
+        "arg": "**Task B** Bengaluru site"
+      },
+      "note": "Added after the 4 Oct reviews: the trial count is repetitions over two constructed tasks, not thousands of independent EO problems.",
       "tier": "1m",
       "checked": true
     }
@@ -5256,6 +5287,22 @@
         "f6_mutation_matrix.300of300"
       ],
       "note": "300of300 bar note, 4 Oct 2026: 'genuine record' as in panel 1."
+    },
+    {
+      "id": "U.flow",
+      "op": "extend_print",
+      "print_add": [
+        "Agent A cites a satellite reading. A relay or a faulty signer changes the evidence. Agent B acts on it, declines it or uses the genuine record."
+      ],
+      "note": "Panel 1 mechanism: corruptions include signer errors (f2: relay or faulty signer)."
+    },
+    {
+      "id": "MF.identity",
+      "op": "extend_print",
+      "print_add": [
+        "cid(record) = BLAKE3(CBOR(record))"
+      ],
+      "note": "Panel 9: 'canonical' dropped; emem encodes in declaration order, not RFC 8949 sorted keys (code box), so a sorted-key encoder gives a different cid."
     }
   ]
 }

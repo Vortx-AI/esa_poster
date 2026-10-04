@@ -185,7 +185,7 @@ def main():
         T(ax, lx, ty + 5.0, val, CLAIM[key], fontsize=PT["caption"], fontweight=700, color=tcol, va="baseline",
           zorder=6)
         if r["check"]:
-            cs = f"{r['check']} {r['layer']}"
+            cs = r['check']   # depth shows as colour; no L0 to L3 text (EO readers take L2 as a product level)
             cw = text_w(ax, cs, fontsize=S.FLOOR, fontweight=600) + 3.6
             chip(ax, lx + vw + 2.0, ty + 0.6, cs, r["layer"], "F3.chips")
         T(ax, lx, ty + 10.6, desc, CLAIM[key], fontsize=S.FLOOR, color=C["ink2"], va="baseline", zorder=6)

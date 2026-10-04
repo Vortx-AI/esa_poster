@@ -91,13 +91,13 @@ assert len(ids_in) - 1 == SUM["I"]["applicable"] == 16, "16 in-scope corruptions
 # Short descriptions for the 30 cm tier. Each is a shortening of meta.mutations[].desc; every number or quoted
 # token it prints must occur in that desc (asserted), so no value is typed that the suite did not use.
 SHORT = {
-    "M1": "stated value moved by 1 ULP", "M2": "stated value rounded to “0.47”",
+    "M1": "stated value changed in its last bit", "M2": "stated value rounded to “0.47”",
     "M8": "value 0.45, re-encoded and re-hashed", "M4": "record cited for another cell",
     "M9": "cell changed inside the record, re-hashed", "M10": "tslot changed to look current, re-hashed",
     "M6": "a record for another band handed over", "M11": "source scene id changed, re-hashed",
     "M12": "offset changed, value recomputed, re-hashed", "M14": "value (0.46) disagrees with the signed DNs",
     "M5": "an older record handed over as current", "M16": "a second signed version shown only to B",
-    "M3": "1 ULP changed inside the served bytes", "M7": "token miscopied by one character",
+    "M3": "last bit changed inside the served bytes", "M7": "token miscopied by one character",
     "M13": "value 0.45 under the forger's own key", "M15": "DNs read from the pixel 10 m south",
     "M17": "same record; A meant another entity (out of scope)",
 }
@@ -288,7 +288,6 @@ def row(mid, y, h, first_in_group, fam):
           color="white" if layer in ("L2", "L3") else C["ink"], claim="F6.first")
         if ONLY.get(mid) == fp:
             box(X_FC + 0.6, cy - 3.25, 9.4, 6.5, "none", ec=C["ink"], lw=0.6, r=1.6, z=3)
-        T(X_FC + 11.6, cy, layer, 14, color=C["ink2"], claim="F6.first")
     else:
         hatch(X_FC + 2.0, cy - 2.4, 6.6, 4.8, pitch=1.2, z=3)
         T(X_FC + 11.6, cy, "none", 14, color=C["ink2"], claim="X.entity")
@@ -300,7 +299,7 @@ def row(mid, y, h, first_in_group, fam):
 y = 21.6
 g0h = 4.6
 T(X_ID + 0.8, y + g0h / 2, "G0", 15, family=MONO, color=C["ink2"], claim="F6.ids")
-T(X_DESC, y + g0h / 2, "nothing altered: accepted everywhere, never refused", 14, color=C["ink2"], claim="S.R1.I")
+T(X_DESC, y + g0h / 2, "nothing altered: no check refuses it", 14, color=C["ink2"], claim="S.R1.I")
 for c in cond_cols:
     if c in LEVELS:
         assert BY[("G0", c)]["outcome"] == "acted correctly"
@@ -377,7 +376,7 @@ for lv in ["C"] + DEPTH:
     name, layer = CHECK[lv]
     box(lx, yl - 2.3, 5.6, 4.6, RAMP[layer], r=0.6)
     T(lx + 2.8, yl, lv, 14, weight=700, ha="center", color="white" if layer in ("L2", "L3") else C["ink"])
-    t = T(lx + 7.0, yl, f"{name} {layer}", 14, color=C["ink2"], claim="F6.checks")
+    t = T(lx + 7.0, yl, name, 14, color=C["ink2"], claim="F6.checks")   # depth shows as colour, not L0 to L3 text
     lx += 7.0 + wmm(t) + 4.6
 T(lx + 2, yl, "D to I are cumulative: each adds one check", 14, color=C["muted"], claim="F6.cumulative")
 

@@ -56,6 +56,7 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
 - Numbers are copied from measurement files, never from prose. Counts carry their units and their date.
 - No service or code versions on the face (for example "emem.dev at 8e9b401"): they advance with every upgrade. The
   claims rows and `research/` keep them.
+- Check depth shows as colour and check names, not as "L0" to "L3": EO readers take those for processing levels.
 - Never commit signing keys (`.gitignore` covers the usual names).
 
 The ecosystem figure is generated from `research/v13/ecosystem_manifest.json` by `poster/ecosystem.py`. Dates older than 28 days (LIVE claim rows and ecosystem rows), unqualified statuses and manually added SVG copy fail the build and CI. Run `python -m unittest discover -s poster/tests -v` after changing claim or ecosystem gates.

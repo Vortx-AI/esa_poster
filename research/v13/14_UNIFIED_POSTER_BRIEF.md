@@ -14,9 +14,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. Where no observation exists, emem signs an absence and its reason, not a zero.
 
-> Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
+> Agent A cites a satellite observation. What can agent B check without trusting A or A’s model?
 
-> emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
+> emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.
 
 > A compact citation keeps the observation traceable across agents and time. Design goal: encode in orbit, decode in AI’s reasoning with emem.
 
@@ -24,15 +24,15 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Does agent B act on a corrupted handoff?
 
-> The same corruptions, handed over five ways.
+> The same corruptions, five handoff conditions.
 
-> Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it, declines it or uses the genuine record.
+> Agent A cites a satellite reading. A relay or a faulty signer changes the evidence. Agent B acts on it, declines it or uses the genuine record.
 
 > [variant:0of300] Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).
 
 > [variant:300of300] Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.
 
-> By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (SAT-042 harness, not flown).
+> By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so no source re-read (SAT-042 harness, not flown).
 
 ### 2 · One NDVI, eight values
 
@@ -46,7 +46,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 ### 3 · Different drift, different check
 
-> Where did the evidence change?
+> Why can a value change?
 
 > A changed value needs a cause
 
@@ -82,7 +82,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > EO evidence that travels between agents, checked by the receiver down to the source pixel.
 
-> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 6).
+> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 5).
 
 ### 4 · What exactly is handed over
 
@@ -94,21 +94,21 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > BLAKE3 identifies the 1,115-byte record. Its fields name the source files, sampled point and derivation; a batch signature covers the record address. Source-file hashes are absent from this record.
 
-### 5 · Checks back to the source
+### 5 · Source re-read
+
+> A valid record can preserve a wrong source read
+
+> NDVI = (DN8 − DN4) / (DN8 + DN4 + 2o), o = −1000 (product offset)
+
+### 6 · Checks back to the source
 
 > Which changes can the receiver detect?
 
 > Checks can continue back to the source
 
-> Resolve L0 · Re-hash L0 · Bind L1 · Recompute L2 · Re-read L3
+> Resolve · Re-hash · Bind · Signature · Log · Recompute · Re-read
 
 > Deeper checks expose different corruptions. Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one.
-
-### 6 · Source re-read
-
-> A valid record can preserve a wrong source read
-
-> NDVI = (DN8 − DN4) / (DN8 + DN4 + 2o), o = −1000 (product offset)
 
 ### 8 · Revisit the earlier evidence
 
@@ -116,7 +116,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Revisit the earlier evidence
 
-> Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.
+> Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. If no candidate exists, recall returns an empty result; CID order breaks ties.
 
 > The later 915.07 m reflects a provider change.
 
@@ -138,7 +138,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Beyond a single observation
 
-> The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.
+> In emem, the token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.
 
 > One bundle resolves to eight facts; four reasoning-state addresses re-hash. Neither check validates an agent's reasoning.
 

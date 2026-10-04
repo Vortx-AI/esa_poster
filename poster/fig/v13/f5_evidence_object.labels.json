@@ -81,7 +81,7 @@
    "claim": "F5.fields"
   },
   {
-   "text": "bound L1",
+   "text": "bound",
    "pt": 14,
    "claim": "F5.tags"
   },
@@ -96,7 +96,7 @@
    "claim": "F5.fields"
   },
   {
-   "text": "bound L1",
+   "text": "bound",
    "pt": 14,
    "claim": "F5.tags"
   },
@@ -111,7 +111,7 @@
    "claim": "F5.fields"
   },
   {
-   "text": "bound L1",
+   "text": "bound",
    "pt": 14,
    "claim": "F5.tags"
   },
@@ -126,7 +126,7 @@
    "claim": "F5.fields"
   },
   {
-   "text": "recomputable L2",
+   "text": "recomputable",
    "pt": 14,
    "claim": "F5.tags"
   },
@@ -196,7 +196,7 @@
    "claim": "F5.fields"
   },
   {
-   "text": "named L3",
+   "text": "named",
    "pt": 14,
    "claim": "F5.tags"
   },
@@ -231,7 +231,7 @@
    "claim": "F5.fields"
   },
   {
-   "text": "named L3",
+   "text": "named",
    "pt": 14,
    "claim": "F5.tags"
   },
@@ -376,7 +376,7 @@
    "claim": "O.84"
   },
   {
-   "text": "46 tokens (cl100k)",
+   "text": "46 GPT-4 tokens",
    "pt": 14,
    "claim": "O.46"
   }

@@ -363,8 +363,8 @@
     },
     {
       "word": "cannot",
-      "text_sha": "de95443b6fb013bcf03e8caeca410c12a5e44db483cf935f0f336c0dc02d75b0",
-      "sentence": "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
+      "text_sha": "d22fcfddbbb6a6049431b593f0f50377fbd7bdc4348910fd18b7b550b4538d17",
+      "sentence": "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.",
       "where": "html:header_text:body",
       "evidence": "LEAD.answer",
       "reason": "holds by default: /v1/attest is closed to agents (FACT PLANE IS CLOSED BY DEFAULT, lib.rs:33194 at 18adb67); caller derivatives are kept only after emem recomputes them"

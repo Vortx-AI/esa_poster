@@ -161,10 +161,10 @@ def field(kx, vx, y, key, val, claim, tags=()):
     return x
 
 
-col1 = [("kind", REC["kind"], ()), ("cell", REC["cell"], (("bound L1", "bound", "F5.tags"),)),
-        ("band", REC["band"], (("bound L1", "bound", "F5.tags"),)),
-        ("tslot", f"{REC['tslot']} ({day.day} {day.strftime('%b')})", (("bound L1", "bound", "F5.tags"),)),
-        ("value", repr(REC["value"]), (("recomputable L2", "recomp", "F5.tags"),)),
+col1 = [("kind", REC["kind"], ()), ("cell", REC["cell"], (("bound", "bound", "F5.tags"),)),
+        ("band", REC["band"], (("bound", "bound", "F5.tags"),)),
+        ("tslot", f"{REC['tslot']} ({day.day} {day.strftime('%b')})", (("bound", "bound", "F5.tags"),)),
+        ("value", repr(REC["value"]), (("recomputable", "recomp", "F5.tags"),)),
         ("confidence", f"{REC['confidence']:.2f}", ())]
 for i, (k, v, tg) in enumerate(col1):
     xe = field(KX, VX, Y0 + i * PITCH, k, v, "F5.fields", tg)
@@ -183,10 +183,10 @@ ax.plot([X2 + 3, X2 + W2 - 3], [ys - 3.2, ys - 3.2], color=C["rule"], lw=0.35 / 
 cap = SRC["captured_at"]
 cap_s = cap[:19] + "Z"
 rows = [("sources", f"{SRC['scheme']} · …{tails[0]}_10m.tif ; …{tails[1]}_10m.tif",
-         (("named L3", "named", "F5.tags"),)),
+         (("named", "named", "F5.tags"),)),
         ("", f"captured {cap_s}", ()),
         ("derivation", f"{REC['derivation']['fn_key']} · EPSG {ARGS[3]}", ()),
-        ("", f"scene {ARGS[2][:38]}…", (("named L3", "named", "F5.tags"),)),
+        ("", f"scene {ARGS[2][:38]}…", (("named", "named", "F5.tags"),)),
         ("", f"DNs {ARGS[5][0]:.0f} / {ARGS[5][1]:.0f} · offset −{-ARGS[12]:.0f} · "
              f"+ {len(ARGS) - 4} more args", ())]
 for i, (k, v, tg) in enumerate(rows):
@@ -238,7 +238,7 @@ ax.plot([X3 + W3 / 2, X3 + W3 / 2, cid_x0 + cid_w / 2, cid_x0 + cid_w / 2], [BOT
         color=C["emem"], lw=0.5 / PTMM, zorder=2)
 xr = x + 6.0
 T(xr, yt - 2.9, f"handed over: {len(TOKEN)} characters,", 14, color=C["ink"], claim="O.84")
-T(xr, yt + 2.9, f"{TC['fact_token_ndvi']['cl100k']} tokens (cl100k)", 14, color=C["ink"], claim="O.46")
+T(xr, yt + 2.9, f"{TC['fact_token_ndvi']['cl100k']} GPT-4 tokens", 14, color=C["ink"], claim="O.46")
 
 save(fig, NAME)
 json.dump({"figure": NAME, "size_mm": [W, H], "labels": LABELS},
