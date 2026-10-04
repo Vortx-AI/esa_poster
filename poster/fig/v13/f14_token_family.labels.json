@@ -236,12 +236,12 @@
    "claim": "V7.token_labels"
   },
   {
-   "text": "At emem 18adb67, names, sets and records hash differently.",
+   "text": "Names, sets and records hash differently.",
    "pt": 14,
    "claim": "V7.token_labels"
   },
   {
-   "text": "track.v1 is a note. Trace evidence here is a reference harness.",
+   "text": "Grey: encoders retired; device runs in a reference harness.",
    "pt": 14,
    "claim": "V7.token_labels"
   }

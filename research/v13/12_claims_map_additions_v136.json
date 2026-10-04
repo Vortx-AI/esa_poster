@@ -88,7 +88,8 @@
       "id": "V6.controls",
       "print": [
         "71 of 72",
-        "one was refused"
+        "one was refused",
+        "Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one."
       ],
       "status": "MEASURED",
       "source": {
@@ -136,7 +137,8 @@
       "id": "V6.controls.refused",
       "print": [
         "71 of 72",
-        "one was refused"
+        "one was refused",
+        "Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one."
       ],
       "status": "MEASURED",
       "source": {

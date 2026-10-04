@@ -459,7 +459,7 @@
    "block": "P5 / F6",
    "print": [
     "B acts on corrupted evidence",
-    "B declined corrupted evidence"
+    "B did not act on corrupted evidence"
    ],
    "status": "MEASURED",
    "layer": "n/a",
@@ -573,7 +573,8 @@
    "id": "F7.same",
    "block": "P6 / F7",
    "print": [
-    "38: both rules read one pixel"
+    "38: both rules read one pixel",
+    "38: both rules agree"
    ],
    "status": "MEASURED",
    "layer": "L3",

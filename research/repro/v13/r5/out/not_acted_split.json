@@ -1,0 +1,142 @@
+{
+ "generated_by": "research/repro/v13/r5/not_acted_split.py",
+ "scope": "primary items, three Claude models pooled, block 1",
+ "definition": "not acted on = n - acted_on_corrupted = declined + acted_on_genuine + no_parsable_decision",
+ "conditions": {
+  "A": {
+   "n": 276,
+   "acted_on_corrupted": 254,
+   "declined": 22,
+   "acted_on_genuine": 0,
+   "no_parsable_decision": 0,
+   "not_acted_on": 22
+  },
+  "B": {
+   "n": 276,
+   "acted_on_corrupted": 164,
+   "declined": 106,
+   "acted_on_genuine": 6,
+   "no_parsable_decision": 0,
+   "not_acted_on": 112
+  },
+  "C": {
+   "n": 276,
+   "acted_on_corrupted": 220,
+   "declined": 56,
+   "acted_on_genuine": 0,
+   "no_parsable_decision": 0,
+   "not_acted_on": 56
+  },
+  "D": {
+   "n": 288,
+   "acted_on_corrupted": 154,
+   "declined": 88,
+   "acted_on_genuine": 46,
+   "no_parsable_decision": 0,
+   "not_acted_on": 134
+  },
+  "E": {
+   "n": 300,
+   "acted_on_corrupted": 0,
+   "declined": 264,
+   "acted_on_genuine": 36,
+   "no_parsable_decision": 0,
+   "not_acted_on": 300
+  },
+  "E+": {
+   "n": 300,
+   "acted_on_corrupted": 0,
+   "declined": 264,
+   "acted_on_genuine": 36,
+   "no_parsable_decision": 0,
+   "not_acted_on": 300
+  },
+  "E0": {
+   "n": 300,
+   "acted_on_corrupted": 2,
+   "declined": 261,
+   "acted_on_genuine": 37,
+   "no_parsable_decision": 0,
+   "not_acted_on": 298
+  }
+ },
+ "shared_items": {
+  "n_items": 23,
+  "items": [
+   "M1",
+   "M10",
+   "M11",
+   "M12",
+   "M13",
+   "M14",
+   "M15",
+   "M15r",
+   "M16",
+   "M18",
+   "M2",
+   "M2-B",
+   "M20",
+   "M23",
+   "M24",
+   "M25",
+   "M3",
+   "M4",
+   "M5",
+   "M5b",
+   "M6",
+   "M8",
+   "M9"
+  ],
+  "conditions": {
+   "A": {
+    "n": 276,
+    "acted_on_corrupted": 254,
+    "declined": 22,
+    "acted_on_genuine": 0,
+    "no_parsable_decision": 0
+   },
+   "B": {
+    "n": 276,
+    "acted_on_corrupted": 164,
+    "declined": 106,
+    "acted_on_genuine": 6,
+    "no_parsable_decision": 0
+   },
+   "C": {
+    "n": 276,
+    "acted_on_corrupted": 220,
+    "declined": 56,
+    "acted_on_genuine": 0,
+    "no_parsable_decision": 0
+   },
+   "D": {
+    "n": 276,
+    "acted_on_corrupted": 154,
+    "declined": 82,
+    "acted_on_genuine": 40,
+    "no_parsable_decision": 0
+   },
+   "E": {
+    "n": 276,
+    "acted_on_corrupted": 0,
+    "declined": 240,
+    "acted_on_genuine": 36,
+    "no_parsable_decision": 0
+   },
+   "E+": {
+    "n": 276,
+    "acted_on_corrupted": 0,
+    "declined": 240,
+    "acted_on_genuine": 36,
+    "no_parsable_decision": 0
+   },
+   "E0": {
+    "n": 276,
+    "acted_on_corrupted": 2,
+    "declined": 237,
+    "acted_on_genuine": 37,
+    "no_parsable_decision": 0
+   }
+  }
+ }
+}

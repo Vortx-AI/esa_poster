@@ -28,7 +28,9 @@
         "Continue",
         "Reason with cited evidence",
         "Carry the reference onward.",
-        "Canonical record + CID"
+        "Canonical record + CID",
+        "Hash · bind · sign · source",
+        "If one fails: refuse."
       ],
       "status": "SPEC",
       "layer": "L0-L3",

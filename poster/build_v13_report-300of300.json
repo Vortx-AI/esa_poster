@@ -1,13 +1,13 @@
 {
- "built_utc": "2026-10-04T12:02:21+00:00",
+ "built_utc": "2026-10-04T12:02:03+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
-  "poster/poster.html",
-  "poster/emem-poster-A0.pdf",
-  "poster/emem-poster-preview.png",
-  "poster/emem-poster-A0-300dpi.png"
+  "poster/poster-300of300.html",
+  "poster/emem-poster-A0-300of300.pdf",
+  "poster/emem-poster-preview-300of300.png",
+  "poster/emem-poster-A0-300dpi-300of300.png"
  ],
- "variant": "0of300",
+ "variant": "300of300",
  "mode": {
   "results_file": "research/repro/v13/r5/results.json",
   "exists": true,
@@ -40,10 +40,10 @@
   },
   "f2_spine": {
    "state": "placed",
-   "file": "poster/fig/v13/f2_spine.svg",
+   "file": "poster/fig/v13/f2_spine.300of300.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T10:46:36"
+   "mtime": "2026-10-04T10:46:41"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -75,10 +75,10 @@
   },
   "f6_mutation_matrix": {
    "state": "placed",
-   "file": "poster/fig/v13/f6_mutation_matrix.svg",
+   "file": "poster/fig/v13/f6_mutation_matrix.300of300.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T11:51:41"
+   "mtime": "2026-10-04T11:51:43"
   },
   "f7_wrong_pixel": {
    "state": "placed",
@@ -116,7 +116,7 @@
    "mtime": "2026-10-04T09:46:44"
   }
  },
- "figure_text_tokens": 1802,
+ "figure_text_tokens": 1809,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -165,7 +165,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (874 text runs)"
+    "every printed code point is in the face that sets it (872 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -189,7 +189,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "178 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "180 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -286,7 +286,7 @@
  },
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
-  "Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).",
+  "Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.",
   "B was Claude Haiku 4.5, Sonnet 5.5 or Opus 5.5, pooled, with Qwen2.5-7B reported apart; 2,794 scored trials on 1 Oct 2026. The figure counts each condition’s full item set. In the emem condition, B had the reference, a verifier tool and an instruction to check. The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet. Qwen2.5-7B (one run) acted on 22 of 23 corrupted prose handoffs and 2 of 25 with an emem reference. Corruptions are simulated on a small task set; intervals are in Reproduce.",
   "Each agent bar is 12 runs of one item; totals pool 23 items per condition (24 for the opaque id, 25 for emem). JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
@@ -461,34 +461,35 @@
   "Q.inspect_record",
   "Q.view_demo",
   "Q.view_demo.caption",
-  "R5.A.pooled",
+  "R5.A.notacted",
   "R5.A.qwen7b",
-  "R5.B.pooled",
-  "R5.C.pooled",
-  "R5.D.pooled",
-  "R5.E.pooled",
+  "R5.B.notacted",
+  "R5.C.notacted",
+  "R5.D.notacted",
+  "R5.E.notacted",
   "R5.E.qwen7b",
   "R5.F6.scope",
   "R5.baseline.catch",
   "R5.block2.M15r",
-  "R5.cell.A.M9.false_accept",
-  "R5.cell.B.M12.false_accept",
-  "R5.cell.D.M1.false_accept",
-  "R5.cell.D.M12.false_accept",
-  "R5.cell.D.M13.false_accept",
-  "R5.cell.D.M15.false_accept",
-  "R5.cell.D.M5.false_accept",
-  "R5.cell.D.M6.false_accept",
-  "R5.cell.D.M7.false_accept",
+  "R5.cell.A.M9.notacted",
+  "R5.cell.B.M12.notacted",
+  "R5.cell.D.M1.notacted",
+  "R5.cell.D.M12.notacted",
+  "R5.cell.D.M13.notacted",
+  "R5.cell.D.M15.notacted",
+  "R5.cell.D.M5.notacted",
+  "R5.cell.D.M6.notacted",
+  "R5.cell.D.M7.notacted",
   "R5.dates",
   "R5.design",
   "R5.items",
   "R5.limits",
   "R5.models",
-  "R5.shared.A.acted",
-  "R5.shared.D.acted",
-  "R5.shared.E.acted",
-  "R5.shared.E0.acted",
+  "R5.shared.A.notacted",
+  "R5.shared.D.notacted",
+  "R5.shared.E.acted_on_genuine",
+  "R5.shared.E.declined",
+  "R5.shared.E.notacted",
   "R5.shared.n",
   "R5.split.A.declined",
   "R5.split.B.declined",
@@ -501,9 +502,10 @@
   "R5.split.E.genuine",
   "R5.treatment",
   "REF.footer",
-  "S.R1.B",
-  "S.R1.C",
+  "S.R1.B.notacted",
+  "S.R1.C.notacted",
   "S.R1.I",
+  "S.R1.I.notacted",
   "S.threshold",
   "SAT.gate",
   "SAT.run",

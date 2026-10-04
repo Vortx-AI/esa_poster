@@ -169,6 +169,10 @@ col1 = [("kind", REC["kind"], ()), ("cell", REC["cell"], (("bound L1", "bound", 
 for i, (k, v, tg) in enumerate(col1):
     xe = field(KX, VX, Y0 + i * PITCH, k, v, "F5.fields", tg)
     assert xe < KX2 - 1 or i >= 4, (k, xe)
+    if k == "confidence":   # v13.10: what 0.95 is (trace_fact_output.txt link 9b)
+        tn = T(xe + 1.0, Y0 + i * PITCH, "fixed per scene class (SCL 4 here), not a measured uncertainty", 14,
+               color=C["ink2"], claim="F5.conf")
+        assert xe + 1.0 + wmm(tn) < X2 + W2 - 1, wmm(tn)
 col2 = [("privacy", REC["privacy_class"]), ("schema", REC["schema_cid"][:8] + "…"),
         ("signer", SIGNER[:8] + "…"), ("signed", REC["signed_at"])]
 for i, (k, v) in enumerate(col2):

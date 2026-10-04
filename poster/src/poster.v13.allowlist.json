@@ -362,22 +362,6 @@
       "reason": "Explicit NOT ESTABLISHED column of the record guarantee boundary."
     },
     {
-      "word": "hash of",
-      "text_sha": "62d78542ee22734fc7c0887b194208e3794f8f1fb32d31c06467f039fd5c7e06",
-      "sentence": "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes.",
-      "where": "html:header_text:body",
-      "evidence": "LEAD.answer",
-      "reason": "the subject is the record ('a signed record named by the BLAKE3 hash of its bytes'), not the observation or a pixel; the code box prints fact_cid = base32(BLAKE3-256(b)) with b = CBOR(f)"
-    },
-    {
-      "word": "verif-without-layer",
-      "text_sha": "e6581eed2790f563a78b56d01ad65e9740e3f09d10a5aaa9f7084bd417edc2b7",
-      "sentence": "The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel.",
-      "where": "html:header_text:body",
-      "evidence": "LEAD.answer",
-      "reason": "the log entry and receipt checks are trace links 10 to 14 (L0-L3); the receipt is Ed25519-checked offline with the responder key (trace_fact_output.txt link 10)"
-    },
-    {
       "word": "cannot",
       "text_sha": "de95443b6fb013bcf03e8caeca410c12a5e44db483cf935f0f336c0dc02d75b0",
       "sentence": "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
@@ -387,11 +371,11 @@
     },
     {
       "word": "deployment-wording",
-      "text_sha": "d6e83c9ea47d9db7fac4f8026e409ace87cc4f00526114fb18651c0c67198f73",
-      "sentence": "Encode in orbit, decode in AI’s reasoning with emem.",
+      "text_sha": "792f238de2530891cd8480c72e1f3f043b6280cb435e206497fbe51b9d7309f8",
+      "sentence": "Design goal: encode in orbit, decode in AI’s reasoning with emem.",
       "where": "html:header_text:bridge",
       "evidence": "ORBIT.tagline",
-      "reason": "design tagline; panel 1 and panel 11 print the reference-harness scope (no spacecraft enrolled)"
+      "reason": "stated as a design goal (4 Oct 2026); panel 1 and panel 11 print the reference-harness scope (no spacecraft enrolled)"
     },
     {
       "word": "all",
@@ -408,6 +392,30 @@
       "where": "html:trace:body",
       "evidence": "TRACE.run",
       "reason": "the fifteen links are named in the panel rows, layers L0 to L3"
+    },
+    {
+      "word": "verif-without-layer",
+      "text_sha": "b3195cee5eebd429c4367f41750e47b12f0d26967c7561778c2b6f953f23e428",
+      "sentence": "The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel.",
+      "where": "html:header_text:body",
+      "evidence": "LEAD.answer",
+      "reason": "the log entry and receipt checks are trace links 10 to 14 (L0-L3); the receipt is Ed25519-checked offline with the responder key (trace_fact_output.txt link 10); compaction removed on review (not shown on this board)"
+    },
+    {
+      "word": "hash of",
+      "text_sha": "e0a42b27bc4d4edc52985f1f97278037964c2d472c79b972160e356004219c49",
+      "sentence": "Each is a record named by the BLAKE3 hash of its bytes and signed in a batch.",
+      "where": "html:header_text:body",
+      "evidence": "LEAD.answer",
+      "reason": "the subject is the record ('a record named by the BLAKE3 hash of its bytes'), not the observation or a pixel; the code box prints fact_cid = base32(BLAKE3-256(b)) with b = CBOR(f)"
+    },
+    {
+      "word": "truth",
+      "text_sha": "77706e764d01ab5468c96fa932e32ae8a32c352b16e2b306a15a971a1e429528",
+      "sentence": "The record, not physical truth",
+      "where": "html:p7:headline",
+      "evidence": "V6.limits",
+      "reason": "negative scope statement answering panel 7's question; the figure lists physical truth under NOT ESTABLISHED"
     }
   ]
 }

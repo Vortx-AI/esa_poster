@@ -5,8 +5,8 @@ Treat it as a self-review, not an independent one.
 
 ## 1. Changes in this round
 
-- Panel 1 outcome flipped from "B acted on corrupted evidence" (0/300 for emem) to "B declined to act on corrupted
-  evidence" (300/300 for emem; prose 22/276, JSON 112/276, RAG 56/276, opaque id 134/288). Each declined count is
+- **Superseded, see section 9.** Panel 1 outcome flipped from "B acted on corrupted evidence" (0/300 for emem) to
+  "B declined to act on corrupted evidence" (300/300 for emem; prose 22/276, JSON 112/276, RAG 56/276, opaque id 134/288). Each declined count is
   the complement of the pre-registered false-accept count on the same trials (rows `R5.*.declined`, checked as
   n - k against `research/repro/v13/r5/results.json`). The take line keeps the harm figure in brackets ("they acted
   on 254"), so the original measurement is still printed.
@@ -131,3 +131,144 @@ Result: 18 of 18 gates, 0 text overlaps, all three QR codes decode to their page
   facts no longer answer "latest" and are re-read; nothing signed is rewritten (panel 6). The foundation-model
   encoders were removed on 24 Sep; old vectors still resolve. Visitors may ask why the title keeps "Foundation-Model
   Embeddings": an embedding is one typed record kind (panel 10), and records outlive their encoders.
+
+## 9. Correction: "declined" was not accurate; two print variants (4 Oct 2026)
+
+An EO reviewer flagged that 0/300 (false acceptance) and its verdict were more accurate than 300/300 "declined".
+The reviewer is right. False acceptance (`score.py`) counts a trial when B acts on a value other than the genuine
+one. Its complement is not a count of refusals: it also contains trials where B acted on the genuine value, for
+example after resolving the reference. Re-scored from the stored transcripts (`research/repro/v13/r5/not_acted_split.py`,
+output `out/not_acted_split.json`, primary items, three Claude models pooled):
+
+| condition | n | acted on corrupted | declined | acted on genuine | not acted on |
+|---|---|---|---|---|---|
+| prose | 276 | 254 | 22 | 0 | 22 |
+| JSON | 276 | 164 | 106 | 6 | 112 |
+| RAG | 276 | 220 | 56 | 0 | 56 |
+| opaque id | 288 | 154 | 88 | 46 | 134 |
+| checked reference | 300 | 0 | 264 | 36 | 300 |
+
+So "declined 300 of 300" overstated the refusals by 36 (and JSON by 6, opaque id by 46). The board now builds in two
+variants, from one source, and every gate runs on each:
+
+- **0of300 (default, `poster/emem-poster-A0.pdf`):** the pre-registered metric as measured. Panel 1 "B acted on
+  corrupted evidence", 254/276 prose ... 0/300; the reviewed take line restored word for word; panel 5 red bars and
+  totals of false acceptance with the R1 ceilings, as reviewed before the flip.
+- **300of300 (`poster/emem-poster-A0-300of300.pdf`, `--variant 300of300`):** the same trials counted the other way,
+  with accurate wording. Panel 1 "B did not act on corrupted evidence", 22/276 ... 300/300; the take line gives the
+  split ("264 declined, 36 used the genuine record"); panel 5 blue bars "B did not act on it (declined, or used the
+  genuine value)".
+
+Recommendation: print 0of300. It is the pre-registered metric, it is what the reviewer read as correct, and a
+low-is-good column is standard for false-acceptance results. 300of300 is accurate too, but it reports a derived
+quantity, so it needs the split in the take line to be read correctly.
+
+The `R5.*.declined` claim rows are removed; `R5.*.notacted`, `R5.cell.*.notacted`, `S.R1.*.notacted` and
+`R5.E.split.*` replace them, each re-checked against the result files.
+
+## 10. Response to the EO reviewer's report (4 Oct 2026)
+
+The report scored the board 6.5/10 and set a correction order. What changed on the face, item by item; numbers come
+from `research/repro/v13/r5/out/not_acted_split.json` (re-scored transcripts) and are checked by the build.
+
+| Reviewer item | Change on the board |
+|---|---|
+| 1. Outcome labels in sections 1 and 5 (mandatory) | Default print (0of300) reports false acceptance as pre-registered. Panel 1's figure now prints every outcome of the same trials per condition: acted on, declined, used the genuine record (emem 0 + 264 + 36 = 300; opaque id 154 + 88 + 46 = 288). Panel 5 keeps false-acceptance bars; genuine controls 71 of 72 stay in its caption. The 300of300 variant says "did not act on", never "declined". |
+| Common-item comparison | Panel 1 take line: across the 23 shared items, agents acted on 254 of 276 prose, 154 of 276 opaque-id and 0 of 276 emem-reference corruptions (2 of 276 without the check instruction). Denominators per condition are printed in panel 5 (23; opaque id 24; emem 25). |
+| 4. Treatment stated accurately | Panel 1 scope: "emem condition: the reference, a verifier tool and an instruction to check." The uninstructed result (2 of 300; 2 of 276 shared) is printed. |
+| 5. Equal-tool baseline | Not run (needs new trials). Panel 1 scope states the limit: conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run. |
+| 2. Opening claims | Lead: "satellite observations, raw or derived", "records ... signed in batches"; the compaction claim is removed. Header strip: the 84-character reference is separated from the 1,115-byte record and log entry a check fetches. Title kept: the authors chose the programme title. |
+| Orbital framing | Panel 1 orbit line: the signed record and reference downlink; the data stays on the device (emem-airgap design); "SAT-042 harness, not flown". Panel 11: the trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. |
+| 3. Section 6 as the scientific centre | The contribution box now states the boundary: content hashes (IPFS), signed logs (SCITT) and provenance (PROV) exist; emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6). No re-layout before print. |
+| 6. Uncertainty, retrieval | Panel 4: confidence 0.95 is fixed per scene class (SCL 4 here), not a measured uncertainty. Panel 9: uncertainty "if recorded"; "a cid names a record, not an object". |
+| Section 2 | "Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI." |
+| Section 3 | The decomposition lists possible causes, not measured shares; the score is "an uncalibrated heuristic"; invalid σ is marked fail-closed. |
+| Full trace | "still trusted: nothing" became "BLAKE3 and the verifier's code" and "the cell rule". |
+| Section 8 | "known" is defined: versions signed by τ (signed_at, the signer's clock). The line the figure already prints is removed. |
+| Section 10 | The embedding row loses its emphasis; embedding and device-run rows are grey (encoders retired; reference harness). |
+| Section 12 | "Listings show availability; agent decisions are measured in panel 1." |
+| Workflow | The Check step prints "If one fails: refuse." |
+| Footer commits | "Service: emem.dev at 8e9b401; code read at 18adb67." |
+
+Not changed, and why: the title (authors' decision); the matched before/after rerun for panel 6, drift-score
+calibration, the equal-tool baseline and an orbital execution trust model (each needs new measurements); the
+reviewer's density point is answered only by replacing repeated content (panel 1's handover stack, panel 8's
+duplicate line), not by a re-layout days before print. Both variants pass every gate.
+
+## 11. Wording pass (4 Oct 2026)
+
+Every printed line was read for machine-sounding copy left by the space-constrained edits. Rewritten as plain
+sentences, at the same length: the lead's colon chain ("Each is a record named by the BLAKE3 hash of its bytes and
+signed in a batch"); panel 1's mechanism ("a satellite reading"), take line ("corrupted handoffs in prose / with an
+opaque id / with an emem reference"), orbit line ("By design, ... are downlinked into") and both scope notes (no
+more "Figure: ...; line at left: ..."); panel 2 ("We varied one Keylong NDVI by ..."); panel 3 ("This score is an
+uncalibrated heuristic"); the contribution box; panel 5's bar note; the EO-workflow caption ("Each request returns one
+observation, read from the archive if not yet stored" replaces "single-hop retrieval materialises"); panel 10 ("One
+bundle resolves to eight facts"); panel 12 ("Separately, the same record and value came back through 11 client
+paths"); panel 6's legend ("38: both rules agree"). No hyphenated word breaks across lines in either variant.
+
+## 12. Final error pass, short title, no versions on the face (4 Oct 2026)
+
+Two corrections from the final error pass (13e9fb3). The EO-workflow caption said "Each request returns one
+observation"; a request with a band list returns many. It now reads "A request reuses stored records and fetches and
+signs missing ones from the archive" (emem docs/model.md, ensure at single hop). In the 300of300 variant, panel 5's
+"did not act on" bars used the legend's "refused" blue; they now use a lighter blue that the bar note defines.
+
+A third error: the footer read "Service: emem.dev at 8e9b401; code read at 18adb67", but the full trace and the 11
+client paths (30 Sep) ran against x-emem-commit 213e2738; 8e9b401 is the 1 Oct cost run. The authors' rule settles it:
+service and code versions advance with every upgrade and do not belong on a research poster. The commits leave the
+footer, the memory-as-coded label ("emem 18adb67") and panel 10's note ("At emem 18adb67, names, sets and records hash
+differently" is now "Names, sets and records hash differently"). The rows keep them (K.commit, CODE.commit, the trace
+and crossruntime files), and the face_hygiene gate now fails on a commit hash on the face. The footer keeps
+"Measurements: 29 Sep to 1 Oct 2026."
+
+Title: the authors shortened the printed title to the programme title up to "Protocol" (h1 and PDF title); the
+programme listing is unchanged. The header re-spaces the freed line (poster.v13.layout.json, v13.10_notes.title).
+This supersedes section 10's "Title kept" and its "Footer commits" row. Both variants pass every gate; 0 text overlaps
+and no hyphenated word breaks across lines in either variant.
+
+## 13. Byline, subhero, and wording for a scientific reader (4 Oct 2026)
+
+**Byline.** The two Zenodo DOIs are removed at the authors' request; panel 12 and the QR codes carry the routes. Line 1
+names the authors, contact, emem.dev and the repository; line 2 names the event.
+
+**Subhero.** Of the items the board could not print (section 8 and the earlier review), one has an in-repo source and fits
+the line: "Where no observation exists, emem signs an absence and its reason, not a zero." Sources: emem's CHANGELOG at
+18adb67 (JRC GSW 255 signed as an Absence; Hansen, WorldCover, CCI, Cop-DEM and GeoTessera 404s are Absences while a
+known tile answers; a pixel off its tile is now an error, not a zero), `research/repro/verify_absence.py` and panel
+10's "nothing there" row (row V8.absence). Not added: the 24-hop relay and the live draft check (no measurement in this
+repository), non-EO observers (unmeasured, and outside an EO session), the accelerator programmes and the product list
+(not research content).
+
+**Contradictions and vague wording.**
+
+| Where | Was | Now | Why |
+|---|---|---|---|
+| Panel 1 question | What survives an agent handoff? | Does agent B act on a corrupted handoff? | The figure counts false acceptance, where 0/300 is the good result; under "survives" it read as nothing surviving. |
+| Panel 1 headline | The same observation, carried through receiver checks. | The same corruptions, handed over five ways. | States the design: identical items across five conditions (prereg section 3). |
+| Panel 1 mechanism | Agent B acts on it or checks the reference. | Agent B acts on it, declines it or uses the genuine record. | The three outcomes the figure counts. |
+| Panel 1 scope, panel 5 caption | checked reference; Checked-reference agents | emem reference | One name for the condition across the board. |
+| Panel 5 caption | ... genuine controls; one was refused (pooled Claude). | ... genuine controls and declined one. | Says who declined; one line (the panel names the models). |
+| Panel 5 totals | B acts on corrupted evidence; R1 15 / 15 | B acted on corrupted evidence; "deterministic receiver, same corruptions" 15 / 15 | Tense as in the legend; R1 was never defined on the face. |
+| Panel 5 checks | Resolve, Re-hash, Bind, Recompute, Re-read | the same, each with its layer (L0, L0, L1, L2, L3) | Panels 2, 4 and 5 print L0 to L3; the key left the board with the old ladder. |
+| Panel 2 caption | one exceeds the expected NDVI range | one lies outside the valid NDVI range | NDVI is bounded to [-1, 1]; 1.1427 is impossible, not unexpected. |
+| Panel 7 headline | Know what was checked | The record, not physical truth | Answers its question; matches the figure's NOT ESTABLISHED column. |
+| Header bridge | Encode in orbit, decode in AI's reasoning with emem. | Design goal: encode in orbit, decode in AI's reasoning with emem. | Panel 11 says no spacecraft is enrolled. |
+| 300of300 bar note | used the genuine value; squares: deterministic receiver | used the genuine record; squares: deterministic ceiling | The words panel 1 and the default variant use. |
+| Panel 1 take line and scope | "0 / of 276" and "22 / of 23" broke across lines | kept on one line | |
+
+Kept: panel 3's Δencoder (the whitepaper's term for "the model changed"); panel 10's token-family line and panel 12's
+headline (the authors' lines; neither contradicts a measurement). Word cap 870 / 895 (copy brief 860 / 884 plus about
+1 %); the board prints 854 / 878. Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no
+number phrase split across lines.
+
+## 14. Panel 12's client-path line moves to Connect (4 Oct 2026)
+
+"Separately, the same record and value came back through 11 client paths, with receipt signatures checked on 9 (30 Sep
+2026). Listings show availability; panel 1 measures agent decisions." is removed from the face at the authors' request.
+The measurement is methods material and is already printed in full, client by client, on the page the CONNECT code
+opens (`docs/use/`, "Same token, many runtimes", from `research/repro/data/v8/crossruntime_table.json`); the rows EC.11
+and EC.9of11 keep it. The listing cards quote each listing verbatim, so they read as quotes without the scope sentence.
+The ecosystem figure moves up and takes 3.5 mm under the headline. Word cap 850 / 870 (copy brief 839 / 858 plus about
+1 %); the board prints 830 / 849. Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no split
+number phrase.

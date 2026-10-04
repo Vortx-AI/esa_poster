@@ -1,5 +1,5 @@
 {
- "figure": "f6_mutation_matrix",
+ "figure": "f6_mutation_matrix.300of300",
  "size_mm": [
   396.0,
   196.0
@@ -142,24 +142,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M1.false_accept"
+   "claim": "R5.cell.A.M1.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M1.false_accept"
+   "claim": "R5.cell.B.M1.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M1.false_accept"
+   "claim": "R5.cell.C.M1.notacted"
   },
   {
-   "text": "9 / 12",
+   "text": "3 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M1.false_accept"
+   "claim": "R5.cell.D.M1.notacted"
   },
   {
    "text": "C",
@@ -184,22 +184,22 @@
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M2.false_accept"
+   "claim": "R5.cell.A.M2.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M2.false_accept"
+   "claim": "R5.cell.B.M2.notacted"
   },
   {
-   "text": "11 / 12",
+   "text": "1 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M2.false_accept"
+   "claim": "R5.cell.C.M2.notacted"
   },
   {
-   "text": "0 / 12",
+   "text": "12 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M2.false_accept"
+   "claim": "R5.cell.D.M2.notacted"
   },
   {
    "text": "C",
@@ -222,24 +222,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M8.false_accept"
+   "claim": "R5.cell.A.M8.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M8.false_accept"
+   "claim": "R5.cell.B.M8.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M8.false_accept"
+   "claim": "R5.cell.C.M8.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M8.false_accept"
+   "claim": "R5.cell.D.M8.notacted"
   },
   {
    "text": "F",
@@ -272,24 +272,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "7 / 12",
+   "text": "5 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M4.false_accept"
+   "claim": "R5.cell.A.M4.notacted"
   },
   {
-   "text": "0 / 12",
+   "text": "12 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M4.false_accept"
-  },
-  {
-   "text": "6 / 12",
-   "pt": 14,
-   "claim": "R5.cell.C.M4.false_accept"
+   "claim": "R5.cell.B.M4.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M4.false_accept"
+   "claim": "R5.cell.C.M4.notacted"
+  },
+  {
+   "text": "6 / 12",
+   "pt": 14,
+   "claim": "R5.cell.D.M4.notacted"
   },
   {
    "text": "E",
@@ -317,24 +317,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "7 / 12",
+   "text": "5 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M9.false_accept"
+   "claim": "R5.cell.A.M9.notacted"
   },
   {
-   "text": "11 / 12",
+   "text": "1 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M9.false_accept"
-  },
-  {
-   "text": "6 / 12",
-   "pt": 14,
-   "claim": "R5.cell.C.M9.false_accept"
+   "claim": "R5.cell.B.M9.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M9.false_accept"
+   "claim": "R5.cell.C.M9.notacted"
+  },
+  {
+   "text": "6 / 12",
+   "pt": 14,
+   "claim": "R5.cell.D.M9.notacted"
   },
   {
    "text": "F",
@@ -367,24 +367,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M10.false_accept"
+   "claim": "R5.cell.A.M10.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M10.false_accept"
+   "claim": "R5.cell.B.M10.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M10.false_accept"
+   "claim": "R5.cell.C.M10.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M10.false_accept"
+   "claim": "R5.cell.D.M10.notacted"
   },
   {
    "text": "F",
@@ -417,24 +417,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
-   "pt": 14,
-   "claim": "R5.cell.A.M6.false_accept"
-  },
-  {
    "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M6.false_accept"
+   "claim": "R5.cell.A.M6.notacted"
+  },
+  {
+   "text": "12 / 12",
+   "pt": 14,
+   "claim": "R5.cell.B.M6.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M6.false_accept"
+   "claim": "R5.cell.C.M6.notacted"
   },
   {
-   "text": "2 / 12",
+   "text": "10 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M6.false_accept"
+   "claim": "R5.cell.D.M6.notacted"
   },
   {
    "text": "E",
@@ -467,24 +467,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M11.false_accept"
+   "claim": "R5.cell.A.M11.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M11.false_accept"
+   "claim": "R5.cell.B.M11.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M11.false_accept"
+   "claim": "R5.cell.C.M11.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M11.false_accept"
+   "claim": "R5.cell.D.M11.notacted"
   },
   {
    "text": "F",
@@ -517,24 +517,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M12.false_accept"
+   "claim": "R5.cell.A.M12.notacted"
   },
   {
-   "text": "11 / 12",
+   "text": "1 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M12.false_accept"
+   "claim": "R5.cell.B.M12.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M12.false_accept"
+   "claim": "R5.cell.C.M12.notacted"
   },
   {
-   "text": "8 / 12",
+   "text": "4 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M12.false_accept"
+   "claim": "R5.cell.D.M12.notacted"
   },
   {
    "text": "F",
@@ -562,24 +562,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M14.false_accept"
+   "claim": "R5.cell.A.M14.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M14.false_accept"
+   "claim": "R5.cell.B.M14.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M14.false_accept"
+   "claim": "R5.cell.C.M14.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M14.false_accept"
+   "claim": "R5.cell.D.M14.notacted"
   },
   {
    "text": "H",
@@ -612,24 +612,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M5.false_accept"
+   "claim": "R5.cell.A.M5.notacted"
   },
   {
-   "text": "1 / 12",
+   "text": "11 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M5.false_accept"
+   "claim": "R5.cell.B.M5.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M5.false_accept"
+   "claim": "R5.cell.C.M5.notacted"
   },
   {
-   "text": "1 / 12",
+   "text": "11 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M5.false_accept"
+   "claim": "R5.cell.D.M5.notacted"
   },
   {
    "text": "E",
@@ -657,24 +657,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M16.false_accept"
+   "claim": "R5.cell.A.M16.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M16.false_accept"
+   "claim": "R5.cell.B.M16.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M16.false_accept"
+   "claim": "R5.cell.C.M16.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M16.false_accept"
+   "claim": "R5.cell.D.M16.notacted"
   },
   {
    "text": "G",
@@ -707,24 +707,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M3.false_accept"
+   "claim": "R5.cell.A.M3.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M3.false_accept"
+   "claim": "R5.cell.B.M3.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M3.false_accept"
+   "claim": "R5.cell.C.M3.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M3.false_accept"
+   "claim": "R5.cell.D.M3.notacted"
   },
   {
    "text": "D",
@@ -767,9 +767,9 @@
    "claim": "F6.na"
   },
   {
-   "text": "0 / 12",
+   "text": "12 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M7.false_accept"
+   "claim": "R5.cell.D.M7.notacted"
   },
   {
    "text": "D",
@@ -797,24 +797,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M13.false_accept"
+   "claim": "R5.cell.A.M13.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M13.false_accept"
+   "claim": "R5.cell.B.M13.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M13.false_accept"
+   "claim": "R5.cell.C.M13.notacted"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M13.false_accept"
+   "claim": "R5.cell.D.M13.notacted"
   },
   {
    "text": "F",
@@ -847,24 +847,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M15.false_accept"
+   "claim": "R5.cell.A.M15.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M15.false_accept"
+   "claim": "R5.cell.B.M15.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M15.false_accept"
+   "claim": "R5.cell.C.M15.notacted"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M15.false_accept"
+   "claim": "R5.cell.D.M15.notacted"
   },
   {
    "text": "I",
@@ -902,7 +902,7 @@
    "claim": "X.entity"
   },
   {
-   "text": "B acted on corrupted evidence",
+   "text": "B did not act on corrupted evidence",
    "pt": 20,
    "claim": "F6.totals_label"
   },
@@ -912,49 +912,49 @@
    "claim": "S.R1.I"
   },
   {
-   "text": "254 / 276",
+   "text": "22 / 276",
    "pt": 17,
-   "claim": "R5.A.pooled"
+   "claim": "R5.A.notacted"
   },
   {
-   "text": "15 / 15",
+   "text": "0 / 15",
    "pt": 14,
-   "claim": "S.R1.A"
+   "claim": "S.R1.A.notacted"
   },
   {
-   "text": "164 / 276",
+   "text": "112 / 276",
    "pt": 17,
-   "claim": "R5.B.pooled"
+   "claim": "R5.B.notacted"
   },
   {
-   "text": "15 / 15",
+   "text": "0 / 15",
    "pt": 14,
-   "claim": "S.R1.B"
+   "claim": "S.R1.B.notacted"
   },
   {
-   "text": "220 / 276",
+   "text": "56 / 276",
    "pt": 17,
-   "claim": "R5.C.pooled"
+   "claim": "R5.C.notacted"
   },
   {
-   "text": "154 / 288",
+   "text": "134 / 288",
    "pt": 17,
-   "claim": "R5.D.pooled"
+   "claim": "R5.D.notacted"
   },
   {
-   "text": "13 / 16",
+   "text": "3 / 16",
    "pt": 14,
-   "claim": "S.R1.C"
+   "claim": "S.R1.C.notacted"
   },
   {
-   "text": "0 / 300",
+   "text": "300 / 300",
    "pt": 17,
-   "claim": "R5.E.pooled"
+   "claim": "R5.E.notacted"
   },
   {
-   "text": "0 / 16",
+   "text": "16 / 16",
    "pt": 14,
-   "claim": "S.R1.I"
+   "claim": "S.R1.I.notacted"
   },
   {
    "text": "C",
@@ -1032,7 +1032,7 @@
    "claim": "F6.cumulative"
   },
   {
-   "text": "Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026.",
+   "text": "Bars: B did not act on it (declined, or used the genuine record), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026.",
    "pt": 14,
    "claim": "R5.F6.scope"
   },

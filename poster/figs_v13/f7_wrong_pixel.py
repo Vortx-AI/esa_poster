@@ -265,7 +265,7 @@ T(XR, WY + 11.6, "sampled pre-fix records", 15, color=C["ink"], claim="W.prev")
 T(XR, WY + 17.6, "carry a neighbour's values", 15, color=C["ink"], claim="W.prev")
 T(XR, WY + 23.4, f"Wilson 95 %: {wlo * 100:.0f} to {whi * 100:.0f} %", 14, color=C["ink2"], claim="W.prev")
 ax.add_patch(Rectangle((XR, WY + 31.4 - SQ / 2), SQ, SQ, fc=C["unaffected"], ec=C["rule"], lw=0.3 / PTMM, zorder=3))
-T(XR + SQ + 1.8, WY + 31.4, f"{SAME}: both rules read one pixel", 14, color=C["ink2"], claim="F7.same")
+T(XR + SQ + 1.8, WY + 31.4, f"{SAME}: both rules agree", 14, color=C["ink2"], claim="F7.same")
 assert f"{wlo * 100:.0f} to {whi * 100:.0f}" == "75 to 86"
 
 # ------------------------------------------------------------------ bottom-left: the error distribution (n 121: indices.* records of the 162 where the rules differ)

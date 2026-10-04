@@ -121,10 +121,11 @@ for i, (need, gram, rule, kind) in enumerate(ROWS):
     yy = ty + i * PITCH
     if i % 2 == 1:
         ax.add_patch(Rectangle((0, yy - PITCH / 2), W, PITCH, fc=C["oos_bg"], ec="none", zorder=1.5))
-    emb = need == "an embedding"
-    COLW["need"] = max(COLW["need"], wmm(T(XN, yy, need, 14, weight=600 if emb else 400, color=C["emem"] if emb else C["ink"], claim="A14.need")))
-    COLW["grammar"] = max(COLW["grammar"], wmm(T(XG, yy, gram, 14, family=MONO, color=C["ink"], claim="A14.grammar")))
-    COLW["hash"] = max(COLW["hash"], wmm(T(XH, yy, rule, 14, color=C["ink2"], claim="A14.hash")))
+    legacy = need in ("an embedding", "a device run")   # v13.10: encoders retired; device runs in a reference harness
+    ink = C["muted"] if legacy else C["ink"]
+    COLW["need"] = max(COLW["need"], wmm(T(XN, yy, need, 14, color=ink, claim="A14.need")))
+    COLW["grammar"] = max(COLW["grammar"], wmm(T(XG, yy, gram, 14, family=MONO, color=ink, claim="A14.grammar")))
+    COLW["hash"] = max(COLW["hash"], wmm(T(XH, yy, rule, 14, color=C["muted"] if legacy else C["ink2"], claim="A14.hash")))
     # Hash semantics are given explicitly in the third column.
 ybot = ty + 13 * PITCH + PITCH / 2
 ax.plot([0, W], [ybot, ybot], color=C["rule"], lw=0.5 / PTMM, zorder=2)
@@ -134,8 +135,8 @@ assert COLW["need"] <= XG - XN - 1.5 and COLW["grammar"] <= XH - XG - 1.5 and CO
 # Full table, scoped to its inspected implementation; current object checks below it.
 fy = ybot + 4.2
 T(0, fy, "14 data needs; embedding and absence share the fact grammar.", 14, color=C["emem"], claim="V7.token_labels")
-T(0, fy+5.2, "At emem 18adb67, names, sets and records hash differently.", 14, color=C["ink2"], claim="V7.token_labels")
-T(0, fy+10.4, "track.v1 is a note. Trace evidence here is a reference harness.", 14, color=C["ink2"], claim="V7.token_labels")
+T(0, fy+5.2, "Names, sets and records hash differently.", 14, color=C["ink2"], claim="V7.token_labels")
+T(0, fy+10.4, "Grey: encoders retired; device runs in a reference harness.", 14, color=C["ink2"], claim="V7.token_labels")
 
 # ------------------------------------------------------------------ labels must be covered by claims rows
 CM = json.load(open(os.path.join(ROOT, "research/v13/12_claims_map_additions_F13-15.json")))

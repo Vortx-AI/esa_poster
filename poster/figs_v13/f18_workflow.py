@@ -22,7 +22,7 @@ steps = [
     ('Record', 'Canonical record + CID', 'Batch attestation'),
     ('Hand off', 'Pass the reference', 'MCP · REST · A2A'),
     ('Resolve', 'Retrieve the same record', 'Recover its provenance.'),
-    ('Check', 'Hash · binding · signature', 'Re-read source if needed.'),
+    ('Check', 'Hash · bind · sign · source', 'If one fails: refuse.'),
     ('Continue', 'Reason with cited evidence', 'Carry the reference onward.'),
 ]
 gap = 8
@@ -35,7 +35,8 @@ for i, (verb, detail, scope) in enumerate(steps):
     hand = verb == 'Hand off'   # v13.10: the handoff is the step emem exists for; it carries the strongest fill
     text(x + 4, 21, verb, 28, 700 if hand else 600, 'white' if hand else 'emem' if i >= 2 else 'ink')
     text(x + 4, 32, detail, 17, 500, 'white' if hand else 'ink')
-    text(x + 4, 41, scope, 17, 400, 'white' if hand else 'ink2')
+    text(x + 4, 41, scope, 17, 600 if verb == 'Check' else 400,
+         'white' if hand else 'harm_text' if verb == 'Check' else 'ink2')
 
 S.save(fig, 'f18_workflow')
 Path(S.OUT, 'f18_workflow.labels.json').write_text(json.dumps({

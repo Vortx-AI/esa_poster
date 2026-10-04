@@ -1621,7 +1621,8 @@
    "id": "R5.models",
    "block": "P1/P5 (R5 mode only)",
    "print": [
-    "{R5.models}"
+    "{R5.models}",
+    "B was Claude Haiku 4.5, Sonnet 5.5 or Opus 5.5, pooled, with Qwen2.5-7B reported apart"
    ],
    "status": "PRE-REGISTERED",
    "layer": "L0-L3",
@@ -5337,7 +5338,8 @@
    "id": "K.commit",
    "block": "footer",
    "print": [
-    "emem.dev at commit 8e9b401"
+    "emem.dev at commit 8e9b401",
+    "Service: emem.dev at 8e9b401; code read at 18adb67."
    ],
    "status": "LIVE",
    "layer": "n/a",

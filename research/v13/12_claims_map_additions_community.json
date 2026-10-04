@@ -59,7 +59,8 @@
       "print": [
         "11 client paths",
         "9",
-        "30 Sep 2026"
+        "30 Sep 2026",
+        "Separately, the same record and value came back through 11 client paths, with receipt signatures checked on 9 (30 Sep 2026)."
       ],
       "status": "MEASURED",
       "layer": "n/a",
@@ -135,7 +136,8 @@
       "block": "v13.5 community/recovery",
       "print": [
         "4 stage addresses re-hashed offline.",
-        "four state addresses re-hash."
+        "four state addresses re-hash.",
+        "One bundle resolves to eight facts; four reasoning-state addresses re-hash. Neither check validates an agent's reasoning."
       ],
       "status": "MEASURED",
       "layer": "n/a",

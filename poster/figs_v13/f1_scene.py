@@ -146,9 +146,9 @@ def main():
         ax.add_patch(FancyBboxPatch((bx0, y0 + 2.0), bb.width + 4.4, bh, boxstyle="round,pad=0,rounding_size=1.0",
                                     fc=fc, ec="white", lw=0.9, zorder=6))
         bx0 += bb.width + 4.4 + 3.0
-    T(ax, xs, y0 + 13.0, claimed("This pixel’s NDVI record, handed off in one text message.", "WOW.sms"), "WOW.sms",
+    T(ax, xs, y0 + 13.0, claimed("The reference to this pixel’s NDVI record fits in one text message.", "WOW.sms"), "WOW.sms",
       fontsize=S.PT["caption"], color="white", va="top", zorder=6)
-    T(ax, xs, y0 + 20.4, claimed(f"{tok['chars']} characters, {tok['cl100k']} tokens; one SMS holds 160.", "WOW.sms"),
+    T(ax, xs, y0 + 20.4, claimed(f"{tok['chars']} characters; checking it fetches the 1,115-byte record and its log entry.", "WOW.sms"),
       "WOW.sms", fontsize=S.FLOOR, color=(1, 1, 1, 0.88), va="top", zorder=6)
 
     # scale bar: 1 km = 100 pixels of 10 m

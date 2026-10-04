@@ -2,7 +2,8 @@
 
 | Artifact | Purpose |
 |---|---|
-| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 print file; print at actual size |
+| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 print file, variant 0of300 (pre-registered false acceptance, recommended); print at actual size |
+| [emem-poster-A0-300of300.pdf](emem-poster-A0-300of300.pdf) | The same board, variant 300of300 (the same trials as "did not act on", with the declined / genuine split) |
 | [emem-poster-preview.png](emem-poster-preview.png) | Screen preview |
 | [emem-poster-A0-300dpi.png](emem-poster-A0-300dpi.png) | Full-resolution print proof |
 | [build_v13_report.json](build_v13_report.json) | Layout, claim, type and QR checks |
@@ -22,8 +23,10 @@ The companion download link serves the committed main-branch PDF. Local regenera
 ## v13.10 print (4 Oct 2026)
 
 - **Print:** `emem-poster-A0.pdf`, one page, 841 x 1189 mm, fonts embedded. Print at 100 % (actual size), no fit-to-page.
-- **Validation:** 18/18 poster gates, 530 evidence rows re-checked, 165 claim rows printed, 0 text overlaps across the
-  rendered page, all figure imagery at 300 ppi or more.
+- **Validation:** 18/18 poster gates in each variant, 557 evidence rows re-checked, 178 claim rows printed (180 in
+  300of300), 0 text overlaps across the rendered page, all figure imagery at 300 ppi or more.
+- **Title and versions:** the printed title is the programme title up to "Protocol" (authors' choice, 4 Oct 2026).
+  No service or code commit is printed; the claims rows keep them, and the build fails on a commit hash on the face.
 - **QR codes (decoded from the 300 dpi render):** TRY IT (header, 87 mm) opens `/demo/`; INSPECT THE RECORD (panel 4,
   40 mm symbol) opens `/r/`; CONNECT (panel 12, 40 mm symbol) opens `/use/`. All three are pages in `docs/`, served by
   GitHub Pages from `main`. Scan each from 1 m on the proof before the event.

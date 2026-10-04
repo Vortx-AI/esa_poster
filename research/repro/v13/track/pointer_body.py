@@ -5,8 +5,13 @@ Publishing the body and signing it needs emem.dev and the poster key; see poster
 import base64, struct, subprocess, sys, pathlib
 import blake3
 commit = sys.argv[1]
-out = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else pathlib.Path(__file__).with_name(f"board_body_{commit[:7]}.md"))
-raw = subprocess.run(["git", "show", f"{commit}:poster/emem-poster-A0.pdf"], capture_output=True, check=True).stdout
+pdf = "poster/emem-poster-A0.pdf"
+if "--pdf" in sys.argv:   # a print variant, e.g. --pdf poster/emem-poster-A0-300of300.pdf
+    pdf = sys.argv[sys.argv.index("--pdf") + 1]
+    del sys.argv[sys.argv.index("--pdf"):sys.argv.index("--pdf") + 2]
+tag = pathlib.Path(pdf).stem.replace("emem-poster-A0", "")
+out = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else pathlib.Path(__file__).with_name(f"board_body_{commit[:7]}{tag}.md"))
+raw = subprocess.run(["git", "show", f"{commit}:{pdf}"], capture_output=True, check=True).stdout
 b32 = lambda b: base64.b32encode(b).decode().lower().rstrip("=")
 H = lambda b: blake3.blake3(b).digest()
 assert len(raw) <= 4 << 20, "one 4 MiB range expected"
@@ -15,7 +20,7 @@ root = b32(H(b"" + struct.pack(">Q", 0) + struct.pack(">Q", len(raw)) + h))
 mb = f"{len(raw) / 1e6:.1f}"
 body = f"""---
 emem: pointer.v1
-source: https://raw.githubusercontent.com/Vortx-AI/esa_poster/{commit}/poster/emem-poster-A0.pdf
+source: https://raw.githubusercontent.com/Vortx-AI/esa_poster/{commit}/{pdf}
 bytes: {len(raw)}
 etag: not exposed
 kind: file
@@ -25,7 +30,7 @@ hash: blake3-256 of each chunk's bytes
 order: defaults, then by blake3(label without type or shape)
 ---
 
-# emem-poster-A0.pdf
+# {pathlib.Path(pdf).name}
 
 > file at raw.githubusercontent.com, {mb} MB.
 

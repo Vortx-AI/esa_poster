@@ -1,62 +1,62 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "9bc4d9a47a001e4f9fa4ffdc321945ddf692bd9e",
+ "base_commit": "4fe45a3d792acd660ea3d8424c54dac99fb30108",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2416199,
-   "sha256": "8d79209b4f0f297973ba77256681dd369e6e9c9d3bf4efb6c2cb0793615bf0ee"
+   "bytes": 2415613,
+   "sha256": "f9579427005b0abfdc0f4a57f4122b110630822f89dd211a5f7ddc46e3f59370"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4753775,
-   "sha256": "a1cb7bbdfbadcccb7fe3fdf674ac50bd7ba2128196a965e823ce25e0a67202e9"
+   "bytes": 4681735,
+   "sha256": "07b6b9a0eda5b1a691a3080c01c33fa3716b76ac302bb90ceb5d716da61bd04c"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17086799,
-   "sha256": "82251fbf5127d22d7732da10aafc1223e25da7ab8b68b2491e38aad65c9e19b0"
+   "bytes": 17031732,
+   "sha256": "ac19a3020e2823db7c797e8297cc33c57fb0ee368afb1689f580498a22b7048e"
   },
   "poster/poster.html": {
-   "bytes": 3341881,
-   "sha256": "00cb761682cd283b3f94ca0ad155cc7ca7f87e81747ca7e395ed8c16311daeca"
+   "bytes": 3325400,
+   "sha256": "2f74e048db8d720187c59090aad1ac6f5f43ebadac7875f1290dfcda86b39790"
   },
   "poster/build_v13_report.json": {
-   "bytes": 25240,
-   "sha256": "630bc1e07fb1a0b196ea561bcc93f29c9551c82f7d278c5c2cf9ba8be0f79501"
+   "bytes": 26351,
+   "sha256": "62206255e53b91cd887b2a2eee93d08997365af81ececf6d37a2d041ee21b7be"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 23361,
-   "sha256": "5b52d80a9de9e74a52fad8713e7d29382b1e23e1204b451029d834e724884064"
+   "bytes": 24206,
+   "sha256": "a4955f6230784b73193c9c4dde73bf0bf462f046e3e8296e03f15cc7d4f2885a"
   },
   "poster/src/poster.v13.css": {
-   "bytes": 15671,
-   "sha256": "e167a368220f9036312635a18437995da763da1a3614b2d3a5cdc811f7bd26ce"
+   "bytes": 15912,
+   "sha256": "27d8838207cdac202efa38abf26d269578bd8a06e5111b03aeb9d4e4ad5229d2"
+  },
+  "poster/emem-poster-A0-300of300.pdf": {
+   "bytes": 2415627,
+   "sha256": "826ca5d5f3a71de2672b951daff94ad14772b926c09f7f72693581e965581a7a"
+  },
+  "poster/emem-poster-preview-300of300.png": {
+   "bytes": 4687924,
+   "sha256": "4ebb1781f53666d421bcbaf16c1f68240b25abbc50f59b4a87366479b28e6533"
+  },
+  "poster/emem-poster-A0-300dpi-300of300.png": {
+   "bytes": 17034023,
+   "sha256": "e94e7b040d9a03f6352adc25da8c9d2a529b08022c0a7738e715584147819b35"
+  },
+  "poster/poster-300of300.html": {
+   "bytes": 3325400,
+   "sha256": "2f0b6cef1aeae98395303ce8fe164c4f401191be53b10ef3871ef9df4a3ef5f7"
+  },
+  "poster/build_v13_report-300of300.json": {
+   "bytes": 26469,
+   "sha256": "c084138cccc27cb2b6c636ad1d43979d7649faf30c1767d79e6ff0f6c4092a7a"
   }
  },
- "pdf_blake3": "f20a701abdb84b06c0899cd26df0ef2308a26fd61ad6cb4403f36a158c203d24",
- "pointer_body": "research/repro/v13/track/board_body_9bc4d9a.md",
- "gates": {
-  "page_fit": "PASS",
-  "footer_clearance": "PASS",
-  "block_rectangles": "PASS",
-  "no_overflow_or_clipping": "PASS",
-  "type_floor": "PASS",
-  "glyph_coverage": "PASS",
-  "prose_and_banned_words": "PASS",
-  "face_hygiene": "PASS",
-  "r5_placeholders": "PASS",
-  "claims_coverage": "PASS",
-  "ecosystem_manifest": "PASS",
-  "claims_rows_recheck": "PASS",
-  "qr_decode": "PASS",
-  "assets": "PASS",
-  "fonts_loaded": "PASS",
-  "colour_tokens": "PASS",
-  "imagery": "PASS",
-  "word_budget": "PASS"
- },
- "rows_rechecked": 531,
- "claims_printed": 165,
+ "pdf_blake3": "d052f4bf8116f5ff80ea10aae2e0451784e0961d32d7612e206468b4a8cb9268",
+ "pointer_body": "research/repro/v13/track/board_body_4fe45a3.md",
+ "rows_rechecked": 557,
+ "claims_printed": 178,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
   "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
@@ -64,11 +64,70 @@
  ],
  "seal": "not signed in this release: emem.dev was unreachable from the build environment; the pointer body is ready to publish",
  "listings": "quoted verbatim on the cards; screenshots kept as evidence in research/v13/evidence/listings/ (issue #58)",
- "title": "programme title kept by the authors (4 Oct 2026)",
+ "title": "the programme title up to 'Protocol', printed on one line (authors' choice, 4 Oct 2026)",
  "print_margins_mm": {
   "left": 20.0,
   "right": 20.0,
-  "top_text": 6.4,
+  "top_text": 9.4,
   "bottom_text": 6.8
- }
+ },
+ "pdf_blake3_300of300": "adf191dfd09c67e5aff5d0012f70b3da7846e27f4e8f55c227fbb40022794a0d",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_4fe45a3-300of300.md",
+ "variants": {
+  "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
+  "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
+ },
+ "gates_by_variant": {
+  "0of300": {
+   "page_fit": "PASS",
+   "footer_clearance": "PASS",
+   "block_rectangles": "PASS",
+   "no_overflow_or_clipping": "PASS",
+   "type_floor": "PASS",
+   "glyph_coverage": "PASS",
+   "prose_and_banned_words": "PASS",
+   "face_hygiene": "PASS",
+   "r5_placeholders": "PASS",
+   "claims_coverage": "PASS",
+   "ecosystem_manifest": "PASS",
+   "claims_rows_recheck": "PASS",
+   "qr_decode": "PASS",
+   "assets": "PASS",
+   "fonts_loaded": "PASS",
+   "colour_tokens": "PASS",
+   "imagery": "PASS",
+   "word_budget": "PASS"
+  },
+  "300of300": {
+   "page_fit": "PASS",
+   "footer_clearance": "PASS",
+   "block_rectangles": "PASS",
+   "no_overflow_or_clipping": "PASS",
+   "type_floor": "PASS",
+   "glyph_coverage": "PASS",
+   "prose_and_banned_words": "PASS",
+   "face_hygiene": "PASS",
+   "r5_placeholders": "PASS",
+   "claims_coverage": "PASS",
+   "ecosystem_manifest": "PASS",
+   "claims_rows_recheck": "PASS",
+   "qr_decode": "PASS",
+   "assets": "PASS",
+   "fonts_loaded": "PASS",
+   "colour_tokens": "PASS",
+   "imagery": "PASS",
+   "word_budget": "PASS"
+  }
+ },
+ "eo_review": "research/v13/26_V13_10_REVIEW.md section 10",
+ "claims_printed_300of300": 180,
+ "versions": "no service or code commit on the face (authors' rule, 4 Oct 2026); the claims rows keep them; face_hygiene fails on a commit hash",
+ "final_pass": "research/v13/26_V13_10_REVIEW.md section 12",
+ "byline": "no DOIs on the face (authors, 4 Oct 2026); panel 12 and the QR codes carry the routes",
+ "scientific_wording": "research/v13/26_V13_10_REVIEW.md section 13",
+ "running_words": {
+  "running_words_with_letter": 830,
+  "running_tokens": 849
+ },
+ "panel12": "client-path line moved to /use/ (research/v13/26_V13_10_REVIEW.md section 14)"
 }

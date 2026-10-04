@@ -15,7 +15,7 @@ The full Observe → Locate → Record → Hand off → Resolve → Check → Co
 - [Try it, inspect, reproduce](https://vortx-ai.github.io/esa_poster/)
 - [Publication and validation notes](poster/README.md)
 
-The accepted programme title is **EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings**. The printed scientific title preserves it.
+The accepted programme title is **EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings**. The printed title keeps its first part, **EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol** (authors' choice, 4 Oct 2026).
 
 The poster follows one system: observe, locate, record, hand off, resolve, check and continue. The controlled handoff experiment, source-pixel example and temporal memory demonstrate the checks. The complete token family and execution harness show the wider scope; the ecosystem panel distinguishes tested paths from protocol, registry and example surfaces. The Berlin multi-product stack remains in the repository and companion methods.
 

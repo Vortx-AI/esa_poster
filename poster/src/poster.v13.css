@@ -61,7 +61,7 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 
 /* ---------- header ---------- */
 .headtext{background:var(--navy);color:#FFFFFF}
-.headtext .title{position:absolute;left:20mm;top:9mm;width:600mm;font-size:56pt;line-height:1.06;font-weight:600;letter-spacing:-.01em;color:#FFFFFF}
+.headtext .title{position:absolute;left:20mm;top:12mm;width:600mm;font-size:56pt;line-height:1.06;font-weight:600;letter-spacing:-.01em;color:#FFFFFF}
 .headtext .hero{position:absolute;left:20mm;top:54mm;width:604mm;font-size:100pt;line-height:.98;font-weight:700;letter-spacing:-.018em;color:#FFFFFF}
 .headtext .subhero{position:absolute;left:20mm;top:126mm;width:596mm;font-size:32pt;line-height:1.1;font-weight:500;color:var(--emem-light)}
 /* v13.1: drift block (v12.1 "THE IDEA") in the sub-hero area; two lines at 17 pt */
@@ -130,9 +130,9 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .foot .sep{color:var(--muted)}
 
 /* v13.3: the unified system precedes its measurements (issue #48). */
-.headtext .hero{top:57mm;line-height:1.02}
-.headtext .subhero{top:132mm;font-size:28pt;line-height:1.12}
-.headtext .bridge{position:absolute;left:20mm;top:158mm;width:600mm;font-size:24pt;line-height:1.1;font-weight:600;color:#FFFFFF}
+.headtext .hero{top:43.2mm;line-height:1.02}
+.headtext .subhero{top:121.6mm;font-size:28pt;line-height:1.12}
+.headtext .bridge{position:absolute;left:20mm;top:150.1mm;width:600mm;font-size:24pt;line-height:1.1;font-weight:600;color:#FFFFFF}
 .addresscard{margin-top:3mm;padding:3mm 4mm;background:var(--oos-bg);border-left:1.2mm solid var(--ink2);font-size:20pt;line-height:1.14}
 .addresscard.blue{background:var(--emem-tint);border-color:var(--emem)}
 .addresscard b{font-size:17pt;letter-spacing:.035em}
@@ -173,7 +173,8 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 /* v13.9: the workflow uses space released by the community prose. */
 .workflow .fig{margin-top:0}
 .community.blk{justify-content:flex-start}
-.community h2,.community-result{max-width:726mm}
+.community h2{max-width:726mm}
+.community .fig{margin-top:3.5mm}   /* the 11-client-path line moved to Connect (/use/, "Same token, many runtimes") */
 .community-connect{position:absolute;right:0;top:7mm;width:60mm;text-align:center}
 .community-connect .qr{margin:2mm auto 1mm}
 .community-connect .qrlabel{margin-top:0}
@@ -195,7 +196,7 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 
 /* v13.10: recovered lead, memory-as-coded box and full trace (from the v10 board); handoff emphasis. */
 .headtext .hero .hl{color:var(--emem-light)}
-.headtext .lead{position:absolute;left:449mm;top:56mm;width:170mm;border-left:.8mm solid var(--emem-light);padding-left:3.6mm}
+.headtext .lead{position:absolute;left:449mm;top:42.2mm;width:170mm;border-left:.8mm solid var(--emem-light);padding-left:3.6mm}
 .headtext .leadq{font-size:17pt;line-height:1.12;font-weight:600;color:var(--emem-light)}
 .headtext .leada{font-size:16pt;line-height:1.15;color:#FFFFFF;margin-top:1.2mm}
 .headtext .leada b{font-weight:600}
@@ -229,6 +230,7 @@ h2.steps>span{padding:0 1.6mm;line-height:1.02}
 h2.steps{gap:1.2mm;margin-top:.6mm}
 h2.steps>span:last-child{background:var(--emem);color:#FFFFFF;border-color:var(--emem)}
 .mech.steps>span{border-color:var(--emem);color:var(--emem);background:var(--emem-tint);font-weight:500}
+.mech.steps .ly{font-style:normal;font-weight:400;color:var(--ink2)}   /* layer key for the L0 to L3 tags in panels 2, 4 and 5 */
 
 .nw{white-space:nowrap}
 /* v13.10: boxed steps read as one chain: a short rule joins neighbouring boxes */

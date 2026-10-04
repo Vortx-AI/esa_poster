@@ -12,25 +12,27 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > An Earth observation that survives an agent handoff.
 
-> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
+> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. Where no observation exists, emem signs an absence and its reason, not a zero.
 
 > Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
 
-> emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
+> emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
 
-> A compact citation keeps the observation traceable across agents and time. Encode in orbit, decode in AI’s reasoning with emem.
+> A compact citation keeps the observation traceable across agents and time. Design goal: encode in orbit, decode in AI’s reasoning with emem.
 
 ### 1 · Earth to agents
 
-> What survives an agent handoff?
+> Does agent B act on a corrupted handoff?
 
-> The same observation, carried through receiver checks.
+> The same corruptions, handed over five ways.
 
-> Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
+> Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it, declines it or uses the genuine record.
 
-> In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).
+> [variant:0of300] Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).
 
-> Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).
+> [variant:300of300] Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.
+
+> By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (SAT-042 harness, not flown).
 
 ### 2 · One NDVI, eight values
 
@@ -38,9 +40,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > One NDVI, eight values
 
-> At Keylong on 25 Sep 2026, scene, date, pixel and arithmetic choices change the reported NDVI.
+> We varied one Keylong NDVI by scene, date, place, pixel and arithmetic.
 
-> Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.
+> Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each calls for a different check.
 
 ### 3 · Different drift, different check
 
@@ -50,21 +52,21 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Between acquisitions, the surface, sensor, location or processing can change.
 
-> Δz: change in readout. Environment · sensor · geolocation · encoder · residual. emem's change attribution links evidence to each term.
+> Δz: change in readout. The terms list possible causes (environment, sensor, geolocation, encoder, residual), not measured shares.
 
-> The implemented score measures disagreement with an anchor. SAT-042 applies it to a fixed reference in the execution harness.
+> This score is an uncalibrated heuristic: it measures disagreement with one anchor, not a cause. SAT-042 uses it in the execution harness.
 
 ### Memory operations
 
 > Use it in an EO workflow
 
-> Compare vegetation observations, retain conflicting estimates and pass their references onward. Single-hop retrieval materialises the requested observation.
+> Compare vegetation observations, keep conflicting estimates and pass their references on. A request reuses stored records and fetches and signs missing ones from the archive.
 
 ### 7 · What checks establish
 
 > What does a checked reference establish?
 
-> Know what was checked
+> The record, not physical truth
 
 > Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.
 
@@ -78,9 +80,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Checkable observation handoff
 
-> An agent passes a reference to a specific physical observation; the receiver resolves it and checks the evidence.
+> EO evidence that travels between agents, checked by the receiver down to the source pixel.
 
-> Built with standard BLAKE3, Ed25519, CBOR and Merkle logs. STAC, openEO, PROV, C2PA, RAG and temporal storage provide complementary layers.
+> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 6).
 
 ### 4 · What exactly is handed over
 
@@ -98,9 +100,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Checks can continue back to the source
 
-> Resolve · Re-hash · Bind · Recompute · Re-read
+> Resolve L0 · Re-hash L0 · Bind L1 · Recompute L2 · Re-read L3
 
-> Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).
+> Deeper checks expose different corruptions. Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one.
 
 ### 6 · Source re-read
 
@@ -114,9 +116,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Revisit the earlier evidence
 
-> Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.
+> Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.
 
-> The later 915.07 m reflects a provider change. The earlier citation still resolves to the earlier estimate.
+> The later 915.07 m reflects a provider change.
 
 ### Complete observation and memory model
 
@@ -124,7 +126,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Observations + temporal edges
 
-> a: location cell · b: variable · t: valid time · v: value u: uncertainty · p: provenance, recipe, signing time s: attestation associated with the observation
+> a: location cell · b: variable · t: valid time · v: value u: uncertainty, if recorded · p: provenance, recipe, signed_at s: attestation associated with the observation
 
 > Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.
 
@@ -138,7 +140,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.
 
-> Eight facts resolve through one bundle; four state addresses re-hash. These object checks do not validate an agent's reasoning.
+> One bundle resolves to eight facts; four reasoning-state addresses re-hash. Neither check validates an agent's reasoning.
 
 ### 11 · Satellite execution evidence
 
@@ -148,13 +150,11 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > SAT-042 scripted pass · reference harness · 30 Sep 2026.
 
-> Reference harness, no spacecraft enrolled. The admission gate binds output value digests; band, cell and time are outside this check.
+> Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time.
 
 ### 12 · Community routes
 
 > Use emem. Carry the evidence forward.
-
-> Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).
 
 ## D. Claims map
 

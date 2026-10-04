@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-04T09:18:03.740081</dc:date>
+    <dc:date>2026-10-04T10:46:05.313382</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 274.251969 170.07874
 L 274.251969 187.086614 
 L 0 187.086614 
 z
-" clip-path="url(#p7f00d78178)" style="fill: #0f5fa8"/>
+" clip-path="url(#p0cc662d7ba)" style="fill: #0f5fa8"/>
    </g>
    <g id="patch_3">
     <path d="M 274.251969 170.07874 
@@ -43,7 +43,7 @@ L 411.377953 170.07874
 L 411.377953 187.086614 
 L 274.251969 187.086614 
 z
-" clip-path="url(#p7f00d78178)" style="fill: #e8a317"/>
+" clip-path="url(#p0cc662d7ba)" style="fill: #e8a317"/>
    </g>
    <g id="patch_4">
     <path d="M 411.377953 170.07874 
@@ -51,10 +51,10 @@ L 548.503937 170.07874
 L 548.503937 187.086614 
 L 411.377953 187.086614 
 z
-" clip-path="url(#p7f00d78178)" style="fill: #d2481e"/>
+" clip-path="url(#p0cc662d7ba)" style="fill: #d2481e"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="15.258583" transform="rotate(-0 0 15.258583)">IMPLEMENTED · DRIFT-ANCHOR SCORE</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="15.258583" transform="rotate(-0 0 15.258583)">IMPLEMENTED HEURISTIC · DRIFT-ANCHOR SCORE</text>
    </g>
    <g id="text_2">
     <text style="font-size: 26px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="49.799685" transform="rotate(-0 11.338583 49.799685)">d = |x − a|</text>
@@ -66,7 +66,7 @@ z
     <text style="font-weight: 600; font-size: 26px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="83.815433" transform="rotate(-0 11.338583 83.815433)">r = d / (3σ);  s = r / (1 + r)</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="112.476535" transform="rotate(-0 11.338583 112.476535)">Invalid σ: s = 0 if d = 0; otherwise s = 1.</text>
+    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="112.476535" transform="rotate(-0 11.338583 112.476535)">Invalid σ: s = 0 if d = 0; otherwise s = 1 (fail-closed).</text>
    </g>
    <g id="text_6">
     <text style="font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="136.291024" transform="rotate(-0 11.338583 136.291024)">x: output · a: anchor · σ: anchor uncertainty</text>
@@ -101,7 +101,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p7f00d78178">
+  <clipPath id="p0cc662d7ba">
    <rect x="0" y="0" width="548.503937" height="255.11811"/>
   </clipPath>
  </defs>

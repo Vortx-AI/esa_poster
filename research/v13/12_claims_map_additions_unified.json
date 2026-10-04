@@ -291,7 +291,8 @@
       "id": "U.poster",
       "block": "v13.3",
       "print": [
-        "The linked methods connect the figures to records, source data and reproducible checks."
+        "The linked methods connect the figures to records, source data and reproducible checks.",
+        "Methods link each figure to its records, data and checks (Connect)."
       ],
       "status": "MEASURED",
       "layer": "L0-L3",
