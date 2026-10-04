@@ -10263,7 +10263,9 @@
    "block": "P5 figure scope",
    "print": [
     "Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic ceiling. Totals pool 23 items, 1 Oct 2026.",
-    "Bars: B did not act on it (declined, or used the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic receiver. Totals pool 23 items, 1 Oct 2026."
+    "Bars: B did not act on it (declined, or used the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic receiver. Totals pool 23 items, 1 Oct 2026.",
+    "Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026.",
+    "Bars: B did not act on it (declined, or used the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic receiver. Totals pool 23 to 25 items, 1 Oct 2026."
    ],
    "status": "PRE-REGISTERED",
    "layer": "L0-L3",
@@ -10470,7 +10472,8 @@
    "print": [
     "4 of 4",
     "2 of 4",
-    "0 of 4"
+    "0 of 4",
+    "Live pre-fix record: agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, 0 of 4 with a source re-read."
    ],
    "status": "MEASURED",
    "layer": "L3",

@@ -15,11 +15,11 @@ assert 'test drift::tests::missing_sigma_is_strict ... ok' in raw
 def T(x,y,s,size=17,color=None,weight=400,**kw):
  labels.append(dict(text=s,claim='V7.score',pt=size));ax.text(x,y,s,fontsize=size,color=color or S.C['ink'],fontweight=weight,va='center',**kw)
 # v13.10: the same text, packed into 90 mm (the note sits beside the short first equation)
-T(0,4,'IMPLEMENTED · DRIFT-ANCHOR SCORE',14,S.C['emem'],700)
+T(0,4,'IMPLEMENTED HEURISTIC · DRIFT-ANCHOR SCORE',14,S.C['emem'],700)
 T(4,15,'d = |x − a|',26)
 T(74,15.6,'for finite x, a and 0 < σ < ∞',17,S.C['ink2'])
 T(4,27,'r = d / (3σ);  s = r / (1 + r)',26,S.C['emem'],600)
-T(4,38,'Invalid σ: s = 0 if d = 0; otherwise s = 1.',17)
+T(4,38,'Invalid σ: s = 0 if d = 0; otherwise s = 1 (fail-closed).',17)
 T(4,46.5,'x: output · a: anchor · σ: anchor uncertainty',16)
 for lo,hi,col in [(0,.5,'emem'),(.5,.75,'incident'),(.75,1,'harm')]:
  ax.add_patch(Rectangle((lo*W,60),(hi-lo)*W,6,fc=S.C[col],ec='none'))

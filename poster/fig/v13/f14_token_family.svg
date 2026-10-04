@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-04T09:39:51.591843</dc:date>
+    <dc:date>2026-10-04T10:46:07.505766</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 548.503937 35.149606
 L 548.503937 54.141732 
 L 0 54.141732 
 z
-" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_3">
     <path d="M 0 73.133858 
@@ -43,7 +43,7 @@ L 548.503937 73.133858
 L 548.503937 92.125984 
 L 0 92.125984 
 z
-" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_4">
     <path d="M 0 111.11811 
@@ -51,7 +51,7 @@ L 548.503937 111.11811
 L 548.503937 130.110236 
 L 0 130.110236 
 z
-" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_5">
     <path d="M 0 149.102362 
@@ -59,7 +59,7 @@ L 548.503937 149.102362
 L 548.503937 168.094488 
 L 0 168.094488 
 z
-" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_6">
     <path d="M 0 187.086614 
@@ -67,7 +67,7 @@ L 548.503937 187.086614
 L 548.503937 206.07874 
 L 0 206.07874 
 z
-" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_7">
     <path d="M 0 225.070866 
@@ -75,7 +75,7 @@ L 548.503937 225.070866
 L 548.503937 244.062992 
 L 0 244.062992 
 z
-" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_8">
     <path d="M 0 263.055118 
@@ -83,17 +83,17 @@ L 548.503937 263.055118
 L 548.503937 282.047244 
 L 0 282.047244 
 z
-" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: #f1f0ec"/>
    </g>
    <g id="line2d_1">
     <path d="M 0 15.590551 
 L 548.503937 15.590551 
-" clip-path="url(#pbb9ee94bc1)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 0 282.047244 
 L 548.503937 282.047244 
-" clip-path="url(#pbb9ee94bc1)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
+" clip-path="url(#p9c84b0fbda)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
    </g>
    <g id="text_1">
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="0" y="11.857008" transform="rotate(-0 0 11.857008)">data need</text>
@@ -132,13 +132,13 @@ L 548.503937 282.047244
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="67.557795" transform="rotate(-0 338.740157 67.557795)">same; + BLAKE3(reason)[:16]</text>
    </g>
    <g id="text_13">
-    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="86.549921" transform="rotate(-0 0 86.549921)">an embedding</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="0" y="86.549921" transform="rotate(-0 0 86.549921)">an embedding</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="86.549921" transform="rotate(-0 121.889764 86.549921)">fact: · 128 / 1024 floats</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #7a7d85" x="121.889764" y="86.549921" transform="rotate(-0 121.889764 86.549921)">fact: · 128 / 1024 floats</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="86.549921" transform="rotate(-0 338.740157 86.549921)">same; attester_only</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="338.740157" y="86.549921" transform="rotate(-0 338.740157 86.549921)">same; attester_only</text>
    </g>
    <g id="text_16">
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="105.542047" transform="rotate(-0 0 105.542047)">a derived value</text>
@@ -213,13 +213,13 @@ L 548.503937 282.047244
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="238.486929" transform="rotate(-0 338.740157 238.486929)">BLAKE3(anchor)[:16]: a label</text>
    </g>
    <g id="text_40">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="257.479055" transform="rotate(-0 0 257.479055)">a device run</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="0" y="257.479055" transform="rotate(-0 0 257.479055)">a device run</text>
    </g>
    <g id="text_41">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="257.479055" transform="rotate(-0 121.889764 257.479055)">trace:&lt;cid&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #7a7d85" x="121.889764" y="257.479055" transform="rotate(-0 121.889764 257.479055)">trace:&lt;cid&gt;</text>
    </g>
    <g id="text_42">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="257.479055" transform="rotate(-0 338.740157 257.479055)">BLAKE3(CBOR(signed trace))</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="338.740157" y="257.479055" transform="rotate(-0 338.740157 257.479055)">BLAKE3(CBOR(signed trace))</text>
    </g>
    <g id="text_43">
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="276.471181" transform="rotate(-0 0 276.471181)">an evidence chain</text>
@@ -237,12 +237,12 @@ L 548.503937 282.047244
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="312.612913" transform="rotate(-0 0 312.612913)">At emem 18adb67, names, sets and records hash differently.</text>
    </g>
    <g id="text_48">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="327.353071" transform="rotate(-0 0 327.353071)">track.v1 is a note. Trace evidence here is a reference harness.</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="327.353071" transform="rotate(-0 0 327.353071)">Grey: encoders retired; device runs in a reference harness.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pbb9ee94bc1">
+  <clipPath id="p9c84b0fbda">
    <rect x="0" y="0" width="548.503937" height="334.488189"/>
   </clipPath>
  </defs>

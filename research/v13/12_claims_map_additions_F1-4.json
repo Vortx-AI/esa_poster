@@ -58,7 +58,10 @@
     "B acted on",
     "corrupted evidence",
     "no check reaches",
-    "B did not act on"
+    "B did not act on",
+    "declined",
+    "used the",
+    "genuine record"
    ],
    "status": "SPEC",
    "layer": "n/a",

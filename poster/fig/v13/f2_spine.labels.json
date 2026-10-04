@@ -41,6 +41,64 @@
   "opaque": "record ref obs-7d1c44",
   "emem": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa"
  },
+ "split": {
+  "A": {
+   "n": 276,
+   "acted_on_corrupted": 254,
+   "declined": 22,
+   "acted_on_genuine": 0,
+   "no_parsable_decision": 0,
+   "not_acted_on": 22
+  },
+  "B": {
+   "n": 276,
+   "acted_on_corrupted": 164,
+   "declined": 106,
+   "acted_on_genuine": 6,
+   "no_parsable_decision": 0,
+   "not_acted_on": 112
+  },
+  "C": {
+   "n": 276,
+   "acted_on_corrupted": 220,
+   "declined": 56,
+   "acted_on_genuine": 0,
+   "no_parsable_decision": 0,
+   "not_acted_on": 56
+  },
+  "D": {
+   "n": 288,
+   "acted_on_corrupted": 154,
+   "declined": 88,
+   "acted_on_genuine": 46,
+   "no_parsable_decision": 0,
+   "not_acted_on": 134
+  },
+  "E": {
+   "n": 300,
+   "acted_on_corrupted": 0,
+   "declined": 264,
+   "acted_on_genuine": 36,
+   "no_parsable_decision": 0,
+   "not_acted_on": 300
+  },
+  "E+": {
+   "n": 300,
+   "acted_on_corrupted": 0,
+   "declined": 264,
+   "acted_on_genuine": 36,
+   "no_parsable_decision": 0,
+   "not_acted_on": 300
+  },
+  "E0": {
+   "n": 300,
+   "acted_on_corrupted": 2,
+   "declined": 261,
+   "acted_on_genuine": 37,
+   "no_parsable_decision": 0,
+   "not_acted_on": 298
+  }
+ },
  "r5": {
   "A": [
    254,
@@ -124,9 +182,23 @@
    "pt": 17
   },
   {
-   "text": "what is handed over?",
-   "claim": "O.84",
-   "x_mm": 749.5,
+   "text": "declined",
+   "claim": "F2.heads",
+   "x_mm": 724,
+   "y_mm": 11,
+   "pt": 17
+  },
+  {
+   "text": "used the",
+   "claim": "F2.heads",
+   "x_mm": 776,
+   "y_mm": 4.9,
+   "pt": 17
+  },
+  {
+   "text": "genuine record",
+   "claim": "F2.heads",
+   "x_mm": 776,
    "y_mm": 11,
    "pt": 17
   },
@@ -474,81 +546,74 @@
    "pt": 48
   },
   {
-   "text": "REFERENCE",
-   "claim": "O.84",
-   "x_mm": 710,
-   "y_mm": 27.3,
-   "pt": 14
+   "text": "22",
+   "claim": "R5.split.A.declined",
+   "x_mm": 724,
+   "y_mm": 27.9,
+   "pt": 30
   },
   {
-   "text": "84 characters",
-   "claim": "O.84",
-   "x_mm": 710,
-   "y_mm": 34.8,
-   "pt": 22
+   "text": "0",
+   "claim": "R5.split.A.genuine",
+   "x_mm": 776,
+   "y_mm": 27.9,
+   "pt": 30
   },
   {
-   "text": "record CID = BLAKE3(record)",
-   "claim": "O.cid",
-   "x_mm": 710,
-   "y_mm": 41.8,
-   "pt": 15
+   "text": "106",
+   "claim": "R5.split.B.declined",
+   "x_mm": 724,
+   "y_mm": 47.9,
+   "pt": 30
   },
   {
-   "text": "oj5ceccile62uvm6hedpuk67cj",
-   "claim": "O.cid",
-   "x_mm": 710,
-   "y_mm": 48.0,
-   "pt": 14
+   "text": "6",
+   "claim": "R5.split.B.genuine",
+   "x_mm": 776,
+   "y_mm": 47.9,
+   "pt": 30
   },
   {
-   "text": "t2pqc7z33mtsyuffgakxbxmyaa",
-   "claim": "O.cid",
-   "x_mm": 710,
-   "y_mm": 54.2,
-   "pt": 14
+   "text": "56",
+   "claim": "R5.split.C.declined",
+   "x_mm": 724,
+   "y_mm": 67.9,
+   "pt": 30
   },
   {
-   "text": "RECORD · 1,115 B",
-   "claim": "O.1115",
-   "x_mm": 710,
-   "y_mm": 66.8,
-   "pt": 16
+   "text": "0",
+   "claim": "R5.split.C.genuine",
+   "x_mm": 776,
+   "y_mm": 67.9,
+   "pt": 30
   },
   {
-   "text": "fetch + re-hash",
-   "claim": "O.1115",
-   "x_mm": 710,
-   "y_mm": 72.9,
-   "pt": 14
+   "text": "88",
+   "claim": "R5.split.D.declined",
+   "x_mm": 724,
+   "y_mm": 87.9,
+   "pt": 30
   },
   {
-   "text": "ATTESTATION + LOG",
-   "claim": "O.batch",
-   "x_mm": 710,
-   "y_mm": 86.1,
-   "pt": 16
+   "text": "46",
+   "claim": "R5.split.D.genuine",
+   "x_mm": 776,
+   "y_mm": 87.9,
+   "pt": 30
   },
   {
-   "text": "signature + inclusion",
-   "claim": "O.batch",
-   "x_mm": 710,
-   "y_mm": 92.2,
-   "pt": 14
+   "text": "264",
+   "claim": "R5.split.E.declined",
+   "x_mm": 724,
+   "y_mm": 107.9,
+   "pt": 30
   },
   {
-   "text": "SOURCE FILES",
-   "claim": "O.nohash",
-   "x_mm": 710,
-   "y_mm": 105.4,
-   "pt": 16
-  },
-  {
-   "text": "named, not hashed",
-   "claim": "O.nohash",
-   "x_mm": 710,
-   "y_mm": 111.5,
-   "pt": 14
+   "text": "36",
+   "claim": "R5.split.E.genuine",
+   "x_mm": 776,
+   "y_mm": 107.9,
+   "pt": 30
   }
  ]
 }

@@ -141,6 +141,11 @@
    "claim": "F5.fields"
   },
   {
+   "text": "fixed per scene class (SCL 4 here), not a measured uncertainty",
+   "pt": 14,
+   "claim": "F5.conf"
+  },
+  {
    "text": "privacy",
    "pt": 14,
    "claim": "F5.fields"

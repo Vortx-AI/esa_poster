@@ -370,14 +370,6 @@
       "reason": "the subject is the record ('a signed record named by the BLAKE3 hash of its bytes'), not the observation or a pixel; the code box prints fact_cid = base32(BLAKE3-256(b)) with b = CBOR(f)"
     },
     {
-      "word": "verif-without-layer",
-      "text_sha": "e6581eed2790f563a78b56d01ad65e9740e3f09d10a5aaa9f7084bd417edc2b7",
-      "sentence": "The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel.",
-      "where": "html:header_text:body",
-      "evidence": "LEAD.answer",
-      "reason": "the log entry and receipt checks are trace links 10 to 14 (L0-L3); the receipt is Ed25519-checked offline with the responder key (trace_fact_output.txt link 10)"
-    },
-    {
       "word": "cannot",
       "text_sha": "de95443b6fb013bcf03e8caeca410c12a5e44db483cf935f0f336c0dc02d75b0",
       "sentence": "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
@@ -408,6 +400,14 @@
       "where": "html:trace:body",
       "evidence": "TRACE.run",
       "reason": "the fifteen links are named in the panel rows, layers L0 to L3"
+    },
+    {
+      "word": "verif-without-layer",
+      "text_sha": "b3195cee5eebd429c4367f41750e47b12f0d26967c7561778c2b6f953f23e428",
+      "sentence": "The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel.",
+      "where": "html:header_text:body",
+      "evidence": "LEAD.answer",
+      "reason": "the log entry and receipt checks are trace links 10 to 14 (L0-L3); the receipt is Ed25519-checked offline with the responder key (trace_fact_output.txt link 10); compaction removed on review (not shown on this board)"
     }
   ]
 }

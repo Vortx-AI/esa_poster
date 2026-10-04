@@ -21,6 +21,7 @@ import score as S  # noqa: E402
 ITEMS = {i["id"]: i for i in IT.build_items()}
 CLAUDE = ["claude-haiku-4-5-20251001", "claude-sonnet-5-5", "claude-opus-5-5"]
 out = {}
+per_item = {}   # cond -> item -> Counter, for the comparison on the items every condition shares
 for line in open(HERE / "trials.jsonl"):
     if not line.strip():
         continue
@@ -32,16 +33,11 @@ for line in open(HERE / "trials.jsonl"):
         continue
     s = S.score(it, r["cond"], r.get("final_text") or "", seen_served=r.get("seen_served"),
                 verified_pass=r.get("verified_pass"))
-    c = out.setdefault(r["cond"], Counter())
-    c["n"] += 1
-    if s["fa"]:
-        c["acted_on_corrupted"] += 1
-    elif s["decision"] == "DECLINE":
-        c["declined"] += 1
-    elif not s["parsed"]:
-        c["no_parsable_decision"] += 1
-    else:
-        c["acted_on_genuine"] += 1
+    outcome = ("acted_on_corrupted" if s["fa"] else "declined" if s["decision"] == "DECLINE"
+               else "no_parsable_decision" if not s["parsed"] else "acted_on_genuine")
+    for c in (out.setdefault(r["cond"], Counter()), per_item.setdefault(r["cond"], {}).setdefault(r["item"], Counter())):
+        c["n"] += 1
+        c[outcome] += 1
 res = {"generated_by": "research/repro/v13/r5/not_acted_split.py", "scope": "primary items, three Claude models pooled, block 1",
        "definition": "not acted on = n - acted_on_corrupted = declined + acted_on_genuine + no_parsable_decision",
        "conditions": {}}
@@ -51,6 +47,15 @@ for cond in sorted(out):
     d["not_acted_on"] = d["n"] - d["acted_on_corrupted"]
     assert d["not_acted_on"] == d["declined"] + d["acted_on_genuine"] + d["no_parsable_decision"]
     res["conditions"][cond] = d
+# the items every condition A to E shares (D adds M7; E adds M7 and M19, identifier-specific cases)
+shared = sorted(set.intersection(*(set(per_item[c]) for c in "ABCDE")))
+res["shared_items"] = {"n_items": len(shared), "items": shared, "conditions": {}}
+for cond in sorted(per_item):
+    c = Counter()
+    for i in shared:
+        c.update(per_item[cond].get(i, Counter()))
+    d = {k: c.get(k, 0) for k in ("n", "acted_on_corrupted", "declined", "acted_on_genuine", "no_parsable_decision")}
+    res["shared_items"]["conditions"][cond] = d
 results = json.loads((HERE / "results.json").read_text())
 for cond in ("A", "B", "C", "D", "E"):
     fa = results["primary"][cond]["pooled_claude"]["false_accept"]

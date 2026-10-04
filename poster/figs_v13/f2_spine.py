@@ -126,6 +126,8 @@ def r5_results():
 
 R5 = r5_results()
 MODE = "R5" if R5 else "fallback"
+# B's three outcomes per condition on the same trials (declined, acted on the genuine value), from the transcripts
+SPLIT = (json.loads((R5_DIR / "out" / "not_acted_split.json").read_text())["conditions"] if MODE == "R5" else None)
 
 
 def snippets():
@@ -245,7 +247,12 @@ def main():
     NOT_ACTED = MODE == "R5" and VARIANT == "300of300"
     T(ax, 690, 4.9, "B did not act on" if NOT_ACTED else "B acted on", "F2.heads", ha="right", **hk)
     T(ax, 690, 11, "corrupted evidence", "F2.heads", ha="right", **hk)
-    T(ax, 698 + 103 / 2, 11, "what is handed over?", "O.84", ha="center", **hk)
+    if MODE == "R5":   # v13.10: B's other outcomes, aligned with the lanes (the decoded object is panel 4)
+        T(ax, 724, 11, "declined", "F2.heads", ha="center", **hk)
+        T(ax, 776, 4.9, "used the", "F2.heads", ha="center", **hk)
+        T(ax, 776, 11, "genuine record", "F2.heads", ha="center", **hk)
+    else:
+        T(ax, 698 + 103 / 2, 11, "what is handed over?", "O.84", ha="center", **hk)
     mode = "deterministic receiver, no model" if MODE == "fallback" else "agents, pooled Claude"
     T(ax, 690, 16.4, mode, "F2.mode", fontsize=S.FLOOR, color=C["ink2"], ha="right", va="baseline")
     ax.plot([0, 600], [13.6, 13.6], color=C["rule"], lw=0.35 * MMPT, zorder=1)
@@ -277,7 +284,8 @@ def main():
     for i, (key, name, does, (k, nn), ceil) in enumerate(L):
         y = ys[i]
         em = key == "emem"
-        ax.add_patch(Rectangle((108, y), 690 - 108, lh, fc=C["emem_tint"] if em else C["na"], ec="none", zorder=1))
+        ax.add_patch(Rectangle((108, y), (W if MODE == "R5" else 690) - 108, lh, fc=C["emem_tint"] if em else C["na"],
+                               ec="none", zorder=1))
         ax.plot([312, 318 + 9], [y + lh / 2] * 2, color=C["ink2"], lw=0.5 * MMPT, zorder=3)
         ax.add_patch(FancyArrowPatch((392, y + lh / 2), (401, y + lh / 2), arrowstyle="-|>,head_length=2.6,head_width=1.3",
                                      mutation_scale=MMPT, lw=0.5 * MMPT, color=C["ink2"], zorder=3, shrinkA=0, shrinkB=0))
@@ -338,8 +346,27 @@ def main():
                 "emem": f"R5.E.{sfx}"}
         T(ax, 690, cy + 0.6, fmt_frac(dk, nn), r1id[key] if MODE == "fallback" else r5id[key],
           fontsize=PT["numeral"] if lh >= 20 else 48, fontweight=700, color=col, ha="right", va="center", zorder=4)
-    # The former boundary wall now answers the handoff question directly.
-    # It is deliberately compact: the full decoded object is restored as panel 4.
+    if MODE == "R5":
+        # the same trials, every outcome: acted on (the numeral) + declined + used the genuine record = trials
+        cond = {"prose": "A", "json": "B", "rag": "C", "opaque": "D", "emem": "E"}
+        ax.plot([696, 696], [ys[0], ys[-1] + lh], color=C["rule"], lw=0.5 * MMPT, zorder=2)
+        for i, (key, name, does, (k, nn), ceil) in enumerate(L):
+            sp = SPLIT[cond[key]]
+            assert sp["n"] == nn and sp["acted_on_corrupted"] == k and sp["no_parsable_decision"] == 0, key
+            assert sp["acted_on_corrupted"] + sp["declined"] + sp["acted_on_genuine"] == nn, key
+            cy = ys[i] + lh / 2
+            colr = C["emem"] if key == "emem" else C["ink"]
+            T(ax, 724, cy + 0.4, f"{sp['declined']}", f"R5.split.{cond[key]}.declined", fontsize=30, fontweight=700,
+              color=colr, ha="center", va="center", zorder=4)
+            T(ax, 776, cy + 0.4, f"{sp['acted_on_genuine']}", f"R5.split.{cond[key]}.genuine", fontsize=30,
+              fontweight=700, color=colr, ha="center", va="center", zorder=4)
+        S.save(fig, NAME)
+        meta = {"figure": NAME, "size_mm": [W, H], "mode": MODE, "lanes": [l[0] for l in L],
+                "numerals": {l[0]: list(l[3]) for l in L}, "snippets": SN, "split": SPLIT,
+                "r5": {k: v for k, v in (R5 or {}).items()}, "labels": LABELS}
+        Path(S.OUT, f"{NAME}.labels.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False) + "\n")
+        return
+    # fallback (R1) mode keeps the compact handover stack; the full decoded object is panel 4.
     wx, ww = 698, W - 698
     hatch(ax, wx, ys[0] - 1.5, ww, H - (ys[0] - 1.5), pitch=1.6, z=1)
     px, pw_ = wx + 7, ww - 14

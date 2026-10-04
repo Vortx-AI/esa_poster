@@ -293,7 +293,8 @@
    "block": "P11 (v13.1) caption, status line",
    "print": [
     "Reference harness, no spacecraft enrolled; the gate binds the value digest only.",
-    "the gate binds the value digest only"
+    "the gate binds the value digest only",
+    "Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time."
    ],
    "status": "SPEC",
    "layer": "L5",

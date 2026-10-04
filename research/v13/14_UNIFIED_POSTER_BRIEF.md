@@ -16,7 +16,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
 
-> emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
+> emem makes satellite observations, raw or derived, addressable by place, band and time: records named by the BLAKE3 hash of their bytes, signed in batches. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
 
 > A compact citation keeps the observation traceable across agents and time. Encode in orbit, decode in AI’s reasoning with emem.
 
@@ -28,11 +28,11 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
 
-> [variant:0of300] In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
+> [variant:0of300] Across the 23 shared items, agents acted on 254 of 276 corruptions carried by prose, 154 of 276 by an opaque id, and 0 of 276 by an emem reference (2 of 276 without the check instruction).
 
-> [variant:300of300] In the controlled handoff test, agents with a checked reference and explicit instructions did not act on corrupted evidence in 300 of 300 trials (264 declined, 36 used the genuine record); with prose, 22 of 276.
+> [variant:300of300] Across the 23 shared items, agents did not act on 276 of 276 corruptions carried by an emem reference (240 declined, 36 used the genuine record); by an opaque id, 122 of 276; by prose, 22 of 276.
 
-> Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).
+> Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (SAT-042 harness, not flown).
 
 ### 2 · One NDVI, eight values
 
@@ -40,7 +40,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > One NDVI, eight values
 
-> At Keylong on 25 Sep 2026, scene, date, pixel and arithmetic choices change the reported NDVI.
+> Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI.
 
 > Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.
 
@@ -52,9 +52,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Between acquisitions, the surface, sensor, location or processing can change.
 
-> Δz: change in readout. Environment · sensor · geolocation · encoder · residual. emem's change attribution links evidence to each term.
+> Δz: change in readout. The terms list possible causes (environment, sensor, geolocation, encoder, residual), not measured shares.
 
-> The implemented score measures disagreement with an anchor. SAT-042 applies it to a fixed reference in the execution harness.
+> An uncalibrated heuristic: it scores disagreement with one anchor and names no cause. SAT-042 applies it in the execution harness.
 
 ### Memory operations
 
@@ -80,9 +80,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Checkable observation handoff
 
-> An agent passes a reference to a specific physical observation; the receiver resolves it and checks the evidence.
+> Portable EO evidence with explicit receiver checks and reproducible source tracing.
 
-> Built with standard BLAKE3, Ed25519, CBOR and Merkle logs. STAC, openEO, PROV, C2PA, RAG and temporal storage provide complementary layers.
+> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6).
 
 ### 4 · What exactly is handed over
 
@@ -116,9 +116,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Revisit the earlier evidence
 
-> Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.
+> Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.
 
-> The later 915.07 m reflects a provider change. The earlier citation still resolves to the earlier estimate.
+> The later 915.07 m reflects a provider change.
 
 ### Complete observation and memory model
 
@@ -126,7 +126,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Observations + temporal edges
 
-> a: location cell · b: variable · t: valid time · v: value u: uncertainty · p: provenance, recipe, signing time s: attestation associated with the observation
+> a: location cell · b: variable · t: valid time · v: value u: uncertainty, if recorded · p: provenance, recipe, signed_at s: attestation associated with the observation
 
 > Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.
 
@@ -150,13 +150,13 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > SAT-042 scripted pass · reference harness · 30 Sep 2026.
 
-> Reference harness, no spacecraft enrolled. The admission gate binds output value digests; band, cell and time are outside this check.
+> Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time.
 
 ### 12 · Community routes
 
 > Use emem. Carry the evidence forward.
 
-> Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).
+> Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026). Listings show availability; agent decisions are measured in panel 1.
 
 ## D. Claims map
 

@@ -15,7 +15,7 @@
   <p class="subhero rt" data-role="subhero" data-claim="V8.language">emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.</p>
   <div class="lead">
     <p class="leadq rt" data-role="question">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</p>
-    <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
+    <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes satellite observations, raw or derived, <b>addressable by place, band and time</b>: records named by the <b>BLAKE3 hash of their bytes</b>, signed in batches. The exact evidence A cites survives a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
     <p class="leadtrace steps" data-claim="TRACE.chain"><b>Trace</b><span>token</span><span>record bytes</span><span>cell</span><span>pixel</span><span>receipt</span><span>log</span><span>key</span></p>
   </div>
   <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Encode in orbit, decode in AI’s reasoning with emem.</span></p>
@@ -40,14 +40,14 @@
   <div class="fig" data-figslot="f2_spine" style="--fw:801;--fh:118"><!--fig:f2_spine--></div>
   <div class="spinefoot">
     <div class="spineleft">
-    <p class="agentstrip rt" data-mode="r5" data-variant="0of300" data-role="take" data-claim="R5.A.pooled R5.E.pooled">In the controlled handoff test, prose led agents to act on {R5.A.pooled.false_accept} corruptions; a reference with explicit checking instructions, {R5.E.pooled.false_accept}.</p>
-    <p class="agentstrip rt" data-mode="r5" data-variant="300of300" data-role="take" data-claim="R5.E.notacted R5.E.split.declined R5.E.split.genuine R5.A.notacted">In the controlled handoff test, agents with a checked reference and explicit instructions did not act on corrupted evidence in 300 of 300 trials (264 declined, 36 used the genuine record); with prose, 22 of 276.</p>
+    <p class="agentstrip rt" data-mode="r5" data-variant="0of300" data-role="take" data-claim="R5.shared.n R5.shared.A.acted R5.shared.D.acted R5.shared.E.acted R5.shared.E0.acted">Across the 23 shared items, agents acted on 254 of 276 corruptions carried by prose, 154 of 276 by an opaque id, and 0 of 276 by an emem reference (2 of 276 without the check instruction).</p>
+    <p class="agentstrip rt" data-mode="r5" data-variant="300of300" data-role="take" data-claim="R5.shared.n R5.shared.E.notacted R5.shared.E.declined R5.shared.E.acted_on_genuine R5.shared.D.notacted R5.shared.A.notacted">Across the 23 shared items, agents did not act on 276 of 276 corruptions carried by an emem reference (240 declined, 36 used the genuine record); by an opaque id, 122 of 276; by prose, 22 of 276.</p>
     <p class="agentstrip rt" data-mode="r1" data-role="take" data-claim="S.R1.A S.R1.I">In our suite, the deterministic receiver accepted 15 of 15 corruptions carried by prose and 0 of 16 with the checked reference.</p>
-    <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; <span class="nw">SAT-042</span> reference harness).</p>
+    <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (<span class="nw">SAT-042</span> harness, not flown).</p>
     </div>
     <div class="scope" data-mode="r5">
-      <p data-role="scope" data-claim="R5.models R5.dates">{R5.models}; {R5.dates}. Pooled results above are the Claude runs; Qwen is reported separately.</p>
-      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b S.threshold">Qwen2.5-7B acted on corruptions with prose 22 of 23 times; with the checked reference, 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.</p>
+      <p data-role="scope" data-claim="R5.models R5.dates R5.shared.n R5.treatment">{R5.models}; {R5.dates}. Figure: each condition’s full item set; line at left: the 23 shared items. emem condition: the reference, a verifier tool and an instruction to check.</p>
+      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b R5.limits">Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run. Qwen2.5-7B, one run, acted on 22 of 23 prose and 2 of 25 checked-reference corruptions. Simulated corruptions of a small task set; intervals in Reproduce.</p>
     </div>
     <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope S.threshold">Deterministic receiver, one record and one band. The 0.4705 threshold makes rounding change the decision. Token-copy mutation M7 has no prose form.</p>
   </div>
@@ -57,7 +57,7 @@
 <section class="panel c3" data-block="p2" data-brief="2 · One NDVI, eight values">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>How does a value change between agents?</p>
   <h2 class="rt" data-role="headline" data-claim="E8.summary">One NDVI, eight values</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="E8.summary H.img.record">At Keylong on 25 Sep 2026, scene, date, pixel and arithmetic choices change the reported NDVI.</p>
+  <p class="mech rt" data-role="mechanism" data-claim="E8.summary E8.constructed">Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI.</p>
   <div class="fig" data-figslot="f3_eight_answers" style="--fw:193.5;--fh:62"><!--fig:f3_eight_answers--></div>
   <p class="cap rt" data-role="caption" data-claim="E8.summary E8.double">Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.</p>
 </section>
@@ -67,9 +67,9 @@
   <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">Between acquisitions, the surface, sensor, location or processing can change.</p>
   <p class="extension-label" data-claim="DF.decomposition" style="margin-top:2mm">CONCEPTUAL CHANGE MODEL</p>
   <div class="equation drift-one-line" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub> + Δ<sub>encoder</sub> + ε</div>
-  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Δz: change in readout. Environment · sensor · geolocation · encoder · residual. emem's change attribution links evidence to each term.</p>
+  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Δz: change in readout. The terms list possible causes (environment, sensor, geolocation, encoder, residual), not measured shares.</p>
   <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:116"><!--fig:f4_failure_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run">The implemented score measures disagreement with an anchor. <span class="nw">SAT-042</span> applies it to a fixed reference in the execution harness.</p>
+  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run">An uncalibrated heuristic: it scores disagreement with one anchor and names no cause. <span class="nw">SAT-042</span> applies it in the execution harness.</p>
 </section>
 <section class="panel c3 handoff" data-block="p7" data-brief="7 · What checks establish">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
@@ -83,8 +83,8 @@
   <div class="accept" data-claim="TRACE.accept"><span class="nw">accept if BLAKE3(b) = cid</span> &amp; <span class="nw">cell(b) = cell(token)</span> &amp; <span class="nw">NDVI(DN(b)) = value</span> &amp; <span class="nw">COG[row, col] = DN(b)</span> &amp; <span class="nw">Ed25519(σ)</span> &amp; <span class="nw">leaf in STH</span> &amp; <span class="nw">STH<sub>geo.qa</sub> prefix of STH</span></div>
   <p class="tlead rt" data-role="body" data-claim="TRACE.run">Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check.</p>
   <div class="chain">
-    <p data-claim="TRACE.links"><b>1-3 content address</b> 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks… <i>· still trusted: nothing</i></p>
-    <p data-claim="TRACE.links"><b>4-5 cell binding</b> hashed cell = token cell = the lat/lng the derivation used <i>· nothing</i></p>
+    <p data-claim="TRACE.links"><b>1-3 content address</b> 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks… <i>· still trusted: BLAKE3 and the verifier’s code</i></p>
+    <p data-claim="TRACE.links"><b>4-5 cell binding</b> hashed cell = token cell = the lat/lng the derivation used <i>· the cell rule</i></p>
     <p data-claim="TRACE.links"><b>6-7 derivation</b> scene id, DNs, catalogue and offset are inside the bytes; NDVI recomputed bit-for-bit <i>· argument order read from emem’s code</i></p>
     <p data-claim="TRACE.links"><b>8-9 upstream</b> the STAC item matches the scene; the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900 <i>· STAC carries no checksum</i></p>
     <p data-claim="TRACE.links"><b>10-11 server signature</b> emem.dev’s Ed25519 receipt over the request id, time, cells and returned fact_cids <i>· shows what emem.dev served, not that the value is right</i></p>
@@ -96,8 +96,8 @@
 <section class="panel c3 invention" data-block="p13" data-brief="Contribution and prior art">
   <p class="extension-label" data-claim="V7.invention">THE CONTRIBUTION</p>
   <h2 class="rt s28" data-role="headline" data-claim="V7.invention">Checkable observation handoff</h2>
-  <p class="body rt" data-role="body" data-claim="V7.invention">An agent passes a reference to a specific physical observation; the receiver resolves it and checks the evidence.</p>
-  <p class="cap rt" data-role="caption" data-claim="V7.invention">Built with standard BLAKE3, Ed25519, CBOR and Merkle logs. STAC, openEO, PROV, C2PA, RAG and temporal storage provide complementary layers.</p>
+  <p class="body rt" data-role="body" data-claim="V7.invention">Portable EO evidence with explicit receiver checks and reproducible source tracing.</p>
+  <p class="cap rt" data-role="caption" data-claim="V7.invention">Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6).</p>
 </section>
 </div>
 
@@ -133,7 +133,7 @@
   <p class="mech rt steps" data-role="mechanism" data-claim="U.checks"><span>Resolve</span><span>Re-hash</span><span>Bind</span><span>Recompute</span><span>Re-read</span></p>
   <div class="fig" data-figslot="f6_mutation_matrix" style="--fw:396;--fh:196"><!--fig:f6_mutation_matrix--></div>
   <p class="cap rt" data-role="caption" data-claim="V6.controls V6.controls.n V6.controls.refused X.loo">Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).</p>
-  <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.F6.scope R5.baseline.catch R5.block2.M15r">Agent bars: 12 runs per item, across 23 items. JSON and an opaque id caught some changes from their fields. In the live pre-fix record case, agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, and 0 of 4 with a source re-read.</p>
+  <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.F6.scope R5.items R5.baseline.catch R5.block2.M15r">Agent bars: 12 runs per item. Totals: 23 items per condition (opaque id 24, emem 25). JSON and an opaque id caught some changes from their fields. Live pre-fix record: agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, 0 of 4 with a source re-read.</p>
   <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope X.p123">One record, one band, deterministic receiver; signer-error rows use a test key. Additional offset, scene and unit cases are documented in Reproduce.</p>
 </section>
 <section class="panel c6" data-block="p6" data-brief="6 · Source re-read">
@@ -148,19 +148,19 @@
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">8</span>Can a later agent recover the earlier state?</p>
   <h2 class="rt" data-role="headline" data-claim="TM.asof">Revisit the earlier evidence</h2>
   <div class="temporal-equation" data-claim="V7.recall">C<sub>τ</sub> = TxAsOf(O*, a, b, τ)<br>recall = max<sub>(t, cid)</sub> {O in C<sub>τ</sub> : t ≤ t*}</div>
-  <p class="cap rt" data-role="caption" data-claim="V7.recall">Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.</p>
+  <p class="cap rt" data-role="caption" data-claim="V7.recall">Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.</p>
   <div class="fig" data-figslot="f9_timeline" style="--fw:193.5;--fh:82"><!--fig:f9_timeline--></div>
-  <p class="cap rt" data-role="caption" data-claim="MF.example V7.recall">The later 915.07 m reflects a provider change. The earlier citation still resolves to the earlier estimate.</p>
+  <p class="cap rt" data-role="caption" data-claim="MF.example V7.recall">The later 915.07 m reflects a provider change.</p>
 </section>
 <section class="panel c3 memory" data-block="p9" data-brief="Complete observation and memory model">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">9</span>What does the memory contain?</p>
   <h2 class="rt" data-role="headline" data-claim="MF.model">Observations + temporal edges</h2>
   <div class="equation" data-claim="MF.model V7.observation">M = (O*, E*) &nbsp; O = (a, b, t, v, u, p, s)</div>
-  <p class="cap rt" data-role="caption" data-claim="V7.observation V8.language">a: location cell · b: variable · t: valid time · v: value<br>u: uncertainty · p: provenance, recipe, signing time<br>s: attestation associated with the observation</p>
+  <p class="cap rt" data-role="caption" data-claim="V7.observation V8.language">a: location cell · b: variable · t: valid time · v: value<br>u: uncertainty, if recorded · p: provenance, recipe, signed_at<br>s: attestation associated with the observation</p>
   <p class="cap rt" data-role="caption" data-claim="V7.observation O.batch">Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.</p>
   <div class="equation small" data-claim="MF.model">E = (subject, predicate, object, t<sub>from</sub>, t<sub>to</sub>)</div>
   <p class="cap rt" data-role="caption" data-claim="MF.model">Append observations and supersedes / disagrees_with edges; keep earlier records.</p>
-  <div class="addresscard blue"><p class="body" data-claim="MF.identity">Lookup = (a, b, t)</p><p class="equation small" data-claim="MF.identity V7.observation">cid(record) = BLAKE3(CBOR<sub>canonical</sub>(record))</p></div>
+  <div class="addresscard blue"><p class="body" data-claim="MF.identity">Lookup = (a, b, t); a cid names a record, not an object</p><p class="equation small" data-claim="MF.identity V7.observation">cid(record) = BLAKE3(CBOR<sub>canonical</sub>(record))</p></div>
 </section>
 <section class="panel c3 addresses" data-block="questions" data-brief="Memory operations">
   <h2 class="rt" data-role="headline" data-claim="V7.algebra V8.workflow">Use it in an EO workflow</h2>
@@ -184,13 +184,13 @@
   <h2 class="rt s28" data-role="headline" data-claim="SAT.run" style="margin-top:0">A signed trace binds the reported run</h2>
   <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm"><span class="nw">SAT-042</span> scripted pass · reference harness · 30 Sep 2026.</p>
   <div class="fig" data-figslot="f15b_sat042_strip" style="--fw:193.5;--fh:60"><!--fig:f15b_sat042_strip--></div>
-  <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled. The admission gate binds output value digests; band, cell and time are outside this check.</p>
+  <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time.</p>
 </section>
 </div>
 
 <section class="blk panel c8 community" data-block="p12" data-brief="12 · Community routes" style="--x:20;--y:1075.5;--w:801;--h:91.5">
   <h2 class="rt" data-role="headline" data-claim="CM.routes"><span class="num" data-exempt="panelno">12</span>Use emem. Carry the evidence forward.</h2>
-  <p class="cap rt community-result" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope">Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026).</p>
+  <p class="cap rt community-result" data-role="caption" data-claim="EC.11 EC.9of11 CM.scope CM.listings">Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026). Listings show availability; agent decisions are measured in panel 1.</p>
   <div class="fig" data-figslot="f11_ecosystem" style="--fw:726;--fh:65"><!--fig:f11_ecosystem--></div>
   <div class="community-connect">
     <div class="qrlabel inl" data-claim="Q.discover_integrations"><span class="cta">CONNECT</span></div>
@@ -200,8 +200,8 @@
 </section>
 </main>
 <footer class="blk foot" data-block="footer" style="--x:20;--y:1169.5;--w:801;--h:18">
-  <p><span data-claim="K.commit K.dates">Implementation: emem 8e9b401. Measurements: 29 Sep to 1 Oct 2026.</span>
-  <span class="sep">·</span> <span data-claim="U.poster">The linked methods connect this poster's figures to their records, source data and reproducible checks.</span>
+  <p><span data-claim="K.commit K.dates CODE.commit">Service: emem.dev at 8e9b401; code read at 18adb67. Measurements: 29 Sep to 1 Oct 2026.</span>
+  <span class="sep">·</span> <span data-claim="U.poster">Methods link each figure to its records, data and checks (Connect).</span>
   <span class="sep">·</span> <span data-claim="PA.credit">Related work: Sigstore, RFC 9162, SCITT (RFC 9943), ARC (arXiv 2607.25066).</span>
   <span class="sep">·</span> <span data-claim="REF.footer">Sentinel-2 Products Specification (ESA) · Copernicus DEM GLO-30/90 · Hansen et al. 2013, GFC v1.13 · JRC GFC2020 V3/V4, TMF · ESA CCI Biomass v7 · BLAKE3 · RFC 8032 · RFC 6962/9162 · STAC 1.1 · openEO 1.3 · W3C PROV-DM · C2PA 2.4 · MCP 2025-11-25 · A2A 1.0 · Perez et al., ICLR 2025 · Munir et al. 2026 (2604.24919) · Cemri et al. 2025, MAST (2503.13657) · Townshend et al. 1992 · GeoGuard (NASA-IMPACT) · Prithvi-EO-2.0 · TESSERA (2506.20380)</span></p>
 </footer>

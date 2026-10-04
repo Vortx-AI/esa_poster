@@ -2,7 +2,7 @@
   "schema": "Documented departures for the reviewed v13 source, 2 Oct 2026.",
   "deviations": {
     "p1": {
-      "reason": "Complete handoff experiment below the seven-step workflow. The right stack now states the address, record, attestation and named sources; digest lines have sufficient spacing at 14 pt. v13.10: a 17 pt line under the handoff result states the orbit design and its reference-harness scope."
+      "reason": "Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (reference, verifier tool, instruction) and that conditions differ in tools as well as representation. A 17 pt line states the orbit design and its reference-harness scope."
     },
     "p2": {
       "reason": "The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment."
@@ -84,6 +84,7 @@
   "v13.10_notes": {
     "date": "2026-10-04",
     "what": "Recovered from the v10 board (5143fac): the lead question and answer (header, beside the hero), the memory-as-coded box (centre, after panel 4, streamlined to seven rows) and the full trace (left, after panel 7, condensed; the ten-client-path sentence is left out because panel 12 prints the later 11-path measurement). Column gaps: left 4, centre 1, right 3 mm. The header image strip states the scene-to-token reduction instead of the location credit, which panels 1, 2 and 4 already carry. The 'Hand off' workflow step carries the strongest fill.",
-    "variants": "Two print variants from one source (build_v13.py --variant): 0of300 (default) prints false acceptance as pre-registered; 300of300 prints the complement as 'did not act on' with the declined / genuine split. Only panel 1's outcome column and take line and panel 5's agent bars, totals and bar note differ."
+    "variants": "Two print variants from one source (build_v13.py --variant): 0of300 (default) prints false acceptance as pre-registered; 300of300 prints the complement as 'did not act on' with the declined / genuine split. Only panel 1's outcome column and take line and panel 5's agent bars, totals and bar note differ.",
+    "eo_review": "Response to the EO reviewer's report of 4 Oct 2026: research/v13/26_V13_10_REVIEW.md section 10."
   }
 }

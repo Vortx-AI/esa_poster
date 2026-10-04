@@ -43,14 +43,14 @@
    "pt": 24
   },
   {
-   "text": "This pixel’s NDVI record, handed off in one text message.",
+   "text": "The reference to this pixel’s NDVI record fits in one text message.",
    "claim": "WOW.sms",
    "x_mm": 8.0,
    "y_mm": 173.0,
    "pt": 17
   },
   {
-   "text": "84 characters, 46 tokens; one SMS holds 160.",
+   "text": "84 characters; checking it fetches the 1,115-byte record and its log entry.",
    "claim": "WOW.sms",
    "x_mm": 8.0,
    "y_mm": 180.4,

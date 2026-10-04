@@ -7,7 +7,7 @@
  "mode": "R5",
  "labels": [
   {
-   "text": "agents as B: three Claude models pooled, 1 Oct 2026",
+   "text": "agent bars: three Claude models pooled, 1 Oct 2026",
    "pt": 17,
    "claim": "R5.dates"
   },
@@ -72,7 +72,7 @@
    "claim": "V6.matrix_labels"
   },
   {
-   "text": "emem, full check",
+   "text": "emem checks",
    "pt": 18,
    "claim": "V6.matrix_labels"
   },
@@ -1027,7 +1027,7 @@
    "claim": "F6.cumulative"
   },
   {
-   "text": "Bars: B did not act on it (declined, or used the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic receiver. Totals pool 23 items, 1 Oct 2026.",
+   "text": "Bars: B did not act on it (declined, or used the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic receiver. Totals pool 23 to 25 items, 1 Oct 2026.",
    "pt": 14,
    "claim": "R5.F6.scope"
   },

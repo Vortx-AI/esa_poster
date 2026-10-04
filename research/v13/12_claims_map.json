@@ -5337,7 +5337,8 @@
    "id": "K.commit",
    "block": "footer",
    "print": [
-    "emem.dev at commit 8e9b401"
+    "emem.dev at commit 8e9b401",
+    "Service: emem.dev at 8e9b401; code read at 18adb67."
    ],
    "status": "LIVE",
    "layer": "n/a",

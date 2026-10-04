@@ -6,7 +6,8 @@
       "block": "v13.10 header lead (recovered from the v10 board, 5143fac)",
       "print": [
         "Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?",
-        "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name."
+        "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
+        "emem makes satellite observations, raw or derived, addressable by place, band and time: records named by the BLAKE3 hash of their bytes, signed in batches. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -83,7 +84,8 @@
       "id": "ORBIT.design",
       "block": "v13.10 panel 1 handoff line",
       "print": [
-        "Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness)."
+        "Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).",
+        "Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (SAT-042 harness, not flown)."
       ],
       "status": "SPEC",
       "layer": "L5",
@@ -322,7 +324,9 @@
       "block": "v13.10 header image strip",
       "print": [
         "This pixel’s NDVI record, handed off in one text message.",
-        "84 characters, 46 tokens; one SMS holds 160."
+        "84 characters, 46 tokens; one SMS holds 160.",
+        "The reference to this pixel’s NDVI record fits in one text message.",
+        "84 characters; checking it fetches the 1,115-byte record and its log entry."
       ],
       "status": "EXTERNAL",
       "layer": "n/a",
@@ -344,7 +348,7 @@
         ],
         "expect": 46
       },
-      "note": "",
+      "note": " v13.10: the strip separates the 84-character reference from the 1,115-byte record and its proofs (O.1115), which a check fetches.",
       "tier": "1m",
       "checked": true
     },
@@ -526,62 +530,6 @@
         "expect": 300
       },
       "note": "Complement of the pre-registered false-acceptance count for checked reference on the same trials. It is not a count of refusals: it includes trials where B acted on the genuine value. Printed only in the 300of300 variant.",
-      "tier": "3m",
-      "checked": true
-    },
-    {
-      "id": "R5.E.split.declined",
-      "block": "v13.10 P1 take line, 300of300 variant",
-      "print": [
-        "264 declined"
-      ],
-      "status": "PRE-REGISTERED",
-      "layer": "L0-L3",
-      "source": {
-        "file": "research/repro/v13/r5/out/not_acted_split.json",
-        "pointer": "conditions.E.declined"
-      },
-      "date": "2026-10-01",
-      "value": 264,
-      "check": {
-        "kind": "json",
-        "file": "repro/v13/r5/out/not_acted_split.json",
-        "arg": [
-          "conditions",
-          "E",
-          "declined"
-        ],
-        "expect": 264
-      },
-      "note": "Re-scored from the stored transcripts with score.py, as analyze.py does; split of the 300 checked-reference trials with no false acceptance.",
-      "tier": "3m",
-      "checked": true
-    },
-    {
-      "id": "R5.E.split.genuine",
-      "block": "v13.10 P1 take line, 300of300 variant",
-      "print": [
-        "36 used the genuine record"
-      ],
-      "status": "PRE-REGISTERED",
-      "layer": "L0-L3",
-      "source": {
-        "file": "research/repro/v13/r5/out/not_acted_split.json",
-        "pointer": "conditions.E.acted_on_genuine"
-      },
-      "date": "2026-10-01",
-      "value": 36,
-      "check": {
-        "kind": "json",
-        "file": "repro/v13/r5/out/not_acted_split.json",
-        "arg": [
-          "conditions",
-          "E",
-          "acted_on_genuine"
-        ],
-        "expect": 36
-      },
-      "note": "Re-scored from the stored transcripts with score.py, as analyze.py does; split of the 300 checked-reference trials with no false acceptance.",
       "tier": "3m",
       "checked": true
     },
@@ -4446,6 +4394,764 @@
         "expect": 16
       },
       "note": "Deterministic receiver: corruptions it did not act on (refused, or unaffected). 300of300 variant only.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.split.A.declined",
+      "block": "v13.10 P1 figure: B's outcomes, declined column",
+      "print": [
+        "22"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.A.declined",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 22,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "A",
+          "declined"
+        ],
+        "expect": 22
+      },
+      "note": "prose: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.A.genuine",
+      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "print": [
+        "0"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.A.acted_on_genuine",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 0,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "A",
+          "acted_on_genuine"
+        ],
+        "expect": 0
+      },
+      "note": "prose: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.B.declined",
+      "block": "v13.10 P1 figure: B's outcomes, declined column",
+      "print": [
+        "106"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.B.declined",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 106,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "B",
+          "declined"
+        ],
+        "expect": 106
+      },
+      "note": "JSON: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.B.genuine",
+      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "print": [
+        "6"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.B.acted_on_genuine",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 6,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "B",
+          "acted_on_genuine"
+        ],
+        "expect": 6
+      },
+      "note": "JSON: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.C.declined",
+      "block": "v13.10 P1 figure: B's outcomes, declined column",
+      "print": [
+        "56"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.C.declined",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 56,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "C",
+          "declined"
+        ],
+        "expect": 56
+      },
+      "note": "RAG: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.C.genuine",
+      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "print": [
+        "0"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.C.acted_on_genuine",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 0,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "C",
+          "acted_on_genuine"
+        ],
+        "expect": 0
+      },
+      "note": "RAG: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.D.declined",
+      "block": "v13.10 P1 figure: B's outcomes, declined column",
+      "print": [
+        "88"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.D.declined",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 88,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "D",
+          "declined"
+        ],
+        "expect": 88
+      },
+      "note": "opaque id: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.D.genuine",
+      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "print": [
+        "46"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.D.acted_on_genuine",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 46,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "D",
+          "acted_on_genuine"
+        ],
+        "expect": 46
+      },
+      "note": "opaque id: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.E.declined",
+      "block": "v13.10 P1 figure: B's outcomes, declined column",
+      "print": [
+        "264"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.E.declined",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 264,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "E",
+          "declined"
+        ],
+        "expect": 264
+      },
+      "note": "emem reference, instructed: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.split.E.genuine",
+      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "print": [
+        "36"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.E.acted_on_genuine",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 36,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "E",
+          "acted_on_genuine"
+        ],
+        "expect": 36
+      },
+      "note": "emem reference, instructed: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.n",
+      "block": "v13.10 P1 take line: shared items",
+      "print": [
+        "23 shared items",
+        "the 23 shared items"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "shared_items.n_items",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 23,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "shared_items",
+          "n_items"
+        ],
+        "expect": 23
+      },
+      "note": "Items every condition A to E was run on; D adds M7 and E adds M7 and M19 (identifier-specific cases, 0 acted on in each). Post hoc presentation requested by an EO reviewer; the pre-registered totals are the figure's numerals.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.A.acted",
+      "block": "v13.10 P1 take line (0of300): acted on, shared items",
+      "print": [
+        "254 of 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "shared_items.conditions.A.acted_on_corrupted",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 254,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "shared_items",
+          "conditions",
+          "A",
+          "acted_on_corrupted"
+        ],
+        "expect": 254
+      },
+      "note": "A on the 23 shared items, 276 trials; pooled Claude.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.D.acted",
+      "block": "v13.10 P1 take line (0of300): acted on, shared items",
+      "print": [
+        "154 of 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "shared_items.conditions.D.acted_on_corrupted",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 154,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "shared_items",
+          "conditions",
+          "D",
+          "acted_on_corrupted"
+        ],
+        "expect": 154
+      },
+      "note": "D on the 23 shared items, 276 trials; pooled Claude.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.E.acted",
+      "block": "v13.10 P1 take line (0of300): acted on, shared items",
+      "print": [
+        "0 of 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "shared_items.conditions.E.acted_on_corrupted",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 0,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "shared_items",
+          "conditions",
+          "E",
+          "acted_on_corrupted"
+        ],
+        "expect": 0
+      },
+      "note": "E on the 23 shared items, 276 trials; pooled Claude.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.E0.acted",
+      "block": "v13.10 P1 take line (0of300): acted on, shared items",
+      "print": [
+        "2 of 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "shared_items.conditions.E0.acted_on_corrupted",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 2,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "shared_items",
+          "conditions",
+          "E0",
+          "acted_on_corrupted"
+        ],
+        "expect": 2
+      },
+      "note": "E0 on the 23 shared items, 276 trials; pooled Claude.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.A.notacted",
+      "block": "v13.10 P1 take line (300of300): not acted on, shared items",
+      "print": [
+        "22 of 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "[['shared_items', 'conditions', 'A', 'n'], ['shared_items', 'conditions', 'A', 'acted_on_corrupted']]",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 22,
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          [
+            "shared_items",
+            "conditions",
+            "A",
+            "n"
+          ],
+          [
+            "shared_items",
+            "conditions",
+            "A",
+            "acted_on_corrupted"
+          ]
+        ],
+        "expect": 22
+      },
+      "note": "A on the 23 shared items: trials in which B did not act on the corrupted value (declined, or used the genuine record).",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.D.notacted",
+      "block": "v13.10 P1 take line (300of300): not acted on, shared items",
+      "print": [
+        "122 of 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "[['shared_items', 'conditions', 'D', 'n'], ['shared_items', 'conditions', 'D', 'acted_on_corrupted']]",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 122,
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          [
+            "shared_items",
+            "conditions",
+            "D",
+            "n"
+          ],
+          [
+            "shared_items",
+            "conditions",
+            "D",
+            "acted_on_corrupted"
+          ]
+        ],
+        "expect": 122
+      },
+      "note": "D on the 23 shared items: trials in which B did not act on the corrupted value (declined, or used the genuine record).",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.E.notacted",
+      "block": "v13.10 P1 take line (300of300): not acted on, shared items",
+      "print": [
+        "276 of 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "[['shared_items', 'conditions', 'E', 'n'], ['shared_items', 'conditions', 'E', 'acted_on_corrupted']]",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 276,
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          [
+            "shared_items",
+            "conditions",
+            "E",
+            "n"
+          ],
+          [
+            "shared_items",
+            "conditions",
+            "E",
+            "acted_on_corrupted"
+          ]
+        ],
+        "expect": 276
+      },
+      "note": "E on the 23 shared items: trials in which B did not act on the corrupted value (declined, or used the genuine record).",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.E.declined",
+      "block": "v13.10 P1 take line (300of300): emem split, shared items",
+      "print": [
+        "240 declined"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "shared_items.conditions.E.declined",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 240,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "shared_items",
+          "conditions",
+          "E",
+          "declined"
+        ],
+        "expect": 240
+      },
+      "note": "emem reference, instructed, on the 23 shared items.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.shared.E.acted_on_genuine",
+      "block": "v13.10 P1 take line (300of300): emem split, shared items",
+      "print": [
+        "36 used the genuine record"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "shared_items.conditions.E.acted_on_genuine",
+        "script": "research/repro/v13/r5/not_acted_split.py (re-scores the stored transcripts with score.py)"
+      },
+      "date": "2026-10-01",
+      "value": 36,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "shared_items",
+          "conditions",
+          "E",
+          "acted_on_genuine"
+        ],
+        "expect": 36
+      },
+      "note": "emem reference, instructed, on the 23 shared items.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.treatment",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "emem condition: the reference, a verifier tool and an instruction to check."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/prereg.md",
+        "pointer": "section 3, condition E: tools fetch_evidence and verify_evidence; extra line instructing B to verify and DECLINE on any failed check"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v13/r5/prereg.md",
+        "arg": "E token, instructed"
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.limits",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/prereg.md",
+        "pointer": "section 3: each condition exposes only its own tools (A, B none; C search; D fetch; E verify plus instruction)"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v13/r5/prereg.md",
+        "arg": "each condition exposes only its own tools"
+      },
+      "note": "Raised by an EO reviewer on 4 Oct 2026: the comparison is of whole handoff arrangements; it does not isolate the identifier.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "E8.constructed",
+      "block": "v13.10 P2 mechanism",
+      "print": [
+        "Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI."
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/eight_answers.json",
+        "pointer": "the eight values are constructed from real reads (scene, date, place, pixel, arithmetic), not eight agent outputs"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m",
+      "checked": false
+    },
+    {
+      "id": "R5.items",
+      "block": "v13.10 P5 scope",
+      "print": [
+        "Totals: 23 items per condition (opaque id 24, emem 25).",
+        "23 to 25 items"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "primary.<cond>.pooled_claude.false_accept.n / 12 runs per item: A, B, C 276 (23), D 288 (24), E 300 (25)"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "ratio",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "primary",
+            "E",
+            "pooled_claude",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M1",
+            "n"
+          ]
+        ],
+        "expect": 25.0
+      },
+      "note": "",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "CM.listings",
+      "block": "v13.10 P12 caption",
+      "print": [
+        "Listings show availability; agent decisions are measured in panel 1."
+      ],
+      "status": "SPEC",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/v13/ecosystem_manifest.json"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": null,
+      "note": "",
+      "tier": "1m",
+      "checked": false
+    },
+    {
+      "id": "F5.conf",
+      "block": "v13.10 P4 figure: confidence field",
+      "print": [
+        "fixed per scene class (SCL 4 here), not a measured uncertainty"
+      ],
+      "status": "MEASURED",
+      "layer": "L2",
+      "source": {
+        "file": "repro/v8/trace_fact_output.txt",
+        "pointer": "link [9b]: 'confidence 0.95 is emitted for SCL 4/5/6/11'; residual trust: the SCL to confidence mapping is emem's rule, not an ESA quantity"
+      },
+      "date": "2026-09-30",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v8/trace_fact_output.txt",
+        "arg": "confidence 0.95 is emitted for SCL 4/5/6/11"
+      },
+      "note": "",
       "tier": "30cm",
       "checked": true
     }

@@ -165,3 +165,32 @@ quantity, so it needs the split in the take line to be read correctly.
 
 The `R5.*.declined` claim rows are removed; `R5.*.notacted`, `R5.cell.*.notacted`, `S.R1.*.notacted` and
 `R5.E.split.*` replace them, each re-checked against the result files.
+
+## 10. Response to the EO reviewer's report (4 Oct 2026)
+
+The report scored the board 6.5/10 and set a correction order. What changed on the face, item by item; numbers come
+from `research/repro/v13/r5/out/not_acted_split.json` (re-scored transcripts) and are checked by the build.
+
+| Reviewer item | Change on the board |
+|---|---|
+| 1. Outcome labels in sections 1 and 5 (mandatory) | Default print (0of300) reports false acceptance as pre-registered. Panel 1's figure now prints every outcome of the same trials per condition: acted on, declined, used the genuine record (emem 0 + 264 + 36 = 300; opaque id 154 + 88 + 46 = 288). Panel 5 keeps false-acceptance bars; genuine controls 71 of 72 stay in its caption. The 300of300 variant says "did not act on", never "declined". |
+| Common-item comparison | Panel 1 take line: across the 23 shared items, agents acted on 254 of 276 prose, 154 of 276 opaque-id and 0 of 276 emem-reference corruptions (2 of 276 without the check instruction). Denominators per condition are printed in panel 5 (23; opaque id 24; emem 25). |
+| 4. Treatment stated accurately | Panel 1 scope: "emem condition: the reference, a verifier tool and an instruction to check." The uninstructed result (2 of 300; 2 of 276 shared) is printed. |
+| 5. Equal-tool baseline | Not run (needs new trials). Panel 1 scope states the limit: conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run. |
+| 2. Opening claims | Lead: "satellite observations, raw or derived", "records ... signed in batches"; the compaction claim is removed. Header strip: the 84-character reference is separated from the 1,115-byte record and log entry a check fetches. Title kept: the authors chose the programme title. |
+| Orbital framing | Panel 1 orbit line: the signed record and reference downlink; the data stays on the device (emem-airgap design); "SAT-042 harness, not flown". Panel 11: the trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. |
+| 3. Section 6 as the scientific centre | The contribution box now states the boundary: content hashes (IPFS), signed logs (SCITT) and provenance (PROV) exist; emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6). No re-layout before print. |
+| 6. Uncertainty, retrieval | Panel 4: confidence 0.95 is fixed per scene class (SCL 4 here), not a measured uncertainty. Panel 9: uncertainty "if recorded"; "a cid names a record, not an object". |
+| Section 2 | "Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI." |
+| Section 3 | The decomposition lists possible causes, not measured shares; the score is "an uncalibrated heuristic"; invalid σ is marked fail-closed. |
+| Full trace | "still trusted: nothing" became "BLAKE3 and the verifier's code" and "the cell rule". |
+| Section 8 | "known" is defined: versions signed by τ (signed_at, the signer's clock). The line the figure already prints is removed. |
+| Section 10 | The embedding row loses its emphasis; embedding and device-run rows are grey (encoders retired; reference harness). |
+| Section 12 | "Listings show availability; agent decisions are measured in panel 1." |
+| Workflow | The Check step prints "If one fails: refuse." |
+| Footer commits | "Service: emem.dev at 8e9b401; code read at 18adb67." |
+
+Not changed, and why: the title (authors' decision); the matched before/after rerun for panel 6, drift-score
+calibration, the equal-tool baseline and an orbital execution trust model (each needs new measurements); the
+reviewer's density point is answered only by replacing repeated content (panel 1's handover stack, panel 8's
+duplicate line), not by a re-layout days before print. Both variants pass every gate.

@@ -37,7 +37,8 @@
         "0.75",
         "1",
         "Tests pin 3σ → 0.50 and 9σ → 0.75.",
-        "Tests pin 3σ at 0.50 and 9σ at 0.75."
+        "Tests pin 3σ at 0.50 and 9σ at 0.75.",
+        "An uncalibrated heuristic: it scores disagreement with one anchor and names no cause. SAT-042 applies it in the execution harness."
       ],
       "status": "MEASURED",
       "layer": "L0-L3",
@@ -90,7 +91,8 @@
       "block": "v13.4",
       "print": [
         "cid(O) = BLAKE3(CBORcanonical(O))",
-        "Lookup: (cell, band, observation time)"
+        "Lookup: (cell, band, observation time)",
+        "Lookup = (a, b, t); a cid names a record, not an object"
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -150,7 +152,8 @@
         "Open-Meteo / DEM90",
         "Copernicus DEM30",
         "as of 15 Jun → 918.0 m",
-        "as of 15 Jun: 918.0 m"
+        "as of 15 Jun: 918.0 m",
+        "The later 915.07 m reflects a provider change."
       ],
       "status": "MEASURED",
       "layer": "L0-L3",

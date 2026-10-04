@@ -189,7 +189,7 @@ assert X_FL + 12 <= W
 if MODE == "R1":
     T(0.3, 3.6, "deterministic receiver, no model", 17, claim="F6.mode", weight=600, color=C["ink2"], va="center")
 else:
-    T(0.3, 3.6, f"agents as B: three Claude models pooled, {R5D['date']}", 17, claim="R5.dates", weight=600,
+    T(0.3, 3.6, f"agent bars: three Claude models pooled, {R5D['date']}", 17, claim="R5.dates", weight=600,
       color=C["ink2"], va="center")
 # glyph legend, two rows, drawn patches + words
 lx, ly = 0.0, 10.2
@@ -214,7 +214,7 @@ T(lx + 5.6, ly, "flips the decision", 14, color=C["ink2"])
 HEAD = {"A": "prose", "B": "JSON", "C": "opaque id", "RAG": "RAG"}
 for c in cond_cols:
     T(xs[c] + CW / 2, 6.0, HEAD[c], 18, weight=600, ha="center")
-T(X_EM + 3 * SW, 6.0, "emem, full check", 18, weight=700, color=C["emem"], ha="center")
+T(X_EM + 3 * SW, 6.0, "emem checks", 18, weight=700, color=C["emem"], ha="center")
 for k, lv in enumerate(DEPTH):
     layer = CHECK[lv][1]
     box(X_EM + k * SW + 1.6, 11.6, SW - 3.2, 5.6, RAMP[layer], r=0.6)
@@ -388,12 +388,13 @@ scope_claim = "F6.scope"
 if MODE == "R5":
     reps = ", ".join(f"{n} {R5_MODEL_NAME.get(m, m)}" for m, n in R5D["reps"].items())
     reps = reps.replace("haiku", "Haiku 4.5").replace("sonnet", "Sonnet 5.5").replace("opus", "Opus 5.5")
+    NI = f"{min(R5D['n_items'].values())} to {max(R5D['n_items'].values())}"   # 23 (A, B, RAG), 24 (opaque id), 25 (emem)
     if NOT_ACTED:
         scope = (f"Bars: B did not act on it (declined, or used the genuine value), n {R5D['per_cell']} ({reps} runs); "
-                 f"squares: deterministic receiver. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
+                 f"squares: deterministic receiver. Totals pool {NI} items, {R5D['date']}.")
     else:
         scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
-                 f"squares: the deterministic ceiling. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
+                 f"squares: the deterministic ceiling. Totals pool {NI} items, {R5D['date']}.")
     scope_claim = "R5.F6.scope"
 T(0, yl + 5.9, scope, 14, color=C["ink2"], claim=scope_claim)
 T(0, yl + 11.2, scope2, 14, color=C["ink2"], claim="X.p123")
