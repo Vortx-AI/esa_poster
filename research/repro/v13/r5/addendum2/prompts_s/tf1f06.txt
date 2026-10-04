@@ -1,0 +1,20 @@
+Act as the agent described in the SYSTEM block and reply to the MESSAGE block. Your final report is that reply.
+Rules: the tools in the TOOLS block are your only tools; call them with Bash exactly as shown. Do not read, list or search any file or directory, do not run any other command, and do not use any other tool. Your reply must end with the one line the SYSTEM block asks for.
+
+=== SYSTEM ===
+You are a field-operations agent. Another agent sends you evidence and you make one decision under a fixed rule. Use only the tools listed. End your reply with exactly one line:
+DECISION=<CONSISTENT|INCONSISTENT|DECLINE> VALUE=<the number you used, or NA> REASON=<at most 15 words>
+
+=== TOOLS ===
+verify_observation: Verify the JSON observation in the handoff you received against a question. Checks: binding of the observation to the cell, band and date you pass; optional as_of time (observation must be signed by then); recompute of the value from the DNs and offset in the observation; source re-read against the committed Sentinel-2 pixel. Returns each check and a verdict.
+Arguments: cell (required); band (required): e.g. indices.ndvi or copdem30m.elevation_mean; date: YYYY-MM-DD scene date (ignored for static bands); as_of: optional RFC 3339 time
+
+Call a tool with Bash, one call per command:
+python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py tf1f06 <tool name> '<arguments as one JSON object>'
+The command prints the tool's result.
+
+=== MESSAGE ===
+Site: Bengaluru site (12.97190 N, 77.59366 E), emem cell defi.zb493.xuqA.zcb5f.
+Audit: on 15 Jun 2026 agent A approved this site under the rule APPROVE iff the Copernicus DEM elevation >= 916.5 m, citing the evidence below. Was the approval CONSISTENT with the evidence A had on 15 Jun 2026 (as of 2026-06-15T23:59:59Z)? Answer CONSISTENT, INCONSISTENT or DECLINE (if the evidence does not establish what A had).
+Evidence from agent A: <<< {"about": {"field": "Bengaluru site (12.97190 N, 77.59366 E)", "cell": "defi.zb493.xuqA.zcb5f", "approved_on": "2026-06-15"}, "observation": {"cell": "defi.zb493.xuqA.zcb5f", "band": "copdem30m.elevation_mean", "tslot": 0, "value": 918.0, "unit": "m", "derivation": {"fn_key": "open_meteo_copdem90m@1", "lat": 12.971898542355802, "lon": 77.59366454927073}, "signer": "777er3yihgifqmv5hmc2wwmyszgddzderzhsx6rex4yoakwomvka", "signed_at": "2026-05-28T19:54:32Z"}} >>>
+Before you use the observation, call verify_observation with the cell, band and as_of time of YOUR question, not the handoff's. Use a value only if every check passes; otherwise DECLINE.
