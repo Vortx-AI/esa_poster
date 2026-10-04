@@ -5246,6 +5246,32 @@
       "note": "4 Oct 2026, after the second ChatGPT review: the earlier form '2,794 scored trials of 25 items' undercounted the item ids and read as Claude-only. The figure is pooled Claude over each condition's full item set; the total includes Qwen, controls and exploratory trials.",
       "tier": "1m",
       "checked": true
+    },
+    {
+      "id": "F2.relay.r5",
+      "block": "v13.10 P1 relay box",
+      "print": [
+        "relay or faulty signer",
+        "one change per trial,",
+        "same set on each lane:",
+        "value · unit · cell · time · band · source · derivation · pixel · stale record · signature / id"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "n/a",
+      "source": {
+        "file": "research/repro/v13/r5/prereg.md",
+        "pointer": "section 4, items table: each item applies one corruption; the 25 primary items fall in the families value (M1, M2, M8, M2-B), unit (M18), cell (M4, M9, M19, M24), time (M10), band (M6), source (M11, M23), source (pixel) (M15, M15r), derivation (M12, M14, M25), stale/current (M5, M5b, M16), stale/history (M20) and signature/cid (M3, M7, M13); section 3: the same relay state renders every condition"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v13/r5/prereg.md",
+        "arg": "| M18 | B | unit |"
+      },
+      "note": "Replaces the R1 family list in R5 mode (F2.relay), which missed unit and stale history and read as one family per lane.",
+      "tier": "1m",
+      "checked": true
     }
   ],
   "extend_print": [

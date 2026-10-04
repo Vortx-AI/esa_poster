@@ -351,3 +351,12 @@ full trace at 17 pt (from 14); the token table at 8 mm rows (from 6.7); and air 
 rendered board: 3,255 to 3,043 printed words, 1,695 to 1,348 of them at 14 pt; running text 838 to 803 words (cap
 816 / 836, copy brief 808 / 827 plus about 1 %). Twelve figures are placed (the drift-score figure is no longer one).
 Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no split number phrase.
+
+## 18. Panel 1 relay box (4 Oct 2026)
+
+The relay box listed nine change types one per line, down the box, between the five lane markers, so "cell" sat beside
+the JSON lane and read as that lane's corruption; the red-on-pink list was hard to read, and it used the R1 families,
+which miss two of the R5 families (unit, stale history). It now prints "relay or faulty signer", "one change per trial,
+same set on each lane:" and the R5 families as one wrapped list in dark ink, centred in the box: value, unit, cell,
+time, band, source, derivation, pixel, stale record, signature / id (prereg section 4; row F2.relay.r5). The lane
+markers sit on the box edge. Both variants pass every gate, with 0 text overlaps.

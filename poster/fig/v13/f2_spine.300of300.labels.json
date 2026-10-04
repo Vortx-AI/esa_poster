@@ -252,80 +252,52 @@
    "pt": 14
   },
   {
-   "text": "relay or faulty",
-   "claim": "V7.flow",
-   "x_mm": 337,
-   "y_mm": 23.5,
+   "text": "relay or faulty signer",
+   "claim": "F2.relay.r5",
+   "x_mm": 325.0,
+   "y_mm": 46.3,
+   "pt": 16
+  },
+  {
+   "text": "one change per trial,",
+   "claim": "F2.relay.r5",
+   "x_mm": 325.0,
+   "y_mm": 53.5,
    "pt": 15
   },
   {
-   "text": "signer changes:",
-   "claim": "V7.flow",
-   "x_mm": 337,
-   "y_mm": 32.45,
+   "text": "same set on each lane:",
+   "claim": "F2.relay.r5",
+   "x_mm": 325.0,
+   "y_mm": 59.9,
    "pt": 15
   },
   {
-   "text": "value",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 41.4,
+   "text": "value · unit · cell · time ·",
+   "claim": "F2.relay.r5",
+   "x_mm": 325.0,
+   "y_mm": 68.9,
    "pt": 15
   },
   {
-   "text": "cell",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 50.35,
+   "text": "band · source · derivation ·",
+   "claim": "F2.relay.r5",
+   "x_mm": 325.0,
+   "y_mm": 75.5,
    "pt": 15
   },
   {
-   "text": "time",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 59.3,
+   "text": "pixel · stale record ·",
+   "claim": "F2.relay.r5",
+   "x_mm": 325.0,
+   "y_mm": 82.1,
    "pt": 15
   },
   {
-   "text": "band",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 68.25,
-   "pt": 15
-  },
-  {
-   "text": "source",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 77.2,
-   "pt": 15
-  },
-  {
-   "text": "derivation",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 86.15,
-   "pt": 15
-  },
-  {
-   "text": "stale state",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 95.1,
-   "pt": 15
-  },
-  {
-   "text": "signature",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 104.05,
-   "pt": 15
-  },
-  {
-   "text": "pixel",
-   "claim": "F2.relay",
-   "x_mm": 337,
-   "y_mm": 113.0,
+   "text": "signature / id",
+   "claim": "F2.relay.r5",
+   "x_mm": 325.0,
+   "y_mm": 88.7,
    "pt": 15
   },
   {

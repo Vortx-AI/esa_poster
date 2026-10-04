@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T13:16:03+00:00",
+ "built_utc": "2026-10-04T13:24:21+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -43,7 +43,7 @@
    "file": "poster/fig/v13/f2_spine.300of300.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T12:35:58"
+   "mtime": "2026-10-04T13:22:50"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -109,7 +109,7 @@
    "mtime": "2026-10-04T12:36:13"
   }
  },
- "figure_text_tokens": 1676,
+ "figure_text_tokens": 1696,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -158,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (818 text runs)"
+    "every printed code point is in the face that sets it (814 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -194,7 +194,7 @@
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "558 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "559 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -397,7 +397,7 @@
   "F2.heads",
   "F2.lanes",
   "F2.mode",
-  "F2.relay",
+  "F2.relay.r5",
   "F2.snippets",
   "F3.chips",
   "F3.legend",
@@ -545,7 +545,7 @@
   "X.p123"
  ],
  "figure_numbers_checked": 321,
- "rows_rechecked": 558,
+ "rows_rechecked": 559,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
   "A13.products",

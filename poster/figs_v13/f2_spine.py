@@ -92,6 +92,10 @@ TSLOT = GEN["question"]["tslot"]
 DATE = dt.date(1970, 1, 1) + dt.timedelta(days=TSLOT)
 N_MUT = len([m for m in MM["meta"]["mutations"] if m["id"] not in ("G0", "M17")])
 FAMILIES = "value · cell · time · band · source · derivation · stale state · signature · pixel"
+# R5 primary items (25) fall in these families (prereg section 4, the family column); stale current and stale history
+# are one entry here. Printed as one wrapped list so no family lines up with a lane.
+FAMILIES_R5 = ["value", "unit", "cell", "time", "band", "source", "derivation", "pixel", "stale record",
+               "signature / id"]
 
 
 def r5_results():
@@ -286,17 +290,35 @@ def main():
         em = key == "emem"
         ax.add_patch(Rectangle((108, y), (W if MODE == "R5" else 690) - 108, lh, fc=C["emem_tint"] if em else C["na"],
                                ec="none", zorder=1))
-        ax.plot([312, 318 + 9], [y + lh / 2] * 2, color=C["ink2"], lw=0.5 * MMPT, zorder=3)
+        ax.plot([312, 318], [y + lh / 2] * 2, color=C["ink2"], lw=0.5 * MMPT, zorder=3)
         ax.add_patch(FancyArrowPatch((392, y + lh / 2), (401, y + lh / 2), arrowstyle="-|>,head_length=2.6,head_width=1.3",
                                      mutation_scale=MMPT, lw=0.5 * MMPT, color=C["ink2"], zorder=3, shrinkA=0, shrinkB=0))
     ax.add_patch(Rectangle((rx, ys[0] - 1.5), rw, ys[-1] + lh - ys[0] + 3, fc=C["harm_tint"], ec=C["harm"],
                            lw=0.55 * MMPT, zorder=2))
-    fl = ["relay or faulty", "signer changes:"] + FAMILIES.split(" · ")
-    fy0 = ys[0] + 4.5
-    step = (ys[-1] + lh - 3 - fy0) / (len(fl) - 1)
-    for j, s in enumerate(fl):
-        T(ax, rx + 19, fy0 + j * step, s, "F2.relay" if j > 1 else "V7.flow", fontsize=15 if j > 1 else 15,
-          fontweight=600 if j < 2 else 400, color=C["harm_text"], va="center", zorder=4)
+    # v13.10 (4 Oct): one change per trial from the same set on each lane. The families wrap as one list,
+    # centred in the box, so none of them sits beside a lane and reads as that lane's corruption.
+    fams = FAMILIES_R5 if MODE == "R5" else FAMILIES.split(" · ")
+    cl = "F2.relay.r5" if MODE == "R5" else "F2.relay"
+    x0, x1 = rx + 7.0, rx + rw - 2.5
+    wrapped, cur = [], ""
+    for f in fams:
+        cand = f if not cur else cur + " · " + f
+        if text_w(ax, cand + " ·", fontsize=15, fontweight=400) <= x1 - x0:
+            cur = cand
+        else:
+            wrapped.append(cur + " ·")
+            cur = f
+    wrapped.append(cur)
+    rows = [("relay or faulty signer", 16, 700, C["harm_text"], 7.2),
+            ("one change per trial,", 15, 400, C["ink2"], 6.4), ("same set on each lane:", 15, 400, C["ink2"], 9.0)]
+    rows += [(w_, 15, 400, C["ink"], 6.6) for w_ in wrapped]
+    box_top, box_h = ys[0] - 1.5, ys[-1] + lh - ys[0] + 3
+    block = sum(r_[4] for r_ in rows[:-1])
+    fy = box_top + (box_h - block) / 2
+    for s_, pt_, wt_, col_, adv_ in rows:
+        t_ = T(ax, x0, fy, s_, cl, fontsize=pt_, fontweight=wt_, color=col_, va="center", zorder=4)
+        assert text_w(ax, s_, fontsize=pt_, fontweight=wt_) <= x1 - x0 + 0.5, (s_, x1 - x0)
+        fy += adv_
 
     for i, (key, name, does, (k, nn), ceil) in enumerate(L):
         y = ys[i]
@@ -319,7 +341,7 @@ def main():
               zorder=4)
         # corruption diamond on the lane
         d = 4.0
-        ax.add_patch(Polygon([(rx + 9 - d, cy), (rx + 9, cy - d), (rx + 9 + d, cy), (rx + 9, cy + d)], closed=True,
+        ax.add_patch(Polygon([(rx - d, cy), (rx, cy - d), (rx + d, cy), (rx, cy + d)], closed=True,   # on the box edge
                              fc=C["harm"], ec="white", lw=0.4 * MMPT, zorder=5))
         # Agent B and what it does
         glyph(ax, 402, cy - 5.5, 11, "B", letter_pt=17)
