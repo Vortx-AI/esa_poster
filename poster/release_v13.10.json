@@ -1,60 +1,60 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "9bc4d9a47a001e4f9fa4ffdc321945ddf692bd9e",
+ "base_commit": "55fc8f3251266571252e717e996e6f3910af2505",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2416199,
-   "sha256": "8d79209b4f0f297973ba77256681dd369e6e9c9d3bf4efb6c2cb0793615bf0ee"
+   "bytes": 2416049,
+   "sha256": "d4ec19c5bdc04f4787bef02cbc8b67ecb1ff6ec5bb05bf10faa6c9f915f9a28e"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4753775,
-   "sha256": "a1cb7bbdfbadcccb7fe3fdf674ac50bd7ba2128196a965e823ce25e0a67202e9"
+   "bytes": 4737615,
+   "sha256": "6780437461a8d318706dc2f50791c8e5ce386a54e2fecf4a4affaf3f6fbf8173"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17086799,
-   "sha256": "82251fbf5127d22d7732da10aafc1223e25da7ab8b68b2491e38aad65c9e19b0"
+   "bytes": 17045969,
+   "sha256": "5cb556282df81b0fb0b7f35e7633394f3e5a787c0dcd8ccd0f1dd587f7cf322f"
   },
   "poster/poster.html": {
-   "bytes": 3341881,
-   "sha256": "00cb761682cd283b3f94ca0ad155cc7ca7f87e81747ca7e395ed8c16311daeca"
+   "bytes": 3341883,
+   "sha256": "3862f9666ad41b7b9874ce6f94f6780532b7e1f4042ebd71776f387fa3ae1fb2"
   },
   "poster/build_v13_report.json": {
-   "bytes": 25240,
-   "sha256": "630bc1e07fb1a0b196ea561bcc93f29c9551c82f7d278c5c2cf9ba8be0f79501"
+   "bytes": 25201,
+   "sha256": "e84720595b158797749cd8c92428babfec1d606c532041d4f0a97a397805af6f"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 23361,
-   "sha256": "5b52d80a9de9e74a52fad8713e7d29382b1e23e1204b451029d834e724884064"
+   "bytes": 23751,
+   "sha256": "689b7b55473240765e2394c140e3530ddf6ff01429e976b7eff4d4e58562ae14"
   },
   "poster/src/poster.v13.css": {
    "bytes": 15671,
    "sha256": "e167a368220f9036312635a18437995da763da1a3614b2d3a5cdc811f7bd26ce"
+  },
+  "poster/emem-poster-A0-300of300.pdf": {
+   "bytes": 2416248,
+   "sha256": "05a352b74cacd1f7336d9d188ee39375867f7dde66c6b3328b225d0ec4f22865"
+  },
+  "poster/emem-poster-preview-300of300.png": {
+   "bytes": 4756339,
+   "sha256": "8c863b2ba15eca071e2515f61d9ac9f0d105580b82b52eabb59505384969529e"
+  },
+  "poster/emem-poster-A0-300dpi-300of300.png": {
+   "bytes": 17114144,
+   "sha256": "83bba248fab2716083b7fbd5127c9c5c8086ac2d838dce60f31ae7bc9f945339"
+  },
+  "poster/poster-300of300.html": {
+   "bytes": 3341977,
+   "sha256": "ab1c567119a8520dad602d195a6e8856f4181830a5de189c431514370873be12"
+  },
+  "poster/build_v13_report-300of300.json": {
+   "bytes": 25389,
+   "sha256": "986aa9b8ad55864c9e22ca17128b2f08e95ffb2c62ceb336e5d192b0bc78656b"
   }
  },
- "pdf_blake3": "f20a701abdb84b06c0899cd26df0ef2308a26fd61ad6cb4403f36a158c203d24",
- "pointer_body": "research/repro/v13/track/board_body_9bc4d9a.md",
- "gates": {
-  "page_fit": "PASS",
-  "footer_clearance": "PASS",
-  "block_rectangles": "PASS",
-  "no_overflow_or_clipping": "PASS",
-  "type_floor": "PASS",
-  "glyph_coverage": "PASS",
-  "prose_and_banned_words": "PASS",
-  "face_hygiene": "PASS",
-  "r5_placeholders": "PASS",
-  "claims_coverage": "PASS",
-  "ecosystem_manifest": "PASS",
-  "claims_rows_recheck": "PASS",
-  "qr_decode": "PASS",
-  "assets": "PASS",
-  "fonts_loaded": "PASS",
-  "colour_tokens": "PASS",
-  "imagery": "PASS",
-  "word_budget": "PASS"
- },
+ "pdf_blake3": "35c5340d9bdbcedcee290f43d4b7c3b6573b4ca317e4e27a8d71473e930f56b6",
+ "pointer_body": "research/repro/v13/track/board_body_55fc8f3.md",
  "rows_rechecked": 531,
  "claims_printed": 165,
  "qr": [
@@ -70,5 +70,53 @@
   "right": 20.0,
   "top_text": 6.4,
   "bottom_text": 6.8
+ },
+ "pdf_blake3_300of300": "bffef05a889b3f53a4b6efcc5f277382abcb32f68eb3ffea55952d6e015074b6",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_55fc8f3-300of300.md",
+ "variants": {
+  "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
+  "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
+ },
+ "gates_by_variant": {
+  "0of300": {
+   "page_fit": "PASS",
+   "footer_clearance": "PASS",
+   "block_rectangles": "PASS",
+   "no_overflow_or_clipping": "PASS",
+   "type_floor": "PASS",
+   "glyph_coverage": "PASS",
+   "prose_and_banned_words": "PASS",
+   "face_hygiene": "PASS",
+   "r5_placeholders": "PASS",
+   "claims_coverage": "PASS",
+   "ecosystem_manifest": "PASS",
+   "claims_rows_recheck": "PASS",
+   "qr_decode": "PASS",
+   "assets": "PASS",
+   "fonts_loaded": "PASS",
+   "colour_tokens": "PASS",
+   "imagery": "PASS",
+   "word_budget": "PASS"
+  },
+  "300of300": {
+   "page_fit": "PASS",
+   "footer_clearance": "PASS",
+   "block_rectangles": "PASS",
+   "no_overflow_or_clipping": "PASS",
+   "type_floor": "PASS",
+   "glyph_coverage": "PASS",
+   "prose_and_banned_words": "PASS",
+   "face_hygiene": "PASS",
+   "r5_placeholders": "PASS",
+   "claims_coverage": "PASS",
+   "ecosystem_manifest": "PASS",
+   "claims_rows_recheck": "PASS",
+   "qr_decode": "PASS",
+   "assets": "PASS",
+   "fonts_loaded": "PASS",
+   "colour_tokens": "PASS",
+   "imagery": "PASS",
+   "word_budget": "PASS"
+  }
  }
 }
