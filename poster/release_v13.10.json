@@ -1,62 +1,62 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "2d36f7fd5298505256b2ed2b9e9e695b828e20cc",
+ "base_commit": "016d455096708bc99f6dcd7b280838bcf320906e",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2409838,
-   "sha256": "4a84f1f1c1abc239ddb614eab96d156486f8d062218e4a5404764a9ee620180a"
+   "bytes": 2409978,
+   "sha256": "66cf4634ab761f591b29db5b7fcce8613a241f5136e006f9e615255c7620d35e"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4572390,
-   "sha256": "605b9c417456095dc12e7a6adf136b16d0bd3429a7259d381f03a77100ccb4e1"
+   "bytes": 4576972,
+   "sha256": "8c00f18de0effa58a1f19aebeab397ff47405a7ac8454430c5b6534e6d889d41"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 15943024,
-   "sha256": "5c3eed4f396011e79c56b19e7eb9f2521c3ef7949036100441b376132b2a2b1a"
+   "bytes": 15976653,
+   "sha256": "3adac4c865f0ec8100a9fc535471fbfd9eacc1d68d5cf52d596558716bcd777e"
   },
   "poster/poster.html": {
-   "bytes": 3309629,
-   "sha256": "c36046e71ccedc8c1fa5f7a6606aa17838ea3a85383ed0e8e6be32e88e16bc70"
+   "bytes": 3310020,
+   "sha256": "b3e83d0593e4ca9c10b531261dddd0b9838d1b12437fe5c01b9453c8e082018b"
   },
   "poster/build_v13_report.json": {
-   "bytes": 26734,
-   "sha256": "daacbc4b29e3409ea883f9917744dcfa11b8b300c55f52c873fed7dcd12318f7"
+   "bytes": 26747,
+   "sha256": "44ee80144fe967ebf9bc99a535ed3fbf22bfbdc754909c8f54dc489ca486d3cc"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 23672,
-   "sha256": "0230127a63b30dd83330411698d5010a92a44aed736135cb0433e1334f5137bc"
+   "bytes": 23805,
+   "sha256": "b6999dedcd4044772378e0cf3b283c3ca94e58f9f909424c121678ad4bc9079f"
   },
   "poster/src/poster.v13.css": {
-   "bytes": 16934,
-   "sha256": "5a122bcc09be4927a40fc128be4b1271b4e92102c54a0b54af621ed84ffcf92c"
+   "bytes": 17192,
+   "sha256": "a006a90e5de26fd48cd215e6269c0508877b163004f600538ab17c0a23cc44d3"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2409878,
-   "sha256": "28b9ec344ba3fd9e44a65153aaae6c387260b5b3bee74b56a1d2499602c8acff"
+   "bytes": 2410015,
+   "sha256": "c2bccdceaac3c4088880cee09771f606bdd01c32aac3b600773a369a00bfd8f8"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4579988,
-   "sha256": "ef002c74bac93c1c437af0f38ea14400e5cea561db53c5e87942282dcfaf7da9"
+   "bytes": 4584086,
+   "sha256": "754548a4f60f859a624ac0b8a74c4fda4688c5eb12f518c2e9fe934ffe52b642"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 15942117,
-   "sha256": "fa6748b9f4b80a6e90f734b0de608ed0ed98b91312ea2e7e96ae8b474f77cd7a"
+   "bytes": 15977024,
+   "sha256": "3570c1cb8e212bf4a256f17d323401b137aba51991fcae46e9695d4d218bd1e3"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3309629,
-   "sha256": "0f64ccf175e7b7842ca3598401a1693f8908a035d99361d5f8cfda0307a07042"
+   "bytes": 3310020,
+   "sha256": "527073f83b196a1eb1654b70cffb4562dac1d7fd17614d7e5ddda867a14259ab"
   },
   "poster/build_v13_report-300of300.json": {
-   "bytes": 26852,
-   "sha256": "bb37db3f9ad03de3e410944636dd7f601ebbbf27e30fb084d2ac39585f7cadf3"
+   "bytes": 26865,
+   "sha256": "0446d0a9303c4a4f55f5d6cb975ceaaca6f34afdadc63718940483a16f3a2cce"
   }
  },
- "pdf_blake3": "3a8e1dad0a3bd5a262371d652246817c653ac29e0b38a66480ce432a3a9da1b6",
- "pointer_body": "research/repro/v13/track/board_body_2d36f7f.md",
- "rows_rechecked": 564,
- "claims_printed": 179,
+ "pdf_blake3": "faf88301bdc4bde24c4864db3f716437ed3c24b253d15b5d49bfbeda9d4c7ac1",
+ "pointer_body": "research/repro/v13/track/board_body_016d455.md",
+ "rows_rechecked": 565,
+ "claims_printed": 180,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
   "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
@@ -71,8 +71,8 @@
   "top_text": 9.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "1da870fb592e8cf0c5785245d3e270405a5661cbf825a9bdaf05624b6a260963",
- "pointer_body_300of300": "research/repro/v13/track/board_body_2d36f7f-300of300.md",
+ "pdf_blake3_300of300": "420e696a79d16341cd98284456b76600f349123b0bc3fc0b7154ba489ff2ff66",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_016d455-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
@@ -120,7 +120,7 @@
   }
  },
  "eo_review": "research/v13/26_V13_10_REVIEW.md section 10",
- "claims_printed_300of300": 181,
+ "claims_printed_300of300": 182,
  "versions": "no service or code commit on the face (authors' rule, 4 Oct 2026); the claims rows keep them; face_hygiene fails on a commit hash",
  "final_pass": "research/v13/26_V13_10_REVIEW.md section 12",
  "byline": "no DOIs on the face (authors, 4 Oct 2026); panel 12 and the QR codes carry the routes",
@@ -136,5 +136,5 @@
  "matched_baseline": "pre-registered (research/repro/v13/r5/prereg_addendum2.md, pushed in 0cf0424 before it was computed) and printed in panel 1's ablation strip and scope: emem's checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions, 3 of 23 with four more consistency checks, emem's verifier 0 of 23; in an exploratory run (one trial per item), Haiku agents given those checks acted on the same 8 and declined the other 15, and 28 trials in condition E calibrate the setup (0 of 25). research/repro/v13/r5/results_addendum2.md",
  "third_review": "ChatGPT review of a8ad558, 8.2/10; relay box wording fixed ('shared corruption families'); research/v13/26_V13_10_REVIEW.md section 19; the audit of the round that followed is section 20",
  "fourth_review": "ChatGPT review of ade6319, 8.5/10; ablation strip, footer dates 29 Sep to 4 Oct 2026, portable replay (research/repro/v13/r5/addendum2/replay.py); research/v13/26_V13_10_REVIEW.md section 21",
- "brand": "emem identity in the header (authors, 4 Oct 2026): the wordmark (em, a drawn orange dash, em) at the bottom right and the card tagline as the design goal, 'Design goal: encode in orbit, decode with AI.'; token brand #E86424 for these two marks only; research/v13/26_V13_10_REVIEW.md section 22"
+ "brand": "emem identity in the header (authors, 4 Oct 2026): the wordmark (em, a drawn orange dash, em) at the bottom right with its pronunciation beside it ('pronounced em-em', 'the em in em dash, twice'), and the card tagline as the design goal, 'Design goal: encode in orbit, decode with AI.'; token brand #E86424 for the dash and the tagline only; research/v13/26_V13_10_REVIEW.md section 22"
 }
