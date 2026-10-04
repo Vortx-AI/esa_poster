@@ -18,7 +18,11 @@ from style import C, MONO, OUT, ROOT, fig_mm, save  # noqa: E402
 
 W, H = 396.0, 196.0
 PTMM = 25.4 / 72
-NAME = "f6_mutation_matrix"
+# Print variant (see poster/build_v13.py and f2_spine.py): "0of300" bars count corruptions the agents acted on;
+# "300of300" bars count corruptions they did not act on. --variant 300of300 writes f6_mutation_matrix.300of300.*
+VARIANT = sys.argv[sys.argv.index("--variant") + 1] if "--variant" in sys.argv else "0of300"
+assert VARIANT in ("0of300", "300of300")
+NAME = "f6_mutation_matrix" + ("" if VARIANT == "0of300" else f".{VARIANT}")
 
 R1 = os.path.join(ROOT, "research/repro/v11/out/mutation_matrix.json")
 PROBES = os.path.join(ROOT, "research/v13/evidence/ladder/r1_t2_extra_out.json")
@@ -190,7 +194,7 @@ else:
 # glyph legend, two rows, drawn patches + words
 lx, ly = 0.0, 10.2
 for fc, ec, word in ((C["harm"], "none", "B acted on corrupted evidence"), (C["unaffected"], "none", "unaffected"),
-                     (C["emem"], "none", "declined"), (C["na"], "none", "not applicable")):
+                     (C["emem"], "none", "refused"), (C["na"], "none", "not applicable")):
     box(lx, ly - 2.0, 6.0, 4.0, fc, r=0.4)
     t = T(lx + 7.6, ly, word, 14, color=C["ink2"])
     lx += 7.6 + wmm(t) + 5.0
@@ -245,11 +249,13 @@ def r5_cell(xc, y, w, h, cond, mid, r1row):
         T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
         return
     k, n = kn
-    dk = n - k   # v13.10: bars show corruptions declined (n - acted on), the same reading as panel 1
-    bw = (w - 19) * (dk / n if n else 0)
-    box(xc + 4.5, y + 1.0, max(bw, 0.01), h - 2.0, C["emem"], r=0.4)
-    T(xc + w, y + h / 2, f"{dk}\u2009/\u2009{n}", 14, ha="right", color=C["ink2"],
-      claim=f"R5.cell.{R5_COND[cond]}.{mid}.declined")
+    if VARIANT == "300of300":   # corruptions the agents did not act on (declined, or acted on the genuine value)
+        v, fill, cid = n - k, C["emem"], f"R5.cell.{R5_COND[cond]}.{mid}.notacted"
+    else:                       # corruptions the agents acted on (false acceptance)
+        v, fill, cid = k, C["harm"], f"R5.cell.{R5_COND[cond]}.{mid}.false_accept"
+    bw = (w - 19) * (v / n if n else 0)
+    box(xc + 4.5, y + 1.0, max(bw, 0.01), h - 2.0, fill, r=0.4)
+    T(xc + w, y + h / 2, f"{v}\u2009/\u2009{n}", 14, ha="right", color=C["ink2"], claim=cid)
 
 
 def row(mid, y, h, first_in_group, fam):
@@ -324,10 +330,12 @@ y_end = y - GG
 yt = y_end + 2.2
 ax.plot([0, W], [yt, yt], color=C["ink2"], lw=0.5 / PTMM, zorder=1)
 ty = yt + 6.6
-T(0.3, ty + 0.6, "B declined corrupted evidence" if MODE == "R5" else "B acts on corrupted evidence", 20, weight=600, claim="F6.totals_label")
+NOT_ACTED = MODE == "R5" and VARIANT == "300of300"
+T(0.3, ty + 0.6, "B did not act on corrupted evidence" if NOT_ACTED else "B acts on corrupted evidence", 20, weight=600,
+  claim="F6.totals_label")
 claim_of = {"A": "S.R1.A", "B": "S.R1.B", "C": "S.R1.C", "I": "S.R1.I"}
-R5_POOLED_CLAIM = {"A": "R5.A.declined", "B": "R5.B.declined", "RAG": "R5.C.declined", "C": "R5.D.declined", "E": "R5.E.declined"}
-R1_DECL = {"S.R1.A": "S.R1.A.declined", "S.R1.B": "S.R1.B.declined", "S.R1.C": "S.R1.C.declined", "S.R1.I": "S.R1.I.declined"}
+_S = "notacted" if NOT_ACTED else "pooled"
+R5_POOLED_CLAIM = {"A": f"R5.A.{_S}", "B": f"R5.B.{_S}", "RAG": f"R5.C.{_S}", "C": f"R5.D.{_S}", "E": f"R5.E.{_S}"}
 R1_CEIL = {"A": ("S.R1.A", SUM["A"]), "B": ("S.R1.B", SUM["B"]), "C": ("S.R1.C", SUM["C"]), "E": ("S.R1.I", SUM["I"])}
 
 
@@ -335,11 +343,13 @@ def r5_total(xc, cond, color):
     """R5 mode: the agents' pooled false acceptance (primary items, three Claude models) with R1's total beneath
     as the deterministic ceiling, so the same quantity reads the same here and on the spine."""
     k, n = R5D["pooled"][cond]
-    T(xc, ty - 1.6, f"{n - k}\u2009/\u2009{n}", 17, weight=700, color=color(k), ha="center", claim=R5_POOLED_CLAIM[cond])
+    T(xc, ty - 1.6, f"{n - k if NOT_ACTED else k}\u2009/\u2009{n}", 17, weight=700, color=color(k), ha="center",
+      claim=R5_POOLED_CLAIM[cond])
     if cond in R1_CEIL:
         cid, s_ = R1_CEIL[cond]
-        T(xc, ty + 4.2, f"R1 {s_['applicable'] - s_['false_accepts']}\u2009/\u2009{s_['applicable']}", 14, color=C["ink2"],
-          ha="center", claim=R1_DECL[cid])
+        r1v = s_['applicable'] - s_['false_accepts'] if NOT_ACTED else s_['false_accepts']
+        T(xc, ty + 4.2, f"R1 {r1v}\u2009/\u2009{s_['applicable']}", 14, color=C["ink2"], ha="center",
+          claim=f"{cid}.notacted" if NOT_ACTED else cid)
 
 
 for c in cond_cols:
@@ -378,8 +388,12 @@ scope_claim = "F6.scope"
 if MODE == "R5":
     reps = ", ".join(f"{n} {R5_MODEL_NAME.get(m, m)}" for m, n in R5D["reps"].items())
     reps = reps.replace("haiku", "Haiku 4.5").replace("sonnet", "Sonnet 5.5").replace("opus", "Opus 5.5")
-    scope = (f"Bars: corruptions the agents declined, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
-             f"squares: the deterministic receiver. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
+    if NOT_ACTED:
+        scope = (f"Bars: B did not act on it (declined, or used the genuine value), n {R5D['per_cell']} ({reps} runs); "
+                 f"squares: deterministic receiver. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
+    else:
+        scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
+                 f"squares: the deterministic ceiling. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
     scope_claim = "R5.F6.scope"
 T(0, yl + 5.9, scope, 14, color=C["ink2"], claim=scope_claim)
 T(0, yl + 11.2, scope2, 14, color=C["ink2"], claim="X.p123")

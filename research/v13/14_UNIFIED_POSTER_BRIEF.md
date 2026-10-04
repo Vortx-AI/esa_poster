@@ -28,7 +28,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
 
-> In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).
+> [variant:0of300] In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
+
+> [variant:300of300] In the controlled handoff test, agents with a checked reference and explicit instructions did not act on corrupted evidence in 300 of 300 trials (264 declined, 36 used the genuine record); with prose, 22 of 276.
 
 > Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).
 

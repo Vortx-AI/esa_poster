@@ -1,13 +1,13 @@
 {
- "built_utc": "2026-10-04T10:31:29+00:00",
+ "built_utc": "2026-10-04T10:31:49+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
-  "poster/poster.html",
-  "poster/emem-poster-A0.pdf",
-  "poster/emem-poster-preview.png",
-  "poster/emem-poster-A0-300dpi.png"
+  "poster/poster-300of300.html",
+  "poster/emem-poster-A0-300of300.pdf",
+  "poster/emem-poster-preview-300of300.png",
+  "poster/emem-poster-A0-300dpi-300of300.png"
  ],
- "variant": "0of300",
+ "variant": "300of300",
  "mode": {
   "results_file": "research/repro/v13/r5/results.json",
   "exists": true,
@@ -40,10 +40,10 @@
   },
   "f2_spine": {
    "state": "placed",
-   "file": "poster/fig/v13/f2_spine.svg",
+   "file": "poster/fig/v13/f2_spine.300of300.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T10:28:00"
+   "mtime": "2026-10-04T10:28:05"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -75,10 +75,10 @@
   },
   "f6_mutation_matrix": {
    "state": "placed",
-   "file": "poster/fig/v13/f6_mutation_matrix.svg",
+   "file": "poster/fig/v13/f6_mutation_matrix.300of300.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T10:28:07"
+   "mtime": "2026-10-04T10:28:09"
   },
   "f7_wrong_pixel": {
    "state": "placed",
@@ -116,7 +116,7 @@
    "mtime": "2026-10-04T09:46:44"
   }
  },
- "figure_text_tokens": 1804,
+ "figure_text_tokens": 1811,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -189,7 +189,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "163 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "166 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -244,8 +244,8 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 766 words containing a letter, 785 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
-    "  1 · Earth to agents: 79 tokens (section C: 79)",
+    "running text: 776 words containing a letter, 797 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 91 tokens (section C: 91)",
     "  10 · Token family: 55 tokens (section C: 55)",
     "  11 · Satellite execution evidence: 38 tokens (section C: 38)",
     "  12 · Community routes: 24 tokens (section C: 24)",
@@ -286,7 +286,7 @@
  },
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
-  "In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.",
+  "In the controlled handoff test, agents with a checked reference and explicit instructions did not act on corrupted evidence in 300 of 300 trials (264 declined, 36 used the genuine record); with prose, 22 of 276.",
   "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026. Pooled results above are the Claude runs; Qwen is reported separately. Qwen2.5-7B acted on corruptions with prose 22 of 23 times; with the checked reference, 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.",
   "Agent bars: 12 runs per item, across 23 items. JSON and an opaque id caught some changes from their fields. In the live pre-fix record case, agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, and 0 of 4 with a source re-read."
  ],
@@ -464,31 +464,34 @@
   "Q.inspect_record",
   "Q.view_demo",
   "Q.view_demo.caption",
-  "R5.A.pooled",
+  "R5.A.notacted",
   "R5.A.qwen7b",
-  "R5.B.pooled",
-  "R5.C.pooled",
-  "R5.D.pooled",
-  "R5.E.pooled",
+  "R5.B.notacted",
+  "R5.C.notacted",
+  "R5.D.notacted",
+  "R5.E.notacted",
   "R5.E.qwen7b",
+  "R5.E.split.declined",
+  "R5.E.split.genuine",
   "R5.F6.scope",
   "R5.baseline.catch",
   "R5.block2.M15r",
-  "R5.cell.A.M9.false_accept",
-  "R5.cell.B.M12.false_accept",
-  "R5.cell.D.M1.false_accept",
-  "R5.cell.D.M12.false_accept",
-  "R5.cell.D.M13.false_accept",
-  "R5.cell.D.M15.false_accept",
-  "R5.cell.D.M5.false_accept",
-  "R5.cell.D.M6.false_accept",
-  "R5.cell.D.M7.false_accept",
+  "R5.cell.A.M9.notacted",
+  "R5.cell.B.M12.notacted",
+  "R5.cell.D.M1.notacted",
+  "R5.cell.D.M12.notacted",
+  "R5.cell.D.M13.notacted",
+  "R5.cell.D.M15.notacted",
+  "R5.cell.D.M5.notacted",
+  "R5.cell.D.M6.notacted",
+  "R5.cell.D.M7.notacted",
   "R5.dates",
   "R5.models",
   "REF.footer",
-  "S.R1.B",
-  "S.R1.C",
+  "S.R1.B.notacted",
+  "S.R1.C.notacted",
   "S.R1.I",
+  "S.R1.I.notacted",
   "S.threshold",
   "SAT.gate",
   "SAT.run",
@@ -573,7 +576,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 766,
-  "running_tokens": 785
+  "running_words_with_letter": 776,
+  "running_tokens": 797
  }
 }

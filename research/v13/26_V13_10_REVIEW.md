@@ -5,8 +5,8 @@ Treat it as a self-review, not an independent one.
 
 ## 1. Changes in this round
 
-- Panel 1 outcome flipped from "B acted on corrupted evidence" (0/300 for emem) to "B declined to act on corrupted
-  evidence" (300/300 for emem; prose 22/276, JSON 112/276, RAG 56/276, opaque id 134/288). Each declined count is
+- **Superseded, see section 9.** Panel 1 outcome flipped from "B acted on corrupted evidence" (0/300 for emem) to
+  "B declined to act on corrupted evidence" (300/300 for emem; prose 22/276, JSON 112/276, RAG 56/276, opaque id 134/288). Each declined count is
   the complement of the pre-registered false-accept count on the same trials (rows `R5.*.declined`, checked as
   n - k against `research/repro/v13/r5/results.json`). The take line keeps the harm figure in brackets ("they acted
   on 254"), so the original measurement is still printed.
@@ -131,3 +131,37 @@ Result: 18 of 18 gates, 0 text overlaps, all three QR codes decode to their page
   facts no longer answer "latest" and are re-read; nothing signed is rewritten (panel 6). The foundation-model
   encoders were removed on 24 Sep; old vectors still resolve. Visitors may ask why the title keeps "Foundation-Model
   Embeddings": an embedding is one typed record kind (panel 10), and records outlive their encoders.
+
+## 9. Correction: "declined" was not accurate; two print variants (4 Oct 2026)
+
+An EO reviewer flagged that 0/300 (false acceptance) and its verdict were more accurate than 300/300 "declined".
+The reviewer is right. False acceptance (`score.py`) counts a trial when B acts on a value other than the genuine
+one. Its complement is not a count of refusals: it also contains trials where B acted on the genuine value, for
+example after resolving the reference. Re-scored from the stored transcripts (`research/repro/v13/r5/not_acted_split.py`,
+output `out/not_acted_split.json`, primary items, three Claude models pooled):
+
+| condition | n | acted on corrupted | declined | acted on genuine | not acted on |
+|---|---|---|---|---|---|
+| prose | 276 | 254 | 22 | 0 | 22 |
+| JSON | 276 | 164 | 106 | 6 | 112 |
+| RAG | 276 | 220 | 56 | 0 | 56 |
+| opaque id | 288 | 154 | 88 | 46 | 134 |
+| checked reference | 300 | 0 | 264 | 36 | 300 |
+
+So "declined 300 of 300" overstated the refusals by 36 (and JSON by 6, opaque id by 46). The board now builds in two
+variants, from one source, and every gate runs on each:
+
+- **0of300 (default, `poster/emem-poster-A0.pdf`):** the pre-registered metric as measured. Panel 1 "B acted on
+  corrupted evidence", 254/276 prose ... 0/300; the reviewed take line restored word for word; panel 5 red bars and
+  totals of false acceptance with the R1 ceilings, as reviewed before the flip.
+- **300of300 (`poster/emem-poster-A0-300of300.pdf`, `--variant 300of300`):** the same trials counted the other way,
+  with accurate wording. Panel 1 "B did not act on corrupted evidence", 22/276 ... 300/300; the take line gives the
+  split ("264 declined, 36 used the genuine record"); panel 5 blue bars "B did not act on it (declined, or used the
+  genuine value)".
+
+Recommendation: print 0of300. It is the pre-registered metric, it is what the reviewer read as correct, and a
+low-is-good column is standard for false-acceptance results. 300of300 is accurate too, but it reports a derived
+quantity, so it needs the split in the take line to be read correctly.
+
+The `R5.*.declined` claim rows are removed; `R5.*.notacted`, `R5.cell.*.notacted`, `S.R1.*.notacted` and
+`R5.E.split.*` replace them, each re-checked against the result files.

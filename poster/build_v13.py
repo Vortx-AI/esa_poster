@@ -36,11 +36,20 @@ CSS = HERE / "src" / "poster.v13.css"
 TOKENS = HERE / "src" / "tokens.json"
 ALLOW = HERE / "src" / "poster.v13.allowlist.json"
 FIG = HERE / "fig" / "v13"
-OUT_HTML = HERE / "poster.html"
-PDF = HERE / "emem-poster-A0.pdf"
-PNG = HERE / "emem-poster-preview.png"
-PNG300 = HERE / "emem-poster-A0-300dpi.png"
-REPORT = HERE / "build_v13_report.json"
+# Two print variants of the handoff result (issue raised by an EO reviewer, 4 Oct 2026):
+#   0of300   (default) the pre-registered metric as measured: corruptions agent B acted on (false acceptance)
+#   300of300 the same trials counted the other way: corruptions B did not act on (declined, or acted on the genuine value)
+# Select with --variant 300of300; the 300of300 outputs carry a "-300of300" suffix. Elements marked data-variant print
+# only in their variant; figures may provide <name>.<variant>.svg (+ .labels.json).
+VARIANTS = ("0of300", "300of300")
+VARIANT = sys.argv[sys.argv.index("--variant") + 1] if "--variant" in sys.argv else VARIANTS[0]
+assert VARIANT in VARIANTS, f"--variant must be one of {VARIANTS}"
+SFX = "" if VARIANT == VARIANTS[0] else f"-{VARIANT}"
+OUT_HTML = HERE / f"poster{SFX}.html"
+PDF = HERE / f"emem-poster-A0{SFX}.pdf"
+PNG = HERE / f"emem-poster-preview{SFX}.png"
+PNG300 = HERE / f"emem-poster-A0-300dpi{SFX}.png"
+REPORT = HERE / f"build_v13_report{SFX}.json"
 BRIEF = RES / "v13" / "12_FINAL_BRIEF.md"
 COPY_BRIEF = RES / "v13" / "14_UNIFIED_POSTER_BRIEF.md"
 CLAIMS = RES / "v13" / "12_claims_map.json"
@@ -212,10 +221,15 @@ def assemble(r5, r5data, rows=None):
     html = SRC.read_text()
     html = html.replace('<link rel="stylesheet" href="src/poster.v13.css">', "<style>\n" + CSS.read_text() + "\n</style>")
     html = strip_mode(html, "r1" if r5 else "r5")
+    for other in VARIANTS:
+        if other != VARIANT:
+            html = remove_elements(html, f'data-variant="{other}"')
     figs = {}
     def figrep(m):
         name = m.group(1)
         svgp, pngp = FIG / f"{name}.svg", FIG / f"{name}.png"
+        if VARIANT != VARIANTS[0] and (FIG / f"{name}.{VARIANT}.svg").exists():
+            svgp, pngp = FIG / f"{name}.{VARIANT}.svg", FIG / f"{name}.{VARIANT}.png"
         if svgp.exists():
             svg = svgp.read_text()
             w, h = svg_size_mm(svg)
@@ -756,7 +770,15 @@ def g_claims(meas, claims, rows, r5):
                 d.append(f"{c['block']}: address/token next to pixel/scene/file without 'record': {s[:80]!r}")
     # every number anywhere (figure text included) has a row
     labels = {}
-    for lj in FIG.glob("*.labels.json"):
+    chosen = {}
+    for lj in sorted(FIG.glob("*.labels.json")):
+        parts = lj.name[:-len(".labels.json")].split(".")
+        base, var = parts[0], (parts[1] if len(parts) > 1 else None)
+        if var is None:
+            chosen.setdefault(base, lj)
+        elif var == VARIANT and VARIANT != VARIANTS[0]:
+            chosen[base] = lj
+    for lj in chosen.values():
         try:
             L = json.loads(lj.read_text())
             L = L.get("labels", L) if isinstance(L, dict) else L
@@ -1112,6 +1134,11 @@ def g_words(claims, r5=False):
             else:                              # a replacement of the R1 line that shares its opening words
                 base = max(r1lines[sec], key=lambda l: sum(1 for x, y in zip(wre.findall(l), toks) if x == y))
                 bc[sec] += len(toks) - len(wre.findall(base))
+        elif line.startswith("> [variant:"):
+            tag, rest = line[len("> [variant:"):].split("]", 1)
+            if tag == VARIANT:
+                r1lines[sec].append(rest.strip())
+                bc[sec] += len(wre.findall(rest))
         elif line.startswith("> "):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
@@ -1165,7 +1192,7 @@ def main():
     report = {
         "built_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "source": str(SRC.relative_to(REPO)), "outputs": [str(p.relative_to(REPO)) for p in (OUT_HTML, PDF, PNG, PNG300)],
-        "mode": info, "pdf": pdfinfo, "figures": figs,
+        "variant": VARIANT, "mode": info, "pdf": pdfinfo, "figures": figs,
         "figure_text_tokens": sum(len(t.split()) for t in figtext),
         "gates": GATES, "summary": {k: ("PASS" if v["pass"] else "FAIL") for k, v in GATES.items()},
         "running_lines_printed_by_figures": MOVED,
@@ -1176,7 +1203,7 @@ def main():
     if collect is not None:
         report["allowlist_candidates"] = collect
     REPORT.write_text(json.dumps(report, indent=1, ensure_ascii=False))
-    print(f"\nv13 build: mode {info['mode']}; PDF {pdfinfo['pages']} page {pdfinfo['w_mm']:.1f} x {pdfinfo['h_mm']:.1f} mm")
+    print(f"\nv13 build ({VARIANT}): mode {info['mode']}; PDF {pdfinfo['pages']} page {pdfinfo['w_mm']:.1f} x {pdfinfo['h_mm']:.1f} mm")
     for k, v in GATES.items():
         print(f"  {'PASS' if v['pass'] else 'FAIL'}  {k}")
         for line in v["details"][: (60 if not v["pass"] else 3)]:

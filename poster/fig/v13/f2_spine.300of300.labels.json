@@ -1,5 +1,5 @@
 {
- "figure": "f2_spine",
+ "figure": "f2_spine.300of300",
  "size_mm": [
   801.0,
   118.0
@@ -110,7 +110,7 @@
    "pt": 17
   },
   {
-   "text": "B acted on",
+   "text": "B did not act on",
    "claim": "F2.heads",
    "x_mm": 690,
    "y_mm": 4.9,
@@ -285,8 +285,8 @@
    "pt": 20
   },
   {
-   "text": "254 / 276",
-   "claim": "R5.A.pooled",
+   "text": "22 / 276",
+   "claim": "R5.A.notacted",
    "x_mm": 690,
    "y_mm": 28.1,
    "pt": 48
@@ -320,8 +320,8 @@
    "pt": 20
   },
   {
-   "text": "164 / 276",
-   "claim": "R5.B.pooled",
+   "text": "112 / 276",
+   "claim": "R5.B.notacted",
    "x_mm": 690,
    "y_mm": 48.1,
    "pt": 48
@@ -355,8 +355,8 @@
    "pt": 20
   },
   {
-   "text": "220 / 276",
-   "claim": "R5.C.pooled",
+   "text": "56 / 276",
+   "claim": "R5.C.notacted",
    "x_mm": 690,
    "y_mm": 68.1,
    "pt": 48
@@ -390,8 +390,8 @@
    "pt": 20
   },
   {
-   "text": "154 / 288",
-   "claim": "R5.D.pooled",
+   "text": "134 / 288",
+   "claim": "R5.D.notacted",
    "x_mm": 690,
    "y_mm": 88.1,
    "pt": 48
@@ -467,8 +467,8 @@
    "pt": 15
   },
   {
-   "text": "0 / 300",
-   "claim": "R5.E.pooled",
+   "text": "300 / 300",
+   "claim": "R5.E.notacted",
    "x_mm": 690,
    "y_mm": 108.1,
    "pt": 48

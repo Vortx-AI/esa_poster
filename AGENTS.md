@@ -21,6 +21,8 @@ pip install -r poster/requirements.txt   # Chromium is in /opt/pw-browsers
 python poster/figs_v13/<figure>.py      # each v13 figure, drawn 1:1 into poster/fig/v13/ (svg, png, labels.json)
 python poster/build_v13.py              # board: inlines figures and QRs, renders PDF + PNGs with Chromium, runs every gate
 python poster/build_v13.py --r1         # re-runs R1 first; --allowlist-candidates prints banned-word hits with their BLAKE3
+python poster/build_v13.py --variant 300of300   # the second print variant (outputs carry -300of300); default is 0of300
+python poster/figs_v13/f2_spine.py --variant 300of300   # f2 and f6 also draw <name>.300of300.svg for that variant
 python research/repro/v11/mutation_suite.py   # R1 alone, offline
 ```
 
@@ -28,6 +30,10 @@ Edit `poster/src/poster.v13.html` and `poster/src/poster.v13.css` (never `poster
 The printed face uses three QR tasks (Try it, Inspect, Connect & Reproduce); all six web routes remain. Connect opens /use/, which links the methods and tests.
 Colours: `poster/src/tokens.json`. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
 Deliberate departures from the brief's block rectangles, each with its reason: `poster/src/poster.v13.layout.json`.
+Two print variants of the handoff result (`data-variant="0of300"` / `"300of300"`): 0of300 prints the pre-registered
+false acceptance (B acted on corrupted evidence, 0 of 300); 300of300 prints the same trials as "did not act on" with the
+declined / genuine split (`research/repro/v13/r5/not_acted_split.py`). Never call the complement "declined": 36 of the
+300 used the genuine record.
 R5 lines (`data-mode="r5"`, `{R5.*}` placeholders) print only when `research/repro/v13/r5/results.json` is final; the
 switch is in the build. v12 sources stay in `poster/src/poster.v12.html`, `poster/build_v12.py`, `poster/make_figures_v12.py`;
 v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 board is in `poster/archive/v10/`.

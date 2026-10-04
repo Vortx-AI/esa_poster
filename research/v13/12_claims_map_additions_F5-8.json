@@ -459,7 +459,7 @@
    "block": "P5 / F6",
    "print": [
     "B acts on corrupted evidence",
-    "B declined corrupted evidence"
+    "B did not act on corrupted evidence"
    ],
    "status": "MEASURED",
    "layer": "n/a",

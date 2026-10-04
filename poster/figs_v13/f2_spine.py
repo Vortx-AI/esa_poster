@@ -33,7 +33,12 @@ import mutation_suite as R1  # noqa: E402
 
 C, PT = S.C, S.PT
 W, H = 801.0, 118.0
-NAME = "f2_spine"
+# Print variant (see poster/build_v13.py): "0of300" draws the pre-registered metric, corruptions B acted on;
+# "300of300" draws the same trials counted the other way, corruptions B did not act on (declined, or acted on the
+# genuine value). Select with --variant 300of300; that variant writes f2_spine.300of300.*
+VARIANT = sys.argv[sys.argv.index("--variant") + 1] if "--variant" in sys.argv else "0of300"
+assert VARIANT in ("0of300", "300of300")
+NAME = "f2_spine" + ("" if VARIANT == "0of300" else f".{VARIANT}")
 MMPT = 72 / 25.4                  # points per mm (line widths)
 THIN = " "
 LABELS = []
@@ -237,7 +242,8 @@ def main():
     T(ax, 112, 11, "handoff", "F2.heads", **hk)
     T(ax, 355, 11, "relay", "F2.heads", ha="center", **hk)
     T(ax, 400, 11, "Agent B", "F2.heads", **hk)
-    T(ax, 690, 4.9, "B declined to act on" if MODE == "R5" else "B acted on", "F2.heads", ha="right", **hk)
+    NOT_ACTED = MODE == "R5" and VARIANT == "300of300"
+    T(ax, 690, 4.9, "B did not act on" if NOT_ACTED else "B acted on", "F2.heads", ha="right", **hk)
     T(ax, 690, 11, "corrupted evidence", "F2.heads", ha="right", **hk)
     T(ax, 698 + 103 / 2, 11, "what is handed over?", "O.84", ha="center", **hk)
     mode = "deterministic receiver, no model" if MODE == "fallback" else "agents, pooled Claude"
@@ -322,12 +328,14 @@ def main():
         else:
             T(ax, 418, cy, does, "F2.actions", fontsize=PT["label"], color=C["ink"], va="center", zorder=4)
         # outcome numeral
-        # v13.10: the outcome reads as protection (corruptions declined = applicable - acted on); higher is better
-        dk = nn - k if MODE == "R5" else k
-        col = C["emem"] if (dk == nn if MODE == "R5" else k == 0) else C["harm"]
+        # 0of300: corruptions B acted on (k of n). 300of300: corruptions B did not act on (n - k of n): it declined,
+        # or acted on the genuine value (research/repro/v13/r5/out/not_acted_split.json gives the split)
+        dk = nn - k if NOT_ACTED else k
+        col = C["emem"] if (dk == nn if NOT_ACTED else k == 0) else C["harm"]
         r1id = {"prose": "S.R1.A", "json": "S.R1.B", "opaque": "S.R1.C", "emem": "S.R1.I"}
-        r5id = {"prose": "R5.A.declined", "json": "R5.B.declined", "rag": "R5.C.declined", "opaque": "R5.D.declined",
-                "emem": "R5.E.declined"}
+        sfx = "notacted" if NOT_ACTED else "pooled"
+        r5id = {"prose": f"R5.A.{sfx}", "json": f"R5.B.{sfx}", "rag": f"R5.C.{sfx}", "opaque": f"R5.D.{sfx}",
+                "emem": f"R5.E.{sfx}"}
         T(ax, 690, cy + 0.6, fmt_frac(dk, nn), r1id[key] if MODE == "fallback" else r5id[key],
           fontsize=PT["numeral"] if lh >= 20 else 48, fontweight=700, color=col, ha="right", va="center", zorder=4)
     # The former boundary wall now answers the handoff question directly.

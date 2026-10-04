@@ -349,8 +349,34 @@
       "checked": true
     },
     {
-      "id": "R5.A.declined",
-      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "id": "H.doi",
+      "block": "v13.10 header byline",
+      "print": [
+        "whitepaper doi.org/10.5281/zenodo.20706317 · study doi.org/10.5281/zenodo.20706893"
+      ],
+      "status": "EXTERNAL",
+      "layer": "n/a",
+      "source": {
+        "files": [
+          "v13/evidence/website/vortx_agent_card_research.json",
+          "v13/00_v11_review_findings.json"
+        ],
+        "pointer": "vortx.ai agent card x-research: whitepaper (the poster's exact title) = 10.5281/zenodo.20706317, companion study = 10.5281/zenodo.20706893; the v11 review resolved 20706893 (v0.1.0, 2026-06-15, CC-BY-4.0, Kumari and Singh)"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/website/vortx_agent_card_research.json",
+        "arg": "https://doi.org/10.5281/zenodo.20706317"
+      },
+      "note": "emem's CITATION.cff names 20706893 (titled 'emem: A research on ...') as its preferred citation; the board prints both, labelled as the authors' site labels them. 20706317 was not resolved from this build environment (doi.org blocked).",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.A.notacted",
+      "block": "v13.10 P1 spine and P5 totals, 300of300 variant",
       "print": [
         "22 of 276",
         "22 / 276",
@@ -359,40 +385,29 @@
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
       "source": {
-        "file": "research/repro/v13/r5/results.json",
-        "pointer": "primary.A.pooled_claude.false_accept: declined = n - k = 276 - 254",
-        "prereg": "research/repro/v13/r5/prereg.md"
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.A.not_acted_on = n - acted_on_corrupted = declined 22 + acted on the genuine value 0 + no parsable decision 0",
+        "prereg": "research/repro/v13/r5/prereg.md (the pre-registered metric is false acceptance, R5.A.pooled)"
       },
       "date": "2026-10-01",
       "value": "22/276",
       "check": {
-        "kind": "approx_diff",
-        "file": "repro/v13/r5/results.json",
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
         "arg": [
-          [
-            "primary",
-            "A",
-            "pooled_claude",
-            "false_accept",
-            "n"
-          ],
-          [
-            "primary",
-            "A",
-            "pooled_claude",
-            "false_accept",
-            "k"
-          ]
+          "conditions",
+          "A",
+          "not_acted_on"
         ],
         "expect": 22
       },
-      "note": "Complement of the pre-registered false-accept count for prose: trials on corrupted items where agent B did not act. Same trials as R5.A.pooled; printed as protection so higher reads as better.",
+      "note": "Complement of the pre-registered false-acceptance count for prose on the same trials. It is not a count of refusals: it includes trials where B acted on the genuine value. Printed only in the 300of300 variant.",
       "tier": "3m",
       "checked": true
     },
     {
-      "id": "R5.B.declined",
-      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "id": "R5.B.notacted",
+      "block": "v13.10 P1 spine and P5 totals, 300of300 variant",
       "print": [
         "112 of 276",
         "112 / 276",
@@ -401,40 +416,29 @@
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
       "source": {
-        "file": "research/repro/v13/r5/results.json",
-        "pointer": "primary.B.pooled_claude.false_accept: declined = n - k = 276 - 164",
-        "prereg": "research/repro/v13/r5/prereg.md"
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.B.not_acted_on = n - acted_on_corrupted = declined 106 + acted on the genuine value 6 + no parsable decision 0",
+        "prereg": "research/repro/v13/r5/prereg.md (the pre-registered metric is false acceptance, R5.B.pooled)"
       },
       "date": "2026-10-01",
       "value": "112/276",
       "check": {
-        "kind": "approx_diff",
-        "file": "repro/v13/r5/results.json",
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
         "arg": [
-          [
-            "primary",
-            "B",
-            "pooled_claude",
-            "false_accept",
-            "n"
-          ],
-          [
-            "primary",
-            "B",
-            "pooled_claude",
-            "false_accept",
-            "k"
-          ]
+          "conditions",
+          "B",
+          "not_acted_on"
         ],
         "expect": 112
       },
-      "note": "Complement of the pre-registered false-accept count for JSON: trials on corrupted items where agent B did not act. Same trials as R5.B.pooled; printed as protection so higher reads as better.",
+      "note": "Complement of the pre-registered false-acceptance count for JSON on the same trials. It is not a count of refusals: it includes trials where B acted on the genuine value. Printed only in the 300of300 variant.",
       "tier": "3m",
       "checked": true
     },
     {
-      "id": "R5.C.declined",
-      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "id": "R5.C.notacted",
+      "block": "v13.10 P1 spine and P5 totals, 300of300 variant",
       "print": [
         "56 of 276",
         "56 / 276",
@@ -443,40 +447,29 @@
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
       "source": {
-        "file": "research/repro/v13/r5/results.json",
-        "pointer": "primary.C.pooled_claude.false_accept: declined = n - k = 276 - 220",
-        "prereg": "research/repro/v13/r5/prereg.md"
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.C.not_acted_on = n - acted_on_corrupted = declined 56 + acted on the genuine value 0 + no parsable decision 0",
+        "prereg": "research/repro/v13/r5/prereg.md (the pre-registered metric is false acceptance, R5.C.pooled)"
       },
       "date": "2026-10-01",
       "value": "56/276",
       "check": {
-        "kind": "approx_diff",
-        "file": "repro/v13/r5/results.json",
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
         "arg": [
-          [
-            "primary",
-            "C",
-            "pooled_claude",
-            "false_accept",
-            "n"
-          ],
-          [
-            "primary",
-            "C",
-            "pooled_claude",
-            "false_accept",
-            "k"
-          ]
+          "conditions",
+          "C",
+          "not_acted_on"
         ],
         "expect": 56
       },
-      "note": "Complement of the pre-registered false-accept count for RAG: trials on corrupted items where agent B did not act. Same trials as R5.C.pooled; printed as protection so higher reads as better.",
+      "note": "Complement of the pre-registered false-acceptance count for RAG on the same trials. It is not a count of refusals: it includes trials where B acted on the genuine value. Printed only in the 300of300 variant.",
       "tier": "3m",
       "checked": true
     },
     {
-      "id": "R5.D.declined",
-      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "id": "R5.D.notacted",
+      "block": "v13.10 P1 spine and P5 totals, 300of300 variant",
       "print": [
         "134 of 288",
         "134 / 288",
@@ -485,40 +478,29 @@
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
       "source": {
-        "file": "research/repro/v13/r5/results.json",
-        "pointer": "primary.D.pooled_claude.false_accept: declined = n - k = 288 - 154",
-        "prereg": "research/repro/v13/r5/prereg.md"
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.D.not_acted_on = n - acted_on_corrupted = declined 88 + acted on the genuine value 46 + no parsable decision 0",
+        "prereg": "research/repro/v13/r5/prereg.md (the pre-registered metric is false acceptance, R5.D.pooled)"
       },
       "date": "2026-10-01",
       "value": "134/288",
       "check": {
-        "kind": "approx_diff",
-        "file": "repro/v13/r5/results.json",
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
         "arg": [
-          [
-            "primary",
-            "D",
-            "pooled_claude",
-            "false_accept",
-            "n"
-          ],
-          [
-            "primary",
-            "D",
-            "pooled_claude",
-            "false_accept",
-            "k"
-          ]
+          "conditions",
+          "D",
+          "not_acted_on"
         ],
         "expect": 134
       },
-      "note": "Complement of the pre-registered false-accept count for opaque id: trials on corrupted items where agent B did not act. Same trials as R5.D.pooled; printed as protection so higher reads as better.",
+      "note": "Complement of the pre-registered false-acceptance count for opaque id on the same trials. It is not a count of refusals: it includes trials where B acted on the genuine value. Printed only in the 300of300 variant.",
       "tier": "3m",
       "checked": true
     },
     {
-      "id": "R5.E.declined",
-      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "id": "R5.E.notacted",
+      "block": "v13.10 P1 spine and P5 totals, 300of300 variant",
       "print": [
         "300 of 300",
         "300 / 300",
@@ -527,40 +509,85 @@
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
       "source": {
-        "file": "research/repro/v13/r5/results.json",
-        "pointer": "primary.E.pooled_claude.false_accept: declined = n - k = 300 - 0",
-        "prereg": "research/repro/v13/r5/prereg.md"
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.E.not_acted_on = n - acted_on_corrupted = declined 264 + acted on the genuine value 36 + no parsable decision 0",
+        "prereg": "research/repro/v13/r5/prereg.md (the pre-registered metric is false acceptance, R5.E.pooled)"
       },
       "date": "2026-10-01",
       "value": "300/300",
       "check": {
-        "kind": "approx_diff",
-        "file": "repro/v13/r5/results.json",
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
         "arg": [
-          [
-            "primary",
-            "E",
-            "pooled_claude",
-            "false_accept",
-            "n"
-          ],
-          [
-            "primary",
-            "E",
-            "pooled_claude",
-            "false_accept",
-            "k"
-          ]
+          "conditions",
+          "E",
+          "not_acted_on"
         ],
         "expect": 300
       },
-      "note": "Complement of the pre-registered false-accept count for checked reference: trials on corrupted items where agent B did not act. Same trials as R5.E.pooled; printed as protection so higher reads as better.",
+      "note": "Complement of the pre-registered false-acceptance count for checked reference on the same trials. It is not a count of refusals: it includes trials where B acted on the genuine value. Printed only in the 300of300 variant.",
       "tier": "3m",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M1.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.E.split.declined",
+      "block": "v13.10 P1 take line, 300of300 variant",
+      "print": [
+        "264 declined"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.E.declined"
+      },
+      "date": "2026-10-01",
+      "value": 264,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "E",
+          "declined"
+        ],
+        "expect": 264
+      },
+      "note": "Re-scored from the stored transcripts with score.py, as analyze.py does; split of the 300 checked-reference trials with no false acceptance.",
+      "tier": "3m",
+      "checked": true
+    },
+    {
+      "id": "R5.E.split.genuine",
+      "block": "v13.10 P1 take line, 300of300 variant",
+      "print": [
+        "36 used the genuine record"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/out/not_acted_split.json",
+        "pointer": "conditions.E.acted_on_genuine"
+      },
+      "date": "2026-10-01",
+      "value": 36,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/not_acted_split.json",
+        "arg": [
+          "conditions",
+          "E",
+          "acted_on_genuine"
+        ],
+        "expect": 36
+      },
+      "note": "Re-scored from the stored transcripts with score.py, as analyze.py does; split of the 300 checked-reference trials with no false acceptance.",
+      "tier": "3m",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M1.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -594,13 +621,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M2.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M2.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -634,13 +661,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M3.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M3.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -674,13 +701,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M4.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M4.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "5 / 12",
         "5 / 12"
@@ -714,13 +741,13 @@
         ],
         "expect": 5
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M5.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M5.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -754,13 +781,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M5b.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M5b.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -794,13 +821,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M6.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M6.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -834,13 +861,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M8.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M8.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -874,13 +901,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M9.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M9.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "5 / 12",
         "5 / 12"
@@ -914,13 +941,13 @@
         ],
         "expect": 5
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M10.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M10.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -954,13 +981,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M11.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M11.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -994,13 +1021,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M12.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M12.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1034,13 +1061,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M13.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M13.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1074,13 +1101,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M14.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M14.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1114,13 +1141,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M15.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M15.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1154,13 +1181,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M16.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M16.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1194,13 +1221,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M15r.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M15r.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1234,13 +1261,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M23.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M23.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1274,13 +1301,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M24.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M24.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1314,13 +1341,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M25.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M25.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -1354,13 +1381,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M2-B.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M2-B.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1394,13 +1421,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M18.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M18.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1434,13 +1461,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.A.M20.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.A.M20.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1474,13 +1501,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M1.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M1.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1514,13 +1541,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M2.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M2.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -1554,13 +1581,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M3.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M3.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1594,13 +1621,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M4.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M4.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "12 / 12",
         "12 / 12"
@@ -1634,13 +1661,13 @@
         ],
         "expect": 12
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M5.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M5.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "11 / 12",
         "11 / 12"
@@ -1674,13 +1701,13 @@
         ],
         "expect": 11
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M5b.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M5b.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "11 / 12",
         "11 / 12"
@@ -1714,13 +1741,13 @@
         ],
         "expect": 11
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M6.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M6.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "12 / 12",
         "12 / 12"
@@ -1754,13 +1781,13 @@
         ],
         "expect": 12
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M8.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M8.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -1794,13 +1821,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M9.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M9.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "1 / 12",
         "1 / 12"
@@ -1834,13 +1861,13 @@
         ],
         "expect": 1
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M10.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M10.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -1874,13 +1901,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M11.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M11.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -1914,13 +1941,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M12.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M12.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "1 / 12",
         "1 / 12"
@@ -1954,13 +1981,13 @@
         ],
         "expect": 1
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M13.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M13.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -1994,13 +2021,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M14.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M14.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2034,13 +2061,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M15.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M15.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2074,13 +2101,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M16.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M16.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2114,13 +2141,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M15r.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M15r.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2154,13 +2181,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M23.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M23.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2194,13 +2221,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M24.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M24.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "9 / 12",
         "9 / 12"
@@ -2234,13 +2261,13 @@
         ],
         "expect": 9
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M25.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M25.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "7 / 12",
         "7 / 12"
@@ -2274,13 +2301,13 @@
         ],
         "expect": 7
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M2-B.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M2-B.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2314,13 +2341,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M18.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M18.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2354,13 +2381,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.B.M20.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.B.M20.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "12 / 12",
         "12 / 12"
@@ -2394,13 +2421,13 @@
         ],
         "expect": 12
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M1.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M1.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2434,13 +2461,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M2.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M2.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "1 / 12",
         "1 / 12"
@@ -2474,13 +2501,13 @@
         ],
         "expect": 1
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M3.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M3.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2514,13 +2541,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M4.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M4.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2554,13 +2581,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M5.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M5.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2594,13 +2621,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M5b.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M5b.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2634,13 +2661,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M6.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M6.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2674,13 +2701,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M8.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M8.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2714,13 +2741,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M9.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M9.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2754,13 +2781,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M10.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M10.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -2794,13 +2821,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M11.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M11.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2834,13 +2861,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M12.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M12.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2874,13 +2901,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M13.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M13.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2914,13 +2941,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M14.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M14.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2954,13 +2981,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M15.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M15.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -2994,13 +3021,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M16.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M16.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3034,13 +3061,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M15r.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M15r.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -3074,13 +3101,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M23.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M23.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -3114,13 +3141,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M24.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M24.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -3154,13 +3181,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M25.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M25.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3194,13 +3221,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M2-B.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M2-B.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "1 / 12",
         "1 / 12"
@@ -3234,13 +3261,13 @@
         ],
         "expect": 1
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M18.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M18.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -3274,13 +3301,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.C.M20.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.C.M20.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3314,13 +3341,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M1.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M1.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "3 / 12",
         "3 / 12"
@@ -3354,13 +3381,13 @@
         ],
         "expect": 3
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M2.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M2.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "12 / 12",
         "12 / 12"
@@ -3394,13 +3421,13 @@
         ],
         "expect": 12
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M3.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M3.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -3434,13 +3461,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M4.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M4.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3474,13 +3501,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M5.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M5.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "11 / 12",
         "11 / 12"
@@ -3514,13 +3541,13 @@
         ],
         "expect": 11
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M5b.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M5b.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "9 / 12",
         "9 / 12"
@@ -3554,13 +3581,13 @@
         ],
         "expect": 9
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M6.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M6.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "10 / 12",
         "10 / 12"
@@ -3594,13 +3621,13 @@
         ],
         "expect": 10
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M7.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M7.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "12 / 12",
         "12 / 12"
@@ -3634,13 +3661,13 @@
         ],
         "expect": 12
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M8.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M8.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3674,13 +3701,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M9.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M9.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3714,13 +3741,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M10.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M10.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3754,13 +3781,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M11.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M11.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -3794,13 +3821,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M12.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M12.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "4 / 12",
         "4 / 12"
@@ -3834,13 +3861,13 @@
         ],
         "expect": 4
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M13.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M13.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3874,13 +3901,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M14.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M14.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3914,13 +3941,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M15.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M15.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -3954,13 +3981,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M16.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M16.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -3994,13 +4021,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M15r.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M15r.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -4034,13 +4061,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M23.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M23.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -4074,13 +4101,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M24.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M24.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -4114,13 +4141,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M25.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M25.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "6 / 12",
         "6 / 12"
@@ -4154,13 +4181,13 @@
         ],
         "expect": 6
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M2-B.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M2-B.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "12 / 12",
         "12 / 12"
@@ -4194,13 +4221,13 @@
         ],
         "expect": 12
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M18.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M18.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "0 / 12",
         "0 / 12"
@@ -4234,13 +4261,13 @@
         ],
         "expect": 0
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "R5.cell.D.M20.declined",
-      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "id": "R5.cell.D.M20.notacted",
+      "block": "v13.10 P5 matrix cell, 300of300 variant",
       "print": [
         "7 / 12",
         "7 / 12"
@@ -4274,13 +4301,13 @@
         ],
         "expect": 7
       },
-      "note": "Complement of the cell's false-accept count (same trials).",
+      "note": "Trials in the cell where B did not act on the corrupted value (declined, or acted on the genuine value). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "S.R1.A.declined",
-      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "id": "S.R1.A.notacted",
+      "block": "v13.10 P5 matrix R1 total, 300of300 variant",
       "print": [
         "R1 0 / 15",
         "0 of 15"
@@ -4289,7 +4316,7 @@
       "layer": "L0-L3",
       "source": {
         "file": "research/repro/v11/out/mutation_matrix.json",
-        "pointer": "summary.A: applicable - false_accepts"
+        "pointer": "summary.A: applicable - false_accepts (refused or unaffected)"
       },
       "date": "2026-10-01",
       "value": "0/15",
@@ -4310,13 +4337,13 @@
         ],
         "expect": 0
       },
-      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "note": "Deterministic receiver: corruptions it did not act on (refused, or unaffected). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "S.R1.B.declined",
-      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "id": "S.R1.B.notacted",
+      "block": "v13.10 P5 matrix R1 total, 300of300 variant",
       "print": [
         "R1 0 / 15",
         "0 of 15"
@@ -4325,7 +4352,7 @@
       "layer": "L0-L3",
       "source": {
         "file": "research/repro/v11/out/mutation_matrix.json",
-        "pointer": "summary.B: applicable - false_accepts"
+        "pointer": "summary.B: applicable - false_accepts (refused or unaffected)"
       },
       "date": "2026-10-01",
       "value": "0/15",
@@ -4346,13 +4373,13 @@
         ],
         "expect": 0
       },
-      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "note": "Deterministic receiver: corruptions it did not act on (refused, or unaffected). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "S.R1.C.declined",
-      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "id": "S.R1.C.notacted",
+      "block": "v13.10 P5 matrix R1 total, 300of300 variant",
       "print": [
         "R1 3 / 16",
         "3 of 16"
@@ -4361,7 +4388,7 @@
       "layer": "L0-L3",
       "source": {
         "file": "research/repro/v11/out/mutation_matrix.json",
-        "pointer": "summary.C: applicable - false_accepts"
+        "pointer": "summary.C: applicable - false_accepts (refused or unaffected)"
       },
       "date": "2026-10-01",
       "value": "3/16",
@@ -4382,13 +4409,13 @@
         ],
         "expect": 3
       },
-      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "note": "Deterministic receiver: corruptions it did not act on (refused, or unaffected). 300of300 variant only.",
       "tier": "30cm",
       "checked": true
     },
     {
-      "id": "S.R1.I.declined",
-      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "id": "S.R1.I.notacted",
+      "block": "v13.10 P5 matrix R1 total, 300of300 variant",
       "print": [
         "R1 16 / 16",
         "16 of 16"
@@ -4397,7 +4424,7 @@
       "layer": "L0-L3",
       "source": {
         "file": "research/repro/v11/out/mutation_matrix.json",
-        "pointer": "summary.I: applicable - false_accepts"
+        "pointer": "summary.I: applicable - false_accepts (refused or unaffected)"
       },
       "date": "2026-10-01",
       "value": "16/16",
@@ -4418,34 +4445,8 @@
         ],
         "expect": 16
       },
-      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "note": "Deterministic receiver: corruptions it did not act on (refused, or unaffected). 300of300 variant only.",
       "tier": "30cm",
-      "checked": true
-    },
-    {
-      "id": "H.doi",
-      "block": "v13.10 header byline",
-      "print": [
-        "whitepaper doi.org/10.5281/zenodo.20706317 · study doi.org/10.5281/zenodo.20706893"
-      ],
-      "status": "EXTERNAL",
-      "layer": "n/a",
-      "source": {
-        "files": [
-          "v13/evidence/website/vortx_agent_card_research.json",
-          "v13/00_v11_review_findings.json"
-        ],
-        "pointer": "vortx.ai agent card x-research: whitepaper (the poster's exact title) = 10.5281/zenodo.20706317, companion study = 10.5281/zenodo.20706893; the v11 review resolved 20706893 (v0.1.0, 2026-06-15, CC-BY-4.0, Kumari and Singh)"
-      },
-      "date": "2026-10-04",
-      "value": null,
-      "check": {
-        "kind": "grep",
-        "file": "v13/evidence/website/vortx_agent_card_research.json",
-        "arg": "https://doi.org/10.5281/zenodo.20706317"
-      },
-      "note": "emem's CITATION.cff names 20706893 (titled 'emem: A research on ...') as its preferred citation; the board prints both, labelled as the authors' site labels them. 20706317 was not resolved from this build environment (doi.org blocked).",
-      "tier": "1m",
       "checked": true
     }
   ]

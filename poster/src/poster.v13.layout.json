@@ -83,6 +83,7 @@
   },
   "v13.10_notes": {
     "date": "2026-10-04",
-    "what": "Recovered from the v10 board (5143fac): the lead question and answer (header, beside the hero), the memory-as-coded box (centre, after panel 4, streamlined to seven rows) and the full trace (left, after panel 7, condensed; the ten-client-path sentence is left out because panel 12 prints the later 11-path measurement). Column gaps: left 4, centre 1, right 3 mm. The header image strip states the scene-to-token reduction instead of the location credit, which panels 1, 2 and 4 already carry. The 'Hand off' workflow step carries the strongest fill."
+    "what": "Recovered from the v10 board (5143fac): the lead question and answer (header, beside the hero), the memory-as-coded box (centre, after panel 4, streamlined to seven rows) and the full trace (left, after panel 7, condensed; the ten-client-path sentence is left out because panel 12 prints the later 11-path measurement). Column gaps: left 4, centre 1, right 3 mm. The header image strip states the scene-to-token reduction instead of the location credit, which panels 1, 2 and 4 already carry. The 'Hand off' workflow step carries the strongest fill.",
+    "variants": "Two print variants from one source (build_v13.py --variant): 0of300 (default) prints false acceptance as pre-registered; 300of300 prints the complement as 'did not act on' with the declined / genuine split. Only panel 1's outcome column and take line and panel 5's agent bars, totals and bar note differ."
   }
 }

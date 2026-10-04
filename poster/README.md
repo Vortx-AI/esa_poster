@@ -2,7 +2,8 @@
 
 | Artifact | Purpose |
 |---|---|
-| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 print file; print at actual size |
+| [emem-poster-A0.pdf](emem-poster-A0.pdf) | One-page ISO A0 print file, variant 0of300 (pre-registered false acceptance, recommended); print at actual size |
+| [emem-poster-A0-300of300.pdf](emem-poster-A0-300of300.pdf) | The same board, variant 300of300 (the same trials as "did not act on", with the declined / genuine split) |
 | [emem-poster-preview.png](emem-poster-preview.png) | Screen preview |
 | [emem-poster-A0-300dpi.png](emem-poster-A0-300dpi.png) | Full-resolution print proof |
 | [build_v13_report.json](build_v13_report.json) | Layout, claim, type and QR checks |
