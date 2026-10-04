@@ -338,7 +338,7 @@
    "order": 2,
    "label": "Dify",
    "mechanism": "Marketplace plugin",
-   "action": "Referent Lock / EUDR workflows",
+   "action": "Workflow templates, including EUDR",
    "quote": [
     "“Shared memory for AI agents. One address",
     "per fact, one signature you check.”"

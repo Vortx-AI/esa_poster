@@ -76,7 +76,7 @@
    "claim": "A14.grammar"
   },
   {
-   "text": "same; attester_only",
+   "text": "same; not re-runnable",
    "pt": 14,
    "claim": "A14.hash"
   },

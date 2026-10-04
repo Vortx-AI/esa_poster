@@ -60,7 +60,7 @@ ROWS = [
     ("a place", "cell:<cell64>", "the quantised lat/lng; no hash", "none"),
     ("one value", "fact:<cell>:<cid>", "BLAKE3(CBOR(fact)), 52 chars", "bytes"),
     ("nothing there", "fact: · kind absence", "same; + BLAKE3(reason)[:16]", "bytes"),
-    ("an embedding", "fact: · 128 / 1024 floats", "same; attester_only", "bytes"),
+    ("an embedding", "fact: · 128 / 1024 floats", "same; not re-runnable", "bytes"),
     ("a derived value", "fact: · op, parents", "same; pure ops re-runnable", "bytes"),
     ("a raster", "raster:<a>:<b>:<t>:<d>", "fact d names BLAKE3(grid)", "bytes"),
     ("a raster in time", "cube:<a>:<b>:<t0..t1>:<d>", "BLAKE3(CBOR([member d…]))", "list"),

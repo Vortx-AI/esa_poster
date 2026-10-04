@@ -315,7 +315,7 @@ flag = lambda rule: {i for i, (l, g) in enumerate(zip(RO["lossyear"], RO["gfc202
 assert (n_ro, ly_changed) == (100, 7) and flag("floor") == flag("round"), "no EUDR flag changed"
 scope = (f"Sample: {N} pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; "
          f"{pre['providers']['E84']} Element84, {pre['providers']['PC']} Planetary Computer. After the fix, "
-         f"{post['matches_round_not_floor']} of {post['n']} (Planetary Computer, two days). On a {n_ro}-point Rondônia "
+         f"{post['matches_round_not_floor']} of {post['n']} (Planetary Computer, two days; not a matched sample). On a {n_ro}-point Rondônia "
          f"grid the old rule changed {ly_changed} loss years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.")
 lines = wrap(scope, W - XS - 5.0, 14)
 assert len(lines) <= 3, lines

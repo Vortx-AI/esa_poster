@@ -132,7 +132,7 @@
       "pt": 17
     },
     {
-      "text": "If one fails: refuse.",
+      "text": "Policy: refuse if one fails.",
       "claim": "V9.workflow",
       "x_mm": 581.8571428571429,
       "y_mm": 41,

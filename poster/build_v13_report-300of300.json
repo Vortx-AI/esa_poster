@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T12:02:03+00:00",
+ "built_utc": "2026-10-04T12:42:10+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -36,21 +36,21 @@
    "file": "poster/fig/v13/f18_workflow.svg",
    "w_mm": 801.0,
    "h_mm": 49.0,
-   "mtime": "2026-10-04T10:46:04"
+   "mtime": "2026-10-04T12:35:41"
   },
   "f2_spine": {
    "state": "placed",
    "file": "poster/fig/v13/f2_spine.300of300.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T10:46:41"
+   "mtime": "2026-10-04T12:35:58"
   },
   "f3_eight_answers": {
    "state": "placed",
    "file": "poster/fig/v13/f3_eight_answers.svg",
    "w_mm": 193.5,
    "h_mm": 62.0,
-   "mtime": "2026-10-04T08:39:53"
+   "mtime": "2026-10-04T12:35:42"
   },
   "f4_failure_ladder": {
    "state": "placed",
@@ -71,21 +71,21 @@
    "file": "poster/fig/v13/f5_evidence_object.svg",
    "w_mm": 396.0,
    "h_mm": 98.0,
-   "mtime": "2026-10-04T10:46:06"
-  },
-  "f6_mutation_matrix": {
-   "state": "placed",
-   "file": "poster/fig/v13/f6_mutation_matrix.300of300.svg",
-   "w_mm": 396.0,
-   "h_mm": 196.0,
-   "mtime": "2026-10-04T11:51:43"
+   "mtime": "2026-10-04T12:35:43"
   },
   "f7_wrong_pixel": {
    "state": "placed",
    "file": "poster/fig/v13/f7_wrong_pixel.svg",
    "w_mm": 396.0,
    "h_mm": 128.0,
-   "mtime": "2026-10-04T10:54:17"
+   "mtime": "2026-10-04T12:35:48"
+  },
+  "f6_mutation_matrix": {
+   "state": "placed",
+   "file": "poster/fig/v13/f6_mutation_matrix.300of300.svg",
+   "w_mm": 396.0,
+   "h_mm": 196.0,
+   "mtime": "2026-10-04T12:38:46"
   },
   "f9_timeline": {
    "state": "placed",
@@ -99,7 +99,7 @@
    "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T11:19:32"
+   "mtime": "2026-10-04T12:38:42"
   },
   "f15b_sat042_strip": {
    "state": "placed",
@@ -113,10 +113,10 @@
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 726.0,
    "h_mm": 65.0,
-   "mtime": "2026-10-04T09:46:44"
+   "mtime": "2026-10-04T12:36:13"
   }
  },
- "figure_text_tokens": 1809,
+ "figure_text_tokens": 1781,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -138,8 +138,8 @@
     "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,558.9,193.5x183.9), off by 103.2 mm; reason: The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace.",
     "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,713.3,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
     "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,433.5,396.0x168.3), off by 49.8 mm; reason: The decoded evidence object replaces the Berlin fanout, restoring the complete source-record-address-attestation flow at 396 by 98 mm.",
-    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,655.3,396.0x257.0), off by 94.3 mm; reason: The central mutation matrix retains its 396 by 196 mm print size and measured outcomes; the centre column distributes the space released by replacing the Berlin panel.",
-    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,915.6,396.0x156.9), off by 87.6 mm; reason: The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column.",
+    "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,815.5,396.0x257.0), off by 254.5 mm; reason: The central mutation matrix keeps its 396 by 196 mm print size and measured outcomes. 4 Oct 2026: it follows the source-pixel panel at the foot of the centre column and is numbered 6.",
+    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,655.3,396.0x156.9), off by 203.8 mm; reason: The source-pixel experiment keeps its 396 by 128 mm figure and data. 4 Oct 2026 (two reviews): it moves above the mutation matrix, to eye level, and is numbered 5; both reviewers named it the strongest result.",
     "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.7,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
     "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x151.4), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
     "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards quote each listing's own words (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub), verbatim from the authors' screenshots, which are kept in research/v13/evidence/listings/ but not printed (their text sets at about 5 pt at A0). VS Code and MuleSoft Exchange move into the lists, which print two lines per group.",
@@ -165,13 +165,13 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (872 text runs)"
+    "every printed code point is in the face that sets it (851 text runs)"
    ]
   },
   "prose_and_banned_words": {
    "pass": true,
    "details": [
-    "no em/en dashes, tell words or unlisted banned words; 15 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
+    "no em/en dashes, tell words or unlisted banned words; 14 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
    ]
   },
   "face_hygiene": {
@@ -201,7 +201,7 @@
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "557 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "558 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -244,22 +244,22 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 830 words containing a letter, 849 tokens with numerals (cap 850 / 870; v13.5 copy brief: see per-panel counts)",
-    "  1 · Earth to agents: 103 tokens (section C: 103)",
-    "  10 · Token family: 52 tokens (section C: 52)",
+    "running text: 838 words containing a letter, 857 tokens with numerals (cap 852 / 872; v13.5 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 105 tokens (section C: 105)",
+    "  10 · Token family: 53 tokens (section C: 53)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
     "  12 · Community routes: 6 tokens (section C: 6)",
     "  2 · One NDVI, eight values: 42 tokens (section C: 42)",
     "  3 · Different drift, different check: 60 tokens (section C: 60)",
     "  4 · What exactly is handed over: 54 tokens (section C: 54)",
-    "  5 · Checks back to the source: 40 tokens (section C: 44)",
-    "  6 · Source re-read: 19 tokens (section C: 19)",
+    "  5 · Source re-read: 19 tokens (section C: 19)",
+    "  6 · Checks back to the source: 41 tokens (section C: 41)",
     "  7 · What checks establish: 32 tokens (section C: 32)",
-    "  8 · Revisit the earlier evidence: 48 tokens (section C: 48)",
+    "  8 · Revisit the earlier evidence: 51 tokens (section C: 51)",
     "  Complete observation and memory model: 55 tokens (section C: 57)",
     "  Contribution and prior art: 53 tokens (section C: 53)",
     "  Full trace: 32 tokens (section C: 34)",
-    "  Header: 165 tokens (section C: 166)",
+    "  Header: 166 tokens (section C: 167)",
     "  Memory operations: 31 tokens (section C: 31)"
    ]
   }
@@ -287,7 +287,7 @@
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
   "Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.",
-  "B was Claude Haiku 4.5, Sonnet 5.5 or Opus 5.5, pooled, with Qwen2.5-7B reported apart; 2,794 scored trials on 1 Oct 2026. The figure counts each condition’s full item set. In the emem condition, B had the reference, a verifier tool and an instruction to check. The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet. Qwen2.5-7B (one run) acted on 22 of 23 corrupted prose handoffs and 2 of 25 with an emem reference. Corruptions are simulated on a small task set; intervals are in Reproduce.",
+  "B was Claude Haiku 4.5, Sonnet 5.5 or Opus 5.5, pooled; 2,794 scored trials of 25 items from two constructed tasks, 1 Oct 2026. The figure counts each condition’s full item set. In the emem condition, B had the reference, a verifier tool and an instruction to check. Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet. With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 corruptions (2 of 25 when instructed): enforce refusal outside the model.",
   "Each agent bar is 12 runs of one item; totals pool 23 items per condition (24 for the opaque id, 25 for emem). JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
@@ -301,8 +301,8 @@
   "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,558.9,193.5x183.9), off by 103.2 mm; reason: The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace.",
   "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,713.3,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
   "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,433.5,396.0x168.3), off by 49.8 mm; reason: The decoded evidence object replaces the Berlin fanout, restoring the complete source-record-address-attestation flow at 396 by 98 mm.",
-  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,655.3,396.0x257.0), off by 94.3 mm; reason: The central mutation matrix retains its 396 by 196 mm print size and measured outcomes; the centre column distributes the space released by replacing the Berlin panel.",
-  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,915.6,396.0x156.9), off by 87.6 mm; reason: The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column.",
+  "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,815.5,396.0x257.0), off by 254.5 mm; reason: The central mutation matrix keeps its 396 by 196 mm print size and measured outcomes. 4 Oct 2026: it follows the source-pixel panel at the foot of the centre column and is numbered 6.",
+  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,655.3,396.0x156.9), off by 203.8 mm; reason: The source-pixel experiment keeps its 396 by 128 mm figure and data. 4 Oct 2026 (two reviews): it moves above the mutation matrix, to eye level, and is numbered 5; both reviewers named it the strongest result.",
   "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.7,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
   "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x151.4), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
   "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards quote each listing's own words (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub), verbatim from the authors' screenshots, which are kept in research/v13/evidence/listings/ but not printed (their text sets at about 5 pt at A0). VS Code and MuleSoft Exchange move into the lists, which print two lines per group.",
@@ -332,7 +332,7 @@
    "height": 639.0
   }
  ],
- "allowlist_used": 15,
+ "allowlist_used": 14,
  "allowlist_unused": [
   "Six cross the irrigation line, one is impossible, one is right; each wrong value",
   "Signatures prevented none; the record made each checkable at a named layer, exce",
@@ -350,6 +350,7 @@
   "re-read only · L3",
   "none · L4",
   "All keys today are one operator's.",
+  "nothing altered: accepted everywhere, never refused",
   "M17 passes every check; “this image”",
   "physical truth, decision",
   "915.07 m · first signed 11 Aug · 30 m DEM · signed 7 times",
@@ -421,7 +422,6 @@
   "F6.cumulative",
   "F6.desc",
   "F6.family",
-  "F6.first",
   "F6.ids",
   "F6.na",
   "F6.totals_label",
@@ -462,12 +462,12 @@
   "Q.view_demo",
   "Q.view_demo.caption",
   "R5.A.notacted",
-  "R5.A.qwen7b",
   "R5.B.notacted",
   "R5.C.notacted",
   "R5.D.notacted",
   "R5.E.notacted",
   "R5.E.qwen7b",
+  "R5.Eplus.qwen7b",
   "R5.F6.scope",
   "R5.baseline.catch",
   "R5.block2.M15r",
@@ -500,6 +500,7 @@
   "R5.split.D.genuine",
   "R5.split.E.declined",
   "R5.split.E.genuine",
+  "R5.tasks",
   "R5.treatment",
   "REF.footer",
   "S.R1.B.notacted",
@@ -554,8 +555,8 @@
   "X.only",
   "X.p123"
  ],
- "figure_numbers_checked": 346,
- "rows_rechecked": 557,
+ "figure_numbers_checked": 344,
+ "rows_rechecked": 558,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
   "A13.products",
@@ -590,7 +591,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 830,
-  "running_tokens": 849
+  "running_words_with_letter": 838,
+  "running_tokens": 857
  }
 }

@@ -17,10 +17,10 @@
       "reason": "The decoded evidence object replaces the Berlin fanout, restoring the complete source-record-address-attestation flow at 396 by 98 mm."
     },
     "p5": {
-      "reason": "The central mutation matrix retains its 396 by 196 mm print size and measured outcomes; the centre column distributes the space released by replacing the Berlin panel."
+      "reason": "The central mutation matrix keeps its 396 by 196 mm print size and measured outcomes. 4 Oct 2026: it follows the source-pixel panel at the foot of the centre column and is numbered 6."
     },
     "p6": {
-      "reason": "The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column."
+      "reason": "The source-pixel experiment keeps its 396 by 128 mm figure and data. 4 Oct 2026 (two reviews): it moves above the mutation matrix, to eye level, and is numbered 5; both reviewers named it the strongest result."
     },
     "p12": {
       "reason": "v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards quote each listing's own words (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub), verbatim from the authors' screenshots, which are kept in research/v13/evidence/listings/ but not printed (their text sets at about 5 pt at A0). VS Code and MuleSoft Exchange move into the lists, which print two lines per group."
@@ -90,6 +90,7 @@
     "versions": "No service or code commit on the face (footer, memory-as-coded label, panel 10 note): versions advance with every upgrade. The rows K.commit and CODE.commit keep them; face_hygiene fails on a commit hash.",
     "byline": "4 Oct 2026: Zenodo DOIs removed (authors); line 1 authors, contact, emem.dev and the repository; line 2 the event.",
     "scientific_wording": "4 Oct 2026: panel 1 asks 'Does agent B act on a corrupted handoff?' (the figure counts false acceptance); one name for the condition (emem reference); panel 5 checks carry their layers (the L0 to L3 key); f6 names its deterministic row; the header orbit line is a design goal; the subhero adds the signed absence. research/v13/26_V13_10_REVIEW.md section 13.",
-    "panel12": "4 Oct 2026: the 11-client-path line is removed from the face (authors); the full table is on /use/ ('Same token, many runtimes'). The ecosystem figure sits 3.5 mm under the headline. Review log section 14."
+    "panel12": "4 Oct 2026: the 11-client-path line is removed from the face (authors); the full table is on /use/ ('Same token, many runtimes'). The ecosystem figure sits 3.5 mm under the headline. Review log section 14.",
+    "two_reviews": "4 Oct 2026: fixes from the ChatGPT and cold-read reviews (review log section 15). The source-pixel panel moves above the mutation matrix and is numbered 5; L0 to L3 text leaves the face (depth shows as colour and check names)."
   }
 }

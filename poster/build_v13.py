@@ -1144,11 +1144,11 @@ def g_words(claims, r5=False):
         elif line.startswith("> "):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
-    # cap: brief 839 / 858 on 4 Oct 2026 (subhero completed with the signed absence; panel 1, 2, 5 and 7 wording made
-    # precise; layer tags on panel 5's checks; panel 12's client-path line moved to /use/) plus about 1 % slack;
+    # cap: brief 843 / 862 on 4 Oct 2026 (subhero completed with the signed absence; wording made precise after two
+    # reviews; panel 12's client-path line moved to /use/) plus about 1 % slack;
     # it was 830 / 880 for brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 850 / 870; v13.5 copy brief: see per-panel counts)"]
-    ok = tot_w <= 850 and tot_t <= 870
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 852 / 872; v13.5 copy brief: see per-panel counts)"]
+    ok = tot_w <= 852 and tot_t <= 872
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)
         flag = ""

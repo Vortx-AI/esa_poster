@@ -166,7 +166,7 @@ def lanes():
             ("json", "JSON", "reads the fields", R5["B"][:2], ceil["B"]),
             ("rag", "retrieved text (RAG)", "retrieves a passage", R5["C"][:2], None),
             ("opaque", "opaque id", "fetches the sender’s record", R5["D"][:2], ceil["C"]),
-            ("emem", "emem reference", None, R5["E"][:2], ceil["I"])]
+            ("emem", "emem reference + verifier", None, R5["E"][:2], ceil["I"])]   # the condition, not only the format
 
 
 # the real 5 x 5 window of the record, true colour from the signed grids (same processing as F1)

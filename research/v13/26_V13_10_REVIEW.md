@@ -272,3 +272,47 @@ and EC.9of11 keep it. The listing cards quote each listing verbatim, so they rea
 The ecosystem figure moves up and takes 3.5 mm under the headline. Word cap 850 / 870 (copy brief 839 / 858 plus about
 1 %); the board prints 830 / 849. Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no split
 number phrase.
+
+## 15. Two independent reviews of b6f6717, and what changed (4 Oct 2026)
+
+Two reviews of the merged board: an external ChatGPT agent (EO reviewer persona; it re-derived the outcome counts from
+the stored transcripts and confirmed the release hash) and a cold read by a separate Claude agent that saw only the
+printed text and the preview. Each finding was checked against the board and the data before acting.
+
+**Both reviews**
+
+| Finding | Check | Action |
+|---|---|---|
+| The orbit line conflicts with the source re-read: if the pixels stay in orbit, B cannot run the check that caught the wrong pixel. | True. emem admits public-archive EO by recomputation; device output needs a signed execution trace (`trace_truth.md`). | Panel 1: "its signed record and reference are downlinked, so no source re-read (SAT-042 harness, not flown)." |
+| The experiment does not isolate content addressing: the emem condition also had a verifier and an instruction. | True; no wording can fix it, only a matched baseline. | Panel 1 note: "so this tests the workflow, not content addressing alone; no equal-tool baseline yet". Headline "five handoff conditions", not "five ways"; the figure row is "emem reference + verifier". |
+| Panel 6 (the wrong pixel) is the strongest result but sits low and competes with implementation detail. | Agreed. | Moved above the mutation matrix, to eye level, and renumbered 5 (the matrix is 6). Not resized: shrinking the code box, trace or token table is the authors' call. |
+| The board is dense (about 3,500 words with labels). | Agreed; the build's word budget counts running text only (838 words). | No new panels. Open decision for the authors: what to cut (see the reply of 4 Oct). |
+
+**ChatGPT review only**
+
+| Finding | Check | Action |
+|---|---|---|
+| A refusal by the verifier does not stop an agent acting: Qwen E+ (fail-closed) 10/25; Haiku 6/6 in the exploratory M22 persuasion case. | True (`results.json` primary.E+ and X3_M22). | Panel 1 note: "With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 corruptions (2 of 25 when instructed): enforce refusal outside the model." Workflow: "Policy: refuse if one fails." |
+| 2,794 trials are repetitions over few tasks. | True: two constructed tasks (K, B), 25 items. | "2,794 scored trials of 25 items from two constructed tasks" (row R5.tasks). |
+| 162/200 pre-fix vs 0/54 post-fix is not a matched comparison. | True: providers differ. | Panel 5 note: "(Planetary Computer, two days; not a matched sample)". |
+| "without trusting A, A's model, or us" overclaims. | True: the signature and log checks trust emem's key. | "What can agent B check without trusting A or A's model?" (the suggested "independently" is a banned word here). |
+| "No candidate gives an empty result" is ambiguous. | True. | "If no candidate exists, recall returns an empty result." |
+
+**Cold read only**
+
+| Finding | Check | Action |
+|---|---|---|
+| "a changed, rounded or forged value no longer matches its name" is contradicted by panel 6: re-hashed changes and a forger's own key pass the hash and fail the signature. | True (f6: M8, M9, M13 first refused by F). | "...no longer matches its name or signature." |
+| "STAC carries no checksum" is wrong about STAC: the file extension defines `file:checksum`. | True; this item has none. | "this STAC item carries no checksum". |
+| L0 to L3 read as EO processing levels (beside "Sentinel-2 L2A"). | True for this audience. | Removed the L text from panels 2, 4 and 6; depth stays as colour and check names. |
+| Panel 6's check chain leaves out Signature and Log, the first refusals in many rows. | True. | "Resolve, Re-hash, Bind, Signature, Log, Recompute, Re-read". |
+| G0 "accepted everywhere, never refused" vs agents declining 1 of 72 controls. | The row is the deterministic receiver. | "nothing altered: no check refuses it". |
+| "how agents read Earth observation" outruns the evidence. | Agreed. | "In emem, the token family is how agents read Earth observation". |
+| Panel 9's CBOR_canonical vs the code box's declaration order. | True: a sorted-key canonical encoder gives a different cid. | "cid(record) = BLAKE3(CBOR(record))". |
+| "A relay changes the evidence" omits signer errors. | True (f2: relay or faulty signer). | "A relay or a faulty signer changes the evidence." |
+| Panel 3 asks "Where did the evidence change?" but lists possible causes. | True. | "Why can a value change?" |
+| Undefined: ULP, cl100k, STH, attester_only, Referent Lock. | | "changed in its last bit"; "46 GPT-4 tokens"; "signed tree head (STH)"; "not re-runnable"; "Workflow templates, including EUDR". |
+
+Not changed: the 154/288 versus 154/276 denominators (both printed and explained); the TRY IT position (bring a
+hand-held card); "encode" in three senses; panel 12's headline. Both variants pass every gate, with 0 text overlaps, no
+broken hyphenation and no split number phrase; 838 running words (cap 852 / 872, copy brief 843 / 862 plus about 1 %).

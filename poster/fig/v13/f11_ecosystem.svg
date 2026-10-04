@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-04T09:46:44.328795</dc:date>
+    <dc:date>2026-10-04T12:36:13.116020</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ Q 0 107.149606 0 102.897638
 L 0 4.251969 
 Q 0 0 4.251969 0 
 z
-" clip-path="url(#pfaf8a6cc24)" style="fill: #dce8f5"/>
+" clip-path="url(#p07c52e04c3)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_3">
     <path d="M 418.110236 0 
@@ -53,7 +53,7 @@ Q 413.858268 107.149606 413.858268 102.897638
 L 413.858268 4.251969 
 Q 413.858268 0 418.110236 0 
 z
-" clip-path="url(#pfaf8a6cc24)" style="fill: #dce8f5"/>
+" clip-path="url(#p07c52e04c3)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_4">
     <path d="M 831.968504 0 
@@ -66,7 +66,7 @@ Q 827.716535 107.149606 827.716535 102.897638
 L 827.716535 4.251969 
 Q 827.716535 0 831.968504 0 
 z
-" clip-path="url(#pfaf8a6cc24)" style="fill: #dce8f5"/>
+" clip-path="url(#p07c52e04c3)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_5">
     <path d="M 1245.826772 0 
@@ -79,7 +79,7 @@ Q 1241.574803 107.149606 1241.574803 102.897638
 L 1241.574803 4.251969 
 Q 1241.574803 0 1245.826772 0 
 z
-" clip-path="url(#pfaf8a6cc24)" style="fill: #f1f0ec"/>
+" clip-path="url(#p07c52e04c3)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_6">
     <path d="M 1659.685039 0 
@@ -92,7 +92,7 @@ Q 1655.433071 107.149606 1655.433071 102.897638
 L 1655.433071 4.251969 
 Q 1655.433071 0 1659.685039 0 
 z
-" clip-path="url(#pfaf8a6cc24)" style="fill: #f1f0ec"/>
+" clip-path="url(#p07c52e04c3)" style="fill: #f1f0ec"/>
    </g>
    <g id="text_1">
     <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="23.174803" transform="rotate(-0 11.338583 23.174803)">ChatGPT · @emem plugin</text>
@@ -125,7 +125,7 @@ z
     <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="839.055118" y="65.988346" transform="rotate(-0 839.055118 65.988346)">per fact, one signature you check.”</text>
    </g>
    <g id="text_11">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="839.055118" y="93.494803" transform="rotate(-0 839.055118 93.494803)">Referent Lock / EUDR workflows</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="839.055118" y="93.494803" transform="rotate(-0 839.055118 93.494803)">Workflow templates, including EUDR</text>
    </g>
    <g id="text_12">
     <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1252.913386" y="23.174803" transform="rotate(-0 1252.913386 23.174803)">GitHub MCP Registry · Server listing</text>
@@ -193,7 +193,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pfaf8a6cc24">
+  <clipPath id="p07c52e04c3">
    <rect x="0" y="0" width="2057.952756" height="184.251969"/>
   </clipPath>
  </defs>

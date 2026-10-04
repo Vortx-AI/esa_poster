@@ -44,9 +44,9 @@
    "pt": 17
   },
   {
-   "text": "asked coordinates L1",
+   "text": "asked coordinates",
    "claim": "F3.chips",
-   "x_mm": 46.88,
+   "x_mm": 43.7,
    "y_mm": 3.95,
    "pt": 14
   },
@@ -59,7 +59,7 @@
    "box_mm": [
     0.0,
     0.4,
-    72.2
+    69.2
    ]
   },
   {
@@ -70,9 +70,9 @@
    "pt": 17
   },
   {
-   "text": "scene id L1",
+   "text": "scene id",
    "claim": "F3.chips",
-   "x_mm": 126.67,
+   "x_mm": 123.49,
    "y_mm": 3.95,
    "pt": 14
   },
@@ -96,9 +96,9 @@
    "pt": 17
   },
   {
-   "text": "range L2",
+   "text": "range",
    "claim": "F3.chips",
-   "x_mm": 181.34,
+   "x_mm": 178.17,
    "y_mm": 3.95,
    "pt": 14
   },
@@ -111,7 +111,7 @@
    "box_mm": [
     148.5,
     0.4,
-    44.1
+    42.4
    ]
   },
   {
@@ -122,9 +122,9 @@
    "pt": 17
   },
   {
-   "text": "catalogue offset L3",
+   "text": "catalogue offset",
    "claim": "F3.chips",
-   "x_mm": 82.8,
+   "x_mm": 79.62,
    "y_mm": 17.15,
    "pt": 14
   },
@@ -137,7 +137,7 @@
    "box_mm": [
     38.0,
     13.6,
-    68.0
+    61.7
    ]
   },
   {
@@ -167,9 +167,9 @@
    "pt": 17
   },
   {
-   "text": "re-read pixel L3",
+   "text": "re-read pixel",
    "claim": "F3.chips",
-   "x_mm": 40.85,
+   "x_mm": 37.67,
    "y_mm": 40.95,
    "pt": 14
   },
@@ -182,7 +182,7 @@
    "box_mm": [
     0.0,
     37.4,
-    60.1
+    53.8
    ]
   },
   {
@@ -193,9 +193,9 @@
    "pt": 17
   },
   {
-   "text": "date L1",
+   "text": "date",
    "claim": "F3.chips",
-   "x_mm": 95.59,
+   "x_mm": 92.42,
    "y_mm": 40.95,
    "pt": 14
   },
@@ -219,9 +219,9 @@
    "pt": 17
   },
   {
-   "text": "resolve L0",
+   "text": "resolve",
    "claim": "F3.chips",
-   "x_mm": 169.63,
+   "x_mm": 166.45,
    "y_mm": 40.95,
    "pt": 14
   },
@@ -234,7 +234,7 @@
    "box_mm": [
     142.0,
     37.4,
-    40.8
+    36.5
    ]
   },
   {

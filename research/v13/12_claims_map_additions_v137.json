@@ -228,7 +228,8 @@
         "recall = max(t, cid) {O in Cτ : t ≤ t*}",
         "Latest-as-of mode: take the versions known by signing time τ, then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.",
         "Temporal storage is established; the handoff adds a portable citation to the exact earlier record.",
-        "Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties."
+        "Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. No candidate gives an empty result; CID order breaks ties.",
+        "Latest-as-of mode: take the versions signed by τ (signed_at, the signer’s clock), then the latest valid time ≤ t*. If no candidate exists, recall returns an empty result; CID order breaks ties."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -262,7 +263,8 @@
         "Portable EO evidence with explicit receiver checks and reproducible source tracing.",
         "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6).",
         "EO evidence that travels between agents, checked by the receiver down to the source pixel.",
-        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 6)."
+        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 6).",
+        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 5)."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
