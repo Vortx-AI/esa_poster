@@ -14,7 +14,7 @@ REQUIRED = {'chatgpt', 'claude-code-plugin', 'dify-marketplace', 'a2a', 'mcp-cor
             'mastra', 'agno', 'semantic-kernel'}
 GROUPS = [('clients', 'MORE CLIENTS', 0), ('protocols', 'PROTOCOLS', 116),
           ('developer', 'DEVELOPER', 248), ('examples', 'FRAMEWORK EXAMPLES', 410),
-          ('discovery', 'DISCOVERY / MIRRORS', 562)]
+          ('discovery', 'DISCOVERY', 562)]
 
 
 def read_manifest():
@@ -87,7 +87,7 @@ def validate(rows, today=None, svg_texts=None):
             if r.get('status') == 'EXAMPLE' and p.get('group') != 'examples':
                 errors.append(f'{rid}: example must be under FRAMEWORK EXAMPLES')
             if r.get('status') == 'REGISTRY' and p.get('group') != 'discovery':
-                errors.append(f'{rid}: directory must be under DISCOVERY / MIRRORS')
+                errors.append(f'{rid}: directory must be under DISCOVERY')
         else:
             errors.append(f'{rid}: unknown panel kind')
     cards = [r['panel']['order'] for r in rows if r.get('panel', {}).get('kind') == 'card']

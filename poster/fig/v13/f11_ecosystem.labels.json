@@ -385,7 +385,7 @@
       "style": "normal"
     },
     {
-      "text": "DISCOVERY / MIRRORS",
+      "text": "DISCOVERY",
       "x": 562,
       "y": 42.8,
       "pt": 17,
@@ -412,15 +412,14 @@
       "style": "normal"
     },
     {
-      "text": "Context7 \u00b7 Hugging Face (older mirror)",
+      "text": "Context7",
       "x": 562,
       "y": 58.8,
       "pt": 16,
       "weight": 400,
       "color": "ink",
       "integrations": [
-        "context7",
-        "huggingface-space"
+        "context7"
       ],
       "claim": "CM.routes",
       "style": "normal"

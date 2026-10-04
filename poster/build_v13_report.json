@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T22:05:40+00:00",
+ "built_utc": "2026-10-04T22:23:33+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -106,10 +106,10 @@
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 726.0,
    "h_mm": 65.0,
-   "mtime": "2026-10-04T12:36:13"
+   "mtime": "2026-10-04T22:23:02"
   }
  },
- "figure_text_tokens": 1682,
+ "figure_text_tokens": 1675,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -158,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (845 text runs)"
+    "every printed code point is in the face that sets it (866 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -188,7 +188,7 @@
   "ecosystem_manifest": {
    "pass": true,
    "details": [
-    "42 evidenced routes; 28 printed; dates, types and exact SVG copy checked"
+    "42 evidenced routes; 27 printed; dates, types and exact SVG copy checked"
    ]
   },
   "claims_rows_recheck": {
