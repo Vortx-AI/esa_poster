@@ -1,62 +1,62 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "50489d2f293c77aa462045b3cf990c9ec62a1443",
+ "base_commit": "13e9fb3d1cdeba00d367561d31d9db02f537f09e",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2416770,
-   "sha256": "127486cecdd32b60f83d4ac343af106a77ed85992ae69d3628eb111dfa4b0f8e"
+   "bytes": 2416778,
+   "sha256": "9b2a94f02452219c06852599d1b4c3fd6e2705d452a4f110bd4da1bfd9dd0338"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4741982,
-   "sha256": "65868e19760cea07fdb7adfb1e5db9ed2103c89a6b6692a9412787659717d86f"
+   "bytes": 4742107,
+   "sha256": "c91548e4db1a7e37d3e85df41261fb1f030bedaf95d6ee77a2d7304ec4a6573d"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17272324,
-   "sha256": "12d229e331e8ae591b26484f741262c7176bcfdf9cb5d35d3c1cac3aadab4ec4"
+   "bytes": 17280470,
+   "sha256": "a70fb4f2db0d6a942328dba1e7eb1140ce6ccf969907abf55b36271a4d6e3ccf"
   },
   "poster/poster.html": {
-   "bytes": 3325264,
-   "sha256": "979062d1ee6f533ddc470007d899e0a597f9f2631d3409bf4818572ab9bf4760"
+   "bytes": 3325270,
+   "sha256": "1b268905298480eaff6f622fb88fed34b22ed9c9cc75ccbab1522b972e155967"
   },
   "poster/build_v13_report.json": {
    "bytes": 26449,
-   "sha256": "8291db14614d931864da25915a6e96f255d70b8a247b40bdf29f379d93de93de"
+   "sha256": "c5039f6eda2a9d33f1c54d2ed7620811bc2780c992a183f07c25c7d381beafed"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 24547,
-   "sha256": "026e72a5b40b016a467bf3660f7f9d37a9d9260b903ff20c5c43ece8389c3f58"
+   "bytes": 24553,
+   "sha256": "1acca4c84fb458ed82a64d75784479cf5bac9de8bbeab9644bc5a4c69d3077a4"
   },
   "poster/src/poster.v13.css": {
    "bytes": 15671,
    "sha256": "e167a368220f9036312635a18437995da763da1a3614b2d3a5cdc811f7bd26ce"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2416798,
-   "sha256": "7836fd6ad11bc1b4c870e047e2b66e3b8a9389293d1c94701a95b751383a0437"
+   "bytes": 2416796,
+   "sha256": "b945b98a4e70c0de6e72a09c8070950966cf1c0d2d98eb269c811150972fc550"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4748033,
-   "sha256": "01b19309d11b8e4cf4354912a6828d4aa2ba0bf35e40a079161da13f2db98463"
+   "bytes": 4748005,
+   "sha256": "f0ef45b75f93d6654fcd3653cba1fd9091151b358a5da3f56d8b0527cec720ac"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 17275831,
-   "sha256": "9a5534db4d4e6167631683001f9fd6d9951edeb7d8c1de533c0f168cfc90ed72"
+   "bytes": 17283267,
+   "sha256": "1887464c8d73d156aba604acf059872f8880c58fc9b910efe09efea8d2dd497e"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3325289,
-   "sha256": "a7288db83a66c081a8d1078a73ac393876cf2f8631b84643f1d1668d7882e6c7"
+   "bytes": 3325295,
+   "sha256": "4a15e0c48af138536a30aa9f738a288e3c3efa182a73aac35a1cb20298de58b4"
   },
   "poster/build_v13_report-300of300.json": {
    "bytes": 26567,
-   "sha256": "aa3b32bb74b3afac323e0264c997e9d964e3d1cf9a22475860868c5dbbf7d24d"
+   "sha256": "03a6fd062c7c5c468638fcea72146d3ff27e114cc2cf222d75c64db0289a1861"
   }
  },
- "pdf_blake3": "146588be1b70b6704e2a318138834c2d26a005be9b870de0a9af77b107cf9035",
- "pointer_body": "research/repro/v13/track/board_body_50489d2.md",
- "rows_rechecked": 531,
- "claims_printed": 165,
+ "pdf_blake3": "e3a8fc54b9edfc7aae855d4fb9e1a684c5cefb5dc6f7970f16c98eb939a370cf",
+ "pointer_body": "research/repro/v13/track/board_body_13e9fb3.md",
+ "rows_rechecked": 555,
+ "claims_printed": 183,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
   "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
@@ -71,8 +71,8 @@
   "top_text": 6.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "3ed17c05af546eb210dcbee747381ca79a20964054e00da60387bac04ebf3f11",
- "pointer_body_300of300": "research/repro/v13/track/board_body_50489d2-300of300.md",
+ "pdf_blake3_300of300": "82f57a27adddd63d3b82c9671f82a38caffb06feeb577c516be3ea8a0b34012c",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_13e9fb3-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
