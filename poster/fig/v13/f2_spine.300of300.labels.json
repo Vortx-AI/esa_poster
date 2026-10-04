@@ -189,14 +189,14 @@
    "pt": 17
   },
   {
-   "text": "used the",
+   "text": "acted on",
    "claim": "F2.heads",
    "x_mm": 776,
    "y_mm": 4.9,
    "pt": 17
   },
   {
-   "text": "genuine record",
+   "text": "genuine value",
    "claim": "F2.heads",
    "x_mm": 776,
    "y_mm": 11,
@@ -371,7 +371,7 @@
    "pt": 48
   },
   {
-   "text": "retrieved text (RAG)",
+   "text": "retrieved text (BM25)",
    "claim": "F2.lanes",
    "x_mm": 112,
    "y_mm": 57.84,

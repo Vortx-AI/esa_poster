@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T19:51:36+00:00",
+ "built_utc": "2026-10-04T21:35:23+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -43,7 +43,7 @@
    "file": "poster/fig/v13/f2_spine.svg",
    "w_mm": 801.0,
    "h_mm": 112.5,
-   "mtime": "2026-10-04T17:16:45"
+   "mtime": "2026-10-04T21:33:08"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -78,7 +78,7 @@
    "file": "poster/fig/v13/f6_mutation_matrix.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T12:38:44"
+   "mtime": "2026-10-04T21:34:28"
   },
   "f9_timeline": {
    "state": "placed",
@@ -109,7 +109,7 @@
    "mtime": "2026-10-04T12:36:13"
   }
  },
- "figure_text_tokens": 1687,
+ "figure_text_tokens": 1688,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -158,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (840 text runs)"
+    "every printed code point is in the face that sets it (841 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -237,8 +237,8 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 799 words containing a letter, 818 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
-    "  1 · Earth to agents: 105 tokens (section C: 105)",
+    "running text: 800 words containing a letter, 819 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 106 tokens (section C: 106)",
     "  10 · Token family: 53 tokens (section C: 53)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
     "  12 · Community routes: 6 tokens (section C: 6)",
@@ -584,7 +584,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 799,
-  "running_tokens": 818
+  "running_words_with_letter": 800,
+  "running_tokens": 819
  }
 }

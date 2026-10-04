@@ -1,0 +1,183 @@
+{
+ "generated_by": "research/repro/v13/r5/genuine_value_source.py",
+ "scope": "primary items, three Claude models pooled, block 1 (as out/not_acted_split.json)",
+ "channels": {
+  "derived": "B's own derivation (scoring addendum 1)",
+  "served": "the value the condition's tool returned for the reference",
+  "stated": "the value written in the handoff, unverified"
+ },
+ "conditions": {
+  "B": {
+   "acted_on_genuine": 6,
+   "by_channel": {
+    "derived": 6
+   },
+   "served_verified": 0,
+   "derived_reasons": [
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M2-B-r1-1",
+     "reason": "Recomputed NDVI 1602/3402=0.4709 exceeds 0.4705 threshold; rounded 0.47 misleading"
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M2-B-r2-1",
+     "reason": "NDVI recomputed from signed B08/B04 inputs is 0.4709, above 0.4705 threshold"
+    },
+    {
+     "trial_id": "B1-claude-opus-5-5-M2-B-r1-1",
+     "reason": "Recomputed NDVI 0.4709 from B08/B04 with offset exceeds 0.4705 threshold"
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M2-B-r3-1",
+     "reason": "NDVI recomputed from B08/B04 is 0.4709, above 0.4705 threshold"
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M2-B-r4-1",
+     "reason": "NDVI recomputed from bands is 0.4709, above 0.4705 threshold; rounded 0.47 misleading."
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M2-B-r5-1",
+     "reason": "NDVI recomputed from B08/B04 DNs with offset is 0.4709, above 0.4705 threshold"
+    }
+   ],
+   "by_channel_item": {
+    "derived": {
+     "M2": 6
+    }
+   }
+  },
+  "D": {
+   "acted_on_genuine": 46,
+   "by_channel": {
+    "derived": 13,
+    "served": 27,
+    "stated": 6
+   },
+   "served_verified": 0,
+   "derived_reasons": [
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M13-D-r1-1",
+     "reason": "Recomputed NDVI from record's bands is 0.4709, above 0.4705; stated 0.45 inconsistent."
+    },
+    {
+     "trial_id": "B1-claude-opus-5-5-M25-D-r1-1",
+     "reason": "Recomputed from record DNs with offset; reported 1.1427 invalid; 0.4709 exceeds 0.4705"
+    },
+    {
+     "trial_id": "B1-claude-opus-5-5-M12-D-r1-1",
+     "reason": "Record skipped -1000 band correction; corrected NDVI 0.4709 exceeds 0.4705"
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M14-D-r1-1",
+     "reason": "NDVI recomputed from record's bands is 0.4709, above 0.4705; reported 0.46 inconsistent"
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M8-D-r1-1",
+     "reason": "Recomputed NDVI from record's bands is 0.4709, above 0.4705; stated 0.45 inconsistent."
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M8-D-r2-1",
+     "reason": "Recomputed NDVI from signed B08/B04 inputs is 0.4709, above 0.4705; stated 0.45 inconsistent."
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M14-D-r2-1",
+     "reason": "NDVI recomputed from B08/B04 with offset is 0.4709, above 0.4705 threshold; 0.46 was rounded."
+    },
+    {
+     "trial_id": "B1-claude-opus-5-5-M13-D-r1-1",
+     "reason": "Recomputed NDVI from record DNs (0.4709) exceeds 0.4705; reported 0.45 inconsistent."
+    },
+    {
+     "trial_id": "B1-claude-opus-5-5-M8-D-r1-1",
+     "reason": "Recomputed NDVI from record's raw bands 0.4709 exceeds 0.4705; stored 0.45 inconsistent"
+    },
+    {
+     "trial_id": "B1-claude-opus-5-5-M14-D-r1-1",
+     "reason": "Record's raw bands give NDVI 0.4709, above 0.4705; stated 0.46 inconsistent"
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M8-D-r4-1",
+     "reason": "Recomputed NDVI from record bands is 0.4709, above 0.4705; stated 0.45 inconsistent."
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M14-D-r4-1",
+     "reason": "Recomputed NDVI from record's bands is 0.4709, above 0.4705; reported 0.46 inconsistent."
+    },
+    {
+     "trial_id": "B1-claude-sonnet-5-5-M14-D-r5-1",
+     "reason": "NDVI recomputed from record bands is 0.4709, above 0.4705 threshold; stored 0.46 is rounded."
+    }
+   ],
+   "by_channel_item": {
+    "derived": {
+     "M12": 1,
+     "M13": 2,
+     "M14": 5,
+     "M25": 1,
+     "M8": 4
+    },
+    "served": {
+     "M1": 3,
+     "M2": 12,
+     "M2-B": 12
+    },
+    "stated": {
+     "M7": 6
+    }
+   }
+  },
+  "E": {
+   "acted_on_genuine": 36,
+   "by_channel": {
+    "served": 36
+   },
+   "served_verified": 36,
+   "derived_reasons": [],
+   "by_channel_item": {
+    "served": {
+     "M1": 12,
+     "M2": 12,
+     "M2-B": 12
+    }
+   }
+  },
+  "E+": {
+   "acted_on_genuine": 36,
+   "by_channel": {
+    "served": 36
+   },
+   "served_verified": 36,
+   "derived_reasons": [],
+   "by_channel_item": {
+    "served": {
+     "M1": 12,
+     "M2": 12,
+     "M2-B": 12
+    }
+   }
+  },
+  "E0": {
+   "acted_on_genuine": 37,
+   "by_channel": {
+    "derived": 1,
+    "served": 36
+   },
+   "served_verified": 36,
+   "derived_reasons": [
+    {
+     "trial_id": "B1-claude-opus-5-5-M14-E0-r1-1",
+     "reason": "Signed source pixel values give NDVI 0.4709, above 0.4705; stated 0.46 fails recompute"
+    }
+   ],
+   "by_channel_item": {
+    "derived": {
+     "M14": 1
+    },
+    "served": {
+     "M1": 12,
+     "M2": 12,
+     "M2-B": 12
+    }
+   }
+  }
+ }
+}

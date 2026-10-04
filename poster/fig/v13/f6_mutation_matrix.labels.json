@@ -72,6 +72,11 @@
    "claim": "V6.matrix_labels"
   },
   {
+   "text": "(BM25)",
+   "pt": 14,
+   "claim": "V6.matrix_labels"
+  },
+  {
    "text": "emem checks",
    "pt": 18,
    "claim": "V6.matrix_labels"

@@ -533,7 +533,7 @@
      "n": 276
     }
    },
-   "note": "condition C: retrieved text (RAG); three Claude models pooled; primary items only",
+   "note": "condition C: retrieved text (BM25), a BM25-based RAG baseline; three Claude models pooled; primary items only",
    "tier": "3m",
    "fallback": null,
    "r5_key": null,
@@ -575,7 +575,7 @@
      "n": 138
     }
    },
-   "note": "Haiku 4.5 in condition C (retrieved text (RAG))",
+   "note": "Haiku 4.5 in condition C (retrieved text (BM25))",
    "tier": "30cm",
    "fallback": null,
    "r5_key": null,
@@ -617,7 +617,7 @@
      "n": 115
     }
    },
-   "note": "Sonnet 5.5 in condition C (retrieved text (RAG))",
+   "note": "Sonnet 5.5 in condition C (retrieved text (BM25))",
    "tier": "30cm",
    "fallback": null,
    "r5_key": null,
@@ -659,7 +659,7 @@
      "n": 23
     }
    },
-   "note": "Opus 5.5 in condition C (retrieved text (RAG))",
+   "note": "Opus 5.5 in condition C (retrieved text (BM25))",
    "tier": "30cm",
    "fallback": null,
    "r5_key": null,
