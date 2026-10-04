@@ -97,4 +97,5 @@ committed here and so cannot be printed.
 | #39 media pack | open | Not started. |
 | #44 discovery destinations | open | Connect QR lands on /use/; acceptance needs a phone test. |
 | #46 platform marks | open | Depends on #58 assets and brand guidance. |
-| #58 real listing images | open, blocked | The screenshots are on private-user-images.githubusercontent.com, which this build environment cannot reach. Commit them under `research/v13/evidence/listings/` (one PNG per listing, as uploaded) and the band can be rebuilt with them. |
+| #58 real listing images | close | Five listings (ChatGPT, Claude directory, Dify, GitHub MCP Registry, ClawHub) printed as screenshot tiles in panel 12; sources in `research/v13/evidence/listings/`. |
+| #46 platform marks | close | The listing tiles carry each platform's own page; no separate logo assets. |

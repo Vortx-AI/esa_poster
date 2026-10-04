@@ -28,16 +28,17 @@ def labels_for(rows):
                            integrations=list(ids), claim=claim))
     cards = sorted((r for r in rows if r.get('panel', {}).get('kind') == 'card'), key=lambda r: r['panel']['order'])
     for i, r in enumerate(cards):
-        p = r['panel']; x = i * 146 + 4
-        add(p['label'], x, 7, 28, 600, ids=[r['id']])
-        add(p['mechanism'], x, 17, 20, 500, 'emem' if r['status'] != 'REGISTRY' else 'ink2', [r['id']])
-        add(p['action'], x, 25, 17, 400, 'ink2', [r['id']])
+        # v13.10: each card carries the real listing as a cropped screenshot (research/v13/evidence/listings/);
+        # the printed copy below it is one name line and one action line
+        p = r['panel']; x = i * 146 + 3
+        add(f"{p['label']} · {p['mechanism']}", x, 32.3, 17, 600, 'emem' if r['status'] != 'REGISTRY' else 'ink', [r['id']])
+        add(p['action'], x, 38.0, 14, 400, 'ink2', [r['id']])
     for group, title, x in GROUPS:
-        add(title, x, 34.5, 17, 600, 'emem')
+        add(title, x, 45.0, 17, 600, 'emem')
         for line in (0, 1, 2):
             rs = sorted((r for r in rows if r.get('panel', {}).get('group') == group and r['panel']['line'] == line), key=lambda r: r['panel']['order'])
             if rs:
-                add(' · '.join(r['panel']['label'] for r in rs), x, 43 + 8.5 * line,
+                add(' · '.join(r['panel']['label'] for r in rs), x, 53 + 8.0 * line,
                     16 if group == 'discovery' else 18, ids=[r['id'] for r in rs])
     return labels
 

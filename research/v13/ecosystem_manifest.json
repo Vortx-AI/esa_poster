@@ -18,7 +18,8 @@
    "2026-10-02: two read-only resolve attempts returned a connector-level Unexpected response type error. These are not successful hosted-agent trials.",
    "The publisher-linked directory URL is retained as the community installation route. Availability is separate from the 30 September client-path benchmark.",
    "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/chatgpt.txt.",
-   "Direct retrieval body confirms: emem; Signed facts about real places; Install plugin; Developer Vortx.ai; version 1.3.0. Archived chatgpt.txt and listing_checks.json retain the primary identity fields and response hash."
+   "Direct retrieval body confirms: emem; Signed facts about real places; Install plugin; Developer Vortx.ai; version 1.3.0. Archived chatgpt.txt and listing_checks.json retain the primary identity fields and response hash.",
+   "LIVE: listing screenshot supplied by the authors in issue #58 on 2026-10-04, committed as research/v13/evidence/listings/chatgpt.png; printed as a cropped tile at 300 ppi or more"
   ],
   "user_can": "Enable the emem plugin in ChatGPT and pass an emem:fact token to its resolve tool",
   "caveats": [
@@ -29,7 +30,7 @@
    "allowed": true,
    "text": "ChatGPT: @emem plugin"
   },
-  "verified_utc": "2026-10-02T08:30Z",
+  "verified_utc": "2026-10-04T09:00Z",
   "brand": {
    "owner": "OpenAI",
    "marks": "ChatGPT name and logo, OpenAI Blossom",
@@ -150,7 +151,9 @@
    "MEASURED: 'claude plugin marketplace add Vortx-AI/emem' cloned https://github.com/Vortx-AI/emem.git and validated: '√ Successfully added marketplace: emem'",
    "MEASURED: 'claude plugin install emem@emem' -> installed, Version 2.4.2, enabled",
    "MEASURED: 'claude plugin details emem@emem' -> Skills (19), MCP servers (1) emem, Agents 0, Hooks 0; projected always-on cost ~3,672 tokens per session (Claude Code's own estimate)",
-   "SPEC: plugins/emem/.mcp.json -> {type: http, url: https://emem.dev/mcp}; plugin.json version 2.4.2, Apache-2.0"
+   "SPEC: plugins/emem/.mcp.json -> {type: http, url: https://emem.dev/mcp}; plugin.json version 2.4.2, Apache-2.0",
+   "LIVE: listing screenshot supplied by the authors in issue #58 on 2026-10-04, committed as research/v13/evidence/listings/claude.png; printed as a cropped tile at 300 ppi or more",
+   "LIVE (screenshot): Claude plugin listing 'emem · from Anthropic Directory · 2.4.2', with skills and one connector"
   ],
   "user_can": "Install the MCP server plus 19 worked skills in two commands",
   "caveats": [
@@ -161,7 +164,7 @@
    "allowed": true,
    "text": "Claude Code plugin: /plugin marketplace add Vortx-AI/emem (19 skills; ~3.7k tokens always-on)"
   },
-  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "verified_utc": "2026-10-04T09:00Z",
   "brand": {
    "owner": "Anthropic",
    "marks": "Claude, Claude Code logos and Spark",
@@ -185,7 +188,7 @@
    "kind": "card",
    "order": 1,
    "label": "Claude",
-   "mechanism": "Code plugin / MCP",
+   "mechanism": "Directory plugin / MCP",
    "action": "Resolve from chat or terminal."
   }
  },
@@ -288,7 +291,8 @@
    "LIVE: https://marketplace.dify.ai/api/v1/plugins/vortx-ai/emem -> status 'active', latest_version '2.4.0', created_at 2026-08-24T08:52:39Z, version_updated_at 2026-09-13T07:12:36Z, verification.authorized_category 'community', install_count 32, repository https://github.com/Vortx-AI/emem, 16 tools",
    "LIVE: versions API -> 2.4.0 (2026-09-13), 2.3.0 (2026-09-03), 2.2.0 (2026-08-24)",
    "LIVE: Dify template 'emem Referent Lock Lite' https://marketplace.dify.ai/template/emem/ad67ca26-e875-494b-b98f-23902c9a2017 HTTP 200",
-   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/dify.txt."
+   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/dify.txt.",
+   "LIVE: listing screenshot supplied by the authors in issue #58 on 2026-10-04, committed as research/v13/evidence/listings/dify.png; printed as a cropped tile at 300 ppi or more"
   ],
   "user_can": "Install the plugin in Dify and call the emem tools from Dify apps and workflows",
   "caveats": [
@@ -301,7 +305,7 @@
    "allowed": true,
    "text": "Dify: Marketplace plugin vortx-ai/emem (community, v2.4.0)"
   },
-  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "verified_utc": "2026-10-04T09:00Z",
   "brand": {
    "owner": "LangGenius (Dify)",
    "marks": "Dify logo",
@@ -321,7 +325,7 @@
   "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
   "panel": {
    "kind": "card",
-   "order": 3,
+   "order": 2,
    "label": "Dify",
    "mechanism": "Marketplace plugin",
    "action": "Referent Lock / EUDR workflows"
@@ -372,8 +376,8 @@
   "panel": {
    "kind": "line",
    "group": "clients",
-   "line": 1,
-   "order": 0,
+   "line": 0,
+   "order": 2,
    "label": "Gemini CLI"
   }
  },
@@ -420,11 +424,11 @@
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
   "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
   "panel": {
-   "kind": "card",
-   "order": 2,
-   "label": "Visual Studio Code",
-   "mechanism": "MCP connector",
-   "action": "Copilot agent mode: @mcp emem"
+   "kind": "line",
+   "group": "clients",
+   "line": 0,
+   "order": 1,
+   "label": "VS Code"
   }
  },
  {
@@ -741,7 +745,8 @@
    "LIVE: https://api.mcp.github.com/v0.1/servers/io.github.Vortx-AI%2Femem/versions/latest -> HTTP 200, version 2.4.2, isLatest true, publishedAt 2026-09-29T18:47:27Z, publisher-provided github meta: nameWithOwner Vortx-AI/emem, license Apache License 2.0, stargazerCount 63",
    "LIVE: search ?search=emem -> 2 results (io.github.Vortx-AI/emem 2.4.2, md.traveler/mcp)",
    "UNVERIFIED: the HTML page github.com/mcp/Vortx-AI/emem was not reachable from this session (session proxy refuses non-bound github.com paths); URL taken from server-side docs (/.well-known/mcp.json registries[0])",
-   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/github-mcp.txt."
+   "2026-10-02 direct public GET returned HTTP 200; primary page title and text archived in research/v13/evidence/community/github-mcp.txt.",
+   "LIVE: listing screenshot supplied by the authors in issue #58 on 2026-10-04, committed as research/v13/evidence/listings/github_mcp_registry.png; printed as a cropped tile at 300 ppi or more"
   ],
   "user_can": "Find emem in GitHub's registry and in VS Code's @mcp gallery",
   "caveats": [
@@ -751,7 +756,7 @@
    "allowed": true,
    "text": "GitHub MCP Registry: github.com/mcp/Vortx-AI/emem"
   },
-  "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
+  "verified_utc": "2026-10-04T09:00Z",
   "brand": {
    "owner": "GitHub, Inc.",
    "marks": "Invertocat, GitHub wordmark",
@@ -770,11 +775,11 @@
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
   "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
   "panel": {
-   "kind": "line",
-   "group": "discovery",
-   "line": 0,
-   "order": 0,
-   "label": "GitHub MCP"
+   "kind": "card",
+   "order": 3,
+   "label": "GitHub MCP Registry",
+   "mechanism": "Registry listing",
+   "action": "Install MCP server"
   }
  },
  {
@@ -820,8 +825,8 @@
   "panel": {
    "kind": "line",
    "group": "developer",
-   "line": 2,
-   "order": 0,
+   "line": 1,
+   "order": 1,
    "label": "GitHub source"
   }
  },
@@ -855,8 +860,8 @@
   "panel": {
    "kind": "line",
    "group": "discovery",
-   "line": 1,
-   "order": 0,
+   "line": 0,
+   "order": 3,
    "label": "Glama"
   }
  },
@@ -889,8 +894,8 @@
   "panel": {
    "kind": "line",
    "group": "discovery",
-   "line": 1,
-   "order": 1,
+   "line": 0,
+   "order": 4,
    "label": "Smithery"
   }
  },
@@ -922,7 +927,7 @@
   "panel": {
    "kind": "line",
    "group": "discovery",
-   "line": 2,
+   "line": 1,
    "order": 1,
    "label": "Hugging Face (older mirror)"
   }
@@ -954,7 +959,7 @@
   "panel": {
    "kind": "line",
    "group": "discovery",
-   "line": 2,
+   "line": 1,
    "order": 0,
    "label": "Context7"
   }
@@ -987,11 +992,11 @@
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
   "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
   "panel": {
-   "kind": "card",
-   "order": 4,
-   "label": "Salesforce MuleSoft",
-   "mechanism": "Exchange listing",
-   "action": "Open Vortx AI MCP Server"
+   "kind": "line",
+   "group": "discovery",
+   "line": 0,
+   "order": 2,
+   "label": "MuleSoft Exchange"
   }
  },
  {
@@ -1120,8 +1125,8 @@
   "panel": {
    "kind": "line",
    "group": "developer",
-   "line": 1,
-   "order": 0,
+   "line": 0,
+   "order": 2,
    "label": "Docker"
   }
  },
@@ -1154,7 +1159,7 @@
    "kind": "line",
    "group": "developer",
    "line": 1,
-   "order": 1,
+   "order": 0,
    "label": "LangGraph memory"
   }
  },
@@ -1312,7 +1317,7 @@
    "kind": "line",
    "group": "examples",
    "line": 1,
-   "order": 1,
+   "order": 0,
    "label": "CrewAI"
   }
  },
@@ -1342,8 +1347,8 @@
   "panel": {
    "kind": "line",
    "group": "examples",
-   "line": 1,
-   "order": 0,
+   "line": 0,
+   "order": 2,
    "label": "AutoGen"
   }
  },
@@ -1379,7 +1384,7 @@
    "kind": "line",
    "group": "examples",
    "line": 1,
-   "order": 2,
+   "order": 1,
    "label": "Mastra"
   }
  },
@@ -1413,8 +1418,8 @@
   "panel": {
    "kind": "line",
    "group": "examples",
-   "line": 2,
-   "order": 0,
+   "line": 1,
+   "order": 2,
    "label": "Agno (see setup notes)"
   }
  },
@@ -1550,7 +1555,8 @@
   "status": "REGISTRY",
   "evidence_level": "PRIMARY DIRECTORY PAGE",
   "evidence": [
-   "2026-10-02 HTTP 200, title emem — ClawHub; archived page text."
+   "2026-10-02 HTTP 200, title emem — ClawHub; archived page text.",
+   "LIVE: listing screenshot supplied by the authors in issue #58 on 2026-10-04, committed as research/v13/evidence/listings/clawhub.png; printed as a cropped tile at 300 ppi or more"
   ],
   "user_can": "Open the emem skill listing on ClawHub",
   "caveats": [
@@ -1560,14 +1566,14 @@
    "allowed": true,
    "text": "ClawHub"
   },
-  "verified_utc": "2026-10-02T08:30Z",
+  "verified_utc": "2026-10-04T09:00Z",
   "brand": null,
   "panel": {
-   "kind": "line",
-   "group": "discovery",
-   "line": 1,
-   "order": 2,
-   "label": "ClawHub"
+   "kind": "card",
+   "order": 4,
+   "label": "ClawHub",
+   "mechanism": "OpenClaw plugin listing",
+   "action": "Install the OpenClaw plugin."
   }
  }
 ]

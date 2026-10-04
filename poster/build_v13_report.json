@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T09:22:45+00:00",
+ "built_utc": "2026-10-04T09:30:25+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -112,10 +112,10 @@
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 726.0,
    "h_mm": 65.0,
-   "mtime": "2026-10-04T08:39:53"
+   "mtime": "2026-10-04T09:29:20"
   }
  },
- "figure_text_tokens": 1769,
+ "figure_text_tokens": 1776,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -164,7 +164,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (850 text runs)"
+    "every printed code point is in the face that sets it (841 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -237,7 +237,12 @@
     "f2_spine: 600x600 px over 50.0 mm = 305 ppi",
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
-    "f7_wrong_pixel: 2658x2316 px over 112.5 mm = 600 ppi"
+    "f7_wrong_pixel: 2658x2316 px over 112.5 mm = 600 ppi",
+    "f11_ecosystem: 1165x340 px over 95.9 mm = 308 ppi",
+    "f11_ecosystem: 1680x340 px over 138.3 mm = 308 ppi",
+    "f11_ecosystem: 1552x340 px over 127.8 mm = 308 ppi",
+    "f11_ecosystem: 1400x340 px over 115.3 mm = 308 ppi",
+    "f11_ecosystem: 1670x340 px over 137.5 mm = 308 ppi"
    ]
   },
   "word_budget": {
