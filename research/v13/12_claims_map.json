@@ -5372,17 +5372,18 @@
    "id": "K.dates",
    "block": "footer",
    "print": [
-    "measurements 29 Sep to 1 Oct 2026"
+    "measurements 29 Sep to 1 Oct 2026",
+    "Measurements: 29 Sep to 4 Oct 2026."
    ],
    "status": "MEASURED",
    "layer": "n/a",
    "source": {
     "inputs": "dates of every row above"
    },
-   "date": "2026-10-01",
+   "date": "2026-10-04",
    "value": null,
    "check": null,
-   "note": "",
+   "note": "4 Oct 2026 (third ChatGPT review): the range ends on 4 Oct, the matched-baseline run (rows R5.matched.*); 2 Oct rows (for example CM.state) were already printed. It starts on 29 Sep, the earliest measurement (TM.asof); the 25 Sep rows H.img.grid and H.img.record carry the scene's acquisition date, not a measurement date.",
    "tier": "30cm",
    "fallback": null,
    "r5_key": null,

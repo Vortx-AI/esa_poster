@@ -430,3 +430,30 @@ Latent in the code, none triggered by the recorded data: the audit pattern in `s
 in some forms; a new script, `audit_strict.py`, re-checks the 57 recorded tool calls against a strict one-line form
 (57 pass). `score_s.py` is unchanged because its hash is bound by the addendum.
 
+## 21. Fourth ChatGPT review (ade6319, 8.5/10) (4 Oct 2026)
+
+The review re-ran the deterministic receivers, re-scored the 53 archived agent trials, checked the 53 prompt hashes and
+replayed the 57 recorded tool calls; the numbers held. It withdrew "no matched baseline has been run" and raised the score
+from 8.2 to 8.5 (panel 1 from 8 to 8.5; presentation and novelty unchanged at 7.5). It read the result as the review
+log does: of the eight corruptions the conventional checks accept, six fall at the signature, one at the log and one to
+the signed record, and none to the hash, so the result supports the combined system, not content addressing alone.
+
+Two corrections, applied:
+
+| Finding | Change |
+|---|---|
+| The archived audit was tied to the checkout path: `score_s.py` and `audit_strict.py` build the allowed command from the current checkout, the archived commands name `/home/user/esa_poster/...`, so the audit failed in a clone elsewhere | `addendum2/replay.py` reads the run's rtool.py from the hash-bound prompts, checks the 57 calls with the strict rule, replays them (57 of 57 give the archived output) and re-scores (identical), here and in a worktree at another path; `audit_strict.py` takes the same recorded path; `score_s.py` is unchanged |
+| The footer said "Measurements: 29 Sep to 1 Oct 2026"; the board prints 2 Oct rows and the 4 Oct matched baseline | "Measurements: 29 Sep to 4 Oct 2026." (row K.dates; the 25 Sep rows carry the scene's acquisition date, not a measurement date) |
+
+Its presentation suggestion, applied: the matched ablation moved out of the small scope paragraph into its own labelled
+strip under the handoff figure, styled apart from the agent results: "Matched ablation, deterministic receiver, same 23
+corruptions (4 Oct), accepted: JSON, no checks 23 → emem's checks minus hash, signature and log 8 → plus four
+consistency checks 3 → emem's verifier 0". The scope keeps the exploratory agent run ("With the ablation's matched
+checks, instructed Haiku agents acted on the same 8 (exploratory run, 4 Oct, one trial each).") and drops back to four
+lines. Room came from panel 1's gaps above the mechanism line (1.0 to 0.6 mm) and above the figure (1.6 to 0.8 mm).
+
+Unchanged and not added to the board, as the review advised: the ablation removes hash, signature and log together; the
+agent run is exploratory in a different harness; the tasks are two constructed ones; the orbital design does not inherit
+the ground source re-read. For the talk at the board, the review suggests joining the two strongest findings: the source
+re-read catches a wrong pixel that integrity checks preserve, and signatures and the log catch changes that consistency
+checks miss.

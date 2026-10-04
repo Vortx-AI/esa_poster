@@ -106,6 +106,11 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 
 /* ---------- spine ---------- */
 .spinefoot{display:flex;gap:10mm;align-items:flex-start;margin-top:.6mm}
+/* v13.10 (4 Oct, third ChatGPT review): the matched ablation as its own labelled strip under the figure; panel 1's gaps
+   above the mechanism line and the figure give it room */
+.spine>.mech{margin-top:.6mm}.spine>.fig{margin-top:.8mm}
+.ablation{display:flex;align-items:baseline;gap:2.4mm;margin-top:.5mm;padding:.2mm 3mm .4mm;background:var(--oos-bg);border-left:1.2mm solid var(--emem);font-size:17pt;line-height:1;color:var(--ink2);white-space:nowrap}
+.ablation b{color:var(--ink);font-weight:700}.ablation b.h{color:var(--harm-text)}.ablation b.e{color:var(--emem)}.ablation i{font-style:normal;color:var(--muted)}
 .spinefoot .agentstrip{flex:none;width:468mm;font-size:24pt;line-height:1.08;color:var(--ink)}
 .spinefoot .scope{flex:none;width:323mm;margin-top:.6mm}
 

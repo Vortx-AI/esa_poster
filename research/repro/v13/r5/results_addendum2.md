@@ -127,6 +127,14 @@ whose pre-registered correct output is DECLINE. The E arm reproduces the headles
      accepted both controls.
    - B++'s tile-band check uses the nominal 8 degree MGRS bands, so a genuine field near a band edge could be refused;
      Keylong lies 0.57 degrees inside band S.
+4. The archived audit was tied to the checkout path (third-party review of ade6319). `score_s.py` and the first
+   `audit_strict.py` build the allowed command from the current checkout, while the archived commands name the rtool.py
+   of the run (/home/user/esa_poster/...), so in a clone at another path every archived call failed the pattern.
+   `addendum2/replay.py` reads the run's rtool.py from the hash-bound prompts, checks each archived call against it with
+   the strict rule, replays each call with rtool.py's own functions and compares the output with the archived result,
+   and re-scores with `score_s.score_all()` around the recorded path, comparing `out/addendum2_s.json` byte for byte. In
+   this checkout and in a worktree at another path: 57 of 57 calls pass, 57 of 57 replay to the archived output, and the
+   re-score is identical. `audit_strict.py` now takes the same recorded path. `score_s.py` is unchanged.
 
 ## Files
 
@@ -139,3 +147,4 @@ whose pre-registered correct output is DECLINE. The E arm reproduces the headles
 | `addendum2/rtool.py`, `addendum2/calls_s.jsonl` | the trial tool and its call log |
 | `addendum2/score_s.py`, `addendum2/raw_s/`, `out/addendum2_s.json` | collection, audit, scoring and the scored trials |
 | `addendum2/audit_strict.py` | the stricter re-audit of the recorded tool calls (added after the run) |
+| `addendum2/replay.py` | the archived trials checked, replayed and re-scored from any checkout path (added after the run) |

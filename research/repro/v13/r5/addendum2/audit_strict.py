@@ -7,23 +7,25 @@ each recorded tool call, failed attempts included, against a strict form: exactl
     python3 <rtool.py> <the trial's own id> <the arm's own tool> ['<json without $ or backticks>' | key=value ...]
 and reports any call that is not in that form, names another trial, or uses the other arm's tool.
 score_s.py is unchanged (its BLAKE3 is bound by the addendum); this script reads its inputs only.
+The rtool.py path it requires is the one the run used, read from the hash-bound prompts (replay.recorded_rtool), so the
+check gives the same answer in a checkout at any path; replay.py also replays each call and re-scores the trials.
 
     python3 research/repro/v13/r5/addendum2/audit_strict.py
 """
 import glob
 import json
-import re
 import shlex
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-RTOOL = str(HERE / "rtool.py")
-STRICT = re.compile(r"^python3 " + re.escape(RTOOL) + r" (t[0-9a-f]{5}) (fetch_evidence|verify_evidence|verify_observation)"
-                    r"( '[^'$`\n]*'| [A-Za-z_]+=[^\s'\"$`;|&<>*?#\n]+)*$")
+sys.path.insert(0, str(HERE))
+from replay import recorded_rtool, strict  # noqa: E402
 ARM_TOOLS = {"B+": {"verify_observation"}, "E": {"fetch_evidence", "verify_evidence"}}
 
 
 def main():
+    STRICT = strict(recorded_rtool())
     arm = {t["trial"]: t["arm"] for t in json.loads((HERE / "plan_s.json").read_text())["trials"]}
     n = loose = other = cross = nonbash = 0
     for f in sorted(glob.glob(str(HERE / "raw_s" / "*.json"))):
