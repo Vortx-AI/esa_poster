@@ -1,40 +1,40 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "06f9db21c1467ad5a08cb39ded6ae43600d886b7",
+ "base_commit": "0c8d258f3ae055d224e26c54fb42fee9c5cee9c3",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2819605,
-   "sha256": "ccd5b29e1779b768c6bee61a8ccd6c9f92e29fe32982d05ded6850c5ec9a2137"
+   "bytes": 2416212,
+   "sha256": "00bef35d7146605ffa9775ac63379f8b9d52955ac3c080a9e6804a51622e2917"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4759562,
-   "sha256": "c1b64860d6bc7a15351a707a10cbd537be61a97759ccce67def9fecefb0185ef"
+   "bytes": 4758634,
+   "sha256": "76a2e9f159d898ad0d3ee83368e9c3df5c451d246cb24a0b90d35fed11ee8690"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17199999,
-   "sha256": "77f345046b362d8159200dc5361ba9840fa937c87d0a6cf3eaa590aa5cd42b5c"
+   "bytes": 17095098,
+   "sha256": "27a0a201124bdd39958eee59c0afe2b3a129568f6f43fd403ce2271d95c0328f"
   },
   "poster/poster.html": {
-   "bytes": 3980786,
-   "sha256": "711c38e0668329d397ea6b0e72bfe800c22344b8de06e5de866fa134606deee0"
+   "bytes": 3342522,
+   "sha256": "a47eafa3e374d702f5049bfbd374a66129cee1f3c3ebffea088990aa1073000b"
   },
   "poster/build_v13_report.json": {
-   "bytes": 25326,
-   "sha256": "de3bb65ada106a9f6fa5576d5bec141d127e64b324be81c6c93e7e8e62f307d0"
+   "bytes": 25259,
+   "sha256": "f22182ddb823c05bf573f1aa45015d7c95d975904d111ed3a8d46dd4522b2892"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 23236,
-   "sha256": "f4b9baf2c8f99d48d4116eb49734374056db8d448b522859d4cf965cbf405c68"
+   "bytes": 23361,
+   "sha256": "5b52d80a9de9e74a52fad8713e7d29382b1e23e1204b451029d834e724884064"
   },
   "poster/src/poster.v13.css": {
    "bytes": 15496,
    "sha256": "f231b3e3235f5b49b42b0e9ebff992e334ceacf508054b6b0e441fd701f7a631"
   }
  },
- "pdf_blake3": "7fd16d9f2c0d00ff9da84e7fea6d4d6a8248e1139edc2884552bee4cd68a4045",
- "pointer_body": "research/repro/v13/track/board_body_06f9db2.md",
+ "pdf_blake3": "f7dbd8723e8df2a279dd18183732ffb92a16b49d1ad5965edab7e5a8271e513f",
+ "pointer_body": "research/repro/v13/track/board_body_0c8d258.md",
  "gates": {
   "page_fit": "PASS",
   "footer_clearance": "PASS",
@@ -55,14 +55,14 @@
   "imagery": "PASS",
   "word_budget": "PASS"
  },
- "rows_rechecked": 530,
- "claims_printed": 165,
+ "rows_rechecked": 531,
+ "claims_printed": 166,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
   "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
   "qr_use at (766.0,1095.4) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'"
  ],
  "seal": "not signed in this release: emem.dev was unreachable from the build environment; the pointer body is ready to publish",
- "listings": "research/v13/evidence/listings/ (issue #58)",
+ "listings": "quoted verbatim on the cards; screenshots kept as evidence in research/v13/evidence/listings/ (issue #58)",
  "title": "programme title kept by the authors (4 Oct 2026)"
 }
