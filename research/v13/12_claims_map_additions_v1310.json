@@ -5026,7 +5026,7 @@
       "print": [
         "emem condition: the reference, a verifier tool and an instruction to check.",
         "In the emem condition, B had the reference, a verifier tool and an instruction to check.",
-        "The emem lane adds a verifier and an instruction."
+        "The emem lane adds a verifier and an instruction, so the figure tests the workflow."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5052,7 +5052,7 @@
         "Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run.",
         "The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet.",
         "Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet.",
-        "The emem lane adds a verifier and an instruction. Matched baseline (4 Oct): a JSON receiver with emem’s checks minus hash, signature and log accepted 8 of 23 (3 with four more checks; emem 0); instructed Haiku agents with it acted on the same 8."
+        "The emem lane adds a verifier and an instruction, so the figure tests the workflow."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5067,7 +5067,7 @@
         "file": "repro/v13/r5/prereg.md",
         "arg": "each condition exposes only its own tools"
       },
-      "note": "Raised by an EO reviewer on 4 Oct 2026: the comparison is of whole handoff arrangements; it does not isolate the identifier. 4 Oct 2026, after the matched baseline (prereg addendum 2): the scope states what the emem lane adds and prints the matched result, which holds tools and instruction equal.",
+      "note": "Raised by an EO reviewer on 4 Oct 2026: the comparison is of whole handoff arrangements; it does not isolate the identifier. 4 Oct 2026, after the matched baseline (prereg addendum 2): the scope keeps that the figure tests the workflow and states what the emem lane adds; the matched result beside it runs emem's checks minus hash, signature and log on the JSON (Part A has no agent; the agents of Part S had that one verifier tool and the same instruction).",
       "tier": "1m",
       "checked": true
     },
@@ -5228,7 +5228,7 @@
       "block": "v13.10 P1 scope",
       "print": [
         "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. All 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items plus controls, exploratory items and Qwen.",
-        "Figure: Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items, controls, exploratory items and Qwen."
+        "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5246,7 +5246,7 @@
         ],
         "expect": 2794
       },
-      "note": "4 Oct 2026, after the second ChatGPT review: the earlier form '2,794 scored trials of 25 items' undercounted the item ids and read as Claude-only. The figure is pooled Claude over each condition's full item set; the total includes Qwen, controls and exploratory trials.",
+      "note": "4 Oct 2026, after the second ChatGPT review: the earlier form '2,794 scored trials of 25 items' undercounted the item ids and read as Claude-only. The figure is pooled Claude over each condition's full item set; the total includes Qwen, the 2 controls and the 1 exploratory item (M22).",
       "tier": "1m",
       "checked": true
     },
@@ -5280,7 +5280,7 @@
       "id": "R5.matched.ceiling",
       "block": "v13.10 P1 scope",
       "print": [
-        "Matched baseline (4 Oct): a JSON receiver with emem’s checks minus hash, signature and log accepted 8 of 23 (3 with four more checks; emem 0); instructed Haiku agents with it acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5300,7 +5300,7 @@
         ],
         "expect": 8
       },
-      "note": "Deterministic, the receiver's question bound by the harness as for E+; scored by score.py as condition B. The difference between B+ and E+ is the content address, the signature and the log. Answers the reviews' request for an equal-tool baseline (4 Oct 2026).",
+      "note": "Deterministic, the receiver's question bound by the harness as for E+; scored by score.py as condition B. B+ and E+ share binding, as-of, recompute and the source windows. Of the 8 that B+ accepts, emem's verifier refuses 6 at the signature check and M16 at the log check, and on M2-B uses the signed 918.0 m instead of A's 916; its hash check refuses none of the 8 (a forger re-hashes). Answers the reviews' request for an equal-tool baseline (4 Oct 2026).",
       "tier": "1m",
       "checked": true
     },
@@ -5308,7 +5308,7 @@
       "id": "R5.matched.n",
       "block": "v13.10 P1 scope",
       "print": [
-        "Matched baseline (4 Oct): a JSON receiver with emem’s checks minus hash, signature and log accepted 8 of 23 (3 with four more checks; emem 0); instructed Haiku agents with it acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5336,7 +5336,7 @@
       "id": "R5.matched.hardened",
       "block": "v13.10 P1 scope",
       "print": [
-        "Matched baseline (4 Oct): a JSON receiver with emem’s checks minus hash, signature and log accepted 8 of 23 (3 with four more checks; emem 0); instructed Haiku agents with it acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5364,7 +5364,7 @@
       "id": "R5.matched.emem",
       "block": "v13.10 P1 scope",
       "print": [
-        "Matched baseline (4 Oct): a JSON receiver with emem’s checks minus hash, signature and log accepted 8 of 23 (3 with four more checks; emem 0); instructed Haiku agents with it acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5392,7 +5392,7 @@
       "id": "R5.matched.agents",
       "block": "v13.10 P1 scope",
       "print": [
-        "Matched baseline (4 Oct): a JSON receiver with emem’s checks minus hash, signature and log accepted 8 of 23 (3 with four more checks; emem 0); instructed Haiku agents with it acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5401,18 +5401,18 @@
         "pointer": "summary.B+: 8 of 23 primary items acted on (M9, M10, M11, M12, M16, M18, M23, M2-B), acted_when_receiver_accepts 8/8, declined_when_receiver_refuses 15/15, verify and binding 23 of 23; summary.E: 0 of 25 (headless haiku E Block 1: 0 of 150). 53 trials, in-session Explore subagents with claude-haiku-4-5-20251001, 4 Oct 2026; 12 re-run once after a usage limit; audit 53 of 53 valid; no exclusion"
       },
       "date": "2026-10-04",
-      "value": 8,
+      "value": "8/8",
       "check": {
         "kind": "json",
         "file": "repro/v13/r5/out/addendum2_s.json",
         "arg": [
           "summary",
           "B+",
-          "fa"
+          "acted_when_receiver_accepts"
         ],
-        "expect": 8
+        "expect": "8/8"
       },
-      "note": "Exploratory (prereg addendum 2, A2.4), one trial per item: the agents followed the matched verifier's verdict.",
+      "note": "Exploratory (prereg addendum 2, A2.4 and A2.5), one trial per item: the check asserts that the agents acted on each of the 8 items the deterministic B+ receiver accepts (summary.B+.fa is 8 of 23; declined_when_receiver_refuses 15/15).",
       "tier": "1m",
       "checked": true
     }
@@ -5489,33 +5489,33 @@
       "id": "R5.E.qwen7b",
       "op": "extend_print",
       "print_add": [
-        "With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 (2 of 25 instructed): enforce refusal outside the model."
+        "Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver (2 of 25 when told to check): gate the action outside the model."
       ],
-      "note": "Panel 1 scope, 4 Oct 2026: shortened to fit the matched-baseline sentence in the same four lines."
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
     },
     {
       "id": "R5.Eplus.qwen7b",
       "op": "extend_print",
       "print_add": [
-        "With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 (2 of 25 instructed): enforce refusal outside the model."
+        "Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver (2 of 25 when told to check): gate the action outside the model."
       ],
-      "note": "Panel 1 scope, 4 Oct 2026: shortened to fit the matched-baseline sentence in the same four lines."
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
     },
     {
       "id": "R5.models",
       "op": "extend_print",
       "print_add": [
-        "Figure: Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition."
+        "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition."
       ],
-      "note": "Panel 1 scope, 4 Oct 2026: shortened to fit the matched-baseline sentence in the same four lines."
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
     },
     {
       "id": "R5.dates",
       "op": "extend_print",
       "print_add": [
-        "2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items, controls, exploratory items and Qwen."
+        "2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item."
       ],
-      "note": "Panel 1 scope, 4 Oct 2026: shortened to fit the matched-baseline sentence in the same four lines."
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
     }
   ]
 }

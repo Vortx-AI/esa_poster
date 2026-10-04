@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T16:40:27+00:00",
+ "built_utc": "2026-10-04T17:37:51+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -42,8 +42,8 @@
    "state": "placed",
    "file": "poster/fig/v13/f2_spine.300of300.svg",
    "w_mm": 801.0,
-   "h_mm": 118.0,
-   "mtime": "2026-10-04T16:25:05"
+   "h_mm": 112.5,
+   "mtime": "2026-10-04T17:16:50"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -126,7 +126,7 @@
   "block_rectangles": {
    "pass": true,
    "details": [
-    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (the emem lane adds a verifier and an instruction) and the pre-registered matched baseline (4 Oct: a JSON receiver with the same checks minus hash, signature and log, and instructed agents with it). A 17 pt line states the orbit design and its reference-harness scope.",
+    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (the emem lane adds a verifier and an instruction, so the figure tests the workflow) and the pre-registered matched baseline (4 Oct: emem's checks minus hash, signature and log, run on the JSON, and an exploratory run of instructed agents given those checks). A 17 pt line states the orbit design and its reference-harness scope.",
     "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,433.5,193.5x121.5), off by 41.0 mm; reason: The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment.",
     "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,568.2,193.5x84.1), off by 193.7 mm; reason: The conceptual change decomposition stays on one line with its scope caption. 4 Oct 2026: the drift-score figure leaves the face (both reviews rated it weakest; it is an uncalibrated heuristic), so panel 3 is short and the left column gives the space to panel 7's table and the full trace.",
     "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,707.5,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
@@ -158,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (819 text runs)"
+    "every printed code point is in the face that sets it (821 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -280,7 +280,7 @@
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
   "Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.",
-  "Figure: Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items, controls, exploratory items and Qwen. The emem lane adds a verifier and an instruction. Matched baseline (4 Oct): a JSON receiver with emem’s checks minus hash, signature and log accepted 8 of 23 (3 with four more checks; emem 0); instructed Haiku agents with it acted on the same 8. With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 (2 of 25 instructed): enforce refusal outside the model.",
+  "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8. Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver ( 2 of 25 when told to check): gate the action outside the model.",
   "JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
@@ -289,7 +289,7 @@
   "Panel 11 restores the SAT-042 execution-verification strip: 28 pt headline, 17 pt subtitle, 14 pt figure text and scope."
  ],
  "layout_deviations": [
-  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (the emem lane adds a verifier and an instruction) and the pre-registered matched baseline (4 Oct: a JSON receiver with the same checks minus hash, signature and log, and instructed agents with it). A 17 pt line states the orbit design and its reference-harness scope.",
+  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (the emem lane adds a verifier and an instruction, so the figure tests the workflow) and the pre-registered matched baseline (4 Oct: emem's checks minus hash, signature and log, run on the JSON, and an exploratory run of instructed agents given those checks). A 17 pt line states the orbit design and its reference-harness scope.",
   "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,433.5,193.5x121.5), off by 41.0 mm; reason: The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment.",
   "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,568.2,193.5x84.1), off by 193.7 mm; reason: The conceptual change decomposition stays on one line with its scope caption. 4 Oct 2026: the drift-score figure leaves the face (both reviews rated it weakest; it is an uncalibrated heuristic), so panel 3 is short and the left column gives the space to panel 7's table and the full trace.",
   "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,707.5,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",

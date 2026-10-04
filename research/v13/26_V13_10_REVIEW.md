@@ -380,19 +380,53 @@ computed (`research/repro/v13/r5/prereg_addendum2.md`, 0cf0424; results in `resu
 | the same plus four consistency checks (scene date, tile band, BOA offset, unit) | 3 of 23 |
 | emem's verifier | 0 of 23 |
 
-The eight are records that stay self-consistent after a forger re-hashed or relabelled them (cell, date, scene, offset,
-unit), an unlogged second version, and an elevation no recipe recomputes. In 53 in-session Haiku subagent trials (one per
+Six of the eight are records a forger re-hashed after changing the cell, date, scene, offset or unit; one is an
+unlogged second version; one is A's misstated elevation (916 for 918.0 m). emem's verifier refuses seven at the signature
+or log check and uses the signed 918.0 m on the eighth; its hash check refuses none of them, because a forger re-hashes. In 53 in-session Haiku subagent trials (one per
 arm and item, exploratory), agents given the matched verifier and instruction acted on the same 8 and declined the other
 15; agents in condition E acted on 0 of 25, as in the 150 headless Haiku E trials. Twelve trials stopped on an account
 usage limit and were re-run once after the reset, as the addendum provides; the audit found no tool use outside the trial
 tool and no exclusion.
 
-Panel 1's scope now prints the matched result in place of "no equal-tool baseline yet". To keep the scope at four lines,
-the treatment sentence became "The emem lane adds a verifier and an instruction." and "Claude" left the model list (the
-figure head says "agents, pooled Claude"). New rows: R5.matched.ceiling, .n, .hardened, .emem and .agents, each re-checked
+Panel 1's scope now prints the matched result. The first print of it (50ddf41) replaced "so this tests the workflow, not
+content addressing alone; no equal-tool baseline yet" and squeezed the scope into four lines; section 20 records the
+corrections that followed. New rows: R5.matched.ceiling, .n, .hardened, .emem and .agents, each re-checked
 against `out/addendum2_ceiling.json` or `out/addendum2_s.json`.
 
 Unchanged, and stated where the review asked: the orbit design does not inherit the ground source re-read, SAT-042 is a
 scripted harness, two constructed tasks are narrow, agent compliance needs enforcement outside the model, and the board
 is dense. The review's presentation advice, to lead with panel 5's wrong-pixel result and then show how the handoff
 checks expose it, is for the talk at the board; the layout is unchanged.
+
+## 20. Audit of the matched-baseline round (4 Oct 2026)
+
+Two independent reviews read the round (0cf0424 to b38c7ba): one of the new code, one of the new text against the data
+files. Neither found a reported number that changes; both scorers reproduce their outputs exactly, and the matched
+verifier agrees with verifier.py's binding, as-of, recompute and source checks on 25 items by 400 questions.
+
+Fixed on the board (panel 1's scope, now five lines; f2's lane gaps 3.0 to 1.6 mm, the figure 118 to 112.5 mm, the
+spine-foot margin 1.6 to 0.6 mm, lane height unchanged):
+
+| Before | Problem | Now |
+|---|---|---|
+| "instructed Haiku agents with it acted on the same 8" | the addendum (A2.4, A2.5) requires the label exploratory; one trial per item read as a rate | "in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8" |
+| "a JSON receiver ... accepted 8 of 23" | no unit; in R5, "receiver" also names agent B | "emem's checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions" |
+| "Qwen2.5-7B still acted on 10 of 25 (2 of 25 instructed)" | read as a fail-closed resolver plus an instruction; the 2 of 25 is condition E | "Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver (2 of 25 when told to check): gate the action outside the model" |
+| "span 25 corruption items, controls, exploratory items and Qwen" | there is one exploratory item | "(..., Qwen included) span 25 corruption items, 2 controls and 1 exploratory item" |
+| "The emem lane adds a verifier and an instruction." | the 50ddf41 print had dropped that the figure tests the workflow | "..., so the figure tests the workflow." ("Claude" is back in the model list) |
+
+Fixed in the documents: the methods page said R5 applies "one of 24 enumerated corruptions" (25, plus one exploratory;
+an error older than this round) and that each is rendered in seven representations (up to seven); the methods page and
+section 19 said the eight accepted corruptions were all re-hashed or relabelled records; `results_addendum2.md` said the
+three left after B++ need the source, but M23 carries the S2B scene's own pixel, so a re-read passes it and the signature
+catches it; it also had "What X:" lead-ins and a flourish, said no paid call was made without pointing to the disclosed
+test call, gave one stop time for the 12 interrupted trials, listed three of the four harness differences, and did not
+say that the hash check refuses none of the eight. A section "Corrections and notes after the run" now records the
+plumbing calls before the addendum (five, not one per arm), the missing exploratory label in 50ddf41 and the latent code
+weaknesses. Claims: R5.limits printed the matched numbers, which belong to the R5.matched rows; R5.matched.agents now
+checks the "same 8" (acted_when_receiver_accepts 8/8), not the count of false acceptances alone.
+
+Latent in the code, none triggered by the recorded data: the audit pattern in `score_s.py` accepts more than one command
+in some forms; a new script, `audit_strict.py`, re-checks the 57 recorded tool calls against a strict one-line form
+(57 pass). `score_s.py` is unchanged because its hash is bound by the addendum.
+
