@@ -210,11 +210,11 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .coded .codegrid b{color:var(--emem);font-weight:600;letter-spacing:0}
 .coded .codegrid span{white-space:nowrap;color:var(--ink)}
 .coded .codegrid sub{font-size:14pt;line-height:0;vertical-align:-.12em}
-.trace .accept{font-size:14pt;line-height:1.16;color:var(--emem);font-weight:500;margin-top:1.4mm;padding:1.2mm 2mm;background:var(--emem-tint)}
-.trace .accept sub{font-size:14pt;line-height:0;vertical-align:-.2em}
-.trace .tlead{font-size:14pt;line-height:1.1;margin-top:1mm}
+.trace .accept{font-size:15pt;line-height:1.16;color:var(--emem);font-weight:500;margin-top:1.4mm;padding:1.2mm 2mm;background:var(--emem-tint)}
+.trace .accept sub{font-size:15pt;line-height:0;vertical-align:-.2em}
+.trace .tlead{font-size:17pt;line-height:1.12;margin-top:1mm}
 .trace .chain{margin-top:.6mm}
-.trace .chain p{font-size:14pt;line-height:1.08;color:var(--ink);margin-top:.3mm}
+.trace .chain p{font-size:17pt;line-height:1.1;color:var(--ink);margin-top:.3mm}
 .trace .chain b{color:var(--emem);font-weight:600}
 .trace .chain i{font-style:normal;color:var(--muted)}
 .trace .tscope{margin-top:1mm}

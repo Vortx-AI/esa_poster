@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T13:02:30+00:00",
+ "built_utc": "2026-10-04T13:16:22+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -52,19 +52,12 @@
    "h_mm": 62.0,
    "mtime": "2026-10-04T12:35:42"
   },
-  "f4_failure_ladder": {
-   "state": "placed",
-   "file": "poster/fig/v13/f4_failure_ladder.svg",
-   "w_mm": 193.5,
-   "h_mm": 90.0,
-   "mtime": "2026-10-04T10:46:05"
-  },
   "f8_ladder": {
    "state": "placed",
    "file": "poster/fig/v13/f8_ladder.svg",
    "w_mm": 193.5,
-   "h_mm": 65.0,
-   "mtime": "2026-10-04T08:39:53"
+   "h_mm": 80.0,
+   "mtime": "2026-10-04T13:11:01"
   },
   "f5_evidence_object": {
    "state": "placed",
@@ -98,15 +91,15 @@
    "state": "placed",
    "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
-   "h_mm": 118.0,
-   "mtime": "2026-10-04T12:38:42"
+   "h_mm": 136.0,
+   "mtime": "2026-10-04T13:11:14"
   },
   "f15b_sat042_strip": {
    "state": "placed",
    "file": "poster/fig/v13/f15b_sat042_strip.svg",
    "w_mm": 193.5,
-   "h_mm": 60.0,
-   "mtime": "2026-10-04T09:21:48"
+   "h_mm": 38.5,
+   "mtime": "2026-10-04T13:11:00"
   },
   "f11_ecosystem": {
    "state": "placed",
@@ -116,7 +109,7 @@
    "mtime": "2026-10-04T12:36:13"
   }
  },
- "figure_text_tokens": 1774,
+ "figure_text_tokens": 1669,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -135,19 +128,19 @@
    "details": [
     "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (reference, verifier tool, instruction) and that conditions differ in tools as well as representation. A 17 pt line states the orbit design and its reference-harness scope.",
     "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,433.5,193.5x121.5), off by 41.0 mm; reason: The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment.",
-    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,558.9,193.5x183.9), off by 103.2 mm; reason: The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace.",
-    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,713.3,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
+    "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,568.2,193.5x84.1), off by 193.7 mm; reason: The conceptual change decomposition stays on one line with its scope caption. 4 Oct 2026: the drift-score figure leaves the face (both reviews rated it weakest; it is an uncalibrated heuristic), so panel 3 is short and the left column gives the space to panel 7's table and the full trace.",
+    "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,707.5,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
     "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,433.5,396.0x168.3), off by 49.8 mm; reason: The decoded evidence object replaces the Berlin fanout, restoring the complete source-record-address-attestation flow at 396 by 98 mm.",
     "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,815.5,396.0x257.0), off by 254.5 mm; reason: The central mutation matrix keeps its 396 by 196 mm print size and measured outcomes. 4 Oct 2026: it follows the source-pixel panel at the foot of the centre column and is numbered 6.",
-    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,655.3,396.0x156.9), off by 203.8 mm; reason: The source-pixel experiment keeps its 396 by 128 mm figure and data. 4 Oct 2026 (two reviews): it moves above the mutation matrix, to eye level, and is numbered 5; both reviewers named it the strongest result.",
-    "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.7,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
+    "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,648.5,396.0x156.9), off by 210.6 mm; reason: The source-pixel experiment keeps its 396 by 128 mm figure and data. 4 Oct 2026 (two reviews): it moves above the mutation matrix, to eye level, and is numbered 5; both reviewers named it the strongest result.",
+    "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,665.6,193.5x126.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
     "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x151.4), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
     "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards quote each listing's own words (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub), verbatim from the authors' screenshots, which are kept in research/v13/evidence/listings/ but not printed (their text sets at about 5 pt at A0). VS Code and MuleSoft Exchange move into the lists, which print two lines per group.",
     "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,1003.8,193.5x68.7), off by 607.5 mm; reason: The contribution remains in the left column, after the consolidated evidence boundary.",
     "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
-    "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,588.0,193.5x122.1), off by 62.1 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",
-    "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,789.5,193.5x171.2), off by 60.3 mm; reason: The full token-family table stays in the right column at its existing 193.5 by 118 mm size. v13.10: one 17 pt line states what the token family is for agents; the table and caption are unchanged.",
-    "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,963.8,193.5x108.7), off by 59.9 mm; reason: The SAT-042 execution strip prints the existing reference-harness run, its three refusals, chained trace and anchor scores. The headline concerns the reported run; no spacecraft deployment is claimed."
+    "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,592.7,193.5x107.0), off by 72.5 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",
+    "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,788.4,193.5x189.2), off by 77.1 mm; reason: The full token-family table stays in the right column at its existing 193.5 by 118 mm size. v13.10: one 17 pt line states what the token family is for agents; the table and caption are unchanged.",
+    "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,985.3,193.5x87.2), off by 81.4 mm; reason: The SAT-042 execution strip prints the existing reference-harness run, its three refusals, chained trace and anchor scores. The headline concerns the reported run; no spacecraft deployment is claimed."
    ]
   },
   "no_overflow_or_clipping": {
@@ -165,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (853 text runs)"
+    "every printed code point is in the face that sets it (820 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -189,7 +182,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "178 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "174 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -215,7 +208,7 @@
   "assets": {
    "pass": true,
    "details": [
-    "all 13 figures and diagrams placed as SVG; fonts, CSS and tokens present"
+    "all 12 figures and diagrams placed as SVG; fonts, CSS and tokens present"
    ]
   },
   "fonts_loaded": {
@@ -244,19 +237,19 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 838 words containing a letter, 857 tokens with numerals (cap 852 / 872; v13.5 copy brief: see per-panel counts)",
+    "running text: 803 words containing a letter, 822 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
     "  1 · Earth to agents: 105 tokens (section C: 105)",
     "  10 · Token family: 53 tokens (section C: 53)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
     "  12 · Community routes: 6 tokens (section C: 6)",
     "  2 · One NDVI, eight values: 42 tokens (section C: 42)",
-    "  3 · Different drift, different check: 60 tokens (section C: 60)",
+    "  3 · Different drift, different check: 41 tokens (section C: 41)",
     "  4 · What exactly is handed over: 54 tokens (section C: 54)",
     "  5 · Source re-read: 19 tokens (section C: 19)",
     "  6 · Checks back to the source: 41 tokens (section C: 41)",
     "  7 · What checks establish: 32 tokens (section C: 32)",
     "  8 · Revisit the earlier evidence: 51 tokens (section C: 51)",
-    "  Complete observation and memory model: 55 tokens (section C: 57)",
+    "  Complete observation and memory model: 39 tokens (section C: 41)",
     "  Contribution and prior art: 53 tokens (section C: 53)",
     "  Full trace: 32 tokens (section C: 34)",
     "  Header: 166 tokens (section C: 167)",
@@ -288,7 +281,7 @@
  "r5_lines_as_printed": [
   "Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).",
   "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. All 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items plus controls, exploratory items and Qwen. emem condition: the reference, a verifier tool and an instruction to check. Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet. With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 corruptions (2 of 25 when instructed): enforce refusal outside the model.",
-  "Each agent bar is 12 runs of one item; totals pool 23 items per condition (24 for the opaque id, 25 for emem). JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
+  "JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
   "v13.4: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
@@ -298,37 +291,37 @@
  "layout_deviations": [
   "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (reference, verifier tool, instruction) and that conditions differ in tools as well as representation. A 17 pt line states the orbit design and its reference-harness scope.",
   "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,433.5,193.5x121.5), off by 41.0 mm; reason: The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment.",
-  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,558.9,193.5x183.9), off by 103.2 mm; reason: The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace.",
-  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,713.3,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
+  "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,568.2,193.5x84.1), off by 193.7 mm; reason: The conceptual change decomposition stays on one line with its scope caption. 4 Oct 2026: the drift-score figure leaves the face (both reviews rated it weakest; it is an uncalibrated heuristic), so panel 3 is short and the left column gives the space to panel 7's table and the full trace.",
+  "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,707.5,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
   "DEVIATION p4: brief (222.5,396.0,396.0x156.0) rendered (222.5,433.5,396.0x168.3), off by 49.8 mm; reason: The decoded evidence object replaces the Berlin fanout, restoring the complete source-record-address-attestation flow at 396 by 98 mm.",
   "DEVIATION p5: brief (222.5,562.0,396.0x256.0) rendered (222.5,815.5,396.0x257.0), off by 254.5 mm; reason: The central mutation matrix keeps its 396 by 196 mm print size and measured outcomes. 4 Oct 2026: it follows the source-pixel panel at the foot of the centre column and is numbered 6.",
-  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,655.3,396.0x156.9), off by 203.8 mm; reason: The source-pixel experiment keeps its 396 by 128 mm figure and data. 4 Oct 2026 (two reviews): it moves above the mutation matrix, to eye level, and is numbered 5; both reviewers named it the strongest result.",
-  "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.7,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
+  "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,648.5,396.0x156.9), off by 210.6 mm; reason: The source-pixel experiment keeps its 396 by 128 mm figure and data. 4 Oct 2026 (two reviews): it moves above the mutation matrix, to eye level, and is numbered 5; both reviewers named it the strongest result.",
+  "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,665.6,193.5x126.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
   "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x151.4), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
   "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards quote each listing's own words (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub), verbatim from the authors' screenshots, which are kept in research/v13/evidence/listings/ but not printed (their text sets at about 5 pt at A0). VS Code and MuleSoft Exchange move into the lists, which print two lines per group.",
   "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,1003.8,193.5x68.7), off by 607.5 mm; reason: The contribution remains in the left column, after the consolidated evidence boundary.",
   "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
-  "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,588.0,193.5x122.1), off by 62.1 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",
-  "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,789.5,193.5x171.2), off by 60.3 mm; reason: The full token-family table stays in the right column at its existing 193.5 by 118 mm size. v13.10: one 17 pt line states what the token family is for agents; the table and caption are unchanged.",
-  "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,963.8,193.5x108.7), off by 59.9 mm; reason: The SAT-042 execution strip prints the existing reference-harness run, its three refusals, chained trace and anchor scores. The headline concerns the reported run; no spacecraft deployment is claimed."
+  "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,592.7,193.5x107.0), off by 72.5 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",
+  "DEVIATION p10: brief (627.5,775.7,193.5x124.7) rendered (627.5,788.4,193.5x189.2), off by 77.1 mm; reason: The full token-family table stays in the right column at its existing 193.5 by 118 mm size. v13.10: one 17 pt line states what the token family is for agents; the table and caption are unchanged.",
+  "DEVIATION p11: brief (627.5,903.9,193.5x112.6) rendered (627.5,985.3,193.5x87.2), off by 81.4 mm; reason: The SAT-042 execution strip prints the existing reference-harness run, its three refusals, chained trace and anchor scores. The headline concerns the reported run; no spacecraft deployment is claimed."
  ],
  "columns": [
   {
    "id": "left",
    "content_bottom": 1072.5,
-   "natural_mm": 633.9,
+   "natural_mm": 596.9,
    "height": 639.0
   },
   {
    "id": "centre",
    "content_bottom": 1072.5,
-   "natural_mm": 629.3,
+   "natural_mm": 608.9,
    "height": 639.0
   },
   {
    "id": "right",
    "content_bottom": 1072.5,
-   "natural_mm": 635.4,
+   "natural_mm": 616.8,
    "height": 639.0
   }
  ],
@@ -377,8 +370,6 @@
   "A14.grammar",
   "A14.hash",
   "A14.need",
-  "A15.drift",
-  "A15.formula",
   "A15.layers",
   "A15.steps",
   "CM.bundle",
@@ -388,7 +379,6 @@
   "CODE.lines",
   "DF.decomposition",
   "DF.ndvi",
-  "DF.score",
   "E8.constructed",
   "E8.double",
   "E8.neighbour",
@@ -534,7 +524,6 @@
   "V7.invention",
   "V7.observation",
   "V7.recall",
-  "V7.score",
   "V7.token_labels",
   "V8.absence",
   "V8.language",
@@ -553,7 +542,7 @@
   "X.only",
   "X.p123"
  ],
- "figure_numbers_checked": 344,
+ "figure_numbers_checked": 321,
  "rows_rechecked": 558,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
@@ -589,7 +578,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 838,
-  "running_tokens": 857
+  "running_words_with_letter": 803,
+  "running_tokens": 822
  }
 }

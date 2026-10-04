@@ -226,7 +226,8 @@
       "id": "CODE.commit",
       "block": "v13.10 memory-as-coded box label",
       "print": [
-        "THE MEMORY, AS CODED · fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest"
+        "THE MEMORY, AS CODED · fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest",
+        "THE RECORD, AS CODED · fact.rs, cbor.rs, geo.rs"
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -5306,6 +5307,14 @@
         "cid(record) = BLAKE3(CBOR(record))"
       ],
       "note": "Panel 9: 'canonical' dropped; emem encodes in declaration order, not RFC 8949 sorted keys (code box), so a sorted-key encoder gives a different cid."
+    },
+    {
+      "id": "DF.decomposition",
+      "op": "extend_print",
+      "print_add": [
+        "Δz: change in readout. The terms name possible causes (environment, sensor, geolocation, encoder, residual); we have not measured their shares."
+      ],
+      "note": "4 Oct 2026 cut: the drift-score figure leaves panel 3; the caption keeps the decomposition's scope in plainer words."
     }
   ]
 }

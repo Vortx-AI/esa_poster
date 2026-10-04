@@ -2,7 +2,7 @@
  "figure": "f15b_sat042_strip",
  "size_mm": [
   193.5,
-  60.0
+  38.5
  ],
  "kicker": {
   "text": "Extending verification from observations to execution",
@@ -206,66 +206,6 @@
    "text": "seq 7",
    "pt": 14,
    "claim": "A15.layers"
-  },
-  {
-   "text": "drift anchor",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "0.6402 ± 0.02 (1σ):",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "scored after admission,",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "not a gate",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "consistent",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "tension",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "contradicted",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "0.5",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "0.75",
-   "pt": 14,
-   "claim": "A15.formula"
-  },
-  {
-   "text": "0.6431 (s 0.05)",
-   "pt": 14,
-   "claim": "A15.drift"
-  },
-  {
-   "text": "0.6512 (s 0.15)",
-   "pt": 14,
-   "claim": "A15.drift"
-  },
-  {
-   "text": "0.2103 (s 0.88)",
-   "pt": 14,
-   "claim": "A15.drift"
   }
  ]
 }

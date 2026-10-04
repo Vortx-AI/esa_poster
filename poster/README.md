@@ -23,8 +23,8 @@ The companion download link serves the committed main-branch PDF. Local regenera
 ## v13.10 print (4 Oct 2026)
 
 - **Print:** `emem-poster-A0.pdf`, one page, 841 x 1189 mm, fonts embedded. Print at 100 % (actual size), no fit-to-page.
-- **Validation:** 18/18 poster gates in each variant, 558 evidence rows re-checked, 178 claim rows printed (180 in
-  300of300), 0 text overlaps across the rendered page, all figure imagery at 300 ppi or more.
+- **Validation:** 18/18 poster gates in each variant, 558 evidence rows re-checked, 174 claim rows printed (176 in
+  300of300), 12 figures placed, 0 text overlaps across the rendered page, all figure imagery at 300 ppi or more.
 - **Title and versions:** the printed title is the programme title up to "Protocol" (authors' choice, 4 Oct 2026).
   No service or code commit is printed; the claims rows keep them, and the build fails on a commit hash on the face.
 - **QR codes (decoded from the 300 dpi render):** TRY IT (header, 87 mm) opens `/demo/`; INSPECT THE RECORD (panel 4,
