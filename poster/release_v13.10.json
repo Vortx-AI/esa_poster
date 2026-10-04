@@ -1,40 +1,40 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "ff19b1468e38411da9547712e8b0cd872e32e3b3",
+ "base_commit": "06f9db21c1467ad5a08cb39ded6ae43600d886b7",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2819493,
-   "sha256": "f659b63553174a725f478d0cd8dd2a7896b1e707cf31a8e12d4cd6f404cbc01f"
+   "bytes": 2819605,
+   "sha256": "ccd5b29e1779b768c6bee61a8ccd6c9f92e29fe32982d05ded6850c5ec9a2137"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4755798,
-   "sha256": "438e6f134df5b97b39df40b2d243b495b11a2949833880b10cef831286b58a4e"
+   "bytes": 4759562,
+   "sha256": "c1b64860d6bc7a15351a707a10cbd537be61a97759ccce67def9fecefb0185ef"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17196031,
-   "sha256": "df9ec10e6f773695dfb2cfd79b4124355b6d97c3b5b3881bcc4d25ab0e7ab560"
+   "bytes": 17199999,
+   "sha256": "77f345046b362d8159200dc5361ba9840fa937c87d0a6cf3eaa590aa5cd42b5c"
   },
   "poster/poster.html": {
-   "bytes": 3980011,
-   "sha256": "f47054d2e159cf31d4bd12f8b2dde824e60e71aeea756eee3531e461558439b3"
+   "bytes": 3980786,
+   "sha256": "711c38e0668329d397ea6b0e72bfe800c22344b8de06e5de866fa134606deee0"
   },
   "poster/build_v13_report.json": {
    "bytes": 25326,
-   "sha256": "918697067fa8dedcf9c3fbc4fac0939ef98c106875ea3cd3bd4511daaf621378"
+   "sha256": "de3bb65ada106a9f6fa5576d5bec141d127e64b324be81c6c93e7e8e62f307d0"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 22995,
-   "sha256": "2763d3612d5472fe85dd6dd15dd549932484e2cc97d9ded54d4c255125eab7fb"
+   "bytes": 23236,
+   "sha256": "f4b9baf2c8f99d48d4116eb49734374056db8d448b522859d4cf965cbf405c68"
   },
   "poster/src/poster.v13.css": {
-   "bytes": 14973,
-   "sha256": "65bd007134a24ec2cea174c54338372844fca6f5d2363d6c3b68be1b1a12d24c"
+   "bytes": 15496,
+   "sha256": "f231b3e3235f5b49b42b0e9ebff992e334ceacf508054b6b0e441fd701f7a631"
   }
  },
- "pdf_blake3": "87b5338aa01cc8d8b7ab1d2b092aeb2ca63dc2704baad3c3f4ab7f19b10f8a31",
- "pointer_body": "research/repro/v13/track/board_body_ff19b14.md",
+ "pdf_blake3": "7fd16d9f2c0d00ff9da84e7fea6d4d6a8248e1139edc2884552bee4cd68a4045",
+ "pointer_body": "research/repro/v13/track/board_body_06f9db2.md",
  "gates": {
   "page_fit": "PASS",
   "footer_clearance": "PASS",
@@ -63,5 +63,6 @@
   "qr_use at (766.0,1095.4) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/use/' == payload 'https://vortx-ai.github.io/esa_poster/use/'"
  ],
  "seal": "not signed in this release: emem.dev was unreachable from the build environment; the pointer body is ready to publish",
- "listings": "research/v13/evidence/listings/ (issue #58)"
+ "listings": "research/v13/evidence/listings/ (issue #58)",
+ "title": "programme title kept by the authors (4 Oct 2026)"
 }

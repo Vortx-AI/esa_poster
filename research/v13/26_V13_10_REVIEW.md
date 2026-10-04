@@ -99,3 +99,13 @@ committed here and so cannot be printed.
 | #46 platform marks | open | Depends on #58 assets and brand guidance. |
 | #58 real listing images | close | Five listings (ChatGPT, Claude directory, Dify, GitHub MCP Registry, ClawHub) printed as screenshot tiles in panel 12; sources in `research/v13/evidence/listings/`. |
 | #46 platform marks | close | The listing tiles carry each platform's own page; no separate logo assets. |
+
+## 7. Final print review (4 Oct 2026)
+
+Every section was read at print resolution (20 crops of the 300 dpi render) and the printed text was scanned for
+arrows, dashes, slogan pairs, hedges and tell words. Fixed in this pass: panel 5's bar note (it still described
+false acceptance after the flip), the attribution sentence in panel 3, two unclear phrases in panel 10, trace link
+labels, line breaks inside SAT-042 and inside the acceptance rule, chain rules between boxed steps, product spelling
+in two figure labels, the GitHub card's repeated "Registry", and a missing space in panel 6. Kept on purpose: the
+panel 10 headline "Beyond a single observation" (authors' wording) and the programme title (authors' decision).
+Result: 18 of 18 gates, 0 text overlaps, all three QR codes decode to their pages.
