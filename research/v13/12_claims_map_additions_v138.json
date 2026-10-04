@@ -79,7 +79,8 @@
         "Refresh inputs",
         "Compare vegetation observations, keep conflicting product estimates and pass the cited evidence onward. Single-hop retrieval is implemented; multi-hop planning remains open.",
         "Start with an EO question, connect your tool, then pass the cited observations onward. Public emem reads need no API key.",
-        "Choose an EO task, copy a reference, run the checks."
+        "Choose an EO task, copy a reference, run the checks.",
+        "Compare vegetation observations, keep conflicting estimates and pass their references on. Each request returns one observation, read from the archive if not yet stored."
       ],
       "status": "SPEC",
       "layer": "L0-L3",

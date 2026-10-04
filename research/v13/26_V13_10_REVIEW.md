@@ -194,3 +194,15 @@ Not changed, and why: the title (authors' decision); the matched before/after re
 calibration, the equal-tool baseline and an orbital execution trust model (each needs new measurements); the
 reviewer's density point is answered only by replacing repeated content (panel 1's handover stack, panel 8's
 duplicate line), not by a re-layout days before print. Both variants pass every gate.
+
+## 11. Wording pass (4 Oct 2026)
+
+Every printed line was read for machine-sounding copy left by the space-constrained edits. Rewritten as plain
+sentences, at the same length: the lead's colon chain ("Each is a record named by the BLAKE3 hash of its bytes and
+signed in a batch"); panel 1's mechanism ("a satellite reading"), take line ("corrupted handoffs in prose / with an
+opaque id / with an emem reference"), orbit line ("By design, ... are downlinked into") and both scope notes (no
+more "Figure: ...; line at left: ..."); panel 2 ("We varied one Keylong NDVI by ..."); panel 3 ("This score is an
+uncalibrated heuristic"); the contribution box; panel 5's bar note; the EO-workflow caption ("Each request returns one
+observation, read from the archive if not yet stored" replaces "single-hop retrieval materialises"); panel 10 ("One
+bundle resolves to eight facts"); panel 12 ("Separately, the same record and value came back through 11 client
+paths"); panel 6's legend ("38: both rules agree"). No hyphenated word breaks across lines in either variant.

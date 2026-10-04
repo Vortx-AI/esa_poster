@@ -260,7 +260,9 @@
         "An agent passes a reference to a specific physical observation; the receiver resolves it and checks the evidence.",
         "Built with standard BLAKE3, Ed25519, CBOR and Merkle logs. STAC, openEO, PROV, C2PA, RAG and temporal storage provide complementary layers.",
         "Portable EO evidence with explicit receiver checks and reproducible source tracing.",
-        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6)."
+        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6).",
+        "EO evidence that travels between agents, checked by the receiver down to the source pixel.",
+        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 6)."
       ],
       "status": "SPEC",
       "layer": "L0-L3",

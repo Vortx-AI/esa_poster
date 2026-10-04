@@ -38,7 +38,8 @@
         "1",
         "Tests pin 3σ → 0.50 and 9σ → 0.75.",
         "Tests pin 3σ at 0.50 and 9σ at 0.75.",
-        "An uncalibrated heuristic: it scores disagreement with one anchor and names no cause. SAT-042 applies it in the execution harness."
+        "An uncalibrated heuristic: it scores disagreement with one anchor and names no cause. SAT-042 applies it in the execution harness.",
+        "This score is an uncalibrated heuristic: it measures disagreement with one anchor, not a cause. SAT-042 uses it in the execution harness."
       ],
       "status": "MEASURED",
       "layer": "L0-L3",

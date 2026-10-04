@@ -16,7 +16,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
 
-> emem makes satellite observations, raw or derived, addressable by place, band and time: records named by the BLAKE3 hash of their bytes, signed in batches. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
+> emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
 
 > A compact citation keeps the observation traceable across agents and time. Encode in orbit, decode in AI’s reasoning with emem.
 
@@ -26,13 +26,13 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > The same observation, carried through receiver checks.
 
-> Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
+> Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it or checks the reference.
 
-> [variant:0of300] Across the 23 shared items, agents acted on 254 of 276 corruptions carried by prose, 154 of 276 by an opaque id, and 0 of 276 by an emem reference (2 of 276 without the check instruction).
+> [variant:0of300] Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).
 
-> [variant:300of300] Across the 23 shared items, agents did not act on 276 of 276 corruptions carried by an emem reference (240 declined, 36 used the genuine record); by an opaque id, 122 of 276; by prose, 22 of 276.
+> [variant:300of300] Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.
 
-> Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (SAT-042 harness, not flown).
+> By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (SAT-042 harness, not flown).
 
 ### 2 · One NDVI, eight values
 
@@ -40,7 +40,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > One NDVI, eight values
 
-> Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI.
+> We varied one Keylong NDVI by scene, date, place, pixel and arithmetic.
 
 > Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.
 
@@ -54,13 +54,13 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Δz: change in readout. The terms list possible causes (environment, sensor, geolocation, encoder, residual), not measured shares.
 
-> An uncalibrated heuristic: it scores disagreement with one anchor and names no cause. SAT-042 applies it in the execution harness.
+> This score is an uncalibrated heuristic: it measures disagreement with one anchor, not a cause. SAT-042 uses it in the execution harness.
 
 ### Memory operations
 
 > Use it in an EO workflow
 
-> Compare vegetation observations, retain conflicting estimates and pass their references onward. Single-hop retrieval materialises the requested observation.
+> Compare vegetation observations, keep conflicting estimates and pass their references on. Each request returns one observation, read from the archive if not yet stored.
 
 ### 7 · What checks establish
 
@@ -80,9 +80,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Checkable observation handoff
 
-> Portable EO evidence with explicit receiver checks and reproducible source tracing.
+> EO evidence that travels between agents, checked by the receiver down to the source pixel.
 
-> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6).
+> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 6).
 
 ### 4 · What exactly is handed over
 
@@ -140,7 +140,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.
 
-> Eight facts resolve through one bundle; four state addresses re-hash. These object checks do not validate an agent's reasoning.
+> One bundle resolves to eight facts; four reasoning-state addresses re-hash. Neither check validates an agent's reasoning.
 
 ### 11 · Satellite execution evidence
 
@@ -156,7 +156,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Use emem. Carry the evidence forward.
 
-> Measured separately: same record and value through 11 client paths; receipt signatures checked on 9 (30 Sep 2026). Listings show availability; agent decisions are measured in panel 1.
+> Separately, the same record and value came back through 11 client paths, with receipt signatures checked on 9 (30 Sep 2026). Listings show availability; panel 1 measures agent decisions.
 
 ## D. Claims map
 

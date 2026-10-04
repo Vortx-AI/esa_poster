@@ -362,14 +362,6 @@
       "reason": "Explicit NOT ESTABLISHED column of the record guarantee boundary."
     },
     {
-      "word": "hash of",
-      "text_sha": "62d78542ee22734fc7c0887b194208e3794f8f1fb32d31c06467f039fd5c7e06",
-      "sentence": "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes.",
-      "where": "html:header_text:body",
-      "evidence": "LEAD.answer",
-      "reason": "the subject is the record ('a signed record named by the BLAKE3 hash of its bytes'), not the observation or a pixel; the code box prints fact_cid = base32(BLAKE3-256(b)) with b = CBOR(f)"
-    },
-    {
       "word": "cannot",
       "text_sha": "de95443b6fb013bcf03e8caeca410c12a5e44db483cf935f0f336c0dc02d75b0",
       "sentence": "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
@@ -408,6 +400,14 @@
       "where": "html:header_text:body",
       "evidence": "LEAD.answer",
       "reason": "the log entry and receipt checks are trace links 10 to 14 (L0-L3); the receipt is Ed25519-checked offline with the responder key (trace_fact_output.txt link 10); compaction removed on review (not shown on this board)"
+    },
+    {
+      "word": "hash of",
+      "text_sha": "e0a42b27bc4d4edc52985f1f97278037964c2d472c79b972160e356004219c49",
+      "sentence": "Each is a record named by the BLAKE3 hash of its bytes and signed in a batch.",
+      "where": "html:header_text:body",
+      "evidence": "LEAD.answer",
+      "reason": "the subject is the record ('a record named by the BLAKE3 hash of its bytes'), not the observation or a pixel; the code box prints fact_cid = base32(BLAKE3-256(b)) with b = CBOR(f)"
     }
   ]
 }

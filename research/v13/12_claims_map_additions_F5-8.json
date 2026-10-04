@@ -573,7 +573,8 @@
    "id": "F7.same",
    "block": "P6 / F7",
    "print": [
-    "38: both rules read one pixel"
+    "38: both rules read one pixel",
+    "38: both rules agree"
    ],
    "status": "MEASURED",
    "layer": "L3",

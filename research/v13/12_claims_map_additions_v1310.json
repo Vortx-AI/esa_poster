@@ -7,7 +7,8 @@
       "print": [
         "Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?",
         "emem makes raw satellite observations addressable by place, band and time, each a signed record named by the BLAKE3 hash of its bytes. The exact evidence A cites survives compaction, a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
-        "emem makes satellite observations, raw or derived, addressable by place, band and time: records named by the BLAKE3 hash of their bytes, signed in batches. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name."
+        "emem makes satellite observations, raw or derived, addressable by place, band and time: records named by the BLAKE3 hash of their bytes, signed in batches. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
+        "emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -85,7 +86,8 @@
       "block": "v13.10 panel 1 handoff line",
       "print": [
         "Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).",
-        "Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (SAT-042 harness, not flown)."
+        "Design: Earth data stays on the encoding device in orbit; its signed record and reference downlink into the AI’s reasoning (SAT-042 harness, not flown).",
+        "By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (SAT-042 harness, not flown)."
       ],
       "status": "SPEC",
       "layer": "L5",
@@ -5014,7 +5016,8 @@
       "id": "R5.treatment",
       "block": "v13.10 P1 scope",
       "print": [
-        "emem condition: the reference, a verifier tool and an instruction to check."
+        "emem condition: the reference, a verifier tool and an instruction to check.",
+        "In the emem condition, B had the reference, a verifier tool and an instruction to check."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5037,7 +5040,8 @@
       "id": "R5.limits",
       "block": "v13.10 P1 scope",
       "print": [
-        "Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run."
+        "Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run.",
+        "The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5060,7 +5064,8 @@
       "id": "E8.constructed",
       "block": "v13.10 P2 mechanism",
       "print": [
-        "Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI."
+        "Constructed variants: scene, date, place, pixel and arithmetic change one Keylong NDVI.",
+        "We varied one Keylong NDVI by scene, date, place, pixel and arithmetic."
       ],
       "status": "MEASURED",
       "layer": "L0-L3",
@@ -5080,7 +5085,8 @@
       "block": "v13.10 P5 scope",
       "print": [
         "Totals: 23 items per condition (opaque id 24, emem 25).",
-        "23 to 25 items"
+        "23 to 25 items",
+        "totals pool 23 items per condition (24 for the opaque id, 25 for emem)"
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5118,7 +5124,8 @@
       "id": "CM.listings",
       "block": "v13.10 P12 caption",
       "print": [
-        "Listings show availability; agent decisions are measured in panel 1."
+        "Listings show availability; agent decisions are measured in panel 1.",
+        "Listings show availability; panel 1 measures agent decisions."
       ],
       "status": "SPEC",
       "layer": "L0-L3",

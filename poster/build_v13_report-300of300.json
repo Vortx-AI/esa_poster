@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T10:48:13+00:00",
+ "built_utc": "2026-10-04T10:57:30+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -85,7 +85,7 @@
    "file": "poster/fig/v13/f7_wrong_pixel.svg",
    "w_mm": 396.0,
    "h_mm": 128.0,
-   "mtime": "2026-10-04T09:39:48"
+   "mtime": "2026-10-04T10:54:17"
   },
   "f9_timeline": {
    "state": "placed",
@@ -116,7 +116,7 @@
    "mtime": "2026-10-04T09:46:44"
   }
  },
- "figure_text_tokens": 1814,
+ "figure_text_tokens": 1812,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -133,7 +133,7 @@
   "block_rectangles": {
    "pass": true,
    "details": [
-    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. The right stack now states the address, record, attestation and named sources; digest lines have sufficient spacing at 14 pt. v13.10: a 17 pt line under the handoff result states the orbit design and its reference-harness scope.",
+    "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (reference, verifier tool, instruction) and that conditions differ in tools as well as representation. A 17 pt line states the orbit design and its reference-harness scope.",
     "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,433.5,193.5x121.5), off by 41.0 mm; reason: The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment.",
     "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,558.9,193.5x183.9), off by 103.2 mm; reason: The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace.",
     "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,713.3,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
@@ -165,13 +165,13 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (865 text runs)"
+    "every printed code point is in the face that sets it (867 text runs)"
    ]
   },
   "prose_and_banned_words": {
    "pass": true,
    "details": [
-    "no em/en dashes, tell words or unlisted banned words; 13 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
+    "no em/en dashes, tell words or unlisted banned words; 14 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
    ]
   },
   "face_hygiene": {
@@ -244,23 +244,23 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 806 words containing a letter, 830 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
-    "  1 · Earth to agents: 95 tokens (section C: 95)",
-    "  10 · Token family: 55 tokens (section C: 55)",
+    "running text: 825 words containing a letter, 849 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 97 tokens (section C: 97)",
+    "  10 · Token family: 52 tokens (section C: 52)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
-    "  12 · Community routes: 34 tokens (section C: 34)",
+    "  12 · Community routes: 35 tokens (section C: 35)",
     "  2 · One NDVI, eight values: 41 tokens (section C: 41)",
-    "  3 · Different drift, different check: 58 tokens (section C: 58)",
+    "  3 · Different drift, different check: 60 tokens (section C: 60)",
     "  4 · What exactly is handed over: 54 tokens (section C: 54)",
     "  5 · Checks back to the source: 36 tokens (section C: 40)",
     "  6 · Source re-read: 19 tokens (section C: 19)",
     "  7 · What checks establish: 31 tokens (section C: 31)",
     "  8 · Revisit the earlier evidence: 48 tokens (section C: 48)",
     "  Complete observation and memory model: 55 tokens (section C: 57)",
-    "  Contribution and prior art: 48 tokens (section C: 48)",
+    "  Contribution and prior art: 53 tokens (section C: 53)",
     "  Full trace: 32 tokens (section C: 34)",
-    "  Header: 144 tokens (section C: 145)",
-    "  Memory operations: 23 tokens (section C: 23)"
+    "  Header: 149 tokens (section C: 150)",
+    "  Memory operations: 30 tokens (section C: 30)"
    ]
   }
  },
@@ -286,9 +286,9 @@
  },
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
-  "Across the 23 shared items, agents did not act on 276 of 276 corruptions carried by an emem reference (240 declined, 36 used the genuine record); by an opaque id, 122 of 276; by prose, 22 of 276.",
-  "Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 as B, pooled; Qwen2.5-7B apart; 2,794 scored trials on 1 Oct 2026. Figure: each condition’s full item set; line at left: the 23 shared items. emem condition: the reference, a verifier tool and an instruction to check. Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run. Qwen2.5-7B, one run, acted on 22 of 23 prose and 2 of 25 checked-reference corruptions. Simulated corruptions of a small task set; intervals in Reproduce.",
-  "Agent bars: 12 runs per item. Totals: 23 items per condition (opaque id 24, emem 25). JSON and an opaque id caught some changes from their fields. Live pre-fix record: agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, 0 of 4 with a source re-read."
+  "Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.",
+  "B was Claude Haiku 4.5, Sonnet 5.5 or Opus 5.5, pooled, with Qwen2.5-7B reported apart; 2,794 scored trials on 1 Oct 2026. The figure counts each condition’s full item set. In the emem condition, B had the reference, a verifier tool and an instruction to check. The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet. Qwen2.5-7B (one run) acted on 22 of 23 corrupted prose handoffs and 2 of 25 with a checked reference. Corruptions are simulated on a small task set; intervals are in Reproduce.",
+  "Each agent bar is 12 runs of one item; totals pool 23 items per condition (24 for the opaque id, 25 for emem). JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
   "v13.4: captions at 17 pt; all mechanism/take lines remain 24 pt; figure floor 14 pt.",
@@ -296,7 +296,7 @@
   "Panel 11 restores the SAT-042 execution-verification strip: 28 pt headline, 17 pt subtitle, 14 pt figure text and scope."
  ],
  "layout_deviations": [
-  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. The right stack now states the address, record, attestation and named sources; digest lines have sufficient spacing at 14 pt. v13.10: a 17 pt line under the handoff result states the orbit design and its reference-harness scope.",
+  "DEVIATION p1: brief (20.0,196.0,801.0x190.0) rendered (20.0,247.0,801.0x183.5), off by 51.0 mm; reason: Complete handoff experiment below the seven-step workflow. v13.10 (EO review): the right side of the figure, which repeated panel 4's handover stack, now prints B's other outcomes on the same trials, aligned with the lanes (acted on + declined + used the genuine record = trials); the take line gives the comparison on the 23 items every condition shares; the scope states the treatment (reference, verifier tool, instruction) and that conditions differ in tools as well as representation. A 17 pt line states the orbit design and its reference-harness scope.",
   "DEVIATION p2: brief (20.0,396.0,193.5x118.0) rendered (20.0,433.5,193.5x121.5), off by 41.0 mm; reason: The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment.",
   "DEVIATION p3: brief (20.0,524.0,193.5x322.0) rendered (20.0,558.9,193.5x183.9), off by 103.2 mm; reason: The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace.",
   "DEVIATION questions: brief (20.0,856.0,193.5x70.0) rendered (627.5,713.3,193.5x73.1), off by 607.5 mm; reason: The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace.",
@@ -332,7 +332,7 @@
    "height": 639.0
   }
  ],
- "allowlist_used": 13,
+ "allowlist_used": 14,
  "allowlist_unused": [
   "Six cross the irrigation line, one is impossible, one is right; each wrong value",
   "Signatures prevented none; the record made each checkable at a named layer, exce",
@@ -370,8 +370,7 @@
   "true colour,",
   "11Extending verification from observations to execution",
   "How a satellite could prove what it ran",
-  "Reference harness, no spacecraft enrolled; the gate binds the value digest only.",
-  "emem makes raw satellite observations addressable by place, band and time, each "
+  "Reference harness, no spacecraft enrolled; the gate binds the value digest only."
  ],
  "claims_printed": [
   "A14.grammar",
@@ -596,7 +595,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 806,
-  "running_tokens": 830
+  "running_words_with_letter": 825,
+  "running_tokens": 849
  }
 }
