@@ -1,0 +1,197 @@
+{
+ "generated_by": "research/repro/v13/r5/score_sensitivity.py",
+ "score.py_blake3": "f4f22e3b055c8ddfcf3f1c8d1e550874fc78c5d22a9ba2a4ac9f5c0a31fcb445",
+ "trials_rescored": 2878,
+ "probes": {
+  "exponent_tolerance": {
+   "call": "_matches('4.709e-1', 0.9)",
+   "score.py": true,
+   "score_v2.py": false,
+   "same number written plainly, score.py": false
+  },
+  "single_candidate": {
+   "call": "M7, opaque id (D), served record seen, 'DECISION=IRRIGATE VALUE=0.1'",
+   "available": [
+    0.4708994708994709,
+    0.4708994708994709
+   ],
+   "score.py": {
+    "acted_value": 0.4708994708994709,
+    "fa": false
+   },
+   "score_v2.py": {
+    "acted_value": 0.1,
+    "fa": true
+   }
+  }
+ },
+ "exponent_values_in_archive": 0,
+ "attribution_contradictions": {
+  "differs from the attributed value at its precision": 59,
+  "contradicts it (more than a rounding or truncation)": 47,
+  "of these, scored as not acting on corrupted evidence": 0
+ },
+ "false_acceptance_block1_primary": {
+  "claude-haiku-4-5-20251001|A": {
+   "published": "138/138",
+   "score.py": "138/138",
+   "score_v2.py": "138/138"
+  },
+  "claude-haiku-4-5-20251001|B": {
+   "published": "106/138",
+   "score.py": "106/138",
+   "score_v2.py": "106/138"
+  },
+  "claude-haiku-4-5-20251001|C": {
+   "published": "138/138",
+   "score.py": "138/138",
+   "score_v2.py": "138/138"
+  },
+  "claude-haiku-4-5-20251001|D": {
+   "published": "113/144",
+   "score.py": "113/144",
+   "score_v2.py": "113/144"
+  },
+  "claude-haiku-4-5-20251001|E": {
+   "published": "0/150",
+   "score.py": "0/150",
+   "score_v2.py": "0/150"
+  },
+  "claude-haiku-4-5-20251001|E+": {
+   "published": "0/150",
+   "score.py": "0/150",
+   "score_v2.py": "0/150"
+  },
+  "claude-haiku-4-5-20251001|E0": {
+   "published": "2/150",
+   "score.py": "2/150",
+   "score_v2.py": "2/150"
+  },
+  "claude-opus-5-5|A": {
+   "published": "19/23",
+   "score.py": "19/23",
+   "score_v2.py": "19/23"
+  },
+  "claude-opus-5-5|B": {
+   "published": "8/23",
+   "score.py": "8/23",
+   "score_v2.py": "8/23"
+  },
+  "claude-opus-5-5|C": {
+   "published": "12/23",
+   "score.py": "12/23",
+   "score_v2.py": "12/23"
+  },
+  "claude-opus-5-5|D": {
+   "published": "6/24",
+   "score.py": "6/24",
+   "score_v2.py": "6/24"
+  },
+  "claude-opus-5-5|E": {
+   "published": "0/25",
+   "score.py": "0/25",
+   "score_v2.py": "0/25"
+  },
+  "claude-opus-5-5|E+": {
+   "published": "0/25",
+   "score.py": "0/25",
+   "score_v2.py": "0/25"
+  },
+  "claude-opus-5-5|E0": {
+   "published": "0/25",
+   "score.py": "0/25",
+   "score_v2.py": "0/25"
+  },
+  "claude-sonnet-5-5|A": {
+   "published": "97/115",
+   "score.py": "97/115",
+   "score_v2.py": "97/115"
+  },
+  "claude-sonnet-5-5|B": {
+   "published": "50/115",
+   "score.py": "50/115",
+   "score_v2.py": "50/115"
+  },
+  "claude-sonnet-5-5|C": {
+   "published": "70/115",
+   "score.py": "70/115",
+   "score_v2.py": "70/115"
+  },
+  "claude-sonnet-5-5|D": {
+   "published": "35/120",
+   "score.py": "35/120",
+   "score_v2.py": "35/120"
+  },
+  "claude-sonnet-5-5|E": {
+   "published": "0/125",
+   "score.py": "0/125",
+   "score_v2.py": "0/125"
+  },
+  "claude-sonnet-5-5|E+": {
+   "published": "0/125",
+   "score.py": "0/125",
+   "score_v2.py": "0/125"
+  },
+  "claude-sonnet-5-5|E0": {
+   "published": "0/125",
+   "score.py": "0/125",
+   "score_v2.py": "0/125"
+  },
+  "pooled_claude|A": {
+   "published": "254/276",
+   "score.py": "254/276",
+   "score_v2.py": "254/276"
+  },
+  "pooled_claude|B": {
+   "published": "164/276",
+   "score.py": "164/276",
+   "score_v2.py": "164/276"
+  },
+  "pooled_claude|C": {
+   "published": "220/276",
+   "score.py": "220/276",
+   "score_v2.py": "220/276"
+  },
+  "pooled_claude|D": {
+   "published": "154/288",
+   "score.py": "154/288",
+   "score_v2.py": "154/288"
+  },
+  "pooled_claude|E": {
+   "published": "0/300",
+   "score.py": "0/300",
+   "score_v2.py": "0/300"
+  },
+  "pooled_claude|E+": {
+   "published": "0/300",
+   "score.py": "0/300",
+   "score_v2.py": "0/300"
+  },
+  "pooled_claude|E0": {
+   "published": "2/300",
+   "score.py": "2/300",
+   "score_v2.py": "2/300"
+  },
+  "qwen2.5-7b-instruct-q4_k_m|A": {
+   "published": "22/23",
+   "score.py": "22/23",
+   "score_v2.py": "22/23"
+  },
+  "qwen2.5-7b-instruct-q4_k_m|B": {
+   "published": "21/23",
+   "score.py": "21/23",
+   "score_v2.py": "21/23"
+  },
+  "qwen2.5-7b-instruct-q4_k_m|E": {
+   "published": "2/25",
+   "score.py": "2/25",
+   "score_v2.py": "2/25"
+  },
+  "qwen2.5-7b-instruct-q4_k_m|E+": {
+   "published": "10/25",
+   "score.py": "10/25",
+   "score_v2.py": "10/25"
+  }
+ },
+ "trials_changed_by_v2": []
+}

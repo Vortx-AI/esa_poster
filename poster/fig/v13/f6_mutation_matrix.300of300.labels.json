@@ -72,6 +72,11 @@
    "claim": "V6.matrix_labels"
   },
   {
+   "text": "(BM25)",
+   "pt": 14,
+   "claim": "V6.matrix_labels"
+  },
+  {
    "text": "emem checks",
    "pt": 18,
    "claim": "V6.matrix_labels"
@@ -952,7 +957,7 @@
    "claim": "F6.cumulative"
   },
   {
-   "text": "Bars: B did not act on it (declined, or used the genuine record), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026.",
+   "text": "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026.",
    "pt": 14,
    "claim": "R5.F6.scope"
   },

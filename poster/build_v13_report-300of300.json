@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T19:52:26+00:00",
+ "built_utc": "2026-10-04T21:35:41+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -43,7 +43,7 @@
    "file": "poster/fig/v13/f2_spine.300of300.svg",
    "w_mm": 801.0,
    "h_mm": 112.5,
-   "mtime": "2026-10-04T17:16:50"
+   "mtime": "2026-10-04T21:33:12"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -78,7 +78,7 @@
    "file": "poster/fig/v13/f6_mutation_matrix.300of300.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T12:38:46"
+   "mtime": "2026-10-04T21:34:30"
   },
   "f9_timeline": {
    "state": "placed",
@@ -109,7 +109,7 @@
    "mtime": "2026-10-04T12:36:13"
   }
  },
- "figure_text_tokens": 1694,
+ "figure_text_tokens": 1696,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -158,7 +158,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (838 text runs)"
+    "every printed code point is in the face that sets it (839 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -237,8 +237,8 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 799 words containing a letter, 818 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
-    "  1 · Earth to agents: 105 tokens (section C: 105)",
+    "running text: 801 words containing a letter, 820 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
+    "  1 · Earth to agents: 107 tokens (section C: 107)",
     "  10 · Token family: 53 tokens (section C: 53)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
     "  12 · Community routes: 6 tokens (section C: 6)",
@@ -279,7 +279,7 @@
  },
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
-  "Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.",
+  "Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 acted on the genuine value); with an opaque id, 122 of 276; in prose, 22 of 276.",
   "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory run, 4 Oct, one trial each). Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver ( 2 of 25 when told to check): gate the action outside the model.",
   "JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
@@ -586,7 +586,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 799,
-  "running_tokens": 818
+  "running_words_with_letter": 801,
+  "running_tokens": 820
  }
 }

@@ -214,6 +214,8 @@ T(lx + 5.6, ly, "flips the decision", 14, color=C["ink2"])
 HEAD = {"A": "prose", "B": "JSON", "C": "opaque id", "RAG": "RAG"}
 for c in cond_cols:
     T(xs[c] + CW / 2, 6.0, HEAD[c], 18, weight=600, ha="center")
+if "RAG" in xs:   # the RAG baseline is BM25, top 3 of nine passages (prereg section 3, condition C); f2 names it in full
+    T(xs["RAG"] + CW / 2, 12.8, "(BM25)", 14, weight=600, ha="center", color=C["ink2"])
 T(X_EM + 3 * SW, 6.0, "emem checks", 18, weight=700, color=C["emem"], ha="center")
 for k, lv in enumerate(DEPTH):
     layer = CHECK[lv][1]
@@ -249,7 +251,7 @@ def r5_cell(xc, y, w, h, cond, mid, r1row):
         T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
         return
     k, n = kn
-    if VARIANT == "300of300":   # corruptions the agents did not act on (declined, or used the genuine record)
+    if VARIANT == "300of300":   # corruptions the agents did not act on (declined, or acted on the genuine value)
         v, fill, cid = n - k, C["L1"], f"R5.cell.{R5_COND[cond]}.{mid}.notacted"   # not the legend's "refused" blue
     else:                       # corruptions the agents acted on (false acceptance)
         v, fill, cid = k, C["harm"], f"R5.cell.{R5_COND[cond]}.{mid}.false_accept"
@@ -391,7 +393,7 @@ if MODE == "R5":
     reps = reps.replace("haiku", "Haiku 4.5").replace("sonnet", "Sonnet 5.5").replace("opus", "Opus 5.5")
     NI = f"{min(R5D['n_items'].values())} to {max(R5D['n_items'].values())}"   # 23 (A, B, RAG), 24 (opaque id), 25 (emem)
     if NOT_ACTED:
-        scope = (f"Bars: B did not act on it (declined, or used the genuine record), n {R5D['per_cell']} ({reps} runs); "
+        scope = (f"Bars: B did not act on it (declined, or acted on the genuine value), n {R5D['per_cell']} ({reps} runs); "
                  f"squares: deterministic ceiling. Totals pool {NI} items, {R5D['date']}.")
     else:
         scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "

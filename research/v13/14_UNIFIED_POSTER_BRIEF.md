@@ -26,11 +26,11 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > The same corruptions, five handoff conditions.
 
-> Agent A cites a satellite reading. A relay or a faulty signer changes the evidence. Agent B acts on it, declines it or uses the genuine record.
+> Agent A cites a satellite reading. A relay or a faulty signer changes the evidence. Agent B acts on it, declines it or acts on the genuine value.
 
 > [variant:0of300] Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).
 
-> [variant:300of300] Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.
+> [variant:300of300] Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 acted on the genuine value); with an opaque id, 122 of 276; in prose, 22 of 276.
 
 > By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so no source re-read (SAT-042 harness, not flown).
 

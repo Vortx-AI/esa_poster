@@ -257,6 +257,7 @@
         "prose",
         "JSON",
         "RAG",
+        "(BM25)",
         "opaque id",
         "EMEM, full check",
         "C",

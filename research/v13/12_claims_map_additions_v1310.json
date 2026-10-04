@@ -4459,13 +4459,13 @@
         ],
         "expect": 22
       },
-      "note": "prose: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "note": "prose: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on the corrupted value + declined + acted on the genuine value = trials.",
       "tier": "1m",
       "checked": true
     },
     {
       "id": "R5.split.A.genuine",
-      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "block": "v13.10 P1 figure: B's outcomes, acted on genuine value column",
       "print": [
         "0"
       ],
@@ -4488,7 +4488,7 @@
         ],
         "expect": 0
       },
-      "note": "prose: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "note": "prose: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal. The column read 'used the genuine record' until 4 Oct 2026 (fifth review).",
       "tier": "1m",
       "checked": true
     },
@@ -4517,13 +4517,13 @@
         ],
         "expect": 106
       },
-      "note": "JSON: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "note": "JSON: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on the corrupted value + declined + acted on the genuine value = trials.",
       "tier": "1m",
       "checked": true
     },
     {
       "id": "R5.split.B.genuine",
-      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "block": "v13.10 P1 figure: B's outcomes, acted on genuine value column",
       "print": [
         "6"
       ],
@@ -4546,7 +4546,7 @@
         ],
         "expect": 6
       },
-      "note": "JSON: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "note": "JSON: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal. How B had it: 6 derived by B (recomputed from the DNs it was given) (research/repro/v13/r5/out/genuine_value_source.json). The column read 'used the genuine record' until 4 Oct 2026 (fifth review).",
       "tier": "1m",
       "checked": true
     },
@@ -4575,13 +4575,13 @@
         ],
         "expect": 56
       },
-      "note": "RAG: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "note": "RAG: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on the corrupted value + declined + acted on the genuine value = trials.",
       "tier": "1m",
       "checked": true
     },
     {
       "id": "R5.split.C.genuine",
-      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "block": "v13.10 P1 figure: B's outcomes, acted on genuine value column",
       "print": [
         "0"
       ],
@@ -4604,7 +4604,7 @@
         ],
         "expect": 0
       },
-      "note": "RAG: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "note": "RAG: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal. The column read 'used the genuine record' until 4 Oct 2026 (fifth review).",
       "tier": "1m",
       "checked": true
     },
@@ -4633,13 +4633,13 @@
         ],
         "expect": 88
       },
-      "note": "opaque id: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "note": "opaque id: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on the corrupted value + declined + acted on the genuine value = trials.",
       "tier": "1m",
       "checked": true
     },
     {
       "id": "R5.split.D.genuine",
-      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "block": "v13.10 P1 figure: B's outcomes, acted on genuine value column",
       "print": [
         "46"
       ],
@@ -4662,7 +4662,7 @@
         ],
         "expect": 46
       },
-      "note": "opaque id: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "note": "opaque id: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal. How B had it: 13 derived by B (recomputed from the DNs it was given); 27 the value of the record the reference served (no check); 6 the value stated in the handoff (research/repro/v13/r5/out/genuine_value_source.json). The column read 'used the genuine record' until 4 Oct 2026 (fifth review).",
       "tier": "1m",
       "checked": true
     },
@@ -4691,13 +4691,13 @@
         ],
         "expect": 264
       },
-      "note": "emem reference, instructed: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on + declined + used the genuine record = trials.",
+      "note": "emem reference, instructed: corrupted trials in which B answered DECLINE. Same trials as the lane's numeral; acted on the corrupted value + declined + acted on the genuine value = trials.",
       "tier": "1m",
       "checked": true
     },
     {
       "id": "R5.split.E.genuine",
-      "block": "v13.10 P1 figure: B's outcomes, used the genuine record column",
+      "block": "v13.10 P1 figure: B's outcomes, acted on genuine value column",
       "print": [
         "36"
       ],
@@ -4720,7 +4720,7 @@
         ],
         "expect": 36
       },
-      "note": "emem reference, instructed: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal.",
+      "note": "emem reference, instructed: corrupted trials in which B acted on the genuine value (for example after resolving the reference); not a refusal. How B had it: 36 the value of the record the reference served after every check passed (research/repro/v13/r5/out/genuine_value_source.json). The column read 'used the genuine record' until 4 Oct 2026 (fifth review).",
       "tier": "1m",
       "checked": true
     },
@@ -4907,7 +4907,7 @@
         ],
         "expect": 22
       },
-      "note": "A on the 23 shared items: trials in which B did not act on the corrupted value (declined, or used the genuine record).",
+      "note": "A on the 23 shared items: trials in which B did not act on the corrupted value (declined, or acted on the genuine value).",
       "tier": "1m",
       "checked": true
     },
@@ -4945,7 +4945,7 @@
         ],
         "expect": 122
       },
-      "note": "D on the 23 shared items: trials in which B did not act on the corrupted value (declined, or used the genuine record).",
+      "note": "D on the 23 shared items: trials in which B did not act on the corrupted value (declined, or acted on the genuine value).",
       "tier": "1m",
       "checked": true
     },
@@ -4983,7 +4983,7 @@
         ],
         "expect": 276
       },
-      "note": "E on the 23 shared items: trials in which B did not act on the corrupted value (declined, or used the genuine record).",
+      "note": "E on the 23 shared items: trials in which B did not act on the corrupted value (declined, or acted on the genuine value).",
       "tier": "1m",
       "checked": true
     },
@@ -5021,7 +5021,7 @@
       "id": "R5.shared.E.acted_on_genuine",
       "block": "v13.10 P1 take line (300of300): emem split, shared items",
       "print": [
-        "36 used the genuine record"
+        "36 acted on the genuine value"
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5486,20 +5486,20 @@
       "id": "R5.F6.scope",
       "op": "extend_print",
       "print_add": [
-        "Bars: B did not act on it (declined, or used the genuine record), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026."
+        "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026."
       ],
       "figures": [
         "f6_mutation_matrix.300of300"
       ],
-      "note": "300of300 bar note, 4 Oct 2026: 'genuine record' as in panel 1."
+      "note": "300of300 bar note, 4 Oct 2026: 'acted on the genuine value', as in panel 1 (fifth review; it read 'used the genuine record' before)."
     },
     {
       "id": "U.flow",
       "op": "extend_print",
       "print_add": [
-        "Agent A cites a satellite reading. A relay or a faulty signer changes the evidence. Agent B acts on it, declines it or uses the genuine record."
+        "Agent A cites a satellite reading. A relay or a faulty signer changes the evidence. Agent B acts on it, declines it or acts on the genuine value."
       ],
-      "note": "Panel 1 mechanism: corruptions include signer errors (f2: relay or faulty signer)."
+      "note": "Panel 1 mechanism: corruptions include signer errors (f2: relay or faulty signer). 4 Oct 2026 (fifth review): 'acts on the genuine value', not 'uses the genuine record': with JSON or an opaque id B can derive the value or read it from the handoff without any genuine record."
     },
     {
       "id": "MF.identity",

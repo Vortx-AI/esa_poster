@@ -168,7 +168,7 @@ def lanes():
     ceil = {k: (SUM[k]["false_accepts"], SUM[k]["applicable"]) for k in "ABCI"}
     return [("prose", "prose", "reads the text", R5["A"][:2], ceil["A"]),
             ("json", "JSON", "reads the fields", R5["B"][:2], ceil["B"]),
-            ("rag", "retrieved text (RAG)", "retrieves a passage", R5["C"][:2], None),
+            ("rag", "retrieved text (BM25)", "retrieves a passage", R5["C"][:2], None),
             ("opaque", "opaque id", "fetches the sender’s record", R5["D"][:2], ceil["C"]),
             ("emem", "emem reference + verifier", None, R5["E"][:2], ceil["I"])]   # the condition, not only the format
 
@@ -253,8 +253,8 @@ def main():
     T(ax, 690, 11, "corrupted evidence", "F2.heads", ha="right", **hk)
     if MODE == "R5":   # v13.10: B's other outcomes, aligned with the lanes (the decoded object is panel 4)
         T(ax, 724, 11, "declined", "F2.heads", ha="center", **hk)
-        T(ax, 776, 4.9, "used the", "F2.heads", ha="center", **hk)
-        T(ax, 776, 11, "genuine record", "F2.heads", ha="center", **hk)
+        T(ax, 776, 4.9, "acted on", "F2.heads", ha="center", **hk)
+        T(ax, 776, 11, "genuine value", "F2.heads", ha="center", **hk)
     else:
         T(ax, 698 + 103 / 2, 11, "what is handed over?", "O.84", ha="center", **hk)
     mode = "deterministic receiver, no model" if MODE == "fallback" else "agents, pooled Claude"
@@ -370,7 +370,8 @@ def main():
         T(ax, 690, cy + 0.6, fmt_frac(dk, nn), r1id[key] if MODE == "fallback" else r5id[key],
           fontsize=PT["numeral"] if lh >= 20 else 48, fontweight=700, color=col, ha="right", va="center", zorder=4)
     if MODE == "R5":
-        # the same trials, every outcome: acted on (the numeral) + declined + used the genuine record = trials
+        # the same trials, every outcome: acted on (the numeral) + declined + acted on the genuine value = trials
+        # (how B had the genuine value: research/repro/v13/r5/out/genuine_value_source.json)
         cond = {"prose": "A", "json": "B", "rag": "C", "opaque": "D", "emem": "E"}
         ax.plot([696, 696], [ys[0], ys[-1] + lh], color=C["rule"], lw=0.5 * MMPT, zorder=2)
         for i, (key, name, does, (k, nn), ceil) in enumerate(L):

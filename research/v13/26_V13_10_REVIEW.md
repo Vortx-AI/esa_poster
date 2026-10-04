@@ -474,3 +474,28 @@ decode with AI." The board carries it in two marks, both in the navy header, and
 Left out: the orange ".dev" of the dark card (a third orange mark in the header would scatter the accent) and the card's
 Earth, satellite and face artwork. The copy freeze of section 16 holds for the evidence; this is an authors' change to
 the header. Both variants pass the 18 gates; running text 799 words (818 tokens), 0 text overlaps.
+
+## 23. Fifth ChatGPT review (4f6277d, 8.5/10) and the retrieval label (4 Oct 2026)
+
+The review re-checked main at 4f6277d, including the PDF, the scoring code and the archived trial outputs, reproduced
+the headline counts and kept 8.5/10. It found one poster correction and two scorer weaknesses; none changes a count.
+
+| Finding | What the archive shows | Change |
+|---|---|---|
+| Panel 1's third outcome column said "used the genuine record", which reads as retrieval of the genuine evidence | `genuine_value_source.py`: JSON 6, each derived by B from the DNs it was given, no record retrieved; opaque id 46, of which 13 derived, 27 the value of the record the relay served (no check), 6 the value stated in the handoff (M7); emem 36, each the value of the record served after every check passed. The reviewer's reconstruction, reproduced exactly | Column "acted on / genuine value"; mechanism "Agent B acts on it, declines it or acts on the genuine value."; 300of300 take line "36 acted on the genuine value" and panel 6 bar note "(declined, or acted on the genuine value)". Counts unchanged |
+| `score._matches` gives a VALUE with an exponent zero decimals: `_matches("4.709e-1", 0.9)` is true, `_matches("0.4709", 0.9)` false | 0 of 2,878 re-scored trials state a VALUE with an exponent | `score_v2.py` takes the decimals from mantissa and exponent |
+| One available value overrides a contradicting VALUE: M7, opaque id, "IRRIGATE VALUE=0.1" scores as acting on the genuine 0.4709 | 47 actionable answers contradict the attributed value (39 M18 unit conversions, 8 Haiku answers giving the threshold 0.4705 or 916.5); 3 are controls, the other 44 were already scored as acting on corrupted evidence | `score_v2.py` attributes a contradicting VALUE as reported |
+
+`score.py` stays frozen (BLAKE3 f4f22e3b…, addendum 1) and reproduces the 32 published false-acceptance counts;
+`score_v2.py` changes 0 of the 2,878 trials (`score_sensitivity.py`, `out/score_sensitivity.json`). The notes are in
+`research/repro/v13/r5/scoring_notes.md`, linked from the methods page.
+
+The authors added one label change: condition C, a BM25-based RAG baseline (BM25, top 3 of nine passages, prereg
+section 3), prints as "retrieved text (BM25)" in panel 1 (it read "retrieved text (RAG)"); panel 6's 26 mm column keeps
+"RAG" with "(BM25)" under it, because "retrieved" fills the column and runs into "opaque id". The methods page describes
+condition C as a BM25-based RAG baseline.
+
+Not changed, as the review advised: the layout. Its other points are scope already printed: the novelty is the
+integrated evidence protocol and its evaluation, not content addressing alone (the matched ablation strip); 300 trials
+are repeated corruption tests on two constructed tasks, not 300 independent EO applications; the satellite section is
+a scripted harness. Both variants pass the 18 gates; running text 800 words (801 in 300of300), 0 text overlaps.

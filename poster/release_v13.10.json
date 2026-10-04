@@ -126,8 +126,8 @@
  "byline": "no DOIs on the face (authors, 4 Oct 2026); panel 12 and the QR codes carry the routes",
  "scientific_wording": "research/v13/26_V13_10_REVIEW.md section 13",
  "running_words": {
-  "running_words_with_letter": 799,
-  "running_tokens": 818
+  "running_words_with_letter": 800,
+  "running_tokens": 819
  },
  "panel12": "client-path line moved to /use/ (research/v13/26_V13_10_REVIEW.md section 14)",
  "two_reviews": "research/v13/26_V13_10_REVIEW.md section 15",
@@ -136,5 +136,6 @@
  "matched_baseline": "pre-registered (research/repro/v13/r5/prereg_addendum2.md, pushed in 0cf0424 before it was computed) and printed in panel 1's ablation strip and scope: emem's checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions, 3 of 23 with four more consistency checks, emem's verifier 0 of 23; in an exploratory run (one trial per item), Haiku agents given those checks acted on the same 8 and declined the other 15, and 28 trials in condition E calibrate the setup (0 of 25). research/repro/v13/r5/results_addendum2.md",
  "third_review": "ChatGPT review of a8ad558, 8.2/10; relay box wording fixed ('shared corruption families'); research/v13/26_V13_10_REVIEW.md section 19; the audit of the round that followed is section 20",
  "fourth_review": "ChatGPT review of ade6319, 8.5/10; ablation strip, footer dates 29 Sep to 4 Oct 2026, portable replay (research/repro/v13/r5/addendum2/replay.py); research/v13/26_V13_10_REVIEW.md section 21",
- "brand": "emem identity in the header (authors, 4 Oct 2026): the wordmark (em, a drawn orange dash, em) at the bottom right with its pronunciation beside it ('pronounced em-em', 'the em in em dash, twice'), and the card tagline as the design goal, 'Design goal: encode in orbit, decode with AI.'; token brand #E86424 for the dash and the tagline only; research/v13/26_V13_10_REVIEW.md section 22"
+ "brand": "emem identity in the header (authors, 4 Oct 2026): the wordmark (em, a drawn orange dash, em) at the bottom right with its pronunciation beside it ('pronounced em-em', 'the em in em dash, twice'), and the card tagline as the design goal, 'Design goal: encode in orbit, decode with AI.'; token brand #E86424 for the dash and the tagline only; research/v13/26_V13_10_REVIEW.md section 22",
+ "fifth_review": "ChatGPT review of 4f6277d, 8.5/10; 'acted on the genuine value' replaces 'used the genuine record' (counts unchanged); score.py frozen, score_v2.py and a re-score of the 2,878 archived trials with no change (research/repro/v13/r5/scoring_notes.md); condition C labelled 'retrieved text (BM25)'; research/v13/26_V13_10_REVIEW.md section 23"
 }

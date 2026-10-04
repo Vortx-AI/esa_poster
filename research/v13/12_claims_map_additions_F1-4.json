@@ -60,8 +60,8 @@
     "no check reaches",
     "B did not act on",
     "declined",
-    "used the",
-    "genuine record"
+    "acted on",
+    "genuine value"
    ],
    "status": "SPEC",
    "layer": "n/a",
@@ -208,7 +208,7 @@
    "print": [
     "prose",
     "JSON",
-    "retrieved text (RAG)",
+    "retrieved text (BM25)",
     "opaque id",
     "EMEM reference",
     "emem reference"
@@ -222,7 +222,7 @@
    "date": "2026-10-01",
    "value": null,
    "check": null,
-   "note": "'retrieved text (RAG)' prints only in R5 mode",
+   "note": "'retrieved text (BM25)' prints only in R5 mode: condition C, a BM25-based RAG baseline (top 3 of nine passages, prereg section 3); it read 'retrieved text (RAG)' until 4 Oct 2026",
    "tier": "30cm",
    "fallback": null,
    "r5_key": null,
