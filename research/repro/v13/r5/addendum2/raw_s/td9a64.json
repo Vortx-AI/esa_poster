@@ -1,0 +1,36 @@
+{
+ "trial": "td9a64",
+ "attempts": [
+  {
+   "agent_file": "agent-a72e5c3102cac79e2.jsonl",
+   "started": "2026-10-04T13:51:01.604Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py td9a64 verify_evidence '{\"token\": \"emem:fact:defi.zb572.xAnI.zb1a2:p6ewjnlqo5npzooyrlak7gwtia23s2vlnb435xbxz3ycusv7auta\", \"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-30\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"fail\", \"detail\": \"record cell defi.zb572.xAnI.zb1a2 != question cell defi.zb572.xoso.zb1ec\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"signature\": {\"result\": \"pass\", \"detail\": \"Ed25519 attestation verifies under the pinned key\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the signed DNs\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed COG window for scene S2C_MSIL2A_20260930T052651_R105_T43SFS_20260930T102304\"}}, \"verdict\": \"FAIL (first failed check: binding)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Evidence cell mismatch; binding verification failed"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Evidence cell mismatch; binding verification failed",
+   "report_via": "handback"
+  }
+ ]
+}

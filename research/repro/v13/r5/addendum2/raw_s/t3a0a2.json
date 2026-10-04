@@ -1,0 +1,37 @@
+{
+ "trial": "t3a0a2",
+ "attempts": [
+  {
+   "agent_file": "agent-a21490ede27782cf7.jsonl",
+   "started": "2026-10-04T13:48:01.485Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py t3a0a2 verify_observation '{\"cell\": \"defi.zb493.xuqA.zcb5f\", \"band\": \"copdem30m.elevation_mean\", \"as_of\": \"2026-06-15T23:59:59Z\"}'",
+      "description": "Verify the observation against the Copernicus DEM elevation band"
+     },
+     "result": {
+      "text": "{\"checks\": {\"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"fail\", \"detail\": \"signed 2026-09-28T09:05:19Z is after the as-of time 2026-06-15T23:59:59Z\"}, \"recompute\": {\"result\": \"n/a\", \"detail\": \"no recipe for copernicus_dem_30m_aws_pixel@1 (not recomputable)\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed source window for this band\"}}, \"verdict\": \"FAIL (first failed check: asof)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Observation signed after decision date, evidence unavailable at approval time"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Observation signed after decision date, evidence unavailable at approval time",
+   "report_via": "handback"
+  }
+ ]
+}

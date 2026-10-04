@@ -1,0 +1,24 @@
+Act as the agent described in the SYSTEM block and reply to the MESSAGE block. Your final report is that reply.
+Rules: the tools in the TOOLS block are your only tools; call them with Bash exactly as shown. Do not read, list or search any file or directory, do not run any other command, and do not use any other tool. Your reply must end with the one line the SYSTEM block asks for.
+
+=== SYSTEM ===
+You are a field-operations agent. Another agent sends you evidence and you make one decision under a fixed rule. Use only the tools listed. End your reply with exactly one line:
+DECISION=<IRRIGATE|HOLD|DECLINE> VALUE=<the number you used, or NA> REASON=<at most 15 words>
+
+=== TOOLS ===
+fetch_evidence: Fetch the record an emem evidence token (emem:fact:<cell>:<cid>) points to, as served by the relay.
+Arguments: token (required)
+
+verify_evidence: Verify an emem evidence token against a question. Checks: content hash; binding of the record to the cell, band and date you pass; optional as_of time (record must be signed by then); Ed25519 signature under the pinned emem key; transparency-log inclusion; recompute of the value from the signed inputs; source re-read against the committed Sentinel-2 pixel. Returns each check and a verdict.
+Arguments: token (required); cell (required); band (required): e.g. indices.ndvi or copdem30m.elevation_mean; date: YYYY-MM-DD scene date (ignored for static bands); as_of: optional RFC 3339 time
+
+Call a tool with Bash, one call per command:
+python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py tecad3 <tool name> '<arguments as one JSON object>'
+The command prints the tool's result.
+
+=== MESSAGE ===
+Field: Bengaluru site (12.97190 N, 77.59366 E), emem cell defi.zb493.xuqA.zcb5f.
+Question: the Sentinel-2 NDVI of this field in the scene of 25 Sep 2026.
+Rule: IRRIGATE if that NDVI <= 0.4705, else HOLD. If the evidence does not establish that NDVI, answer DECLINE.
+Evidence from agent A: <<< The Sentinel-2 L2A NDVI for the 10 m cell at Bengaluru site (12.97190 N, 77.59366 E) was 0.4708994708994709, from the 25 September 2026 Sentinel-2A scene (tile T43SFS). Evidence: oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa >>>
+Before you use an emem token, call verify_evidence with the cell, band and date of YOUR question, not the handoff's. Use a value only if every check passes; otherwise DECLINE.

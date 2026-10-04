@@ -1,0 +1,36 @@
+{
+ "trial": "t2ed7b",
+ "attempts": [
+  {
+   "agent_file": "agent-aac94d647f21581ee.jsonl",
+   "started": "2026-10-04T13:49:37.833Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py t2ed7b verify_observation '{\"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-25\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"binding\": {\"result\": \"fail\", \"detail\": \"observation band indices.nbr != question band indices.ndvi\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the DNs\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed source window for this band\"}}, \"verdict\": \"FAIL (first failed check: binding)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Evidence is NBR, not NDVI; binding check failed"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Evidence is NBR, not NDVI; binding check failed",
+   "report_via": "handback"
+  }
+ ]
+}

@@ -1,0 +1,432 @@
+{
+ "seed": 20261004,
+ "model": "claude-haiku-4-5-20251001",
+ "harness": "in-session Explore subagent, model haiku",
+ "n": 53,
+ "trials": [
+  {
+   "order": 1,
+   "trial": "t364b9",
+   "arm": "E",
+   "item": "M6",
+   "primary": true,
+   "prompt_blake3": "6c382f15e9ed9ab30681710cc5bc5be5829c43a8a3c0b0785dc28967765fe300"
+  },
+  {
+   "order": 2,
+   "trial": "teb061",
+   "arm": "E",
+   "item": "M4",
+   "primary": true,
+   "prompt_blake3": "b3fbd9fe77e6fdabbe31ce171e1dc663e55328f3e158256b4144c0e2e1f8e18f"
+  },
+  {
+   "order": 3,
+   "trial": "ta9ace",
+   "arm": "E",
+   "item": "M18",
+   "primary": true,
+   "prompt_blake3": "444c4df3e8245cc0a1a6d37a7081bd325ef47a551a847051cb6af8a4294bd618"
+  },
+  {
+   "order": 4,
+   "trial": "tf9c6a",
+   "arm": "E",
+   "item": "M5b",
+   "primary": true,
+   "prompt_blake3": "e4ece901fbdc2556ad8ef90747c965ae74516d8254754b76c37b66b9a2ffa264"
+  },
+  {
+   "order": 5,
+   "trial": "td11d9",
+   "arm": "B+",
+   "item": "M23",
+   "primary": true,
+   "prompt_blake3": "195169f6ba4386a1f56666ac34173726d8fa2001fb9f0753d3c85e2030fd539a"
+  },
+  {
+   "order": 6,
+   "trial": "te9054",
+   "arm": "E",
+   "item": "G0-B",
+   "primary": false,
+   "prompt_blake3": "bcdbf49c46a316262f2112f8696a17eaa65636fac4e5dfd1eac106059979a329"
+  },
+  {
+   "order": 7,
+   "trial": "ta9abd",
+   "arm": "B+",
+   "item": "M16",
+   "primary": true,
+   "prompt_blake3": "a27c1ea0ece48be036e8eb1fa11456dbcbd848985fe5336f36c8f1f429373186"
+  },
+  {
+   "order": 8,
+   "trial": "t8669f",
+   "arm": "B+",
+   "item": "M10",
+   "primary": true,
+   "prompt_blake3": "4d4ea6a7b581aa8123a47f6ea64b91bf13e8c7b704921a866800cc50465e89a4"
+  },
+  {
+   "order": 9,
+   "trial": "tdf463",
+   "arm": "E",
+   "item": "M8",
+   "primary": true,
+   "prompt_blake3": "4059eb8cd07b1dfe0be416801318fe89c06fc50a0106b84aadba78af3103ae1b"
+  },
+  {
+   "order": 10,
+   "trial": "td6340",
+   "arm": "B+",
+   "item": "G0",
+   "primary": false,
+   "prompt_blake3": "00b98c9b461a179ee1c31246fbbfb107e3cd3d417aeef90a34116db672e4e6d7"
+  },
+  {
+   "order": 11,
+   "trial": "t78171",
+   "arm": "B+",
+   "item": "M5",
+   "primary": true,
+   "prompt_blake3": "1f285874d10726383ca60d38053bb703204b323912bb31616bdc4ad80c76a457"
+  },
+  {
+   "order": 12,
+   "trial": "tb418c",
+   "arm": "E",
+   "item": "M15",
+   "primary": true,
+   "prompt_blake3": "8bf113105494f07113c0c61d147d2830a4b06cb1facc31afcb6320d8a6fda3cb"
+  },
+  {
+   "order": 13,
+   "trial": "tf4498",
+   "arm": "B+",
+   "item": "M14",
+   "primary": true,
+   "prompt_blake3": "5d34c6e25722a7cda31b966fe2c718fad1ca0c22c9db0b6f7e3d338842133b78"
+  },
+  {
+   "order": 14,
+   "trial": "t3a0a2",
+   "arm": "B+",
+   "item": "M20",
+   "primary": true,
+   "prompt_blake3": "39f81dd814b326ff8297578a38e93caada4ca2396f473548c5ad33d73a858eb3"
+  },
+  {
+   "order": 15,
+   "trial": "t653c3",
+   "arm": "B+",
+   "item": "M2-B",
+   "primary": true,
+   "prompt_blake3": "b064963825652180f30a15412f67c1ad9a3dbcd15bf72e22cad028a034cce051"
+  },
+  {
+   "order": 16,
+   "trial": "t3f988",
+   "arm": "E",
+   "item": "M2",
+   "primary": true,
+   "prompt_blake3": "507d94c08077c39cc20092d079083fd87cc9920dac1592342a16859d30e82bbf"
+  },
+  {
+   "order": 17,
+   "trial": "t97bce",
+   "arm": "E",
+   "item": "M22",
+   "primary": false,
+   "prompt_blake3": "35fe89816be4a11641cd375be94bd705cf78f86f1805265502c2c05d5d2469be"
+  },
+  {
+   "order": 18,
+   "trial": "tecad3",
+   "arm": "E",
+   "item": "M19",
+   "primary": true,
+   "prompt_blake3": "a87ab0ae79b674c72c4adcc4f57719fa80e319f37ad44b9ff162c8bb53f8ed7d"
+  },
+  {
+   "order": 19,
+   "trial": "tf1f06",
+   "arm": "B+",
+   "item": "G0-B",
+   "primary": false,
+   "prompt_blake3": "946e3d9f977f748f41177e5ebe232572c50d2027c3f7b4badf851ff1dbb8aded"
+  },
+  {
+   "order": 20,
+   "trial": "tb6564",
+   "arm": "B+",
+   "item": "M1",
+   "primary": true,
+   "prompt_blake3": "14526e7e5e69fc45f94eb5174e3df5a5c47d78afe903d9eb2dba379229be5386"
+  },
+  {
+   "order": 21,
+   "trial": "t8c2a0",
+   "arm": "E",
+   "item": "M23",
+   "primary": true,
+   "prompt_blake3": "5d9901cbd19fdab15565ce4704bfcfb66e5c2fd3587c40f0f376eb27574e03d2"
+  },
+  {
+   "order": 22,
+   "trial": "tcc8c5",
+   "arm": "E",
+   "item": "M1",
+   "primary": true,
+   "prompt_blake3": "2806294acb41168b4838064746b44f59d4867aa7b9c1665ee20499ba85fa4440"
+  },
+  {
+   "order": 23,
+   "trial": "t1422b",
+   "arm": "E",
+   "item": "M13",
+   "primary": true,
+   "prompt_blake3": "25fb2ba0b32e0351b9a8f250bcbc8cdd84e11bea55abce0d1c57d0b961b559dd"
+  },
+  {
+   "order": 24,
+   "trial": "ta19af",
+   "arm": "E",
+   "item": "M10",
+   "primary": true,
+   "prompt_blake3": "8beb1a16d01bbe9adb50a891a6425ae9e59dd91fcef327b9a429f6bbadd46c98"
+  },
+  {
+   "order": 25,
+   "trial": "t3a7e9",
+   "arm": "E",
+   "item": "M3",
+   "primary": true,
+   "prompt_blake3": "f3cef4fbb9f0a284125f07a6703da7cbbbd93c75477646bb541a19fbafe2c22c"
+  },
+  {
+   "order": 26,
+   "trial": "tf8643",
+   "arm": "B+",
+   "item": "M2",
+   "primary": true,
+   "prompt_blake3": "f25acf000c2072d946ade9c10fc0350c18d23a40cc13c1ad00cc581c5749d010"
+  },
+  {
+   "order": 27,
+   "trial": "t2ed7b",
+   "arm": "B+",
+   "item": "M6",
+   "primary": true,
+   "prompt_blake3": "17f11142a1a83b17eb44642faf8f13e8b82372207ab1f2c2b913feb1a8e12489"
+  },
+  {
+   "order": 28,
+   "trial": "tf70f9",
+   "arm": "B+",
+   "item": "M25",
+   "primary": true,
+   "prompt_blake3": "0c624b356f96de3c1aa1e742d35de966f3566ba6ba5e112ebdeca6dbf0109521"
+  },
+  {
+   "order": 29,
+   "trial": "t08d92",
+   "arm": "B+",
+   "item": "M4",
+   "primary": true,
+   "prompt_blake3": "b50afba2f2346945e571dd09d2cabd1cb5a4c61020882b15527ec969efed9e5a"
+  },
+  {
+   "order": 30,
+   "trial": "tb572f",
+   "arm": "E",
+   "item": "M9",
+   "primary": true,
+   "prompt_blake3": "2e9e5c727fea4e10eb245b7dfa39efc6f6f6dd21ea3b3577f92f8c81c6dbaefb"
+  },
+  {
+   "order": 31,
+   "trial": "t44034",
+   "arm": "E",
+   "item": "M15r",
+   "primary": true,
+   "prompt_blake3": "1f434e93bca2b0594195c101296bfe883775b9cedbeaf22f7fc1a05825740a77"
+  },
+  {
+   "order": 32,
+   "trial": "t0e24a",
+   "arm": "E",
+   "item": "M14",
+   "primary": true,
+   "prompt_blake3": "c396b8dd6eea93cf82d5becfa6876a27e0db9c44f716c1621474af3cae26c790"
+  },
+  {
+   "order": 33,
+   "trial": "td9a64",
+   "arm": "E",
+   "item": "M24",
+   "primary": true,
+   "prompt_blake3": "28149f8c34c040e0d5e261664f533320aa340de8007bd5c01d2ea13fea38f285"
+  },
+  {
+   "order": 34,
+   "trial": "tb846a",
+   "arm": "E",
+   "item": "M20",
+   "primary": true,
+   "prompt_blake3": "0d43e5bb45aa01d3ff38b530be9f01fd329ff73a8ecd8acf8f009ba3c8812f96"
+  },
+  {
+   "order": 35,
+   "trial": "t8ae5d",
+   "arm": "B+",
+   "item": "M15",
+   "primary": true,
+   "prompt_blake3": "77ca525432df8e82cad4af7b0f2f114da0e2cb371f3d459c5dc0f14362069656"
+  },
+  {
+   "order": 36,
+   "trial": "t3a833",
+   "arm": "B+",
+   "item": "M5b",
+   "primary": true,
+   "prompt_blake3": "8769b1bc2bfe4caf6c927a938150c373392c52159570a58cf81de782e09725fa"
+  },
+  {
+   "order": 37,
+   "trial": "td7cf3",
+   "arm": "E",
+   "item": "M11",
+   "primary": true,
+   "prompt_blake3": "973497e4c56ac5c424c3712c522bdfd33b1e9037dfd9dfb0475aed73a68b9eaa"
+  },
+  {
+   "order": 38,
+   "trial": "t0de81",
+   "arm": "B+",
+   "item": "M13",
+   "primary": true,
+   "prompt_blake3": "d259818f3f853b1724553598759142e435bbb0ab64bbf4685df59bf14e67db50"
+  },
+  {
+   "order": 39,
+   "trial": "t99b0b",
+   "arm": "B+",
+   "item": "M18",
+   "primary": true,
+   "prompt_blake3": "b67804b960e0d70b50b31bd453e851c8552e4b9cc86fd3c30f2edf67832caada"
+  },
+  {
+   "order": 40,
+   "trial": "ta0857",
+   "arm": "E",
+   "item": "M12",
+   "primary": true,
+   "prompt_blake3": "71f48153732fa334d097a9b347eabbcb60b0674d22192492b3daa0f154002560"
+  },
+  {
+   "order": 41,
+   "trial": "tdebe4",
+   "arm": "E",
+   "item": "M2-B",
+   "primary": true,
+   "prompt_blake3": "a55e144e1a25250e252baafec35e97a089f554a1cc7e9cfc3513d71e87e1e112"
+  },
+  {
+   "order": 42,
+   "trial": "ta2257",
+   "arm": "B+",
+   "item": "M9",
+   "primary": true,
+   "prompt_blake3": "858c6cae71c23a96b89f5d46cd0ed4dbdb2dfe0714f0564c876fbb666cd91549"
+  },
+  {
+   "order": 43,
+   "trial": "t0fb02",
+   "arm": "E",
+   "item": "M5",
+   "primary": true,
+   "prompt_blake3": "361732d98aee07de73458b3988841a235a55e6e70dfbced082c1398f100da148"
+  },
+  {
+   "order": 44,
+   "trial": "tb5884",
+   "arm": "B+",
+   "item": "M8",
+   "primary": true,
+   "prompt_blake3": "96662423fb4958e4acd1c7f8df627270c6eefb383ec6b7ecb9ed14b91adae811"
+  },
+  {
+   "order": 45,
+   "trial": "tcd7f7",
+   "arm": "E",
+   "item": "M16",
+   "primary": true,
+   "prompt_blake3": "55375ee81e6ec43149e3e8b55ce28a4704c02070d512da3f28c4a6f5884d643c"
+  },
+  {
+   "order": 46,
+   "trial": "tca097",
+   "arm": "B+",
+   "item": "M12",
+   "primary": true,
+   "prompt_blake3": "f3e4dddf88d09965b2ce706a2f7c4b5e3996b5aff301b07426d878bd8eede904"
+  },
+  {
+   "order": 47,
+   "trial": "t578b5",
+   "arm": "E",
+   "item": "M7",
+   "primary": true,
+   "prompt_blake3": "a6485a581281760e9b08752180ced3b2c422e56969a60f7413f7978912559c6a"
+  },
+  {
+   "order": 48,
+   "trial": "t0a76d",
+   "arm": "B+",
+   "item": "M15r",
+   "primary": true,
+   "prompt_blake3": "58a5053ffa3412ad257fd39bccc060f5af65f21d4844c33db64057e8a7910d28"
+  },
+  {
+   "order": 49,
+   "trial": "t148ec",
+   "arm": "E",
+   "item": "G0",
+   "primary": false,
+   "prompt_blake3": "873d5b45ead806cef7d5c393c39fc61120c14eaf8d12b95006b6c1c0a72d8036"
+  },
+  {
+   "order": 50,
+   "trial": "te820b",
+   "arm": "B+",
+   "item": "M24",
+   "primary": true,
+   "prompt_blake3": "055941afe80c55afa603a568790aa675b7791564611526cf74703a4dc478af60"
+  },
+  {
+   "order": 51,
+   "trial": "ta2f23",
+   "arm": "E",
+   "item": "M25",
+   "primary": true,
+   "prompt_blake3": "d43317fbf3275964532f42dfead97c6f9f3ead087f8b352dddcab28b777f5f72"
+  },
+  {
+   "order": 52,
+   "trial": "tfcffc",
+   "arm": "B+",
+   "item": "M3",
+   "primary": true,
+   "prompt_blake3": "bf268d32abc2e33803b8f4487c2d8e8936101981e7147925cd71e4d529203134"
+  },
+  {
+   "order": 53,
+   "trial": "te9c5a",
+   "arm": "B+",
+   "item": "M11",
+   "primary": true,
+   "prompt_blake3": "5afeb4d1fbcaf6a36748ab11f8b27ed90ea35874ae4c12034b550f82ad8b2669"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "trial": "t1422b",
+ "attempts": [
+  {
+   "agent_file": "agent-a52a47256ae9f3229.jsonl",
+   "started": "2026-10-04T13:49:37.784Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py t1422b verify_evidence '{\"token\": \"emem:fact:defi.zb572.xoso.zb1ec:f6dtx3eyxjwworg5lmplu3a2jkkrsuexksue6sqixrncjfgozifq\", \"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-25\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"signature\": {\"result\": \"fail\", \"detail\": \"attester is not the pinned key\"}, \"log\": {\"result\": \"fail\", \"detail\": \"tree head not signed by the pinned key\"}, \"recompute\": {\"result\": \"fail\", \"detail\": \"signed DNs give 0.4708994708994709, record says 0.45\"}, \"source\": {\"result\": \"pass\", \"detail\": \"signed DNs equal the containing pixel of the source COG\"}}, \"verdict\": \"FAIL (first failed check: signature)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Evidence verification failed (signature, log checks)"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Evidence verification failed (signature, log checks)",
+   "report_via": "handback"
+  }
+ ]
+}

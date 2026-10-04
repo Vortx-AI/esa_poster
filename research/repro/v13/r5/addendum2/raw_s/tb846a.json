@@ -1,0 +1,58 @@
+{
+ "trial": "tb846a",
+ "attempts": [
+  {
+   "agent_file": "agent-a225fd1ed08d6ffb0.jsonl",
+   "started": "2026-10-04T13:51:01.615Z",
+   "models": [
+    "<synthetic>",
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py tb846a verify_evidence '{\"token\": \"emem:fact:defi.zb493.xuqA.zcb5f:jzxzmvomshs6di3bkgponk6p3rgfk5nyvklekj6caegx6dwcuo5q\", \"cell\": \"defi.zb493.xuqA.zcb5f\", \"band\": \"copdem30m.elevation_mean\", \"date\": \"2026-06-15\", \"as_of\": \"2026-06-15T23:59:59Z\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"fail\", \"detail\": \"signed 2026-09-28T09:05:19Z is after the as-of time 2026-06-15T23:59:59Z\"}, \"signature\": {\"result\": \"pass\", \"detail\": \"Ed25519 attestation verifies under the pinned key\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"n/a\", \"detail\": \"no recipe for copernicus_dem_30m_aws_pixel@1 (not recomputable)\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed source window for this band\"}}, \"verdict\": \"FAIL (first failed check: asof)\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "You've hit your session limit \u00b7 resets 4:10pm (UTC)",
+   "report_via": "last text"
+  },
+  {
+   "agent_file": "agent-ae8097d4a0f33b7ca.jsonl",
+   "started": "2026-10-04T16:22:44.886Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py tb846a verify_evidence '{\"token\": \"emem:fact:defi.zb493.xuqA.zcb5f:jzxzmvomshs6di3bkgponk6p3rgfk5nyvklekj6caegx6dwcuo5q\", \"cell\": \"defi.zb493.xuqA.zcb5f\", \"band\": \"copdem30m.elevation_mean\", \"date\": \"2026-06-15\", \"as_of\": \"2026-06-15T23:59:59Z\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"fail\", \"detail\": \"signed 2026-09-28T09:05:19Z is after the as-of time 2026-06-15T23:59:59Z\"}, \"signature\": {\"result\": \"pass\", \"detail\": \"Ed25519 attestation verifies under the pinned key\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"n/a\", \"detail\": \"no recipe for copernicus_dem_30m_aws_pixel@1 (not recomputable)\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"no committed source window for this band\"}}, \"verdict\": \"FAIL (first failed check: asof)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Evidence signed after approval date; cannot establish what A had"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Evidence signed after approval date; cannot establish what A had",
+   "report_via": "handback"
+  }
+ ]
+}

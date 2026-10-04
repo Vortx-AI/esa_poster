@@ -5025,7 +5025,8 @@
       "block": "v13.10 P1 scope",
       "print": [
         "emem condition: the reference, a verifier tool and an instruction to check.",
-        "In the emem condition, B had the reference, a verifier tool and an instruction to check."
+        "In the emem condition, B had the reference, a verifier tool and an instruction to check.",
+        "The emem lane adds a verifier and an instruction, so the figure tests the workflow."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5050,7 +5051,8 @@
       "print": [
         "Conditions differ in tools and instructions as well as representation; an equal-tool baseline is not yet run.",
         "The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet.",
-        "Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet."
+        "Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet.",
+        "The emem lane adds a verifier and an instruction, so the figure tests the workflow."
       ],
       "status": "PRE-REGISTERED",
       "layer": "L0-L3",
@@ -5065,7 +5067,7 @@
         "file": "repro/v13/r5/prereg.md",
         "arg": "each condition exposes only its own tools"
       },
-      "note": "Raised by an EO reviewer on 4 Oct 2026: the comparison is of whole handoff arrangements; it does not isolate the identifier.",
+      "note": "Raised by an EO reviewer on 4 Oct 2026: the comparison is of whole handoff arrangements; it does not isolate the identifier. 4 Oct 2026, after the matched baseline (prereg addendum 2): the scope keeps that the figure tests the workflow and states what the emem lane adds; the matched result beside it runs emem's checks minus hash, signature and log on the JSON (Part A has no agent; the agents of Part S had that one verifier tool and the same instruction).",
       "tier": "1m",
       "checked": true
     },
@@ -5225,7 +5227,8 @@
       "id": "R5.tasks",
       "block": "v13.10 P1 scope",
       "print": [
-        "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. All 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items plus controls, exploratory items and Qwen."
+        "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. All 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items plus controls, exploratory items and Qwen.",
+        "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5243,7 +5246,7 @@
         ],
         "expect": 2794
       },
-      "note": "4 Oct 2026, after the second ChatGPT review: the earlier form '2,794 scored trials of 25 items' undercounted the item ids and read as Claude-only. The figure is pooled Claude over each condition's full item set; the total includes Qwen, controls and exploratory trials.",
+      "note": "4 Oct 2026, after the second ChatGPT review: the earlier form '2,794 scored trials of 25 items' undercounted the item ids and read as Claude-only. The figure is pooled Claude over each condition's full item set; the total includes Qwen, the 2 controls and the 1 exploratory item (M22).",
       "tier": "1m",
       "checked": true
     },
@@ -5253,7 +5256,7 @@
       "print": [
         "relay or faulty signer",
         "one change per trial,",
-        "same set on each lane:",
+        "shared corruption families:",
         "value · unit · cell · time · band · source · derivation · pixel · stale record · signature / id"
       ],
       "status": "PRE-REGISTERED",
@@ -5270,6 +5273,146 @@
         "arg": "| M18 | B | unit |"
       },
       "note": "Replaces the R1 family list in R5 mode (F2.relay), which missed unit and stale history and read as one family per lane.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.matched.ceiling",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "n/a",
+      "source": {
+        "file": "research/repro/v13/r5/out/addendum2_ceiling.json",
+        "pointer": "summary: B+ (verifier_conv.py, the checks of verifier.py without hash, signature and log) fa 8 of n 23, items M9, M10, M11, M12, M16, M23, M2-B, M18; B++ (verifier_hard.py, B+ plus scene date, tile band, offset and unit) fa 3 (M11, M23, M2-B); E+ (verifier.py) fa 0; controls G0 and G0-B accepted by each. Pre-registered in research/repro/v13/r5/prereg_addendum2.md (BLAKE3 f7769af0…), pushed in 0cf0424 before the computation; results_addendum2.md"
+      },
+      "date": "2026-10-04",
+      "value": 8,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/addendum2_ceiling.json",
+        "arg": [
+          "summary",
+          "B+",
+          "fa"
+        ],
+        "expect": 8
+      },
+      "note": "Deterministic, the receiver's question bound by the harness as for E+; scored by score.py as condition B. B+ and E+ share binding, as-of, recompute and the source windows. Of the 8 that B+ accepts, emem's verifier refuses 6 at the signature check and M16 at the log check, and on M2-B uses the signed 918.0 m instead of A's 916; its hash check refuses none of the 8 (a forger re-hashes). Answers the reviews' request for an equal-tool baseline (4 Oct 2026).",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.matched.n",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "n/a",
+      "source": {
+        "file": "research/repro/v13/r5/out/addendum2_ceiling.json",
+        "pointer": "summary: B+ (verifier_conv.py, the checks of verifier.py without hash, signature and log) fa 8 of n 23, items M9, M10, M11, M12, M16, M23, M2-B, M18; B++ (verifier_hard.py, B+ plus scene date, tile band, offset and unit) fa 3 (M11, M23, M2-B); E+ (verifier.py) fa 0; controls G0 and G0-B accepted by each. Pre-registered in research/repro/v13/r5/prereg_addendum2.md (BLAKE3 f7769af0…), pushed in 0cf0424 before the computation; results_addendum2.md"
+      },
+      "date": "2026-10-04",
+      "value": 23,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/addendum2_ceiling.json",
+        "arg": [
+          "summary",
+          "B+",
+          "n"
+        ],
+        "expect": 23
+      },
+      "note": "The 23 primary items whose conditions include B: every primary item but M7 and M19, which have no JSON form.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.matched.hardened",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "n/a",
+      "source": {
+        "file": "research/repro/v13/r5/out/addendum2_ceiling.json",
+        "pointer": "summary: B+ (verifier_conv.py, the checks of verifier.py without hash, signature and log) fa 8 of n 23, items M9, M10, M11, M12, M16, M23, M2-B, M18; B++ (verifier_hard.py, B+ plus scene date, tile band, offset and unit) fa 3 (M11, M23, M2-B); E+ (verifier.py) fa 0; controls G0 and G0-B accepted by each. Pre-registered in research/repro/v13/r5/prereg_addendum2.md (BLAKE3 f7769af0…), pushed in 0cf0424 before the computation; results_addendum2.md"
+      },
+      "date": "2026-10-04",
+      "value": 3,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/addendum2_ceiling.json",
+        "arg": [
+          "summary",
+          "B++",
+          "fa"
+        ],
+        "expect": 3
+      },
+      "note": "Sensitivity: four consistency checks the emem verifier does not have, fixed in the addendum before the computation.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.matched.emem",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "n/a",
+      "source": {
+        "file": "research/repro/v13/r5/out/addendum2_ceiling.json",
+        "pointer": "summary: B+ (verifier_conv.py, the checks of verifier.py without hash, signature and log) fa 8 of n 23, items M9, M10, M11, M12, M16, M23, M2-B, M18; B++ (verifier_hard.py, B+ plus scene date, tile band, offset and unit) fa 3 (M11, M23, M2-B); E+ (verifier.py) fa 0; controls G0 and G0-B accepted by each. Pre-registered in research/repro/v13/r5/prereg_addendum2.md (BLAKE3 f7769af0…), pushed in 0cf0424 before the computation; results_addendum2.md"
+      },
+      "date": "2026-10-04",
+      "value": 0,
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/addendum2_ceiling.json",
+        "arg": [
+          "summary",
+          "E+",
+          "fa"
+        ],
+        "expect": 0
+      },
+      "note": "The emem verifier over the same 23 items, recomputed by ceiling.py and asserted equal to out/ceiling_v13.json.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.matched.agents",
+      "block": "v13.10 P1 scope",
+      "print": [
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "n/a",
+      "source": {
+        "file": "research/repro/v13/r5/out/addendum2_s.json",
+        "pointer": "summary.B+: 8 of 23 primary items acted on (M9, M10, M11, M12, M16, M18, M23, M2-B), acted_when_receiver_accepts 8/8, declined_when_receiver_refuses 15/15, verify and binding 23 of 23; summary.E: 0 of 25 (headless haiku E Block 1: 0 of 150). 53 trials, in-session Explore subagents with claude-haiku-4-5-20251001, 4 Oct 2026; 12 re-run once after a usage limit; audit 53 of 53 valid; no exclusion"
+      },
+      "date": "2026-10-04",
+      "value": "8/8",
+      "check": {
+        "kind": "json",
+        "file": "repro/v13/r5/out/addendum2_s.json",
+        "arg": [
+          "summary",
+          "B+",
+          "acted_when_receiver_accepts"
+        ],
+        "expect": "8/8"
+      },
+      "note": "Exploratory (prereg addendum 2, A2.4 and A2.5), one trial per item: the check asserts that the agents acted on each of the 8 items the deterministic B+ receiver accepts (summary.B+.fa is 8 of 23; declined_when_receiver_refuses 15/15).",
       "tier": "1m",
       "checked": true
     }
@@ -5341,6 +5484,38 @@
         "Δz: change in readout. The terms name possible causes (environment, sensor, geolocation, encoder, residual); we have not measured their shares."
       ],
       "note": "4 Oct 2026 cut: the drift-score figure leaves panel 3; the caption keeps the decomposition's scope in plainer words."
+    },
+    {
+      "id": "R5.E.qwen7b",
+      "op": "extend_print",
+      "print_add": [
+        "Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver (2 of 25 when told to check): gate the action outside the model."
+      ],
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
+    },
+    {
+      "id": "R5.Eplus.qwen7b",
+      "op": "extend_print",
+      "print_add": [
+        "Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver (2 of 25 when told to check): gate the action outside the model."
+      ],
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
+    },
+    {
+      "id": "R5.models",
+      "op": "extend_print",
+      "print_add": [
+        "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition."
+      ],
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
+    },
+    {
+      "id": "R5.dates",
+      "op": "extend_print",
+      "print_add": [
+        "2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item."
+      ],
+      "note": "Panel 1 scope, 4 Oct 2026: rewritten with the matched baseline in five lines (review log sections 19 and 20)."
     }
   ]
 }

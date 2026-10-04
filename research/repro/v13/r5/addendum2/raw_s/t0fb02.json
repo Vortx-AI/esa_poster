@@ -1,0 +1,46 @@
+{
+ "trial": "t0fb02",
+ "attempts": [
+  {
+   "agent_file": "agent-a3469407f241b3cc3.jsonl",
+   "started": "2026-10-04T13:52:27.664Z",
+   "models": [
+    "<synthetic>"
+   ],
+   "calls": [],
+   "report": "You've hit your session limit \u00b7 resets 4:10pm (UTC)",
+   "report_via": "last text"
+  },
+  {
+   "agent_file": "agent-af6d77b70baa493b3.jsonl",
+   "started": "2026-10-04T16:22:44.993Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py t0fb02 verify_evidence '{\"token\": \"emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk67cjt2pqc7z33mtsyuffgakxbxmyaa\", \"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-30\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"hash\": {\"result\": \"pass\", \"detail\": \"BLAKE3 of the served bytes equals the cid\"}, \"binding\": {\"result\": \"fail\", \"detail\": \"record date 2026-09-25 != question date 2026-09-30\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"signature\": {\"result\": \"pass\", \"detail\": \"Ed25519 attestation verifies under the pinned key\"}, \"log\": {\"result\": \"pass\", \"detail\": \"attestation included under the signed tree head\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the signed DNs\"}, \"source\": {\"result\": \"pass\", \"detail\": \"signed DNs equal the containing pixel of the source COG\"}}, \"verdict\": \"FAIL (first failed check: binding)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Evidence verification failed binding check date mismatch"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Evidence verification failed binding check date mismatch",
+   "report_via": "handback"
+  }
+ ]
+}

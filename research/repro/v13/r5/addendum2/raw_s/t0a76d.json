@@ -1,0 +1,36 @@
+{
+ "trial": "t0a76d",
+ "attempts": [
+  {
+   "agent_file": "agent-aa23b3e97f0a1ca93.jsonl",
+   "started": "2026-10-04T16:24:26.494Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py t0a76d verify_observation '{\"cell\": \"defi.zb572.xoso.zb1ec\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-23\", \"as_of\": \"2026-09-25T19:35:27Z\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"pass\", \"detail\": \"signed 2026-09-25T19:35:27Z <= as-of 2026-09-25T19:35:27Z\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the DNs\"}, \"source\": {\"result\": \"fail\", \"detail\": \"the DNs [2993.0, 1972.0] != containing pixel [3605.0, 1901.0] in the source COG\"}}, \"verdict\": \"FAIL (first failed check: source)\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=DECLINE VALUE=NA REASON=Source verification failed: DN values mismatch"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=DECLINE VALUE=NA REASON=Source verification failed: DN values mismatch",
+   "report_via": "handback"
+  }
+ ]
+}

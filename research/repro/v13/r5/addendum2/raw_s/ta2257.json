@@ -1,0 +1,46 @@
+{
+ "trial": "ta2257",
+ "attempts": [
+  {
+   "agent_file": "agent-aae1be668ecd62454.jsonl",
+   "started": "2026-10-04T13:52:27.653Z",
+   "models": [
+    "<synthetic>"
+   ],
+   "calls": [],
+   "report": "You've hit your session limit \u00b7 resets 4:10pm (UTC)",
+   "report_via": "last text"
+  },
+  {
+   "agent_file": "agent-a57d0b7b825d611d3.jsonl",
+   "started": "2026-10-04T16:22:44.976Z",
+   "models": [
+    "claude-haiku-4-5-20251001"
+   ],
+   "calls": [
+    {
+     "name": "Bash",
+     "input": {
+      "command": "python3 /home/user/esa_poster/research/repro/v13/r5/addendum2/rtool.py ta2257 verify_observation '{\"cell\": \"defi.zb493.xuqA.zcb5f\", \"band\": \"indices.ndvi\", \"date\": \"2026-09-25\"}'"
+     },
+     "result": {
+      "text": "{\"checks\": {\"binding\": {\"result\": \"pass\", \"detail\": \"cell, band and date match the question\"}, \"asof\": {\"result\": \"n/a\", \"detail\": \"no as-of time asked\"}, \"recompute\": {\"result\": \"pass\", \"detail\": \"value recomputes bit-for-bit from the DNs\"}, \"source\": {\"result\": \"n/a\", \"detail\": \"committed windows cover the Keylong field cell only\"}}, \"verdict\": \"PASS\", \"value_verbatim\": \"0.4708994708994709\"}",
+      "is_error": false
+     }
+    },
+    {
+     "name": "SubagentHandback",
+     "input": {
+      "message": "DECISION=HOLD VALUE=0.4709 REASON=Verified NDVI 0.4709 exceeds threshold 0.4705"
+     },
+     "result": {
+      "text": "{\"success\":true,\"message\":\"Report delivered to your caller.\"}",
+      "is_error": false
+     }
+    }
+   ],
+   "report": "DECISION=HOLD VALUE=0.4709 REASON=Verified NDVI 0.4709 exceeds threshold 0.4705",
+   "report_via": "handback"
+  }
+ ]
+}
