@@ -33,7 +33,8 @@
       "id": "TRACE.chain",
       "block": "v13.10 header trace line",
       "print": [
-        "Trace: token → bytes → cell → pixel → receipt → log → key"
+        "Trace: token → bytes → cell → pixel → receipt → log → key",
+        "Trace token record bytes cell pixel receipt log key"
       ],
       "status": "MEASURED",
       "layer": "L0-L3",
@@ -109,7 +110,7 @@
       "block": "v13.10 full trace panel (recovered from the v10 board)",
       "print": [
         "FULL TRACE · 30 SEP 2026",
-        "Token → record → source pixel",
+        "Token record source pixel",
         "Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked 15 links (17 checks) in 17.9 s, all verified. Grey: what must still be trusted after each check."
       ],
       "status": "MEASURED",
@@ -159,13 +160,13 @@
       "id": "TRACE.links",
       "block": "v13.10 full trace links",
       "print": [
-        "1-3 bytes → name 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks…",
+        "1-3 bytes, name 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks…",
         "4-5 cell binding",
         "6-7 derivation",
         "8-9 upstream the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900",
         "10-11 server signature",
         "12-14 public log entry 2,457,078 is in the 2,556,451-entry log",
-        "15 key → domain"
+        "15 key, domain"
       ],
       "status": "MEASURED",
       "layer": "L0-L3",
@@ -239,7 +240,7 @@
       "block": "v13.10 memory-as-coded box",
       "print": [
         "f = (kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key, args}, privacy, schema_cid, signer, signed_at)",
-        "b = CBOR(f), declaration order, NaN → f9 7e00, −0 → +0; fact_cid = base32(BLAKE3-256(b)); token emem:fact:<cell>:<fact_cid>",
+        "b = CBOR(f), declaration order, NaN as f9 7e00, −0 as +0; fact_cid = base32(BLAKE3-256(b)); token emem:fact:<cell>:<fact_cid>",
         "lat_q = round((lat+90)/180·(2²¹−1)), lng_q = round((lng+180)/360·(2²²−1)); pitch 8.583e-5° = 9.52 × 8.06 m here",
         "tslot = floor(unix / 86 400) (20721 = 25 Sep 2026); key (cell, band, tslot); as of t: argmax (signed_at, cid) over signed_at ≤ t",
         "R = Merkle(sorted fact_cids); attestation = Ed25519(PreimageV1(“attestation”){R, registry, schema}); a fact carries no signature",
@@ -290,7 +291,8 @@
       "id": "WOW.scene",
       "block": "v13.10 header image strip",
       "print": [
-        "2.02 GB scene → 84 characters"
+        "2.02 GB scene",
+        "84 characters"
       ],
       "status": "MEASURED",
       "layer": "n/a",
@@ -344,6 +346,4080 @@
       },
       "note": "",
       "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "R5.A.declined",
+      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "print": [
+        "22 of 276",
+        "22 / 276",
+        "22 / 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "primary.A.pooled_claude.false_accept: declined = n - k = 276 - 254",
+        "prereg": "research/repro/v13/r5/prereg.md"
+      },
+      "date": "2026-10-01",
+      "value": "22/276",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "primary",
+            "A",
+            "pooled_claude",
+            "false_accept",
+            "n"
+          ],
+          [
+            "primary",
+            "A",
+            "pooled_claude",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 22
+      },
+      "note": "Complement of the pre-registered false-accept count for prose: trials on corrupted items where agent B did not act. Same trials as R5.A.pooled; printed as protection so higher reads as better.",
+      "tier": "3m",
+      "checked": true
+    },
+    {
+      "id": "R5.B.declined",
+      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "print": [
+        "112 of 276",
+        "112 / 276",
+        "112 / 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "primary.B.pooled_claude.false_accept: declined = n - k = 276 - 164",
+        "prereg": "research/repro/v13/r5/prereg.md"
+      },
+      "date": "2026-10-01",
+      "value": "112/276",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "primary",
+            "B",
+            "pooled_claude",
+            "false_accept",
+            "n"
+          ],
+          [
+            "primary",
+            "B",
+            "pooled_claude",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 112
+      },
+      "note": "Complement of the pre-registered false-accept count for JSON: trials on corrupted items where agent B did not act. Same trials as R5.B.pooled; printed as protection so higher reads as better.",
+      "tier": "3m",
+      "checked": true
+    },
+    {
+      "id": "R5.C.declined",
+      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "print": [
+        "56 of 276",
+        "56 / 276",
+        "56 / 276"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "primary.C.pooled_claude.false_accept: declined = n - k = 276 - 220",
+        "prereg": "research/repro/v13/r5/prereg.md"
+      },
+      "date": "2026-10-01",
+      "value": "56/276",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "primary",
+            "C",
+            "pooled_claude",
+            "false_accept",
+            "n"
+          ],
+          [
+            "primary",
+            "C",
+            "pooled_claude",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 56
+      },
+      "note": "Complement of the pre-registered false-accept count for RAG: trials on corrupted items where agent B did not act. Same trials as R5.C.pooled; printed as protection so higher reads as better.",
+      "tier": "3m",
+      "checked": true
+    },
+    {
+      "id": "R5.D.declined",
+      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "print": [
+        "134 of 288",
+        "134 / 288",
+        "134 / 288"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "primary.D.pooled_claude.false_accept: declined = n - k = 288 - 154",
+        "prereg": "research/repro/v13/r5/prereg.md"
+      },
+      "date": "2026-10-01",
+      "value": "134/288",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "primary",
+            "D",
+            "pooled_claude",
+            "false_accept",
+            "n"
+          ],
+          [
+            "primary",
+            "D",
+            "pooled_claude",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 134
+      },
+      "note": "Complement of the pre-registered false-accept count for opaque id: trials on corrupted items where agent B did not act. Same trials as R5.D.pooled; printed as protection so higher reads as better.",
+      "tier": "3m",
+      "checked": true
+    },
+    {
+      "id": "R5.E.declined",
+      "block": "v13.10 P1 spine outcome, flipped to corruptions declined",
+      "print": [
+        "300 of 300",
+        "300 / 300",
+        "300 / 300"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "primary.E.pooled_claude.false_accept: declined = n - k = 300 - 0",
+        "prereg": "research/repro/v13/r5/prereg.md"
+      },
+      "date": "2026-10-01",
+      "value": "300/300",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "primary",
+            "E",
+            "pooled_claude",
+            "false_accept",
+            "n"
+          ],
+          [
+            "primary",
+            "E",
+            "pooled_claude",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 300
+      },
+      "note": "Complement of the pre-registered false-accept count for checked reference: trials on corrupted items where agent B did not act. Same trials as R5.E.pooled; printed as protection so higher reads as better.",
+      "tier": "3m",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M1.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M1.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M1",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M1",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M2.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M2.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M2",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M2",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M3.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M3.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M3",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M3",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M4.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "5 / 12",
+        "5 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M4.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "5/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M4",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M4",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 5
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M5.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M5.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M5",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M5",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M5b.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M5b.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M5b",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M5b",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M6.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M6.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M6",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M6",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M8.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M8.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M8",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M8",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M9.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "5 / 12",
+        "5 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M9.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "5/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M9",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M9",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 5
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M10.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M10.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M10",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M10",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M11.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M11.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M11",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M11",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M12.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M12.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M12",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M12",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M13.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M13.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M13",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M13",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M14.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M14.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M14",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M14",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M15.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M15.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M15",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M15",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M16.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M16.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M16",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M16",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M15r.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M15r.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M15r",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M15r",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M23.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M23.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M23",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M23",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M24.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M24.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M24",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M24",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M25.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M25.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M25",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M25",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M2-B.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M2-B.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M2-B",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M2-B",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M18.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M18.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M18",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M18",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.A.M20.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.A.M20.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "A",
+            "M20",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "A",
+            "M20",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M1.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M1.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M1",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M1",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M2.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M2.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M2",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M2",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M3.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M3.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M3",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M3",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M4.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "12 / 12",
+        "12 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M4.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "12/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M4",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M4",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 12
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M5.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "11 / 12",
+        "11 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M5.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "11/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M5",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M5",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 11
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M5b.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "11 / 12",
+        "11 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M5b.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "11/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M5b",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M5b",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 11
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M6.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "12 / 12",
+        "12 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M6.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "12/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M6",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M6",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 12
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M8.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M8.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M8",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M8",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M9.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "1 / 12",
+        "1 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M9.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "1/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M9",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M9",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 1
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M10.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M10.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M10",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M10",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M11.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M11.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M11",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M11",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M12.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "1 / 12",
+        "1 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M12.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "1/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M12",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M12",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 1
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M13.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M13.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M13",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M13",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M14.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M14.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M14",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M14",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M15.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M15.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M15",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M15",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M16.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M16.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M16",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M16",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M15r.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M15r.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M15r",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M15r",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M23.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M23.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M23",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M23",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M24.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "9 / 12",
+        "9 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M24.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "9/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M24",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M24",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 9
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M25.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "7 / 12",
+        "7 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M25.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "7/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M25",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M25",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 7
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M2-B.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M2-B.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M2-B",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M2-B",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M18.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M18.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M18",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M18",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.B.M20.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "12 / 12",
+        "12 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.B.M20.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "12/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "B",
+            "M20",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "B",
+            "M20",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 12
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M1.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M1.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M1",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M1",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M2.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "1 / 12",
+        "1 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M2.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "1/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M2",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M2",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 1
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M3.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M3.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M3",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M3",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M4.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M4.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M4",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M4",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M5.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M5.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M5",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M5",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M5b.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M5b.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M5b",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M5b",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M6.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M6.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M6",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M6",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M8.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M8.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M8",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M8",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M9.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M9.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M9",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M9",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M10.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M10.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M10",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M10",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M11.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M11.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M11",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M11",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M12.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M12.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M12",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M12",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M13.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M13.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M13",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M13",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M14.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M14.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M14",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M14",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M15.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M15.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M15",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M15",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M16.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M16.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M16",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M16",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M15r.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M15r.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M15r",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M15r",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M23.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M23.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M23",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M23",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M24.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M24.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M24",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M24",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M25.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M25.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M25",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M25",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M2-B.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "1 / 12",
+        "1 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M2-B.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "1/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M2-B",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M2-B",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 1
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M18.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M18.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M18",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M18",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.C.M20.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.C.M20.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "C",
+            "M20",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "C",
+            "M20",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M1.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "3 / 12",
+        "3 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M1.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "3/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M1",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M1",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 3
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M2.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "12 / 12",
+        "12 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M2.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "12/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M2",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M2",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 12
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M3.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M3.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M3",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M3",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M4.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M4.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M4",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M4",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M5.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "11 / 12",
+        "11 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M5.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "11/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M5",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M5",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 11
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M5b.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "9 / 12",
+        "9 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M5b.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "9/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M5b",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M5b",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 9
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M6.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "10 / 12",
+        "10 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M6.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "10/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M6",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M6",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 10
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M7.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "12 / 12",
+        "12 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M7.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "12/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M7",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M7",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 12
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M8.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M8.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M8",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M8",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M9.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M9.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M9",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M9",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M10.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M10.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M10",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M10",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M11.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M11.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M11",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M11",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M12.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "4 / 12",
+        "4 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M12.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "4/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M12",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M12",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 4
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M13.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M13.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M13",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M13",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M14.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M14.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M14",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M14",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M15.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M15.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M15",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M15",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M16.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M16.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M16",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M16",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M15r.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M15r.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M15r",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M15r",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M23.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M23.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M23",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M23",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M24.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M24.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M24",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M24",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M25.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "6 / 12",
+        "6 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M25.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "6/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M25",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M25",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 6
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M2-B.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "12 / 12",
+        "12 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M2-B.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "12/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M2-B",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M2-B",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 12
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M18.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "0 / 12",
+        "0 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M18.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "0/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M18",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M18",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "R5.cell.D.M20.declined",
+      "block": "v13.10 P5 matrix cell, corruptions declined",
+      "print": [
+        "7 / 12",
+        "7 / 12"
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/results.json",
+        "pointer": "cells.D.M20.false_accept: n - k"
+      },
+      "date": "2026-10-01",
+      "value": "7/12",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          [
+            "cells",
+            "D",
+            "M20",
+            "false_accept",
+            "n"
+          ],
+          [
+            "cells",
+            "D",
+            "M20",
+            "false_accept",
+            "k"
+          ]
+        ],
+        "expect": 7
+      },
+      "note": "Complement of the cell's false-accept count (same trials).",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "S.R1.A.declined",
+      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "print": [
+        "R1 0 / 15",
+        "0 of 15"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v11/out/mutation_matrix.json",
+        "pointer": "summary.A: applicable - false_accepts"
+      },
+      "date": "2026-10-01",
+      "value": "0/15",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v11/out/mutation_matrix.json",
+        "arg": [
+          [
+            "summary",
+            "A",
+            "applicable"
+          ],
+          [
+            "summary",
+            "A",
+            "false_accepts"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "S.R1.B.declined",
+      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "print": [
+        "R1 0 / 15",
+        "0 of 15"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v11/out/mutation_matrix.json",
+        "pointer": "summary.B: applicable - false_accepts"
+      },
+      "date": "2026-10-01",
+      "value": "0/15",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v11/out/mutation_matrix.json",
+        "arg": [
+          [
+            "summary",
+            "B",
+            "applicable"
+          ],
+          [
+            "summary",
+            "B",
+            "false_accepts"
+          ]
+        ],
+        "expect": 0
+      },
+      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "S.R1.C.declined",
+      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "print": [
+        "R1 3 / 16",
+        "3 of 16"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v11/out/mutation_matrix.json",
+        "pointer": "summary.C: applicable - false_accepts"
+      },
+      "date": "2026-10-01",
+      "value": "3/16",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v11/out/mutation_matrix.json",
+        "arg": [
+          [
+            "summary",
+            "C",
+            "applicable"
+          ],
+          [
+            "summary",
+            "C",
+            "false_accepts"
+          ]
+        ],
+        "expect": 3
+      },
+      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "tier": "30cm",
+      "checked": true
+    },
+    {
+      "id": "S.R1.I.declined",
+      "block": "v13.10 P5 matrix R1 total, corruptions declined",
+      "print": [
+        "R1 16 / 16",
+        "16 of 16"
+      ],
+      "status": "MEASURED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v11/out/mutation_matrix.json",
+        "pointer": "summary.I: applicable - false_accepts"
+      },
+      "date": "2026-10-01",
+      "value": "16/16",
+      "check": {
+        "kind": "approx_diff",
+        "file": "repro/v11/out/mutation_matrix.json",
+        "arg": [
+          [
+            "summary",
+            "I",
+            "applicable"
+          ],
+          [
+            "summary",
+            "I",
+            "false_accepts"
+          ]
+        ],
+        "expect": 16
+      },
+      "note": "Deterministic receiver (R1 suite): corruptions not accepted.",
+      "tier": "30cm",
       "checked": true
     }
   ]

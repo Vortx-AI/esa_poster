@@ -12,11 +12,11 @@
 <div class="blk headtext" data-block="header_text" style="--x:0;--y:0;--w:627.5;--h:188">
   <h1 class="title rt" data-role="title" data-claim="H.title">EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol<br>for AI Agents over Foundation-Model Embeddings</h1>
   <p class="hero rt" data-role="hero" data-claim="U.hero">An Earth observation that<br>survives an agent <span class="hl">handoff.</span></p>
-  <p class="subhero rt" data-role="subhero" data-claim="V8.language">EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.</p>
+  <p class="subhero rt" data-role="subhero" data-claim="V8.language">emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.</p>
   <div class="lead">
     <p class="leadq rt" data-role="question">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</p>
     <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes raw satellite observations <b>addressable by place, band and time</b>, each a signed record named by the <b>BLAKE3 hash of its bytes</b>. The exact evidence A cites survives compaction, a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
-    <p class="leadtrace" data-claim="TRACE.chain">Trace: token → record bytes → cell → pixel → receipt → log → key</p>
+    <p class="leadtrace steps" data-claim="TRACE.chain"><b>Trace</b><span>token</span><span>record bytes</span><span>cell</span><span>pixel</span><span>receipt</span><span>log</span><span>key</span></p>
   </div>
   <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Encode in orbit, decode in AI’s reasoning with emem.</span></p>
   <div class="byline" data-role="byline" data-claim="H.byline H.session">
@@ -40,19 +40,19 @@
   <div class="fig" data-figslot="f2_spine" style="--fw:801;--fh:118"><!--fig:f2_spine--></div>
   <div class="spinefoot">
     <div class="spineleft">
-    <p class="agentstrip rt" data-mode="r5" data-role="take" data-claim="R5.A.pooled R5.E.pooled">In the controlled handoff test, prose led agents to act on {R5.A.pooled.false_accept} corruptions; a reference with explicit checking instructions, {R5.E.pooled.false_accept}.</p>
+    <p class="agentstrip rt" data-mode="r5" data-role="take" data-claim="R5.E.declined R5.A.declined R5.A.pooled">In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).</p>
     <p class="agentstrip rt" data-mode="r1" data-role="take" data-claim="S.R1.A S.R1.I">In our suite, the deterministic receiver accepted 15 of 15 corruptions carried by prose and 0 of 16 with the checked reference.</p>
     <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).</p>
     </div>
     <div class="scope" data-mode="r5">
       <p data-role="scope" data-claim="R5.models R5.dates">{R5.models}; {R5.dates}. Pooled results above are the Claude runs; Qwen is reported separately.</p>
-      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b S.threshold">Qwen2.5-7B: prose 22 of 23; checked reference 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.</p>
+      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b S.threshold">Qwen2.5-7B acted on corruptions with prose 22 of 23 times; with the checked reference, 2 of 25. One run. Simulated corruptions, constructed decision threshold; model breakdown and confidence intervals in Reproduce.</p>
     </div>
     <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope S.threshold">Deterministic receiver, one record and one band. The 0.4705 threshold makes rounding change the decision. Token-copy mutation M7 has no prose form.</p>
   </div>
 </section>
 
-<div class="col" data-col="left" style="--gap:4;--x:20;--y:433.5;--w:193.5;--h:639">
+<div class="col" data-col="left" style="--gap:3.5;--x:20;--y:433.5;--w:193.5;--h:639">
 <section class="panel c3" data-block="p2" data-brief="2 · One NDVI, eight values">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">2</span>How does a value change between agents?</p>
   <h2 class="rt" data-role="headline" data-claim="E8.summary">One NDVI, eight values</h2>
@@ -78,17 +78,17 @@
 </section>
 <section class="panel c3 trace" data-block="trace" data-brief="Full trace">
   <p class="extension-label" data-claim="TRACE.run">FULL TRACE · 30 SEP 2026</p>
-  <h2 class="rt s28" data-role="headline" data-claim="TRACE.run">Token → record → source pixel</h2>
+  <h2 class="rt s28 steps" data-role="headline" data-claim="TRACE.run"><span>Token</span><span>record</span><span>source pixel</span></h2>
   <div class="accept" data-claim="TRACE.accept">accept if BLAKE3(b) = cid &amp; cell(b) = cell(token) &amp; NDVI(DN(b)) = value &amp; COG[row, col] = DN(b) &amp; Ed25519(σ) &amp; leaf in STH &amp; STH<sub>geo.qa</sub> prefix of STH</div>
   <p class="tlead rt" data-role="body" data-claim="TRACE.run">Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check.</p>
   <div class="chain">
-    <p data-claim="TRACE.links"><b>1-3 bytes → name</b> 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks… <i>· still trusted: nothing</i></p>
+    <p data-claim="TRACE.links"><b>1-3 bytes, name</b> 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks… <i>· still trusted: nothing</i></p>
     <p data-claim="TRACE.links"><b>4-5 cell binding</b> hashed cell = token cell = the lat/lng the derivation used <i>· nothing</i></p>
     <p data-claim="TRACE.links"><b>6-7 derivation</b> scene id, DNs, catalogue and offset are inside the bytes; NDVI recomputed bit-for-bit <i>· argument order read from emem’s code</i></p>
     <p data-claim="TRACE.links"><b>8-9 upstream</b> the STAC item matches the scene; the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900 <i>· STAC carries no checksum</i></p>
     <p data-claim="TRACE.links"><b>10-11 server signature</b> emem.dev’s Ed25519 receipt over the request id, time, cells and returned fact_cids <i>· shows what emem.dev served, not that the value is right</i></p>
     <p data-claim="TRACE.links"><b>12-14 public log</b> entry 2,457,078 is in the 2,556,451-entry log, consistent with the root geo.qa co-signed <i>· geo.qa is also run by Vortx AI</i></p>
-    <p data-claim="TRACE.links"><b>15 key → domain</b> the signing key is published in did:web, JWKS and DNS TXT for emem.dev <i>· Web PKI; DNS without DNSSEC</i></p>
+    <p data-claim="TRACE.links"><b>15 key, domain</b> the signing key is published in did:web, JWKS and DNS TXT for emem.dev <i>· Web PKI; DNS without DNSSEC</i></p>
   </div>
   <p class="scope tscope" data-role="scope" data-claim="TRACE.offline">Links 1-5 and 12-14 fit in a 4,906-byte file that repeats 9 checks with networking disabled (unshare -rn); a 1-bit tamper, a wrong cell or a wrong key fails it.</p>
 </section>
@@ -118,7 +118,7 @@
   <p class="extension-label" data-claim="CODE.commit">THE MEMORY, AS CODED · emem 18adb67 · fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest</p>
   <div class="codegrid" data-claim="CODE.lines">
     <b>fact</b><span>f = (kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key, args}, privacy, schema_cid, signer, signed_at)</span>
-    <b>name</b><span>b = CBOR(f), declaration order, NaN → f9 7e00, −0 → +0; fact_cid = base32(BLAKE3-256(b)); token emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>
+    <b>name</b><span>b = CBOR(f), declaration order, NaN as f9 7e00, −0 as +0; fact_cid = base32(BLAKE3-256(b)); token emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>
     <b>cell</b><span>lat_q = round((lat+90)/180·(2²¹−1)), lng_q = round((lng+180)/360·(2²²−1)); pitch 8.583e-5° = 9.52 × 8.06 m here</span>
     <b>recall</b><span>tslot = floor(unix / 86 400) (20721 = 25 Sep 2026); key (cell, band, tslot); as of t: argmax (signed_at, cid) over signed_at ≤ t</span>
     <b>sign</b><span>R = Merkle(sorted fact_cids); attestation = Ed25519(PreimageV1(“attestation”){R, registry, schema}); a fact carries no signature</span>
@@ -129,7 +129,7 @@
 <section class="panel c6" data-block="p5" data-brief="5 · Checks back to the source">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">5</span>Which changes can the receiver detect?</p>
   <h2 class="rt" data-role="headline" data-claim="U.checks">Checks can continue back to the source</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="U.checks">Resolve → Re-hash → Bind → Recompute → Re-read</p>
+  <p class="mech rt steps" data-role="mechanism" data-claim="U.checks"><span>Resolve</span><span>Re-hash</span><span>Bind</span><span>Recompute</span><span>Re-read</span></p>
   <div class="fig" data-figslot="f6_mutation_matrix" style="--fw:396;--fh:196"><!--fig:f6_mutation_matrix--></div>
   <p class="cap rt" data-role="caption" data-claim="V6.controls V6.controls.n V6.controls.refused X.loo">Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).</p>
   <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.F6.scope R5.baseline.catch R5.block2.M15r">Agent bars: 12 runs per item, across 23 items. JSON and an opaque id caught some changes from their fields. In the live pre-fix record case, agents acted on 4 of 4 uninstructed, 2 of 4 with resolve-and-bind instructions, and 0 of 4 with a source re-read.</p>

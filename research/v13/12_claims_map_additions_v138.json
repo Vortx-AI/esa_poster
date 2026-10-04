@@ -47,7 +47,7 @@
       "id": "V8.language",
       "block": "v13.8 EO usability",
       "print": [
-        "EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.",
+        "emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.",
         "A compact citation keeps the observation traceable across agents and time.",
         "An EMEM cell indexes a location. Products retain their native pixels; CHIRPS records an out-of-coverage absence.",
         "a: location cell · b: variable · t: valid time · v: value"

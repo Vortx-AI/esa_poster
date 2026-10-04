@@ -19,7 +19,7 @@ text(0, 5, 'From observation to the next agent', 24, 600)
 steps = [
     ('Observe', 'Satellite or sensor', 'Keep the source scene.'),
     ('Locate', 'Location · product · time', 'Lookup identity'),
-    ('Record', 'Canonical record → CID', 'Batch attestation'),
+    ('Record', 'Canonical record + CID', 'Batch attestation'),
     ('Hand off', 'Pass the reference', 'MCP · REST · A2A'),
     ('Resolve', 'Retrieve the same record', 'Recover its provenance.'),
     ('Check', 'Hash · binding · signature', 'Re-read source if needed.'),
@@ -36,8 +36,6 @@ for i, (verb, detail, scope) in enumerate(steps):
     text(x + 4, 21, verb, 28, 700 if hand else 600, 'white' if hand else 'emem' if i >= 2 else 'ink')
     text(x + 4, 32, detail, 17, 500, 'white' if hand else 'ink')
     text(x + 4, 41, scope, 17, 400, 'white' if hand else 'ink2')
-    if i < 6:
-        text(x + width + 1, 29, '→', 20, 500, 'emem')
 
 S.save(fig, 'f18_workflow')
 Path(S.OUT, 'f18_workflow.labels.json').write_text(json.dumps({

@@ -22,7 +22,7 @@
    "claim": "V6.matrix_labels"
   },
   {
-   "text": "refused",
+   "text": "declined",
    "pt": 14,
    "claim": "V6.matrix_labels"
   },
@@ -142,24 +142,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M1.false_accept"
+   "claim": "R5.cell.A.M1.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M1.false_accept"
+   "claim": "R5.cell.B.M1.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M1.false_accept"
+   "claim": "R5.cell.C.M1.declined"
   },
   {
-   "text": "9 / 12",
+   "text": "3 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M1.false_accept"
+   "claim": "R5.cell.D.M1.declined"
   },
   {
    "text": "C",
@@ -184,22 +184,22 @@
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M2.false_accept"
+   "claim": "R5.cell.A.M2.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M2.false_accept"
+   "claim": "R5.cell.B.M2.declined"
   },
   {
-   "text": "11 / 12",
+   "text": "1 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M2.false_accept"
+   "claim": "R5.cell.C.M2.declined"
   },
   {
-   "text": "0 / 12",
+   "text": "12 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M2.false_accept"
+   "claim": "R5.cell.D.M2.declined"
   },
   {
    "text": "C",
@@ -222,24 +222,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M8.false_accept"
+   "claim": "R5.cell.A.M8.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M8.false_accept"
+   "claim": "R5.cell.B.M8.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M8.false_accept"
+   "claim": "R5.cell.C.M8.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M8.false_accept"
+   "claim": "R5.cell.D.M8.declined"
   },
   {
    "text": "F",
@@ -272,24 +272,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "7 / 12",
+   "text": "5 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M4.false_accept"
+   "claim": "R5.cell.A.M4.declined"
   },
   {
-   "text": "0 / 12",
+   "text": "12 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M4.false_accept"
-  },
-  {
-   "text": "6 / 12",
-   "pt": 14,
-   "claim": "R5.cell.C.M4.false_accept"
+   "claim": "R5.cell.B.M4.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M4.false_accept"
+   "claim": "R5.cell.C.M4.declined"
+  },
+  {
+   "text": "6 / 12",
+   "pt": 14,
+   "claim": "R5.cell.D.M4.declined"
   },
   {
    "text": "E",
@@ -317,24 +317,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "7 / 12",
+   "text": "5 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M9.false_accept"
+   "claim": "R5.cell.A.M9.declined"
   },
   {
-   "text": "11 / 12",
+   "text": "1 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M9.false_accept"
-  },
-  {
-   "text": "6 / 12",
-   "pt": 14,
-   "claim": "R5.cell.C.M9.false_accept"
+   "claim": "R5.cell.B.M9.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M9.false_accept"
+   "claim": "R5.cell.C.M9.declined"
+  },
+  {
+   "text": "6 / 12",
+   "pt": 14,
+   "claim": "R5.cell.D.M9.declined"
   },
   {
    "text": "F",
@@ -367,24 +367,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M10.false_accept"
+   "claim": "R5.cell.A.M10.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M10.false_accept"
+   "claim": "R5.cell.B.M10.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M10.false_accept"
+   "claim": "R5.cell.C.M10.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M10.false_accept"
+   "claim": "R5.cell.D.M10.declined"
   },
   {
    "text": "F",
@@ -417,24 +417,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
-   "pt": 14,
-   "claim": "R5.cell.A.M6.false_accept"
-  },
-  {
    "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M6.false_accept"
+   "claim": "R5.cell.A.M6.declined"
+  },
+  {
+   "text": "12 / 12",
+   "pt": 14,
+   "claim": "R5.cell.B.M6.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M6.false_accept"
+   "claim": "R5.cell.C.M6.declined"
   },
   {
-   "text": "2 / 12",
+   "text": "10 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M6.false_accept"
+   "claim": "R5.cell.D.M6.declined"
   },
   {
    "text": "E",
@@ -467,24 +467,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M11.false_accept"
+   "claim": "R5.cell.A.M11.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M11.false_accept"
+   "claim": "R5.cell.B.M11.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M11.false_accept"
+   "claim": "R5.cell.C.M11.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M11.false_accept"
+   "claim": "R5.cell.D.M11.declined"
   },
   {
    "text": "F",
@@ -517,24 +517,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M12.false_accept"
+   "claim": "R5.cell.A.M12.declined"
   },
   {
-   "text": "11 / 12",
+   "text": "1 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M12.false_accept"
+   "claim": "R5.cell.B.M12.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M12.false_accept"
+   "claim": "R5.cell.C.M12.declined"
   },
   {
-   "text": "8 / 12",
+   "text": "4 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M12.false_accept"
+   "claim": "R5.cell.D.M12.declined"
   },
   {
    "text": "F",
@@ -562,24 +562,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M14.false_accept"
+   "claim": "R5.cell.A.M14.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M14.false_accept"
+   "claim": "R5.cell.B.M14.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M14.false_accept"
+   "claim": "R5.cell.C.M14.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M14.false_accept"
+   "claim": "R5.cell.D.M14.declined"
   },
   {
    "text": "H",
@@ -612,24 +612,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M5.false_accept"
+   "claim": "R5.cell.A.M5.declined"
   },
   {
-   "text": "1 / 12",
+   "text": "11 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M5.false_accept"
+   "claim": "R5.cell.B.M5.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M5.false_accept"
+   "claim": "R5.cell.C.M5.declined"
   },
   {
-   "text": "1 / 12",
+   "text": "11 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M5.false_accept"
+   "claim": "R5.cell.D.M5.declined"
   },
   {
    "text": "E",
@@ -657,24 +657,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M16.false_accept"
+   "claim": "R5.cell.A.M16.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M16.false_accept"
+   "claim": "R5.cell.B.M16.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M16.false_accept"
+   "claim": "R5.cell.C.M16.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M16.false_accept"
+   "claim": "R5.cell.D.M16.declined"
   },
   {
    "text": "G",
@@ -707,24 +707,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M3.false_accept"
+   "claim": "R5.cell.A.M3.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M3.false_accept"
+   "claim": "R5.cell.B.M3.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M3.false_accept"
+   "claim": "R5.cell.C.M3.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M3.false_accept"
+   "claim": "R5.cell.D.M3.declined"
   },
   {
    "text": "D",
@@ -767,9 +767,9 @@
    "claim": "F6.na"
   },
   {
-   "text": "0 / 12",
+   "text": "12 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M7.false_accept"
+   "claim": "R5.cell.D.M7.declined"
   },
   {
    "text": "D",
@@ -797,24 +797,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M13.false_accept"
+   "claim": "R5.cell.A.M13.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M13.false_accept"
+   "claim": "R5.cell.B.M13.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M13.false_accept"
+   "claim": "R5.cell.C.M13.declined"
   },
   {
    "text": "6 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M13.false_accept"
+   "claim": "R5.cell.D.M13.declined"
   },
   {
    "text": "F",
@@ -847,24 +847,24 @@
    "claim": "F6.desc"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.A.M15.false_accept"
+   "claim": "R5.cell.A.M15.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.B.M15.false_accept"
+   "claim": "R5.cell.B.M15.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.C.M15.false_accept"
+   "claim": "R5.cell.C.M15.declined"
   },
   {
-   "text": "12 / 12",
+   "text": "0 / 12",
    "pt": 14,
-   "claim": "R5.cell.D.M15.false_accept"
+   "claim": "R5.cell.D.M15.declined"
   },
   {
    "text": "I",
@@ -922,54 +922,54 @@
    "claim": "X.entity"
   },
   {
-   "text": "B acts on corrupted evidence",
+   "text": "B declined corrupted evidence",
    "pt": 20,
    "claim": "F6.totals_label"
   },
   {
-   "text": "254 / 276",
+   "text": "22 / 276",
    "pt": 17,
-   "claim": "R5.A.pooled"
+   "claim": "R5.A.declined"
   },
   {
-   "text": "R1 15 / 15",
+   "text": "R1 0 / 15",
    "pt": 14,
-   "claim": "S.R1.A"
+   "claim": "S.R1.A.declined"
   },
   {
-   "text": "164 / 276",
+   "text": "112 / 276",
    "pt": 17,
-   "claim": "R5.B.pooled"
+   "claim": "R5.B.declined"
   },
   {
-   "text": "R1 15 / 15",
+   "text": "R1 0 / 15",
    "pt": 14,
-   "claim": "S.R1.B"
+   "claim": "S.R1.B.declined"
   },
   {
-   "text": "220 / 276",
+   "text": "56 / 276",
    "pt": 17,
-   "claim": "R5.C.pooled"
+   "claim": "R5.C.declined"
   },
   {
-   "text": "154 / 288",
+   "text": "134 / 288",
    "pt": 17,
-   "claim": "R5.D.pooled"
+   "claim": "R5.D.declined"
   },
   {
-   "text": "R1 13 / 16",
+   "text": "R1 3 / 16",
    "pt": 14,
-   "claim": "S.R1.C"
+   "claim": "S.R1.C.declined"
   },
   {
-   "text": "0 / 300",
+   "text": "300 / 300",
    "pt": 17,
-   "claim": "R5.E.pooled"
+   "claim": "R5.E.declined"
   },
   {
-   "text": "R1 0 / 16",
+   "text": "R1 16 / 16",
    "pt": 14,
-   "claim": "S.R1.I"
+   "claim": "S.R1.I.declined"
   },
   {
    "text": "C",

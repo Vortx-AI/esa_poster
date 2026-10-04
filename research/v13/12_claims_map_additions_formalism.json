@@ -36,7 +36,8 @@
         "0.50",
         "0.75",
         "1",
-        "Tests pin 3σ → 0.50 and 9σ → 0.75."
+        "Tests pin 3σ → 0.50 and 9σ → 0.75.",
+        "Tests pin 3σ at 0.50 and 9σ at 0.75."
       ],
       "status": "MEASURED",
       "layer": "L0-L3",
@@ -148,7 +149,8 @@
         "915.07 m",
         "Open-Meteo / DEM90",
         "Copernicus DEM30",
-        "as of 15 Jun → 918.0 m"
+        "as of 15 Jun → 918.0 m",
+        "as of 15 Jun: 918.0 m"
       ],
       "status": "MEASURED",
       "layer": "L0-L3",

@@ -12,7 +12,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > An Earth observation that survives an agent handoff.
 
-> EMEM gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
+> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
 
 > Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
 
@@ -28,7 +28,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Agent A cites a source read. A relay changes the evidence. Agent B acts on it or checks the reference.
 
-> In the controlled handoff test, prose led agents to act on 254 of 276 corruptions; a reference with explicit checking instructions, 0 of 300.
+> In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).
 
 > Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).
 
@@ -70,7 +70,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 ### Full trace
 
-> Token → record → source pixel
+> Token · record · source pixel
 
 > Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked 15 links (17 checks) in 17.9 s, all verified. Grey: what must still be trusted after each check.
 
@@ -98,7 +98,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Checks can continue back to the source
 
-> Resolve → Re-hash → Bind → Recompute → Re-read
+> Resolve · Re-hash · Bind · Recompute · Re-read
 
 > Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).
 

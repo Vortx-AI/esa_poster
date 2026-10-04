@@ -190,7 +190,7 @@ else:
 # glyph legend, two rows, drawn patches + words
 lx, ly = 0.0, 10.2
 for fc, ec, word in ((C["harm"], "none", "B acted on corrupted evidence"), (C["unaffected"], "none", "unaffected"),
-                     (C["emem"], "none", "refused"), (C["na"], "none", "not applicable")):
+                     (C["emem"], "none", "declined"), (C["na"], "none", "not applicable")):
     box(lx, ly - 2.0, 6.0, 4.0, fc, r=0.4)
     t = T(lx + 7.6, ly, word, 14, color=C["ink2"])
     lx += 7.6 + wmm(t) + 5.0
@@ -243,10 +243,11 @@ def r5_cell(xc, y, w, h, cond, mid, r1row):
             T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
         return
     k, n = kn
-    bw = (w - 19) * (k / n if n else 0)
-    box(xc + 4.5, y + 1.0, max(bw, 0.01), h - 2.0, C["harm"], r=0.4)
-    T(xc + w, y + h / 2, f"{k}\u2009/\u2009{n}", 14, ha="right", color=C["ink2"],
-      claim=f"R5.cell.{R5_COND[cond]}.{mid}.false_accept")
+    dk = n - k   # v13.10: bars show corruptions declined (n - acted on), the same reading as panel 1
+    bw = (w - 19) * (dk / n if n else 0)
+    box(xc + 4.5, y + 1.0, max(bw, 0.01), h - 2.0, C["emem"], r=0.4)
+    T(xc + w, y + h / 2, f"{dk}\u2009/\u2009{n}", 14, ha="right", color=C["ink2"],
+      claim=f"R5.cell.{R5_COND[cond]}.{mid}.declined")
 
 
 def row(mid, y, h, first_in_group, fam):
@@ -321,9 +322,10 @@ y_end = y - GG
 yt = y_end + 2.2
 ax.plot([0, W], [yt, yt], color=C["ink2"], lw=0.5 / PTMM, zorder=1)
 ty = yt + 6.6
-T(0.3, ty + 0.6, "B acts on corrupted evidence", 20, weight=600, claim="F6.totals_label")
+T(0.3, ty + 0.6, "B declined corrupted evidence" if MODE == "R5" else "B acts on corrupted evidence", 20, weight=600, claim="F6.totals_label")
 claim_of = {"A": "S.R1.A", "B": "S.R1.B", "C": "S.R1.C", "I": "S.R1.I"}
-R5_POOLED_CLAIM = {"A": "R5.A.pooled", "B": "R5.B.pooled", "RAG": "R5.C.pooled", "C": "R5.D.pooled", "E": "R5.E.pooled"}
+R5_POOLED_CLAIM = {"A": "R5.A.declined", "B": "R5.B.declined", "RAG": "R5.C.declined", "C": "R5.D.declined", "E": "R5.E.declined"}
+R1_DECL = {"S.R1.A": "S.R1.A.declined", "S.R1.B": "S.R1.B.declined", "S.R1.C": "S.R1.C.declined", "S.R1.I": "S.R1.I.declined"}
 R1_CEIL = {"A": ("S.R1.A", SUM["A"]), "B": ("S.R1.B", SUM["B"]), "C": ("S.R1.C", SUM["C"]), "E": ("S.R1.I", SUM["I"])}
 
 
@@ -331,10 +333,11 @@ def r5_total(xc, cond, color):
     """R5 mode: the agents' pooled false acceptance (primary items, three Claude models) with R1's total beneath
     as the deterministic ceiling, so the same quantity reads the same here and on the spine."""
     k, n = R5D["pooled"][cond]
-    T(xc, ty - 1.6, f"{k}\u2009/\u2009{n}", 17, weight=700, color=color(k), ha="center", claim=R5_POOLED_CLAIM[cond])
+    T(xc, ty - 1.6, f"{n - k}\u2009/\u2009{n}", 17, weight=700, color=color(k), ha="center", claim=R5_POOLED_CLAIM[cond])
     if cond in R1_CEIL:
         cid, s_ = R1_CEIL[cond]
-        T(xc, ty + 4.2, f"R1 {s_['false_accepts']}\u2009/\u2009{s_['applicable']}", 14, color=C["ink2"], ha="center", claim=cid)
+        T(xc, ty + 4.2, f"R1 {s_['applicable'] - s_['false_accepts']}\u2009/\u2009{s_['applicable']}", 14, color=C["ink2"],
+          ha="center", claim=R1_DECL[cid])
 
 
 for c in cond_cols:

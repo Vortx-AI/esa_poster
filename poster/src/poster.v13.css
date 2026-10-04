@@ -218,3 +218,14 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .trace .chain i{font-style:normal;color:var(--muted)}
 .trace .tscope{margin-top:1mm}
 [data-block="p10"] .tfline{font-size:17pt;line-height:1.06;color:var(--emem);font-weight:500;margin-top:.6mm}
+
+/* v13.10: step sequences print as boxes, not arrow glyphs */
+.steps{display:flex;flex-wrap:wrap;align-items:center;gap:1.4mm}
+.steps>span{display:inline-block;border:.35mm solid currentColor;border-radius:1.2mm;padding:.2mm 1.6mm;line-height:1.1}
+.headtext .leadtrace.steps{gap:1mm}
+.headtext .leadtrace.steps>b{font-weight:700;margin-right:.6mm}
+.headtext .leadtrace.steps>span{padding:0 1.1mm}
+h2.steps>span{padding:0 1.6mm;line-height:1.02}
+h2.steps{gap:1.2mm;margin-top:.6mm}
+h2.steps>span:last-child{background:var(--emem);color:#FFFFFF;border-color:var(--emem)}
+.mech.steps>span{border-color:var(--emem);color:var(--emem);background:var(--emem-tint);font-weight:500}

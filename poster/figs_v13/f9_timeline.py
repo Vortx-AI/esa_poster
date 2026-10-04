@@ -29,7 +29,7 @@ for x,rec,date,provider,identity in [(0,old,'signed 28 May','Open-Meteo / DEM90'
  T(x+4,41,provider,14)
  T(x+4,46,identity,14,S.C['ink2'])
 ax.add_patch(Rectangle((0,52),W,11,fc=S.C['emem_tint'],ec='none'))
-T(4,57.5,f"as of 15 Jun → {probe['value']:.1f} m",20,S.C['emem'],600)
+T(4,57.5,f"as of 15 Jun: {probe['value']:.1f} m",20,S.C['emem'],600)
 T(0,70.5,'The next agent can recover the earlier citation.',17)
 S.save(fig,'f9_timeline')
 Path(S.OUT,'f9_timeline.labels.json').write_text(json.dumps({'figure':'f9_timeline','size_mm':[W,H],'labels':labels},indent=1)+'\n')
