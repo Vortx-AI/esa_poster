@@ -1,0 +1,47 @@
+{
+  "colour": "RGB master; printer-managed conversion",
+  "cards": [
+    {
+      "file": "emem-card-avijeet-singh.pdf",
+      "pages": 2,
+      "trim_mm": [
+        85,
+        55
+      ],
+      "media_and_bleed_mm": [
+        91,
+        61
+      ],
+      "minimum_copy_pt": 8.5,
+      "minimum_artwork_ppi": 426.4,
+      "fonts_embedded": [
+        "/AAAAAA+IBMPlexSans-Bold",
+        "/AAAAAA+IBMPlexSans-Medm"
+      ],
+      "exact_copy_verified": true,
+      "copy_safe_margin_mm": 3,
+      "sha256": "88f02594b94b486a268492d36dbd7632c6e62b238385adc81974a15c94a8b16f"
+    },
+    {
+      "file": "emem-card-jaya.pdf",
+      "pages": 2,
+      "trim_mm": [
+        85,
+        55
+      ],
+      "media_and_bleed_mm": [
+        91,
+        61
+      ],
+      "minimum_copy_pt": 8.5,
+      "minimum_artwork_ppi": 426.4,
+      "fonts_embedded": [
+        "/AAAAAA+IBMPlexSans-Bold",
+        "/AAAAAA+IBMPlexSans-Medm"
+      ],
+      "exact_copy_verified": true,
+      "copy_safe_margin_mm": 3,
+      "sha256": "fccd4c3c0976ffc3af600da9b3fe69f3c7719e1d6777162f8f5d5b5d504dd6b2"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "trim_mm": [85, 55],
+  "bleed_mm": 3,
+  "front": {"headline": ["Encode", "in orbit"]},
+  "back": {
+    "headline": ["Decode", "@emem"],
+    "tagline": ["One token.", "Many worlds."],
+    "website": "emem.dev"
+  },
+  "people": [
+    {"slug": "avijeet-singh", "name": "Avijeet Singh", "email": "avijeet@vortx.ai"},
+    {"slug": "jaya", "name": "Jaya", "email": "jaya@vortx.ai"}
+  ]
+}
