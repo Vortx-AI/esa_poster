@@ -250,7 +250,7 @@ def r5_cell(xc, y, w, h, cond, mid, r1row):
         return
     k, n = kn
     if VARIANT == "300of300":   # corruptions the agents did not act on (declined, or acted on the genuine value)
-        v, fill, cid = n - k, C["emem"], f"R5.cell.{R5_COND[cond]}.{mid}.notacted"
+        v, fill, cid = n - k, C["L1"], f"R5.cell.{R5_COND[cond]}.{mid}.notacted"   # not the legend's "refused" blue
     else:                       # corruptions the agents acted on (false acceptance)
         v, fill, cid = k, C["harm"], f"R5.cell.{R5_COND[cond]}.{mid}.false_accept"
     bw = (w - 19) * (v / n if n else 0)

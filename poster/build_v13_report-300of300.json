@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T10:57:30+00:00",
+ "built_utc": "2026-10-04T11:09:24+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -78,7 +78,7 @@
    "file": "poster/fig/v13/f6_mutation_matrix.300of300.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T10:46:31"
+   "mtime": "2026-10-04T11:08:25"
   },
   "f7_wrong_pixel": {
    "state": "placed",
@@ -244,7 +244,7 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 825 words containing a letter, 849 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
+    "running text: 826 words containing a letter, 850 tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)",
     "  1 · Earth to agents: 97 tokens (section C: 97)",
     "  10 · Token family: 52 tokens (section C: 52)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
@@ -260,7 +260,7 @@
     "  Contribution and prior art: 53 tokens (section C: 53)",
     "  Full trace: 32 tokens (section C: 34)",
     "  Header: 149 tokens (section C: 150)",
-    "  Memory operations: 30 tokens (section C: 30)"
+    "  Memory operations: 31 tokens (section C: 31)"
    ]
   }
  },
@@ -595,7 +595,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 825,
-  "running_tokens": 849
+  "running_words_with_letter": 826,
+  "running_tokens": 850
  }
 }

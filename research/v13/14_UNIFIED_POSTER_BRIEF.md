@@ -60,7 +60,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Use it in an EO workflow
 
-> Compare vegetation observations, keep conflicting estimates and pass their references on. Each request returns one observation, read from the archive if not yet stored.
+> Compare vegetation observations, keep conflicting estimates and pass their references on. A request reuses stored records and fetches and signs missing ones from the archive.
 
 ### 7 · What checks establish
 
