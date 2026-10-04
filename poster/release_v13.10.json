@@ -1,60 +1,60 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "016d455096708bc99f6dcd7b280838bcf320906e",
+ "base_commit": "d52419db5e601e42486004aff2f405aa1b9c715e",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2409978,
-   "sha256": "66cf4634ab761f591b29db5b7fcce8613a241f5136e006f9e615255c7620d35e"
+   "bytes": 2410226,
+   "sha256": "677e4e50b2d14165eedc3fc339779ea5658a07bf8be76b6234257fe1a13664bb"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4576972,
-   "sha256": "8c00f18de0effa58a1f19aebeab397ff47405a7ac8454430c5b6534e6d889d41"
+   "bytes": 4580063,
+   "sha256": "f38267d9039820111f58d82afd5db382f630603af862f53a193fb7eeb991d684"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 15976653,
-   "sha256": "3adac4c865f0ec8100a9fc535471fbfd9eacc1d68d5cf52d596558716bcd777e"
+   "bytes": 15981351,
+   "sha256": "de95a4df33afa551c69dd95276e1de47c2a686480fbc073aa7742384769e9006"
   },
   "poster/poster.html": {
-   "bytes": 3310020,
-   "sha256": "b3e83d0593e4ca9c10b531261dddd0b9838d1b12437fe5c01b9453c8e082018b"
+   "bytes": 3310275,
+   "sha256": "bb8f4b6e2ac55950887e25da1670e475a8b2c9c47dcc71c320eecf4338bbd191"
   },
   "poster/build_v13_report.json": {
    "bytes": 26747,
-   "sha256": "44ee80144fe967ebf9bc99a535ed3fbf22bfbdc754909c8f54dc489ca486d3cc"
+   "sha256": "12ce6c150365dafd3c36b41a698d3259f3c7c9eb0d014b9128918226e1857182"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 23805,
-   "sha256": "b6999dedcd4044772378e0cf3b283c3ca94e58f9f909424c121678ad4bc9079f"
+   "bytes": 23810,
+   "sha256": "a4ec5f6783a09090e013c9066b3e07e2605c49226650de55d6ab0f36990c9b50"
   },
   "poster/src/poster.v13.css": {
    "bytes": 17192,
    "sha256": "a006a90e5de26fd48cd215e6269c0508877b163004f600538ab17c0a23cc44d3"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2410015,
-   "sha256": "c2bccdceaac3c4088880cee09771f606bdd01c32aac3b600773a369a00bfd8f8"
+   "bytes": 2410264,
+   "sha256": "abb6d5466074798978bd366b8a860296b3ca59a1868a26711ac2b1001e17ea29"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4584086,
-   "sha256": "754548a4f60f859a624ac0b8a74c4fda4688c5eb12f518c2e9fe934ffe52b642"
+   "bytes": 4587396,
+   "sha256": "5f994889d3970f23db5eca11cc6cca6b75e491767c4fc7f6c8bb7479bb7454b7"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 15977024,
-   "sha256": "3570c1cb8e212bf4a256f17d323401b137aba51991fcae46e9695d4d218bd1e3"
+   "bytes": 15983748,
+   "sha256": "65679328ea6c4dcbf85879135bc5896843c2e8c55ca6c868b79800cbeb64c2e3"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3310020,
-   "sha256": "527073f83b196a1eb1654b70cffb4562dac1d7fd17614d7e5ddda867a14259ab"
+   "bytes": 3310281,
+   "sha256": "ba678798203d014a7f9773fbbe5b7976a81420019ca3fcfadf201e23cc1f12d4"
   },
   "poster/build_v13_report-300of300.json": {
-   "bytes": 26865,
-   "sha256": "0446d0a9303c4a4f55f5d6cb975ceaaca6f34afdadc63718940483a16f3a2cce"
+   "bytes": 26868,
+   "sha256": "5349e3a822e20694a3d78d87612f8d49b2bb15e7780c0f42fb693793c3f37ea2"
   }
  },
- "pdf_blake3": "faf88301bdc4bde24c4864db3f716437ed3c24b253d15b5d49bfbeda9d4c7ac1",
- "pointer_body": "research/repro/v13/track/board_body_016d455.md",
+ "pdf_blake3": "96b4c53cbf03bfebc1617afedcd03407178ecd2136ea71389ea88570e74f3a7d",
+ "pointer_body": "research/repro/v13/track/board_body_d52419d.md",
  "rows_rechecked": 565,
  "claims_printed": 180,
  "qr": [
@@ -71,8 +71,8 @@
   "top_text": 9.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "420e696a79d16341cd98284456b76600f349123b0bc3fc0b7154ba489ff2ff66",
- "pointer_body_300of300": "research/repro/v13/track/board_body_016d455-300of300.md",
+ "pdf_blake3_300of300": "9687f23269f503ca4f323505a98c153d8a3e516d4870490581dc701c1f0dd658",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_d52419d-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
