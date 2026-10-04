@@ -23,7 +23,7 @@ from matplotlib.patches import Polygon, Rectangle
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from style import C, MONO, OUT, ROOT, fig_mm, save  # noqa: E402
 
-W, H = 193.5, 118.0
+W, H = 193.5, 136.0   # v13.10 (4 Oct): rows 8.0 mm apart, from 6.7 (the cut freed the right column)
 PTMM = 25.4 / 72
 NAME = "f14_token_family"
 ALG = open(os.path.join(ROOT, "research/repro/v10/algorithms.md"), encoding="utf-8").read()
@@ -114,7 +114,7 @@ T(XN, hy, "data need", 14, color=C["muted"])
 T(XG, hy, "grammar, after emem:", 14, color=C["muted"])
 T(XH, hy, "what its id hashes", 14, color=C["muted"])
 ax.plot([0, W], [hy + 2.7, hy + 2.7], color=C["rule"], lw=0.5 / PTMM, zorder=2)
-PITCH = 6.7
+PITCH = 8.0
 ty = hy + 2.7 + PITCH / 2 + 0.2
 COLW = {"need": 0, "grammar": 0, "hash": 0}
 for i, (need, gram, rule, kind) in enumerate(ROWS):

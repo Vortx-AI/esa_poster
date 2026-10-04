@@ -52,9 +52,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Between acquisitions, the surface, sensor, location or processing can change.
 
-> Δz: change in readout. The terms list possible causes (environment, sensor, geolocation, encoder, residual), not measured shares.
-
-> This score is an uncalibrated heuristic: it measures disagreement with one anchor, not a cause. SAT-042 uses it in the execution harness.
+> Δz: change in readout. The terms name possible causes (environment, sensor, geolocation, encoder, residual); we have not measured their shares.
 
 ### Memory operations
 
@@ -127,8 +125,6 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 > Observations + temporal edges
 
 > a: location cell · b: variable · t: valid time · v: value u: uncertainty, if recorded · p: provenance, recipe, signed_at s: attestation associated with the observation
-
-> Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.
 
 > Append observations and supersedes / disagrees_with edges; keep earlier records.
 

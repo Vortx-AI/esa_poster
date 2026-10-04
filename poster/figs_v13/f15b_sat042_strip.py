@@ -3,7 +3,7 @@
 The full F15 (193.5 x 118 mm) did not fit the right column; this strip prints the same run in three rows:
   (a) the seven harness steps in one row of chips, each with its verdict word;
   (b) the 8-layer trace in one row, the rewritten segment marked and the broken link crossed;
-  (c) the three drift-anchor scores on a tiny number line with the 0.5 / 0.75 verdict bands.
+  (c) removed 4 Oct 2026 with panel 3's drift-score figure: the score values would be undefined on the board.
 Data readers and asserts: sat042_data.py (shared with F15). Claim ids: rows A15.* of
 research/v13/12_claims_map_additions_F13-15.json; the script asserts that every printed number is in its row.
 
@@ -21,7 +21,7 @@ from style import C, MONO, OUT, ROOT, fig_mm, save  # noqa: E402
 from sat042_data import ANCHOR, KICKER, N_CONS, N_CONTRA, SEG, SEQ, SIGMA, V  # noqa: E402
 
 W = 193.5
-H = float(sys.argv[sys.argv.index("--height") + 1]) if "--height" in sys.argv else 60.0
+H = float(sys.argv[sys.argv.index("--height") + 1]) if "--height" in sys.argv else 38.5
 PTMM = 25.4 / 72
 NAME = "f15b_sat042_strip"
 
@@ -97,32 +97,7 @@ for k, lay in enumerate(V["layers"]):
             T((xa + xb) / 2, by0 + 8.3, "×", 14, weight=700, color=C["harm"], ha="center", claim="A15.layers", z=6)
 b_end = by0 + BH
 
-# ------------------------------------------------------------------ (c) drift anchor number line
-cy = b_end + 4.9
-SX0, SX1 = 66.0, W
-for k, s in enumerate(("drift anchor", f"{ANCHOR:.4f} \u00b1 {SIGMA} (1\u03c3):", "scored after admission,", "not a gate")):
-    t = T(0, cy - 0.8 + k * 5.2, s, 14, color=C["ink2"], claim="A15.formula")
-    assert wmm(t) <= SX0 - 4.0, (s, wmm(t))
-sy0, sy1 = cy - 2.6, cy + 3.0
-X = lambda v: SX0 + v * (SX1 - SX0)   # noqa: E731
-for a_, b_, fc, lab, col in ((0, .5, "emem_tint", "consistent", "emem"), (.5, .75, "na", "tension", "incident_text"),
-                             (.75, 1, "harm_tint", "contradicted", "harm_text")):
-    ax.add_patch(Rectangle((X(a_), sy0), X(b_) - X(a_), sy1 - sy0, fc=C[fc], ec="none", zorder=1.5))
-    T((X(a_) + X(b_)) / 2, (sy0 + sy1) / 2 + 0.1, lab, 14, color=C[col], ha="center", claim="A15.formula")
-for v in (0.5, 0.75):
-    ax.plot([X(v), X(v)], [sy0, sy1 + 1.2], color=C["ink2"], lw=0.5 / PTMM, zorder=2.5)
-    T(X(v), sy1 + 3.6, f"{v:g}", 14, color=C["ink2"], ha="center", family=MONO, claim="A15.formula")
-ly = sy1 + 8.8                      # the number line
-ax.plot([X(0), X(1)], [ly, ly], color=C["rule"], lw=0.8 / PTMM, zorder=2, solid_capstyle="butt")
-for i, d in enumerate(sorted(V["drift"], key=lambda d: d["score"])):
-    bad = d["verdict"] == "Contradicted"
-    col = C["harm"] if bad else C["emem"]
-    ax.add_patch(Circle((X(d["score"]), ly), 1.3, fc=col, ec="white", lw=0.4 / PTMM, zorder=4))
-    above = i == 0                   # the two consistent scores sit 13 mm apart: label one above, one below the line
-    # v13.10: the first label starts at its dot so it clears the 66 mm label column on the left
-    T(X(d["score"]) - (1.3 if above else 0), ly + (-4.2 if above else 4.4), f"{d['device']:.4f} (s {d['score']:.2f})", 14,
-      weight=500, ha="left" if above else ("center" if not bad else "right"), color=C["harm_text"] if bad else C["ink"], family=MONO, claim="A15.drift")
-assert ly + 4.4 + 2.6 <= H, (ly, H)
+assert b_end + 1.5 <= H, (b_end, H)
 
 # ------------------------------------------------------------------ labels must be covered by claims rows
 CM = json.load(open(os.path.join(ROOT, "research/v13/12_claims_map_additions_F13-15.json")))

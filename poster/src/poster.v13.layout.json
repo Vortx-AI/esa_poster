@@ -8,7 +8,7 @@
       "reason": "The eight-value diagnostic replaces the dated NDVI history at the same print scale. Its choices connect the agent handoff to the central source-read experiment."
     },
     "p3": {
-      "reason": "The conceptual change decomposition stays on one line. The implemented drift-anchor score, uncertainty branch and thresholds are restored at their existing figure size. v13.10: the drift-score figure packs the same text into 90 mm (was 116) to make room for the recovered full trace."
+      "reason": "The conceptual change decomposition stays on one line with its scope caption. 4 Oct 2026: the drift-score figure leaves the face (both reviews rated it weakest; it is an uncalibrated heuristic), so panel 3 is short and the left column gives the space to panel 7's table and the full trace."
     },
     "questions": {
       "reason": "The eight memory operations retain their EO task labels and implemented single-hop scope. Future-work prose and a unit-test count leave the poster face. v13.10: moved to the right column after the memory model (panel 9), whose operations it lists; the left column takes the recovered full trace."
@@ -91,6 +91,8 @@
     "byline": "4 Oct 2026: Zenodo DOIs removed (authors); line 1 authors, contact, emem.dev and the repository; line 2 the event.",
     "scientific_wording": "4 Oct 2026: panel 1 asks 'Does agent B act on a corrupted handoff?' (the figure counts false acceptance); one name for the condition (emem reference); panel 5 checks carry their layers (the L0 to L3 key); f6 names its deterministic row; the header orbit line is a design goal; the subhero adds the signed absence. research/v13/26_V13_10_REVIEW.md section 13.",
     "panel12": "4 Oct 2026: the 11-client-path line is removed from the face (authors); the full table is on /use/ ('Same token, many runtimes'). The ecosystem figure sits 3.5 mm under the headline. Review log section 14.",
-    "two_reviews": "4 Oct 2026: fixes from the ChatGPT and cold-read reviews (review log section 15). The source-pixel panel moves above the mutation matrix and is numbered 5; L0 to L3 text leaves the face (depth shows as colour and check names)."
+    "two_reviews": "4 Oct 2026: fixes from the ChatGPT and cold-read reviews (review log section 15). The source-pixel panel moves above the mutation matrix and is numbered 5; L0 to L3 text leaves the face (depth shows as colour and check names).",
+    "deliberate_cut": "4 Oct 2026, after the second ChatGPT review: panel 3 drops the drift-score figure and its caption; panel 11 drops the score values (undefined without it); the code box keeps the fact, name and cell rows (recall, signing, log and receipt are in panels 8 and 4 and the trace) and is titled 'The record, as coded'; panel 6 and panel 9 drop a sentence each that repeated other text. The space goes to panel 7's table (17 pt), the full trace (17 pt, from 14), the token table (8 mm rows, from 6.7) and air between panels. Words on the face 3,255 to 3,043; at 14 pt 1,695 to 1,348.",
+    "relay_box": "4 Oct 2026: panel 1's relay box prints one wrapped list of the R5 change families under 'relay or faulty signer' and 'one change per trial, same set on each lane'; no family sits beside a lane. Review log section 18."
   }
 }

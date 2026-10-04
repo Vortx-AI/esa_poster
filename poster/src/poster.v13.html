@@ -67,14 +67,12 @@
   <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">Between acquisitions, the surface, sensor, location or processing can change.</p>
   <p class="extension-label" data-claim="DF.decomposition" style="margin-top:2mm">CONCEPTUAL CHANGE MODEL</p>
   <div class="equation drift-one-line" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub> + Δ<sub>encoder</sub> + ε</div>
-  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Δz: change in readout. The terms list possible causes (environment, sensor, geolocation, encoder, residual), not measured shares.</p>
-  <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:116"><!--fig:f4_failure_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run">This score is an uncalibrated heuristic: it measures disagreement with one anchor, not a cause. <span class="nw">SAT-042</span> uses it in the execution harness.</p>
+  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Δz: change in readout. The terms name possible causes (environment, sensor, geolocation, encoder, residual); we have not measured their shares.</p>
 </section>
 <section class="panel c3 handoff" data-block="p7" data-brief="7 · What checks establish">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
   <h2 class="rt" data-role="headline" data-claim="U.boundary">The record, not physical truth</h2>
-  <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:65"><!--fig:f8_ladder--></div>
+  <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:80"><!--fig:f8_ladder--></div>
   <p class="cap rt" data-role="caption" data-claim="U.boundary">Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.</p>
 </section>
 <section class="panel c3 trace" data-block="trace" data-brief="Full trace">
@@ -116,15 +114,11 @@
   <p class="cap rt" data-role="caption" data-claim="O.1115 O.batch O.nohash">BLAKE3 identifies the 1,115-byte record. Its fields name the source files, sampled point and derivation; a batch signature covers the record address. Source-file hashes are absent from this record.</p>
 </section>
 <section class="panel c6 coded" data-block="code" data-brief="Memory as coded">
-  <p class="extension-label" data-claim="CODE.commit">THE MEMORY, AS CODED · fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest</p>
+  <p class="extension-label" data-claim="CODE.commit">THE RECORD, AS CODED · fact.rs, cbor.rs, geo.rs</p>
   <div class="codegrid" data-claim="CODE.lines">
     <b>fact</b><span>f = (kind, cell, band, tslot, value, unit, confidence, sources, derivation{fn_key, args}, privacy, schema_cid, signer, signed_at)</span>
     <b>name</b><span>b = CBOR(f), declaration order, NaN as f9 7e00, −0 as +0; fact_cid = base32(BLAKE3-256(b)); token emem:fact:&lt;cell&gt;:&lt;fact_cid&gt;</span>
     <b>cell</b><span>lat_q = round((lat+90)/180·(2²¹−1)), lng_q = round((lng+180)/360·(2²²−1)); pitch 8.583e-5° = 9.52 × 8.06 m here</span>
-    <b>recall</b><span>tslot = floor(unix / 86 400) (20721 = 25 Sep 2026); key (cell, band, tslot); as of t: argmax (signed_at, cid) over signed_at ≤ t</span>
-    <b>sign</b><span>R = Merkle(sorted fact_cids); attestation = Ed25519(PreimageV1(“attestation”){R, registry, schema}); a fact carries no signature</span>
-    <b>log</b><span>leaf = BLAKE3(0x00 || BLAKE3(CBOR(attestation))), node = BLAKE3(0x01 || l || r); RFC 6962 shape</span>
-    <b>receipt</b><span>sig = Ed25519(BLAKE3(“emem.preimage.v1\0” || request_id || served_at || primitive || cells || fact_cids || merkle))</span>
   </div>
 </section>
 <section class="panel c6" data-block="p6" data-brief="5 · Source re-read">
@@ -138,7 +132,7 @@
   <p class="mech rt steps" data-role="mechanism" data-claim="U.checks"><span>Resolve</span> <span>Re-hash</span> <span>Bind</span> <span>Signature</span> <span>Log</span> <span>Recompute</span> <span>Re-read</span></p>
   <div class="fig" data-figslot="f6_mutation_matrix" style="--fw:396;--fh:196"><!--fig:f6_mutation_matrix--></div>
   <p class="cap rt" data-role="caption" data-claim="V6.controls V6.controls.n V6.controls.refused X.loo">Deeper checks expose different corruptions. Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one.</p>
-  <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.F6.scope R5.items R5.baseline.catch R5.block2.M15r">Each agent bar is 12 runs of one item; totals pool 23 items per condition (24 for the opaque id, 25 for emem). JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read.</p>
+  <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.baseline.catch R5.block2.M15r">JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted <span class="nw">4 of 4</span> times uninstructed, <span class="nw">2 of 4</span> with resolve-and-bind instructions and <span class="nw">0 of 4</span> with a source re-read.</p>
   <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope X.p123">One record, one band, deterministic receiver; signer-error rows use a test key. Additional offset, scene and unit cases are documented in Reproduce.</p>
 </section>
 </div>
@@ -157,7 +151,6 @@
   <h2 class="rt" data-role="headline" data-claim="MF.model">Observations + temporal edges</h2>
   <div class="equation" data-claim="MF.model V7.observation">M = (O*, E*) &nbsp; O = (a, b, t, v, u, p, s)</div>
   <p class="cap rt" data-role="caption" data-claim="V7.observation V8.language">a: location cell · b: variable · t: valid time · v: value<br>u: uncertainty, if recorded · p: provenance, recipe, signed_at<br>s: attestation associated with the observation</p>
-  <p class="cap rt" data-role="caption" data-claim="V7.observation O.batch">Conceptual tuple: a batch attestation covers the fact address; a signed read receipt binds the response.</p>
   <div class="equation small" data-claim="MF.model">E = (subject, predicate, object, t<sub>from</sub>, t<sub>to</sub>)</div>
   <p class="cap rt" data-role="caption" data-claim="MF.model">Append observations and supersedes / disagrees_with edges; keep earlier records.</p>
   <div class="addresscard blue"><p class="body" data-claim="MF.identity">Lookup = (a, b, t); a cid names a record, not an object</p><p class="equation small" data-claim="MF.identity V7.observation">cid(record) = BLAKE3(CBOR(record))</p></div>
@@ -176,14 +169,14 @@
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">10</span>What else can an agent carry?</p>
   <h2 class="rt" data-role="headline" data-claim="TF.family">Beyond a single observation</h2>
   <p class="tfline rt" data-role="body" data-claim="TF.reads">In emem, the token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.</p>
-  <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:118"><!--fig:f14_token_family--></div>
+  <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:136"><!--fig:f14_token_family--></div>
   <p class="cap rt" data-role="caption" data-claim="CM.bundle CM.state V6.objects">One bundle resolves to eight facts; four reasoning-state addresses <span class="nw">re-hash</span>. Neither check validates an agent's reasoning.</p>
 </section>
 <section class="panel c3 extension" data-block="p11" data-brief="11 · Satellite execution evidence">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>Satellite execution evidence</p>
   <h2 class="rt s28" data-role="headline" data-claim="SAT.run" style="margin-top:0">A signed trace binds the reported run</h2>
   <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm"><span class="nw">SAT-042</span> scripted pass · reference harness · 30 Sep 2026.</p>
-  <div class="fig" data-figslot="f15b_sat042_strip" style="--fw:193.5;--fh:60"><!--fig:f15b_sat042_strip--></div>
+  <div class="fig" data-figslot="f15b_sat042_strip" style="--fw:193.5;--fh:38.5"><!--fig:f15b_sat042_strip--></div>
   <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time.</p>
 </section>
 </div>

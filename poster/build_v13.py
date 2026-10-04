@@ -57,7 +57,7 @@ R5_DIR = RES / "repro" / "v13" / "r5"
 CHROME_GLOB = "/opt/pw-browsers"
 TODAY = dt.date.today()
 
-FIGURES = ["f1_scene", "f18_workflow", "f2_spine", "f3_eight_answers", "f4_failure_ladder", "f5_evidence_object",
+FIGURES = ["f1_scene", "f18_workflow", "f2_spine", "f3_eight_answers", "f5_evidence_object",
            "f6_mutation_matrix", "f7_wrong_pixel", "f8_ladder", "f9_timeline", "f11_ecosystem",
            "f14_token_family", "f15b_sat042_strip"]   # restored v12 evidence panels; compact SAT-042 remains panel 11.
 QRS = ["demo", "r", "use"]  # issue #48: three printed tasks; all six web routes remain
@@ -1144,11 +1144,10 @@ def g_words(claims, r5=False):
         elif line.startswith("> "):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
-    # cap: brief 843 / 862 on 4 Oct 2026 (subhero completed with the signed absence; wording made precise after two
-    # reviews; panel 12's client-path line moved to /use/) plus about 1 % slack;
-    # it was 830 / 880 for brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 852 / 872; v13.5 copy brief: see per-panel counts)"]
-    ok = tot_w <= 852 and tot_t <= 872
+    # cap: brief 808 / 827 after the 4 Oct 2026 cut (drift-score figure, duplicated rows and sentences) plus about 1 % slack;
+    # it was 852 / 872 before the cut, and 830 / 880 for brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)"]
+    ok = tot_w <= 816 and tot_t <= 836
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)
         flag = ""

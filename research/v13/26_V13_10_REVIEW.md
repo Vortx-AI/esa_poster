@@ -332,3 +332,31 @@ What still limits the board, by the reviewer's account and ours, is not copy: no
 instruction without content addressing), an orbital design without the source re-read, two constructed tasks with one
 main model family, and density (about 3,450 words including labels). The copy is frozen at this commit; further gains
 need a matched-baseline run or a deliberate cut.
+
+## 17. Deliberate cut (4 Oct 2026)
+
+The second ChatGPT review asked for a deliberate reduction rather than more wording changes. Cut, with the reason for
+each:
+
+| Removed | Why |
+|---|---|
+| Panel 3's drift-score figure and its caption | Both reviews rated the section weakest; the score is an uncalibrated heuristic. The conceptual decomposition stays, with its scope in plainer words ("we have not measured their shares"). |
+| The drift-score values in panel 11's strip | Undefined once panel 3's figure is gone. The "Score vs anchor: SCORED" step stays. |
+| Four of the seven code-box rows (recall, sign, log, receipt) | Each is printed elsewhere: panel 8 (recall), panel 4 (batch signature), the full trace (log, receipt). The box keeps fact, name and cell and is titled "The record, as coded". |
+| Panel 6's first note sentence | It repeated the bar legend (runs per bar, items per condition). |
+| Panel 9's conceptual-tuple line | Panel 4 and the trace already say it. |
+
+The space went to legibility, not to new content: panel 7's guarantee table at 17 pt (from 16) in an 80 mm figure; the
+full trace at 17 pt (from 14); the token table at 8 mm rows (from 6.7); and air between panels. Measured on the
+rendered board: 3,255 to 3,043 printed words, 1,695 to 1,348 of them at 14 pt; running text 838 to 803 words (cap
+816 / 836, copy brief 808 / 827 plus about 1 %). Twelve figures are placed (the drift-score figure is no longer one).
+Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no split number phrase.
+
+## 18. Panel 1 relay box (4 Oct 2026)
+
+The relay box listed nine change types one per line, down the box, between the five lane markers, so "cell" sat beside
+the JSON lane and read as that lane's corruption; the red-on-pink list was hard to read, and it used the R1 families,
+which miss two of the R5 families (unit, stale history). It now prints "relay or faulty signer", "one change per trial,
+same set on each lane:" and the R5 families as one wrapped list in dark ink, centred in the box: value, unit, cell,
+time, band, source, derivation, pixel, stale record, signature / id (prereg section 4; row F2.relay.r5). The lane
+markers sit on the box edge. Both variants pass every gate, with 0 text overlaps.
