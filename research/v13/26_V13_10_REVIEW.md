@@ -457,3 +457,19 @@ agent run is exploratory in a different harness; the tasks are two constructed o
 the ground source re-read. For the talk at the board, the review suggests joining the two strongest findings: the source
 re-read catches a wrong pixel that integrity checks preserve, and signatures and the log catch changes that consistency
 checks miss.
+
+## 22. Brand identity (4 Oct 2026)
+
+The authors chose an identity for emem: the wordmark "em", an orange em dash, "em", and the card tagline "Encode in orbit,
+decode with AI." The board carries it in two marks, both in the navy header, and adds no artwork.
+
+| Element | On the board |
+|---|---|
+| Wordmark | Bottom right of the header text, 52 pt Bold white; right edge on the text column (620 mm), baseline on the byline's second line (182.7 mm). The dash is a drawn bar (0.9 by 0.12 em at mid x-height), not a character, because the face bans the em dash. No satellite, face or node art: the identity advice was that the wordmark must stand without its illustration. |
+| Tagline | The bridge's design goal uses the card's words: "Design goal: encode in orbit, decode with AI." (it was "decode in AI's reasoning with emem"). "decode with AI." is in the brand orange, as on the card. Row ORBIT.tagline prints the new wording; the "in orbit" allowlist entry is re-bound to the new sentence (BLAKE3 8a319bde…); panel 1 and panel 11 still print the harness scope. |
+| Colour | Token `brand` #E86424, for these two marks only. Data keeps its colours: `harm` still means that B acted on corrupted evidence. The two oranges are close (CIEDE2000 9.1), so the brand orange stays on the navy header, off the white panels and the figures. Contrast 4.0:1 on navy (the tagline is 24 pt). |
+| Layout | The byline moves up 1.5 mm (top 169.5 mm) so the wordmark's glyph box ends inside the 188 mm header block; the bridge-byline gap goes from 13 to 11.5 mm. |
+
+Left out: the orange ".dev" of the dark card (a third orange mark in the header would scatter the accent) and the card's
+Earth, satellite and face artwork. The copy freeze of section 16 holds for the evidence; this is an authors' change to
+the header. Both variants pass the 18 gates; running text 799 words (818 tokens), 0 text overlaps.

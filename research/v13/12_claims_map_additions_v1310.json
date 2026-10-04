@@ -61,8 +61,8 @@
       "id": "ORBIT.tagline",
       "block": "v13.10 header bridge",
       "print": [
-        "Encode in orbit, decode in AI’s reasoning with emem.",
-        "Design goal: encode in orbit, decode in AI’s reasoning with emem."
+        "Encode in orbit, decode with AI.",
+        "Design goal: encode in orbit, decode with AI."
       ],
       "status": "SPEC",
       "layer": "L5",
@@ -80,7 +80,7 @@
         "file": "repro/v12/trace/sat042_run_stdout.txt",
         "arg": "act 4  admitted: 3 facts under one verified trace"
       },
-      "note": "Design statement. No spacecraft is enrolled (trace_truth.md section 1); panel 11 and the p1 orbit line print the reference-harness scope. 4 Oct 2026: printed as a design goal; panel 11 states that no spacecraft is enrolled.",
+      "note": "Design statement. No spacecraft is enrolled (trace_truth.md section 1); panel 11 and the p1 orbit line print the reference-harness scope. 4 Oct 2026: printed as a design goal; panel 11 states that no spacecraft is enrolled. 4 Oct 2026: the wording follows the emem identity (wordmark and card tagline \"Encode in orbit, decode with AI.\"); the earlier print was \"decode in AI’s reasoning with emem\".",
       "tier": "1m",
       "checked": true
     },

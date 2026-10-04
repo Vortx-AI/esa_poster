@@ -18,7 +18,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.
 
-> A compact citation keeps the observation traceable across agents and time. Design goal: encode in orbit, decode in AI’s reasoning with emem.
+> A compact citation keeps the observation traceable across agents and time. Design goal: encode in orbit, decode with AI.
 
 ### 1 · Earth to agents
 
