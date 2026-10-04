@@ -1,4 +1,4 @@
-"""F2: complete handoff experiment, 801 x 118 mm at A0 print size.
+"""F2: complete handoff experiment, 801 x 112.5 mm at A0 print size.
 
 Recovered from 2686b27: source pixel, sender, five handoff forms, mutation,
 receiver checks, measured outcomes and limits. Current final R5 evidence
@@ -32,7 +32,7 @@ sys.path.insert(0, str(ROOT / "research/repro/v11"))
 import mutation_suite as R1  # noqa: E402
 
 C, PT = S.C, S.PT
-W, H = 801.0, 118.0
+W, H = 801.0, 112.5   # v13.10 (4 Oct): 5.5 mm from the lane gaps (3.0 to 1.6) gives panel 1's scope a fifth line
 # Print variant (see poster/build_v13.py): "0of300" draws the pre-registered metric, corruptions B acted on;
 # "300of300" draws the same trials counted the other way, corruptions B did not act on (declined, or acted on the
 # genuine value). Select with --variant 300of300; that variant writes f2_spine.300of300.*
@@ -238,7 +238,7 @@ def main():
     L = lanes()
     SN = snippets()
     n = len(L)
-    top, bot, gap = 19.0, H - 2.0, 3.0
+    top, bot, gap = 19.0, H - 2.0, 1.6
     lh = min(22.0, (bot - top - gap * (n - 1)) / n)
     ys = [top + i * (lh + gap) for i in range(n)]
 

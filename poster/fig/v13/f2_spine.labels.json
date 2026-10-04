@@ -2,7 +2,7 @@
  "figure": "f2_spine",
  "size_mm": [
   801.0,
-  118.0
+  112.5
  ],
  "mode": "R5",
  "lanes": [
@@ -255,49 +255,49 @@
    "text": "relay or faulty signer",
    "claim": "F2.relay.r5",
    "x_mm": 325.0,
-   "y_mm": 46.3,
+   "y_mm": 43.55,
    "pt": 16
   },
   {
    "text": "one change per trial,",
    "claim": "F2.relay.r5",
    "x_mm": 325.0,
-   "y_mm": 53.5,
+   "y_mm": 50.75,
    "pt": 15
   },
   {
    "text": "shared corruption families:",
    "claim": "F2.relay.r5",
    "x_mm": 325.0,
-   "y_mm": 59.9,
+   "y_mm": 57.15,
    "pt": 15
   },
   {
    "text": "value · unit · cell · time ·",
    "claim": "F2.relay.r5",
    "x_mm": 325.0,
-   "y_mm": 68.9,
+   "y_mm": 66.15,
    "pt": 15
   },
   {
    "text": "band · source · derivation ·",
    "claim": "F2.relay.r5",
    "x_mm": 325.0,
-   "y_mm": 75.5,
+   "y_mm": 72.75,
    "pt": 15
   },
   {
    "text": "pixel · stale record ·",
    "claim": "F2.relay.r5",
    "x_mm": 325.0,
-   "y_mm": 82.1,
+   "y_mm": 79.35,
    "pt": 15
   },
   {
    "text": "signature / id",
    "claim": "F2.relay.r5",
    "x_mm": 325.0,
-   "y_mm": 88.7,
+   "y_mm": 85.95,
    "pt": 15
   },
   {
@@ -311,280 +311,280 @@
    "text": "The Sentinel-2 L2A NDVI for the 10 m cell at Keylong, Laha…",
    "claim": "F2.snippets",
    "x_mm": 112,
-   "y_mm": 31.8,
+   "y_mm": 31.82,
    "pt": 15
   },
   {
    "text": "B",
    "claim": "F2.agents",
    "x_mm": 407.5,
-   "y_mm": 27.8,
+   "y_mm": 27.81,
    "pt": 17
   },
   {
    "text": "reads the text",
    "claim": "F2.actions",
    "x_mm": 418,
-   "y_mm": 27.5,
+   "y_mm": 27.51,
    "pt": 20
   },
   {
    "text": "254 / 276",
    "claim": "R5.A.pooled",
    "x_mm": 690,
-   "y_mm": 28.1,
+   "y_mm": 28.11,
    "pt": 48
   },
   {
    "text": "JSON",
    "claim": "F2.lanes",
    "x_mm": 112,
-   "y_mm": 40.6,
+   "y_mm": 39.22,
    "pt": 20
   },
   {
    "text": "{\"about\": {\"field\": \"Keylong, Lahaul (32.57126 N, 77.03448…",
    "claim": "F2.snippets",
    "x_mm": 112,
-   "y_mm": 51.8,
+   "y_mm": 50.44,
    "pt": 15
   },
   {
    "text": "B",
    "claim": "F2.agents",
    "x_mm": 407.5,
-   "y_mm": 47.8,
+   "y_mm": 46.43,
    "pt": 17
   },
   {
    "text": "reads the fields",
    "claim": "F2.actions",
    "x_mm": 418,
-   "y_mm": 47.5,
+   "y_mm": 46.13,
    "pt": 20
   },
   {
    "text": "164 / 276",
    "claim": "R5.B.pooled",
    "x_mm": 690,
-   "y_mm": 48.1,
+   "y_mm": 46.73,
    "pt": 48
   },
   {
    "text": "retrieved text (RAG)",
    "claim": "F2.lanes",
    "x_mm": 112,
-   "y_mm": 60.6,
+   "y_mm": 57.84,
    "pt": 20
   },
   {
    "text": "Field log, Keylong, Lahaul (32.57126 N, 77.03448 E), cell …",
    "claim": "F2.snippets",
    "x_mm": 112,
-   "y_mm": 71.8,
+   "y_mm": 69.06,
    "pt": 15
   },
   {
    "text": "B",
    "claim": "F2.agents",
    "x_mm": 407.5,
-   "y_mm": 67.8,
+   "y_mm": 65.05,
    "pt": 17
   },
   {
    "text": "retrieves a passage",
    "claim": "F2.actions",
    "x_mm": 418,
-   "y_mm": 67.5,
+   "y_mm": 64.75,
    "pt": 20
   },
   {
    "text": "220 / 276",
    "claim": "R5.C.pooled",
    "x_mm": 690,
-   "y_mm": 68.1,
+   "y_mm": 65.35,
    "pt": 48
   },
   {
    "text": "opaque id",
    "claim": "F2.lanes",
    "x_mm": 112,
-   "y_mm": 80.6,
+   "y_mm": 76.46,
    "pt": 20
   },
   {
    "text": "record ref obs-7d1c44",
    "claim": "F2.snippets",
    "x_mm": 112,
-   "y_mm": 91.8,
+   "y_mm": 87.68,
    "pt": 15
   },
   {
    "text": "B",
    "claim": "F2.agents",
    "x_mm": 407.5,
-   "y_mm": 87.8,
+   "y_mm": 83.67,
    "pt": 17
   },
   {
    "text": "fetches the sender’s record",
    "claim": "F2.actions",
    "x_mm": 418,
-   "y_mm": 87.5,
+   "y_mm": 83.37,
    "pt": 20
   },
   {
    "text": "154 / 288",
    "claim": "R5.D.pooled",
    "x_mm": 690,
-   "y_mm": 88.1,
+   "y_mm": 83.97,
    "pt": 48
   },
   {
    "text": "emem reference + verifier",
    "claim": "F2.lanes",
    "x_mm": 112,
-   "y_mm": 100.6,
+   "y_mm": 95.08,
    "pt": 20
   },
   {
    "text": "emem:fact:defi.zb572.xoso.zb1ec:oj5ceccile62uvm6hedpuk6…",
    "claim": "O.cid",
    "x_mm": 114.5,
-   "y_mm": 111.8,
+   "y_mm": 106.3,
    "pt": 15
   },
   {
    "text": "B",
    "claim": "F2.agents",
    "x_mm": 407.5,
-   "y_mm": 107.8,
+   "y_mm": 102.29,
    "pt": 17
   },
   {
    "text": "resolve",
    "claim": "F2.chips",
    "x_mm": 429.46,
-   "y_mm": 103.92,
+   "y_mm": 98.41,
    "pt": 15
   },
   {
    "text": "re-hash",
    "claim": "F2.chips",
    "x_mm": 455.04,
-   "y_mm": 103.92,
+   "y_mm": 98.41,
    "pt": 15
   },
   {
    "text": "place / time / band",
    "claim": "F2.chips",
    "x_mm": 495.38,
-   "y_mm": 103.92,
+   "y_mm": 98.41,
    "pt": 15
   },
   {
    "text": "signature",
    "claim": "F2.chips",
    "x_mm": 537.85,
-   "y_mm": 103.92,
+   "y_mm": 98.41,
    "pt": 15
   },
   {
    "text": "log",
    "claim": "F2.chips",
    "x_mm": 424.18,
-   "y_mm": 111.48,
+   "y_mm": 105.97,
    "pt": 15
   },
   {
    "text": "recompute",
    "claim": "F2.chips",
    "x_mm": 448.62,
-   "y_mm": 111.48,
+   "y_mm": 105.97,
    "pt": 15
   },
   {
    "text": "source re-read",
    "claim": "F2.chips",
    "x_mm": 487.5,
-   "y_mm": 111.48,
+   "y_mm": 105.97,
    "pt": 15
   },
   {
    "text": "0 / 300",
    "claim": "R5.E.pooled",
    "x_mm": 690,
-   "y_mm": 108.1,
+   "y_mm": 102.59,
    "pt": 48
   },
   {
    "text": "22",
    "claim": "R5.split.A.declined",
    "x_mm": 724,
-   "y_mm": 27.9,
+   "y_mm": 27.91,
    "pt": 30
   },
   {
    "text": "0",
    "claim": "R5.split.A.genuine",
    "x_mm": 776,
-   "y_mm": 27.9,
+   "y_mm": 27.91,
    "pt": 30
   },
   {
    "text": "106",
    "claim": "R5.split.B.declined",
    "x_mm": 724,
-   "y_mm": 47.9,
+   "y_mm": 46.53,
    "pt": 30
   },
   {
    "text": "6",
    "claim": "R5.split.B.genuine",
    "x_mm": 776,
-   "y_mm": 47.9,
+   "y_mm": 46.53,
    "pt": 30
   },
   {
    "text": "56",
    "claim": "R5.split.C.declined",
    "x_mm": 724,
-   "y_mm": 67.9,
+   "y_mm": 65.15,
    "pt": 30
   },
   {
    "text": "0",
    "claim": "R5.split.C.genuine",
    "x_mm": 776,
-   "y_mm": 67.9,
+   "y_mm": 65.15,
    "pt": 30
   },
   {
    "text": "88",
    "claim": "R5.split.D.declined",
    "x_mm": 724,
-   "y_mm": 87.9,
+   "y_mm": 83.77,
    "pt": 30
   },
   {
    "text": "46",
    "claim": "R5.split.D.genuine",
    "x_mm": 776,
-   "y_mm": 87.9,
+   "y_mm": 83.77,
    "pt": 30
   },
   {
    "text": "264",
    "claim": "R5.split.E.declined",
    "x_mm": 724,
-   "y_mm": 107.9,
+   "y_mm": 102.39,
    "pt": 30
   },
   {
    "text": "36",
    "claim": "R5.split.E.genuine",
    "x_mm": 776,
-   "y_mm": 107.9,
+   "y_mm": 102.39,
    "pt": 30
   }
  ]
