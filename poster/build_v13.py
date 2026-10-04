@@ -699,14 +699,16 @@ def g_banned(meas, claims, rows, collect=None):
 def g_hygiene(meas, pdfinfo, doc_title):
     d = []
     allt = " ".join(t["text"] for t in meas["texts"])
+    # service and code commits advance with every upgrade; a research poster prints neither (claims rows keep them)
     for rx, what in [(r"\bv1[0-3](?:\.\d)?\b", "board version number"), (r"\bwithdrawn\b", "withdrawn"),
+                     (r"(?-i:\b(?!ed25519\b)(?=[0-9a-f]*\d)(?=[0-9a-f]*[a-f])[0-9a-f]{7,40}\b)", "commit hash"),
                      (r"\bscorecard", "scorecard"), (r"should_do", "research/should_do path"), (r"\bdefect\b", "defect id"),
                      (r"\{R5\.", "unresolved R5 placeholder"), (r"figure pending", "figure placeholder")]:
         for m in re.finditer(rx, allt, re.I):
             d.append(f"{what}: ...{allt[max(0, m.start() - 30):m.end() + 30]}...")
     if pdfinfo["title"] != doc_title:
-        d.append(f"PDF title {pdfinfo['title']!r} is not the programme title")
-    return not d, d or ["no version numbers, defect ids, scorecards, placeholders or R5 tokens on the face; PDF title is the programme title"]
+        d.append(f"PDF title {pdfinfo['title']!r} does not match the HTML title")
+    return not d, d or ["no version numbers, commit hashes, defect ids, scorecards, placeholders or R5 tokens on the face; PDF title matches the HTML title"]
 
 
 @gate("r5_placeholders")

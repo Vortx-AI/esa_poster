@@ -1,8 +1,8 @@
 # AGENTS.md: working on the EMEM poster
 
-This repository holds the A0 poster for "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents
-over ~~Foundation-Model Embeddings~~ Satellite Observations and Signed Execution Traces" (Agentic AI for Earth
-Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.10 (v13.9 plus the recovered v10 lead, memory-as-coded box and full trace, handoff emphasis and the orbit design lines; see `poster/src/poster.v13.layout.json` v13.10_notes).
+This repository holds the A0 poster "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol" (the programme lists it
+with "for AI Agents over Foundation-Model Embeddings"; Agentic AI for Earth Observation, Berlin, Poster Session 1,
+19 Oct 2026), and all the research behind it. The current board is v13.10 (v13.9 plus the recovered v10 lead, memory-as-coded box and full trace, handoff emphasis and the orbit design lines; see `poster/src/poster.v13.layout.json` v13.10_notes).
 
 ## Start here
 
@@ -42,7 +42,8 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
 
 - one page, 841 × 1189 mm; content ends at least 2 mm above the footer; no box overflows its block or column;
 - no text below 14 pt (computed in the browser, figure SVG included); kicker, mechanism and take lines at 24 pt, captions 17;
-- no em or en dashes, no tell words, no banned word (report 10 section 5.3) without an allowlist entry;
+- no em or en dashes, no tell words, no banned word (report 10 section 5.3) without an allowlist entry; no board version
+  or commit hash on the face;
 - every number on the face (HTML and figure text) has a claims-map row; rows with a check re-run against their files;
 - every QR decodes (OpenCV, 300 dpi render) to its `.txt` payload; every figure placed; colours are tokens; imagery at 300 ppi;
 - an unknown gate result is a failure.
@@ -53,6 +54,8 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
 - A research poster, not an audit: limitations go in the Discussion and the guarantees table as short scope
   statements. Defect lists, scorecards and withdrawn claims stay in `research/`.
 - Numbers are copied from measurement files, never from prose. Counts carry their units and their date.
+- No service or code versions on the face (for example "emem.dev at 8e9b401"): they advance with every upgrade. The
+  claims rows and `research/` keep them.
 - Never commit signing keys (`.gitignore` covers the usual names).
 
 The ecosystem figure is generated from `research/v13/ecosystem_manifest.json` by `poster/ecosystem.py`. Dates older than 28 days (LIVE claim rows and ecosystem rows), unqualified statuses and manually added SVG copy fail the build and CI. Run `python -m unittest discover -s poster/tests -v` after changing claim or ecosystem gates.

@@ -206,3 +206,23 @@ uncalibrated heuristic"); the contribution box; panel 5's bar note; the EO-workf
 observation, read from the archive if not yet stored" replaces "single-hop retrieval materialises"); panel 10 ("One
 bundle resolves to eight facts"); panel 12 ("Separately, the same record and value came back through 11 client
 paths"); panel 6's legend ("38: both rules agree"). No hyphenated word breaks across lines in either variant.
+
+## 12. Final error pass, short title, no versions on the face (4 Oct 2026)
+
+Two corrections from the final error pass (13e9fb3). The EO-workflow caption said "Each request returns one
+observation"; a request with a band list returns many. It now reads "A request reuses stored records and fetches and
+signs missing ones from the archive" (emem docs/model.md, ensure at single hop). In the 300of300 variant, panel 5's
+"did not act on" bars used the legend's "refused" blue; they now use a lighter blue that the bar note defines.
+
+A third error: the footer read "Service: emem.dev at 8e9b401; code read at 18adb67", but the full trace and the 11
+client paths (30 Sep) ran against x-emem-commit 213e2738; 8e9b401 is the 1 Oct cost run. The authors' rule settles it:
+service and code versions advance with every upgrade and do not belong on a research poster. The commits leave the
+footer, the memory-as-coded label ("emem 18adb67") and panel 10's note ("At emem 18adb67, names, sets and records hash
+differently" is now "Names, sets and records hash differently"). The rows keep them (K.commit, CODE.commit, the trace
+and crossruntime files), and the face_hygiene gate now fails on a commit hash on the face. The footer keeps
+"Measurements: 29 Sep to 1 Oct 2026."
+
+Title: the authors shortened the printed title to the programme title up to "Protocol" (h1 and PDF title); the
+programme listing is unchanged. The header re-spaces the freed line (poster.v13.layout.json, v13.10_notes.title).
+This supersedes section 10's "Title kept" and its "Footer commits" row. Both variants pass every gate; 0 text overlaps
+and no hyphenated word breaks across lines in either variant.

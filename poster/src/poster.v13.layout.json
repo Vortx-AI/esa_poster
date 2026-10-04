@@ -85,6 +85,8 @@
     "date": "2026-10-04",
     "what": "Recovered from the v10 board (5143fac): the lead question and answer (header, beside the hero), the memory-as-coded box (centre, after panel 4, streamlined to seven rows) and the full trace (left, after panel 7, condensed; the ten-client-path sentence is left out because panel 12 prints the later 11-path measurement). Column gaps: left 4, centre 1, right 3 mm. The header image strip states the scene-to-token reduction instead of the location credit, which panels 1, 2 and 4 already carry. The 'Hand off' workflow step carries the strongest fill.",
     "variants": "Two print variants from one source (build_v13.py --variant): 0of300 (default) prints false acceptance as pre-registered; 300of300 prints the complement as 'did not act on' with the declined / genuine split. Only panel 1's outcome column and take line and panel 5's agent bars, totals and bar note differ.",
-    "eo_review": "Response to the EO reviewer's report of 4 Oct 2026: research/v13/26_V13_10_REVIEW.md section 10."
+    "eo_review": "Response to the EO reviewer's report of 4 Oct 2026: research/v13/26_V13_10_REVIEW.md section 10.",
+    "title": "4 Oct 2026, authors' choice: the printed title is the programme title up to 'Protocol', on one line. The header re-spaces the freed line: title down 3 mm; hero and lead up 13.8 mm, subhero up 10.4 mm, bridge up 7.9 mm; the byline keeps the bottom edge (ink gaps title-hero 15, hero-subhero 6, subhero-bridge 8, bridge-byline 13 mm).",
+    "versions": "No service or code commit on the face (footer, memory-as-coded label, panel 10 note): versions advance with every upgrade. The rows K.commit and CODE.commit keep them; face_hygiene fails on a commit hash."
   }
 }

@@ -1,5 +1,5 @@
 {
-  "purpose": "v13.10: recovered v10 lead, memory-as-coded box and full trace; handoff emphasis; orbit design lines; token-family context; header strip",
+  "purpose": "v13.10: recovered v10 lead, memory-as-coded box and full trace; handoff emphasis; orbit design lines; token-family context; header strip; 4 Oct 2026: short printed title, service and code commits removed from the face (they stay in the rows' sources)",
   "rows": [
     {
       "id": "LEAD.answer",
@@ -220,7 +220,7 @@
       "id": "CODE.commit",
       "block": "v13.10 memory-as-coded box label",
       "print": [
-        "THE MEMORY, AS CODED · emem 18adb67 · fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest"
+        "THE MEMORY, AS CODED · fact.rs, cbor.rs, geo.rs, recall.rs, attest.rs, translog.rs, emem-attest"
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -235,7 +235,7 @@
         "file": "repro/v10/algorithms.md",
         "arg": "18adb67895d33c8b64d3b091a90af1f708315123"
       },
-      "note": "",
+      "note": "The code was read at 18adb67 (source pointer and check). From 4 Oct 2026 the commit is not printed on the face: service and code versions advance, so the board names the files and this row keeps the commit.",
       "tier": "1m",
       "checked": true
     },
@@ -5161,6 +5161,16 @@
       "note": "",
       "tier": "30cm",
       "checked": true
+    }
+  ],
+  "extend_print": [
+    {
+      "id": "H.title",
+      "op": "extend_print",
+      "print_add": [
+        "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol"
+      ],
+      "note": "Printed title shortened by the authors on 4 Oct 2026 to the programme title up to 'Protocol'; the check still greps the full programme title in the listing."
     }
   ]
 }

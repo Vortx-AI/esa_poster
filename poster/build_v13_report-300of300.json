@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T11:09:24+00:00",
+ "built_utc": "2026-10-04T11:28:21+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -21,7 +21,7 @@
   "pages": 1,
   "w_mm": 840.993972439236,
   "h_mm": 1188.8892747667098,
-  "title": "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings"
+  "title": "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol"
  },
  "figures": {
   "f1_scene": {
@@ -99,7 +99,7 @@
    "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T10:46:07"
+   "mtime": "2026-10-04T11:19:32"
   },
   "f15b_sat042_strip": {
    "state": "placed",
@@ -116,7 +116,7 @@
    "mtime": "2026-10-04T09:46:44"
   }
  },
- "figure_text_tokens": 1812,
+ "figure_text_tokens": 1809,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -165,7 +165,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (867 text runs)"
+    "every printed code point is in the face that sets it (868 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -177,7 +177,7 @@
   "face_hygiene": {
    "pass": true,
    "details": [
-    "no version numbers, defect ids, scorecards, placeholders or R5 tokens on the face; PDF title is the programme title"
+    "no version numbers, commit hashes, defect ids, scorecards, placeholders or R5 tokens on the face; PDF title matches the HTML title"
    ]
   },
   "r5_placeholders": {
@@ -189,7 +189,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "185 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "184 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -443,7 +443,6 @@
   "H.img.record",
   "H.session",
   "H.title",
-  "K.commit",
   "K.dates",
   "K.sat042",
   "LEAD.answer",
