@@ -5224,22 +5224,25 @@
       "id": "R5.tasks",
       "block": "v13.10 P1 scope",
       "print": [
-        "2,794 scored trials of 25 items from two constructed tasks, 1 Oct 2026"
+        "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. All 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items plus controls, exploratory items and Qwen."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
       "source": {
         "file": "research/repro/v13/r5/prereg.md",
-        "pointer": "section 2: Task K (Keylong irrigation rule) and Task B (Bengaluru as-of audit); primary item set 25 items (23 in A, B and C; 24 in D); n_trials_scored 2794 in results.json"
+        "pointer": "section 2: Task K (Keylong irrigation rule) and Task B (Bengaluru as-of audit). trials.jsonl, block P and excluded rows left out: 2,794 scored trials (results.json n_trials_scored) over 28 item ids, i.e. 25 primary corruption items, the genuine controls G0 and G0-B and the exploratory M22; 2,688 Claude and 106 Qwen2.5-7B trials; blocks 1 (2,662) and 2 (132)"
       },
       "date": "2026-10-04",
       "value": null,
       "check": {
-        "kind": "grep",
-        "file": "repro/v13/r5/prereg.md",
-        "arg": "**Task B** Bengaluru site"
+        "kind": "json",
+        "file": "repro/v13/r5/results.json",
+        "arg": [
+          "n_trials_scored"
+        ],
+        "expect": 2794
       },
-      "note": "Added after the 4 Oct reviews: the trial count is repetitions over two constructed tasks, not thousands of independent EO problems.",
+      "note": "4 Oct 2026, after the second ChatGPT review: the earlier form '2,794 scored trials of 25 items' undercounted the item ids and read as Claude-only. The figure is pooled Claude over each condition's full item set; the total includes Qwen, controls and exploratory trials.",
       "tier": "1m",
       "checked": true
     }
