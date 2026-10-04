@@ -316,3 +316,19 @@ printed text and the preview. Each finding was checked against the board and the
 Not changed: the 154/288 versus 154/276 denominators (both printed and explained); the TRY IT position (bring a
 hand-held card); "encode" in three senses; panel 12's headline. Both variants pass every gate, with 0 text overlaps, no
 broken hyphenation and no split number phrase; 838 running words (cap 852 / 872, copy brief 843 / 862 plus about 1 %).
+
+## 16. Second ChatGPT review of 6132e29; copy frozen (4 Oct 2026)
+
+The reviewer re-read merge 6132e29 (PR #64), confirmed both release hashes and raised the score from 7.8 to 8.0 (visual
+hierarchy 6.5 to 7; the receiver-check and token-family sections up half a point each). It withdrew the earlier wording
+objections and found one new error: panel 1 said "2,794 scored trials of 25 items from two constructed tasks", after the
+previous round cut "with Qwen2.5-7B reported apart" for space. Recounted from `research/repro/v13/r5/trials.jsonl`
+(pilot and excluded rows left out): 2,794 scored trials over 28 item ids (25 primary corruption items, the controls
+G0 and G0-B, the exploratory M22), 2,688 Claude and 106 Qwen. Panel 1 now reads: "Figure: Claude Haiku 4.5, Sonnet 5.5
+and Opus 5.5 pooled, full item set per condition. All 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25
+corruption items plus controls, exploratory items and Qwen." Row R5.tasks now checks n_trials_scored in results.json.
+
+What still limits the board, by the reviewer's account and ours, is not copy: no matched baseline (same verifier and
+instruction without content addressing), an orbital design without the source re-read, two constructed tasks with one
+main model family, and density (about 3,450 words including labels). The copy is frozen at this commit; further gains
+need a matched-baseline run or a deliberate cut.

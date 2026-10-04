@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T12:42:31+00:00",
+ "built_utc": "2026-10-04T13:02:30+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -287,7 +287,7 @@
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
   "Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).",
-  "B was Claude Haiku 4.5, Sonnet 5.5 or Opus 5.5, pooled; 2,794 scored trials of 25 items from two constructed tasks, 1 Oct 2026. The figure counts each condition’s full item set. In the emem condition, B had the reference, a verifier tool and an instruction to check. Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet. With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 corruptions (2 of 25 when instructed): enforce refusal outside the model.",
+  "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. All 2,794 scored trials (1 Oct 2026, two constructed tasks) span 25 corruption items plus controls, exploratory items and Qwen. emem condition: the reference, a verifier tool and an instruction to check. Tools and instructions differ as well as representation, so this tests the workflow, not content addressing alone; no equal-tool baseline yet. With a fail-closed resolver, Qwen2.5-7B still acted on 10 of 25 corruptions (2 of 25 when instructed): enforce refusal outside the model.",
   "Each agent bar is 12 runs of one item; totals pool 23 items per condition (24 for the opaque id, 25 for emem). JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
