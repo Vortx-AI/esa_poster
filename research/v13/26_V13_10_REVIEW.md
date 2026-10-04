@@ -226,3 +226,38 @@ Title: the authors shortened the printed title to the programme title up to "Pro
 programme listing is unchanged. The header re-spaces the freed line (poster.v13.layout.json, v13.10_notes.title).
 This supersedes section 10's "Title kept" and its "Footer commits" row. Both variants pass every gate; 0 text overlaps
 and no hyphenated word breaks across lines in either variant.
+
+## 13. Byline, subhero, and wording for a scientific reader (4 Oct 2026)
+
+**Byline.** The two Zenodo DOIs are removed at the authors' request; panel 12 and the QR codes carry the routes. Line 1
+names the authors, contact, emem.dev and the repository; line 2 names the event.
+
+**Subhero.** Of the items the board could not print (section 8 and the earlier review), one has an in-repo source and fits
+the line: "Where no observation exists, emem signs an absence and its reason, not a zero." Sources: emem's CHANGELOG at
+18adb67 (JRC GSW 255 signed as an Absence; Hansen, WorldCover, CCI, Cop-DEM and GeoTessera 404s are Absences while a
+known tile answers; a pixel off its tile is now an error, not a zero), `research/repro/verify_absence.py` and panel
+10's "nothing there" row (row V8.absence). Not added: the 24-hop relay and the live draft check (no measurement in this
+repository), non-EO observers (unmeasured, and outside an EO session), the accelerator programmes and the product list
+(not research content).
+
+**Contradictions and vague wording.**
+
+| Where | Was | Now | Why |
+|---|---|---|---|
+| Panel 1 question | What survives an agent handoff? | Does agent B act on a corrupted handoff? | The figure counts false acceptance, where 0/300 is the good result; under "survives" it read as nothing surviving. |
+| Panel 1 headline | The same observation, carried through receiver checks. | The same corruptions, handed over five ways. | States the design: identical items across five conditions (prereg section 3). |
+| Panel 1 mechanism | Agent B acts on it or checks the reference. | Agent B acts on it, declines it or uses the genuine record. | The three outcomes the figure counts. |
+| Panel 1 scope, panel 5 caption | checked reference; Checked-reference agents | emem reference | One name for the condition across the board. |
+| Panel 5 caption | ... genuine controls; one was refused (pooled Claude). | ... genuine controls and declined one. | Says who declined; one line (the panel names the models). |
+| Panel 5 totals | B acts on corrupted evidence; R1 15 / 15 | B acted on corrupted evidence; "deterministic receiver, same corruptions" 15 / 15 | Tense as in the legend; R1 was never defined on the face. |
+| Panel 5 checks | Resolve, Re-hash, Bind, Recompute, Re-read | the same, each with its layer (L0, L0, L1, L2, L3) | Panels 2, 4 and 5 print L0 to L3; the key left the board with the old ladder. |
+| Panel 2 caption | one exceeds the expected NDVI range | one lies outside the valid NDVI range | NDVI is bounded to [-1, 1]; 1.1427 is impossible, not unexpected. |
+| Panel 7 headline | Know what was checked | The record, not physical truth | Answers its question; matches the figure's NOT ESTABLISHED column. |
+| Header bridge | Encode in orbit, decode in AI's reasoning with emem. | Design goal: encode in orbit, decode in AI's reasoning with emem. | Panel 11 says no spacecraft is enrolled. |
+| 300of300 bar note | used the genuine value; squares: deterministic receiver | used the genuine record; squares: deterministic ceiling | The words panel 1 and the default variant use. |
+| Panel 1 take line and scope | "0 / of 276" and "22 / of 23" broke across lines | kept on one line | |
+
+Kept: panel 3's Δencoder (the whitepaper's term for "the model changed"); panel 10's token-family line and panel 12's
+headline (the authors' lines; neither contradicts a measurement). Word cap 870 / 895 (copy brief 860 / 884 plus about
+1 %); the board prints 854 / 878. Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no
+number phrase split across lines.

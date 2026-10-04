@@ -249,7 +249,7 @@ def r5_cell(xc, y, w, h, cond, mid, r1row):
         T(xc + 5, y + h / 2, "n/a", 14, color=C["muted"], claim="F6.na")
         return
     k, n = kn
-    if VARIANT == "300of300":   # corruptions the agents did not act on (declined, or acted on the genuine value)
+    if VARIANT == "300of300":   # corruptions the agents did not act on (declined, or used the genuine record)
         v, fill, cid = n - k, C["L1"], f"R5.cell.{R5_COND[cond]}.{mid}.notacted"   # not the legend's "refused" blue
     else:                       # corruptions the agents acted on (false acceptance)
         v, fill, cid = k, C["harm"], f"R5.cell.{R5_COND[cond]}.{mid}.false_accept"
@@ -331,7 +331,7 @@ yt = y_end + 2.2
 ax.plot([0, W], [yt, yt], color=C["ink2"], lw=0.5 / PTMM, zorder=1)
 ty = yt + 6.6
 NOT_ACTED = MODE == "R5" and VARIANT == "300of300"
-T(0.3, ty + 0.6, "B did not act on corrupted evidence" if NOT_ACTED else "B acts on corrupted evidence", 20, weight=600,
+T(0.3, ty + (-2.4 if MODE == "R5" else 0.6), "B did not act on corrupted evidence" if NOT_ACTED else "B acted on corrupted evidence", 20, weight=600,
   claim="F6.totals_label")
 claim_of = {"A": "S.R1.A", "B": "S.R1.B", "C": "S.R1.C", "I": "S.R1.I"}
 _S = "notacted" if NOT_ACTED else "pooled"
@@ -348,10 +348,12 @@ def r5_total(xc, cond, color):
     if cond in R1_CEIL:
         cid, s_ = R1_CEIL[cond]
         r1v = s_['applicable'] - s_['false_accepts'] if NOT_ACTED else s_['false_accepts']
-        T(xc, ty + 4.2, f"R1 {r1v}\u2009/\u2009{s_['applicable']}", 14, color=C["ink2"], ha="center",
+        T(xc, ty + 4.2, f"{r1v}\u2009/\u2009{s_['applicable']}", 14, color=C["ink2"], ha="center",
           claim=f"{cid}.notacted" if NOT_ACTED else cid)
 
 
+if MODE == "R5":   # the row beneath the agents' totals: the R1 suite's deterministic receiver, named in words
+    T(0.3, ty + 4.2, "deterministic receiver, same corruptions", 14, color=C["ink2"], claim="S.R1.I")
 for c in cond_cols:
     if MODE == "R5":
         r5_total(xs[c] + CW / 2, c, lambda k: C["harm"] if k else C["emem"])
@@ -390,8 +392,8 @@ if MODE == "R5":
     reps = reps.replace("haiku", "Haiku 4.5").replace("sonnet", "Sonnet 5.5").replace("opus", "Opus 5.5")
     NI = f"{min(R5D['n_items'].values())} to {max(R5D['n_items'].values())}"   # 23 (A, B, RAG), 24 (opaque id), 25 (emem)
     if NOT_ACTED:
-        scope = (f"Bars: B did not act on it (declined, or used the genuine value), n {R5D['per_cell']} ({reps} runs); "
-                 f"squares: deterministic receiver. Totals pool {NI} items, {R5D['date']}.")
+        scope = (f"Bars: B did not act on it (declined, or used the genuine record), n {R5D['per_cell']} ({reps} runs); "
+                 f"squares: deterministic ceiling. Totals pool {NI} items, {R5D['date']}.")
     else:
         scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
                  f"squares: the deterministic ceiling. Totals pool {NI} items, {R5D['date']}.")

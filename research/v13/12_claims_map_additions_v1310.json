@@ -59,7 +59,8 @@
       "id": "ORBIT.tagline",
       "block": "v13.10 header bridge",
       "print": [
-        "Encode in orbit, decode in AI’s reasoning with emem."
+        "Encode in orbit, decode in AI’s reasoning with emem.",
+        "Design goal: encode in orbit, decode in AI’s reasoning with emem."
       ],
       "status": "SPEC",
       "layer": "L5",
@@ -77,7 +78,7 @@
         "file": "repro/v12/trace/sat042_run_stdout.txt",
         "arg": "act 4  admitted: 3 facts under one verified trace"
       },
-      "note": "Design statement. No spacecraft is enrolled (trace_truth.md section 1); panel 11 and the p1 orbit line print the reference-harness scope.",
+      "note": "Design statement. No spacecraft is enrolled (trace_truth.md section 1); panel 11 and the p1 orbit line print the reference-harness scope. 4 Oct 2026: printed as a design goal; panel 11 states that no spacecraft is enrolled.",
       "tier": "1m",
       "checked": true
     },
@@ -5161,6 +5162,55 @@
       "note": "",
       "tier": "30cm",
       "checked": true
+    },
+    {
+      "id": "R5.design",
+      "block": "v13.10 P1 headline",
+      "print": [
+        "The same corruptions, handed over five ways."
+      ],
+      "status": "PRE-REGISTERED",
+      "layer": "L0-L3",
+      "source": {
+        "file": "research/repro/v13/r5/prereg.md",
+        "pointer": "section 3, Conditions: system prompt, task text, rule, output line and model settings are identical across conditions over the same possibly-mutated relay state; the figure shows A prose, B JSON, C RAG, D opaque id and E emem (E0 in the take line)"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "repro/v13/r5/prereg.md",
+        "arg": "Identical across conditions: system prompt, task text, rule, output line, model settings."
+      },
+      "note": "Replaces 'The same observation, carried through receiver checks.' (4 Oct 2026): the headline now states the design.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
+      "id": "V8.absence",
+      "block": "v13.10 header subhero",
+      "print": [
+        "Where no observation exists, emem signs an absence and its reason, not a zero."
+      ],
+      "status": "SPEC",
+      "layer": "L0",
+      "source": {
+        "files": [
+          "v13/evidence/failure_modes/CHANGELOG_18adb67.md",
+          "repro/verify_absence.py"
+        ],
+        "pointer": "CHANGELOG: JRC GSW '255 signed as an Absence (open sea or no valid observation)'; Hansen, WorldCover, CCI, Cop-DEM and GeoTessera 404s are Absences while a known tile answers; 'A pixel off its tile is now an error, not a zero.' verify_absence.py: an ocean point with no Copernicus DEM GLO-30 tile returns a signed Absence fact whose reason is hash-bound. Token family (panel 10): 'nothing there', id = same + BLAKE3(reason)[:16]."
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/evidence/failure_modes/CHANGELOG_18adb67.md",
+        "arg": "255 signed as an Absence (open sea or no valid observation)"
+      },
+      "note": "From the list of unprinted items (26_V13_10_REVIEW.md sections 8 and 13): the only one with an in-repo source that fits the subhero.",
+      "tier": "1m",
+      "checked": true
     }
   ],
   "extend_print": [
@@ -5171,6 +5221,41 @@
         "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol"
       ],
       "note": "Printed title shortened by the authors on 4 Oct 2026 to the programme title up to 'Protocol'; the check still greps the full programme title in the listing."
+    },
+    {
+      "id": "U.flow",
+      "op": "extend_print",
+      "print_add": [
+        "Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it, declines it or uses the genuine record."
+      ],
+      "note": "Panel 1 mechanism, 4 Oct 2026: the three outcomes the figure counts."
+    },
+    {
+      "id": "U.boundary",
+      "op": "extend_print",
+      "print_add": [
+        "The record, not physical truth"
+      ],
+      "note": "Panel 7 headline, 4 Oct 2026: answers 'What does a checked reference establish?' (figure: Physical truth, not established)."
+    },
+    {
+      "id": "E8.summary",
+      "op": "extend_print",
+      "print_add": [
+        "Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each calls for a different check."
+      ],
+      "note": "Panel 2 caption, 4 Oct 2026: NDVI is bounded to [-1, 1]; 1.1427 is outside it."
+    },
+    {
+      "id": "R5.F6.scope",
+      "op": "extend_print",
+      "print_add": [
+        "Bars: B did not act on it (declined, or used the genuine record), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026."
+      ],
+      "figures": [
+        "f6_mutation_matrix.300of300"
+      ],
+      "note": "300of300 bar note, 4 Oct 2026: 'genuine record' as in panel 1."
     }
   ]
 }

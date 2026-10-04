@@ -12,21 +12,21 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > An Earth observation that survives an agent handoff.
 
-> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.
+> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. Where no observation exists, emem signs an absence and its reason, not a zero.
 
 > Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?
 
 > emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.
 
-> A compact citation keeps the observation traceable across agents and time. Encode in orbit, decode in AI’s reasoning with emem.
+> A compact citation keeps the observation traceable across agents and time. Design goal: encode in orbit, decode in AI’s reasoning with emem.
 
 ### 1 · Earth to agents
 
-> What survives an agent handoff?
+> Does agent B act on a corrupted handoff?
 
-> The same observation, carried through receiver checks.
+> The same corruptions, handed over five ways.
 
-> Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it or checks the reference.
+> Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it, declines it or uses the genuine record.
 
 > [variant:0of300] Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).
 
@@ -42,7 +42,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > We varied one Keylong NDVI by scene, date, place, pixel and arithmetic.
 
-> Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.
+> Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each calls for a different check.
 
 ### 3 · Different drift, different check
 
@@ -66,7 +66,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > What does a checked reference establish?
 
-> Know what was checked
+> The record, not physical truth
 
 > Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.
 
@@ -100,9 +100,9 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Checks can continue back to the source
 
-> Resolve · Re-hash · Bind · Recompute · Re-read
+> Resolve L0 · Re-hash L0 · Bind L1 · Recompute L2 · Re-read L3
 
-> Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).
+> Deeper checks expose different corruptions. Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one.
 
 ### 6 · Source re-read
 

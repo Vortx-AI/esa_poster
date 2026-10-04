@@ -371,11 +371,11 @@
     },
     {
       "word": "deployment-wording",
-      "text_sha": "d6e83c9ea47d9db7fac4f8026e409ace87cc4f00526114fb18651c0c67198f73",
-      "sentence": "Encode in orbit, decode in AI’s reasoning with emem.",
+      "text_sha": "792f238de2530891cd8480c72e1f3f043b6280cb435e206497fbe51b9d7309f8",
+      "sentence": "Design goal: encode in orbit, decode in AI’s reasoning with emem.",
       "where": "html:header_text:bridge",
       "evidence": "ORBIT.tagline",
-      "reason": "design tagline; panel 1 and panel 11 print the reference-harness scope (no spacecraft enrolled)"
+      "reason": "stated as a design goal (4 Oct 2026); panel 1 and panel 11 print the reference-harness scope (no spacecraft enrolled)"
     },
     {
       "word": "all",
@@ -408,6 +408,14 @@
       "where": "html:header_text:body",
       "evidence": "LEAD.answer",
       "reason": "the subject is the record ('a record named by the BLAKE3 hash of its bytes'), not the observation or a pixel; the code box prints fact_cid = base32(BLAKE3-256(b)) with b = CBOR(f)"
+    },
+    {
+      "word": "truth",
+      "text_sha": "77706e764d01ab5468c96fa932e32ae8a32c352b16e2b306a15a971a1e429528",
+      "sentence": "The record, not physical truth",
+      "where": "html:p7:headline",
+      "evidence": "V6.limits",
+      "reason": "negative scope statement answering panel 7's question; the figure lists physical truth under NOT ESTABLISHED"
     }
   ]
 }

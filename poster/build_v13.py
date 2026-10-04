@@ -1144,9 +1144,10 @@ def g_words(claims, r5=False):
         elif line.startswith("> "):
             r1lines[sec].append(line[2:])
             bc[sec] += len(wre.findall(line[2:]))
-    # cap: brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16 (807 / 853 before them) plus about 1 % slack
-    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 830 / 880; v13.5 copy brief: see per-panel counts)"]
-    ok = tot_w <= 830 and tot_t <= 880
+    # cap: brief 860 / 884 on 4 Oct 2026 (header subhero completed with the signed absence; panel 1, 2, 5 and 7 wording
+    # made precise) plus about 1 % slack; it was 830 / 880 for brief 823 / 869 after the 1 Oct review fixes 9, 13 and 16
+    d = [f"running text: {tot_w} words containing a letter, {tot_t} tokens with numerals (cap 870 / 895; v13.5 copy brief: see per-panel counts)"]
+    ok = tot_w <= 870 and tot_t <= 895
     for b, (t, w) in sorted(per.items(), key=lambda kv: str(kv[0])):
         ref = next((v for k, v in bc.items() if b and k.startswith(b)), None)
         flag = ""

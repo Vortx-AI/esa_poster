@@ -12,16 +12,16 @@
 <div class="blk headtext" data-block="header_text" style="--x:0;--y:0;--w:627.5;--h:188">
   <h1 class="title rt" data-role="title" data-claim="H.title">EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol</h1>
   <p class="hero rt" data-role="hero" data-claim="U.hero">An Earth observation that<br>survives an agent <span class="hl">handoff.</span></p>
-  <p class="subhero rt" data-role="subhero" data-claim="V8.language">emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence.</p>
+  <p class="subhero rt" data-role="subhero" data-claim="V8.language V8.absence">emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. Where no observation exists, emem signs an absence and its reason, not a zero.</p>
   <div class="lead">
     <p class="leadq rt" data-role="question">Agent A cites a satellite observation. What can agent B check without trusting A, A’s model, or us?</p>
     <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes satellite observations, raw or derived, <b>addressable by place, band and time</b>. Each is a record named by the <b>BLAKE3 hash of its bytes</b> and signed in a batch. The exact evidence A cites survives a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.</p>
     <p class="leadtrace steps" data-claim="TRACE.chain"><b>Trace</b><span>token</span><span>record bytes</span><span>cell</span><span>pixel</span><span>receipt</span><span>log</span><span>key</span></p>
   </div>
-  <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Encode in orbit, decode in AI’s reasoning with emem.</span></p>
-  <div class="byline" data-role="byline" data-claim="H.byline H.session H.doi">
-    <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai · <span data-claim="H.doi">whitepaper doi.org/10.5281/zenodo.20706317 · study doi.org/10.5281/zenodo.20706893</span></div>
-    <div>Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026 · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)</div>
+  <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Design goal: encode in orbit, decode in AI’s reasoning with emem.</span></p>
+  <div class="byline" data-role="byline" data-claim="H.byline H.session">
+    <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)</div>
+    <div>Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026</div>
   </div>
 </div>
 <div class="blk headimg" data-bleed="right" data-block="header_image" style="--x:627.5;--y:0;--w:213.5;--h:188">
@@ -34,20 +34,20 @@
   <div class="fig" data-figslot="f18_workflow" style="--fw:801;--fh:49"><!--fig:f18_workflow--></div>
 </section>
 <section class="blk panel spine c12" data-block="p1" data-brief="1 · Earth to agents" style="--x:20;--y:247;--w:801;--h:183.5">
-  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">1</span>What survives an agent handoff?</p>
-  <h2 class="rt" data-role="headline" data-claim="U.bridge">The same observation, carried through receiver checks.</h2>
-  <p class="mech rt" data-role="mechanism" data-claim="U.flow">Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it or checks the reference.</p>
+  <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">1</span>Does agent B act on a corrupted handoff?</p>
+  <h2 class="rt" data-role="headline" data-claim="R5.design">The same corruptions, handed over five ways.</h2>
+  <p class="mech rt" data-role="mechanism" data-claim="U.flow">Agent A cites a satellite reading. A relay changes the evidence. Agent B acts on it, declines it or uses the genuine record.</p>
   <div class="fig" data-figslot="f2_spine" style="--fw:801;--fh:118"><!--fig:f2_spine--></div>
   <div class="spinefoot">
     <div class="spineleft">
-    <p class="agentstrip rt" data-mode="r5" data-variant="0of300" data-role="take" data-claim="R5.shared.n R5.shared.A.acted R5.shared.D.acted R5.shared.E.acted R5.shared.E0.acted">Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).</p>
+    <p class="agentstrip rt" data-mode="r5" data-variant="0of300" data-role="take" data-claim="R5.shared.n R5.shared.A.acted R5.shared.D.acted R5.shared.E.acted R5.shared.E0.acted">Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and <span class="nw">0 of 276</span> with an emem reference (2 of 276 without the instruction to check).</p>
     <p class="agentstrip rt" data-mode="r5" data-variant="300of300" data-role="take" data-claim="R5.shared.n R5.shared.E.notacted R5.shared.E.declined R5.shared.E.acted_on_genuine R5.shared.D.notacted R5.shared.A.notacted">Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.</p>
     <p class="agentstrip rt" data-mode="r1" data-role="take" data-claim="S.R1.A S.R1.I">In our suite, the deterministic receiver accepted 15 of 15 corruptions carried by prose and 0 of 16 with the checked reference.</p>
     <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked into the AI’s reasoning (<span class="nw">SAT-042</span> harness, not flown).</p>
     </div>
     <div class="scope" data-mode="r5">
       <p data-role="scope" data-claim="R5.models R5.dates R5.shared.n R5.treatment">B was Claude Haiku 4.5, Sonnet 5.5 or Opus 5.5, pooled, with Qwen2.5-7B reported apart; 2,794 scored trials on 1 Oct 2026. The figure counts each condition’s full item set. In the emem condition, B had the reference, a verifier tool and an instruction to check.</p>
-      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b R5.limits">The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet. Qwen2.5-7B (one run) acted on 22 of 23 corrupted prose handoffs and 2 of 25 with a checked reference. Corruptions are simulated on a small task set; intervals are in Reproduce.</p>
+      <p data-role="scope" data-claim="R5.A.qwen7b R5.E.qwen7b R5.limits">The conditions differ in tools and instructions as well as representation; no equal-tool baseline has been run yet. Qwen2.5-7B (one run) acted on 22 of 23 corrupted prose handoffs and 2 of 25 with an emem reference. Corruptions are simulated on a small task set; intervals are in Reproduce.</p>
     </div>
     <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope S.threshold">Deterministic receiver, one record and one band. The 0.4705 threshold makes rounding change the decision. Token-copy mutation M7 has no prose form.</p>
   </div>
@@ -59,7 +59,7 @@
   <h2 class="rt" data-role="headline" data-claim="E8.summary">One NDVI, eight values</h2>
   <p class="mech rt" data-role="mechanism" data-claim="E8.summary E8.constructed">We varied one Keylong NDVI by scene, date, place, pixel and arithmetic.</p>
   <div class="fig" data-figslot="f3_eight_answers" style="--fw:193.5;--fh:62"><!--fig:f3_eight_answers--></div>
-  <p class="cap rt" data-role="caption" data-claim="E8.summary E8.double">Six cross the constructed irrigation threshold; one exceeds the expected NDVI range. Each calls for a different check.</p>
+  <p class="cap rt" data-role="caption" data-claim="E8.summary E8.double">Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each calls for a different check.</p>
 </section>
 <section class="panel c3 drift-panel" data-block="p3" data-brief="3 · Different drift, different check">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">3</span>Where did the evidence change?</p>
@@ -73,7 +73,7 @@
 </section>
 <section class="panel c3 handoff" data-block="p7" data-brief="7 · What checks establish">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
-  <h2 class="rt" data-role="headline" data-claim="U.boundary">Know what was checked</h2>
+  <h2 class="rt" data-role="headline" data-claim="U.boundary">The record, not physical truth</h2>
   <div class="fig" data-figslot="f8_ladder" style="--fw:193.5;--fh:65"><!--fig:f8_ladder--></div>
   <p class="cap rt" data-role="caption" data-claim="U.boundary">Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.</p>
 </section>
@@ -130,9 +130,9 @@
 <section class="panel c6" data-block="p5" data-brief="5 · Checks back to the source">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">5</span>Which changes can the receiver detect?</p>
   <h2 class="rt" data-role="headline" data-claim="U.checks">Checks can continue back to the source</h2>
-  <p class="mech rt steps" data-role="mechanism" data-claim="U.checks"><span>Resolve</span><span>Re-hash</span><span>Bind</span><span>Recompute</span><span>Re-read</span></p>
+  <p class="mech rt steps" data-role="mechanism" data-claim="U.checks"><span>Resolve <i class="ly">L0</i></span><span>Re-hash <i class="ly">L0</i></span><span>Bind <i class="ly">L1</i></span><span>Recompute <i class="ly">L2</i></span><span>Re-read <i class="ly">L3</i></span></p>
   <div class="fig" data-figslot="f6_mutation_matrix" style="--fw:396;--fh:196"><!--fig:f6_mutation_matrix--></div>
-  <p class="cap rt" data-role="caption" data-claim="V6.controls V6.controls.n V6.controls.refused X.loo">Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).</p>
+  <p class="cap rt" data-role="caption" data-claim="V6.controls V6.controls.n V6.controls.refused X.loo">Deeper checks expose different corruptions. Agents with an emem reference decided correctly on 71 of 72 genuine controls and declined one.</p>
   <p class="scope" data-mode="r5" data-role="scope" data-claim="R5.F6.scope R5.items R5.baseline.catch R5.block2.M15r">Each agent bar is 12 runs of one item; totals pool 23 items per condition (24 for the opaque id, 25 for emem). JSON and an opaque id caught some changes from their fields. On the live pre-fix record, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read.</p>
   <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope X.p123">One record, one band, deterministic receiver; signer-error rows use a test key. Additional offset, scene and unit cases are documented in Reproduce.</p>
 </section>

@@ -907,12 +907,17 @@
    "claim": "F6.totals_label"
   },
   {
+   "text": "deterministic receiver, same corruptions",
+   "pt": 14,
+   "claim": "S.R1.I"
+  },
+  {
    "text": "22 / 276",
    "pt": 17,
    "claim": "R5.A.notacted"
   },
   {
-   "text": "R1 0 / 15",
+   "text": "0 / 15",
    "pt": 14,
    "claim": "S.R1.A.notacted"
   },
@@ -922,7 +927,7 @@
    "claim": "R5.B.notacted"
   },
   {
-   "text": "R1 0 / 15",
+   "text": "0 / 15",
    "pt": 14,
    "claim": "S.R1.B.notacted"
   },
@@ -937,7 +942,7 @@
    "claim": "R5.D.notacted"
   },
   {
-   "text": "R1 3 / 16",
+   "text": "3 / 16",
    "pt": 14,
    "claim": "S.R1.C.notacted"
   },
@@ -947,7 +952,7 @@
    "claim": "R5.E.notacted"
   },
   {
-   "text": "R1 16 / 16",
+   "text": "16 / 16",
    "pt": 14,
    "claim": "S.R1.I.notacted"
   },
@@ -1027,7 +1032,7 @@
    "claim": "F6.cumulative"
   },
   {
-   "text": "Bars: B did not act on it (declined, or used the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic receiver. Totals pool 23 to 25 items, 1 Oct 2026.",
+   "text": "Bars: B did not act on it (declined, or used the genuine record), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026.",
    "pt": 14,
    "claim": "R5.F6.scope"
   },

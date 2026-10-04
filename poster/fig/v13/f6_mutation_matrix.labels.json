@@ -902,9 +902,14 @@
    "claim": "X.entity"
   },
   {
-   "text": "B acts on corrupted evidence",
+   "text": "B acted on corrupted evidence",
    "pt": 20,
    "claim": "F6.totals_label"
+  },
+  {
+   "text": "deterministic receiver, same corruptions",
+   "pt": 14,
+   "claim": "S.R1.I"
   },
   {
    "text": "254 / 276",
@@ -912,7 +917,7 @@
    "claim": "R5.A.pooled"
   },
   {
-   "text": "R1 15 / 15",
+   "text": "15 / 15",
    "pt": 14,
    "claim": "S.R1.A"
   },
@@ -922,7 +927,7 @@
    "claim": "R5.B.pooled"
   },
   {
-   "text": "R1 15 / 15",
+   "text": "15 / 15",
    "pt": 14,
    "claim": "S.R1.B"
   },
@@ -937,7 +942,7 @@
    "claim": "R5.D.pooled"
   },
   {
-   "text": "R1 13 / 16",
+   "text": "13 / 16",
    "pt": 14,
    "claim": "S.R1.C"
   },
@@ -947,7 +952,7 @@
    "claim": "R5.E.pooled"
   },
   {
-   "text": "R1 0 / 16",
+   "text": "0 / 16",
    "pt": 14,
    "claim": "S.R1.I"
   },
