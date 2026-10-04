@@ -778,7 +778,7 @@
    "kind": "card",
    "order": 3,
    "label": "GitHub MCP Registry",
-   "mechanism": "Registry listing",
+   "mechanism": "Server listing",
    "action": "Install MCP server"
   }
  },

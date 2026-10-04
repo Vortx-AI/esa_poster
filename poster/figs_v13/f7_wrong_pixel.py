@@ -305,9 +305,9 @@ XS = BX
 yr = BY + BW + 5.2
 runs(XS, yr, [("the real record ", dict(size=17, color=C["ink2"], claim="W.kx")),
               (f"{KX_ID}…", dict(size=17, family=MONO, color=C["ink"], claim="W.kx")),
-              (" · 23 Sep 2026 · signed ", dict(size=17, color=C["ink2"], claim="W.kx")),
+              ("\u00a0· 23 Sep 2026 · signed ", dict(size=17, color=C["ink2"], claim="W.kx")),
               (f"{prev['ndvi_round_pixel']:.4f}", dict(size=17, weight=700, color=C["harm_text"], claim="W.kx")),
-              (" · its containing pixel ", dict(size=17, color=C["ink2"], claim="W.kx")),
+              ("\u00a0· its containing pixel ", dict(size=17, color=C["ink2"], claim="W.kx")),
               (f"{prev['ndvi_floor_pixel']:.4f}", dict(size=17, weight=700, color=C["emem"], claim="W.kx"))])
 n_ro = len(RO["lossyear"])
 ly_changed = sum(r["floor"] != r["round"] for r in RO["lossyear"])

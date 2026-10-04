@@ -229,3 +229,13 @@ h2.steps>span{padding:0 1.6mm;line-height:1.02}
 h2.steps{gap:1.2mm;margin-top:.6mm}
 h2.steps>span:last-child{background:var(--emem);color:#FFFFFF;border-color:var(--emem)}
 .mech.steps>span{border-color:var(--emem);color:var(--emem);background:var(--emem-tint);font-weight:500}
+
+.nw{white-space:nowrap}
+/* v13.10: boxed steps read as one chain: a short rule joins neighbouring boxes */
+.steps{gap:0}
+.steps>span{position:relative}
+.steps>span+span{margin-left:2.4mm}
+.steps>span+span::before{content:"";position:absolute;left:-2.75mm;top:50%;width:2.4mm;border-top:.35mm solid var(--emem)}
+.headtext .leadtrace.steps>span+span{margin-left:1.6mm}
+.headtext .leadtrace.steps>span+span::before{left:-1.95mm;width:1.6mm;border-top-color:var(--emem-light)}
+.headtext .leadtrace.steps>b{margin-right:1.6mm}

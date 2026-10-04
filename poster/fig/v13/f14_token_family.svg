@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-02T06:30:33.222994</dc:date>
+    <dc:date>2026-10-04T09:39:51.591843</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -35,7 +35,7 @@ L 548.503937 35.149606
 L 548.503937 54.141732 
 L 0 54.141732 
 z
-" clip-path="url(#pc0460fa959)" style="fill: #f1f0ec"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_3">
     <path d="M 0 73.133858 
@@ -43,7 +43,7 @@ L 548.503937 73.133858
 L 548.503937 92.125984 
 L 0 92.125984 
 z
-" clip-path="url(#pc0460fa959)" style="fill: #f1f0ec"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_4">
     <path d="M 0 111.11811 
@@ -51,7 +51,7 @@ L 548.503937 111.11811
 L 548.503937 130.110236 
 L 0 130.110236 
 z
-" clip-path="url(#pc0460fa959)" style="fill: #f1f0ec"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_5">
     <path d="M 0 149.102362 
@@ -59,7 +59,7 @@ L 548.503937 149.102362
 L 548.503937 168.094488 
 L 0 168.094488 
 z
-" clip-path="url(#pc0460fa959)" style="fill: #f1f0ec"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_6">
     <path d="M 0 187.086614 
@@ -67,7 +67,7 @@ L 548.503937 187.086614
 L 548.503937 206.07874 
 L 0 206.07874 
 z
-" clip-path="url(#pc0460fa959)" style="fill: #f1f0ec"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_7">
     <path d="M 0 225.070866 
@@ -75,7 +75,7 @@ L 548.503937 225.070866
 L 548.503937 244.062992 
 L 0 244.062992 
 z
-" clip-path="url(#pc0460fa959)" style="fill: #f1f0ec"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_8">
     <path d="M 0 263.055118 
@@ -83,166 +83,166 @@ L 548.503937 263.055118
 L 548.503937 282.047244 
 L 0 282.047244 
 z
-" clip-path="url(#pc0460fa959)" style="fill: #f1f0ec"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: #f1f0ec"/>
    </g>
    <g id="line2d_1">
     <path d="M 0 15.590551 
 L 548.503937 15.590551 
-" clip-path="url(#pc0460fa959)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 0 282.047244 
 L 548.503937 282.047244 
-" clip-path="url(#pc0460fa959)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
+" clip-path="url(#pbb9ee94bc1)" style="fill: none; stroke: #d5d6da; stroke-width: 1.417323; stroke-linecap: square"/>
    </g>
    <g id="text_1">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="0" y="11.717008" transform="rotate(-0 0 11.717008)">data need</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="0" y="11.857008" transform="rotate(-0 0 11.857008)">data need</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="121.889764" y="11.632789" transform="rotate(-0 121.889764 11.632789)">grammar, after emem:</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="121.889764" y="11.857008" transform="rotate(-0 121.889764 11.857008)">grammar, after emem:</text>
    </g>
    <g id="text_3">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="338.740157" y="11.717008" transform="rotate(-0 338.740157 11.717008)">what its id hashes</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #7a7d85" x="338.740157" y="11.857008" transform="rotate(-0 338.740157 11.857008)">what its id hashes</text>
    </g>
    <g id="text_4">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="29.433543" transform="rotate(-0 0 29.433543)">a place</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="29.573543" transform="rotate(-0 0 29.573543)">a place</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="29.433543" transform="rotate(-0 121.889764 29.433543)">cell:&lt;cell64&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="29.573543" transform="rotate(-0 121.889764 29.573543)">cell:&lt;cell64&gt;</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="29.349325" transform="rotate(-0 338.740157 29.349325)">the quantised lat/lng; no hash</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="29.573543" transform="rotate(-0 338.740157 29.573543)">the quantised lat/lng; no hash</text>
    </g>
    <g id="text_7">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="48.425669" transform="rotate(-0 0 48.425669)">one value</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="48.565669" transform="rotate(-0 0 48.565669)">one value</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="48.425669" transform="rotate(-0 121.889764 48.425669)">fact:&lt;cell&gt;:&lt;cid&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="48.565669" transform="rotate(-0 121.889764 48.565669)">fact:&lt;cell&gt;:&lt;cid&gt;</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="48.425669" transform="rotate(-0 338.740157 48.425669)">BLAKE3(CBOR(fact)), 52 chars</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="48.565669" transform="rotate(-0 338.740157 48.565669)">BLAKE3(CBOR(fact)), 52 chars</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="67.333577" transform="rotate(-0 0 67.333577)">nothing there</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="67.557795" transform="rotate(-0 0 67.557795)">nothing there</text>
    </g>
    <g id="text_11">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="67.417795" transform="rotate(-0 121.889764 67.417795)">fact: · kind absence</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="67.557795" transform="rotate(-0 121.889764 67.557795)">fact: · kind absence</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="67.417795" transform="rotate(-0 338.740157 67.417795)">same; + BLAKE3(reason)[:16]</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="67.557795" transform="rotate(-0 338.740157 67.557795)">same; + BLAKE3(reason)[:16]</text>
    </g>
    <g id="text_13">
-    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="86.367265" transform="rotate(-0 0 86.367265)">an embedding</text>
+    <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="86.549921" transform="rotate(-0 0 86.549921)">an embedding</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="86.409921" transform="rotate(-0 121.889764 86.409921)">fact: · 128 / 1024 floats</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="86.549921" transform="rotate(-0 121.889764 86.549921)">fact: · 128 / 1024 floats</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="86.409921" transform="rotate(-0 338.740157 86.409921)">same; attester_only</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="86.549921" transform="rotate(-0 338.740157 86.549921)">same; attester_only</text>
    </g>
    <g id="text_16">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="105.402047" transform="rotate(-0 0 105.402047)">a derived value</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="105.542047" transform="rotate(-0 0 105.542047)">a derived value</text>
    </g>
    <g id="text_17">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="105.402047" transform="rotate(-0 121.889764 105.402047)">fact: · op, parents</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="105.542047" transform="rotate(-0 121.889764 105.542047)">fact: · op, parents</text>
    </g>
    <g id="text_18">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="105.402047" transform="rotate(-0 338.740157 105.402047)">same; pure ops re-runnable</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="105.542047" transform="rotate(-0 338.740157 105.542047)">same; pure ops re-runnable</text>
    </g>
    <g id="text_19">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="124.394173" transform="rotate(-0 0 124.394173)">a raster</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="124.534173" transform="rotate(-0 0 124.534173)">a raster</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="124.394173" transform="rotate(-0 121.889764 124.394173)">raster:&lt;a&gt;:&lt;b&gt;:&lt;t&gt;:&lt;d&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="124.534173" transform="rotate(-0 121.889764 124.534173)">raster:&lt;a&gt;:&lt;b&gt;:&lt;t&gt;:&lt;d&gt;</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="124.449954" transform="rotate(-0 338.740157 124.449954)">fact d names BLAKE3(grid)</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="124.534173" transform="rotate(-0 338.740157 124.534173)">fact d names BLAKE3(grid)</text>
    </g>
    <g id="text_22">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="143.386299" transform="rotate(-0 0 143.386299)">a raster in time</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="143.526299" transform="rotate(-0 0 143.526299)">a raster in time</text>
    </g>
    <g id="text_23">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="143.386299" transform="rotate(-0 121.889764 143.386299)">cube:&lt;a&gt;:&lt;b&gt;:&lt;t0..t1&gt;:&lt;d&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="143.526299" transform="rotate(-0 121.889764 143.526299)">cube:&lt;a&gt;:&lt;b&gt;:&lt;t0..t1&gt;:&lt;d&gt;</text>
    </g>
    <g id="text_24">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="143.386299" transform="rotate(-0 338.740157 143.386299)">BLAKE3(CBOR([member d…]))</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="143.526299" transform="rotate(-0 338.740157 143.526299)">BLAKE3(CBOR([member d…]))</text>
    </g>
    <g id="text_25">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="162.378425" transform="rotate(-0 0 162.378425)">a raster set</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="162.518425" transform="rotate(-0 0 162.518425)">a raster set</text>
    </g>
    <g id="text_26">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="162.378425" transform="rotate(-0 121.889764 162.378425)">rasterset:&lt;set&gt;:&lt;d&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="162.518425" transform="rotate(-0 121.889764 162.518425)">rasterset:&lt;set&gt;:&lt;d&gt;</text>
    </g>
    <g id="text_27">
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="162.518425" transform="rotate(-0 338.740157 162.518425)">BLAKE3(CBOR([d…, purpose]))</text>
    </g>
    <g id="text_28">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="181.370551" transform="rotate(-0 0 181.370551)">many facts, one id</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="181.510551" transform="rotate(-0 0 181.510551)">many facts, one id</text>
    </g>
    <g id="text_29">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="181.370551" transform="rotate(-0 121.889764 181.370551)">bundle:&lt;cid&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="181.510551" transform="rotate(-0 121.889764 181.510551)">bundle:&lt;cid&gt;</text>
    </g>
    <g id="text_30">
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="181.510551" transform="rotate(-0 338.740157 181.510551)">BLAKE3(p, cell|band|t|cid)[:16]</text>
    </g>
    <g id="text_31">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="200.362677" transform="rotate(-0 0 200.362677)">a file, one chunk</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="200.502677" transform="rotate(-0 0 200.502677)">a file, one chunk</text>
    </g>
    <g id="text_32">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="200.362677" transform="rotate(-0 121.889764 200.362677)">tree:&lt;file&gt;#row=i</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="200.502677" transform="rotate(-0 121.889764 200.502677)">tree:&lt;file&gt;#row=i</text>
    </g>
    <g id="text_33">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="200.362677" transform="rotate(-0 338.740157 200.362677)">BLAKE3(note)[:16]; root inside</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="200.502677" transform="rotate(-0 338.740157 200.502677)">BLAKE3(note)[:16]; root inside</text>
    </g>
    <g id="text_34">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="219.270584" transform="rotate(-0 0 219.270584)">a reasoning stage</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="219.494803" transform="rotate(-0 0 219.494803)">a reasoning stage</text>
    </g>
    <g id="text_35">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="219.354803" transform="rotate(-0 121.889764 219.354803)">state:&lt;cid&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="219.494803" transform="rotate(-0 121.889764 219.494803)">state:&lt;cid&gt;</text>
    </g>
    <g id="text_36">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="219.354803" transform="rotate(-0 338.740157 219.354803)">BLAKE3(CBOR(state record))</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="219.494803" transform="rotate(-0 338.740157 219.494803)">BLAKE3(CBOR(state record))</text>
    </g>
    <g id="text_37">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="238.346929" transform="rotate(-0 0 238.346929)">a named object</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="238.486929" transform="rotate(-0 0 238.486929)">a named object</text>
    </g>
    <g id="text_38">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="238.40271" transform="rotate(-0 121.889764 238.40271)">entity:&lt;cid&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="238.486929" transform="rotate(-0 121.889764 238.486929)">entity:&lt;cid&gt;</text>
    </g>
    <g id="text_39">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="238.346929" transform="rotate(-0 338.740157 238.346929)">BLAKE3(anchor)[:16]: a label</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="238.486929" transform="rotate(-0 338.740157 238.486929)">BLAKE3(anchor)[:16]: a label</text>
    </g>
    <g id="text_40">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="257.339055" transform="rotate(-0 0 257.339055)">a device run</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="257.479055" transform="rotate(-0 0 257.479055)">a device run</text>
    </g>
    <g id="text_41">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="257.339055" transform="rotate(-0 121.889764 257.339055)">trace:&lt;cid&gt;</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="257.479055" transform="rotate(-0 121.889764 257.479055)">trace:&lt;cid&gt;</text>
    </g>
    <g id="text_42">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="257.394836" transform="rotate(-0 338.740157 257.394836)">BLAKE3(CBOR(signed trace))</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="257.479055" transform="rotate(-0 338.740157 257.479055)">BLAKE3(CBOR(signed trace))</text>
    </g>
    <g id="text_43">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="276.331181" transform="rotate(-0 0 276.331181)">an evidence chain</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="276.471181" transform="rotate(-0 0 276.471181)">an evidence chain</text>
    </g>
    <g id="text_44">
-    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="276.331181" transform="rotate(-0 121.889764 276.331181)">track.v1 note</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Mono'; text-anchor: start; fill: #222428" x="121.889764" y="276.471181" transform="rotate(-0 121.889764 276.471181)">track.v1 note</text>
    </g>
    <g id="text_45">
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="338.740157" y="276.471181" transform="rotate(-0 338.740157 276.471181)">link = BLAKE3(prev, ref)[:16]</text>
    </g>
    <g id="text_46">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="297.648537" transform="rotate(-0 0 297.648537)">14 data needs; embedding and absence share the fact grammar.</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="297.872756" transform="rotate(-0 0 297.872756)">14 data needs; embedding and absence share the fact grammar.</text>
    </g>
    <g id="text_47">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="312.472913" transform="rotate(-0 0 312.472913)">Hash rules: emem 18adb67. A name, a set and bytes differ.</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="312.612913" transform="rotate(-0 0 312.612913)">At emem 18adb67, names, sets and records hash differently.</text>
    </g>
    <g id="text_48">
-    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="327.213071" transform="rotate(-0 0 327.213071)">track.v1 is a note. Trace evidence here is a reference harness.</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="327.353071" transform="rotate(-0 0 327.353071)">track.v1 is a note. Trace evidence here is a reference harness.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pc0460fa959">
+  <clipPath id="pbb9ee94bc1">
    <rect x="0" y="0" width="548.503937" height="334.488189"/>
   </clipPath>
  </defs>

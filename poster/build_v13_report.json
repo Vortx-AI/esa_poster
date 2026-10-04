@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T09:33:28+00:00",
+ "built_utc": "2026-10-04T09:40:51+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -42,7 +42,7 @@
    "file": "poster/fig/v13/f2_spine.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T09:11:23"
+   "mtime": "2026-10-04T09:39:41"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -77,14 +77,14 @@
    "file": "poster/fig/v13/f6_mutation_matrix.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T09:17:03"
+   "mtime": "2026-10-04T09:39:43"
   },
   "f7_wrong_pixel": {
    "state": "placed",
    "file": "poster/fig/v13/f7_wrong_pixel.svg",
    "w_mm": 396.0,
    "h_mm": 128.0,
-   "mtime": "2026-10-04T09:18:05"
+   "mtime": "2026-10-04T09:39:48"
   },
   "f9_timeline": {
    "state": "placed",
@@ -98,7 +98,7 @@
    "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T08:39:53"
+   "mtime": "2026-10-04T09:39:51"
   },
   "f15b_sat042_strip": {
    "state": "placed",
@@ -112,10 +112,10 @@
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 726.0,
    "h_mm": 65.0,
-   "mtime": "2026-10-04T09:33:08"
+   "mtime": "2026-10-04T09:39:50"
   }
  },
- "figure_text_tokens": 1776,
+ "figure_text_tokens": 1775,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -164,7 +164,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (841 text runs)"
+    "every printed code point is in the face that sets it (858 text runs)"
    ]
   },
   "prose_and_banned_words": {

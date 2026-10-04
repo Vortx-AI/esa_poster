@@ -207,7 +207,8 @@
     "JSON",
     "retrieved text (RAG)",
     "opaque id",
-    "EMEM reference"
+    "EMEM reference",
+    "emem reference"
    ],
    "status": "MEASURED",
    "layer": "n/a",

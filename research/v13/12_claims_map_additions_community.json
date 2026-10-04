@@ -11,7 +11,7 @@
         "Visual Studio Code",
         "Salesforce MuleSoft",
         "Anypoint Exchange",
-        "MCP \u00b7 A2A \u00b7 REST"
+        "MCP · A2A · REST"
       ],
       "status": "SPEC",
       "layer": "n/a",
@@ -87,7 +87,7 @@
       "block": "v13.5 community/recovery",
       "print": [
         "CONNECT & REPRODUCE",
-        "Carry the token \u2192 resolve the record \u2192 check the evidence \u2192 continue in another agent."
+        "Carry the token → resolve the record → check the evidence → continue in another agent."
       ],
       "status": "SPEC",
       "layer": "n/a",
@@ -110,7 +110,7 @@
       "id": "CM.bundle",
       "block": "v13.5 community/recovery",
       "print": [
-        "8 facts \u2192 one bundle handle",
+        "8 facts → one bundle handle",
         "38 characters; members resolve separately."
       ],
       "status": "MEASURED",
@@ -134,7 +134,8 @@
       "id": "CM.state",
       "block": "v13.5 community/recovery",
       "print": [
-        "4 stage addresses re-hashed offline."
+        "4 stage addresses re-hashed offline.",
+        "four state addresses re-hash."
       ],
       "status": "MEASURED",
       "layer": "n/a",

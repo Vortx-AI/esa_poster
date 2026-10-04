@@ -236,7 +236,7 @@
    "claim": "V7.token_labels"
   },
   {
-   "text": "Hash rules: emem 18adb67. A name, a set and bytes differ.",
+   "text": "At emem 18adb67, names, sets and records hash differently.",
    "pt": 14,
    "claim": "V7.token_labels"
   },

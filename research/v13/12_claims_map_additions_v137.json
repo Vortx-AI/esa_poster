@@ -37,7 +37,8 @@
         "what its id hashes",
         "14 data needs; embedding and absence share the fact grammar.",
         "Hash rules: emem 18adb67. A name, a set and bytes differ.",
-        "track.v1 is a note. Trace evidence here is a reference harness."
+        "track.v1 is a note. Trace evidence here is a reference harness.",
+        "At emem 18adb67, names, sets and records hash differently."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -126,7 +127,8 @@
       "block": "v13.7 recovery",
       "print": [
         "Δz is the later readout minus the earlier one.",
-        "The attribution ledger links evidence to each term; the numeric split remains open."
+        "The attribution ledger links evidence to each term; the numeric split remains open.",
+        "emem's change attribution links evidence to each term."
       ],
       "status": "SPEC",
       "layer": "L0-L3",

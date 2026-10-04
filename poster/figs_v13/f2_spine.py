@@ -153,13 +153,13 @@ def lanes():
                 ("json", "JSON", "reads the fields", (SUM["B"]["false_accepts"], SUM["B"]["applicable"]), None),
                 ("opaque", "opaque id", "fetches the sender’s record",
                  (SUM["C"]["false_accepts"], SUM["C"]["applicable"]), None),
-                ("emem", "EMEM reference", None, (SUM["I"]["false_accepts"], SUM["I"]["applicable"]), None)]
+                ("emem", "emem reference", None, (SUM["I"]["false_accepts"], SUM["I"]["applicable"]), None)]
     ceil = {k: (SUM[k]["false_accepts"], SUM[k]["applicable"]) for k in "ABCI"}
     return [("prose", "prose", "reads the text", R5["A"][:2], ceil["A"]),
             ("json", "JSON", "reads the fields", R5["B"][:2], ceil["B"]),
             ("rag", "retrieved text (RAG)", "retrieves a passage", R5["C"][:2], None),
             ("opaque", "opaque id", "fetches the sender’s record", R5["D"][:2], ceil["C"]),
-            ("emem", "EMEM reference", None, R5["E"][:2], ceil["I"])]
+            ("emem", "emem reference", None, R5["E"][:2], ceil["I"])]
 
 
 # the real 5 x 5 window of the record, true colour from the signed grids (same processing as F1)
