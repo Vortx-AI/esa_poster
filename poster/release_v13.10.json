@@ -1,60 +1,60 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "50ddf41f06d91754636ca7acc39577c625f35893",
+ "base_commit": "72572d70c320553d19579e53c58c6bee7093e3ce",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2404856,
-   "sha256": "9ee9a0592c7025ab52962498d186ba3d71f4d1c5a426746cecdb3b31f1c4a49e"
+   "bytes": 2405142,
+   "sha256": "400b18bf15f9690ce5144e34488b8b72ba4696a6c726568b07582ece4069a1a2"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4551414,
-   "sha256": "685387210ba9aab1d69c531d2a65558a241dc67456ec79bdb7cd500f904295e8"
+   "bytes": 4561000,
+   "sha256": "91aaae3de046f85ec62884285fb7eb5af5546f90da36103a158d9cea09cc7192"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 15831891,
-   "sha256": "28bd296ab65adbd84bccaab5c76b7958a76200b26f9757511b39a142b80c9eeb"
+   "bytes": 15896345,
+   "sha256": "aee08ea2b4fbfe70334e2988ad31a2619e29a4fade6c97a53f9f280bd805c323"
   },
   "poster/poster.html": {
-   "bytes": 3307925,
-   "sha256": "7ccbf4e3f2c17d1fec25b729a4d537ab5b453c31f4308dfc37601bf87a719759"
+   "bytes": 3308062,
+   "sha256": "5574cf233c383b47b5e4140e64a17c99a781e790361483e114075f0d7fb76756"
   },
   "poster/build_v13_report.json": {
-   "bytes": 26609,
-   "sha256": "edfb3bfc753cebf5861b3012931dd2cb1a0b50b9172f9afcb26dc4b5d8f32761"
+   "bytes": 26872,
+   "sha256": "514d24885a1f7f7e29ec8aeb26a5d292bec5f06e3ecd0910414aff9ca15fd8f4"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 23092,
-   "sha256": "ab3dccf1c018e0d6dc1a5eeff6f53edc8e523efceabc861bd743a41c0b659e90"
+   "bytes": 23258,
+   "sha256": "8358ae55a597a24dd09394e84b2923938ac55f5fc18eef6589d5966a17312556"
   },
   "poster/src/poster.v13.css": {
-   "bytes": 15782,
-   "sha256": "f5cb1a0a35c4d3c24c5922c7dc910f22b625c515cebd20673f8ed5ea38578545"
+   "bytes": 15781,
+   "sha256": "825b191e242ef145850260fe6eebb23318b9c9a7b7b3e9aa2d50e6b7798dbfb8"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2404853,
-   "sha256": "1a572a2b955988cf2e4f4d75009b72cef2846d9f90eaeb8cfacd24cc2de54630"
+   "bytes": 2405126,
+   "sha256": "93316ece48825638b0ad6436a9101eda077d1521eeb68cf7836aaeb0e8d5dc4b"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4558547,
-   "sha256": "5a27898297427bdc924c476b039d445cf6c2dbc24e5b3ac1bbbe488fc7a2878e"
+   "bytes": 4568021,
+   "sha256": "23efa61307f0bd0141784636ca0055f5ad0989452ba438e54244f24a334d9cbf"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 15832769,
-   "sha256": "f66a153ab3bff272bc0619a65c8ffdeaa0fccff94804483b04d9b1c39ca417b8"
+   "bytes": 15895614,
+   "sha256": "1782bdf5484b0a619d92bb26c2a048cf496251ed0372eabf6b3113b23fc18733"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3307925,
-   "sha256": "01ee56bee9467a70dab093ecc85ee6bae10897df8c2501c4c77c11629c328301"
+   "bytes": 3308062,
+   "sha256": "6790626a0917d5cfd47e8cc470c88347b292a9748201566bc02eac4faa2027ac"
   },
   "poster/build_v13_report-300of300.json": {
-   "bytes": 26727,
-   "sha256": "c1ce1969e49c647f41a085ed276af2e3a25b758a371d7eb3e90c84b76a2ca09c"
+   "bytes": 26990,
+   "sha256": "71e61436986a1db08becae78f6e92ff58cfcb8998ad7129759c3af21132fe2a5"
   }
  },
- "pdf_blake3": "35215318f5a1af0a271fd5f1b3c0142b908487979dea86866eff75d04307d852",
- "pointer_body": "research/repro/v13/track/board_body_50ddf41.md",
+ "pdf_blake3": "3c31716fc5f6f2226a0c81369f763b7059a318fa73d9dc9413afb78e2fa3a94b",
+ "pointer_body": "research/repro/v13/track/board_body_72572d7.md",
  "rows_rechecked": 564,
  "claims_printed": 179,
  "qr": [
@@ -71,8 +71,8 @@
   "top_text": 9.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "4eb6e5968756a2eb11645ddefe325c62d60ecc3abf41b9ae8c465b253176d370",
- "pointer_body_300of300": "research/repro/v13/track/board_body_50ddf41-300of300.md",
+ "pdf_blake3_300of300": "d3a93a14eb6bdb7bd4bbb132e0bf95ddab728caceb35444f159667aec066e9a8",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_72572d7-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
@@ -133,6 +133,6 @@
  "two_reviews": "research/v13/26_V13_10_REVIEW.md section 15",
  "copy_frozen": "4 Oct 2026, research/v13/26_V13_10_REVIEW.md section 16",
  "deliberate_cut": "research/v13/26_V13_10_REVIEW.md section 17",
- "matched_baseline": "pre-registered (research/repro/v13/r5/prereg_addendum2.md, pushed in 0cf0424 before it was computed) and printed in panel 1's scope: a JSON receiver with emem's checks minus hash, signature and log accepted 8 of 23 corruptions, 3 of 23 with four more consistency checks, emem's verifier 0 of 23; 53 exploratory in-session Haiku trials agree (research/repro/v13/r5/results_addendum2.md)",
- "third_review": "ChatGPT review of a8ad558, 8.2/10; relay box wording fixed ('shared corruption families'); research/v13/26_V13_10_REVIEW.md section 19"
+ "matched_baseline": "pre-registered (research/repro/v13/r5/prereg_addendum2.md, pushed in 0cf0424 before it was computed) and printed in panel 1's scope: emem's checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions, 3 of 23 with four more consistency checks, emem's verifier 0 of 23; in an exploratory run (one trial per item), Haiku agents given those checks acted on the same 8 and declined the other 15, and 28 trials in condition E calibrate the setup (0 of 25). research/repro/v13/r5/results_addendum2.md",
+ "third_review": "ChatGPT review of a8ad558, 8.2/10; relay box wording fixed ('shared corruption families'); research/v13/26_V13_10_REVIEW.md section 19; the audit of the round that followed is section 20"
 }
