@@ -261,3 +261,14 @@ Kept: panel 3's Δencoder (the whitepaper's term for "the model changed"); panel
 headline (the authors' lines; neither contradicts a measurement). Word cap 870 / 895 (copy brief 860 / 884 plus about
 1 %); the board prints 854 / 878. Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no
 number phrase split across lines.
+
+## 14. Panel 12's client-path line moves to Connect (4 Oct 2026)
+
+"Separately, the same record and value came back through 11 client paths, with receipt signatures checked on 9 (30 Sep
+2026). Listings show availability; panel 1 measures agent decisions." is removed from the face at the authors' request.
+The measurement is methods material and is already printed in full, client by client, on the page the CONNECT code
+opens (`docs/use/`, "Same token, many runtimes", from `research/repro/data/v8/crossruntime_table.json`); the rows EC.11
+and EC.9of11 keep it. The listing cards quote each listing verbatim, so they read as quotes without the scope sentence.
+The ecosystem figure moves up and takes 3.5 mm under the headline. Word cap 850 / 870 (copy brief 839 / 858 plus about
+1 %); the board prints 830 / 849. Both variants pass every gate, with 0 text overlaps, no broken hyphenation and no split
+number phrase.

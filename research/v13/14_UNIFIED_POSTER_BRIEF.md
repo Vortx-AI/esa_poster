@@ -156,8 +156,6 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Use emem. Carry the evidence forward.
 
-> Separately, the same record and value came back through 11 client paths, with receipt signatures checked on 9 (30 Sep 2026). Listings show availability; panel 1 measures agent decisions.
-
 ## D. Claims map
 
 Existing measured rows remain. `12_claims_map_additions_formalism.json` binds the restored equations and examples to pinned upstream source and retained evidence. The attribution decomposition is conceptual; the anchor score is implemented and has archived passing tests. The SDK and benchmark canonical encoder have fresh offline test results. Temporal Rust tests are inspected, not claimed as run here.

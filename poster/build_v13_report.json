@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T11:55:18+00:00",
+ "built_utc": "2026-10-04T12:02:21+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -127,7 +127,7 @@
   "footer_clearance": {
    "pass": true,
    "details": [
-    "content ends 1167.3 mm, footer top 1169.5 mm, clearance 2.2 mm (need >= 2)"
+    "content ends 1167.0 mm, footer top 1169.5 mm, clearance 2.5 mm (need >= 2)"
    ]
   },
   "block_rectangles": {
@@ -165,7 +165,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (875 text runs)"
+    "every printed code point is in the face that sets it (874 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -189,7 +189,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "182 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "178 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -244,11 +244,11 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 854 words containing a letter, 878 tokens with numerals (cap 870 / 895; v13.5 copy brief: see per-panel counts)",
+    "running text: 830 words containing a letter, 849 tokens with numerals (cap 850 / 870; v13.5 copy brief: see per-panel counts)",
     "  1 · Earth to agents: 103 tokens (section C: 103)",
     "  10 · Token family: 52 tokens (section C: 52)",
     "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
-    "  12 · Community routes: 35 tokens (section C: 35)",
+    "  12 · Community routes: 6 tokens (section C: 6)",
     "  2 · One NDVI, eight values: 42 tokens (section C: 42)",
     "  3 · Different drift, different check: 60 tokens (section C: 60)",
     "  4 · What exactly is handed over: 54 tokens (section C: 54)",
@@ -381,9 +381,7 @@
   "A15.layers",
   "A15.steps",
   "CM.bundle",
-  "CM.listings",
   "CM.routes",
-  "CM.scope",
   "CM.state",
   "CODE.commit",
   "CODE.lines",
@@ -400,8 +398,6 @@
   "E8.rounded",
   "E8.s2b",
   "E8.summary",
-  "EC.11",
-  "EC.9of11",
   "F2.actions",
   "F2.agentA",
   "F2.agentA.px",
@@ -592,7 +588,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 854,
-  "running_tokens": 878
+  "running_words_with_letter": 830,
+  "running_tokens": 849
  }
 }
