@@ -22,9 +22,9 @@ SHOT = {'chatgpt': ('chatgpt.png', (135, 0, 1300, 340)), 'claude-code-plugin': (
         'github-mcp-registry': ('github_mcp_registry.png', (520, 122, 1920, 462)),
         'clawhub': ('clawhub.png', (30, 20, 1700, 360))}
 PPMM = 300 / 25.4
-IMG_Y, IMG_H = 1.2, 28.0
+IMG_Y, IMG_H = 1.2, 23.0
 for i,r in enumerate(cards):
-    ax.add_patch(FancyBboxPatch((i*146,0),142,40.6,boxstyle='round,pad=0,rounding_size=1.5',
+    ax.add_patch(FancyBboxPatch((i*146,0),142,37.8,boxstyle='round,pad=0,rounding_size=1.5',
         fc=S.C['oos_bg' if r['status']=='REGISTRY' else 'emem_tint'],ec='none'))
     f, box = SHOT[r['id']]
     im = np.asarray(Image.open(LIST / f).convert('RGB').crop(box))

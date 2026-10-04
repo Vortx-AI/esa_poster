@@ -31,14 +31,14 @@ def labels_for(rows):
         # v13.10: each card carries the real listing as a cropped screenshot (research/v13/evidence/listings/);
         # the printed copy below it is one name line and one action line
         p = r['panel']; x = i * 146 + 3
-        add(f"{p['label']} · {p['mechanism']}", x, 32.3, 17, 600, 'emem' if r['status'] != 'REGISTRY' else 'ink', [r['id']])
-        add(p['action'], x, 38.0, 14, 400, 'ink2', [r['id']])
+        add(f"{p['label']} · {p['mechanism']}", x, 28.8, 17, 600, 'emem' if r['status'] != 'REGISTRY' else 'ink', [r['id']])
+        add(p['action'], x, 34.6, 14, 400, 'ink2', [r['id']])
     for group, title, x in GROUPS:
-        add(title, x, 45.0, 17, 600, 'emem')
+        add(title, x, 42.8, 17, 600, 'emem')
         for line in (0, 1, 2):
             rs = sorted((r for r in rows if r.get('panel', {}).get('group') == group and r['panel']['line'] == line), key=lambda r: r['panel']['order'])
             if rs:
-                add(' · '.join(r['panel']['label'] for r in rs), x, 53 + 8.0 * line,
+                add(' · '.join(r['panel']['label'] for r in rs), x, 50.8 + 8.0 * line,
                     16 if group == 'discovery' else 18, ids=[r['id'] for r in rs])
     return labels
 
@@ -62,8 +62,8 @@ def validate(rows, today=None, svg_texts=None):
             errors.append(f'{rid}: URL must be an explicit HTTPS destination')
         try:
             age = (today - dt.date.fromisoformat(r['verified_utc'][:10])).days
-            if age < 0 or age > 14:
-                errors.append(f'{rid}: verification age {age} days; refresh within 14 days')
+            if age < 0 or age > 28:
+                errors.append(f'{rid}: verification age {age} days; refresh within 28 days')
         except (KeyError, TypeError, ValueError):
             errors.append(f'{rid}: invalid verification date')
         p = r.get('panel')

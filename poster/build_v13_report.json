@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T09:30:25+00:00",
+ "built_utc": "2026-10-04T09:33:28+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -112,7 +112,7 @@
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 726.0,
    "h_mm": 65.0,
-   "mtime": "2026-10-04T09:29:20"
+   "mtime": "2026-10-04T09:33:08"
   }
  },
  "figure_text_tokens": 1776,
@@ -141,7 +141,7 @@
     "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,915.7,396.0x156.9), off by 87.7 mm; reason: The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column.",
     "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.3,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
     "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x158.3), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
-    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains.",
+    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards carry the real listings (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub) as screenshot tiles at 300 ppi or more; VS Code and MuleSoft Exchange move into the lists, which now print on two lines per group.",
     "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,1002.8,193.5x69.7), off by 607.5 mm; reason: The contribution remains in the left column, after the consolidated evidence boundary.",
     "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
     "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,594.8,193.5x122.1), off by 55.2 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",
@@ -238,11 +238,11 @@
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
     "f5_evidence_object: 443x453 px over 23.4 mm = 481 ppi",
     "f7_wrong_pixel: 2658x2316 px over 112.5 mm = 600 ppi",
-    "f11_ecosystem: 1165x340 px over 95.9 mm = 308 ppi",
-    "f11_ecosystem: 1680x340 px over 138.3 mm = 308 ppi",
-    "f11_ecosystem: 1552x340 px over 127.8 mm = 308 ppi",
-    "f11_ecosystem: 1400x340 px over 115.3 mm = 308 ppi",
-    "f11_ecosystem: 1670x340 px over 137.5 mm = 308 ppi"
+    "f11_ecosystem: 1165x340 px over 78.8 mm = 375 ppi",
+    "f11_ecosystem: 1680x340 px over 113.6 mm = 375 ppi",
+    "f11_ecosystem: 1552x340 px over 105.0 mm = 375 ppi",
+    "f11_ecosystem: 1400x340 px over 94.7 mm = 375 ppi",
+    "f11_ecosystem: 1670x340 px over 113.0 mm = 375 ppi"
    ]
   },
   "word_budget": {
@@ -309,7 +309,7 @@
   "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,915.7,396.0x156.9), off by 87.7 mm; reason: The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column.",
   "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.3,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
   "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x158.3), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
-  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains.",
+  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards carry the real listings (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub) as screenshot tiles at 300 ppi or more; VS Code and MuleSoft Exchange move into the lists, which now print on two lines per group.",
   "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,1002.8,193.5x69.7), off by 607.5 mm; reason: The contribution remains in the left column, after the consolidated evidence boundary.",
   "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
   "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,594.8,193.5x122.1), off by 55.2 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",

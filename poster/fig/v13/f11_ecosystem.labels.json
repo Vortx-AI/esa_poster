@@ -8,7 +8,7 @@
     {
       "text": "ChatGPT \u00b7 @emem plugin",
       "x": 3,
-      "y": 32.3,
+      "y": 28.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -20,7 +20,7 @@
     {
       "text": "Enable emem; paste a token.",
       "x": 3,
-      "y": 38.0,
+      "y": 34.6,
       "pt": 14,
       "weight": 400,
       "color": "ink2",
@@ -32,7 +32,7 @@
     {
       "text": "Claude \u00b7 Directory plugin / MCP",
       "x": 149,
-      "y": 32.3,
+      "y": 28.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -44,7 +44,7 @@
     {
       "text": "Resolve from chat or terminal.",
       "x": 149,
-      "y": 38.0,
+      "y": 34.6,
       "pt": 14,
       "weight": 400,
       "color": "ink2",
@@ -56,7 +56,7 @@
     {
       "text": "Dify \u00b7 Marketplace plugin",
       "x": 295,
-      "y": 32.3,
+      "y": 28.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -68,7 +68,7 @@
     {
       "text": "Referent Lock / EUDR workflows",
       "x": 295,
-      "y": 38.0,
+      "y": 34.6,
       "pt": 14,
       "weight": 400,
       "color": "ink2",
@@ -80,7 +80,7 @@
     {
       "text": "GitHub MCP Registry \u00b7 Registry listing",
       "x": 441,
-      "y": 32.3,
+      "y": 28.8,
       "pt": 17,
       "weight": 600,
       "color": "ink",
@@ -92,7 +92,7 @@
     {
       "text": "Install MCP server",
       "x": 441,
-      "y": 38.0,
+      "y": 34.6,
       "pt": 14,
       "weight": 400,
       "color": "ink2",
@@ -104,7 +104,7 @@
     {
       "text": "ClawHub \u00b7 OpenClaw plugin listing",
       "x": 587,
-      "y": 32.3,
+      "y": 28.8,
       "pt": 17,
       "weight": 600,
       "color": "ink",
@@ -116,7 +116,7 @@
     {
       "text": "Install the OpenClaw plugin.",
       "x": 587,
-      "y": 38.0,
+      "y": 34.6,
       "pt": 14,
       "weight": 400,
       "color": "ink2",
@@ -128,7 +128,7 @@
     {
       "text": "MORE CLIENTS",
       "x": 0,
-      "y": 45.0,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -138,7 +138,7 @@
     {
       "text": "Cursor \u00b7 VS Code \u00b7 Gemini CLI",
       "x": 0,
-      "y": 53.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -152,7 +152,7 @@
     {
       "text": "PROTOCOLS",
       "x": 116,
-      "y": 45.0,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -162,7 +162,7 @@
     {
       "text": "MCP \u00b7 A2A",
       "x": 116,
-      "y": 53.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -175,7 +175,7 @@
     {
       "text": "REST / OpenAPI",
       "x": 116,
-      "y": 61.0,
+      "y": 58.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -187,7 +187,7 @@
     {
       "text": "DEVELOPER",
       "x": 248,
-      "y": 45.0,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -197,7 +197,7 @@
     {
       "text": "Python \u00b7 TypeScript \u00b7 Docker",
       "x": 248,
-      "y": 53.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -211,7 +211,7 @@
     {
       "text": "LangGraph memory \u00b7 GitHub source",
       "x": 248,
-      "y": 61.0,
+      "y": 58.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -224,7 +224,7 @@
     {
       "text": "FRAMEWORK EXAMPLES",
       "x": 410,
-      "y": 45.0,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -234,7 +234,7 @@
     {
       "text": "LangChain \u00b7 LlamaIndex \u00b7 AutoGen",
       "x": 410,
-      "y": 53.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -248,7 +248,7 @@
     {
       "text": "CrewAI \u00b7 Mastra \u00b7 Agno (see setup notes)",
       "x": 410,
-      "y": 61.0,
+      "y": 58.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -262,7 +262,7 @@
     {
       "text": "DISCOVERY / MIRRORS",
       "x": 562,
-      "y": 45.0,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
@@ -272,7 +272,7 @@
     {
       "text": "MCP Registry \u00b7 MuleSoft Exchange \u00b7 Glama \u00b7 Smithery",
       "x": 562,
-      "y": 53.0,
+      "y": 50.8,
       "pt": 16,
       "weight": 400,
       "color": "ink",
@@ -287,7 +287,7 @@
     {
       "text": "Context7 \u00b7 Hugging Face (older mirror)",
       "x": 562,
-      "y": 61.0,
+      "y": 58.8,
       "pt": 16,
       "weight": 400,
       "color": "ink",

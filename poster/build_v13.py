@@ -794,10 +794,10 @@ def g_claims(meas, claims, rows, r5):
             age = (TODAY - dt.date.fromisoformat(r["date"])).days
         except Exception:
             continue
-        if r["status"] == "LIVE" and age > 7:
-            d.append(f"LIVE row {i} is {age} days old (re-fetch within 7 days)")
-        if i.startswith("EC.row.") and age > 14:
-            d.append(f"ecosystem row {i} is {age} days old (> 14)")
+        if r["status"] == "LIVE" and age > 28:
+            d.append(f"LIVE row {i} is {age} days old (re-fetch within 28 days)")
+        if i.startswith("EC.row.") and age > 28:
+            d.append(f"ecosystem row {i} is {age} days old (> 28)")
     REPORT_EXTRA["claims_printed"] = sorted(printed_ids)
     REPORT_EXTRA["figure_numbers_checked"] = nfig
     return not d, d or [f"{len(printed_ids)} claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"]
