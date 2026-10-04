@@ -1,62 +1,62 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "13e9fb3d1cdeba00d367561d31d9db02f537f09e",
+ "base_commit": "d26140cce98c980e3b140fea967081c712254eff",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2416778,
-   "sha256": "9b2a94f02452219c06852599d1b4c3fd6e2705d452a4f110bd4da1bfd9dd0338"
+   "bytes": 2416198,
+   "sha256": "85049c42d288dcdaccd0929adda340ad5c5a50f09f10d47893275ffdd19f7822"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4742107,
-   "sha256": "c91548e4db1a7e37d3e85df41261fb1f030bedaf95d6ee77a2d7304ec4a6573d"
+   "bytes": 4699780,
+   "sha256": "cb6a279eeee8f23e52c4fc43f8013caa7c135f04628dba723357287435b0d0d9"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17280470,
-   "sha256": "a70fb4f2db0d6a942328dba1e7eb1140ce6ccf969907abf55b36271a4d6e3ccf"
+   "bytes": 17114619,
+   "sha256": "e60d9758d08de1df0740f42536988946bd30f44bfed5ba0dfd9cc925f4820081"
   },
   "poster/poster.html": {
-   "bytes": 3325270,
-   "sha256": "1b268905298480eaff6f622fb88fed34b22ed9c9cc75ccbab1522b972e155967"
+   "bytes": 3325100,
+   "sha256": "cab0926fb10b02613d66333737c7dd16d8cf8fe77fe373929c9f4462aad4e770"
   },
   "poster/build_v13_report.json": {
-   "bytes": 26449,
-   "sha256": "c5039f6eda2a9d33f1c54d2ed7620811bc2780c992a183f07c25c7d381beafed"
+   "bytes": 26403,
+   "sha256": "b92fca61e6b520b53fef66baaa87ddeb31e35163c691fbb0a6b82652f7760394"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 24553,
-   "sha256": "1acca4c84fb458ed82a64d75784479cf5bac9de8bbeab9644bc5a4c69d3077a4"
+   "bytes": 24391,
+   "sha256": "7404bcb31021ac6c245deb06a3e8be7af538796e5b70be1f7db86002abf060f3"
   },
   "poster/src/poster.v13.css": {
-   "bytes": 15671,
-   "sha256": "e167a368220f9036312635a18437995da763da1a3614b2d3a5cdc811f7bd26ce"
+   "bytes": 15680,
+   "sha256": "7e0e2dac7b43d7b4499c777254252c0ffd113dcdf98cf86ad21d4774f0839571"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2416796,
-   "sha256": "b945b98a4e70c0de6e72a09c8070950966cf1c0d2d98eb269c811150972fc550"
+   "bytes": 2416214,
+   "sha256": "f12aab05d534fbac6b55ce3848a553aa8a4badececd27848c939c6cb84d5e9b0"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4748005,
-   "sha256": "f0ef45b75f93d6654fcd3653cba1fd9091151b358a5da3f56d8b0527cec720ac"
+   "bytes": 4705352,
+   "sha256": "69b54fb7caf5d9f7da16d8634f7dc763fcac0def7fd486448156b7ce1e4c00a1"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 17283267,
-   "sha256": "1887464c8d73d156aba604acf059872f8880c58fc9b910efe09efea8d2dd497e"
+   "bytes": 17118793,
+   "sha256": "a6c29a1b6e26cf4737ed439d1741a5195efc7eabea3cc2bdcc3b2647eb698a5f"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3325295,
-   "sha256": "4a15e0c48af138536a30aa9f738a288e3c3efa182a73aac35a1cb20298de58b4"
+   "bytes": 3325125,
+   "sha256": "0acc051040421517704ac0f035405d2032b971fa4600d2b9e1132d5f6026f696"
   },
   "poster/build_v13_report-300of300.json": {
-   "bytes": 26567,
-   "sha256": "03a6fd062c7c5c468638fcea72146d3ff27e114cc2cf222d75c64db0289a1861"
+   "bytes": 26521,
+   "sha256": "0274a7f1473462e9188cc41c496293e9d0acd9472c293f7b1cafd0087eb5e9f6"
   }
  },
- "pdf_blake3": "e3a8fc54b9edfc7aae855d4fb9e1a684c5cefb5dc6f7970f16c98eb939a370cf",
- "pointer_body": "research/repro/v13/track/board_body_13e9fb3.md",
+ "pdf_blake3": "955674bfabbe08c26d67ee35990edd93de61b0441f0a8e12998e92e002f8be07",
+ "pointer_body": "research/repro/v13/track/board_body_d26140c.md",
  "rows_rechecked": 555,
- "claims_printed": 183,
+ "claims_printed": 182,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
   "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
@@ -64,15 +64,15 @@
  ],
  "seal": "not signed in this release: emem.dev was unreachable from the build environment; the pointer body is ready to publish",
  "listings": "quoted verbatim on the cards; screenshots kept as evidence in research/v13/evidence/listings/ (issue #58)",
- "title": "programme title kept by the authors (4 Oct 2026)",
+ "title": "the programme title up to 'Protocol', printed on one line (authors' choice, 4 Oct 2026)",
  "print_margins_mm": {
   "left": 20.0,
   "right": 20.0,
-  "top_text": 6.4,
+  "top_text": 9.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "82f57a27adddd63d3b82c9671f82a38caffb06feeb577c516be3ea8a0b34012c",
- "pointer_body_300of300": "research/repro/v13/track/board_body_13e9fb3-300of300.md",
+ "pdf_blake3_300of300": "83ca547fe72260b1567c3f5a3cc751fb545df3d14dabcee3346dd75cb5e05201",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_d26140c-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
@@ -119,5 +119,8 @@
    "word_budget": "PASS"
   }
  },
- "eo_review": "research/v13/26_V13_10_REVIEW.md section 10"
+ "eo_review": "research/v13/26_V13_10_REVIEW.md section 10",
+ "claims_printed_300of300": 184,
+ "versions": "no service or code commit on the face (authors' rule, 4 Oct 2026); the claims rows keep them; face_hygiene fails on a commit hash",
+ "final_pass": "research/v13/26_V13_10_REVIEW.md section 12"
 }
