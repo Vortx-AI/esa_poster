@@ -85,6 +85,33 @@
       "checked": true
     },
     {
+      "id": "H.brand",
+      "block": "v13.10 header brand",
+      "print": [
+        "em em",
+        "pronounced em-em",
+        "the em in em dash, twice"
+      ],
+      "status": "SPEC",
+      "layer": "n/a",
+      "source": {
+        "files": [
+          "v13/26_V13_10_REVIEW.md"
+        ],
+        "pointer": "section 22: the authors' identity, the wordmark (em, a drawn orange dash, em) and how the name is said"
+      },
+      "date": "2026-10-04",
+      "value": null,
+      "check": {
+        "kind": "grep",
+        "file": "v13/26_V13_10_REVIEW.md",
+        "arg": "pronounced em-em"
+      },
+      "note": "Authors' identity (4 Oct 2026). The name is said em-em: the em of the em dash, twice, which the wordmark draws as em, an orange dash, em.",
+      "tier": "1m",
+      "checked": true
+    },
+    {
       "id": "ORBIT.design",
       "block": "v13.10 panel 1 handoff line",
       "print": [

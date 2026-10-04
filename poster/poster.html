@@ -217,7 +217,10 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .headtext .bridge .orbit{color:var(--emem-light)}
 /* identity marks only (the wordmark's dash and the tagline's decode phrase); data never uses the brand orange */
 .headtext .bridge .brand{color:var(--brand)}
-.headtext .wordmark{position:absolute;right:7.5mm;top:166.85mm;display:flex;align-items:baseline;font-size:52pt;line-height:1;font-weight:700;letter-spacing:-.015em;color:#FFFFFF;white-space:nowrap}
+.headtext .brandlock{position:absolute;right:7.5mm;top:166.85mm;display:flex;align-items:last baseline;column-gap:7mm}
+.headtext .brandlock .say{font-size:17pt;line-height:1.24;text-align:right;color:rgba(255,255,255,.85);white-space:nowrap}
+.headtext .brandlock .say b{color:#FFFFFF;font-weight:600}
+.headtext .wordmark{display:flex;align-items:baseline;font-size:52pt;line-height:1;font-weight:700;letter-spacing:-.015em;color:#FFFFFF;white-space:nowrap}
 .headtext .wordmark i{display:inline-block;width:.9em;height:.12em;margin:0 .07em;border-radius:.06em;background:var(--brand);transform:translateY(-.2em)}
 .spinefoot .spineleft{flex:none;width:468mm}
 .spinefoot .spineleft .agentstrip{width:auto;line-height:1.04}
@@ -278,7 +281,10 @@ h2.steps>span:last-child{background:var(--emem);color:#FFFFFF;border-color:var(-
     <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)</div>
     <div>Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026</div>
   </div>
-  <div class="wordmark" data-role="brand" role="img" aria-label="emem"><span>em</span><i aria-hidden="true"></i><span>em</span></div>
+  <div class="brandlock" data-role="brand" data-claim="H.brand">
+    <p class="say">pronounced <b>em-em</b><br>the em in em dash, twice</p>
+    <div class="wordmark" role="img" aria-label="emem"><span>em</span><i aria-hidden="true"></i><span>em</span></div>
+  </div>
 </div>
 <div class="blk headimg" data-bleed="right" data-block="header_image" style="--x:627.5;--y:0;--w:213.5;--h:188">
   <div class="scene" data-figslot="f1_scene" style="--fw:216.5;--fh:188.0"><svg data-fig="f1_scene" xmlns:xlink="http://www.w3.org/1999/xlink" width="613.700787pt" height="532.913386pt" viewBox="0 0 613.700787 532.913386" xmlns="http://www.w3.org/2000/svg" version="1.1">

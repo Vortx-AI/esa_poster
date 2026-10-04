@@ -469,6 +469,7 @@ decode with AI." The board carries it in two marks, both in the navy header, and
 | Tagline | The bridge's design goal uses the card's words: "Design goal: encode in orbit, decode with AI." (it was "decode in AI's reasoning with emem"). "decode with AI." is in the brand orange, as on the card. Row ORBIT.tagline prints the new wording; the "in orbit" allowlist entry is re-bound to the new sentence (BLAKE3 8a319bde…); panel 1 and panel 11 still print the harness scope. |
 | Colour | Token `brand` #E86424, for these two marks only. Data keeps its colours: `harm` still means that B acted on corrupted evidence. The two oranges are close (CIEDE2000 9.1), so the brand orange stays on the navy header, off the white panels and the figures. Contrast 4.0:1 on navy (the tagline is 24 pt). |
 | Layout | The byline moves up 1.5 mm (top 169.5 mm) so the wordmark's glyph box ends inside the 188 mm header block; the bridge-byline gap goes from 13 to 11.5 mm. |
+| Pronunciation | Added at the authors' request in the free space left of the wordmark: "pronounced em-em" over "the em in em dash, twice", 17 pt, right-aligned 7 mm from the wordmark, on the byline's two baselines. It says the name and explains the dash. Row H.brand. |
 
 Left out: the orange ".dev" of the dark card (a third orange mark in the header would scatter the accent) and the card's
 Earth, satellite and face artwork. The copy freeze of section 16 holds for the evidence; this is an authors' change to
