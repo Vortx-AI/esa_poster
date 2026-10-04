@@ -1,28 +1,28 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "a2bde958a540714bedbe911f35f90ad741d39e03",
+ "base_commit": "9bc4d9a47a001e4f9fa4ffdc321945ddf692bd9e",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2416207,
-   "sha256": "f95cc8de5d542a28e9d53b93739692f20d9df479f3b0b8ea4b01ea2c60c3ac4e"
+   "bytes": 2416199,
+   "sha256": "8d79209b4f0f297973ba77256681dd369e6e9c9d3bf4efb6c2cb0793615bf0ee"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4755795,
-   "sha256": "808cc8ff08179fd89bade1ecf494e84db09fa79a7e5973f43cd740bbe8765fca"
+   "bytes": 4753775,
+   "sha256": "a1cb7bbdfbadcccb7fe3fdf674ac50bd7ba2128196a965e823ce25e0a67202e9"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 17097416,
-   "sha256": "717ef5480a78eef3ec59ad07657c7140fa34be0198410c41bcefbe820e89318e"
+   "bytes": 17086799,
+   "sha256": "82251fbf5127d22d7732da10aafc1223e25da7ab8b68b2491e38aad65c9e19b0"
   },
   "poster/poster.html": {
-   "bytes": 3342697,
-   "sha256": "2e39ba2b015fd7d263154e3fd3b9c76dfd1ce0d134f2ce39bbdb9a38a10e1130"
+   "bytes": 3341881,
+   "sha256": "00cb761682cd283b3f94ca0ad155cc7ca7f87e81747ca7e395ed8c16311daeca"
   },
   "poster/build_v13_report.json": {
-   "bytes": 25259,
-   "sha256": "c15c37267d51d579da4c20c9111c6942b9c7b0707efbdfad7fbb3b6f48ae4220"
+   "bytes": 25240,
+   "sha256": "630bc1e07fb1a0b196ea561bcc93f29c9551c82f7d278c5c2cf9ba8be0f79501"
   },
   "poster/src/poster.v13.html": {
    "bytes": 23361,
@@ -33,8 +33,8 @@
    "sha256": "e167a368220f9036312635a18437995da763da1a3614b2d3a5cdc811f7bd26ce"
   }
  },
- "pdf_blake3": "8136cd10d6c092d2c6120f05ceda01657250a5683486d12951cead15b79ad3ae",
- "pointer_body": "research/repro/v13/track/board_body_a2bde95.md",
+ "pdf_blake3": "f20a701abdb84b06c0899cd26df0ef2308a26fd61ad6cb4403f36a158c203d24",
+ "pointer_body": "research/repro/v13/track/board_body_9bc4d9a.md",
  "gates": {
   "page_fit": "PASS",
   "footer_clearance": "PASS",
@@ -56,7 +56,7 @@
   "word_budget": "PASS"
  },
  "rows_rechecked": 531,
- "claims_printed": 166,
+ "claims_printed": 165,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
   "qr_r at (568.5,437.1) 50.0 mm: decoded 'https://vortx-ai.github.io/esa_poster/r/' == payload 'https://vortx-ai.github.io/esa_poster/r/'",
