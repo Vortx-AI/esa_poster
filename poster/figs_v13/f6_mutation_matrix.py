@@ -210,7 +210,7 @@ T(lx + 5.6, ly, "flips the decision", 14, color=C["ink2"])
 HEAD = {"A": "prose", "B": "JSON", "C": "opaque id", "RAG": "RAG"}
 for c in cond_cols:
     T(xs[c] + CW / 2, 6.0, HEAD[c], 18, weight=600, ha="center")
-T(X_EM + 3 * SW, 6.0, "EMEM, full check", 18, weight=700, color=C["emem"], ha="center")
+T(X_EM + 3 * SW, 6.0, "emem, full check", 18, weight=700, color=C["emem"], ha="center")
 for k, lv in enumerate(DEPTH):
     layer = CHECK[lv][1]
     box(X_EM + k * SW + 1.6, 11.6, SW - 3.2, 5.6, RAMP[layer], r=0.6)
@@ -376,8 +376,8 @@ scope_claim = "F6.scope"
 if MODE == "R5":
     reps = ", ".join(f"{n} {R5_MODEL_NAME.get(m, m)}" for m, n in R5D["reps"].items())
     reps = reps.replace("haiku", "Haiku 4.5").replace("sonnet", "Sonnet 5.5").replace("opus", "Opus 5.5")
-    scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
-             f"squares: the deterministic ceiling. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
+    scope = (f"Bars: corruptions the agents declined, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
+             f"squares: the deterministic receiver. Totals pool {R5D['n_items']['A']} items, {R5D['date']}.")
     scope_claim = "R5.F6.scope"
 T(0, yl + 5.9, scope, 14, color=C["ink2"], claim=scope_claim)
 T(0, yl + 11.2, scope2, 14, color=C["ink2"], claim="X.p123")

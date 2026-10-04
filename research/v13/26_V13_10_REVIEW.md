@@ -97,4 +97,37 @@ committed here and so cannot be printed.
 | #39 media pack | open | Not started. |
 | #44 discovery destinations | open | Connect QR lands on /use/; acceptance needs a phone test. |
 | #46 platform marks | open | Depends on #58 assets and brand guidance. |
-| #58 real listing images | open, blocked | The screenshots are on private-user-images.githubusercontent.com, which this build environment cannot reach. Commit them under `research/v13/evidence/listings/` (one PNG per listing, as uploaded) and the band can be rebuilt with them. |
+| #58 real listing images | close | Five listings (ChatGPT, Claude directory, Dify, GitHub MCP Registry, ClawHub) printed as screenshot tiles in panel 12; sources in `research/v13/evidence/listings/`. |
+| #46 platform marks | close | The listing tiles carry each platform's own page; no separate logo assets. |
+
+## 7. Final print review (4 Oct 2026)
+
+Every section was read at print resolution (20 crops of the 300 dpi render) and the printed text was scanned for
+arrows, dashes, slogan pairs, hedges and tell words. Fixed in this pass: panel 5's bar note (it still described
+false acceptance after the flip), the attribution sentence in panel 3, two unclear phrases in panel 10, trace link
+labels, line breaks inside SAT-042 and inside the acceptance rule, chain rules between boxed steps, product spelling
+in two figure labels, the GitHub card's repeated "Registry", and a missing space in panel 6. Kept on purpose: the
+panel 10 headline "Beyond a single observation" (authors' wording) and the programme title (authors' decision).
+Result: 18 of 18 gates, 0 text overlaps, all three QR codes decode to their pages.
+
+## 8. Listings, the Vortx site and the emem changelog (4 Oct 2026)
+
+- **Listing images removed from the print.** Screenshot text set at about 5 pt at A0, tile widths varied, and the
+  crops showed "No ratings yet", like and install counts, "New" and "updated 2 days ago". Each card now quotes the
+  listing's own words (verbatim) at 17 pt; the screenshots stay as evidence in `research/v13/evidence/listings/`.
+- **Paper citation added and corrected.** The board printed no DOI. The vortx.ai agent card names the whitepaper with
+  the board's exact title as 10.5281/zenodo.20706317 and the companion study as 10.5281/zenodo.20706893; the byline now
+  prints both. emem's CITATION.cff lists 20706893 as its preferred citation, which the site calls the study: worth
+  aligning in the emem repo.
+- **Vortx site framing (vortxwebsite @ e625106) against the board.** Same core story: "Encode on device. Decode with
+  @emem."; "Send the token. Keep the pixels."; "Signed on the ground today, in orbit next" (payload in design, ground
+  segment next), which matches the board's orbit line and its harness scope. Not on the board, as talking points
+  (no committed measurement here): the 24-hop relay between two model families (words round, the token arrives exact);
+  the live draft check that catches a rounded number (`/v1/echo_verify`, emem-guard); non-EO observers (telescopes,
+  drones, robots, cameras); the accelerator programmes (Seraphim Space Mission 15, NVIDIA Inception, AWS Space
+  Accelerator); the products built on emem (geo.qa, eudr.dev, propcheck.dev).
+- **emem since the measurements (CHANGELOG to 320a1d5).** Nothing contradicts the board. Overture facts now carry
+  `sources[0].hash`; COG facts such as the board's record still do not (panel 4 says so for this record). Pre-fix
+  facts no longer answer "latest" and are re-read; nothing signed is rewritten (panel 6). The foundation-model
+  encoders were removed on 24 Sep; old vectors still resolve. Visitors may ask why the title keeps "Foundation-Model
+  Embeddings": an embedding is one typed record kind (panel 10), and records outlive their encoders.

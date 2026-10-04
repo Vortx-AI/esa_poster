@@ -49,4 +49,4 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
 - Numbers are copied from measurement files, never from prose. Counts carry their units and their date.
 - Never commit signing keys (`.gitignore` covers the usual names).
 
-The ecosystem figure is generated from `research/v13/ecosystem_manifest.json` by `poster/ecosystem.py`. Dates older than 14 days, unqualified statuses and manually added SVG copy fail the build and CI. Run `python -m unittest discover -s poster/tests -v` after changing claim or ecosystem gates.
+The ecosystem figure is generated from `research/v13/ecosystem_manifest.json` by `poster/ecosystem.py`. Dates older than 28 days (LIVE claim rows and ecosystem rows), unqualified statuses and manually added SVG copy fail the build and CI. Run `python -m unittest discover -s poster/tests -v` after changing claim or ecosystem gates.

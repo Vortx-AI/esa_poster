@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-02T10:32:39.803803</dc:date>
+    <dc:date>2026-10-04T09:46:44.328795</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -33,170 +33,167 @@ z
     <path d="M 4.251969 0 
 L 398.267717 0 
 Q 402.519685 0 402.519685 4.251969 
-L 402.519685 80.787402 
-Q 402.519685 85.03937 398.267717 85.03937 
-L 4.251969 85.03937 
-Q 0 85.03937 0 80.787402 
+L 402.519685 102.897638 
+Q 402.519685 107.149606 398.267717 107.149606 
+L 4.251969 107.149606 
+Q 0 107.149606 0 102.897638 
 L 0 4.251969 
 Q 0 0 4.251969 0 
 z
-" clip-path="url(#paefc8404ac)" style="fill: #dce8f5"/>
+" clip-path="url(#pfaf8a6cc24)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_3">
     <path d="M 418.110236 0 
 L 812.125984 0 
 Q 816.377953 0 816.377953 4.251969 
-L 816.377953 80.787402 
-Q 816.377953 85.03937 812.125984 85.03937 
-L 418.110236 85.03937 
-Q 413.858268 85.03937 413.858268 80.787402 
+L 816.377953 102.897638 
+Q 816.377953 107.149606 812.125984 107.149606 
+L 418.110236 107.149606 
+Q 413.858268 107.149606 413.858268 102.897638 
 L 413.858268 4.251969 
 Q 413.858268 0 418.110236 0 
 z
-" clip-path="url(#paefc8404ac)" style="fill: #dce8f5"/>
+" clip-path="url(#pfaf8a6cc24)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_4">
     <path d="M 831.968504 0 
 L 1225.984252 0 
 Q 1230.23622 0 1230.23622 4.251969 
-L 1230.23622 80.787402 
-Q 1230.23622 85.03937 1225.984252 85.03937 
-L 831.968504 85.03937 
-Q 827.716535 85.03937 827.716535 80.787402 
+L 1230.23622 102.897638 
+Q 1230.23622 107.149606 1225.984252 107.149606 
+L 831.968504 107.149606 
+Q 827.716535 107.149606 827.716535 102.897638 
 L 827.716535 4.251969 
 Q 827.716535 0 831.968504 0 
 z
-" clip-path="url(#paefc8404ac)" style="fill: #dce8f5"/>
+" clip-path="url(#pfaf8a6cc24)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_5">
     <path d="M 1245.826772 0 
 L 1639.84252 0 
 Q 1644.094488 0 1644.094488 4.251969 
-L 1644.094488 80.787402 
-Q 1644.094488 85.03937 1639.84252 85.03937 
-L 1245.826772 85.03937 
-Q 1241.574803 85.03937 1241.574803 80.787402 
+L 1644.094488 102.897638 
+Q 1644.094488 107.149606 1639.84252 107.149606 
+L 1245.826772 107.149606 
+Q 1241.574803 107.149606 1241.574803 102.897638 
 L 1241.574803 4.251969 
 Q 1241.574803 0 1245.826772 0 
 z
-" clip-path="url(#paefc8404ac)" style="fill: #dce8f5"/>
+" clip-path="url(#pfaf8a6cc24)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_6">
     <path d="M 1659.685039 0 
 L 2053.700787 0 
 Q 2057.952756 0 2057.952756 4.251969 
-L 2057.952756 80.787402 
-Q 2057.952756 85.03937 2053.700787 85.03937 
-L 1659.685039 85.03937 
-Q 1655.433071 85.03937 1655.433071 80.787402 
+L 2057.952756 102.897638 
+Q 2057.952756 107.149606 2053.700787 107.149606 
+L 1659.685039 107.149606 
+Q 1655.433071 107.149606 1655.433071 102.897638 
 L 1655.433071 4.251969 
 Q 1655.433071 0 1659.685039 0 
 z
-" clip-path="url(#paefc8404ac)" style="fill: #f1f0ec"/>
+" clip-path="url(#pfaf8a6cc24)" style="fill: #f1f0ec"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 600; font-size: 28px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="27.40252" transform="rotate(-0 11.338583 27.40252)">ChatGPT</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="23.174803" transform="rotate(-0 11.338583 23.174803)">ChatGPT · @emem plugin</text>
    </g>
    <g id="text_2">
-    <text style="font-weight: 500; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="53.509289" transform="rotate(-0 11.338583 53.509289)">@emem plugin</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="11.338583" y="47.279685" transform="rotate(-0 11.338583 47.279685)">“Signed facts about real places”</text>
    </g>
    <g id="text_3">
-    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="75.456142" transform="rotate(-0 11.338583 75.456142)">Enable emem; paste a token.</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="11.338583" y="93.494803" transform="rotate(-0 11.338583 93.494803)">Enable emem; paste a token.</text>
    </g>
    <g id="text_4">
-    <text style="font-weight: 600; font-size: 28px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="425.19685" y="27.40252" transform="rotate(-0 425.19685 27.40252)">Claude</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="425.19685" y="23.174803" transform="rotate(-0 425.19685 23.174803)">Claude · Directory plugin / MCP</text>
    </g>
    <g id="text_5">
-    <text style="font-weight: 500; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="425.19685" y="53.509289" transform="rotate(-0 425.19685 53.509289)">Code plugin / MCP</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="425.19685" y="47.279685" transform="rotate(-0 425.19685 47.279685)">“hand another agent a token it can</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="425.19685" y="75.456142" transform="rotate(-0 425.19685 75.456142)">Resolve from chat or terminal.</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="425.19685" y="65.988346" transform="rotate(-0 425.19685 65.988346)">check offline”</text>
    </g>
    <g id="text_7">
-    <text style="font-weight: 600; font-size: 28px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="839.055118" y="27.40252" transform="rotate(-0 839.055118 27.40252)">Visual Studio Code</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="425.19685" y="93.494803" transform="rotate(-0 425.19685 93.494803)">Resolve from chat or terminal.</text>
    </g>
    <g id="text_8">
-    <text style="font-weight: 500; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="839.055118" y="53.588976" transform="rotate(-0 839.055118 53.588976)">MCP connector</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="839.055118" y="23.174803" transform="rotate(-0 839.055118 23.174803)">Dify · Marketplace plugin</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="839.055118" y="75.353876" transform="rotate(-0 839.055118 75.353876)">Copilot agent mode: @mcp emem</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="839.055118" y="47.279685" transform="rotate(-0 839.055118 47.279685)">“Shared memory for AI agents. One address</text>
    </g>
    <g id="text_10">
-    <text style="font-weight: 600; font-size: 28px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1252.913386" y="27.485645" transform="rotate(-0 1252.913386 27.485645)">Dify</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="839.055118" y="65.988346" transform="rotate(-0 839.055118 65.988346)">per fact, one signature you check.”</text>
    </g>
    <g id="text_11">
-    <text style="font-weight: 500; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="1252.913386" y="53.509289" transform="rotate(-0 1252.913386 53.509289)">Marketplace plugin</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="839.055118" y="93.494803" transform="rotate(-0 839.055118 93.494803)">Referent Lock / EUDR workflows</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="1252.913386" y="75.456142" transform="rotate(-0 1252.913386 75.456142)">Referent Lock / EUDR workflows</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1252.913386" y="23.174803" transform="rotate(-0 1252.913386 23.174803)">GitHub MCP Registry · Server listing</text>
    </g>
    <g id="text_13">
-    <text style="font-weight: 600; font-size: 28px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1666.771654" y="27.40252" transform="rotate(-0 1666.771654 27.40252)">Salesforce MuleSoft</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1252.913386" y="47.279685" transform="rotate(-0 1252.913386 47.279685)">“Satellites for AI.”</text>
    </g>
    <g id="text_14">
-    <text style="font-weight: 500; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="1666.771654" y="53.509289" transform="rotate(-0 1666.771654 53.509289)">Exchange listing</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="1252.913386" y="93.494803" transform="rotate(-0 1252.913386 93.494803)">Install MCP server</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="1666.771654" y="75.456142" transform="rotate(-0 1666.771654 75.456142)">Open Vortx AI MCP Server</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1666.771654" y="23.174803" transform="rotate(-0 1666.771654 23.174803)">ClawHub · OpenClaw plugin listing</text>
    </g>
    <g id="text_16">
-    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="102.385276" transform="rotate(-0 0 102.385276)">MORE CLIENTS</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1666.771654" y="47.279685" transform="rotate(-0 1666.771654 47.279685)">“Shared, signed and content-addressed memory</text>
    </g>
    <g id="text_17">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="126.749764" transform="rotate(-0 0 126.749764)">Cursor</text>
+    <text style="font-style: italic; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1666.771654" y="65.988346" transform="rotate(-0 1666.771654 65.988346)">of the physical world…”</text>
    </g>
    <g id="text_18">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="150.844252" transform="rotate(-0 0 150.844252)">Gemini CLI</text>
+    <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="1666.771654" y="93.494803" transform="rotate(-0 1666.771654 93.494803)">Install the OpenClaw plugin.</text>
    </g>
    <g id="text_19">
-    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="328.818898" y="102.385276" transform="rotate(-0 328.818898 102.385276)">PROTOCOLS</text>
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="0" y="126.082835" transform="rotate(-0 0 126.082835)">MORE CLIENTS</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="328.818898" y="126.749764" transform="rotate(-0 328.818898 126.749764)">MCP · A2A</text>
+    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="149.04" transform="rotate(-0 0 149.04)">Cursor · VS Code · Gemini CLI</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="328.818898" y="150.844252" transform="rotate(-0 328.818898 150.844252)">REST / OpenAPI</text>
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="328.818898" y="126.082835" transform="rotate(-0 328.818898 126.082835)">PROTOCOLS</text>
    </g>
    <g id="text_22">
-    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="702.992126" y="102.385276" transform="rotate(-0 702.992126 102.385276)">DEVELOPER</text>
+    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="328.818898" y="149.04" transform="rotate(-0 328.818898 149.04)">MCP · A2A</text>
    </g>
    <g id="text_23">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="702.992126" y="126.749764" transform="rotate(-0 702.992126 126.749764)">Python · TypeScript</text>
+    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="328.818898" y="171.717165" transform="rotate(-0 328.818898 171.717165)">REST / OpenAPI</text>
    </g>
    <g id="text_24">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="702.992126" y="150.735971" transform="rotate(-0 702.992126 150.735971)">Docker · LangGraph memory</text>
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="702.992126" y="126.082835" transform="rotate(-0 702.992126 126.082835)">DEVELOPER</text>
    </g>
    <g id="text_25">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="702.992126" y="174.93874" transform="rotate(-0 702.992126 174.93874)">GitHub source</text>
+    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="702.992126" y="149.04" transform="rotate(-0 702.992126 149.04)">Python · TypeScript · Docker</text>
    </g>
    <g id="text_26">
-    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="1162.204724" y="102.385276" transform="rotate(-0 1162.204724 102.385276)">FRAMEWORK EXAMPLES</text>
+    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="702.992126" y="171.717165" transform="rotate(-0 702.992126 171.717165)">LangGraph memory · GitHub source</text>
    </g>
    <g id="text_27">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1162.204724" y="126.641483" transform="rotate(-0 1162.204724 126.641483)">LangChain · LlamaIndex</text>
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="1162.204724" y="126.082835" transform="rotate(-0 1162.204724 126.082835)">FRAMEWORK EXAMPLES</text>
    </g>
    <g id="text_28">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1162.204724" y="150.844252" transform="rotate(-0 1162.204724 150.844252)">AutoGen · CrewAI · Mastra</text>
+    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1162.204724" y="149.04" transform="rotate(-0 1162.204724 149.04)">LangChain · LlamaIndex · AutoGen</text>
    </g>
    <g id="text_29">
-    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1162.204724" y="175.010459" transform="rotate(-0 1162.204724 175.010459)">Agno (see setup notes)</text>
+    <text style="font-size: 18px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1162.204724" y="171.717165" transform="rotate(-0 1162.204724 171.717165)">CrewAI · Mastra · Agno (see setup notes)</text>
    </g>
    <g id="text_30">
-    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="1593.070866" y="102.385276" transform="rotate(-0 1593.070866 102.385276)">DISCOVERY / MIRRORS</text>
+    <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="1593.070866" y="126.082835" transform="rotate(-0 1593.070866 126.082835)">DISCOVERY / MIRRORS</text>
    </g>
    <g id="text_31">
-    <text style="font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1593.070866" y="126.113514" transform="rotate(-0 1593.070866 126.113514)">GitHub MCP · MCP Registry</text>
+    <text style="font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1593.070866" y="148.48" transform="rotate(-0 1593.070866 148.48)">MCP Registry · MuleSoft Exchange · Glama · Smithery</text>
    </g>
    <g id="text_32">
-    <text style="font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1593.070866" y="150.304252" transform="rotate(-0 1593.070866 150.304252)">Glama · Smithery · ClawHub</text>
-   </g>
-   <g id="text_33">
-    <text style="font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1593.070866" y="174.46249" transform="rotate(-0 1593.070866 174.46249)">Context7 · Hugging Face (older mirror)</text>
+    <text style="font-size: 16px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1593.070866" y="171.157165" transform="rotate(-0 1593.070866 171.157165)">Context7 · Hugging Face (older mirror)</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="paefc8404ac">
+  <clipPath id="pfaf8a6cc24">
    <rect x="0" y="0" width="2057.952756" height="184.251969"/>
   </clipPath>
  </defs>

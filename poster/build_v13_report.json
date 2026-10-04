@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-04T09:19:02+00:00",
+ "built_utc": "2026-10-04T09:55:17+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -42,7 +42,7 @@
    "file": "poster/fig/v13/f2_spine.svg",
    "w_mm": 801.0,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T09:11:23"
+   "mtime": "2026-10-04T09:39:41"
   },
   "f3_eight_answers": {
    "state": "placed",
@@ -77,14 +77,14 @@
    "file": "poster/fig/v13/f6_mutation_matrix.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T09:17:03"
+   "mtime": "2026-10-04T09:39:43"
   },
   "f7_wrong_pixel": {
    "state": "placed",
    "file": "poster/fig/v13/f7_wrong_pixel.svg",
    "w_mm": 396.0,
    "h_mm": 128.0,
-   "mtime": "2026-10-04T09:18:05"
+   "mtime": "2026-10-04T09:39:48"
   },
   "f9_timeline": {
    "state": "placed",
@@ -98,24 +98,24 @@
    "file": "poster/fig/v13/f14_token_family.svg",
    "w_mm": 193.5,
    "h_mm": 118.0,
-   "mtime": "2026-10-04T08:39:53"
+   "mtime": "2026-10-04T09:39:51"
   },
   "f15b_sat042_strip": {
    "state": "placed",
    "file": "poster/fig/v13/f15b_sat042_strip.svg",
    "w_mm": 193.5,
    "h_mm": 60.0,
-   "mtime": "2026-10-04T09:18:07"
+   "mtime": "2026-10-04T09:21:48"
   },
   "f11_ecosystem": {
    "state": "placed",
    "file": "poster/fig/v13/f11_ecosystem.svg",
    "w_mm": 726.0,
    "h_mm": 65.0,
-   "mtime": "2026-10-04T08:39:53"
+   "mtime": "2026-10-04T09:46:44"
   }
  },
- "figure_text_tokens": 1769,
+ "figure_text_tokens": 1814,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -141,7 +141,7 @@
     "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,915.7,396.0x156.9), off by 87.7 mm; reason: The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column.",
     "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.3,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
     "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x158.3), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
-    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains.",
+    "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards quote each listing's own words (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub), verbatim from the authors' screenshots, which are kept in research/v13/evidence/listings/ but not printed (their text sets at about 5 pt at A0). VS Code and MuleSoft Exchange move into the lists, which print two lines per group.",
     "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,1002.8,193.5x69.7), off by 607.5 mm; reason: The contribution remains in the left column, after the consolidated evidence boundary.",
     "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
     "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,594.8,193.5x122.1), off by 55.2 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",
@@ -164,7 +164,7 @@
   "glyph_coverage": {
    "pass": true,
    "details": [
-    "every printed code point is in the face that sets it (850 text runs)"
+    "every printed code point is in the face that sets it (867 text runs)"
    ]
   },
   "prose_and_banned_words": {
@@ -188,7 +188,7 @@
   "claims_coverage": {
    "pass": true,
    "details": [
-    "165 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
+    "166 claim rows printed; every number in HTML and figure text has a row; suite bound and record rule hold"
    ]
   },
   "ecosystem_manifest": {
@@ -200,7 +200,7 @@
   "claims_rows_recheck": {
    "pass": true,
    "details": [
-    "530 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
+    "531 rows with a check re-run against their files: all pass (31 are figure_assert rows, asserted by the figure scripts when they draw)"
    ]
   },
   "qr_decode": {
@@ -220,7 +220,7 @@
   "fonts_loaded": {
    "pass": true,
    "details": [
-    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: unloaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: loaded, IBM Plex Mono 600: loaded, IBM Plex Mono 700: loaded"
+    "9 faces declared; IBM Plex Sans 400: loaded, IBM Plex Sans 400: loaded, IBM Plex Sans 500: loaded, IBM Plex Sans 600: loaded, IBM Plex Sans 700: loaded, IBM Plex Mono 400: loaded, IBM Plex Mono 500: loaded, IBM Plex Mono 600: loaded, IBM Plex Mono 700: loaded"
    ]
   },
   "colour_tokens": {
@@ -304,7 +304,7 @@
   "DEVIATION p6: brief (222.5,828.0,396.0x188.0) rendered (222.5,915.7,396.0x156.9), off by 87.7 mm; reason: The source-pixel experiment retains its 396 by 128 mm print size and data; it remains at the bottom of the centre column.",
   "DEVIATION p7: brief (627.5,377.5,193.5x84.7) rendered (20.0,746.3,193.5x111.8), off by 607.5 mm; reason: The checkable/not-established table is consolidated on the left. It includes the former threat-model scope. The duplicated right-column section 7 is removed.",
   "DEVIATION p8: brief (627.5,465.7,193.5x128.8) rendered (627.5,433.5,193.5x158.3), off by 32.2 mm; reason: The right column begins with temporal memory after the duplicated boundary panel is removed. The source estimates and their dates remain unchanged. v13.10: the timeline cards keep their text and sizes in 75 mm (was 82).",
-  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains.",
+  "DEVIATION p12: brief (20.0,1026.0,531.0x140.0) rendered (20.0,1075.5,801.0x91.5), off by 270.0 mm; reason: v13.9 removes repeated prose and the redundant four-label bridge, reducing this band from 147.5 to 91.5 mm. All 33 retained community labels keep their wording and font sizes. Cards are rearranged beside a dedicated 50 mm Connect QR; the measured 11-path / 9-signature result remains. v13.10 (issue #58): the five primary cards quote each listing's own words (ChatGPT, Claude directory, Dify Marketplace, GitHub MCP Registry, ClawHub), verbatim from the authors' screenshots, which are kept in research/v13/evidence/listings/ but not printed (their text sets at about 5 pt at A0). VS Code and MuleSoft Exchange move into the lists, which print two lines per group.",
   "DEVIATION p13: brief (560.0,1026.0,261.0x82.0) rendered (20.0,1002.8,193.5x69.7), off by 607.5 mm; reason: The contribution remains in the left column, after the consolidated evidence boundary.",
   "DEVIATION footer: brief (20.0,1172.0,801.0x13.0) rendered (20.0,1169.5,801.0x18.0), off by 2.5 mm; reason: The brief's footer text is three lines at 14 pt over 801 mm (line 2 alone is about 560 characters), plus the F12 credit line: 18 mm from 1169.5 mm (brief 13 mm from 1172).",
   "DEVIATION p9: brief (627.5,598.0,193.5x174.2) rendered (627.5,594.8,193.5x122.1), off by 55.2 mm; reason: The complete observation and memory model stays in the right column at its existing type sizes.",
@@ -434,6 +434,7 @@
   "F7.scope",
   "F7.window",
   "H.byline",
+  "H.doi",
   "H.img.grid",
   "H.img.record",
   "H.session",
@@ -539,7 +540,7 @@
   "X.p123"
  ],
  "figure_numbers_checked": 337,
- "rows_rechecked": 530,
+ "rows_rechecked": 531,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
   "A13.products",

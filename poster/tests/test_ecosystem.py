@@ -10,7 +10,7 @@ import ecosystem as E
 class EvidenceGate(unittest.TestCase):
     def setUp(self):
         self.rows = copy.deepcopy(E.read_manifest())
-        self.today = dt.date(2026, 10, 2)
+        self.today = dt.date(2026, 10, 4)
     def check(self, **kw):
         return E.validate(self.rows, today=self.today, **kw)
     def test_committed_panel(self):
@@ -30,7 +30,7 @@ class EvidenceGate(unittest.TestCase):
         self.rows[0]['status']='EXPERIMENTAL'
         self.assertTrue(any('unready' in e for e in self.check()))
     def test_unlabelled_directory(self):
-        r=next(r for r in self.rows if r['id']=='mulesoft-exchange')
+        r=next(r for r in self.rows if r['id']=='github-mcp-registry')
         r['panel']['mechanism']='Production integration'
         self.assertTrue(any('must say listing' in e for e in self.check()))
     def test_example_promoted_to_developer(self):

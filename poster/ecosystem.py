@@ -23,21 +23,24 @@ def read_manifest():
 
 def labels_for(rows):
     labels = []
-    def add(text, x, y, pt, weight=400, color='ink', ids=(), claim='CM.routes'):
+    def add(text, x, y, pt, weight=400, color='ink', ids=(), claim='CM.routes', style='normal'):
         labels.append(dict(text=text, x=x, y=y, pt=pt, weight=weight, color=color,
-                           integrations=list(ids), claim=claim))
+                           integrations=list(ids), claim=claim, style=style))
     cards = sorted((r for r in rows if r.get('panel', {}).get('kind') == 'card'), key=lambda r: r['panel']['order'])
     for i, r in enumerate(cards):
+        # v13.10: each card quotes the listing's own words (verbatim from the screenshots in
+        # research/v13/evidence/listings/, which stay as evidence), then the action
         p = r['panel']; x = i * 146 + 4
-        add(p['label'], x, 7, 28, 600, ids=[r['id']])
-        add(p['mechanism'], x, 17, 20, 500, 'emem' if r['status'] != 'REGISTRY' else 'ink2', [r['id']])
-        add(p['action'], x, 25, 17, 400, 'ink2', [r['id']])
+        add(f"{p['label']} · {p['mechanism']}", x, 6.2, 20, 600, 'emem' if r['status'] != 'REGISTRY' else 'ink', [r['id']])
+        for k, q in enumerate(p.get('quote', [])):
+            add(q, x, 15.0 + 6.6 * k, 17, 400, 'ink', [r['id']], style='italic')
+        add(p['action'], x, 31.6, 14, 400, 'ink2', [r['id']])
     for group, title, x in GROUPS:
-        add(title, x, 34.5, 17, 600, 'emem')
+        add(title, x, 42.8, 17, 600, 'emem')
         for line in (0, 1, 2):
             rs = sorted((r for r in rows if r.get('panel', {}).get('group') == group and r['panel']['line'] == line), key=lambda r: r['panel']['order'])
             if rs:
-                add(' · '.join(r['panel']['label'] for r in rs), x, 43 + 8.5 * line,
+                add(' · '.join(r['panel']['label'] for r in rs), x, 50.8 + 8.0 * line,
                     16 if group == 'discovery' else 18, ids=[r['id'] for r in rs])
     return labels
 
@@ -61,8 +64,8 @@ def validate(rows, today=None, svg_texts=None):
             errors.append(f'{rid}: URL must be an explicit HTTPS destination')
         try:
             age = (today - dt.date.fromisoformat(r['verified_utc'][:10])).days
-            if age < 0 or age > 14:
-                errors.append(f'{rid}: verification age {age} days; refresh within 14 days')
+            if age < 0 or age > 28:
+                errors.append(f'{rid}: verification age {age} days; refresh within 28 days')
         except (KeyError, TypeError, ValueError):
             errors.append(f'{rid}: invalid verification date')
         p = r.get('panel')

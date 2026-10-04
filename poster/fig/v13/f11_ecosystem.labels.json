@@ -6,233 +6,280 @@
   ],
   "labels": [
     {
-      "text": "ChatGPT",
+      "text": "ChatGPT \u00b7 @emem plugin",
       "x": 4,
-      "y": 7,
-      "pt": 28,
-      "weight": 600,
-      "color": "ink",
-      "integrations": [
-        "chatgpt"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "@emem plugin",
-      "x": 4,
-      "y": 17,
+      "y": 6.2,
       "pt": 20,
-      "weight": 500,
+      "weight": 600,
       "color": "emem",
       "integrations": [
         "chatgpt"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
+    },
+    {
+      "text": "\u201cSigned facts about real places\u201d",
+      "x": 4,
+      "y": 15.0,
+      "pt": 17,
+      "weight": 400,
+      "color": "ink",
+      "integrations": [
+        "chatgpt"
+      ],
+      "claim": "CM.routes",
+      "style": "italic"
     },
     {
       "text": "Enable emem; paste a token.",
       "x": 4,
-      "y": 25,
-      "pt": 17,
+      "y": 31.6,
+      "pt": 14,
       "weight": 400,
       "color": "ink2",
       "integrations": [
         "chatgpt"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Claude",
+      "text": "Claude \u00b7 Directory plugin / MCP",
       "x": 150,
-      "y": 7,
-      "pt": 28,
-      "weight": 600,
-      "color": "ink",
-      "integrations": [
-        "claude-code-plugin"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "Code plugin / MCP",
-      "x": 150,
-      "y": 17,
+      "y": 6.2,
       "pt": 20,
-      "weight": 500,
+      "weight": 600,
       "color": "emem",
       "integrations": [
         "claude-code-plugin"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
+    },
+    {
+      "text": "\u201chand another agent a token it can",
+      "x": 150,
+      "y": 15.0,
+      "pt": 17,
+      "weight": 400,
+      "color": "ink",
+      "integrations": [
+        "claude-code-plugin"
+      ],
+      "claim": "CM.routes",
+      "style": "italic"
+    },
+    {
+      "text": "check offline\u201d",
+      "x": 150,
+      "y": 21.6,
+      "pt": 17,
+      "weight": 400,
+      "color": "ink",
+      "integrations": [
+        "claude-code-plugin"
+      ],
+      "claim": "CM.routes",
+      "style": "italic"
     },
     {
       "text": "Resolve from chat or terminal.",
       "x": 150,
-      "y": 25,
-      "pt": 17,
+      "y": 31.6,
+      "pt": 14,
       "weight": 400,
       "color": "ink2",
       "integrations": [
         "claude-code-plugin"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Visual Studio Code",
+      "text": "Dify \u00b7 Marketplace plugin",
       "x": 296,
-      "y": 7,
-      "pt": 28,
-      "weight": 600,
-      "color": "ink",
-      "integrations": [
-        "vscode"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "MCP connector",
-      "x": 296,
-      "y": 17,
+      "y": 6.2,
       "pt": 20,
-      "weight": 500,
+      "weight": 600,
       "color": "emem",
       "integrations": [
-        "vscode"
+        "dify-marketplace"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Copilot agent mode: @mcp emem",
+      "text": "\u201cShared memory for AI agents. One address",
       "x": 296,
-      "y": 25,
+      "y": 15.0,
       "pt": 17,
       "weight": 400,
-      "color": "ink2",
-      "integrations": [
-        "vscode"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "Dify",
-      "x": 442,
-      "y": 7,
-      "pt": 28,
-      "weight": 600,
       "color": "ink",
       "integrations": [
         "dify-marketplace"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "italic"
     },
     {
-      "text": "Marketplace plugin",
-      "x": 442,
-      "y": 17,
-      "pt": 20,
-      "weight": 500,
-      "color": "emem",
+      "text": "per fact, one signature you check.\u201d",
+      "x": 296,
+      "y": 21.6,
+      "pt": 17,
+      "weight": 400,
+      "color": "ink",
       "integrations": [
         "dify-marketplace"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "italic"
     },
     {
       "text": "Referent Lock / EUDR workflows",
-      "x": 442,
-      "y": 25,
-      "pt": 17,
+      "x": 296,
+      "y": 31.6,
+      "pt": 14,
       "weight": 400,
       "color": "ink2",
       "integrations": [
         "dify-marketplace"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Salesforce MuleSoft",
-      "x": 588,
-      "y": 7,
-      "pt": 28,
+      "text": "GitHub MCP Registry \u00b7 Server listing",
+      "x": 442,
+      "y": 6.2,
+      "pt": 20,
       "weight": 600,
       "color": "ink",
       "integrations": [
-        "mulesoft-exchange"
+        "github-mcp-registry"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Exchange listing",
-      "x": 588,
-      "y": 17,
-      "pt": 20,
-      "weight": 500,
-      "color": "ink2",
-      "integrations": [
-        "mulesoft-exchange"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "Open Vortx AI MCP Server",
-      "x": 588,
-      "y": 25,
+      "text": "\u201cSatellites for AI.\u201d",
+      "x": 442,
+      "y": 15.0,
       "pt": 17,
+      "weight": 400,
+      "color": "ink",
+      "integrations": [
+        "github-mcp-registry"
+      ],
+      "claim": "CM.routes",
+      "style": "italic"
+    },
+    {
+      "text": "Install MCP server",
+      "x": 442,
+      "y": 31.6,
+      "pt": 14,
       "weight": 400,
       "color": "ink2",
       "integrations": [
-        "mulesoft-exchange"
+        "github-mcp-registry"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
+    },
+    {
+      "text": "ClawHub \u00b7 OpenClaw plugin listing",
+      "x": 588,
+      "y": 6.2,
+      "pt": 20,
+      "weight": 600,
+      "color": "ink",
+      "integrations": [
+        "clawhub"
+      ],
+      "claim": "CM.routes",
+      "style": "normal"
+    },
+    {
+      "text": "\u201cShared, signed and content-addressed memory",
+      "x": 588,
+      "y": 15.0,
+      "pt": 17,
+      "weight": 400,
+      "color": "ink",
+      "integrations": [
+        "clawhub"
+      ],
+      "claim": "CM.routes",
+      "style": "italic"
+    },
+    {
+      "text": "of the physical world\u2026\u201d",
+      "x": 588,
+      "y": 21.6,
+      "pt": 17,
+      "weight": 400,
+      "color": "ink",
+      "integrations": [
+        "clawhub"
+      ],
+      "claim": "CM.routes",
+      "style": "italic"
+    },
+    {
+      "text": "Install the OpenClaw plugin.",
+      "x": 588,
+      "y": 31.6,
+      "pt": 14,
+      "weight": 400,
+      "color": "ink2",
+      "integrations": [
+        "clawhub"
+      ],
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "MORE CLIENTS",
       "x": 0,
-      "y": 34.5,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
       "integrations": [],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Cursor",
+      "text": "Cursor \u00b7 VS Code \u00b7 Gemini CLI",
       "x": 0,
-      "y": 43.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
       "integrations": [
-        "cursor"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "Gemini CLI",
-      "x": 0,
-      "y": 51.5,
-      "pt": 18,
-      "weight": 400,
-      "color": "ink",
-      "integrations": [
+        "cursor",
+        "vscode",
         "gemini-cli"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "PROTOCOLS",
       "x": 116,
-      "y": 34.5,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
       "integrations": [],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "MCP \u00b7 A2A",
       "x": 116,
-      "y": 43.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
@@ -240,158 +287,134 @@
         "mcp-core",
         "a2a"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "REST / OpenAPI",
       "x": 116,
-      "y": 51.5,
+      "y": 58.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
       "integrations": [
         "rest-openapi"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "DEVELOPER",
       "x": 248,
-      "y": 34.5,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
       "integrations": [],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Python \u00b7 TypeScript",
+      "text": "Python \u00b7 TypeScript \u00b7 Docker",
       "x": 248,
-      "y": 43.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
       "integrations": [
         "python-sdk",
-        "ts-sdk"
+        "ts-sdk",
+        "docker"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "Docker \u00b7 LangGraph memory",
+      "text": "LangGraph memory \u00b7 GitHub source",
       "x": 248,
-      "y": 51.5,
+      "y": 58.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
       "integrations": [
-        "docker",
-        "emem-langmem"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "GitHub source",
-      "x": 248,
-      "y": 60.0,
-      "pt": 18,
-      "weight": 400,
-      "color": "ink",
-      "integrations": [
+        "emem-langmem",
         "github-repo"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "FRAMEWORK EXAMPLES",
       "x": 410,
-      "y": 34.5,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
       "integrations": [],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "LangChain \u00b7 LlamaIndex",
+      "text": "LangChain \u00b7 LlamaIndex \u00b7 AutoGen",
       "x": 410,
-      "y": 43.0,
+      "y": 50.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
       "integrations": [
         "langchain",
-        "llamaindex"
+        "llamaindex",
+        "autogen"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "AutoGen \u00b7 CrewAI \u00b7 Mastra",
+      "text": "CrewAI \u00b7 Mastra \u00b7 Agno (see setup notes)",
       "x": 410,
-      "y": 51.5,
+      "y": 58.8,
       "pt": 18,
       "weight": 400,
       "color": "ink",
       "integrations": [
-        "autogen",
         "crewai",
-        "mastra"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "Agno (see setup notes)",
-      "x": 410,
-      "y": 60.0,
-      "pt": 18,
-      "weight": 400,
-      "color": "ink",
-      "integrations": [
+        "mastra",
         "agno"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "DISCOVERY / MIRRORS",
       "x": 562,
-      "y": 34.5,
+      "y": 42.8,
       "pt": 17,
       "weight": 600,
       "color": "emem",
       "integrations": [],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
-      "text": "GitHub MCP \u00b7 MCP Registry",
+      "text": "MCP Registry \u00b7 MuleSoft Exchange \u00b7 Glama \u00b7 Smithery",
       "x": 562,
-      "y": 43.0,
+      "y": 50.8,
       "pt": 16,
       "weight": 400,
       "color": "ink",
       "integrations": [
-        "github-mcp-registry",
-        "official-mcp-registry"
-      ],
-      "claim": "CM.routes"
-    },
-    {
-      "text": "Glama \u00b7 Smithery \u00b7 ClawHub",
-      "x": 562,
-      "y": 51.5,
-      "pt": 16,
-      "weight": 400,
-      "color": "ink",
-      "integrations": [
+        "official-mcp-registry",
+        "mulesoft-exchange",
         "glama",
-        "smithery",
-        "clawhub"
+        "smithery"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     },
     {
       "text": "Context7 \u00b7 Hugging Face (older mirror)",
       "x": 562,
-      "y": 60.0,
+      "y": 58.8,
       "pt": 16,
       "weight": 400,
       "color": "ink",
@@ -399,7 +422,8 @@
         "context7",
         "huggingface-space"
       ],
-      "claim": "CM.routes"
+      "claim": "CM.routes",
+      "style": "normal"
     }
   ]
 }

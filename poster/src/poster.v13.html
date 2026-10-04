@@ -19,8 +19,8 @@
     <p class="leadtrace steps" data-claim="TRACE.chain"><b>Trace</b><span>token</span><span>record bytes</span><span>cell</span><span>pixel</span><span>receipt</span><span>log</span><span>key</span></p>
   </div>
   <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Encode in orbit, decode in AI’s reasoning with emem.</span></p>
-  <div class="byline" data-role="byline" data-claim="H.byline H.session">
-    <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai</div>
+  <div class="byline" data-role="byline" data-claim="H.byline H.session H.doi">
+    <div><b>Jaya Kumari</b> · <b>Avijeet Singh</b> · Vortx AI · avijeet@vortx.ai · <span data-claim="H.doi">whitepaper doi.org/10.5281/zenodo.20706317 · study doi.org/10.5281/zenodo.20706893</span></div>
     <div>Agentic AI for Earth Observation · BIFOLD and ESA Φ-lab · Berlin · Poster Session 1 · 19 Oct 2026 · emem.dev · github.com/Vortx-AI/emem (Apache-2.0)</div>
   </div>
 </div>
@@ -42,7 +42,7 @@
     <div class="spineleft">
     <p class="agentstrip rt" data-mode="r5" data-role="take" data-claim="R5.E.declined R5.A.declined R5.A.pooled">In the controlled handoff test, agents declined 300 of 300 corruptions carried by a checked reference with explicit instructions; with prose, 22 of 276 (they acted on 254).</p>
     <p class="agentstrip rt" data-mode="r1" data-role="take" data-claim="S.R1.A S.R1.I">In our suite, the deterministic receiver accepted 15 of 15 corruptions carried by prose and 0 of 16 with the checked reference.</p>
-    <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; SAT-042 reference harness).</p>
+    <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">Earth data stays on the encoding device in orbit; its reference is downlinked and enters the AI’s reasoning (design; <span class="nw">SAT-042</span> reference harness).</p>
     </div>
     <div class="scope" data-mode="r5">
       <p data-role="scope" data-claim="R5.models R5.dates">{R5.models}; {R5.dates}. Pooled results above are the Claude runs; Qwen is reported separately.</p>
@@ -66,9 +66,9 @@
   <p class="mech rt" data-role="mechanism" data-claim="DF.decomposition">Between acquisitions, the surface, sensor, location or processing can change.</p>
   <p class="extension-label" data-claim="DF.decomposition" style="margin-top:2mm">CONCEPTUAL CHANGE MODEL</p>
   <div class="equation drift-one-line" data-claim="DF.decomposition">Δz = Δ<sub>env</sub> + Δ<sub>sensor</sub> + Δ<sub>geo</sub> + Δ<sub>encoder</sub> + ε</div>
-  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Δz: change in readout. Environment · sensor · geolocation · encoder · residual. The attribution ledger links evidence to these terms.</p>
+  <p class="cap rt" data-role="caption" data-claim="DF.decomposition V7.attribution">Δz: change in readout. Environment · sensor · geolocation · encoder · residual. emem's change attribution links evidence to each term.</p>
   <div class="fig" data-figslot="f4_failure_ladder" style="--fw:193.5;--fh:116"><!--fig:f4_failure_ladder--></div>
-  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run">The implemented score measures disagreement with an anchor. SAT-042 applies it to a fixed reference in the execution harness.</p>
+  <p class="cap rt" data-role="caption" data-claim="DF.score SAT.run">The implemented score measures disagreement with an anchor. <span class="nw">SAT-042</span> applies it to a fixed reference in the execution harness.</p>
 </section>
 <section class="panel c3 handoff" data-block="p7" data-brief="7 · What checks establish">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">7</span>What does a checked reference establish?</p>
@@ -79,16 +79,16 @@
 <section class="panel c3 trace" data-block="trace" data-brief="Full trace">
   <p class="extension-label" data-claim="TRACE.run">FULL TRACE · 30 SEP 2026</p>
   <h2 class="rt s28 steps" data-role="headline" data-claim="TRACE.run"><span>Token</span><span>record</span><span>source pixel</span></h2>
-  <div class="accept" data-claim="TRACE.accept">accept if BLAKE3(b) = cid &amp; cell(b) = cell(token) &amp; NDVI(DN(b)) = value &amp; COG[row, col] = DN(b) &amp; Ed25519(σ) &amp; leaf in STH &amp; STH<sub>geo.qa</sub> prefix of STH</div>
+  <div class="accept" data-claim="TRACE.accept"><span class="nw">accept if BLAKE3(b) = cid</span> &amp; <span class="nw">cell(b) = cell(token)</span> &amp; <span class="nw">NDVI(DN(b)) = value</span> &amp; <span class="nw">COG[row, col] = DN(b)</span> &amp; <span class="nw">Ed25519(σ)</span> &amp; <span class="nw">leaf in STH</span> &amp; <span class="nw">STH<sub>geo.qa</sub> prefix of STH</span></div>
   <p class="tlead rt" data-role="body" data-claim="TRACE.run">Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check.</p>
   <div class="chain">
-    <p data-claim="TRACE.links"><b>1-3 bytes, name</b> 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks… <i>· still trusted: nothing</i></p>
+    <p data-claim="TRACE.links"><b>1-3 content address</b> 1,115 B hash to the fact_cid; one flipped mantissa bit gives mu5x2cks… <i>· still trusted: nothing</i></p>
     <p data-claim="TRACE.links"><b>4-5 cell binding</b> hashed cell = token cell = the lat/lng the derivation used <i>· nothing</i></p>
     <p data-claim="TRACE.links"><b>6-7 derivation</b> scene id, DNs, catalogue and offset are inside the bytes; NDVI recomputed bit-for-bit <i>· argument order read from emem’s code</i></p>
     <p data-claim="TRACE.links"><b>8-9 upstream</b> the STAC item matches the scene; the COG pixel at col 9098, row 9443 reads B08 3502, B04 1900 <i>· STAC carries no checksum</i></p>
     <p data-claim="TRACE.links"><b>10-11 server signature</b> emem.dev’s Ed25519 receipt over the request id, time, cells and returned fact_cids <i>· shows what emem.dev served, not that the value is right</i></p>
     <p data-claim="TRACE.links"><b>12-14 public log</b> entry 2,457,078 is in the 2,556,451-entry log, consistent with the root geo.qa co-signed <i>· geo.qa is also run by Vortx AI</i></p>
-    <p data-claim="TRACE.links"><b>15 key, domain</b> the signing key is published in did:web, JWKS and DNS TXT for emem.dev <i>· Web PKI; DNS without DNSSEC</i></p>
+    <p data-claim="TRACE.links"><b>15 signing key</b> the signing key is published in did:web, JWKS and DNS TXT for emem.dev <i>· Web PKI; DNS without DNSSEC</i></p>
   </div>
   <p class="scope tscope" data-role="scope" data-claim="TRACE.offline">Links 1-5 and 12-14 fit in a 4,906-byte file that repeats 9 checks with networking disabled (unshare -rn); a 1-bit tamper, a wrong cell or a wrong key fails it.</p>
 </section>
@@ -176,12 +176,12 @@
   <h2 class="rt" data-role="headline" data-claim="TF.family">Beyond a single observation</h2>
   <p class="tfline rt" data-role="body" data-claim="TF.reads">The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.</p>
   <div class="fig" data-figslot="f14_token_family" style="--fw:193.5;--fh:118"><!--fig:f14_token_family--></div>
-  <p class="cap rt" data-role="caption" data-claim="CM.bundle CM.state V6.objects">Eight facts resolve through one bundle; four checkpoint hashes reproduce. These object checks do not validate an agent's reasoning.</p>
+  <p class="cap rt" data-role="caption" data-claim="CM.bundle CM.state V6.objects">Eight facts resolve through one bundle; four state addresses re-hash. These object checks do not validate an agent's reasoning.</p>
 </section>
 <section class="panel c3 extension" data-block="p11" data-brief="11 · Satellite execution evidence">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>Satellite execution evidence</p>
   <h2 class="rt s28" data-role="headline" data-claim="SAT.run" style="margin-top:0">A signed trace binds the reported run</h2>
-  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm">SAT-042 scripted pass · reference harness · 30 Sep 2026.</p>
+  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm"><span class="nw">SAT-042</span> scripted pass · reference harness · 30 Sep 2026.</p>
   <div class="fig" data-figslot="f15b_sat042_strip" style="--fw:193.5;--fh:60"><!--fig:f15b_sat042_strip--></div>
   <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled. The admission gate binds output value digests; band, cell and time are outside this check.</p>
 </section>

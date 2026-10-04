@@ -50,7 +50,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Between acquisitions, the surface, sensor, location or processing can change.
 
-> Δz: change in readout. Environment · sensor · geolocation · encoder · residual. The attribution ledger links evidence to these terms.
+> Δz: change in readout. Environment · sensor · geolocation · encoder · residual. emem's change attribution links evidence to each term.
 
 > The implemented score measures disagreement with an anchor. SAT-042 applies it to a fixed reference in the execution harness.
 
@@ -138,7 +138,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > The emem token family is how agents read Earth observation: one grammar for a place, a value, a raster, a time series or a device run.
 
-> Eight facts resolve through one bundle; four checkpoint hashes reproduce. These object checks do not validate an agent's reasoning.
+> Eight facts resolve through one bundle; four state addresses re-hash. These object checks do not validate an agent's reasoning.
 
 ### 11 · Satellite execution evidence
 
