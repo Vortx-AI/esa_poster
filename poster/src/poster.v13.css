@@ -204,8 +204,8 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .spinefoot .spineleft{flex:none;width:468mm}
 .spinefoot .spineleft .agentstrip{width:auto;line-height:1.04}
 .spinefoot .orbitline{font-size:17pt;line-height:1.05;color:var(--emem);font-weight:500;margin-top:.2mm}
-.coded .codegrid{display:grid;grid-template-columns:20.5mm 1fr;column-gap:1.5mm;row-gap:0;margin-top:.8mm;padding:1mm 2.4mm;
-  background:var(--emem-tint);border-left:1.2mm solid var(--emem);font-family:"IBM Plex Mono",monospace;font-size:14pt;line-height:1.03;letter-spacing:-.025em}
+.coded .codegrid{display:grid;grid-template-columns:21.5mm 1fr;column-gap:1.2mm;row-gap:0;margin-top:.8mm;padding:1mm 2.4mm;
+  background:var(--emem-tint);border-left:1.2mm solid var(--emem);font-family:"IBM Plex Mono",monospace;font-size:14pt;line-height:1.03;letter-spacing:-.032em}
 .coded .codegrid b{color:var(--emem);font-weight:600;letter-spacing:0}
 .coded .codegrid span{white-space:nowrap;color:var(--ink)}
 .coded .codegrid sub{font-size:14pt;line-height:0;vertical-align:-.12em}

@@ -119,8 +119,9 @@ for i, d in enumerate(sorted(V["drift"], key=lambda d: d["score"])):
     col = C["harm"] if bad else C["emem"]
     ax.add_patch(Circle((X(d["score"]), ly), 1.3, fc=col, ec="white", lw=0.4 / PTMM, zorder=4))
     above = i == 0                   # the two consistent scores sit 13 mm apart: label one above, one below the line
-    T(X(d["score"]), ly + (-4.2 if above else 4.4), f"{d['device']:.4f} (s {d['score']:.2f})", 14, weight=500,
-      ha="center" if not bad else "right", color=C["harm_text"] if bad else C["ink"], family=MONO, claim="A15.drift")
+    # v13.10: the first label starts at its dot so it clears the 66 mm label column on the left
+    T(X(d["score"]) - (1.3 if above else 0), ly + (-4.2 if above else 4.4), f"{d['device']:.4f} (s {d['score']:.2f})", 14,
+      weight=500, ha="left" if above else ("center" if not bad else "right"), color=C["harm_text"] if bad else C["ink"], family=MONO, claim="A15.drift")
 assert ly + 4.4 + 2.6 <= H, (ly, H)
 
 # ------------------------------------------------------------------ labels must be covered by claims rows
