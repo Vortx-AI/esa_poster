@@ -73,7 +73,8 @@
         "1",
         "Tests pin 3σ → 0.50 and 9σ → 0.75.",
         "Score boundaries: consistent < 0.50; tension < 0.75.",
-        "r = d / (3σ); s = r / (1 + r)"
+        "r = d / (3σ); s = r / (1 + r)",
+        "Tests pin 3σ at 0.50 and 9σ at 0.75."
       ],
       "status": "SPEC",
       "layer": "L0-L3",

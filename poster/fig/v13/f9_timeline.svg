@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-04T08:57:16.921941</dc:date>
+    <dc:date>2026-10-04T09:18:06.903571</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -32,22 +32,22 @@ z
    <g id="patch_2">
     <path d="M 272.262232 46.947219 
 Q 201.967864 53.149663 132.898575 59.244012 
-" clip-path="url(#pfb61515297)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#p6c30afe8de)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
     <path d="M 137.058882 60.884696 
 L 132.898575 59.244012 
 L 136.707306 56.900177 
 z
-" clip-path="url(#pfb61515297)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#p6c30afe8de)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
     <path d="M 276.241705 46.947219 
 Q 346.536073 53.149663 415.605362 59.244012 
-" clip-path="url(#pfb61515297)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#p6c30afe8de)" style="fill: none; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
     <path d="M 411.796631 56.900177 
 L 415.605362 59.244012 
 L 411.445055 60.884696 
 z
-" clip-path="url(#pfb61515297)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
+" clip-path="url(#p6c30afe8de)" style="fill: #0f5fa8; stroke: #0f5fa8; stroke-width: 1.1; stroke-linecap: round"/>
    </g>
    <g id="patch_4">
     <path d="M 0 59.527559 
@@ -55,7 +55,7 @@ L 259.370079 59.527559
 L 259.370079 141.732283 
 L 0 141.732283 
 z
-" clip-path="url(#pfb61515297)" style="fill: #f1f0ec"/>
+" clip-path="url(#p6c30afe8de)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_5">
     <path d="M 289.133858 59.527559 
@@ -63,7 +63,7 @@ L 548.503937 59.527559
 L 548.503937 141.732283 
 L 289.133858 141.732283 
 z
-" clip-path="url(#pfb61515297)" style="fill: #dce8f5"/>
+" clip-path="url(#p6c30afe8de)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_6">
     <path d="M 0 147.401575 
@@ -71,7 +71,7 @@ L 548.503937 147.401575
 L 548.503937 178.582677 
 L 0 178.582677 
 z
-" clip-path="url(#pfb61515297)" style="fill: #dce8f5"/>
+" clip-path="url(#p6c30afe8de)" style="fill: #dce8f5"/>
    </g>
    <g id="text_1">
     <text style="font-weight: 600; font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="0" y="15.258583" transform="rotate(-0 0 15.258583)">BENGALURU · SAME CELL AND BAND · 2026</text>
@@ -104,7 +104,7 @@ z
     <text style="font-size: 14px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #4a4d55" x="300.472441" y="134.313701" transform="rotate(-0 300.472441 134.313701)">later CID</text>
    </g>
    <g id="text_11">
-    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="168.592126" transform="rotate(-0 11.338583 168.592126)">as of 15 Jun → 918.0 m</text>
+    <text style="font-weight: 600; font-size: 20px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="11.338583" y="168.592126" transform="rotate(-0 11.338583 168.592126)">as of 15 Jun: 918.0 m</text>
    </g>
    <g id="text_12">
     <text style="font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="204.60252" transform="rotate(-0 0 204.60252)">The next agent can recover the earlier citation.</text>
@@ -112,7 +112,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pfb61515297">
+  <clipPath id="p6c30afe8de">
    <rect x="0" y="0" width="548.503937" height="212.598425"/>
   </clipPath>
  </defs>

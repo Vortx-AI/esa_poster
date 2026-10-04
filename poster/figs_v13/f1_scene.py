@@ -136,11 +136,19 @@ def main():
     scene = json.loads((DATA / "v8/scene_sizes.json").read_text())["total_scene_bytes_all_blob_assets"]
     tok = json.loads((DATA / "v8/token_counts.json").read_text())["fact_token_ndvi"]
     assert f"{scene / 1e9:.2f}" == "2.02" and tok["chars"] == 84 and tok["cl100k"] == 46
-    T(ax, xs, y0 + 3.0, claimed(f"{scene / 1e9:.2f} GB scene → {tok['chars']} characters", "WOW.scene"), "WOW.scene",
-      fontsize=S.PT["body"], fontweight=700, color="white", va="top", zorder=6)
-    T(ax, xs, y0 + 12.4, claimed("This pixel’s NDVI record, handed off in one text message.", "WOW.sms"), "WOW.sms",
+    # two boxes, no arrow glyph: the scene and what the next agent receives
+    bx0, bh = xs, 8.6
+    for i, (txt, fc) in enumerate(((f"{scene / 1e9:.2f} GB scene", (0, 0, 0, 0)), (f"{tok['chars']} characters", S.C["emem"]))):
+        t = T(ax, bx0 + 2.2, y0 + 2.0 + bh / 2, claimed(txt, "WOW.scene"), "WOW.scene", fontsize=S.PT["body"],
+              fontweight=700, color="white", va="center", zorder=7)
+        fig.canvas.draw()
+        bb = t.get_window_extent().transformed(ax.transData.inverted())
+        ax.add_patch(FancyBboxPatch((bx0, y0 + 2.0), bb.width + 4.4, bh, boxstyle="round,pad=0,rounding_size=1.0",
+                                    fc=fc, ec="white", lw=0.9, zorder=6))
+        bx0 += bb.width + 4.4 + 3.0
+    T(ax, xs, y0 + 13.0, claimed("This pixel’s NDVI record, handed off in one text message.", "WOW.sms"), "WOW.sms",
       fontsize=S.PT["caption"], color="white", va="top", zorder=6)
-    T(ax, xs, y0 + 19.8, claimed(f"{tok['chars']} characters, {tok['cl100k']} tokens; one SMS holds 160.", "WOW.sms"),
+    T(ax, xs, y0 + 20.4, claimed(f"{tok['chars']} characters, {tok['cl100k']} tokens; one SMS holds 160.", "WOW.sms"),
       "WOW.sms", fontsize=S.FLOOR, color=(1, 1, 1, 0.88), va="top", zorder=6)
 
     # scale bar: 1 km = 100 pixels of 10 m

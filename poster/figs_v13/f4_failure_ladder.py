@@ -25,7 +25,7 @@ for lo,hi,col in [(0,.5,'emem'),(.5,.75,'incident'),(.75,1,'harm')]:
  ax.add_patch(Rectangle((lo*W,60),(hi-lo)*W,6,fc=S.C[col],ec='none'))
 T(3,55.5,'consistent',17);T(100,55.5,'tension',17);T(151,55.5,'contradicted',17)
 for x,t,ha in [(0,'0','left'),(W*.5,'0.50','center'),(W*.75,'0.75','center'),(W,'1','right')]:T(x,70.5,t,17,ha=ha)
-T(0,79,'Tests pin 3σ → 0.50 and 9σ → 0.75.',17,weight=600)
+T(0,79,'Tests pin 3σ at 0.50 and 9σ at 0.75.',17,weight=600)
 T(0,86.5,'Score boundaries: consistent < 0.50; tension < 0.75.',15,S.C['ink2'])
 S.save(fig,'f4_failure_ladder')
 Path(S.OUT,'f4_failure_ladder.labels.json').write_text(json.dumps({'figure':'f4_failure_ladder','size_mm':[W,H],'labels':labels},indent=1)+'\n')

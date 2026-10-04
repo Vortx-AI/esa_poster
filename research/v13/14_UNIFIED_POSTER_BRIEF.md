@@ -70,7 +70,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 ### Full trace
 
-> Token → record → source pixel
+> Token · record · source pixel
 
 > Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked 15 links (17 checks) in 17.9 s, all verified. Grey: what must still be trusted after each check.
 
@@ -98,7 +98,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > Checks can continue back to the source
 
-> Resolve → Re-hash → Bind → Recompute → Re-read
+> Resolve · Re-hash · Bind · Recompute · Re-read
 
 > Deeper checks expose different corruptions. Checked-reference agents made the expected decision on 71 of 72 genuine controls; one was refused (pooled Claude).
 

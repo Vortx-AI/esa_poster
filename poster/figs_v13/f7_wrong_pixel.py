@@ -224,11 +224,11 @@ T(XC, 3.2, "c", 17, weight=700, claim="F7.scope")
 T(XC + 4.6, 3.2, f"test rule: irrigate if NDVI ≤ {RULE}", 17, color=C["ink2"], claim="S.threshold")
 yy = 14.0
 box(XC, yy - 3.6, 7.2, 7.2, "none", ec=C["emem"], lw=1.4, r=0.01)
-x = runs(XC + 10.6, yy, [(f"{V_NAMED:.4f} → hold", dict(size=30, weight=700, claim="W.vals"))])
+x = runs(XC + 10.6, yy, [(f"{V_NAMED:.4f}: hold", dict(size=30, weight=700, claim="W.vals"))])
 T(x + 4.0, yy + 0.6, "named pixel", 17, color=C["ink2"], claim="F7.named")
 yy = 27.0
 box(XC, yy - 3.6, 7.2, 7.2, "none", ec=C["harm"], lw=1.4, r=0.01, ls=(0, (2.2 / 1.4, 1.2 / 1.4)))
-x = runs(XC + 10.6, yy, [(f"{V_SOUTH:.4f} → irrigate", dict(size=30, weight=700, color=C["harm"],
+x = runs(XC + 10.6, yy, [(f"{V_SOUTH:.4f}: irrigate", dict(size=30, weight=700, color=C["harm"],
                                                                      claim="W.vals"))])
 T(x + 4.0, yy + 0.6, "pixel 10 m south", 17, color=C["ink2"], claim="W.south")
 

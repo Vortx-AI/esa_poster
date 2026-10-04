@@ -12,6 +12,17 @@ Treat it as a self-review, not an independent one.
   on 254"), so the original measurement is still printed.
   Why: at walking distance, higher-is-better reads faster. A visitor sees 300/300 next to 22/276 without decoding
   "0 is good". Panel 5 keeps the per-mutation "B acts on corrupted evidence" view, which is the analysis grain.
+- Panel 5 follows panel 1: agent bars and totals now show corruptions declined (n - acted on), in emem blue, so the
+  same quantity reads the same way in both panels (22/276 ... 300/300; R1 0/15 ... 16/16). The per-cell R1 squares
+  keep their outcome colours; the legend's blue reads "declined". Rows `R5.cell.*.declined` and `S.R1.*.declined`
+  are re-checked as n - k against the result files.
+- Panel 6 is not flipped. Its numbers (162 of 200 pre-fix records) describe a defect in emem's own reader, and the
+  figure already reads as "which check catches it": five checks pass the wrong value, the source re-read refuses it.
+  Turning that into "38 of 200 read the right pixel" would soften a finding the board should state plainly.
+- Arrow glyphs (→) removed from the face. Step sequences print as boxes: the header trace line, the full-trace
+  headline, panel 5's Resolve / Re-hash / Bind / Recompute / Re-read, the header strip (2.02 GB scene | 84 characters)
+  and the workflow strip (boxes without arrows). Inline uses became words or colons: "0.4709: hold",
+  "as of 15 Jun: 918.0 m", "Tests pin 3σ at 0.50", "NaN as f9 7e00", "0.6431 (s 0.05)", "bytes, name".
 - The Qwen scope line now names its direction ("acted on corruptions ... 22 of 23"), so it no longer reads as the
   same metric as the flipped column.
 - The subhero uses the product's spelling, "emem", to match the lead, the code box, panel 12 and the emem repo.

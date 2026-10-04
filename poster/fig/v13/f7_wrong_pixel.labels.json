@@ -181,7 +181,7 @@
    "claim": "S.threshold"
   },
   {
-   "text": "0.4709 → hold",
+   "text": "0.4709: hold",
    "pt": 30,
    "claim": "W.vals"
   },
@@ -191,7 +191,7 @@
    "claim": "F7.named"
   },
   {
-   "text": "0.3016 → irrigate",
+   "text": "0.3016: irrigate",
    "pt": 30,
    "claim": "W.vals"
   },
@@ -331,17 +331,17 @@
    "claim": "W.kx"
   },
   {
-   "text": "Sample: 200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; 192 Element84, 8",
+   "text": "Sample: 200 pre-fix Sentinel-2 records cited in emem.dev's public channel, one per cell, seeded; 192 Element84, 8 Planetary",
    "pt": 14,
    "claim": "F7.scope"
   },
   {
-   "text": "Planetary Computer. After the fix, 0 of 54 (Planetary Computer, two days). On a 100-point Rondônia grid the old rule",
+   "text": "Computer. After the fix, 0 of 54 (Planetary Computer, two days). On a 100-point Rondônia grid the old rule changed 7 loss",
    "pt": 14,
    "claim": "F7.scope"
   },
   {
-   "text": "changed 7 loss years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.",
+   "text": "years and no EUDR flag. (b) applies the old rule to the 25 Sep scene.",
    "pt": 14,
    "claim": "F7.scope"
   }
