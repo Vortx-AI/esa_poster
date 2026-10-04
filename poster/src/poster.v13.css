@@ -192,3 +192,29 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 .boundary .addresscard{margin-top:2.5mm;padding:2.4mm 3mm}
 .boundary .addresscard .body{font-size:18pt;line-height:1.12;margin-top:0}
 .boundary .addresscard .body + .body{border-top:.35mm solid var(--rule);padding-top:2mm;margin-top:2mm}
+
+/* v13.10: recovered lead, memory-as-coded box and full trace (from the v10 board); handoff emphasis. */
+.headtext .hero .hl{color:var(--emem-light)}
+.headtext .lead{position:absolute;left:449mm;top:56mm;width:170mm;border-left:.8mm solid var(--emem-light);padding-left:3.6mm}
+.headtext .leadq{font-size:17pt;line-height:1.12;font-weight:600;color:var(--emem-light)}
+.headtext .leada{font-size:16pt;line-height:1.15;color:#FFFFFF;margin-top:1.2mm}
+.headtext .leada b{font-weight:600}
+.headtext .leadtrace{font-size:14pt;line-height:1.2;font-weight:600;color:var(--emem-light);margin-top:1.2mm;letter-spacing:.01em}
+.headtext .bridge .orbit{color:var(--emem-light)}
+.spinefoot .spineleft{flex:none;width:468mm}
+.spinefoot .spineleft .agentstrip{width:auto;line-height:1.04}
+.spinefoot .orbitline{font-size:17pt;line-height:1.05;color:var(--emem);font-weight:500;margin-top:.2mm}
+.coded .codegrid{display:grid;grid-template-columns:20.5mm 1fr;column-gap:1.5mm;row-gap:0;margin-top:.8mm;padding:1mm 2.4mm;
+  background:var(--emem-tint);border-left:1.2mm solid var(--emem);font-family:"IBM Plex Mono",monospace;font-size:14pt;line-height:1.03;letter-spacing:-.025em}
+.coded .codegrid b{color:var(--emem);font-weight:600;letter-spacing:0}
+.coded .codegrid span{white-space:nowrap;color:var(--ink)}
+.coded .codegrid sub{font-size:14pt;line-height:0;vertical-align:-.12em}
+.trace .accept{font-size:14pt;line-height:1.16;color:var(--emem);font-weight:500;margin-top:1.4mm;padding:1.2mm 2mm;background:var(--emem-tint)}
+.trace .accept sub{font-size:14pt;line-height:0;vertical-align:-.2em}
+.trace .tlead{font-size:14pt;line-height:1.1;margin-top:1mm}
+.trace .chain{margin-top:.6mm}
+.trace .chain p{font-size:14pt;line-height:1.08;color:var(--ink);margin-top:.3mm}
+.trace .chain b{color:var(--emem);font-weight:600}
+.trace .chain i{font-style:normal;color:var(--muted)}
+.trace .tscope{margin-top:1mm}
+[data-block="p10"] .tfline{font-size:17pt;line-height:1.06;color:var(--emem);font-weight:500;margin-top:.6mm}

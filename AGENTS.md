@@ -2,7 +2,7 @@
 
 This repository holds the A0 poster for "EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents
 over ~~Foundation-Model Embeddings~~ Satellite Observations and Signed Execution Traces" (Agentic AI for Earth
-Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.9 (seven-step EO workflow, complete handoff, memory formalism and compact community routes).
+Observation, Berlin, Poster Session 1, 19 Oct 2026), and all the research behind it. The current board is v13.10 (v13.9 plus the recovered v10 lead, memory-as-coded box and full trace, handoff emphasis and the orbit design lines; see `poster/src/poster.v13.layout.json` v13.10_notes).
 
 ## Start here
 

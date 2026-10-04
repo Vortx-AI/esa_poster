@@ -13,7 +13,7 @@ labels = []
 
 def text(x, y, value, pt, weight=400, color='ink'):
     labels.append(dict(text=value, claim='V9.workflow', x_mm=x, y_mm=y, pt=pt))
-    ax.text(x, y, value, fontsize=pt, fontweight=weight, color=S.C[color], va='center')
+    ax.text(x, y, value, fontsize=pt, fontweight=weight, color='#FFFFFF' if color == 'white' else S.C[color], va='center')
 
 text(0, 5, 'From observation to the next agent', 24, 600)
 steps = [
@@ -31,10 +31,11 @@ for i, (verb, detail, scope) in enumerate(steps):
     x = i * (width + gap)
     ax.add_patch(FancyBboxPatch((x, 13), width, 35,
         boxstyle='round,pad=0,rounding_size=1.5',
-        fc=S.C['oos_bg' if i < 2 else 'emem_tint'], ec='none'))
-    text(x + 4, 21, verb, 28, 600, 'emem' if i >= 2 else 'ink')
-    text(x + 4, 32, detail, 17, 500)
-    text(x + 4, 41, scope, 17, 400, 'ink2')
+        fc=S.C['emem' if verb == 'Hand off' else 'oos_bg' if i < 2 else 'emem_tint'], ec='none'))
+    hand = verb == 'Hand off'   # v13.10: the handoff is the step emem exists for; it carries the strongest fill
+    text(x + 4, 21, verb, 28, 700 if hand else 600, 'white' if hand else 'emem' if i >= 2 else 'ink')
+    text(x + 4, 32, detail, 17, 500, 'white' if hand else 'ink')
+    text(x + 4, 41, scope, 17, 400, 'white' if hand else 'ink2')
     if i < 6:
         text(x + width + 1, 29, '→', 20, 500, 'emem')
 
