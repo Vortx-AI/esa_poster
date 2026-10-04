@@ -1,28 +1,28 @@
 {
  "release": "v13.10",
  "date": "2026-10-04",
- "base_commit": "202f1f4e22c2b2e4545744af68471405ad2196ac",
+ "base_commit": "43275653b61640464ed77faff46687ebd3fd3e0b",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2403769,
-   "sha256": "a28446682730832cfe6cc6c964880d62b0368d2d8e73ba2e8643afca0b54ef83"
+   "bytes": 2404793,
+   "sha256": "0c43950797750f2165cbd5ff2bcceaf642c516a3ee8ab0ad7a9e95f297db53af"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4538857,
-   "sha256": "460c5f13f567853ca1f6e1bb6f371502f3274fb2190f1d3354d1db5c299cf4c7"
+   "bytes": 4545409,
+   "sha256": "952b83034346847f1cc252a9728194cb59aff1bcdaa2528aee1df6460b0aca1c"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 15797868,
-   "sha256": "f278d4c79963c10a64b31d1b8b2b396275da3c4867dc27c2cc7581bdf11a9ce8"
+   "bytes": 15819878,
+   "sha256": "230a96622e015d585fe918f717dd1d810508a3e08264dc1773061c1c620d50b4"
   },
   "poster/poster.html": {
-   "bytes": 3308643,
-   "sha256": "2344804d96aa4af7fb6cdddd9ac2edfec357876048fee3848befc75205be497d"
+   "bytes": 3307826,
+   "sha256": "3afe782a1923faacc8be52590b6a12ca2f18b62747fa631f5d1e53a40a1f9deb"
   },
   "poster/build_v13_report.json": {
-   "bytes": 26306,
-   "sha256": "05233e1dcc1a37eacce81910c84e78e50f26827c3d568478ea92ab5af2384887"
+   "bytes": 26309,
+   "sha256": "3dbacc27587b6fa0ed22e049bb13229b658251bd18ee8642bcd071606030e3de"
   },
   "poster/src/poster.v13.html": {
    "bytes": 22998,
@@ -33,29 +33,29 @@
    "sha256": "f5cb1a0a35c4d3c24c5922c7dc910f22b625c515cebd20673f8ed5ea38578545"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2403770,
-   "sha256": "3901f914468a6209528d80c40a64145a4232b9cb47cd575c8709fea9803980ee"
+   "bytes": 2404795,
+   "sha256": "3a745defc5c7b16b5350c1815d99f85f4c96d60808cf7a8ba63a8ba6eb2b83a9"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4545858,
-   "sha256": "e25801fdd4cf323f1bbd6acaa63078b46e3b863c5fd5f02f0606a727fce35db0"
+   "bytes": 4552056,
+   "sha256": "fa50846abe1bee08bf42afdc6c2b7596ad8addf2c2fcaf54adcc366043d8c762"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 15798510,
-   "sha256": "d830f0fa2ddbfb93ab0a7a7c083795ddbe142309552129cd433128fbb764558c"
+   "bytes": 15819907,
+   "sha256": "57246092529584d281e725246157e6be4d7e5fbe3b1d899ea362934ce88e9b41"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3308643,
-   "sha256": "6863769b634692aabb0da46becad463a245d91044cef1900e1dada106756b2eb"
+   "bytes": 3307826,
+   "sha256": "7e523088881360a6732856551af1839d3802262405138e523ce3299acf61a277"
   },
   "poster/build_v13_report-300of300.json": {
-   "bytes": 26424,
-   "sha256": "1e1d05509b509b4a89044d186eac3a86609ee6c8bba40b0268db29789073369a"
+   "bytes": 26427,
+   "sha256": "3232933a37a5f838a46806427b1acd5049be2c4bad88c8f9a80a3c239e55db85"
   }
  },
- "pdf_blake3": "825269c260b893c83d7d7e95ef4611b58771f01e0cf86ff859eb75243c628299",
- "pointer_body": "research/repro/v13/track/board_body_202f1f4.md",
- "rows_rechecked": 558,
+ "pdf_blake3": "8eedf35df367a1401a83eeabd7b559891e5b025924d7bd7f70bc3cf3420e365e",
+ "pointer_body": "research/repro/v13/track/board_body_4327565.md",
+ "rows_rechecked": 559,
  "claims_printed": 174,
  "qr": [
   "qr_demo at (627.5,0.0) 216.5 mm: decoded 'https://vortx-ai.github.io/esa_poster/demo/' == payload 'https://vortx-ai.github.io/esa_poster/demo/'",
@@ -71,8 +71,8 @@
   "top_text": 9.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "d3b39c9f827bbc4a420c7a7b81e794cc1011a10d027d4a5be55c889c6b9f3027",
- "pointer_body_300of300": "research/repro/v13/track/board_body_202f1f4-300of300.md",
+ "pdf_blake3_300of300": "bf95ebc9f29e3329bbd893a30731efe3541d18ff030f2e6b6b901d7a5422f677",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_4327565-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
