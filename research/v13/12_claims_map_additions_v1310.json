@@ -5278,9 +5278,10 @@
     },
     {
       "id": "R5.matched.ceiling",
-      "block": "v13.10 P1 scope",
+      "block": "v13.10 P1 ablation strip",
       "print": [
-        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8.",
+        "Matched ablation, deterministic receiver, same 23 corruptions (4 Oct), accepted: JSON, no checks 23 → emem’s checks minus hash, signature and log 8 → plus four consistency checks 3 → emem’s verifier 0"
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5306,9 +5307,10 @@
     },
     {
       "id": "R5.matched.n",
-      "block": "v13.10 P1 scope",
+      "block": "v13.10 P1 ablation strip",
       "print": [
-        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8.",
+        "Matched ablation, deterministic receiver, same 23 corruptions (4 Oct), accepted: JSON, no checks 23 → emem’s checks minus hash, signature and log 8 → plus four consistency checks 3 → emem’s verifier 0"
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5334,9 +5336,10 @@
     },
     {
       "id": "R5.matched.hardened",
-      "block": "v13.10 P1 scope",
+      "block": "v13.10 P1 ablation strip",
       "print": [
-        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8.",
+        "Matched ablation, deterministic receiver, same 23 corruptions (4 Oct), accepted: JSON, no checks 23 → emem’s checks minus hash, signature and log 8 → plus four consistency checks 3 → emem’s verifier 0"
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5362,9 +5365,10 @@
     },
     {
       "id": "R5.matched.emem",
-      "block": "v13.10 P1 scope",
+      "block": "v13.10 P1 ablation strip",
       "print": [
-        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8.",
+        "Matched ablation, deterministic receiver, same 23 corruptions (4 Oct), accepted: JSON, no checks 23 → emem’s checks minus hash, signature and log 8 → plus four consistency checks 3 → emem’s verifier 0"
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",
@@ -5392,7 +5396,8 @@
       "id": "R5.matched.agents",
       "block": "v13.10 P1 scope",
       "print": [
-        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8."
+        "Matched baseline (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted 8 of 23 corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8.",
+        "With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory run, 4 Oct, one trial each)."
       ],
       "status": "PRE-REGISTERED",
       "layer": "n/a",

@@ -36,7 +36,8 @@ declined / genuine split (`research/repro/v13/r5/not_acted_split.py`). Never cal
 300 used the genuine record.
 R5 lines (`data-mode="r5"`, `{R5.*}` placeholders) print only when `research/repro/v13/r5/results.json` is final; the
 switch is in the build. The matched baseline (pre-registration addendum 2, results in
-`research/repro/v13/r5/results_addendum2.md`, rows `R5.matched.*`) is printed in panel 1's scope. v12 sources stay in `poster/src/poster.v12.html`, `poster/build_v12.py`, `poster/make_figures_v12.py`;
+`research/repro/v13/r5/results_addendum2.md`, rows `R5.matched.*`) is printed in panel 1's ablation strip and scope;
+`research/repro/v13/r5/addendum2/replay.py` re-checks and re-scores its archived agent trials from any checkout path. v12 sources stay in `poster/src/poster.v12.html`, `poster/build_v12.py`, `poster/make_figures_v12.py`;
 v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 board is in `poster/archive/v10/`.
 
 ## Rules the build enforces (it fails, never warns)

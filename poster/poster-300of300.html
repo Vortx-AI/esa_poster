@@ -114,6 +114,11 @@ h2{font-weight:600;line-height:1.0;letter-spacing:-.008em;color:var(--ink);margi
 
 /* ---------- spine ---------- */
 .spinefoot{display:flex;gap:10mm;align-items:flex-start;margin-top:.6mm}
+/* v13.10 (4 Oct, third ChatGPT review): the matched ablation as its own labelled strip under the figure; panel 1's gaps
+   above the mechanism line and the figure give it room */
+.spine>.mech{margin-top:.6mm}.spine>.fig{margin-top:.8mm}
+.ablation{display:flex;align-items:baseline;gap:2.4mm;margin-top:.5mm;padding:.2mm 3mm .4mm;background:var(--oos-bg);border-left:1.2mm solid var(--emem);font-size:17pt;line-height:1;color:var(--ink2);white-space:nowrap}
+.ablation b{color:var(--ink);font-weight:700}.ablation b.h{color:var(--harm-text)}.ablation b.e{color:var(--emem)}.ablation i{font-style:normal;color:var(--muted)}
 .spinefoot .agentstrip{flex:none;width:468mm;font-size:24pt;line-height:1.08;color:var(--ink)}
 .spinefoot .scope{flex:none;width:323mm;margin-top:.6mm}
 
@@ -4779,13 +4784,14 @@ z
   </clipPath>
  </defs>
 </svg></div>
+  <div class="ablation" data-role="caption" data-claim="R5.matched.ceiling R5.matched.n R5.matched.hardened R5.matched.emem"><span><b>Matched ablation</b>, deterministic receiver, same 23 corruptions (4 Oct), accepted:</span><span>JSON, no checks <b class="h">23</b></span><i>→</i><span>emem’s checks minus hash, signature and log <b class="h">8</b></span><i>→</i><span>plus four consistency checks <b class="h">3</b></span><i>→</i><span>emem’s verifier <b class="e">0</b></span></div>
   <div class="spinefoot">
     <div class="spineleft">
     <p class="agentstrip rt" data-mode="r5" data-variant="300of300" data-role="take" data-claim="R5.shared.n R5.shared.E.notacted R5.shared.E.declined R5.shared.E.acted_on_genuine R5.shared.D.notacted R5.shared.A.notacted">Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 used the genuine record); with an opaque id, 122 of 276; in prose, 22 of 276.</p>
     <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so no source re-read (<span class="nw">SAT-042</span> harness, not flown).</p>
     </div>
     <div class="scope" data-mode="r5">
-      <p data-role="scope" data-claim="R5.models R5.dates R5.items R5.tasks R5.treatment R5.limits R5.matched.ceiling R5.matched.n R5.matched.hardened R5.matched.emem R5.matched.agents R5.E.qwen7b R5.Eplus.qwen7b">Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. <b>Matched baseline</b> (4 Oct): emem’s checks minus hash, signature and log, run on the JSON, accepted <span class="nw">8 of 23</span> corruptions (3 with four more checks; emem’s verifier 0); in an exploratory run, one trial each, instructed Haiku agents given those checks acted on the same 8. Qwen2.5-7B acted on <span class="nw">10 of 25</span> corruptions behind a fail-closed resolver (<span class="nw">2 of 25</span> when told to check): gate the action outside the model.</p>
+      <p data-role="scope" data-claim="R5.models R5.dates R5.items R5.tasks R5.treatment R5.limits R5.matched.agents R5.E.qwen7b R5.Eplus.qwen7b">Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory run, 4 Oct, one trial each). <span class="nw">Qwen2.5-7B</span> acted on <span class="nw">10 of 25</span> corruptions behind a fail-closed resolver (<span class="nw">2 of 25</span> when told to check): gate the action outside the model.</p>
     </div>
     </div>
 </section>
@@ -16509,7 +16515,7 @@ z
 </section>
 </main>
 <footer class="blk foot" data-block="footer" style="--x:20;--y:1169.5;--w:801;--h:18">
-  <p><span data-claim="K.dates">Measurements: 29 Sep to 1 Oct 2026.</span>
+  <p><span data-claim="K.dates">Measurements: 29 Sep to 4 Oct 2026.</span>
   <span class="sep">·</span> <span data-claim="U.poster">Methods link each figure to its records, data and checks (Connect).</span>
   <span class="sep">·</span> <span data-claim="PA.credit">Related work: Sigstore, RFC 9162, SCITT (RFC 9943), ARC (arXiv 2607.25066).</span>
   <span class="sep">·</span> <span data-claim="REF.footer">Sentinel-2 Products Specification (ESA) · Copernicus DEM GLO-30/90 · Hansen et al. 2013, GFC v1.13 · JRC GFC2020 V3/V4, TMF · ESA CCI Biomass v7 · BLAKE3 · RFC 8032 · <span class="nw">RFC 6962/9162</span> · STAC 1.1 · openEO 1.3 · W3C PROV-DM · C2PA 2.4 · MCP 2025-11-25 · A2A 1.0 · Perez et al., ICLR 2025 · Munir et al. 2026 (2604.24919) · Cemri et al. 2025, MAST (2503.13657) · Townshend et al. 1992 · GeoGuard (NASA-IMPACT) · Prithvi-EO-2.0 · TESSERA (2506.20380)</span></p>
