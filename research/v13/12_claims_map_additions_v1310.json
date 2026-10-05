@@ -10,7 +10,8 @@
         "emem makes satellite observations, raw or derived, addressable by place, band and time: records named by the BLAKE3 hash of their bytes, signed in batches. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
         "emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name.",
         "Agent A cites a satellite observation. What can agent B check without trusting A or A’s model?",
-        "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature."
+        "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.",
+        "Observation writes require authorised keys; altering the cited bytes breaks the original content address."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -29,7 +30,7 @@
         "file": "repro/v8/trace_fact_output.txt",
         "arg": "verified offline with the responder key"
       },
-      "note": "The record is covered by a signed batch attestation (code box, sign row). 'Cannot write' holds by default: /v1/attest is closed to agents and open to the responder key, enrolled devices and operator-listed keys; a caller's derived value is kept only after emem recomputes it.",
+      "note": "The record is covered by a signed batch attestation (code box, sign row). 'Cannot write' holds by default: /v1/attest is closed to agents and open to the responder key, enrolled devices and operator-listed keys; a caller's derived value is kept only after emem recomputes it. 5 Oct 2026, final copy pass after the sixth review: precision (confirmed no-data, authorised writes, receiver checks, archived versus constructed in panel 5). Review log section 28.",
       "tier": "1m",
       "checked": true
     },
@@ -5228,7 +5229,8 @@
       "id": "V8.absence",
       "block": "v13.10 header subhero",
       "print": [
-        "Where no observation exists, emem signs an absence and its reason, not a zero."
+        "Where no observation exists, emem signs an absence and its reason, not a zero.",
+        "When a source confirms no data, emem signs an absence and its reason, not a zero."
       ],
       "status": "SPEC",
       "layer": "L0",
@@ -5246,7 +5248,7 @@
         "file": "v13/evidence/failure_modes/CHANGELOG_18adb67.md",
         "arg": "255 signed as an Absence (open sea or no valid observation)"
       },
-      "note": "From the list of unprinted items (26_V13_10_REVIEW.md sections 8 and 13): the only one with an in-repo source that fits the subhero.",
+      "note": "From the list of unprinted items (26_V13_10_REVIEW.md sections 8 and 13): the only one with an in-repo source that fits the subhero. 5 Oct 2026, final copy pass after the sixth review: precision (confirmed no-data, authorised writes, receiver checks, archived versus constructed in panel 5). Review log section 28.",
       "tier": "1m",
       "checked": true
     },
@@ -5629,6 +5631,49 @@
         "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5); squares: deterministic ceiling. Totals: 23 to 25 items."
       ],
       "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
+    },
+    {
+      "id": "E8.summary",
+      "op": "extend_print",
+      "print_add": [
+        "Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. The seven are caught at different checking stages."
+      ],
+      "note": "5 Oct 2026, final copy pass after the sixth review: precision (confirmed no-data, authorised writes, receiver checks, archived versus constructed in panel 5). Review log section 28."
+    },
+    {
+      "id": "S.threshold",
+      "op": "extend_print",
+      "print_add": [
+        "constructed test: irrigate if NDVI ≤ 0.4705"
+      ],
+      "note": "5 Oct 2026, final copy pass after the sixth review: precision (confirmed no-data, authorised writes, receiver checks, archived versus constructed in panel 5). Review log section 28."
+    },
+    {
+      "id": "W.kx",
+      "op": "extend_print",
+      "print_add": [
+        "archived signed error "
+      ],
+      "note": "5 Oct 2026, final copy pass after the sixth review: precision (confirmed no-data, authorised writes, receiver checks, archived versus constructed in panel 5). Review log section 28."
+    },
+    {
+      "id": "F7.scope",
+      "op": "extend_print",
+      "print_add": [
+        "Sample: 200 archived records from emem.dev's public channel, one per cell, seeded (192 Element84, 8 Planetary",
+        "Computer), read with a rounded pixel position; GDAL floors it. After the fix: 0 of 54 carry a neighbour's values (Planetary",
+        "Computer, two days; unmatched sample). On a 100-point Rondônia grid, rounding changed 7 loss years and no EUDR flag."
+      ],
+      "note": "5 Oct 2026, final copy pass after the sixth review: precision (confirmed no-data, authorised writes, receiver checks, archived versus constructed in panel 5). Review log section 28."
+    },
+    {
+      "id": "R5.F6.scope",
+      "op": "extend_print",
+      "print_add": [
+        "Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic verifier. Totals pool 23 to 25 items.",
+        "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5); squares: the deterministic verifier. Totals: 23 to 25 items."
+      ],
+      "note": "5 Oct 2026, final copy pass after the sixth review: precision (confirmed no-data, authorised writes, receiver checks, archived versus constructed in panel 5). Review log section 28."
     }
   ]
 }

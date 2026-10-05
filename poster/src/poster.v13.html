@@ -12,10 +12,10 @@
 <div class="blk headtext" data-block="header_text" style="--x:0;--y:0;--w:627.5;--h:188">
   <h1 class="title rt" data-role="title" data-claim="H.title">EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol</h1>
   <p class="hero rt" data-role="hero" data-claim="U.hero">An Earth observation that<br>survives an agent <span class="hl">handoff.</span></p>
-  <p class="subhero rt" data-role="subhero" data-claim="V8.language V8.absence">emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. Where no observation exists, emem signs an absence and its reason, not a zero.</p>
+  <p class="subhero rt" data-role="subhero" data-claim="V8.language V8.absence">emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. When a source confirms no data, emem signs an absence and its reason, not a zero.</p>
   <div class="lead">
     <p class="leadq rt" data-role="question">Agent A cites a satellite observation. What can agent B check without trusting A or A’s model?</p>
-    <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes satellite observations, raw or derived, <b>addressable by place, band and time</b>. Each is a record named by the <b>BLAKE3 hash of its bytes</b> and signed in a batch. The exact evidence A cites survives a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.</p>
+    <p class="leada rt" data-role="body" data-claim="LEAD.answer">emem makes satellite observations, raw or derived, <b>addressable by place, band and time</b>. Each is a record named by the <b>BLAKE3 hash of its bytes</b> and signed in a batch. The exact evidence A cites survives a change of model and a <b>handoff</b>; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Observation writes require authorised keys; altering the cited bytes breaks the original content address.</p>
     <p class="leadtrace steps" data-claim="TRACE.chain"><b>Trace</b><span>token</span><span>record bytes</span><span>cell</span><span>pixel</span><span>receipt</span><span>log</span><span>key</span></p>
   </div>
   <p class="bridge rt" data-role="bridge" data-claim="V8.language ORBIT.tagline">A compact citation keeps the observation traceable across agents and time. <span class="orbit">Design goal: encode in orbit, <span class="brand">decode with AI.</span></span></p>
@@ -63,7 +63,7 @@
   <h2 class="rt" data-role="headline" data-claim="E8.summary">One NDVI, eight values</h2>
   <p class="mech rt" data-role="mechanism" data-claim="E8.summary E8.constructed">We varied one Keylong NDVI by scene, date, place, pixel and arithmetic.</p>
   <div class="fig" data-figslot="f3_eight_answers" style="--fw:193.5;--fh:62"><!--fig:f3_eight_answers--></div>
-  <p class="cap rt" data-role="caption" data-claim="E8.summary E8.double">Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each of these seven needs a different check.</p>
+  <p class="cap rt" data-role="caption" data-claim="E8.summary E8.double">Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. The seven are caught at different checking stages.</p>
 </section>
 <section class="panel c3 drift-panel" data-block="p3" data-brief="3 · Different drift, different check">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">3</span>Why can a value change?</p>

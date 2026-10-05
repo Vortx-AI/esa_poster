@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-04T12:35:41.251530</dc:date>
+    <dc:date>2026-10-05T07:24:31.710245</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ Q 0 136.062992 0 131.811024
 L 0 41.102362 
 Q 0 36.850394 4.251969 36.850394 
 z
-" clip-path="url(#p62a66e67b5)" style="fill: #f1f0ec"/>
+" clip-path="url(#p771d3fe2da)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_3">
     <path d="M 331.856018 36.850394 
@@ -53,7 +53,7 @@ Q 327.604049 136.062992 327.604049 131.811024
 L 327.604049 41.102362 
 Q 327.604049 36.850394 331.856018 36.850394 
 z
-" clip-path="url(#p62a66e67b5)" style="fill: #f1f0ec"/>
+" clip-path="url(#p771d3fe2da)" style="fill: #f1f0ec"/>
    </g>
    <g id="patch_4">
     <path d="M 659.460067 36.850394 
@@ -66,7 +66,7 @@ Q 655.208099 136.062992 655.208099 131.811024
 L 655.208099 41.102362 
 Q 655.208099 36.850394 659.460067 36.850394 
 z
-" clip-path="url(#p62a66e67b5)" style="fill: #dce8f5"/>
+" clip-path="url(#p771d3fe2da)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_5">
     <path d="M 987.064117 36.850394 
@@ -79,7 +79,7 @@ Q 982.812148 136.062992 982.812148 131.811024
 L 982.812148 41.102362 
 Q 982.812148 36.850394 987.064117 36.850394 
 z
-" clip-path="url(#p62a66e67b5)" style="fill: #0f5fa8"/>
+" clip-path="url(#p771d3fe2da)" style="fill: #0f5fa8"/>
    </g>
    <g id="patch_6">
     <path d="M 1314.668166 36.850394 
@@ -92,7 +92,7 @@ Q 1310.416198 136.062992 1310.416198 131.811024
 L 1310.416198 41.102362 
 Q 1310.416198 36.850394 1314.668166 36.850394 
 z
-" clip-path="url(#p62a66e67b5)" style="fill: #dce8f5"/>
+" clip-path="url(#p771d3fe2da)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_7">
     <path d="M 1642.272216 36.850394 
@@ -105,7 +105,7 @@ Q 1638.020247 136.062992 1638.020247 131.811024
 L 1638.020247 41.102362 
 Q 1638.020247 36.850394 1642.272216 36.850394 
 z
-" clip-path="url(#p62a66e67b5)" style="fill: #dce8f5"/>
+" clip-path="url(#p771d3fe2da)" style="fill: #dce8f5"/>
    </g>
    <g id="patch_8">
     <path d="M 1969.876265 36.850394 
@@ -118,7 +118,7 @@ Q 1965.624297 136.062992 1965.624297 131.811024
 L 1965.624297 41.102362 
 Q 1965.624297 36.850394 1969.876265 36.850394 
 z
-" clip-path="url(#p62a66e67b5)" style="fill: #dce8f5"/>
+" clip-path="url(#p771d3fe2da)" style="fill: #dce8f5"/>
    </g>
    <g id="text_1">
     <text style="font-weight: 600; font-size: 24px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="0" y="20.893228" transform="rotate(-0 0 20.893228)">From observation to the next agent</text>
@@ -172,7 +172,7 @@ z
     <text style="font-weight: 600; font-size: 28px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #0f5fa8" x="1649.35883" y="67.367559" transform="rotate(-0 1649.35883 67.367559)">Check</text>
    </g>
    <g id="text_18">
-    <text style="font-weight: 500; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1649.35883" y="95.468661" transform="rotate(-0 1649.35883 95.468661)">Hash · bind · sign · source</text>
+    <text style="font-weight: 500; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #222428" x="1649.35883" y="95.468661" transform="rotate(-0 1649.35883 95.468661)">Hash · binding · signature · source</text>
    </g>
    <g id="text_19">
     <text style="font-weight: 600; font-size: 17px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #b5401a" x="1649.35883" y="120.980472" transform="rotate(-0 1649.35883 120.980472)">Policy: refuse if one fails.</text>
@@ -189,7 +189,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p62a66e67b5">
+  <clipPath id="p771d3fe2da">
    <rect x="0" y="0" width="2270.551181" height="138.897638"/>
   </clipPath>
  </defs>

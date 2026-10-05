@@ -394,10 +394,10 @@ if MODE == "R5":
     NI = f"{min(R5D['n_items'].values())} to {max(R5D['n_items'].values())}"   # 23 (A, B, RAG), 24 (opaque id), 25 (emem)
     if NOT_ACTED:
         scope = (f"Bars: B did not act on it (declined, or acted on the genuine value), n {R5D['per_cell']} ({reps}); "
-                 f"squares: deterministic ceiling. Totals: {NI} items.")
+                 f"squares: the deterministic verifier. Totals: {NI} items.")
     else:
         scope = (f"Bars: agents' false acceptance, k of n per cell, n {R5D['per_cell']} ({reps} runs); "
-                 f"squares: the deterministic ceiling. Totals pool {NI} items.")
+                 f"squares: the deterministic verifier. Totals pool {NI} items.")
     scope_claim = "R5.F6.scope"
 for _y, _s, _c in ((yl + 5.9, scope, scope_claim), (yl + 11.2, scope2, "X.p123")):
     _t = T(0, _y, _s, 14, color=C["ink2"], claim=_c)

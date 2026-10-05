@@ -957,7 +957,7 @@
    "claim": "F6.cumulative"
   },
   {
-   "text": "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5); squares: deterministic ceiling. Totals: 23 to 25 items.",
+   "text": "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5); squares: the deterministic verifier. Totals: 23 to 25 items.",
    "pt": 14,
    "claim": "R5.F6.scope"
   },

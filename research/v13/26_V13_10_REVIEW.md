@@ -690,3 +690,25 @@ Not changed, because they are needed: the scope statements on the face (inherite
 not flown, what the trace leaves trusted), the always-on token cost of the Claude Code plugin (an issue asked
 not to hide it), and the measurement window in the footer. Both variants pass the 18 gates; 0 overlaps; QR codes decode from
 both PDFs; site gates pass on the 8 pages; 14 unit tests pass.
+
+## 28. Sixth ChatGPT review (92e7b9e, 8.5/10): final copy pass (5 Oct 2026)
+
+Each correction was checked against emem's code (main 320a1d5) or the evidence files before it was applied.
+
+| Location | Before | Check | After |
+|---|---|---|---|
+| Header, subtitle | "Where no observation exists, emem signs an absence and its reason, not a zero." | emem signs `Fact::Absence` for confirmed no-data (outside a product's mask, no value after the publication window, every composite rejected by QC); a value not yet published returns an error, and a budget limit a skip (`sign_band_absence`, `MaterializeOutcome.skip_reason`) | "When a source confirms no data, emem signs an absence and its reason, not a zero." |
+| Header, lead | "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature." | a forged record under the forger's key matches its own signature (M13), and the wrong-pixel record is validly signed (panel 5); /v1/attest is closed to agents by default | "Observation writes require authorised keys; altering the cited bytes breaks the original content address." The allowlist entry for "cannot" goes with the old sentence. |
+| Workflow, Check | "Hash · bind · sign · source" | "sign" reads as the receiver signing | "Hash · binding · signature · source" (95.6 mm measured, 98.5 mm with Chromium's 3 %, in a 101.6 mm text width) |
+| Panel 5 | "With floor, 0 of 54 (...)"; the constructed test and the archived record not told apart | the 200 sampled records were signed 14 May to 27 Sep, before the 28 Sep fix; the 54 were signed 28 to 30 Sep and none matches the rounded pixel (`prevalence_summary.json` pre/post) | caption: "200 archived records ... After the fix: 0 of 54 carry a neighbour's values (Planetary Computer, two days; unmatched sample)"; c reads "constructed test: irrigate if NDVI ≤ 0.4705"; the 23 Sep record is introduced as "archived signed error" |
+
+Optional suggestions: panel 2's "Each of these seven needs a different check" overstated (binding catches both the place and the date
+change, metadata both the scene and the offset); it reads "The seven are caught at different checking stages." ("No single check
+catches all seven" hit the banned word "all"). "the deterministic ceiling" becomes "the deterministic verifier" in panel 6 (both
+variants) and on the test page. Not applied: "A standalone Python verifier" for "Without emem software, a 698-line script": the
+sentence already leads with independence, and the line count tells a reader the verifier is small enough to audit.
+
+Not changed: density (the review recommends locking; 14 pt is the floor, kicker and mechanism lines are 24 pt) and bleed (the
+header runs to the page edge and the PDF has none; the print shop must accept the exact A0 file for edge-to-edge output or ask for
+a bleed version). Both variants pass the 18 gates; running text 807 words (808); 0 overlaps; QR codes decode from both PDFs;
+fonts embedded; site gates pass on the 8 pages; 14 unit tests pass.
