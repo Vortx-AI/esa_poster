@@ -575,3 +575,57 @@ deliberately when you want the next release pulled"; it answered as 1.1.0 on 30 
 unqualified would present a stale server as current, so it leaves the face (manifest: print not allowed, with the
 reason); the group title becomes "DISCOVERY", since none of the five remaining routes is a mirror. The companion
 directory on the use page still lists it with its caveat. Both variants pass the 18 gates; 27 printed routes.
+
+## 26. Contribution panel, the Claude listing and the companion pages (5 Oct 2026)
+
+**Panel 13.** The label "THE CONTRIBUTION" becomes "CONTRIBUTION", the usual section name. The caption said "emem
+adds typed EO references and a source re-read". emem's own verifier (emem-verify-core.js at emem 320a1d5) recomputes
+the receipt digest and checks Ed25519; it does not re-read the source. The re-read is the receiver's check (depth I in
+panel 6; links 8 and 9 of the full trace), and emem records make it possible because they name the source files, the
+sampled point and the derivation (panel 4). The caption now reads: "emem applies them to single EO observations, and its
+records name the source file and sampled point, so a receiver can re-read the pixel. That re-read caught a wrong pixel
+that hashing, binding, signatures, logs and recomputation had passed (panel 5)." "binding" was missing from the list:
+panel 5's chips are hash, binding, signature, log and recompute (all pass the wrong value) and re-read (refuses). The
+new printed forms are in the row V7.invention; the brief's section C carries the same caption. Running text: 810
+words (811 in 300of300), under the 816 cap.
+
+**The Claude listing.** The authors' screenshot of 4 Oct (`evidence/listings/claude.png`) shows "emem · from
+Anthropic Directory · 2.4.2 · 19 skills", with the emem connector and the plugin enabled. The manifest still called the
+Claude directory NOT FOUND ("Nothing via a directory today"), and the plugin row's caveat said "This is emem's own
+marketplace, not Anthropic's directory". `anthropics/claude-plugins-official/.claude-plugin/marketplace.json`, Claude
+Code's catalogue, was fetched again at 2026-10-05T05:53Z: 315 plugins, none named emem or pointing at Vortx-AI/emem
+(the one substring hit is "remember"; `evidence/ecosystem/cpo_market_2026-10-05.json`). Both statements hold for
+different catalogues: the Claude apps list emem in the Anthropic Directory; Claude Code's marketplace does not. The row
+`claude-connectors-directory` now records the listing (REGISTRY, with both pieces of evidence), the plugin row's caveat
+says which catalogue is which, and the use page's Claude setup card starts with the Directory route, as the board's
+Claude card does ("Directory plugin / MCP"). "What was checked?" on the use page now says what was run in Claude Code
+(install and connect on 30 Sep, no model turn) instead of "checked against the source".
+
+**The use page's integration list.** Every row's evidence line ended in " ." (an empty template slot left when print
+placement was taken off the page); fixed in `tools/site/site.mjs` and on the page. Caveats carried authoring
+instructions to visitors: "Do not print ...", "Fix the example before printing Cline", "The poster must print the action
+URL", an issue number, a commit pin, "this session", "this container". Those move to a new `print.note` field, which no
+page shows; the caveats that stay state results and limits. The emem.dev landing row showed "DISCOVER INTEGRATIONS ->
+emem.dev/#use", the label of a QR the board no longer carries, as a command; it now shows the URL. Only the integration
+list was regenerated (site.mjs into a scratch directory, the section spliced in), so the hand edits elsewhere on the page
+stay. AGENTS.md records the `print.note` convention.
+
+**Methods and Q&A.** The prior-art table loses the GeoGuard row and reference (the authors' rule of 4 Oct: not used by
+emem), its introduction says EMEM "works alongside" those layers instead of "relies on" them, and the MCP and STAC rows
+say what emem serves and reads (protocol 2025-11-25; STAC 1.0.0 items) beside the specification versions checked on 1 Oct
+(2026-07-28; 1.1.0), so the table agrees with the footer. "a BM25-based RAG baseline (BM25, top 3 ..." loses its doubled
+BM25. On the Q&A page, "Why not GeoGuard?" and GeoGuard's sentence in the quick comparison are removed; the contribution
+answer adds the source re-read; the RAG answer names the BM25-based baseline (top 3 of nine passages); the drift answer
+uses panel 3's terms (environment, sensor, geolocation, encoder) instead of "world" and "alignment".
+
+**Panel 12.** The five card action lines are labels, but three ended in a period and two did not; none does now.
+"Install MCP server" stays as written: it is the GitHub listing's own button.
+
+**Generator.** site.mjs carries the same fixes for these sections (Claude card, "What was checked?", the evidence line,
+GeoGuard, the MCP and STAC notes, the "C retrieved text (BM25)" column). It still lacks other v13.10 hand edits, so
+docs/ is still not regenerated from it. `evidence/ecosystem/build_manifest.py` is marked as superseded: the manifest has
+been edited by hand since 4 Oct, and re-running the script would revert those edits. The ecosystem test's pinned date
+moves to 5 Oct, the date of the newest evidence.
+
+Checks: both variants pass the 18 gates; 0 text overlaps, no broken hyphens or split numbers, the same 24 top-edge
+ascent boxes as the committed board (inside the gate's allowance), 14 unit tests pass, 42 routes with 27 printed.

@@ -71,4 +71,6 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
 - Check depth shows as colour and check names, not as "L0" to "L3": EO readers take those for processing levels.
 - Never commit signing keys (`.gitignore` covers the usual names).
 
-The ecosystem figure is generated from `research/v13/ecosystem_manifest.json` by `poster/ecosystem.py`. Dates older than 28 days (LIVE claim rows and ecosystem rows), unqualified statuses and manually added SVG copy fail the build and CI. Run `python -m unittest discover -s poster/tests -v` after changing claim or ecosystem gates.
+The ecosystem figure is generated from `research/v13/ecosystem_manifest.json` by `poster/ecosystem.py`. The manifest's caveats are
+shown to visitors in /use/'s integration list (generated from the manifest by `tools/site/site.mjs`); print instructions go
+in a row's `print.note`, which no page shows. Dates older than 28 days (LIVE claim rows and ecosystem rows), unqualified statuses and manually added SVG copy fail the build and CI. Run `python -m unittest discover -s poster/tests -v` after changing claim or ecosystem gates.

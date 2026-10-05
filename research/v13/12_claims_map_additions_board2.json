@@ -329,7 +329,7 @@
    "source": {
     "file": "research/v13/ecosystem_manifest.json",
     "pointer": "id=claude-code-plugin: MEASURED 'claude plugin marketplace add Vortx-AI/emem' then 'claude plugin install emem@emem' -> installed, Version 2.4.2, enabled (2026-09-30T23:10Z..23:40Z)",
-    "caveat": "emem's own marketplace in the emem repo, not Anthropic's directory (0 of 315 plugins there name emem)"
+    "caveat": "emem's own marketplace in the emem repo, not Anthropic's directory (0 of 315 plugins there name emem); 5 Oct 2026: Claude Code's catalogue still lists none (0 of 315, re-fetched 2026-10-05T05:53Z), while the Claude apps' Anthropic Directory lists the plugin (authors' screenshot, 4 Oct 2026; manifest row claude-connectors-directory)"
    },
    "date": "2026-10-01",
    "value": "2.4.2",

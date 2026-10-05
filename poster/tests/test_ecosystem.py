@@ -10,7 +10,7 @@ import ecosystem as E
 class EvidenceGate(unittest.TestCase):
     def setUp(self):
         self.rows = copy.deepcopy(E.read_manifest())
-        self.today = dt.date(2026, 10, 4)
+        self.today = dt.date(2026, 10, 5)
     def check(self, **kw):
         return E.validate(self.rows, today=self.today, **kw)
     def test_committed_panel(self):

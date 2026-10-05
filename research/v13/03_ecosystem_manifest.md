@@ -62,6 +62,13 @@ Status vocabulary (closed set, SHARED_STATE §17 plus two the task adds):
    `anthropics/claude-plugins-official`) nor in the Claude connectors directory (the submission form was deprecated,
    `docs/registries/anthropic-claude-connectors-submission.md:3-4`). The Claude routes are emem's own plugin
    marketplace, `claude mcp add`, and a custom connector. LIVE + SPEC.
+   *Update, 5 Oct 2026.* The authors' listing screenshot of 4 Oct (issue #58,
+   `evidence/listings/claude.png`) shows the plugin in the Claude apps' Anthropic Directory: "emem · from Anthropic
+   Directory · 2.4.2 · 19 skills", with the emem connector. Claude Code's catalogue,
+   `anthropics/claude-plugins-official`, still lists 315 plugins and none is emem (re-fetched 2026-10-05T05:53Z,
+   `evidence/ecosystem/cpo_market_2026-10-05.json`). The manifest row `claude-connectors-directory` now records the
+   directory listing (REGISTRY); points 4 and 5 above are as of 1 Oct. The ChatGPT listing of point 4 was confirmed
+   by the authors' screenshot of 4 Oct (`evidence/listings/chatgpt.png`).
 6. **Registries list emem; most are behind the server.** Official MCP Registry and GitHub MCP Registry: 2.4.2,
    `isLatest: true`. Dify: 2.4.0 with 16 tools. Glama: graded A on a 16-tool scan of 2026-09-09. Smithery: 16 tools,
    behind a gateway that needs a Smithery token. npm SDK: 2.4.0. Hugging Face Space: runs emem 1.1.0. One server,

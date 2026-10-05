@@ -264,7 +264,9 @@
         "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read that caught a wrong pixel which hashing, signatures, logs and recomputation preserved (panel 6).",
         "EO evidence that travels between agents, checked by the receiver down to the source pixel.",
         "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 6).",
-        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 5)."
+        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 5).",
+        "CONTRIBUTION",
+        "Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to single EO observations, and its records name the source file and sampled point, so a receiver can re-read the pixel. That re-read caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5)."
       ],
       "status": "SPEC",
       "layer": "L0-L3",
@@ -277,7 +279,7 @@
       "date": "2026-10-02",
       "value": null,
       "check": null,
-      "note": "Invention taxonomy: contribution = physical-observation evidence handoff with receiver checks; standard enablers = BLAKE3, Ed25519, canonical CBOR, Merkle logs and content addressing; complementary = RAG, STAC, openEO, PROV, C2PA, generic provenance, temporal databases/event sourcing, generic agent memory and EO-agent orchestration. No priority/first-in-world claim.",
+      "note": "Invention taxonomy: contribution = physical-observation evidence handoff with receiver checks; standard enablers = BLAKE3, Ed25519, canonical CBOR, Merkle logs and content addressing; complementary = RAG, STAC, openEO, PROV, C2PA, generic provenance, temporal databases/event sourcing, generic agent memory and EO-agent orchestration. No priority/first-in-world claim. 5 Oct 2026: label 'CONTRIBUTION' (standard section name); the caption no longer says emem adds a source re-read: emem's verifier recomputes the receipt digest and checks Ed25519 (emem-verify-core.js), and the re-read is the receiver's check, which emem records make possible by naming the source file, sampled point and derivation (panel 4). 'binding' added to match panel 5's chips.",
       "tier": "30cm",
       "checked": true
     }

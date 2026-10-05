@@ -223,7 +223,7 @@ ${table(['depth', ...r1levels], [['acted on corrupted evidence', ...r1levels.map
 <p>R5 puts language-model receivers in Agent B's seat and hands them the same corruptions in seven representations, from prose to an EMEM token behind a fail-closed resolver. The design is on <a href="../methods/#r5">READ THE METHODS</a>.</p>
 ${R5_FINAL ? `<pre><code>python research/repro/v13/r5/analyze.py     # re-scores trials.jsonl and rewrites results.json and results.md</code></pre>
 <p>${int(R5.n_trials_scored)} scored trials (${int(R5.n_pilot)} pilot trials and ${int(R5.n_excluded)} rows with no model output are excluded by the rules in the pre-registration), ${R5.dates.first_trial_utc.slice(0, 10)} ${R5.dates.first_trial_utc.slice(11, 16)} to ${R5.dates.last_trial_utc.slice(11, 16)} UTC. Pre-registration BLAKE3 <code>${R5.prereg_blake3.slice(0, 16)}…</code>, hashed at ${R5.dates.prereg_hashed_utc.slice(11, 16)} UTC before trial 1. Receivers: three Claude models (pooled) and one open-weight 7B model (apart); the model identifiers are in <a href="${blob('research/repro/v13/r5/results.md')}">results.md</a>.</p>
-${table(['false acceptance, 3 Claude models pooled', 'A prose', 'B JSON', 'C retrieved text', 'D opaque id', 'E0 token, no instruction', 'E token, instructed check', 'E+ token, fail-closed'],
+${table(['false acceptance, 3 Claude models pooled', 'A prose', 'B JSON', 'C retrieved text (BM25)', 'D opaque id', 'E0 token, no instruction', 'E token, instructed check', 'E+ token, fail-closed'],
   [['agents (k/n)', ...['A', 'B', 'C', 'D', 'E0', 'E', 'E+'].map((c) => kn(R5.primary[c].pooled_claude.false_accept))],
    ['deterministic ceiling', ...['A', 'B', 'C', 'D', 'E0', 'E', 'E+'].map((c) => kn(R5.primary[c].ceiling.false_accept))]])}
 <p class="note">Re-running the agents themselves costs money and time (USD ${fmt(R5.total_cost_usd_all_blocks, 2)} for every block including the pilot and re-runs): <code>run_claude.py</code> and <code>run_open.py</code> in <a href="${tree('research/repro/v13/r5')}">research/repro/v13/r5/</a> take the plan files there; <code>relay_server.py</code> is the adversary; every tool call is in <code>raw/</code>. Source: ${src(R5_FILE)} (${gitDate(R5_FILE)}).</p>` : `<p class="slot"><b>R5 RESULTS</b><br>R5 is being run now. Its pre-registration, scripts, raw trials and the one command to re-run them will appear in <a href="${tree('research/repro/v13/r5')}">research/repro/v13/r5/</a>. Until they are committed on <code>main</code>, that link shows "not found".</p>`}
@@ -284,15 +284,14 @@ const threats = [
   ['T6 receiver failure', 'a verifier bug, a model that skips the check, a tool that fails open', 'outside the protocol; independent verifier code and fail-closed tools'],
 ];
 const prior = [
-  ['STAC 1.1.0 / STAC API 1.0.0', 'What data exists, and where?', 'an asset (file) in an Item', 'the record names the STAC asset; it could copy <code>file:checksum</code> into its source hash'],
+  ['STAC 1.1.0 / STAC API 1.0.0', 'What data exists, and where?', 'an asset (file) in an Item', 'the record names the STAC asset (the items emem reads are STAC 1.0.0); it could copy <code>file:checksum</code> into its source hash'],
   ['openEO API 1.3.0', 'Compute this on that data.', 'a process graph or batch job', 'a process graph can be the recipe the record names'],
   ['W3C PROV-O / PROV-DM (2013)', 'How was this made?', 'entity, activity, agent', 'the derivation fields map to PROV terms'],
   ['C2PA 2.4', 'Who made or edited this file?', 'a media asset and its manifest', 'a rendered map could carry a manifest with the fact name (planned, not built)'],
   ['CDSE Traceability', 'Is this product the one ESA published?', 'a product zip', 'an upstream identity the record could name (not done today)'],
   ['RAG (Lewis et al. 2020)', 'Which context is relevant?', 'a text chunk', 'retrieval can return tokens instead of paraphrases'],
-  ['MCP (2026-07-28)', 'How does an agent call a tool?', 'a tool call', 'EMEM is an MCP server; its token is a checkable handle'],
+  ['MCP (2026-07-28)', 'How does an agent call a tool?', 'a tool call', 'EMEM is an MCP server (it serves protocol version 2025-11-25); its token is a checkable handle'],
   ['A2A 1.0', 'Who is this agent?', 'an Agent Card, a task artifact', 'tokens travel inside artifact parts'],
-  ['GeoGuard (2026)', 'Is this claim supported?', 'an atomic claim in text', 'its tools could return EMEM facts, so the evidence is re-checkable'],
   ['Sigstore, in-toto, SLSA 1.2', 'Who built and signed this artifact?', 'a software artifact digest', 'the same pattern, applied to observations'],
   ['RFC 6962 / 9162; SCITT RFC 9943', 'Was this logged, append-only?', 'a log entry', 'the EMEM log is RFC 6962-style with BLAKE3'],
   ['IPFS CID / multiformats', 'Which bytes?', 'bytes', 'EMEM exposes a CIDv1 with a BLAKE3 multihash'],
@@ -314,7 +313,6 @@ const refs = [
   ['Lewis et al. 2020, Retrieval-augmented generation for knowledge-intensive NLP tasks', 'https://arxiv.org/abs/2005.11401'],
   ['Model Context Protocol, specification versioning', 'https://modelcontextprotocol.io/specification/versioning'],
   ['A2A protocol specification', 'https://a2a-protocol.org/latest/specification/'],
-  ['GeoGuard', 'https://github.com/NASA-IMPACT/geoguard'],
   ['Sigstore overview', 'https://docs.sigstore.dev/about/overview/'],
   ['in-toto attestation statement v1', 'https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md'],
   ['SLSA specification', 'https://slsa.dev/spec/'],
@@ -410,7 +408,7 @@ ${table(['operation', '#n', '#median', 'IQR', 'unit'], costRows)}
 
 <h2 id="prior">9 · Prior art: what each layer answers</h2>
 <p><a href="../questions/">Short reviewer answers with evidence</a></p>
-<p>Adjacent systems find files, run workflows, record lineage, sign files, retrieve context, carry calls and judge claims. EMEM names the one observation an agent cited and lets the next agent re-check it. It relies on those layers and replaces none.</p>
+<p>Adjacent systems find files, run workflows, record lineage, sign files, retrieve context and carry calls. EMEM names the one observation an agent cited and lets the next agent re-check it. It works alongside those layers and replaces none.</p>
 ${table(['system', 'question it answers', 'unit it identifies', 'where EMEM sits'], prior)}
 <p class="note">Source: ${src('research/v13/04_prior_art_and_field.md')} §1.3 (versions as checked on 2026-10-01).</p>
 
@@ -463,12 +461,11 @@ const how = (r) => { const t = (r.print && r.print.text) || ''; const i = t.inde
 const item = (r) => {
   const mark = r.id === 'github-repo' ? GHMARK : '';
   const line = how(r);
-  const board = ''; // Print placement is an editorial decision, not a user-facing capability.
   return `<li class="int" id="${esc(r.id)}">
 <p><span class="chip ${r.status.replace(' ', '')}">${esc(r.status)}</span> <b>${mark}${esc(r.platform)}</b></p>
 ${line ? `<pre><code>${esc(line)}</code></pre>` : ''}<p class="note"><a href="${esc(r.url)}">${esc(r.url.replace(/^https:\/\//, '').slice(0, 90))}${r.url.length > 98 ? '…' : ''}</a></p>
 <p>${esc(r.user_can)}.</p>
-<p class="note">Evidence: ${esc(r.evidence_level)}. Checked ${esc(r.verified_utc)}. ${esc(board)}.</p>
+<p class="note">Evidence: ${esc(r.evidence_level)}. Checked ${esc(r.verified_utc)}.</p>
 ${r.caveats && r.caveats.length ? `<details><summary>Caveats (${r.caveats.length})</summary><ul>${r.caveats.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></details>` : ''}
 </li>`;
 };
@@ -485,7 +482,7 @@ const prompt = `Resolve this emem token. Return its exact value_verbatim, band, 
 ${TOKEN}`;
 const connectCards = [
   ['ChatGPT', `${link('chatgpt', 'Open the emem plugin')} and enable it. Mention <b>@emem</b>, then paste the example below.`, 'The connected plugin exposes emem_memory_token_resolve.'],
-  ['Claude', `Add the MCP server in Claude.ai, or install the Claude Code plugin with its procedures. ${link('claude-code-plugin', 'Plugin instructions')}.`, `<pre><code>/plugin marketplace add Vortx-AI/emem
+  ['Claude', `In the Claude apps, enable the emem plugin from the Directory, or add <code>https://emem.dev/mcp</code> as a custom connector. In Claude Code, install the plugin from emem's marketplace. ${link('claude-code-plugin', 'Plugin instructions')}.`, `<pre><code>/plugin marketplace add Vortx-AI/emem
 /plugin install emem@emem</code></pre><p>Direct MCP setup:</p><pre><code>claude mcp add --transport http emem https://emem.dev/mcp</code></pre>`],
   ['Visual Studio Code', `${link('vscode', 'Install the MCP integration')} for Copilot agent mode, or search <code>@mcp emem</code> in the MCP gallery.`, `<pre><code>code --add-mcp '{"name":"emem","type":"http","url":"https://emem.dev/mcp"}'</code></pre>`],
   ['Dify', `${link('dify-marketplace', 'Install the Marketplace plugin')}, then import a workflow template.`, `<ul><li>${link('dify-template-lite', 'Referent Lock Lite')}</li><li>${link('dify-template-full', 'Referent Lock Full')}</li><li>${link('dify-template-eudr', 'EUDR Evidence Studio')}</li></ul><p class="note">The EUDR template is an evidence pre-screen; it does not itself establish legal compliance.</p>`],
@@ -519,7 +516,7 @@ ${table(['Compare', 'Expected from the saved record'], [
  ['Checks', 'Re-hash the canonical record; bind its place, band and time; verify the receipt or batch under the expected key. A source re-read is a further check.'],
 ])}
 <p><b>Success means:</b> the next agent recovers the same record and exact value, preserves the citation and reports the checks it performed. Asking for a new “latest” observation is a different task. If a tool call fails, report that failure; the <a href="../demo/">saved offline demo</a> still lets you inspect and verify the example.</p>
-<details><summary>What was checked in this round?</summary><p>The public ChatGPT emem listing (Developer Vortx.ai), Dify plugin and three templates, GitHub MCP, MuleSoft Exchange and ClawHub pages returned HTTP 200 on 2 October 2026. ChatGPT's plugin and resolve tool are also connected in this workspace; two resolve attempts returned a connector-level “Unexpected response type” error. They are not counted as successful agent runs. VS Code configuration and the Claude plugin install commands were checked against the source. No new VS Code, Claude, Dify or MuleSoft host execution is claimed. ${src('research/v13/evidence/community/listing_checks.json', 'Link checks')} · ${src('research/v13/evidence/community/chatgpt_plugin_check.json', 'Connected plugin check')}.</p></details>
+<details><summary>What was checked?</summary><p>The public ChatGPT emem listing (Developer Vortx.ai), Dify plugin and three templates, GitHub MCP, MuleSoft Exchange and ClawHub pages returned HTTP 200 on 2 October 2026. The Anthropic Directory listing in the Claude apps is documented by the authors' screenshot of 4 October 2026. ChatGPT's plugin and resolve tool are also connected in the authors' workspace; two resolve attempts returned a connector-level “Unexpected response type” error. They are not counted as successful agent runs. In Claude Code, the plugin installed and the MCP server connected on 30 September 2026; VS Code configuration was checked against the source. No agent run in VS Code, Claude, Dify or MuleSoft is claimed. ${src('research/v13/evidence/community/listing_checks.json', 'Link checks')} · ${src('research/v13/evidence/community/chatgpt_plugin_check.json', 'Connected plugin check')}.</p></details>
 <h2>3 · Build with the same reference</h2>
 ${table(['Route', 'Start here'], [
  ['MCP', '<code>https://emem.dev/mcp</code>'],
@@ -562,7 +559,7 @@ w('questions/index.html', page('questions', 'Conference questions · EMEM', 'Sho
 <h1>What does this result establish?</h1>
 <p class="lead">EMEM preserves the cited observation across an agent handoff and gives the receiver concrete checks. These short answers connect the contribution, comparisons and limitations to their evidence.</p>
 <p><a class="btn" href="../demo/">Try the 12-second demonstration</a> · <a href="../methods/#prior">Compare the layers</a> · <a href="../use/">Connect your tool</a></p>
-<p><b>The quick comparison:</b> STAC finds assets. C2PA carries media provenance. GeoGuard checks claims against external evidence. EMEM carries the addressable observation an agent cited. The approaches can be composed; composition is not claimed as an experiment here.</p>
+<p><b>The quick comparison:</b> STAC finds assets. C2PA carries media provenance. EMEM carries the addressable observation an agent cited. The approaches can be composed; composition is not claimed as an experiment here.</p>
 ${QA.questions.map((q,i)=>`<section id="q${i+1}"><h2>${esc(q.question)}</h2><p>${esc(q.answer)}</p><p class="note">${esc(q.status)} · ${q.sources.map(s=>`<a href="${esc(s.url)}">${esc(s.label)}</a>`).join(' · ')}</p></section>`).join('')}
 <p class="note">Evidence reviewed ${esc(QA.date)}. ${src('research/v13/20_CONFERENCE_QUESTIONS.md','Printable rehearsal text')}.</p>`));
 
