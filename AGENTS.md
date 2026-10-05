@@ -27,9 +27,11 @@ python research/repro/v11/mutation_suite.py   # R1 alone, offline
 ```
 
 Edit `poster/src/poster.v13.html` and `poster/src/poster.v13.css` (never `poster/poster.html`, which is generated).
-`docs/` is deployed to GitHub Pages as committed. Its pages were edited by hand in v13.10; `tools/site/site.mjs` predates
-those edits (it still says 24 corruptions), so do not regenerate `docs/` with it before porting them. Visitor pages state
-results, not revision history.
+`docs/` is deployed to GitHub Pages as committed. Its pages are generated: `node tools/site/site.mjs . docs` writes the
+landing, /t/, /r/, /test/, /methods/, /use/ and /questions/ (from the claims sources, the ecosystem manifest and
+`research/v13/conference_questions.json`), and `tools/site/build.mjs` the demo; the v13.10 hand edits were ported on
+5 Oct 2026, so edit the generator, not the pages. Check the pages with build_site.py's gates (no model identifier, no
+dash, links resolve). Visitor pages state results, not revision history.
 The printed face uses three QR tasks (Try it, Inspect, Connect & Reproduce); all six web routes remain. Connect opens /use/, which links the methods and tests.
 Colours: `poster/src/tokens.json`. The `brand` orange marks the emem identity (the wordmark's dash, the tagline's "decode with AI.") on the navy header only, never data: `harm`, a near hue, means corrupted evidence. The wordmark's dash is drawn in CSS because the face bans the em dash character. Banned-word allowlist (bound to sentences by BLAKE3): `poster/src/poster.v13.allowlist.json`.
 Deliberate departures from the brief's block rectangles, each with its reason: `poster/src/poster.v13.layout.json`.

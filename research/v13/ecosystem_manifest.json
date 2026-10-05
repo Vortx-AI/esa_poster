@@ -24,7 +24,7 @@
   ],
   "user_can": "Enable the emem plugin in ChatGPT and pass an emem:fact token to its resolve tool",
   "caveats": [
-   "The plugin is connected and its resolve tool is exposed. In our check on 4 Oct 2026, resolve calls returned 'Unexpected response type'; no successful resolve through ChatGPT is reported here.",
+   "The plugin is connected and its resolve tool is exposed. In our check on 2 Oct 2026, resolve calls returned 'Unexpected response type'; no successful resolve through ChatGPT is reported here.",
    "The listing shows plugin version 1.3.0, the directory's own version number, not the emem server version."
   ],
   "print": {
@@ -218,7 +218,7 @@
   ],
   "user_can": "Paste the MCP URL as a custom connector (no key)",
   "caveats": [
-   "Not exercised in claude.ai for this page.",
+   "Not exercised in claude.ai in this study.",
    "Enterprise organisations may block connectors that are not in the directory (emem docs/mcp-directory.md)."
   ],
   "print": {
@@ -262,7 +262,7 @@
   ],
   "user_can": "Find emem in the Directory in the Claude apps and enable the plugin; it brings 19 skills and the emem connector",
   "caveats": [
-   "Seen in the authors' screenshot of 4 Oct 2026, with the plugin enabled; no tool call through it was run for this page.",
+   "Seen in the authors' screenshot of 4 Oct 2026, with the plugin enabled; no tool call through it was run in this study.",
    "Claude Code reads a different catalogue, Anthropic's plugin marketplace on GitHub, which does not list emem (315 plugins on 5 Oct 2026). In Claude Code, add emem's own marketplace or the MCP server (Agent hosts, above)."
   ],
   "print": {
@@ -418,7 +418,7 @@
   ],
   "user_can": "One-click install from a link, or search @mcp emem in the Extensions view",
   "caveats": [
-   "Install not run for this page (no VS Code in the test environment)."
+   "Install not run in this study."
   ],
   "print": {
    "allowed": true,
@@ -467,7 +467,7 @@
   ],
   "user_can": "One-click install in Cursor, or paste the JSON",
   "caveats": [
-   "Install not run for this page (no Cursor in the test environment)."
+   "Install not run in this study."
   ],
   "print": {
    "allowed": true,
@@ -548,7 +548,7 @@
   "user_can": "Connect any MCP client with no account or key; call the 18 listed tools, and any of 114 by name",
   "caveats": [
    "server.json x-emem.directoryCompliance says the /mcp page is 'about 64 KB'; measured 77,038 bytes (README says ~75 KB). Under the 102,400-byte AWS ceiling that scripts/mcp_host_compat.py asserts.",
-   "Read tools sign and store records on call; not exercised here."
+   "Read tools sign and store records on call; not exercised in this study."
   ],
   "print": {
    "allowed": true,
@@ -639,7 +639,7 @@
   ],
   "user_can": "Discover emem as an A2A agent, verify its card offline, send a task and verify the signed artifact",
   "caveats": [
-   "message/send was not re-run for this page: it creates a signed task artifact on the server.",
+   "message/send was not re-run in this study: it creates a signed task artifact on the server.",
    "Card integrity is self-consistency with emem.dev's own keys (cryptographic trust); it is not a third-party attestation of the operator (source trust)."
   ],
   "print": {
@@ -1131,8 +1131,8 @@
   ],
   "user_can": "Self-host a responder with its own key; receipts minted elsewhere verify locally",
   "caveats": [
-   "Not run for this page (no Docker daemon in the test environment). The amd64 image is 865 MB compressed.",
-   "The link is GHCR's conventional package page; it was not fetched for this page."
+   "Not run in this study. The amd64 image is 865 MB compressed.",
+   "The link is GHCR's conventional package page; it was not fetched in this study."
   ],
   "print": {
    "allowed": true,
@@ -1571,23 +1571,25 @@
   "id": "clawhub",
   "poster_group": "PROTOCOL/DISCOVERY SURFACES",
   "role": "directory",
-  "platform": "ClawHub",
-  "mechanism": "emem skill listing by avijeetsingh1",
-  "url": "https://clawhub.ai/avijeetsingh1/emem",
+  "platform": "ClawHub: OpenClaw plugin @vortx-ai/openclaw-emem",
+  "mechanism": "OpenClaw plugin listing by Vortx AI (@vortx-ai): openclaw plugins install clawhub:@vortx-ai/openclaw-emem",
+  "url": "https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/evidence/listings/clawhub.png",
   "status": "REGISTRY",
   "evidence_level": "PRIMARY DIRECTORY PAGE",
   "evidence": [
-   "2026-10-02 HTTP 200, title emem — ClawHub; archived page text.",
-   "LIVE: listing screenshot supplied by the authors in issue #58 on 2026-10-04, committed as research/v13/evidence/listings/clawhub.png; printed as a cropped tile at 300 ppi or more",
+   "LIVE (screenshot supplied by the authors in issue #58, 4 Oct 2026; research/v13/evidence/listings/clawhub.png): plugin listing 'emem' by Vortx AI @vortx-ai, install command 'openclaw plugins install clawhub:@vortx-ai/openclaw-emem'",
+   "2026-10-02 HTTP 200, title emem — ClawHub (https://clawhub.ai/avijeetsingh1/emem, a separate emem skill listing); archived page text.",
    "PRINT: the card quotes the listing's own words, verbatim from research/v13/evidence/listings/ (screenshot kept as evidence, not printed)"
   ],
-  "user_can": "Open the emem skill listing on ClawHub",
+  "user_can": "Install the emem plugin in OpenClaw with the command above",
   "caveats": [
-   "Directory page inspected; skill installation was not exercised."
+   "Plugin listing seen in the authors' screenshot of 4 Oct 2026; installation was not run in this study.",
+   "A separate emem skill listing, https://clawhub.ai/avijeetsingh1/emem, answered HTTP 200 on 2 Oct 2026."
   ],
   "print": {
    "allowed": true,
-   "text": "ClawHub"
+   "text": "ClawHub: openclaw plugins install clawhub:@vortx-ai/openclaw-emem",
+   "note": "The board's card quotes the plugin listing (screenshot); the plugin page URL was not fetched (clawhub.ai is not reachable from the build environment), so the row links the screenshot."
   },
   "verified_utc": "2026-10-04T09:00Z",
   "brand": null,

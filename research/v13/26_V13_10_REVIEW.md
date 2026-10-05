@@ -629,3 +629,33 @@ moves to 5 Oct, the date of the newest evidence.
 
 Checks: both variants pass the 18 gates; 0 text overlaps, no broken hyphens or split numbers, the same 24 top-edge
 ascent boxes as the committed board (inside the gate's allowance), 14 unit tests pass, 42 routes with 27 printed.
+
+**Independent review of the visitor pages (same day).** A separate read-only review of the eight pages against the
+face found 24 items; each was checked against the files before any change.
+
+| Finding | Check | Change |
+|---|---|---|
+| The pages were hand-edited after tools/site built them, so the test page's rebuild command would revert them | the generator's output differed from docs/ by 2 to 34 changed lines on each page except the demo | every v13.10 hand edit ported into `tools/site/site.mjs` and `research/v13/conference_questions.json`; the pages are regenerated from them, and the demo already matched `tools/site/build.mjs` byte for byte; AGENTS.md updated |
+| The ChatGPT caveat dated the resolve attempts 4 Oct | `chatgpt_plugin_check.json`: checked 2026-10-02 | "2 Oct 2026" |
+| "No agent run in ... Claude ... is claimed" | R5 ran headless `claude -p` sessions (`claude_run.py`) | "No agent run through the Claude apps, VS Code, Dify or MuleSoft is claimed here; the R5 agent trials ran as headless Claude Code sessions" |
+| The bundle's nine checks listed "the log leaf" | `verify_bundle.py` checks the token's cell against the signed cell and has no separate leaf check | the list now matches the script |
+| ClawHub: the use page linked a skill by avijeetsingh1, the board's card quotes the Vortx AI OpenClaw plugin | `evidence/listings/clawhub.png`: `openclaw plugins install clawhub:@vortx-ai/openclaw-emem` | the row names and installs the plugin, links its screenshot (clawhub.ai is blocked here) and keeps the skill page as a caveat |
+| The record and token pages said the demo re-reads the pixel | the demo's default shows the saved source window; a live option re-reads | both pages say so |
+| "One full level-I check took 1.187 ms" beside a 0.357 ms median | 1.187 ms is the committed single run | the sentence says so and points to section 8 |
+| Drift terms "world, instrument, alignment, encoder and noise"; Q&A formula in u | panel 3: environment, sensor, geolocation, encoder, residual; the face uses u for uncertainty and the methods rename the ratio r | panel 3's terms; r |
+| "JSON and the opaque id caught about half" | 112 of 276 (41 %), 134 of 288 (47 %) | the counts |
+| "17 corruptions and one control"; R5 "the same corruptions" | R1: 16 in scope, M17 out of scope, G0; R5: 25 items | stated as such |
+| R1 and R5 letters collide on the test page; R5's deterministic row (23/23 ...) beside the face's R1 squares (15/15 ...) | different scales and item sets | one note on each page |
+| Authoring and dated words: "in-session subagents, no paid calls", "report 09/10" without links, "Recovered demonstrations from earlier posters", "v12" alt text, "today", "Fresh", "for this page", "current status", "Printable rehearsal text", "(apart)", "(2026-10-01 (UTC))" | | reworded; reports linked; "Further demonstrations"; "in this study" |
+| "EMEM" in running text, "emem" on the face | | "emem" in running text; titles keep "EMEM" |
+| "Every result on the poster comes from a script"; "Every number here is read by the build" | listing quotes rest on screenshots; some methods numbers are typed from files | "Every measured result"; "comes from the file named beside it" |
+| The landing and use pages offered MuleSoft as a host | the face lists MuleSoft Exchange under DISCOVERY | "or find emem on MuleSoft Exchange" |
+
+The site gates (`poster/build_site.py`) then caught "Claude Haiku 4.5" in the matched-baseline paragraph, a hand edit
+of 4 Oct: the pages leave model identifiers to results.md, so it reads "the smallest of the three Claude models". Three
+curly apostrophes from the same edit were missing from the subset web fonts; they are straight now, like the rest of the
+generator's text ("‖" on the record page is absent from IBM Plex itself). `research/v13/20_CONFERENCE_QUESTIONS.md`, which
+the Q&A page links, is regenerated from the same JSON. Not changed: the methods keep the emem commits of the tests they
+cite (provenance, not the face), and the use page's 5 Oct marketplace check stays, although the face's measurements end
+on 4 Oct. The site test still fails only where it needs emem.dev or Planetary Computer and on the demo's fold check: the
+demo's verdict board ends at 1,310 px on a 390 x 844 phone, below the first screen (the page is unchanged since 2 Oct).

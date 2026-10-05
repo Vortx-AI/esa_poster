@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-02",
+  "date": "2026-10-05",
   "questions": [
     {
       "question": "What is the contribution?",
-      "answer": "An observation-sized handoff unit: a lookup identity finds a record, a content address fixes the cited bytes, and the receiver can check binding, attestation and declared computation. EMEM combines established primitives for agent evidence handoffs. The poster makes no priority claim for hashing, signatures, memory or EO data.",
+      "answer": "An observation-sized handoff unit: a lookup identity finds a record, a content address fixes the cited bytes, and the receiver can check binding, attestation and declared computation, then re-read the source pixel the record names. emem combines established primitives for agent evidence handoffs. The poster makes no priority claim for hashing, signatures, memory or EO data.",
       "status": "SPEC / MEASURED",
       "sources": [
         {
@@ -18,7 +18,7 @@
     },
     {
       "question": "Why not STAC?",
-      "answer": "STAC catalogues spatiotemporal assets. EMEM names the particular observation read from an asset and carries that record between agents. A source asset can still be discovered through STAC. Binding its checksum into the EMEM record is a separate, unfinished improvement.",
+      "answer": "STAC catalogues spatiotemporal assets. emem names the particular observation read from an asset and carries that record between agents. A source asset can still be discovered through STAC. Binding its checksum into the emem record is a separate, unfinished improvement.",
       "status": "EXTERNAL / SPEC",
       "sources": [
         {
@@ -33,7 +33,7 @@
     },
     {
       "question": "Why not openEO or PROV-O?",
-      "answer": "openEO describes and executes EO processing; PROV-O represents entities, activities and agents in provenance. EMEM adds the addressable observation a receiving agent can recover and check. A process graph or provenance description can supply the derivation context; a complete mapping is not demonstrated here.",
+      "answer": "openEO describes and executes EO processing; PROV-O represents entities, activities and agents in provenance. emem adds the addressable observation a receiving agent can recover and check. A process graph or provenance description can supply the derivation context; a complete mapping is not demonstrated here.",
       "status": "EXTERNAL / INFERRED",
       "sources": [
         {
@@ -52,7 +52,7 @@
     },
     {
       "question": "Why not ordinary RAG?",
-      "answer": "RAG retrieves context for generation. A retrieved passage can still be paraphrased or used without checking the cited record. EMEM references can be returned by retrieval and then resolved and checked. The poster compares a specific retrieved-context baseline; it does not claim to outperform every RAG design.",
+      "answer": "RAG retrieves context for generation. A retrieved passage can still be paraphrased or used without checking the cited record. emem references can be returned by retrieval and then resolved and checked. The poster compares one BM25-based RAG baseline (top 3 of nine passages); it does not claim to outperform every RAG design.",
       "status": "EXTERNAL / MEASURED",
       "sources": [
         {
@@ -71,27 +71,12 @@
     },
     {
       "question": "Why not C2PA?",
-      "answer": "C2PA binds provenance assertions to media assets. EMEM addresses an observation record used in an agent handoff and exposes checks on that record. Both depend on trust in signers and source processes. A C2PA manifest linking a rendered map to EMEM facts is a possible composition, not a shipped result.",
+      "answer": "C2PA binds provenance assertions to media assets. emem addresses an observation record used in an agent handoff and exposes checks on that record. Both depend on trust in signers and source processes. A C2PA manifest linking a rendered map to emem facts is a possible composition, not a shipped result.",
       "status": "EXTERNAL / INFERRED",
       "sources": [
         {
           "label": "C2PA technical specification",
           "url": "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html"
-        },
-        {
-          "label": "Prior-art boundary",
-          "url": "https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/04_prior_art_and_field.md"
-        }
-      ]
-    },
-    {
-      "question": "Why not GeoGuard?",
-      "answer": "GeoGuard audits geographically grounded text by extracting claims, checking external evidence and reporting support or contradiction. EMEM preserves the identity of a cited observation across the handoff. These address different questions. Supplying EMEM references to a GeoGuard evidence tool is a proposed composition, not an integration measured here.",
-      "status": "EXTERNAL / INFERRED",
-      "sources": [
-        {
-          "label": "NASA-IMPACT GeoGuard",
-          "url": "https://github.com/NASA-IMPACT/geoguard"
         },
         {
           "label": "Prior-art boundary",
@@ -113,7 +98,7 @@
           "url": "https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v8/verify_bundle.py"
         },
         {
-          "label": "Fresh offline verification",
+          "label": "Offline verification",
           "url": "https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/evidence/community/recovery_checks.json"
         }
       ]
@@ -236,7 +221,7 @@
     },
     {
       "question": "Can a small drift score explain what changed?",
-      "answer": "The implemented anchor score normalises disagreement against an anchor and uncertainty: u = |x - a| / (3σ), s = u / (1 + u). It is not a causal attribution or probability. The decomposition into world, sensor, alignment and encoder terms motivates controlled interventions; fitting that split remains next work.",
+      "answer": "The implemented anchor score normalises disagreement against an anchor and uncertainty: r = |x - a| / (3σ), s = r / (1 + r). It is not a causal attribution or probability. The decomposition into environment, sensor, geolocation and encoder terms (poster panel 3) motivates controlled interventions; fitting that split remains future work.",
       "status": "SPEC / MEASURED / INFERRED",
       "sources": [
         {
