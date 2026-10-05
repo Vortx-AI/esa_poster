@@ -12,11 +12,11 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > An Earth observation that survives an agent handoff.
 
-> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. Where no observation exists, emem signs an absence and its reason, not a zero.
+> emem gives a sampled or derived observation a reusable reference. The next agent recovers its value, location, acquisition time and processing recipe, then checks the evidence. When a source confirms no data, emem signs an absence and its reason, not a zero.
 
 > Agent A cites a satellite observation. What can agent B check without trusting A or A’s model?
 
-> emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.
+> emem makes satellite observations, raw or derived, addressable by place, band and time. Each is a record named by the BLAKE3 hash of its bytes and signed in a batch. The exact evidence A cites survives a change of model and a handoff; B re-hashes it, verifies the log entry and receipt offline, and traces it to the source pixel. Observation writes require authorised keys; altering the cited bytes breaks the original content address.
 
 > A compact citation keeps the observation traceable across agents and time. Design goal: encode in orbit, decode with AI.
 
@@ -42,7 +42,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > We varied one Keylong NDVI by scene, date, place, pixel and arithmetic.
 
-> Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. Each of these seven needs a different check.
+> Six cross the constructed irrigation threshold; one lies outside the valid NDVI range. The seven are caught at different checking stages.
 
 ### 3 · Different drift, different check
 
@@ -80,7 +80,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > EO evidence that travels between agents, checked by the receiver down to the source pixel.
 
-> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to single EO observations, and its records name the source file and sampled point, so a receiver can re-read the pixel. That re-read caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5).
+> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to individual EO observations, and its records name the source file and sampled point, so a receiver can re-read the pixel. That re-read caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5).
 
 ### 4 · What exactly is handed over
 
@@ -144,7 +144,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > A signed trace binds the reported run
 
-> SAT-042 scripted pass · reference harness · 30 Sep 2026.
+> SAT-042 scripted pass · reference harness.
 
 > Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time.
 

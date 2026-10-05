@@ -30,7 +30,8 @@
         "Carry the reference onward.",
         "Canonical record + CID",
         "Hash · bind · sign · source",
-        "If one fails: refuse."
+        "If one fails: refuse.",
+        "Hash · binding · signature · source"
       ],
       "status": "SPEC",
       "layer": "L0-L3",

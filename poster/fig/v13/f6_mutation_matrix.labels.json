@@ -7,9 +7,9 @@
  "mode": "R5",
  "labels": [
   {
-   "text": "agent bars: three Claude models pooled, 1 Oct 2026",
+   "text": "agent bars: three Claude models pooled",
    "pt": 17,
-   "claim": "R5.dates"
+   "claim": "R5.models"
   },
   {
    "text": "B acted on corrupted evidence",
@@ -957,7 +957,7 @@
    "claim": "F6.cumulative"
   },
   {
-   "text": "Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic ceiling. Totals pool 23 to 25 items, 1 Oct 2026.",
+   "text": "Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic verifier. Totals pool 23 to 25 items.",
    "pt": 14,
    "claim": "R5.F6.scope"
   },

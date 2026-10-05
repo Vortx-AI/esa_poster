@@ -221,7 +221,7 @@ for (ya, yb) in ((cy - half, BY), (cy + half, BY + BW)):
 # ------------------------------------------------------------------ (c) what the receiver decides
 XC = 228.0
 T(XC, 3.2, "c", 17, weight=700, claim="F7.scope")
-T(XC + 4.6, 3.2, f"test rule: irrigate if NDVI ≤ {RULE}", 17, color=C["ink2"], claim="S.threshold")
+T(XC + 4.6, 3.2, f"constructed test: irrigate if NDVI ≤ {RULE}", 17, color=C["ink2"], claim="S.threshold")
 yy = 14.0
 box(XC, yy - 3.6, 7.2, 7.2, "none", ec=C["emem"], lw=1.4, r=0.01)
 x = runs(XC + 10.6, yy, [(f"{V_NAMED:.4f}: hold", dict(size=30, weight=700, claim="W.vals"))])
@@ -303,7 +303,7 @@ T(SC_W, ya + 9.4, f"median {E['median']:.3f} · p90 {E['p90']:.3f} · max {E['ma
 # ------------------------------------------------------------------ bottom-right: the real record and the scope
 XS = BX
 yr = BY + BW + 5.2
-runs(XS, yr, [("the real record ", dict(size=17, color=C["ink2"], claim="W.kx")),
+runs(XS, yr, [("archived signed error ", dict(size=17, color=C["ink2"], claim="W.kx")),
               (f"{KX_ID}…", dict(size=17, family=MONO, color=C["ink"], claim="W.kx")),
               ("\u00a0· 23 Sep 2026 · signed ", dict(size=17, color=C["ink2"], claim="W.kx")),
               (f"{prev['ndvi_round_pixel']:.4f}", dict(size=17, weight=700, color=C["harm_text"], claim="W.kx")),
@@ -313,10 +313,10 @@ n_ro = len(RO["lossyear"])
 ly_changed = sum(r["floor"] != r["round"] for r in RO["lossyear"])
 flag = lambda rule: {i for i, (l, g) in enumerate(zip(RO["lossyear"], RO["gfc2020"])) if g[rule] == 1 and l[rule] > 20}
 assert (n_ro, ly_changed) == (100, 7) and flag("floor") == flag("round"), "no EUDR flag changed"
-scope = (f"Sample: {N} records from emem.dev's public channel, one per cell, seeded ({pre['providers']['E84']} Element84, "
-         f"{pre['providers']['PC']} Planetary Computer), read with a rounded pixel position; GDAL floors it. With floor, "
-         f"{post['matches_round_not_floor']} of {post['n']} (Planetary Computer, two days; not a matched sample). On a {n_ro}-point "
-         f"Rondônia grid, rounding changed {ly_changed} loss years and no EUDR flag.")
+scope = (f"Sample: {N} archived records from emem.dev's public channel, one per cell, seeded ({pre['providers']['E84']} Element84, "
+         f"{pre['providers']['PC']} Planetary Computer), read with a rounded pixel position; GDAL floors it. "
+         f"After the fix: {post['matches_round_not_floor']} of {post['n']} carry a neighbour's values (Planetary Computer, two days; "
+         f"unmatched sample). On a {n_ro}-point Rondônia grid, rounding changed {ly_changed} loss years and no EUDR flag.")
 # 12 mm margin: Chromium sets Plex about 3 % wider than matplotlib measures it, and the slot clips at the figure edge
 lines = wrap(scope, W - XS - 12.0, 14)
 assert len(lines) <= 3, lines

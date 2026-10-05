@@ -22,7 +22,7 @@ steps = [
     ('Record', 'Canonical record + CID', 'Batch attestation'),
     ('Hand off', 'Pass the reference', 'MCP · REST · A2A'),
     ('Resolve', 'Retrieve the same record', 'Recover its provenance.'),
-    ('Check', 'Hash · bind · sign · source', 'Policy: refuse if one fails.'),
+    ('Check', 'Hash · binding · signature · source', 'Policy: refuse if one fails.'),
     ('Continue', 'Reason with cited evidence', 'Carry the reference onward.'),
 ]
 gap = 8

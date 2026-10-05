@@ -659,3 +659,56 @@ the Q&A page links, is regenerated from the same JSON. Not changed: the methods 
 cite (provenance, not the face), and the use page's 5 Oct marketplace check stays, although the face's measurements end
 on 4 Oct. The site test still fails only where it needs emem.dev or Planetary Computer and on the demo's fold check: the
 demo's verdict board ends at 1,310 px on a 390 x 844 phone, below the first screen (the page is unchanged since 2 Oct).
+
+## 27. Dates on the face, and the integration notes (5 Oct 2026)
+
+The authors asked whether the dates on the board are needed and whether this round added weak text. Dates on the
+face fall in two kinds. Data dates belong to what is shown and stay: the conference date; the observation's
+acquisition (Sentinel-2A L2A, 25 Sep 2026, panels 1 and 5); the record's own fields (tslot 25 Sep, captured, signed,
+panel 4); the variants' records in panel 2 (the town point's 30 Sep record, "30 Sep record handed as 25 Sep"); the real
+record of 23 Sep in panel 5; the Bengaluru signing and as-of dates in panel 8. Run dates said when a check or trial ran,
+and each repeated the footer's "Measurements: 29 Sep to 4 Oct 2026" (row K.dates), which stays as the one place that
+dates the runs. Removed: "(4 Oct)" in panel 1's ablation strip; "1 Oct 2026" and "4 Oct" in panel 1's scope; "· 30 SEP
+2026" on the full trace; "· 30 Sep 2026" on SAT-042's subtitle; "1 Oct 2026", twice, in panel 6 (header and scope, both
+variants). The rows keep every run date (extend_print entries in the v1310 additions); AGENTS.md now says panels print
+data dates, not run dates. Running text: 809 words (810 in 300of300).
+
+Weak text added this round, removed or reworded:
+- Panel 13 said "single EO observations", which reads as "only one"; it is "individual" now.
+- /use/ stated that Anthropic's Claude Code marketplace does not list emem (twice). Accurate, but it told visitors
+  where emem is absent instead of how to install it; the rows now give the routes, and the check stays in the manifest.
+- Most integration caveats were test bookkeeping ("not run in this study", "not fetched", "HTTP 200") or mismatches
+  inside emem's own docs. Visitor notes now carry only what helps someone install or use emem: the right package name,
+  the working command, the version or fix an example needs (the LangChain fix is spelled out instead of "needs the
+  fix"). The removed text moves to a `qa_notes` field in the manifest, which no page shows, so the research record
+  keeps it. The ChatGPT resolve result stays disclosed in "What was checked?".
+- Each of the 42 rows printed "Evidence: ... Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)". One line above
+  the list now gives the span (30 Sep to 4 Oct 2026, computed from the manifest) and what each status word means;
+  the expanders read "Notes" instead of "Caveats". The Hugging Face row no longer says "an old emem build".
+
+Not changed, because they are needed: the scope statements on the face (inherited source quality, the harness that has
+not flown, what the trace leaves trusted), the always-on token cost of the Claude Code plugin (an issue asked
+not to hide it), and the measurement window in the footer. Both variants pass the 18 gates; 0 overlaps; QR codes decode from
+both PDFs; site gates pass on the 8 pages; 14 unit tests pass.
+
+## 28. Sixth ChatGPT review (92e7b9e, 8.5/10): final copy pass (5 Oct 2026)
+
+Each correction was checked against emem's code (main 320a1d5) or the evidence files before it was applied.
+
+| Location | Before | Check | After |
+|---|---|---|---|
+| Header, subtitle | "Where no observation exists, emem signs an absence and its reason, not a zero." | emem signs `Fact::Absence` for confirmed no-data (outside a product's mask, no value after the publication window, every composite rejected by QC); a value not yet published returns an error, and a budget limit a skip (`sign_band_absence`, `MaterializeOutcome.skip_reason`) | "When a source confirms no data, emem signs an absence and its reason, not a zero." |
+| Header, lead | "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature." | a forged record under the forger's key matches its own signature (M13), and the wrong-pixel record is validly signed (panel 5); /v1/attest is closed to agents by default | "Observation writes require authorised keys; altering the cited bytes breaks the original content address." The allowlist entry for "cannot" goes with the old sentence. |
+| Workflow, Check | "Hash · bind · sign · source" | "sign" reads as the receiver signing | "Hash · binding · signature · source" (95.6 mm measured, 98.5 mm with Chromium's 3 %, in a 101.6 mm text width) |
+| Panel 5 | "With floor, 0 of 54 (...)"; the constructed test and the archived record not told apart | the 200 sampled records were signed 14 May to 27 Sep, before the 28 Sep fix; the 54 were signed 28 to 30 Sep and none matches the rounded pixel (`prevalence_summary.json` pre/post) | caption: "200 archived records ... After the fix: 0 of 54 carry a neighbour's values (Planetary Computer, two days; unmatched sample)"; c reads "constructed test: irrigate if NDVI ≤ 0.4705"; the 23 Sep record is introduced as "archived signed error" |
+
+Optional suggestions: panel 2's "Each of these seven needs a different check" overstated (binding catches both the place and the date
+change, metadata both the scene and the offset); it reads "The seven are caught at different checking stages." ("No single check
+catches all seven" hit the banned word "all"). "the deterministic ceiling" becomes "the deterministic verifier" in panel 6 (both
+variants) and on the test page. Not applied: "A standalone Python verifier" for "Without emem software, a 698-line script": the
+sentence already leads with independence, and the line count tells a reader the verifier is small enough to audit.
+
+Not changed: density (the review recommends locking; 14 pt is the floor, kicker and mechanism lines are 24 pt) and bleed (the
+header runs to the page edge and the PDF has none; the print shop must accept the exact A0 file for edge-to-edge output or ask for
+a bleed version). Both variants pass the 18 gates; running text 807 words (808); 0 overlaps; QR codes decode from both PDFs;
+fonts embedded; site gates pass on the 8 pages; 14 unit tests pass.

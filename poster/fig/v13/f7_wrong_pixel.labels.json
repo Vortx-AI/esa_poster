@@ -176,7 +176,7 @@
    "claim": "F7.scope"
   },
   {
-   "text": "test rule: irrigate if NDVI ≤ 0.4705",
+   "text": "constructed test: irrigate if NDVI ≤ 0.4705",
    "pt": 17,
    "claim": "S.threshold"
   },
@@ -301,7 +301,7 @@
    "claim": "W.err"
   },
   {
-   "text": "the real record ",
+   "text": "archived signed error ",
    "pt": 17,
    "claim": "W.kx"
   },
@@ -331,17 +331,17 @@
    "claim": "W.kx"
   },
   {
-   "text": "Sample: 200 records from emem.dev's public channel, one per cell, seeded (192 Element84, 8 Planetary Computer), read",
+   "text": "Sample: 200 archived records from emem.dev's public channel, one per cell, seeded (192 Element84, 8 Planetary",
    "pt": 14,
    "claim": "F7.scope"
   },
   {
-   "text": "with a rounded pixel position; GDAL floors it. With floor, 0 of 54 (Planetary Computer, two days; not a matched sample). On",
+   "text": "Computer), read with a rounded pixel position; GDAL floors it. After the fix: 0 of 54 carry a neighbour's values (Planetary",
    "pt": 14,
    "claim": "F7.scope"
   },
   {
-   "text": "a 100-point Rondônia grid, rounding changed 7 loss years and no EUDR flag.",
+   "text": "Computer, two days; unmatched sample). On a 100-point Rondônia grid, rounding changed 7 loss years and no EUDR flag.",
    "pt": 14,
    "claim": "F7.scope"
   }

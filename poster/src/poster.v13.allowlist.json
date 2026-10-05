@@ -362,14 +362,6 @@
       "reason": "Explicit NOT ESTABLISHED column of the record guarantee boundary."
     },
     {
-      "word": "cannot",
-      "text_sha": "d22fcfddbbb6a6049431b593f0f50377fbd7bdc4348910fd18b7b550b4538d17",
-      "sentence": "Agents cannot write observations, and a changed, rounded or forged value no longer matches its name or signature.",
-      "where": "html:header_text:body",
-      "evidence": "LEAD.answer",
-      "reason": "holds by default: /v1/attest is closed to agents (FACT PLANE IS CLOSED BY DEFAULT, lib.rs:33194 at 18adb67); caller derivatives are kept only after emem recomputes them"
-    },
-    {
       "word": "deployment-wording",
       "text_sha": "8a319bde59442cb43e37c0b34ea845d96cd904ea86271fc3a82048118abb5c3f",
       "sentence": "Design goal: encode in orbit, decode with AI.",

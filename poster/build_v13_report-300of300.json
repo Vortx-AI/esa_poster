@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-05T06:01:18+00:00",
+ "built_utc": "2026-10-05T07:27:30+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster-300of300.html",
@@ -36,7 +36,7 @@
    "file": "poster/fig/v13/f18_workflow.svg",
    "w_mm": 801.0,
    "h_mm": 49.0,
-   "mtime": "2026-10-04T12:35:41"
+   "mtime": "2026-10-05T07:24:31"
   },
   "f2_spine": {
    "state": "placed",
@@ -71,14 +71,14 @@
    "file": "poster/fig/v13/f7_wrong_pixel.svg",
    "w_mm": 396.0,
    "h_mm": 128.0,
-   "mtime": "2026-10-04T22:00:51"
+   "mtime": "2026-10-05T07:24:23"
   },
   "f6_mutation_matrix": {
    "state": "placed",
    "file": "poster/fig/v13/f6_mutation_matrix.300of300.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T22:03:50"
+   "mtime": "2026-10-05T07:24:35"
   },
   "f9_timeline": {
    "state": "placed",
@@ -109,7 +109,7 @@
    "mtime": "2026-10-05T05:59:12"
   }
  },
- "figure_text_tokens": 1681,
+ "figure_text_tokens": 1680,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -164,7 +164,7 @@
   "prose_and_banned_words": {
    "pass": true,
    "details": [
-    "no em/en dashes, tell words or unlisted banned words; 14 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
+    "no em/en dashes, tell words or unlisted banned words; 13 allowlisted uses, each bound by BLAKE3 to its sentence and a claims row"
    ]
   },
   "face_hygiene": {
@@ -237,10 +237,10 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 811 words containing a letter, 830 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
+    "running text: 808 words containing a letter, 825 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
     "  1 · Earth to agents: 109 tokens (section C: 109)",
     "  10 · Token family: 35 tokens (section C: 35)",
-    "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
+    "  11 · Satellite execution evidence: 54 tokens (section C: 54)",
     "  12 · Community routes: 6 tokens (section C: 6)",
     "  2 · One NDVI, eight values: 44 tokens (section C: 44)",
     "  3 · Different drift, different check: 41 tokens (section C: 41)",
@@ -252,7 +252,7 @@
     "  Complete observation and memory model: 39 tokens (section C: 41)",
     "  Contribution and prior art: 70 tokens (section C: 70)",
     "  Full trace: 32 tokens (section C: 34)",
-    "  Header: 162 tokens (section C: 163)",
+    "  Header: 160 tokens (section C: 161)",
     "  Memory operations: 31 tokens (section C: 31)"
    ]
   }
@@ -280,7 +280,7 @@
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
   "Across the 23 shared items, agents with an emem reference did not act on 276 of 276 corrupted handoffs (240 declined, 36 acted on the genuine value); with an opaque id, 122 of 276; in prose, 22 of 276.",
-  "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory run, 4 Oct, one trial each). Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver ( 2 of 25 when told to check): gate the action outside the model.",
+  "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory, one trial each). Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver ( 2 of 25 when told to check): gate the action outside the model.",
   "Reading the fields they carry, agents did not act on 112 of 276 corrupted JSON handoffs and 134 of 288 with an opaque id. On panel 5’s real record, read live, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
@@ -325,7 +325,7 @@
    "height": 639.0
   }
  ],
- "allowlist_used": 14,
+ "allowlist_used": 13,
  "allowlist_unused": [
   "Six cross the irrigation line, one is impossible, one is right; each wrong value",
   "Signatures prevented none; the record made each checkable at a named layer, exce",
@@ -550,7 +550,7 @@
   "X.only",
   "X.p123"
  ],
- "figure_numbers_checked": 320,
+ "figure_numbers_checked": 316,
  "rows_rechecked": 565,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
@@ -586,7 +586,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 811,
-  "running_tokens": 830
+  "running_words_with_letter": 808,
+  "running_tokens": 825
  }
 }

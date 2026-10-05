@@ -226,8 +226,8 @@ ${R5_FINAL ? `<pre><code>python research/repro/v13/r5/analyze.py     # re-scores
 <p>${int(R5.n_trials_scored)} scored trials (${int(R5.n_pilot)} pilot trials and ${int(R5.n_excluded)} rows with no model output are excluded by the rules in the pre-registration), ${R5.dates.first_trial_utc.slice(0, 10)} ${R5.dates.first_trial_utc.slice(11, 16)} to ${R5.dates.last_trial_utc.slice(11, 16)} UTC. Pre-registration BLAKE3 <code>${R5.prereg_blake3.slice(0, 16)}…</code>, hashed at ${R5.dates.prereg_hashed_utc.slice(11, 16)} UTC before trial 1. Receivers: three Claude models (pooled) and one open-weight 7B model (reported separately); the model identifiers are in <a href="${blob('research/repro/v13/r5/results.md')}">results.md</a>.</p>
 ${table(['false acceptance, 3 Claude models pooled', 'A prose', 'B JSON', 'C retrieved text (BM25)', 'D opaque id', 'E0 token, no instruction', 'E token, instructed check', 'E+ token, fail-closed'],
   [['agents (k/n)', ...['A', 'B', 'C', 'D', 'E0', 'E', 'E+'].map((c) => kn(R5.primary[c].pooled_claude.false_accept))],
-   ['deterministic ceiling', ...['A', 'B', 'C', 'D', 'E0', 'E', 'E+'].map((c) => kn(R5.primary[c].ceiling.false_accept))]])}
-<p class="note">The letters name R5's pre-registered conditions, not R1's depths above. The deterministic ceiling is on the same R5 items; the poster's panel 6 pairs the agent totals with R1's suite (15/15, 15/15, 13/16 and 0/16).</p>
+   ['deterministic verifier', ...['A', 'B', 'C', 'D', 'E0', 'E', 'E+'].map((c) => kn(R5.primary[c].ceiling.false_accept))]])}
+<p class="note">The letters name R5's pre-registered conditions, not R1's depths above. The deterministic verifier ran on the same R5 items; the poster's panel 6 pairs the agent totals with R1's suite (15/15, 15/15, 13/16 and 0/16).</p>
 <p class="note">Re-running the agents themselves costs money and time (USD ${fmt(R5.total_cost_usd_all_blocks, 2)} for every block including the pilot and re-runs): <code>run_claude.py</code> and <code>run_open.py</code> in <a href="${tree('research/repro/v13/r5')}">research/repro/v13/r5/</a> take the plan files there; <code>relay_server.py</code> is the adversary; every tool call is in <code>raw/</code>. Source: ${src(R5_FILE)} (${gitDate(R5_FILE)}).</p>` : `<p class="slot"><b>R5 RESULTS</b><br>R5 is being run now. Its pre-registration, scripts, raw trials and the one command to re-run them will appear in <a href="${tree('research/repro/v13/r5')}">research/repro/v13/r5/</a>. Until they are committed on <code>main</code>, that link shows "not found".</p>`}
 
 <h2 id="trace">The 15-link trace (live)</h2>
@@ -470,10 +470,12 @@ const item = (r) => {
 <p><span class="chip ${r.status.replace(' ', '')}">${esc(r.status)}</span> <b>${mark}${esc(r.platform)}</b></p>
 ${line ? `<pre><code>${esc(line)}</code></pre>` : ''}<p class="note"><a href="${esc(r.url)}">${esc(r.url.replace(/^https:\/\//, '').slice(0, 90))}${r.url.length > 98 ? '…' : ''}</a></p>
 <p>${esc(r.user_can)}.</p>
-<p class="note">Evidence: ${esc(r.evidence_level)}. Checked ${esc(r.verified_utc)}.</p>
-${r.caveats && r.caveats.length ? `<details><summary>Caveats (${r.caveats.length})</summary><ul>${r.caveats.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></details>` : ''}
+${r.caveats && r.caveats.length ? `<details><summary>Notes (${r.caveats.length})</summary><ul>${r.caveats.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></details>` : ''}
 </li>`;
 };
+const DAY = (iso) => { const d = new Date(iso.slice(0, 10) + 'T00:00:00Z'); return `${d.getUTCDate()} ${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const ECO_DAYS = ECO.map((r) => r.verified_utc.slice(0, 10)).sort();
+const ECO_SPAN = `${DAY(ECO_DAYS[0])} to ${DAY(ECO_DAYS[ECO_DAYS.length - 1])}`;
 const counts = Object.fromEntries(STATUS.map((s) => [s, ECO.filter((r) => r.status === s).length]));
 let xrt = '';
 if (XRT && XRT.summary) {
@@ -547,7 +549,7 @@ ${table(['Route', 'Start here'], [
 <p><a class="btn" href="../methods/">Read and reproduce the research</a> · <a href="${GH}">Poster source</a> · <a href="https://github.com/Vortx-AI/emem">Build or contribute to emem</a></p>
 ${xrt}
 <h2>Complete integration directory</h2>
-<p class="note">Plugins, connectors, packages, listings and repository examples have different setup paths. Expand a group for its source, its status when checked and compatibility notes. Framework adapters may require the versions or fixes documented there.</p>
+<p class="note">Plugins, connectors, packages, listings and repository examples have different setup paths. Statuses as checked from ${ECO_SPAN}: LIVE works today; PROTOCOL is an open surface emem serves; REGISTRY is a listing; EXAMPLE is example code; EXPERIMENTAL is unpublished or not yet working as documented. Framework adapters may need the versions or fixes noted under them. Evidence for every row: ${src(ECO_FILE)}.</p>
 ${GROUPS.map(([g,rs])=>{const rows=ECO.filter((r)=>rs.includes(r.role));return `<details><summary>${esc(g)} (${rows.length})</summary><ul class="ints">${rows.map(item).join('')}</ul></details>`}).join('')}
 <script>document.getElementById('copy-handoff').addEventListener('click',async()=>{const t=document.getElementById('handoff');try{await navigator.clipboard.writeText(t.value);document.getElementById('copy-status').textContent='Copied.';}catch{t.focus();t.select();document.getElementById('copy-status').textContent='Select and copy the highlighted prompt.';}});</script>`, {
   head: `<style>.setup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.setup{border:1px solid var(--rule);border-radius:10px;padding:16px;background:var(--card)}.setup h3{margin-top:0}.setup p{margin:8px 0}.setup pre{white-space:pre-wrap;overflow-wrap:anywhere}#handoff{width:100%;padding:12px;border:1px solid var(--rule);border-radius:8px;font:14px/1.5 var(--mono)}.ints{list-style:none;padding:0}.int{border-top:1px solid var(--rule);padding:12px 0}.int p{margin:0 0 6px}details{padding:10px 0;border-bottom:1px solid var(--rule)}summary{cursor:pointer;font-weight:600}details details{border:0}code{overflow-wrap:anywhere}</style>` }));

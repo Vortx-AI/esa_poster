@@ -1,60 +1,60 @@
 {
  "release": "v13.10",
  "date": "2026-10-05",
- "base_commit": "907661a37f8b5c07befc148785f6636486c7542c",
+ "base_commit": "b294cb782cfe19e057f2bc9225180124d6250c24",
  "research_review": "research/v13/26_V13_10_REVIEW.md",
  "artifacts": {
   "poster/emem-poster-A0.pdf": {
-   "bytes": 2409353,
-   "sha256": "a71d0ab589027ab43132a55896ba6f50c1db172faad88997fb5cc24290fedcde"
+   "bytes": 2409178,
+   "sha256": "6c85e0eac96398c929ed9ac141102c777d2a122eb8751cc01c60adc29dac61d2"
   },
   "poster/emem-poster-preview.png": {
-   "bytes": 4571121,
-   "sha256": "3fc0b34d85cf922044a76ee2265e31b6b5728165c21bc00ca5d0deb6fc5c9e82"
+   "bytes": 4563031,
+   "sha256": "992c6205485a2ba67b839153e24152c70dfb524a19cec0e874d60113a632b963"
   },
   "poster/emem-poster-A0-300dpi.png": {
-   "bytes": 16473919,
-   "sha256": "7a9bb8a90e12dc0f9e7a1181d72a044bd093ef825c6d08d553b0356e8cd75984"
+   "bytes": 16449856,
+   "sha256": "74d920079d6e7f7214dfde898e43bca36ec52477ec4543c5757aef6020adb3e1"
   },
   "poster/poster.html": {
-   "bytes": 3310530,
-   "sha256": "d6567752fc646bf76091c4b0eb6d1386974257b6f864931f47be4b4c00d03db1"
+   "bytes": 3310509,
+   "sha256": "e27e81edf9242c422fcc7175cd606ca87f6c7c2ae98b24e9c84785325188448e"
   },
   "poster/build_v13_report.json": {
-   "bytes": 26856,
-   "sha256": "f03d9cdd27136db59906246acaff7007570c773fa6003f9e44f234c28cab5b5e"
+   "bytes": 26833,
+   "sha256": "9fb79719f25552ca007d1ff18af665d8a8a68beaa9369ab2e4005d76bf5f2595"
   },
   "poster/src/poster.v13.html": {
-   "bytes": 24129,
-   "sha256": "725197c2bfcf63ef6170b762ed9f7f5ec8ce4a48655b8665cb2a3fc55c8b7e03"
+   "bytes": 24073,
+   "sha256": "169241db9dff549d3df469890fc7f6f6997595d6a8fbf3af6847c39167a58085"
   },
   "poster/src/poster.v13.css": {
    "bytes": 17192,
    "sha256": "a006a90e5de26fd48cd215e6269c0508877b163004f600538ab17c0a23cc44d3"
   },
   "poster/emem-poster-A0-300of300.pdf": {
-   "bytes": 2409380,
-   "sha256": "cb80c2ec1f49cab4d75437502d13abe8d1e066f26b21283018f6568d8107313c"
+   "bytes": 2409172,
+   "sha256": "5e7ba8f6b859305ee89f18843b63ade937bfcc297eb53539ab95edecb94de133"
   },
   "poster/emem-poster-preview-300of300.png": {
-   "bytes": 4578309,
-   "sha256": "2f65f116785af66b9fcf9b71f713e6b0bf02bb53d5ffc3901a81bb5d512a2b53"
+   "bytes": 4569900,
+   "sha256": "92d2e50fc764edd3c9f998acdf351a80e3d8900f3dcfee51f9d76f763deeb142"
   },
   "poster/emem-poster-A0-300dpi-300of300.png": {
-   "bytes": 16476529,
-   "sha256": "e9408ad860db4b8451db57fc80d97a88b09e12d2fe48d8bc14082557e7d05dcf"
+   "bytes": 16452176,
+   "sha256": "a62ca8fc958ab4a087fa096e1bfb2d470e9addff40d0010008f640d5e88e1edc"
   },
   "poster/poster-300of300.html": {
-   "bytes": 3310527,
-   "sha256": "37ed2403222cad0fe0469c57fe61d4eb0d232adc1d0ef8a92c218f4b59f38f40"
+   "bytes": 3310510,
+   "sha256": "44101067c0608ca8216572d610c95f3514c580c0df3f02e1ea2ac3012c105006"
   },
   "poster/build_v13_report-300of300.json": {
-   "bytes": 26977,
-   "sha256": "b8485e4c8b11d9732301c9923ac24be15aec38fcd36d9fde798c56adf0383aab"
+   "bytes": 26954,
+   "sha256": "470abf731cdfe453894dc3e200004b71d0f4575267346113f2774460cc8d06cf"
   }
  },
- "pdf_blake3": "648617bd12a2f9d4a08ab0a4020186e022a8bafcf1dca9a1702828d9090014f6",
- "pointer_body": "research/repro/v13/track/board_body_907661a.md",
+ "pdf_blake3": "159e06771c2dc3db990ee88df1dbaa41981033f6f230a8dc44bbef94b36478df",
+ "pointer_body": "research/repro/v13/track/board_body_b294cb7.md",
  "rows_rechecked": 565,
  "claims_printed": 180,
  "qr": [
@@ -71,8 +71,8 @@
   "top_text": 9.4,
   "bottom_text": 6.8
  },
- "pdf_blake3_300of300": "ca097c5206dcade9992952c30548baf787e982645349e32788ee345bcb208698",
- "pointer_body_300of300": "research/repro/v13/track/board_body_907661a-300of300.md",
+ "pdf_blake3_300of300": "bc18fa28aeaac80f58baf97adfb66a5bba4f909b86b781aa3df0c8e0120726fb",
+ "pointer_body_300of300": "research/repro/v13/track/board_body_b294cb7-300of300.md",
  "variants": {
   "0of300": "poster/emem-poster-A0.pdf: pre-registered false acceptance (recommended for print)",
   "300of300": "poster/emem-poster-A0-300of300.pdf: the same trials as 'did not act on', with the declined / genuine split"
@@ -126,8 +126,8 @@
  "byline": "no DOIs on the face (authors, 4 Oct 2026); panel 12 and the QR codes carry the routes",
  "scientific_wording": "research/v13/26_V13_10_REVIEW.md section 13",
  "running_words": {
-  "running_words_with_letter": 810,
-  "running_tokens": 829
+  "running_words_with_letter": 807,
+  "running_tokens": 824
  },
  "panel12": "client-path line moved to /use/ (research/v13/26_V13_10_REVIEW.md section 14)",
  "two_reviews": "research/v13/26_V13_10_REVIEW.md section 15",
@@ -140,5 +140,7 @@
  "fifth_review": "ChatGPT review of 4f6277d, 8.5/10; 'acted on the genuine value' replaces 'used the genuine record' (counts unchanged); score.py frozen, score_v2.py and a re-score of the 2,878 archived trials with no change (research/repro/v13/r5/scoring_notes.md); condition C labelled 'retrieved text (BM25)'; research/v13/26_V13_10_REVIEW.md section 23",
  "pre_print": "pre-print pass, 4 Oct 2026: face and visitor pages free of vague, status and revision-history wording; two clipped figure lines fixed and a figure-edge check added to no_overflow_or_clipping; QR codes decoded from the print PDFs at 300 dpi and degraded copies; PDF: A0, fonts embedded, images 305 to 600 ppi, RGB, no bleed; research/v13/26_V13_10_REVIEW.md section 24",
  "references": "footer credits only what the board shows and emem runs now (emem main 320a1d5): retired Prithvi and TESSERA, GeoGuard and unused references dropped, JRC GFC2020 V4, STAC 1.0, CBOR and IPFS added; panel 12 without the stale Hugging Face mirror; research/v13/26_V13_10_REVIEW.md section 25",
- "contribution": "5 Oct 2026: panel 13 'CONTRIBUTION' says emem applies content hashes, signed logs and provenance to single EO observations and names the source file and sampled point, so a receiver can re-read the pixel; the Claude listing in the Anthropic Directory recorded; /use/, methods and Q&A cleaned of print notes, GeoGuard and a stray ' .'; research/v13/26_V13_10_REVIEW.md section 26"
+ "contribution": "5 Oct 2026: panel 13 'CONTRIBUTION' says emem applies content hashes, signed logs and provenance to single EO observations and names the source file and sampled point, so a receiver can re-read the pixel; the Claude listing in the Anthropic Directory recorded; /use/, methods and Q&A cleaned of print notes, GeoGuard and a stray ' .'; research/v13/26_V13_10_REVIEW.md section 26",
+ "dates": "5 Oct 2026: run dates leave the panels (the footer's measurement window dates them once; data dates stay); /use/ notes say how to install or use emem, test bookkeeping moves to qa_notes; research/v13/26_V13_10_REVIEW.md section 27",
+ "sixth_review": "5 Oct 2026: final copy pass; header absence and write-authority sentences, workflow check stage, panel 5 constructed versus archived, panel 2 and 6 wording; research/v13/26_V13_10_REVIEW.md section 28"
 }
