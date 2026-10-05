@@ -1,10 +1,10 @@
-# Conference questions: EMEM v13.6
+# Conference questions: EMEM
 
-Evidence checked 2 October 2026. Short answers for the A0 poster, with scope and sources attached.
+Evidence checked 5 October 2026. Short answers for the A0 poster, with scope and sources attached.
 
 ## What is the contribution?
 
-An observation-sized handoff unit: a lookup identity finds a record, a content address fixes the cited bytes, and the receiver can check binding, attestation and declared computation. EMEM combines established primitives for agent evidence handoffs. The poster makes no priority claim for hashing, signatures, memory or EO data.
+An observation-sized handoff unit: a lookup identity finds a record, a content address fixes the cited bytes, and the receiver can check binding, attestation and declared computation, then re-read the source pixel the record names. EMEM combines established primitives for agent evidence handoffs. The poster makes no priority claim for hashing, signatures, memory or EO data.
 
 Status: SPEC / MEASURED.
 
@@ -28,7 +28,7 @@ Evidence: [openEO API](https://api.openeo.org/) · [W3C PROV-O](https://www.w3.o
 
 ## Why not ordinary RAG?
 
-RAG retrieves context for generation. A retrieved passage can still be paraphrased or used without checking the cited record. EMEM references can be returned by retrieval and then resolved and checked. The poster compares a specific retrieved-context baseline; it does not claim to outperform every RAG design.
+RAG retrieves context for generation. A retrieved passage can still be paraphrased or used without checking the cited record. EMEM references can be returned by retrieval and then resolved and checked. The poster compares one BM25-based RAG baseline (top 3 of nine passages); it does not claim to outperform every RAG design.
 
 Status: EXTERNAL / MEASURED.
 
@@ -42,21 +42,13 @@ Status: EXTERNAL / INFERRED.
 
 Evidence: [C2PA technical specification](https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html) · [Prior-art boundary](https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/04_prior_art_and_field.md).
 
-## Why not GeoGuard?
-
-GeoGuard audits geographically grounded text by extracting claims, checking external evidence and reporting support or contradiction. EMEM preserves the identity of a cited observation across the handoff. These address different questions. Supplying EMEM references to a GeoGuard evidence tool is a proposed composition, not an integration measured here.
-
-Status: EXTERNAL / INFERRED.
-
-Evidence: [NASA-IMPACT GeoGuard](https://github.com/NASA-IMPACT/geoguard) · [Prior-art boundary](https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/04_prior_art_and_field.md).
-
 ## What does a signature establish?
 
 A successful signature check binds an attestation to the expected public key and signed bytes. In this example the batch attestation covers the record address. The key must be selected by the receiver's trust policy; accepting any key supplied by a sender would not establish the intended source.
 
 Status: SPEC / MEASURED.
 
-Evidence: [Ed25519 specification](https://www.rfc-editor.org/rfc/rfc8032) · [Independent bundle verifier](https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v8/verify_bundle.py) · [Fresh offline verification](https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/evidence/community/recovery_checks.json).
+Evidence: [Ed25519 specification](https://www.rfc-editor.org/rfc/rfc8032) · [Independent bundle verifier](https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v8/verify_bundle.py) · [Offline verification](https://github.com/Vortx-AI/esa_poster/blob/main/research/v13/evidence/community/recovery_checks.json).
 
 ## What do the checks leave unestablished?
 
@@ -124,7 +116,7 @@ Evidence: [Two-clock memory example and tests](https://github.com/Vortx-AI/esa_p
 
 ## Can a small drift score explain what changed?
 
-The implemented anchor score normalises disagreement against an anchor and uncertainty: u = |x - a| / (3σ), s = u / (1 + u). It is not a causal attribution or probability. The decomposition into world, sensor, alignment and encoder terms motivates controlled interventions; fitting that split remains next work.
+The implemented anchor score normalises disagreement against an anchor and uncertainty: r = |x - a| / (3σ), s = r / (1 + r). It is not a causal attribution or probability. The decomposition into environment, sensor, geolocation and encoder terms (poster panel 3) motivates controlled interventions; fitting that split remains future work.
 
 Status: SPEC / MEASURED / INFERRED.
 

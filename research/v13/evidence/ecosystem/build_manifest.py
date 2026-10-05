@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Writes research/v13/ecosystem_manifest.json: one row per ecosystem surface.
 
+Superseded on 4 Oct 2026: the manifest has since been edited by hand (listing cards, the Claude directory row,
+visitor-facing caveats with print notes apart). Re-running this script reverts those edits; edit the manifest instead.
+
 Every row carries its evidence as obtained in the session of 2026-09-30T23:10Z..23:40Z
 (2026-10-01 01:10..01:40 CEST). Status vocabulary (closed set):
   LIVE          a user can do this today; we confirmed it end to end or at connection level

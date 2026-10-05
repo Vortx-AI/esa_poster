@@ -12,32 +12,33 @@
 <nav class="top" aria-label="site"><a href="../">EMEM poster</a><span>·</span><span>re-run the test</span></nav>
 
 <h1>Re-run the test</h1>
-<p class="lead">Every result on the poster comes from a script in the repository. Clone it once:</p>
+<p class="lead">Every measured result on the poster comes from a script in the repository. Clone it once:</p>
 <pre><code>git clone https://github.com/Vortx-AI/esa_poster
 cd esa_poster
 pip install blake3 cbor2 pynacl</code></pre>
 
 <h2 id="r1">R1 · The mutation suite (offline, deterministic)</h2>
 <pre><code>python research/repro/v11/mutation_suite.py</code></pre>
-<p>17 corruptions and one control, at 9 verification depths (A prose to I source re-read), on the real Keylong record. Rule: irrigate iff NDVI &lt;= 0.4705. No network; the whole suite took 0.0528 s in the committed run (2026-09-30). It rewrites <code>research/repro/v11/out/</code>; compare with the committed copy:</p>
+<p>16 in-scope corruptions, one out-of-scope entity case (M17) and one control, at 9 verification depths (A prose to I source re-read), on the real Keylong record. Rule: irrigate iff NDVI &lt;= 0.4705. No network; the whole suite took 0.0528 s in the committed run (2026-09-30). It rewrites <code>research/repro/v11/out/</code>; compare with the committed copy:</p>
 <div class="tw"><table class=" wide"><thead><tr><th>depth</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th></tr></thead><tbody><tr><th>acted on corrupted evidence</th><td class="n">15/15</td><td class="n">15/15</td><td class="n">13/16</td><td class="n">12/16</td><td class="n">9/16</td><td class="n">3/16</td><td class="n">2/16</td><td class="n">1/16</td><td class="n">0/16</td></tr></tbody></table></div>
 <p class="note">Source: <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v11/out/mutation_matrix.json"><code>research/repro/v11/out/mutation_matrix.json</code></a> and <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v11/out/summary.md">summary.md</a>. Folder: <a href="https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v11">research/repro/v11</a>.</p>
 
 <h2 id="r5">R5 · Agent-to-agent handoff with language-model receivers</h2>
-<p>R5 puts language-model receivers in Agent B's seat and hands them the same corruptions in seven representations, from prose to an EMEM token behind a fail-closed resolver. The design is on <a href="../methods/#r5">READ THE METHODS</a>.</p>
+<p>R5 puts language-model receivers in Agent B's seat and hands them 25 corruptions, R1's among them, in up to seven representations, from prose to an emem token behind a fail-closed resolver. The design is on <a href="../methods/#r5">READ THE METHODS</a>.</p>
 <pre><code>python research/repro/v13/r5/analyze.py     # re-scores trials.jsonl and rewrites results.json and results.md</code></pre>
-<p>2,794 scored trials (84 pilot trials and 771 rows with no model output are excluded by the rules in the pre-registration), 2026-10-01 05:29 to 09:41 UTC. Pre-registration BLAKE3 <code>ddef896fd4a102ae…</code>, hashed at 05:22 UTC before trial 1. Receivers: three Claude models (pooled) and one open-weight 7B model (apart); the model identifiers are in <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v13/r5/results.md">results.md</a>.</p>
+<p>2,794 scored trials (84 pilot trials and 771 rows with no model output are excluded by the rules in the pre-registration), 2026-10-01 05:29 to 09:41 UTC. Pre-registration BLAKE3 <code>ddef896fd4a102ae…</code>, hashed at 05:22 UTC before trial 1. Receivers: three Claude models (pooled) and one open-weight 7B model (reported separately); the model identifiers are in <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v13/r5/results.md">results.md</a>.</p>
 <div class="tw"><table class=" wide"><thead><tr><th>false acceptance, 3 Claude models pooled</th><th>A prose</th><th>B JSON</th><th>C retrieved text (BM25)</th><th>D opaque id</th><th>E0 token, no instruction</th><th>E token, instructed check</th><th>E+ token, fail-closed</th></tr></thead><tbody><tr><th>agents (k/n)</th><td class="n">254/276</td><td class="n">164/276</td><td class="n">220/276</td><td class="n">154/288</td><td class="n">2/300</td><td class="n">0/300</td><td class="n">0/300</td></tr><tr><th>deterministic ceiling</th><td class="n">23/23</td><td class="n">23/23</td><td class="n">23/23</td><td class="n">20/24</td><td class="n">0/25</td><td class="n">0/25</td><td class="n">0/25</td></tr></tbody></table></div>
+<p class="note">The letters name R5's pre-registered conditions, not R1's depths above. The deterministic ceiling is on the same R5 items; the poster's panel 6 pairs the agent totals with R1's suite (15/15, 15/15, 13/16 and 0/16).</p>
 <p class="note">Re-running the agents themselves costs money and time (USD 36.82 for every block including the pilot and re-runs): <code>run_claude.py</code> and <code>run_open.py</code> in <a href="https://github.com/Vortx-AI/esa_poster/tree/main/research/repro/v13/r5">research/repro/v13/r5/</a> take the plan files there; <code>relay_server.py</code> is the adversary; every tool call is in <code>raw/</code>. Source: <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v13/r5/results.json"><code>research/repro/v13/r5/results.json</code></a> (2026-10-01).</p>
 
 <h2 id="trace">The 15-link trace (live)</h2>
 <pre><code>python research/repro/v8/trace_fact.py --out=/tmp/trace</code></pre>
-<p>Walks the Keylong token from the token to the pixel and the signer's domain: resolve, re-hash, cell binding, recompute, STAC metadata, the COG pixel, the SCL class, the byte-range witness, receipts, the log entry, inclusion, consistency and the key's publication (links 1 to 15, plus 9b and 9c). It took 17.9 s in the committed run of 30 Sep 2026. A read-only variant took a median 14.9 s over 5 runs on 1 Oct 2026 (2026-10-01 (UTC)).</p>
+<p>Walks the Keylong token from the token to the pixel and the signer's domain: resolve, re-hash, cell binding, recompute, STAC metadata, the COG pixel, the SCL class, the byte-range witness, receipts, the log entry, inclusion, consistency and the key's publication (links 1 to 15, plus 9b and 9c). It took 17.9 s in the committed run of 30 Sep 2026. A read-only variant took a median 14.9 s over 5 runs on 2026-10-01 UTC.</p>
 <p class="note"><b>It calls live services.</b> Besides GETs, it sends POST <code>/v1/memory_token/resolve</code>, <code>/v1/range_hash</code> and <code>/v1/recall</code> to emem.dev; the last two sign and store records there. Add <code>--no-pixel</code> or <code>--no-log</code> to skip the slow links. Committed output: <a href="https://github.com/Vortx-AI/esa_poster/blob/main/research/repro/v8/trace_fact_output.txt">trace_fact_output.txt</a>.</p>
 
 <h2 id="bundle">The offline proof bundle (no network)</h2>
 <pre><code>python research/repro/v8/verify_bundle.py research/repro/v8/proof_bundle_ndvi.cbor</code></pre>
-<p>Nine checks on the 4,906-byte bundle: the record's hash, the batch root and its Ed25519 signature under the pinned key, the log leaf, inclusion under the signed head, the head's signature, the witness signature, its inclusion and its consistency with the head. Median 48.2 ms as a fresh process with networking removed (<code>unshare -rn</code>, n = 50, 2026-10-01 (UTC)), of which 44.4 ms is Python start-up.</p>
+<p>Nine checks on the 4,906-byte bundle: the record's hash, the token's cell against the signed cell, the batch root and its Ed25519 signature under the pinned key, inclusion under the signed head, the head's signature, the witness signature, its inclusion and its consistency with the head. Median 48.2 ms as a fresh process with networking removed (<code>unshare -rn</code>, n = 50, 2026-10-01 UTC), of which 44.4 ms is Python start-up.</p>
 
 <h2 id="site">These pages</h2>
 <pre><code>npm ci --prefix tools/site
@@ -46,7 +47,7 @@ python poster/build_site.py --test   # plus the headless phone test</code></pre>
 <p class="note">The demo's receiver runs in Node at build time and writes <a href="../demo/transcript.txt">transcript.txt</a>; the build fails if any verdict changes. Source: <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>.</p>
 <footer>
 <p>Jaya Kumari, Avijeet Singh · Vortx AI · Poster Session 1, Agentic AI for Earth Observation (ESA Φ-lab and BIFOLD), Berlin, 19 Oct 2026.</p>
-<p>These pages are static files built from the poster repository on 2026-10-04 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
+<p>These pages are static files built from the poster repository on 2026-10-05 by <a href="https://github.com/Vortx-AI/esa_poster/tree/main/tools/site">tools/site</a>. No account, no key, no tracking. They never write to emem.dev.</p>
 </footer>
 </main>
 </body>

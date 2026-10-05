@@ -80,7 +80,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > EO evidence that travels between agents, checked by the receiver down to the source pixel.
 
-> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem adds typed EO references and a source re-read, which caught a wrong pixel that hashing, signatures, logs and recomputation had passed (panel 5).
+> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to single EO observations, and its records name the source file and sampled point, so a receiver can re-read the pixel. That re-read caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5).
 
 ### 4 · What exactly is handed over
 

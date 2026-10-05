@@ -32,7 +32,7 @@
       "style": "italic"
     },
     {
-      "text": "Enable emem; paste a token.",
+      "text": "Enable emem; paste a token",
       "x": 4,
       "y": 31.6,
       "pt": 14,
@@ -84,7 +84,7 @@
       "style": "italic"
     },
     {
-      "text": "Resolve from chat or terminal.",
+      "text": "Resolve from chat or terminal",
       "x": 150,
       "y": 31.6,
       "pt": 14,
@@ -227,7 +227,7 @@
       "style": "italic"
     },
     {
-      "text": "Install the OpenClaw plugin.",
+      "text": "Install the OpenClaw plugin",
       "x": 588,
       "y": 31.6,
       "pt": 14,
