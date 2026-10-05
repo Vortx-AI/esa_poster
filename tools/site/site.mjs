@@ -470,10 +470,12 @@ const item = (r) => {
 <p><span class="chip ${r.status.replace(' ', '')}">${esc(r.status)}</span> <b>${mark}${esc(r.platform)}</b></p>
 ${line ? `<pre><code>${esc(line)}</code></pre>` : ''}<p class="note"><a href="${esc(r.url)}">${esc(r.url.replace(/^https:\/\//, '').slice(0, 90))}${r.url.length > 98 ? '…' : ''}</a></p>
 <p>${esc(r.user_can)}.</p>
-<p class="note">Evidence: ${esc(r.evidence_level)}. Checked ${esc(r.verified_utc)}.</p>
-${r.caveats && r.caveats.length ? `<details><summary>Caveats (${r.caveats.length})</summary><ul>${r.caveats.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></details>` : ''}
+${r.caveats && r.caveats.length ? `<details><summary>Notes (${r.caveats.length})</summary><ul>${r.caveats.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></details>` : ''}
 </li>`;
 };
+const DAY = (iso) => { const d = new Date(iso.slice(0, 10) + 'T00:00:00Z'); return `${d.getUTCDate()} ${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const ECO_DAYS = ECO.map((r) => r.verified_utc.slice(0, 10)).sort();
+const ECO_SPAN = `${DAY(ECO_DAYS[0])} to ${DAY(ECO_DAYS[ECO_DAYS.length - 1])}`;
 const counts = Object.fromEntries(STATUS.map((s) => [s, ECO.filter((r) => r.status === s).length]));
 let xrt = '';
 if (XRT && XRT.summary) {
@@ -547,7 +549,7 @@ ${table(['Route', 'Start here'], [
 <p><a class="btn" href="../methods/">Read and reproduce the research</a> · <a href="${GH}">Poster source</a> · <a href="https://github.com/Vortx-AI/emem">Build or contribute to emem</a></p>
 ${xrt}
 <h2>Complete integration directory</h2>
-<p class="note">Plugins, connectors, packages, listings and repository examples have different setup paths. Expand a group for its source, its status when checked and compatibility notes. Framework adapters may require the versions or fixes documented there.</p>
+<p class="note">Plugins, connectors, packages, listings and repository examples have different setup paths. Statuses as checked from ${ECO_SPAN}: LIVE works today; PROTOCOL is an open surface emem serves; REGISTRY is a listing; EXAMPLE is example code; EXPERIMENTAL is unpublished or not yet working as documented. Framework adapters may need the versions or fixes noted under them. Evidence for every row: ${src(ECO_FILE)}.</p>
 ${GROUPS.map(([g,rs])=>{const rows=ECO.filter((r)=>rs.includes(r.role));return `<details><summary>${esc(g)} (${rows.length})</summary><ul class="ints">${rows.map(item).join('')}</ul></details>`}).join('')}
 <script>document.getElementById('copy-handoff').addEventListener('click',async()=>{const t=document.getElementById('handoff');try{await navigator.clipboard.writeText(t.value);document.getElementById('copy-status').textContent='Copied.';}catch{t.focus();t.select();document.getElementById('copy-status').textContent='Select and copy the highlighted prompt.';}});</script>`, {
   head: `<style>.setup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.setup{border:1px solid var(--rule);border-radius:10px;padding:16px;background:var(--card)}.setup h3{margin-top:0}.setup p{margin:8px 0}.setup pre{white-space:pre-wrap;overflow-wrap:anywhere}#handoff{width:100%;padding:12px;border:1px solid var(--rule);border-radius:8px;font:14px/1.5 var(--mono)}.ints{list-style:none;padding:0}.int{border-top:1px solid var(--rule);padding:12px 0}.int p{margin:0 0 6px}details{padding:10px 0;border-bottom:1px solid var(--rule)}summary{cursor:pointer;font-weight:600}details details{border:0}code{overflow-wrap:anywhere}</style>` }));

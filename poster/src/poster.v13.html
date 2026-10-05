@@ -42,7 +42,7 @@
   <h2 class="rt" data-role="headline" data-claim="R5.design">The same corruptions, five handoff conditions.</h2>
   <p class="mech rt" data-role="mechanism" data-claim="U.flow">Agent A cites a satellite reading. A relay or a faulty signer changes the evidence. Agent B acts on it, declines it or acts on the genuine value.</p>
   <div class="fig" data-figslot="f2_spine" style="--fw:801;--fh:112.5"><!--fig:f2_spine--></div>
-  <div class="ablation" data-role="caption" data-claim="R5.matched.ceiling R5.matched.n R5.matched.hardened R5.matched.emem"><span><b>Matched ablation</b>, deterministic receiver, same 23 corruptions (4 Oct), accepted:</span><span>JSON, no checks <b class="h">23</b></span><i>→</i><span>emem’s checks minus hash, signature and log <b class="h">8</b></span><i>→</i><span>plus four consistency checks <b class="h">3</b></span><i>→</i><span>emem’s verifier <b class="e">0</b></span></div>
+  <div class="ablation" data-role="caption" data-claim="R5.matched.ceiling R5.matched.n R5.matched.hardened R5.matched.emem"><span><b>Matched ablation</b>, deterministic receiver, same 23 corruptions, accepted:</span><span>JSON, no checks <b class="h">23</b></span><i>→</i><span>emem’s checks minus hash, signature and log <b class="h">8</b></span><i>→</i><span>plus four consistency checks <b class="h">3</b></span><i>→</i><span>emem’s verifier <b class="e">0</b></span></div>
   <div class="spinefoot">
     <div class="spineleft">
     <p class="agentstrip rt" data-mode="r5" data-variant="0of300" data-role="take" data-claim="R5.shared.n R5.shared.A.acted R5.shared.D.acted R5.shared.E.acted R5.shared.E0.acted">Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and <span class="nw">0 of 276</span> with an emem reference (2 of 276 without the instruction to check).</p>
@@ -51,7 +51,7 @@
     <p class="orbitline rt" data-role="caption" data-claim="ORBIT.design">By design, Earth data stays on the encoding device in orbit; its signed record and reference are downlinked, so the source is not re-read (<span class="nw">SAT-042</span> harness, not flown).</p>
     </div>
     <div class="scope" data-mode="r5">
-      <p data-role="scope" data-claim="R5.models R5.dates R5.items R5.tasks R5.treatment R5.limits R5.matched.agents R5.E.qwen7b R5.Eplus.qwen7b">Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory run, 4 Oct, one trial each). <span class="nw">Qwen2.5-7B</span> acted on <span class="nw">10 of 25</span> corruptions behind a fail-closed resolver (<span class="nw">2 of 25</span> when told to check): gate the action outside the model.</p>
+      <p data-role="scope" data-claim="R5.models R5.dates R5.items R5.tasks R5.treatment R5.limits R5.matched.agents R5.E.qwen7b R5.Eplus.qwen7b">Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory, one trial each). <span class="nw">Qwen2.5-7B</span> acted on <span class="nw">10 of 25</span> corruptions behind a fail-closed resolver (<span class="nw">2 of 25</span> when told to check): gate the action outside the model.</p>
     </div>
     <p class="scope" data-mode="r1" data-role="scope" data-claim="S.scope S.threshold">Deterministic receiver, one record and one band. The 0.4705 threshold makes rounding change the decision. Token-copy mutation M7 has no prose form.</p>
   </div>
@@ -80,7 +80,7 @@
   <p class="cap rt" data-role="caption" data-claim="U.boundary">Record checks establish properties of the cited record. A source re-read adds evidence about the sampled pixel; sensor accuracy remains inherited.</p>
 </section>
 <section class="panel c3 trace" data-block="trace" data-brief="Full trace">
-  <p class="extension-label" data-claim="TRACE.run">FULL TRACE · 30 SEP 2026</p>
+  <p class="extension-label" data-claim="TRACE.run">FULL TRACE</p>
   <h2 class="rt s28 steps" data-role="headline" data-claim="TRACE.run"><span>Token</span><span>record</span><span>source pixel</span></h2>
   <div class="accept" data-claim="TRACE.accept"><span class="nw">accept if BLAKE3(b) = cid</span> &amp; <span class="nw">cell(b) = cell(token)</span> &amp; <span class="nw">NDVI(DN(b)) = value</span> &amp; <span class="nw">COG[row, col] = DN(b)</span> &amp; <span class="nw">Ed25519(σ)</span> &amp; <span class="nw">leaf in STH</span> &amp; <span class="nw">STH<sub>geo.qa</sub> prefix of STH</span></div>
   <p class="tlead rt" data-role="body" data-claim="TRACE.run">Without emem software, a 698-line script (Python stdlib, blake3, cbor2, pynacl) checked <b>15 links (17 checks) in 17.9 s, all verified</b>. Grey: what must still be trusted after each check.</p>
@@ -99,7 +99,7 @@
   <p class="extension-label" data-claim="V7.invention">CONTRIBUTION</p>
   <h2 class="rt s28" data-role="headline" data-claim="V7.invention">Checkable observation handoff</h2>
   <p class="body rt" data-role="body" data-claim="V7.invention">EO evidence that travels between agents, checked by the receiver down to the source pixel.</p>
-  <p class="cap rt" data-role="caption" data-claim="V7.invention">Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to single EO observations, and its records name the source file and sampled point, so a receiver can <span class="nw">re-read</span> the pixel. That <span class="nw">re-read</span> caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5).</p>
+  <p class="cap rt" data-role="caption" data-claim="V7.invention">Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to individual EO observations, and its records name the source file and sampled point, so a receiver can <span class="nw">re-read</span> the pixel. That <span class="nw">re-read</span> caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5).</p>
 </section>
 </div>
 
@@ -179,7 +179,7 @@
 <section class="panel c3 extension" data-block="p11" data-brief="11 · Satellite execution evidence">
   <p class="kicker rt" data-role="kicker"><span class="num" data-exempt="panelno">11</span>Satellite execution evidence</p>
   <h2 class="rt s28" data-role="headline" data-claim="SAT.run" style="margin-top:0">A signed trace binds the reported run</h2>
-  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm"><span class="nw">SAT-042</span> scripted pass · reference harness · 30 Sep 2026.</p>
+  <p class="subtitle rt" data-role="subtitle" data-claim="SAT.run" style="margin-top:.2mm"><span class="nw">SAT-042</span> scripted pass · reference harness.</p>
   <div class="fig" data-figslot="f15b_sat042_strip" style="--fw:193.5;--fh:38.5"><!--fig:f15b_sat042_strip--></div>
   <p class="scope figscope rt" data-role="scope" data-claim="SAT.gate K.sat042" style="margin-top:.4mm">Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time.</p>
 </section>

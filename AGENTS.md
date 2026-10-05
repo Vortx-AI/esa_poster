@@ -67,7 +67,9 @@ v11 in `poster/src/poster.v11.html` and `poster/make_figures_v11.py`; the v10 bo
 - emem is AI infrastructure; satellites are the input. Short sentences.
 - A research poster, not an audit: limitations go in the Discussion and the guarantees table as short scope
   statements. Defect lists, scorecards and withdrawn claims stay in `research/`.
-- Numbers are copied from measurement files, never from prose. Counts carry their units and their date.
+- Numbers are copied from measurement files, never from prose. Counts carry their units. The footer's "Measurements:"
+  window dates the runs once; panels print the data's own dates (acquisition, signing, the record's fields), not run or
+  check dates. The claims rows keep every run date.
 - No service or code versions on the face (for example "emem.dev at 8e9b401"): they advance with every upgrade. The
   claims rows and `research/` keep them.
 - Check depth shows as colour and check names, not as "L0" to "L3": EO readers take those for processing levels.

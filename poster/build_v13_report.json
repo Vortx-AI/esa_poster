@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-05T06:00:58+00:00",
+ "built_utc": "2026-10-05T07:13:27+00:00",
  "source": "poster/src/poster.v13.html",
  "outputs": [
   "poster/poster.html",
@@ -78,7 +78,7 @@
    "file": "poster/fig/v13/f6_mutation_matrix.svg",
    "w_mm": 396.0,
    "h_mm": 196.0,
-   "mtime": "2026-10-04T22:03:48"
+   "mtime": "2026-10-05T07:09:07"
   },
   "f9_timeline": {
    "state": "placed",
@@ -109,7 +109,7 @@
    "mtime": "2026-10-05T05:59:12"
   }
  },
- "figure_text_tokens": 1675,
+ "figure_text_tokens": 1669,
  "gates": {
   "page_fit": {
    "pass": true,
@@ -237,10 +237,10 @@
   "word_budget": {
    "pass": true,
    "details": [
-    "running text: 810 words containing a letter, 829 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
+    "running text: 809 words containing a letter, 826 tokens with numerals (cap 816 / 836; v13.5 copy brief: see per-panel counts)",
     "  1 · Earth to agents: 108 tokens (section C: 108)",
     "  10 · Token family: 35 tokens (section C: 35)",
-    "  11 · Satellite execution evidence: 57 tokens (section C: 57)",
+    "  11 · Satellite execution evidence: 54 tokens (section C: 54)",
     "  12 · Community routes: 6 tokens (section C: 6)",
     "  2 · One NDVI, eight values: 44 tokens (section C: 44)",
     "  3 · Different drift, different check: 41 tokens (section C: 41)",
@@ -280,7 +280,7 @@
  "running_lines_printed_by_figures": [],
  "r5_lines_as_printed": [
   "Across the 23 shared items, agents acted on 254 of 276 corrupted handoffs in prose, 154 of 276 with an opaque id, and 0 of 276 with an emem reference (2 of 276 without the instruction to check).",
-  "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (1 Oct 2026, two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory run, 4 Oct, one trial each). Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver ( 2 of 25 when told to check): gate the action outside the model.",
+  "Figure: Claude Haiku 4.5, Sonnet 5.5 and Opus 5.5 pooled, full item set per condition. 2,794 scored trials (two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item. The emem lane adds a verifier and an instruction, so the figure tests the workflow. With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory, one trial each). Qwen2.5-7B acted on 10 of 25 corruptions behind a fail-closed resolver ( 2 of 25 when told to check): gate the action outside the model.",
   "Reading the fields they carry, agents did not act on 112 of 276 corrupted JSON handoffs and 134 of 288 with an opaque id. On panel 5’s real record, read live, agents acted 4 of 4 times uninstructed, 2 of 4 with resolve-and-bind instructions and 0 of 4 with a source re-read."
  ],
  "type_deviations_from_brief": [
@@ -548,7 +548,7 @@
   "X.only",
   "X.p123"
  ],
- "figure_numbers_checked": 320,
+ "figure_numbers_checked": 316,
  "rows_rechecked": 565,
  "rows_delegated_to_figure_asserts": [
   "A13.dates",
@@ -584,7 +584,7 @@
   "MF.example"
  ],
  "words": {
-  "running_words_with_letter": 810,
-  "running_tokens": 829
+  "running_words_with_letter": 809,
+  "running_tokens": 826
  }
 }

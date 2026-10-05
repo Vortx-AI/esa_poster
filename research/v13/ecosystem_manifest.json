@@ -24,8 +24,7 @@
   ],
   "user_can": "Enable the emem plugin in ChatGPT and pass an emem:fact token to its resolve tool",
   "caveats": [
-   "The plugin is connected and its resolve tool is exposed. In our check on 2 Oct 2026, resolve calls returned 'Unexpected response type'; no successful resolve through ChatGPT is reported here.",
-   "The listing shows plugin version 1.3.0, the directory's own version number, not the emem server version."
+   "The listing shows plugin version 1.3.0, the directory's own number, not the emem server version."
   ],
   "print": {
    "allowed": true,
@@ -58,7 +57,11 @@
    "quote": [
     "“Signed facts about real places”"
    ]
-  }
+  },
+  "qa_notes": [
+   "The plugin is connected and its resolve tool is exposed. In our check on 2 Oct 2026, resolve calls returned 'Unexpected response type'; no successful resolve through ChatGPT is reported here.",
+   "The listing shows plugin version 1.3.0, the directory's own version number, not the emem server version."
+  ]
  },
  {
   "id": "chatgpt-custom-gpt-action",
@@ -75,8 +78,7 @@
   ],
   "user_can": "Build a Custom GPT that calls emem REST without a key",
   "caveats": [
-   "Not exercised inside the GPT builder.",
-   "Import https://emem.dev/openapi.action.json. emem's docs/agents.md still names the full https://emem.dev/openapi.json (375,360 bytes, 206 operations); emem's changelog moved the import to the Action file."
+   "Import https://emem.dev/openapi.action.json, the Action-sized spec, not the full openapi.json."
   ],
   "print": {
    "allowed": false,
@@ -100,7 +102,11 @@
    "poster_use": "Text 'ChatGPT' in poster type. No OpenAI logo unless a person reads openai.com/brand in a browser and it permits this use."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Not exercised inside the GPT builder.",
+   "Import https://emem.dev/openapi.action.json. emem's docs/agents.md still names the full https://emem.dev/openapi.json (375,360 bytes, 206 operations); emem's changelog moved the import to the Action file."
+  ]
  },
  {
   "id": "claude-code-mcp",
@@ -116,7 +122,7 @@
   ],
   "user_can": "Add emem in one command; the 18 core tools appear in Claude Code sessions",
   "caveats": [
-   "Connection-level check only: no model turn and no tools/call were run here (tools/call on emem read tools signs and stores records)."
+   "Calling an emem read tool signs and stores a record on the server."
   ],
   "print": {
    "allowed": true,
@@ -141,7 +147,10 @@
    "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Connection-level check only: no model turn and no tools/call were run here (tools/call on emem read tools signs and stores records)."
+  ]
  },
  {
   "id": "claude-code-plugin",
@@ -163,7 +172,7 @@
   ],
   "user_can": "Install the MCP server plus 19 worked skills in two commands",
   "caveats": [
-   "Claude Code installs it from emem's own marketplace in the emem repository. Anthropic's Claude Code marketplace file on GitHub (anthropics/claude-plugins-official) lists 315 plugins and none is emem (5 Oct 2026); the Claude apps list emem in the Anthropic Directory (Discovery, below).",
+   "Claude Code installs it from emem's own marketplace in the emem repository; the Claude apps list emem in the Anthropic Directory (Discovery, below).",
    "Always-on cost: about 3,672 tokens per session (Claude Code's own estimate)."
   ],
   "print": {
@@ -201,7 +210,10 @@
     "“hand another agent a token it can",
     "check offline”"
    ]
-  }
+  },
+  "qa_notes": [
+   "Claude Code installs it from emem's own marketplace in the emem repository. Anthropic's Claude Code marketplace file on GitHub (anthropics/claude-plugins-official) lists 315 plugins and none is emem (5 Oct 2026); the Claude apps list emem in the Anthropic Directory (Discovery, below)."
+  ]
  },
  {
   "id": "claude-ai-custom-connector",
@@ -218,8 +230,7 @@
   ],
   "user_can": "Paste the MCP URL as a custom connector (no key)",
   "caveats": [
-   "Not exercised in claude.ai in this study.",
-   "Enterprise organisations may block connectors that are not in the directory (emem docs/mcp-directory.md)."
+   "Enterprise organisations may block connectors that are not in the directory."
   ],
   "print": {
    "allowed": true,
@@ -244,7 +255,11 @@
    "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Not exercised in claude.ai in this study.",
+   "Enterprise organisations may block connectors that are not in the directory (emem docs/mcp-directory.md)."
+  ]
  },
  {
   "id": "claude-connectors-directory",
@@ -262,15 +277,14 @@
   ],
   "user_can": "Find emem in the Directory in the Claude apps and enable the plugin; it brings 19 skills and the emem connector",
   "caveats": [
-   "Seen in the authors' screenshot of 4 Oct 2026, with the plugin enabled; no tool call through it was run in this study.",
-   "Claude Code reads a different catalogue, Anthropic's plugin marketplace on GitHub, which does not list emem (315 plugins on 5 Oct 2026). In Claude Code, add emem's own marketplace or the MCP server (Agent hosts, above)."
+   "In Claude Code, add emem's own marketplace or the MCP server (Agent hosts, above)."
   ],
   "print": {
    "allowed": false,
    "text": "",
    "note": "Shown on the board through the Claude card ('Directory plugin / MCP'); not printed as its own row."
   },
-  "verified_utc": "2026-10-05T05:53Z (listing screenshot 2026-10-04)",
+  "verified_utc": "2026-10-04T09:00Z",
   "brand": {
    "owner": "Anthropic",
    "marks": "Claude, Claude Code logos and Spark",
@@ -289,7 +303,11 @@
    "poster_use": "Text 'Claude' / 'Claude Code' only, unless marketing@anthropic.com approves the one-color asset."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Seen in the authors' screenshot of 4 Oct 2026, with the plugin enabled; no tool call through it was run in this study.",
+   "Claude Code reads a different catalogue, Anthropic's plugin marketplace on GitHub, which does not list emem (315 plugins on 5 Oct 2026). In Claude Code, add emem's own marketplace or the MCP server (Agent hosts, above)."
+  ]
  },
  {
   "id": "dify-marketplace",
@@ -311,10 +329,7 @@
   ],
   "user_can": "Install the plugin in Dify and call the emem tools from Dify apps and workflows",
   "caveats": [
-   "Not exercised inside a Dify workspace.",
-   "Version skew: Dify 2.4.0 with 16 tools; live /mcp is 2.4.2 with 18 (Dify lacks search, fetch).",
-   "'community' category is Dify's label, not a Dify endorsement.",
-   "The plugin's source lives outside the emem repository."
+   "The Dify plugin is version 2.4.0 with 16 tools; emem.dev serves 2.4.2 with 18 (the plugin lacks search and fetch)."
   ],
   "print": {
    "allowed": true,
@@ -348,7 +363,13 @@
     "“Shared memory for AI agents. One address",
     "per fact, one signature you check.”"
    ]
-  }
+  },
+  "qa_notes": [
+   "Not exercised inside a Dify workspace.",
+   "Version skew: Dify 2.4.0 with 16 tools; live /mcp is 2.4.2 with 18 (Dify lacks search, fetch).",
+   "'community' category is Dify's label, not a Dify endorsement.",
+   "The plugin's source lives outside the emem repository."
+  ]
  },
  {
   "id": "gemini-cli",
@@ -366,9 +387,7 @@
   ],
   "user_can": "Add emem to Gemini CLI with the generic MCP command above",
   "caveats": [
-   "Use the MCP command above. The 'gemini extensions install https://emem.dev/gemini-extension.json' line in emem's README and docs does not work: an extension install needs gemini-extension.json at a git repository root, and the emem repository has it under examples/.",
-   "examples/gemini-extension.json in the emem repository says version 1.1.0 and '113 MCP tools'; the copy emem.dev serves says 2.4.2 and 114.",
-   "Connection-level check only; no model turn."
+   "Use the MCP command above; the extension install route is not available yet."
   ],
   "print": {
    "allowed": true,
@@ -399,7 +418,12 @@
    "line": 0,
    "order": 2,
    "label": "Gemini CLI"
-  }
+  },
+  "qa_notes": [
+   "Use the MCP command above. The 'gemini extensions install https://emem.dev/gemini-extension.json' line in emem's README and docs does not work: an extension install needs gemini-extension.json at a git repository root, and the emem repository has it under examples/.",
+   "examples/gemini-extension.json in the emem repository says version 1.1.0 and '113 MCP tools'; the copy emem.dev serves says 2.4.2 and 114.",
+   "Connection-level check only; no model turn."
+  ]
  },
  {
   "id": "vscode",
@@ -417,9 +441,7 @@
    "2026-10-02: GitHub MCP Registry primary listing inspected. emem exposes an Install MCP server route and documents VS Code servers configuration. This is an MCP integration, not a separate VSIX extension."
   ],
   "user_can": "One-click install from a link, or search @mcp emem in the Extensions view",
-  "caveats": [
-   "Install not run in this study."
-  ],
+  "caveats": [],
   "print": {
    "allowed": true,
    "text": "Visual Studio Code: @mcp emem (MCP gallery) or code --add-mcp",
@@ -449,7 +471,10 @@
    "line": 0,
    "order": 1,
    "label": "VS Code"
-  }
+  },
+  "qa_notes": [
+   "Install not run in this study."
+  ]
  },
  {
   "id": "cursor",
@@ -466,9 +491,7 @@
    "SPEC: examples/cursor.mcp.json {mcpServers:{emem:{url:https://emem.dev/mcp}}}"
   ],
   "user_can": "One-click install in Cursor, or paste the JSON",
-  "caveats": [
-   "Install not run in this study."
-  ],
+  "caveats": [],
   "print": {
    "allowed": true,
    "text": "Cursor: one-click MCP install link"
@@ -496,7 +519,10 @@
    "line": 0,
    "order": 0,
    "label": "Cursor"
-  }
+  },
+  "qa_notes": [
+   "Install not run in this study."
+  ]
  },
  {
   "id": "cline",
@@ -516,8 +542,7 @@
   ],
   "user_can": "Add emem manually with type streamableHttp (corrected config); not from the Cline marketplace",
   "caveats": [
-   "Inferred, not run: the shipped example uses the SSE default, which the endpoint answers with HTTP 405; set type streamableHttp as above.",
-   "Not in the Cline marketplace; a submission is not a listing."
+   "Set type streamableHttp, as above: emem answers SSE, Cline's default, with HTTP 405."
   ],
   "print": {
    "allowed": false,
@@ -527,7 +552,11 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Inferred, not run: the shipped example uses the SSE default, which the endpoint answers with HTTP 405; set type streamableHttp as above.",
+   "Not in the Cline marketplace; a submission is not a listing."
+  ]
  },
  {
   "id": "mcp-core",
@@ -547,8 +576,8 @@
   ],
   "user_can": "Connect any MCP client with no account or key; call the 18 listed tools, and any of 114 by name",
   "caveats": [
-   "server.json x-emem.directoryCompliance says the /mcp page is 'about 64 KB'; measured 77,038 bytes (README says ~75 KB). Under the 102,400-byte AWS ceiling that scripts/mcp_host_compat.py asserts.",
-   "Read tools sign and store records on call; not exercised in this study."
+   "The tool list is 77,038 bytes, under the 102,400-byte limit some hosts set.",
+   "Calling a read tool signs and stores a record on the server."
   ],
   "print": {
    "allowed": true,
@@ -579,7 +608,11 @@
    "line": 0,
    "order": 0,
    "label": "MCP"
-  }
+  },
+  "qa_notes": [
+   "server.json x-emem.directoryCompliance says the /mcp page is 'about 64 KB'; measured 77,038 bytes (README says ~75 KB). Under the 102,400-byte AWS ceiling that scripts/mcp_host_compat.py asserts.",
+   "Read tools sign and store records on call; not exercised in this study."
+  ]
  },
  {
   "id": "mcp-full",
@@ -595,7 +628,7 @@
   ],
   "user_can": "List every tool, for hosts that follow nextCursor",
   "caveats": [
-   "server.json says 'all 114 across 7 pages (about 290 KB)'; measured 8 pages, 335,788 bytes. Hosts that ignore nextCursor see page one only (13 tools)."
+   "114 tools on 8 pages; hosts that ignore nextCursor see the first page only (13 tools)."
   ],
   "print": {
    "allowed": false,
@@ -619,7 +652,10 @@
    "poster_use": "Text only: 'Model Context Protocol (MCP)' on first use, 'A2A' after 'Agent2Agent (A2A)'. No MCP or A2A logo without written permission."
   },
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "server.json says 'all 114 across 7 pages (about 290 KB)'; measured 8 pages, 335,788 bytes. Hosts that ignore nextCursor see page one only (13 tools)."
+  ]
  },
  {
   "id": "a2a",
@@ -639,8 +675,7 @@
   ],
   "user_can": "Discover emem as an A2A agent, verify its card offline, send a task and verify the signed artifact",
   "caveats": [
-   "message/send was not re-run in this study: it creates a signed task artifact on the server.",
-   "Card integrity is self-consistency with emem.dev's own keys (cryptographic trust); it is not a third-party attestation of the operator (source trust)."
+   "Card integrity is consistency with emem.dev's own keys; it is not a third-party attestation of the operator."
   ],
   "print": {
    "allowed": true,
@@ -672,7 +707,11 @@
    "line": 0,
    "order": 1,
    "label": "A2A"
-  }
+  },
+  "qa_notes": [
+   "message/send was not re-run in this study: it creates a signed task artifact on the server.",
+   "Card integrity is self-consistency with emem.dev's own keys (cryptographic trust); it is not a third-party attestation of the operator (source trust)."
+  ]
  },
  {
   "id": "rest-openapi",
@@ -821,9 +860,7 @@
    "MEASURED: git ls-remote origin main -> 8e9b401c (= live x-emem-commit); pinned origin/main 18adb67 is 7 commits behind; ecosystem files unchanged between them except integrations/chatgpt/tools.md"
   ],
   "user_can": "Read, clone, self-host, re-run the tests",
-  "caveats": [
-   "GitHub labels the repository HTML because of its large web/ folder; the server is written in Rust."
-  ],
+  "caveats": [],
   "print": {
    "allowed": true,
    "text": "Source: github.com/Vortx-AI/emem (Apache-2.0)",
@@ -853,7 +890,10 @@
    "line": 1,
    "order": 1,
    "label": "GitHub source"
-  }
+  },
+  "qa_notes": [
+   "GitHub labels the repository HTML because of its large web/ folder; the server is written in Rust."
+  ]
  },
  {
   "id": "glama",
@@ -872,7 +912,7 @@
   ],
   "user_can": "Find, inspect and try emem from Glama",
   "caveats": [
-   "Grade is Glama's scan of 16 tools on 2026-09-09, before 2.4.2. A directory grade is not an integration."
+   "Glama's grade is from its scan of 16 tools on 9 Sep 2026."
   ],
   "print": {
    "allowed": true,
@@ -888,7 +928,10 @@
    "line": 0,
    "order": 3,
    "label": "Glama"
-  }
+  },
+  "qa_notes": [
+   "Grade is Glama's scan of 16 tools on 2026-09-09, before 2.4.2. A directory grade is not an integration."
+  ]
  },
  {
   "id": "smithery",
@@ -906,7 +949,7 @@
   ],
   "user_can": "Connect through Smithery with a Smithery account",
   "caveats": [
-   "The Smithery route needs a Smithery token; the direct emem.dev/mcp route needs none. Tool count cached at 16."
+   "The Smithery route needs a Smithery token; the direct emem.dev/mcp route needs none. Smithery shows 16 tools."
   ],
   "print": {
    "allowed": true,
@@ -922,7 +965,10 @@
    "line": 0,
    "order": 4,
    "label": "Smithery"
-  }
+  },
+  "qa_notes": [
+   "The Smithery route needs a Smithery token; the direct emem.dev/mcp route needs none. Tool count cached at 16."
+  ]
  },
  {
   "id": "huggingface-space",
@@ -937,9 +983,9 @@
    "LIVE: page HTTP 200; API: sdk docker, runtime stage RUNNING, lastModified 2026-07-17T14:19:36Z, likes 1",
    "MEASURED: POST initialize to https://vortx-ai-emem.hf.space/mcp -> serverInfo {name: emem, version: 1.1.0}, protocolVersion 2025-06-18; /.well-known/emem-manifest.json -> 404"
   ],
-  "user_can": "Try an old emem build in a browser",
+  "user_can": "Open emem in a browser on Hugging Face",
   "caveats": [
-   "The Space runs emem 1.1.0 (measured 30 Sep 2026); emem.dev runs 2.4.2."
+   "The Space pins its own emem image; emem.dev serves the current release."
   ],
   "print": {
    "allowed": false,
@@ -949,7 +995,10 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "The Space runs emem 1.1.0 (measured 30 Sep 2026); emem.dev runs 2.4.2."
+  ]
  },
  {
   "id": "context7",
@@ -1000,7 +1049,7 @@
   ],
   "user_can": "MuleSoft users find the server in Exchange",
   "caveats": [
-   "An Exchange MCP asset listing; no MuleSoft flow was executed in this poster study."
+   "An Exchange listing of the emem MCP server for flow builders."
   ],
   "print": {
    "allowed": true,
@@ -1016,7 +1065,10 @@
    "line": 0,
    "order": 2,
    "label": "MuleSoft Exchange"
-  }
+  },
+  "qa_notes": [
+   "An Exchange MCP asset listing; no MuleSoft flow was executed in this poster study."
+  ]
  },
  {
   "id": "awesome-mcp-servers",
@@ -1060,7 +1112,7 @@
   ],
   "user_can": "Resolve tokens, fetch facts and verify receipts offline from Python",
   "caveats": [
-   "The PyPI name 'emem' belongs to an unrelated project (Automatika Robotics, 'Hybrid graph-based spatio-temporal memory system for embodied agents'): install ememdev, not emem."
+   "Install ememdev; the PyPI name emem belongs to an unrelated project."
   ],
   "print": {
    "allowed": true,
@@ -1077,7 +1129,10 @@
    "line": 0,
    "order": 0,
    "label": "Python"
-  }
+  },
+  "qa_notes": [
+   "The PyPI name 'emem' belongs to an unrelated project (Automatika Robotics, 'Hybrid graph-based spatio-temporal memory system for embodied agents'): install ememdev, not emem."
+  ]
  },
  {
   "id": "ts-sdk",
@@ -1095,8 +1150,7 @@
   ],
   "user_can": "Use emem from Node, browsers and edge runtimes",
   "caveats": [
-   "Publish lag: repo sdks/emem-ts is 2.4.2, npm latest is 2.4.0.",
-   "npm name 'emem' is an unrelated 2021 package."
+   "Install @vortxai/emem; the npm name emem belongs to an unrelated package."
   ],
   "print": {
    "allowed": true,
@@ -1112,7 +1166,11 @@
    "line": 0,
    "order": 1,
    "label": "TypeScript"
-  }
+  },
+  "qa_notes": [
+   "Publish lag: repo sdks/emem-ts is 2.4.2, npm latest is 2.4.0.",
+   "npm name 'emem' is an unrelated 2021 package."
+  ]
  },
  {
   "id": "docker",
@@ -1131,8 +1189,7 @@
   ],
   "user_can": "Self-host a responder with its own key; receipts minted elsewhere verify locally",
   "caveats": [
-   "Not run in this study. The amd64 image is 865 MB compressed.",
-   "The link is GHCR's conventional package page; it was not fetched in this study."
+   "The amd64 image is 865 MB compressed."
   ],
   "print": {
    "allowed": true,
@@ -1148,7 +1205,11 @@
    "line": 0,
    "order": 2,
    "label": "Docker"
-  }
+  },
+  "qa_notes": [
+   "Not run in this study. The amd64 image is 865 MB compressed.",
+   "The link is GHCR's conventional package page; it was not fetched in this study."
+  ]
  },
  {
   "id": "emem-langmem",
@@ -1198,9 +1259,7 @@
    "SPEC: its README says 'pip install llama-index-tools-emem' (would fail today)"
   ],
   "user_can": "Install from the repo path only",
-  "caveats": [
-   "Not published on PyPI; the README's pip install line fails until it is."
-  ],
+  "caveats": [],
   "print": {
    "allowed": false,
    "text": ""
@@ -1208,7 +1267,10 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Not published on PyPI; the README's pip install line fails until it is."
+  ]
  },
  {
   "id": "n8n",
@@ -1224,9 +1286,7 @@
    "SPEC: integrations/n8n/package.json 0.1.0, license Apache-2.0; docs/registries/integration-targets.md says n8n verification needs MIT and Action-provenance publishing"
   ],
   "user_can": "Nothing without building it locally",
-  "caveats": [
-   "Not published."
-  ],
+  "caveats": [],
   "print": {
    "allowed": false,
    "text": ""
@@ -1234,7 +1294,10 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Not published."
+  ]
  },
  {
   "id": "langchain",
@@ -1253,7 +1316,7 @@
   ],
   "user_can": "Load emem tools into a LangGraph agent (with the one-line API fix)",
   "caveats": [
-   "The example needs the one-line API fix noted above. LangChain's own docs do not list emem (see emem-langmem)."
+   "Create the client, then call await client.get_tools(): MultiServerMCPClient is no longer a context manager (langchain-mcp-adapters 0.1.0 and later)."
   ],
   "print": {
    "allowed": true,
@@ -1270,7 +1333,10 @@
    "line": 0,
    "order": 0,
    "label": "LangChain"
-  }
+  },
+  "qa_notes": [
+   "The example needs the one-line API fix noted above. LangChain's own docs do not list emem (see emem-langmem)."
+  ]
  },
  {
   "id": "llamaindex",
@@ -1323,8 +1389,7 @@
   ],
   "user_can": "Give a CrewAI agent the 18 core tools",
   "caveats": [
-   "INFERRED: the agent cannot call emem_eudr_dds because MCPServerAdapter exposes only listed tools; point it at /mcp/full or change the task.",
-   "Not upstream."
+   "The example's task names emem_eudr_dds, which the core tool list does not include: point the adapter at https://emem.dev/mcp/full or change the task."
   ],
   "print": {
    "allowed": true,
@@ -1340,7 +1405,11 @@
    "line": 1,
    "order": 0,
    "label": "CrewAI"
-  }
+  },
+  "qa_notes": [
+   "INFERRED: the agent cannot call emem_eudr_dds because MCPServerAdapter exposes only listed tools; point it at /mcp/full or change the task.",
+   "Not upstream."
+  ]
  },
  {
   "id": "autogen",
@@ -1391,7 +1460,7 @@
   ],
   "user_can": "Give a Mastra agent the 18 core tools (on the pinned 0.10 line)",
   "caveats": [
-   "Works only via the included package.json (old 0.10 line); the README's unpinned command installs a version where the example's API call does not exist. Asks for a tool the listed tier does not contain."
+   "Install with the example's package.json (@mastra/mcp 0.10 line); on @mastra/mcp 2.x, call listTools() instead of getTools()."
   ],
   "print": {
    "allowed": true,
@@ -1407,7 +1476,10 @@
    "line": 1,
    "order": 1,
    "label": "Mastra"
-  }
+  },
+  "qa_notes": [
+   "Works only via the included package.json (old 0.10 line); the README's unpinned command installs a version where the example's API call does not exist. Asks for a tool the listed tier does not contain."
+  ]
  },
  {
   "id": "agno",
@@ -1426,7 +1498,7 @@
   ],
   "user_can": "Give an Agno agent the emem tools",
   "caveats": [
-   "The README's install line fails at import; install fastmcp and mcp as well."
+   "Also install fastmcp (4.x) and mcp."
   ],
   "print": {
    "allowed": true,
@@ -1442,7 +1514,10 @@
    "line": 1,
    "order": 2,
    "label": "Agno (see setup notes)"
-  }
+  },
+  "qa_notes": [
+   "The README's install line fails at import; install fastmcp and mcp as well."
+  ]
  },
  {
   "id": "semantic-kernel",
@@ -1460,7 +1535,7 @@
   ],
   "user_can": "Nothing as written; works only if the union type is removed on one side",
   "caveats": [
-   "An interop defect found by this check: one JSON-Schema construct in one tool blocks the whole plugin in SK."
+   "Semantic Kernel cannot load a tool parameter typed string or number, so the whole plugin fails to load."
   ],
   "print": {
    "allowed": false,
@@ -1469,7 +1544,10 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "An interop defect found by this check: one JSON-Schema construct in one tool blocks the whole plugin in SK."
+  ]
  },
  {
   "id": "emem-integration-hub",
@@ -1485,9 +1563,7 @@
    "LIVE: https://emem.dev/integrations -> 200 text/markdown (raw markdown on a phone); https://emem.dev/docs/integrations.html -> 200 HTML 'Integrations - emem docs' but mentions ChatGPT 0 times and A2A 0 times"
   ],
   "user_can": "One page listing every route with copy buttons",
-  "caveats": [
-   "Not tested on a phone. Some labels on it lag the release ('pypi 2.4.0'; the Gemini link opens the example file)."
-  ],
+  "caveats": [],
   "print": {
    "allowed": true,
    "text": "emem.dev integrations: https://emem.dev/#use",
@@ -1496,7 +1572,10 @@
   "verified_utc": "2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)",
   "brand": null,
   "status_vocabulary": "LIVE|PROTOCOL|REGISTRY|EXAMPLE|EXPERIMENTAL|ROADMAP|NOT FOUND",
-  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)"
+  "emem_source": "emem origin/main 18adb67 (live server runs 8e9b401c, 7 commits later)",
+  "qa_notes": [
+   "Not tested on a phone. Some labels on it lag the release ('pypi 2.4.0'; the Gemini link opens the example file)."
+  ]
  },
  {
   "id": "dify-template-lite",
@@ -1511,15 +1590,16 @@
    "2026-10-02: primary Dify Marketplace listing inspected; title and setup instructions present."
   ],
   "user_can": "Import Referent Lock Lite into a Dify workspace and follow its setup instructions",
-  "caveats": [
-   "Listing inspected; workflow execution is outside this poster study."
-  ],
+  "caveats": [],
   "print": {
    "allowed": true,
    "text": "Referent Lock Lite"
   },
   "verified_utc": "2026-10-02T08:30Z",
-  "brand": null
+  "brand": null,
+  "qa_notes": [
+   "Listing inspected; workflow execution is outside this poster study."
+  ]
  },
  {
   "id": "dify-template-full",
@@ -1534,15 +1614,16 @@
    "2026-10-02: primary Dify Marketplace listing inspected; title and setup instructions present."
   ],
   "user_can": "Import Referent Lock Full into a Dify workspace and follow its setup instructions",
-  "caveats": [
-   "Listing inspected; workflow execution is outside this poster study."
-  ],
+  "caveats": [],
   "print": {
    "allowed": true,
    "text": "Referent Lock Full"
   },
   "verified_utc": "2026-10-02T08:30Z",
-  "brand": null
+  "brand": null,
+  "qa_notes": [
+   "Listing inspected; workflow execution is outside this poster study."
+  ]
  },
  {
   "id": "dify-template-eudr",
@@ -1557,15 +1638,16 @@
    "2026-10-02: primary Dify Marketplace listing inspected; title and setup instructions present."
   ],
   "user_can": "Import EUDR Evidence Studio into a Dify workspace and follow its setup instructions",
-  "caveats": [
-   "Listing inspected; workflow execution is outside this poster study."
-  ],
+  "caveats": [],
   "print": {
    "allowed": true,
    "text": "EUDR Evidence Studio"
   },
   "verified_utc": "2026-10-02T08:30Z",
-  "brand": null
+  "brand": null,
+  "qa_notes": [
+   "Listing inspected; workflow execution is outside this poster study."
+  ]
  },
  {
   "id": "clawhub",
@@ -1583,8 +1665,7 @@
   ],
   "user_can": "Install the emem plugin in OpenClaw with the command above",
   "caveats": [
-   "Plugin listing seen in the authors' screenshot of 4 Oct 2026; installation was not run in this study.",
-   "A separate emem skill listing, https://clawhub.ai/avijeetsingh1/emem, answered HTTP 200 on 2 Oct 2026."
+   "Also listed as an emem skill: https://clawhub.ai/avijeetsingh1/emem."
   ],
   "print": {
    "allowed": true,
@@ -1603,6 +1684,10 @@
     "“Shared, signed and content-addressed memory",
     "of the physical world…”"
    ]
-  }
+  },
+  "qa_notes": [
+   "Plugin listing seen in the authors' screenshot of 4 Oct 2026; installation was not run in this study.",
+   "A separate emem skill listing, https://clawhub.ai/avijeetsingh1/emem, answered HTTP 200 on 2 Oct 2026."
+  ]
  }
 ]

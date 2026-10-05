@@ -659,3 +659,34 @@ the Q&A page links, is regenerated from the same JSON. Not changed: the methods 
 cite (provenance, not the face), and the use page's 5 Oct marketplace check stays, although the face's measurements end
 on 4 Oct. The site test still fails only where it needs emem.dev or Planetary Computer and on the demo's fold check: the
 demo's verdict board ends at 1,310 px on a 390 x 844 phone, below the first screen (the page is unchanged since 2 Oct).
+
+## 27. Dates on the face, and the integration notes (5 Oct 2026)
+
+The authors asked whether the dates on the board are needed and whether this round added weak text. Dates on the
+face fall in two kinds. Data dates belong to what is shown and stay: the conference date; the observation's
+acquisition (Sentinel-2A L2A, 25 Sep 2026, panels 1 and 5); the record's own fields (tslot 25 Sep, captured, signed,
+panel 4); the variants' records in panel 2 (the town point's 30 Sep record, "30 Sep record handed as 25 Sep"); the real
+record of 23 Sep in panel 5; the Bengaluru signing and as-of dates in panel 8. Run dates said when a check or trial ran,
+and each repeated the footer's "Measurements: 29 Sep to 4 Oct 2026" (row K.dates), which stays as the one place that
+dates the runs. Removed: "(4 Oct)" in panel 1's ablation strip; "1 Oct 2026" and "4 Oct" in panel 1's scope; "· 30 SEP
+2026" on the full trace; "· 30 Sep 2026" on SAT-042's subtitle; "1 Oct 2026", twice, in panel 6 (header and scope, both
+variants). The rows keep every run date (extend_print entries in the v1310 additions); AGENTS.md now says panels print
+data dates, not run dates. Running text: 809 words (810 in 300of300).
+
+Weak text added this round, removed or reworded:
+- Panel 13 said "single EO observations", which reads as "only one"; it is "individual" now.
+- /use/ stated that Anthropic's Claude Code marketplace does not list emem (twice). Accurate, but it told visitors
+  where emem is absent instead of how to install it; the rows now give the routes, and the check stays in the manifest.
+- Most integration caveats were test bookkeeping ("not run in this study", "not fetched", "HTTP 200") or mismatches
+  inside emem's own docs. Visitor notes now carry only what helps someone install or use emem: the right package name,
+  the working command, the version or fix an example needs (the LangChain fix is spelled out instead of "needs the
+  fix"). The removed text moves to a `qa_notes` field in the manifest, which no page shows, so the research record
+  keeps it. The ChatGPT resolve result stays disclosed in "What was checked?".
+- Each of the 42 rows printed "Evidence: ... Checked 2026-09-30T23:10Z..23:40Z (2026-10-01 CEST)". One line above
+  the list now gives the span (30 Sep to 4 Oct 2026, computed from the manifest) and what each status word means;
+  the expanders read "Notes" instead of "Caveats". The Hugging Face row no longer says "an old emem build".
+
+Not changed, because they are needed: the scope statements on the face (inherited source quality, the harness that has
+not flown, what the trace leaves trusted), the always-on token cost of the Claude Code plugin (an issue asked
+not to hide it), and the measurement window in the footer. Both variants pass the 18 gates; 0 overlaps; QR codes decode from
+both PDFs; site gates pass on the 8 pages; 14 unit tests pass.

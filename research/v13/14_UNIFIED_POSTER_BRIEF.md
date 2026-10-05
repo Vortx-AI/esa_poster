@@ -80,7 +80,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > EO evidence that travels between agents, checked by the receiver down to the source pixel.
 
-> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to single EO observations, and its records name the source file and sampled point, so a receiver can re-read the pixel. That re-read caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5).
+> Content hashes (IPFS), signed logs (SCITT) and provenance (PROV) already exist. emem applies them to individual EO observations, and its records name the source file and sampled point, so a receiver can re-read the pixel. That re-read caught a wrong pixel that hashing, binding, signatures, logs and recomputation had passed (panel 5).
 
 ### 4 · What exactly is handed over
 
@@ -144,7 +144,7 @@ Rendered running copy for the reviewed source. Figure labels, equations outside 
 
 > A signed trace binds the reported run
 
-> SAT-042 scripted pass · reference harness · 30 Sep 2026.
+> SAT-042 scripted pass · reference harness.
 
 > Reference harness, no spacecraft enrolled. The trace shows which key signed the run and that no logged segment changed; it does not show which code ran on which inputs. The gate binds output digests, not band, cell or time.
 

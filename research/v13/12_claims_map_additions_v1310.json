@@ -5572,6 +5572,63 @@
         "Each added check refuses a corruption that the checks before it pass."
       ],
       "note": "Panel 6 caption: in the cumulative order C to I, each depth is the first to refuse at least one corruption (the 'first check that refuses' column: C, D, E, F, G, H, I)."
+    },
+    {
+      "id": "R5.dates",
+      "op": "extend_print",
+      "print_add": [
+        "2,794 scored trials (two constructed tasks, Qwen included) span 25 corruption items, 2 controls and 1 exploratory item."
+      ],
+      "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
+    },
+    {
+      "id": "R5.matched.agents",
+      "op": "extend_print",
+      "print_add": [
+        "With the ablation’s matched checks, instructed Haiku agents acted on the same 8 (exploratory, one trial each)."
+      ],
+      "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
+    },
+    {
+      "id": "R5.matched.ceiling",
+      "op": "extend_print",
+      "print_add": [
+        "Matched ablation, deterministic receiver, same 23 corruptions, accepted:"
+      ],
+      "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
+    },
+    {
+      "id": "TRACE.run",
+      "op": "extend_print",
+      "print_add": [
+        "FULL TRACE"
+      ],
+      "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
+    },
+    {
+      "id": "SAT.run",
+      "op": "extend_print",
+      "print_add": [
+        "SAT-042 scripted pass · reference harness."
+      ],
+      "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
+    },
+    {
+      "id": "R5.models",
+      "op": "extend_print",
+      "print_add": [
+        "agent bars: three Claude models pooled"
+      ],
+      "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
+    },
+    {
+      "id": "R5.F6.scope",
+      "op": "extend_print",
+      "print_add": [
+        "Bars: agents' false acceptance, k of n per cell, n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5 runs); squares: the deterministic ceiling. Totals pool 23 to 25 items.",
+        "Bars: B did not act on it (declined, or acted on the genuine value), n 12 (6 Haiku 4.5, 5 Sonnet 5.5, 1 Opus 5.5); squares: deterministic ceiling. Totals: 23 to 25 items."
+      ],
+      "note": "5 Oct 2026 (authors): run dates leave the panels; the footer's 'Measurements: 29 Sep to 4 Oct 2026' (K.dates) dates the runs once, and this row keeps the run date. Panels keep the data's own dates."
     }
   ]
 }
